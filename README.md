@@ -1,2 +1,26 @@
-# sensordeck-website
-Official website for SensorDeck and Atlas Runtime Governance Infrastructure. Built with Next.js, Tailwind CSS, and Vercel.
+# SensorDeck Website
+
+Official website for SensorDeck.
+
+## Products
+
+- Atlas Runtime Validation™
+- Atlas Runtime Governance™
+
+## Technology
+
+- Next.js
+- Tailwind CSS
+- Vercel
+
+## Deployment
+
+Production:
+https://www.sensordeck.tech
+
+Documentation:
+https://docs.sensordeck.tech
+
+## Contact
+
+info@sensordeck.tech
