@@ -2,25 +2,14 @@
 
 Official website for SensorDeck.
 
-## Products
+## Development
 
-- Atlas Runtime Validation™
-- Atlas Runtime Governance™
+Next.js
 
-## Technology
+Tailwind CSS
 
-- Next.js
-- Tailwind CSS
-- Vercel
+Vercel
 
-## Deployment
+## Documentation
 
-Production:
-https://www.sensordeck.tech
-
-Documentation:
-https://docs.sensordeck.tech
-
-## Contact
-
-info@sensordeck.tech
+DESIGN.md
