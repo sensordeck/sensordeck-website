@@ -1095,9 +1095,9 @@ Do not develop directly on `main`.
 
 ---
 
-## 13. Five-Day Delivery Plan
+## 13. Delivery Plan
 
-### Day 1 — Foundation + Homepage
+### 1 — Foundation + Homepage
 
 Deliver:
 
@@ -1109,7 +1109,7 @@ Deliver:
 - Vercel Preview URL
 - no direct production overwrite
 
-### Day 2 — Website Completion
+### 2 — Website Completion
 
 Deliver:
 
@@ -1123,7 +1123,7 @@ Deliver:
 - white-paper placeholders
 - responsive website pass
 
-### Day 3 — Tier 1 + Shared Demo Shell
+### 3 — Tier 1 + Shared Demo Shell
 
 Deliver:
 
@@ -1134,7 +1134,7 @@ Deliver:
 - right context panel
 - route-to-Tier-2 interaction
 
-### Day 4 — Investigation + Sensor FAE
+### 4 — Investigation + Sensor FAE
 
 Deliver:
 
@@ -1149,7 +1149,7 @@ Deliver:
 - IR / LL
 - return-to-OEM interaction
 
-### Day 5 — CTO + Integration + Release Candidate
+### 5 — CTO + Integration + Release Candidate
 
 Deliver:
 
@@ -1288,3 +1288,774 @@ Update DESIGN.md
   ↓
 Implement
 ```
+---
+
+## Delivery Mode
+
+• Corporate Website
+• Atlas Demo UI
+• Static JSON Demo
+• No Backend
+• No Database
+• No Authentication
+• Next.js + TypeScript + Tailwind
+
+---
+
+# 中文关键点说明
+
+本文件不是普通网页设计文档。
+
+这是整个 SensorDeck 官网唯一实施标准（Canonical）。
+
+以后：
+
+UI Designer
+
+Frontend Engineer
+
+Backend Engineer
+
+Marketing
+
+Freelancer
+
+全部按照本文件实施。
+
+不得自行重新设计网站。
+
+不得自行增加页面。
+
+不得修改产品命名。
+
+不得修改Atlas边界。
+
+梁工职责：
+
+严格按本文实现。
+
+不要猜。
+
+不要自行优化产品定义。
+
+任何疑问：
+
+Issue
+
+↓
+
+Jack确认
+
+↓
+
+修改DESIGN.md
+
+↓
+
+再实施。
+
+---
+
+# Implementation Notes
+
+本文件优先级：
+
+DESIGN.md
+
+↓
+
+README
+
+↓
+
+Issue
+
+↓
+
+Implementation
+
+不得反向修改 DESIGN.md。
+
+---
+
+# Acceptance
+
+✓ 所有人使用同一份DESIGN.md
+
+✓ 网站结构唯一
+
+✓ Atlas Terminology唯一
+
+✓ 不存在多个产品定义
+
+---
+
+官网不是软件产品。
+
+官网负责：
+
+介绍行业
+
+介绍Atlas
+
+介绍两条产品
+
+介绍技术
+
+介绍白皮书
+
+引导客户预约Demo
+
+真正的软件Demo在
+
+/demo
+
+所有Demo全部使用静态JSON。
+
+目的：
+
+演示。
+
+不是开发客户系统。
+
+因此：
+
+不要接数据库。
+
+不要做登录。
+
+不要开发后台。
+
+不要写权限系统。
+
+不要写上传功能。
+
+---
+
+# Implementation Notes
+
+网站
+
+/
+
+Demo
+
+/demo
+
+完全分离。
+
+Website：
+
+Marketing
+
+Demo：
+
+Atlas UI
+
+统一Next.js项目。
+
+---
+
+# Acceptance
+
+✓ Website可独立浏览
+
+✓ Demo可独立浏览
+
+✓ Demo无需Backend
+
+✓ Demo无需Database
+
+✓ Website与Demo导航互通
+
+---
+
+不要把Atlas介绍成：
+
+日志工具
+
+AI
+
+机器人平台
+
+Dashboard
+
+云平台
+
+Atlas卖的是：
+
+机器人运行时治理基础设施。
+
+所有页面都必须围绕这个定位。
+
+任何文案不得偏离。
+
+---
+
+# Implementation Notes
+
+首页Hero
+
+必须首先介绍：
+
+Runtime Intelligence Infrastructure
+
+之后：
+
+Products
+
+最后：
+
+Request Demo
+
+不要首页直接卖产品。
+
+---
+
+# Acceptance
+
+✓ Hero首先介绍Category
+
+✓ Products第二层
+
+✓ CTA最后出现
+
+---
+
+整个官网风格：
+
+Zendesk
+
+Datadog
+
+Linear
+
+Stripe Documentation
+
+不是：
+
+OpenAI
+
+Midjourney
+
+Apple
+
+不要大量动画。
+
+不要科技炫光。
+
+不要玻璃效果。
+
+不要霓虹灯。
+
+Atlas卖的是：
+
+可信工程基础设施。
+
+整个视觉必须体现：
+
+Professional
+
+Reliable
+
+Industrial
+
+---
+
+# Implementation Notes
+
+统一：
+
+Header
+
+Section
+
+Card
+
+Footer
+
+所有按钮统一风格。
+
+统一圆角。
+
+统一Padding。
+
+统一字体。
+
+统一颜色。
+
+---
+
+# Acceptance
+
+✓ 整站视觉统一
+
+✓ Desktop优先
+
+✓ Mobile可阅读
+
+✓ 不出现Consumer UI风格
+
+---
+
+导航永久冻结。
+
+任何页面新增必须Jack批准。
+
+不要自行增加：
+
+Pricing
+
+Solutions
+
+Resources
+
+Community
+
+---
+
+# Implementation Notes
+
+Header固定。
+
+Desktop：
+
+Top Navigation
+
+Mobile：
+
+Hamburger Menu
+
+Language：
+
+EN / 中文
+
+右侧：
+
+Request Demo
+
+---
+
+# Acceptance
+
+✓ 全站统一Header
+
+✓ Navigation一致
+
+✓ Language切换预留
+
+✓ Request Demo突出
+
+---
+
+Platform 不是产品介绍。
+
+不要介绍：
+
+Sensor Governance
+
+Runtime Investigation
+
+而是介绍：
+
+两条产品共同使用的基础设施。
+
+客户买的是不同产品。
+
+但是底层都是同一套Atlas Platform。
+
+这一页主要卖：
+
+Infrastructure。
+
+不是Workflow。
+
+不是Case Study。
+
+不是Marketing。
+
+建议首页进入Products之后，
+
+再介绍Platform。
+
+不要反过来。
+
+---
+
+Agent不是Recorder。
+
+Agent不是Logger。
+
+Agent不是ROS Tool。
+
+Agent负责：
+
+持续观察。
+
+持续保留。
+
+持续导出。
+
+Evidence Pack只是Agent输出的一种结果。
+
+不要把Agent画成数据库。
+
+---
+
+### Implementation Notes
+
+Card
+
+Illustration
+
+3 Bullet
+
+Learn More
+
+Documentation
+
+---
+
+### Acceptance
+
+✓ Agent介绍正确
+
+✓ 不出现Logger字样
+
+✓ 不出现AI Agent误导
+
+--------------------------------------------------
+
+### 2 Evidence Pack™ 中文关键点说明
+
+不要介绍：
+
+Log
+
+Rosbag
+
+录像
+
+Support Ticket
+
+Evidence Pack就是Atlas最重要产品。
+
+它不是数据。
+
+它是：
+
+调查证据。
+
+以后所有页面都围绕EP展开。
+
+---
+
+### Implementation Notes
+
+Architecture Diagram
+
+Five Window Illustration
+
+Download Sample
+
+Read White Paper
+
+---
+
+### Acceptance
+
+✓ Five Window出现
+
+✓ EP流程图正确
+
+✓ Download按钮
+
+--------------------------------------------------
+
+### 3 Historical RGA™ 中文关键点说明
+
+这里不要写：
+
+AI Learning。
+
+Machine Learning。
+
+Knowledge Graph。
+
+Atlas没有自动学习。
+
+Atlas只是：
+
+Recall。
+
+Reuse。
+
+Reference。
+
+一定强调：
+
+Why Retrieved。
+
+Strong Candidate。
+
+Partial Candidate。
+
+Environment Difference。
+
+---
+
+### Implementation Notes
+
+Timeline
+
+Historical Card
+
+Investigation Summary
+
+IR
+
+LL
+
+Why Retrieved
+
+---
+
+### Acceptance
+
+✓ 不出现Root Cause Confirmed
+
+✓ 不出现AI Recommendation
+
+✓ Historical RGA介绍完整
+
+--------------------------------------------------
+
+### 4 Investigation Workspace™ 中文关键点说明
+
+Workspace不是Dashboard。
+
+Workspace就是：
+
+调查现场。
+
+所有工程师在这里工作。
+
+所有Evidence都围绕Workspace。
+
+以后Demo UI也是这个概念。
+
+---
+
+### Implementation Notes
+
+Workspace Preview
+
+Workflow
+
+Button
+
+Open Demo
+
+---
+
+### Acceptance
+
+✓ Workflow清楚
+
+✓ Workspace截图
+
+✓ Demo入口
+
+--------------------------------------------------
+
+### 5 Sensor Engagement Pack™ 中文关键点说明
+
+EGP不是Evidence Pack。
+
+EP
+
+↓
+
+OEM内部。
+
+EGP
+
+↓
+
+OEM发送给Sensor。
+
+这是Atlas最大的特色。
+
+必须重点介绍。
+
+---
+
+### Implementation Notes
+
+OEM
+
+↓
+
+EGP
+
+↓
+
+Sensor
+
+Illustration
+
+---
+
+### Acceptance
+
+✓ OEM流程
+
+✓ Sensor流程
+
+✓ Privacy说明
+
+--------------------------------------------------
+
+### 6 Assist Vault™ 中文关键点说明
+
+不要写：
+
+Archive。
+
+Database。
+
+Storage。
+
+Vault是：
+
+组织记忆。
+
+以后客户越来越值钱。
+
+这是长期飞轮。
+
+---
+
+### Implementation Notes
+
+Vault Illustration
+
+Historical Growth
+
+Knowledge Reuse
+
+---
+
+### Acceptance
+
+✓ Growth Illustration
+
+✓ Reuse说明
+
+--------------------------------------------------
+
+### 7 Executive Dashboard™ 中文关键点说明
+
+这一页卖老板。
+
+不是卖工程师。
+
+老板看：
+
+ROI
+
+SLA
+
+Coverage
+
+Reuse
+
+Cost Saving
+
+不要出现复杂技术细节。
+
+---
+
+### Implementation Notes
+
+Dashboard Preview
+
+Charts
+
+KPI
+
+Request Demo
+
+---
+
+### Acceptance
+
+✓ Dashboard Preview
+
+✓ KPI
+
+✓ ROI说明
+
+✓ 所有商业数字标记：
+
+Illustrative Demo Data
+
+---
+
+## Platform Page Layout 中文关键点说明
+
+整个Platform页面，
+
+梁工不要自由发挥。
+
+严格按：
+
+Hero
+
+↓
+
+Architecture
+
+↓
+
+7 Cards
+
+↓
+
+Products Relationship
+
+↓
+
+Documentation
+
+↓
+
+CTA
+
+即可。
+
+不要增加Marketing内容。
+
+不要增加Pricing。
+
+不要增加FAQ。
+
+---
+
+## Final Acceptance
+
+✓ Platform介绍基础设施
+
+✓ 不介绍Programming Framework
+
+✓ Seven Capability Cards完整
+
+✓ Atlas Constitutional Boundary正确
+
+✓ 所有Terminology与Canonical一致
+
+✓ 页面可直接链接Documentation
+
+✓ 页面可直接链接White Paper
+
+✓ Request Demo正常
