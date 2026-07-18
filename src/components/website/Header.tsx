@@ -5,7 +5,7 @@ import Button from "@/components/website/Button";
 const navigation = [
   { label: "Products", href: "/products" },
   { label: "Platform", href: "/platform" },
-  { label: "Technology", href: "#technology" },
+  { label: "Technology", href: "/technology" },
   { label: "Library", href: "#resources" },
   { label: "Company", href: "#company" },
   { label: "Contact", href: "#request-demo" },
