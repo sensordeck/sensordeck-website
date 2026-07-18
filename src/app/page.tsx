@@ -1,4 +1,4 @@
-import AtlasWorkflowDiagram from "@/components/website/AtlasWorkflowDiagram";
+import Image from "next/image";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
 import Footer from "@/components/website/Footer";
@@ -83,7 +83,14 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <AtlasWorkflowDiagram />
+             <Image
+  src="/images/hero-runtime.png"
+  alt="Atlas runtime evidence infrastructure"
+  width={900}
+  height={600}
+  priority
+  className="h-auto w-full object-contain"
+/>
             </div>
           </div>
         </Section>
