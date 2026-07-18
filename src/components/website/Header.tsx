@@ -6,7 +6,7 @@ const navigation = [
   { label: "Products", href: "/products" },
   { label: "Platform", href: "/platform" },
   { label: "Technology", href: "/technology" },
-  { label: "Library", href: "#resources" },
+  { label: "Library", href: "/library" },
   { label: "Company", href: "#company" },
   { label: "Contact", href: "#request-demo" },
 ];
