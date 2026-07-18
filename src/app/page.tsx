@@ -56,44 +56,55 @@ export default function HomePage() {
 
       <main>
         {/* Hero: define the category before introducing the product. */}
-        <Section id="top" className="overflow-hidden bg-white">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-20">
-            <div>
-              <Eyebrow>SensorDeck / Category definition</Eyebrow>
-              <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
-                {homeContent.heroTitle}
-              </h1>
-              <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
-                {homeContent.heroSubtitle}
-              </p>
-              <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
-                {homeContent.heroValueProposition}
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Button href="/demo" variant="primary">
-                  {homeContent.ctas.primary}
-                </Button>
-                <Button href="/platform" variant="secondary">
-                  {homeContent.ctas.viewArchitecture}
-                </Button>
-                <Button href="/library/whitepaper" variant="secondary">
-                  {homeContent.ctas.readWhitePaper}
-                </Button>
-              </div>
-            </div>
+        {/* Hero */}
+<Section
+  id="top"
+  className="relative min-h-[620px] overflow-hidden bg-white"
+>
+  <Image
+    src="/images/hero-runtime.png"
+    alt=""
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center"
+  />
 
-            <div className="relative">
-             <Image
-  src="/images/hero-runtime.png"
-  alt="Atlas runtime evidence infrastructure"
-  width={900}
-  height={600}
-  priority
-  className="h-auto w-full object-contain"
-/>
-            </div>
-          </div>
-        </Section>
+  {/* 让左侧文字保持清晰 */}
+  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
+
+  <div className="relative z-10 mx-auto flex min-h-[620px] w-full max-w-7xl items-center px-6 py-20 lg:px-8">
+    <div className="max-w-2xl">
+      <Eyebrow>SensorDeck / Category Definition</Eyebrow>
+
+      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        {homeContent.heroTitle}
+      </h1>
+
+      <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
+        {homeContent.heroSubtitle}
+      </p>
+
+      <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
+        {homeContent.heroValueProposition}
+      </p>
+
+      <div className="mt-10 flex flex-wrap gap-3">
+        <Button href="/demo" variant="primary">
+          {homeContent.ctas.primary}
+        </Button>
+
+        <Button href="/platform" variant="secondary">
+          {homeContent.ctas.viewArchitecture}
+        </Button>
+
+        <Button href="/library/whitepaper" variant="secondary">
+          {homeContent.ctas.readWhitePaper}
+        </Button>
+      </div>
+    </div>
+  </div>
+</Section>
 
         {/* Category definition */}
         <Section id="category" className="bg-surface">
