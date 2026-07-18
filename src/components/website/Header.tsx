@@ -3,7 +3,7 @@ import Image from "next/image";
 import Button from "@/components/website/Button";
 
 const navigation = [
-  { label: "Products", href: "#products" },
+  { label: "Products", href: "/products" },
   { label: "Platform", href: "#platform" },
   { label: "Technology", href: "#technology" },
   { label: "Library", href: "#resources" },
@@ -15,7 +15,7 @@ function Brand() {
   return (
     <a
       className="flex shrink-0 items-center text-ink"
-      href="#top"
+      href="/"
       aria-label="SensorDeck home"
     >
       <Image
