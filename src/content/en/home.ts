@@ -1,16 +1,10 @@
 const homeContent = {
-  heroTitle: "Runtime Intelligence Infrastructure for Robotics",
+  heroTitle: "Runtime Governance Infrastructure for Robotics",
   heroSubtitle:
-    "A governed runtime boundary between sensors, systems, and engineering decisions.",
-  heroDescription:
-    "Robotics teams need more than another log archive. SensorDeck defines the infrastructure layer that observes runtime conditions, structures evidence, supports investigation, and preserves what the organization learns.",
-  heroPrinciple: [
-    "Observe",
-    "Understand",
-    "Investigate",
-    "Improve",
-    "Reuse",
-  ],
+    "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero. Atlas turns runtime evidence into reusable organizational knowledge.",
+  heroDescription: "",
+  heroPrinciple: [] as string[],
+  heroValueProposition: "Every investigation starts from evidence. Every future investigation starts from history.",
   sectionTitles: {
     categoryDefinition: "A new category for the runtime boundary",
     whyRuntimeGovernance: "Why runtime governance is missing",
@@ -272,6 +266,8 @@ const homeContent = {
     primary: "Request Demo",
     exploreProducts: "Explore Products",
     technicalWhitePaper: "Read Technical White Paper",
+    viewArchitecture: "View Architecture",
+    readWhitePaper: "Read White Paper",
     documentation: "Open Documentation",
     overview: "Watch 2-Min Overview",
   },

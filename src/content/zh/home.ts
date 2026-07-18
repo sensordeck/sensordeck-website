@@ -1,11 +1,11 @@
 import type { HomeContent } from "@/content/en/home";
 
 const homeContent: HomeContent = {
-  heroTitle: "面向机器人的运行时智能基础设施",
-  heroSubtitle: "在传感器、系统与工程决策之间建立受治理的运行时边界。",
-  heroDescription:
-    "机器人团队需要的不只是另一个日志归档。SensorDeck 定义了基础设施层，用于观察运行时条件、结构化证据、支持调查，并保存组织学习到的知识。",
-  heroPrinciple: ["观察", "理解", "调查", "改进", "复用"],
+  heroTitle: "机器人运行时治理基础设施",
+  heroSubtitle: "运行时数据分散在日志、设备和人员之间。每次调查都从零开始。Atlas 将运行时证据沉淀为可复用的组织知识。",
+  heroDescription: "",
+  heroPrinciple: [],
+  heroValueProposition: "每一次调查从证据开始。下一次调查，从历史开始。",
   sectionTitles: {
     categoryDefinition: "运行时边界的新类别",
     whyRuntimeGovernance: "为什么需要运行时治理",
@@ -113,6 +113,8 @@ const homeContent: HomeContent = {
     primary: "申请演示",
     exploreProducts: "探索产品",
     technicalWhitePaper: "阅读技术白皮书",
+    viewArchitecture: "查看架构",
+    readWhitePaper: "阅读白皮书",
     documentation: "打开文档",
     overview: "观看 2 分钟概览",
   },

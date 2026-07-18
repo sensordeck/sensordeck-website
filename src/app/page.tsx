@@ -1,3 +1,4 @@
+import AtlasWorkflowDiagram from "@/components/website/AtlasWorkflowDiagram";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
 import Footer from "@/components/website/Footer";
@@ -65,97 +66,24 @@ export default function HomePage() {
               <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
                 {homeContent.heroSubtitle}
               </p>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-muted">
-                {homeContent.heroDescription}
+              <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
+                {homeContent.heroValueProposition}
               </p>
-              <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm font-semibold text-ink">
-                {homeContent.heroPrinciple.map((item, index) => (
-                  <span className="inline-flex items-center gap-2" key={item}>
-                    <span className="font-mono text-xs text-sensor-tan">
-                      0{index + 1}
-                    </span>
-                    {item}
-                  </span>
-                ))}
-              </div>
               <div className="mt-10 flex flex-wrap gap-3">
-                <Button href="#products" variant="secondary">
-                  {homeContent.ctas.exploreProducts}
+                <Button href="/demo" variant="primary">
+                  {homeContent.ctas.primary}
                 </Button>
-                <Button href="#resources" variant="secondary">
-                  {homeContent.ctas.technicalWhitePaper}
+                <Button href="/platform" variant="secondary">
+                  {homeContent.ctas.viewArchitecture}
+                </Button>
+                <Button href="/library/whitepaper" variant="secondary">
+                  {homeContent.ctas.readWhitePaper}
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              <div className="border border-border bg-surface p-4 sm:p-6">
-                <div className="flex items-center justify-between border-b border-border pb-4">
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
-                      Governed runtime boundary
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-ink">
-                      Evidence context / illustrative
-                    </p>
-                  </div>
-                  <span className="font-mono text-xs text-sensor-tan">
-                    REF-0001
-                  </span>
-                </div>
-
-                <div className="mt-6 grid gap-2">
-                  {[
-                    ["01", "Sensors", "Raw output / heartbeat"],
-                    ["02", "Power · Bus · Trigger", "Timing and transport"],
-                    ["03", "Linux / SBC runtime", "Driver, buffer, IRQ, scheduler"],
-                    ["04", "ROS inputs", "Topics and application context"],
-                    ["05", "Investigation teams", "Evidence, IR, LL, reuse"],
-                  ].map(([number, title, detail]) => (
-                    <div
-                      className="grid grid-cols-[2.5rem_1fr_auto] items-center gap-3 border border-border bg-white px-3 py-3 sm:px-4"
-                      key={number}
-                    >
-                      <span className="font-mono text-xs text-sensor-tan">
-                        {number}
-                      </span>
-                      <span className="text-sm font-semibold text-ink">
-                        {title}
-                      </span>
-                      <span className="hidden text-right text-xs text-muted sm:block">
-                        {detail}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 border border-atlas-blue/20 bg-surface-blue p-4">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-atlas-blue">
-                      Runtime intelligence layer
-                    </span>
-                    <span className="size-2 rounded-full bg-atlas-blue" />
-                  </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {homeContent.heroPrinciple.map((item) => (
-                      <span
-                        className="border border-atlas-blue/20 bg-white px-2.5 py-1.5 text-xs font-semibold text-ink"
-                        key={item}
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-5 -left-5 hidden border border-sensor-tan/40 bg-white px-4 py-3 shadow-[0_8px_24px_rgba(10,26,42,0.08)] sm:block">
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
-                  Operating principle
-                </p>
-                <p className="mt-1 text-sm font-semibold text-ink">
-                  Evidence before conclusion
-                </p>
-              </div>
+              <AtlasWorkflowDiagram />
             </div>
           </div>
         </Section>
