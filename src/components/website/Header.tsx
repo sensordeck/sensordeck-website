@@ -23,7 +23,7 @@ function Brand() {
         className="h-10 w-auto"
         height={360}
         priority
-        src="/logos/sensordeck-logo.png"
+        src="/logos/SensorDeck18.png"
         width={1364}
       />
     </a>
