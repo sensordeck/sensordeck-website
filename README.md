@@ -88,3 +88,5 @@ sensordeck-website/
 ## Documentation
 
 完整设计规范和约束见 [DESIGN.md](DESIGN.md)。
+
+Deployment trigger: 2026-07-18
