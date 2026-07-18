@@ -1,0 +1,29 @@
+{
+  "serial_number": "PUDU-T300-7F3A-0021",
+  "model": "T300 Delivery",
+  "firmware_version": "v2.8.4",
+  "deployment_date": "2025-11-03",
+  "location": "Shanghai Zhangjiang Tech Park",
+  "customer_id": "CUST-PUDU-2024",
+  "sensors": {
+    "lidar": {
+      "manufacturer": "Hesai",
+      "model": "Pandar XT32",
+      "serial": "HES-XT32-A401"
+    },
+    "camera": {
+      "manufacturer": "Hikvision",
+      "model": "DS-2CD2T85G1",
+      "count": 4
+    },
+    "imu": {
+      "manufacturer": "Xsens",
+      "model": "MTi-630"
+    }
+  },
+  "runtime_environment": {
+    "os": "Ubuntu 22.04",
+    "ros_version": "ROS2 Humble",
+    "compute": "NVIDIA Jetson AGX Orin"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "candidates": [
+    {
+      "id": "C01",
+      "timestamp": "2026-07-16T08:15:23+08:00",
+      "surface": "LiDAR Point Cloud Quality",
+      "confidence": "strong",
+      "description": "Observed significant point cloud density reduction during 8:15:20-8:15:28",
+      "affected_components": ["Hesai Pandar XT32", "Localization Module"],
+      "five_window": {
+        "pre_guard": { "start": "08:14:53", "end": "08:15:13", "status": "baseline" },
+        "baseline": { "start": "08:15:13", "end": "08:15:20", "status": "normal" },
+        "deviation": { "start": "08:15:20", "end": "08:15:28", "status": "anomaly_detected" },
+        "recovery": { "start": "08:15:28", "end": "08:15:35", "status": "returning_to_baseline" },
+        "post_guard": { "start": "08:15:35", "end": "08:15:55", "status": "stable" }
+      }
+    },
+    {
+      "id": "C02",
+      "timestamp": "2026-07-16T08:15:21+08:00",
+      "surface": "ROS2 Topic Timing",
+      "confidence": "partial",
+      "description": "Localization topic publish rate dropped from 20Hz to 7Hz",
+      "affected_components": ["ROS2 /localization/pose", "Navigation Stack"],
+      "five_window": {
+        "pre_guard": { "start": "08:14:51", "end": "08:15:11", "status": "baseline" },
+        "baseline": { "start": "08:15:11", "end": "08:15:21", "status": "normal" },
+        "deviation": { "start": "08:15:21", "end": "08:15:26", "status": "timing_anomaly" },
+        "recovery": { "start": "08:15:26", "end": "08:15:31", "status": "partial_recovery" },
+        "post_guard": { "start": "08:15:31", "end": "08:15:51", "status": "stable" }
+      }
+    },
+    {
+      "id": "C03",
+      "timestamp": "2026-07-16T08:15:22+08:00",
+      "surface": "USB Bus Timing",
+      "confidence": "strong",
+      "description": "USB 3.0 bus reset detected on LiDAR interface",
+      "affected_components": ["USB Controller", "Hesai Pandar XT32"],
+      "five_window": {
+        "pre_guard": { "start": "08:14:52", "end": "08:15:12", "status": "baseline" },
+        "baseline": { "start": "08:15:12", "end": "08:15:22", "status": "normal" },
+        "deviation": { "start": "08:15:22", "end": "08:15:27", "status": "bus_reset" },
+        "recovery": { "start": "08:15:27", "end": "08:15:32", "status": "reconnection" },
+        "post_guard": { "start": "08:15:32", "end": "08:15:52", "status": "stable" }
+      },
+      "primary": true
+    },
+    {
+      "id": "C04",
+      "timestamp": "2026-07-16T08:15:19+08:00",
+      "surface": "Power Supply Voltage",
+      "confidence": "related",
+      "description": "Minor voltage fluctuation on 12V rail",
+      "affected_components": ["Power Distribution Unit"],
+      "five_window": {
+        "pre_guard": { "start": "08:14:49", "end": "08:15:09", "status": "baseline" },
+        "baseline": { "start": "08:15:09", "end": "08:15:19", "status": "normal" },
+        "deviation": { "start": "08:15:19", "end": "08:15:21", "status": "minor_fluctuation" },
+        "recovery": { "start": "08:15:21", "end": "08:15:24", "status": "recovered" },
+        "post_guard": { "start": "08:15:24", "end": "08:15:44", "status": "stable" }
+      }
+    }
+  ]
+}

@@ -99,6 +99,7 @@ export const libraryContent = {
         description: "快速了解 Atlas 如何将运行时事件转化为有界证据和可复用知识。",
         type: "Video",
         href: "/demo/overview",
+        disabled: false,
       },
       {
         title: "Atlas Demo UI",
@@ -106,6 +107,7 @@ export const libraryContent = {
           "交互式演示：Tier1、Investigation Workspace、Sensor FAE 和 CTO 视图。",
         type: "Interactive",
         href: "/demo",
+        disabled: false,
       },
       {
         title: "Runtime Investigation 演练",
@@ -113,6 +115,7 @@ export const libraryContent = {
           "完整调查生命周期演练：从 REF 到 Evidence Pack、Historical RGA 到 IR + LL。",
         type: "Walkthrough",
         href: "/demo/investigation",
+        disabled: false,
       },
       {
         title: "示例 Evidence Pack",

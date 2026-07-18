@@ -58,7 +58,7 @@ export default function DemoPage() {
             {demo.items.map((item, index) => (
               <Card
                 className={`flex min-h-56 flex-col justify-between ${
-                  item.disabled ? "opacity-60" : ""
+                  item.disabled === true ? "opacity-60" : ""
                 }`}
                 key={item.title}
               >
@@ -79,7 +79,7 @@ export default function DemoPage() {
                   </p>
                 </div>
                 <div className="mt-6 border-t border-border pt-4">
-                  {item.disabled ? (
+                  {item.disabled === true ? (
                     <span className="text-sm font-semibold text-muted">
                       即将推出
                     </span>

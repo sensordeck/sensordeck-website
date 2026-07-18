@@ -1,0 +1,16 @@
+{
+  "agent_id": "AGT-7F3A-7A21",
+  "robot_sn": "PUDU-T300-7F3A-0021",
+  "deployment_date": "2025-11-05",
+  "version": "Atlas Agent v1.2.8",
+  "collection_status": "active",
+  "last_heartbeat": "2026-07-16T14:23:47+08:00",
+  "runtime_dataset_coverage": {
+    "timing": true,
+    "power": true,
+    "network": true,
+    "storage": true,
+    "sensors": true,
+    "ros2_topics": true
+  }
+}

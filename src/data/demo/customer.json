@@ -1,0 +1,9 @@
+{
+  "name": "Pudu Robotics",
+  "id": "CUST-PUDU-2024",
+  "type": "OEM",
+  "industry": "Commercial Service Robotics",
+  "fleet_size": 847,
+  "active_agents": 23,
+  "deployment_regions": ["China", "Southeast Asia", "Europe", "North America"]
+}
