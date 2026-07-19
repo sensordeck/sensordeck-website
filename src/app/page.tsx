@@ -508,7 +508,7 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <Card className="border-ink/15 bg-ink text-white opacity-100 transform-none">
+            <Card className="border-ink/15 !bg-ink !text-white opacity-100 transform-none">
               <div className="flex items-center justify-between gap-4 border-b border-white/15 pb-4">
                 <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/50">
                   Historical RGA™ / Recall candidate
