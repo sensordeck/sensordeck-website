@@ -71,7 +71,7 @@ export default function HomePage() {
   />
 
   {/* Overlay */}
-  <div className="absolute inset-0 flex items-center z-10">
+ <div className="absolute inset-0 flex items-start pt-24 sm:pt-28 lg:items-center lg:pt-0">
     <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
       <div className="max-w-[42rem]">
