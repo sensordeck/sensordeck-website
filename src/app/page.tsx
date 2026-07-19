@@ -114,7 +114,7 @@ export default function HomePage() {
           {homeContent.heroValueProposition}
         </p>
 
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 px-4 lg:static lg:mt-8 lg:justify-start lg:px-0">
+        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-3 px-4 lg:static lg:mt-8 lg:justify-start lg:px-0">
   <Button href="/demo" variant="primary">
     {homeContent.ctas.primary}
   </Button>
