@@ -65,21 +65,19 @@ export default function HomePage() {
       {/* Hero */}
 <Section
   id="top"
-  className="relative overflow-hidden bg-white"
+  className="relative min-h-[380px] overflow-hidden bg-white"
 >
   <Image
     src="/images/hero-runtime.png"
     alt=""
-    fill
+    width={1672}
+    height={941}
     priority
-    sizes="100vw"
-    className="object-cover object-[68%_top] scale-[0.78]"
+    sizes="1100px"
+    className="pointer-events-none absolute right-0 top-0 h-auto w-[1050px] max-w-none lg:w-[1050px] xl:w-[1120px]"
   />
 
-  {/* 让左侧文字保持清晰 */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
-
-  <div className="relative z-10 mx-auto flex min-h-[380px] w-full max-w-7xl items-center px-6 py-8 lg:px-8 lg:py-8">
+  <div className="relative z-10 mx-auto flex min-h-[380px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
     <div className="max-w-[560px]">
       <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
         机器人运行时
