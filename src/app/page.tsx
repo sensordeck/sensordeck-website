@@ -67,52 +67,75 @@ export default function HomePage() {
   id="top"
   className="relative overflow-hidden bg-white"
 >
-  {/* Full hero artwork */}
-  <Image
-    src="/images/hero-runtime.png"
-    alt=""
-    fill
-    priority
-    sizes="100vw"
-    className="pointer-events-none object-cover object-center"
-  />
+  {/* Hero Artwork */}
+  <div className="relative h-[720px] w-full md:h-[760px] lg:h-[820px]">
 
-  {/* White fade on the left for text readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
+    <Image
+      src="/images/hero-runtime.png"
+      alt="Atlas Runtime"
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover object-center"
+    />
 
-  {/* Content */}
-  <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-center px-6 lg:px-8">
-    <div className="max-w-[620px]">
+    {/* Left readability overlay */}
+    <div
+      className="
+        absolute inset-0
+        bg-gradient-to-r
+        from-white
+        via-white/88
+        via-[32%]
+        to-transparent
+      "
+    />
 
-      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
-        机器人运行时
-        <br />
-        智能治理基础设施
-      </h1>
+    {/* Content */}
+    <div
+      className="
+        absolute inset-0
+        mx-auto
+        flex
+        max-w-7xl
+        items-center
+        px-6
+        lg:px-8
+      "
+    >
+      <div className="max-w-[620px]">
 
-      <p className="mt-8 text-xl leading-9 text-ink">
-        {homeContent.heroSubtitle}
-      </p>
+        <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
+          机器人运行时
+          <br />
+          智能治理基础设施
+        </h1>
 
-      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue">
-        {homeContent.heroValueProposition}
-      </p>
+        <p className="mt-8 text-xl leading-9 text-ink">
+          {homeContent.heroSubtitle}
+        </p>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <Button href="/demo" variant="primary">
-          {homeContent.ctas.primary}
-        </Button>
+        <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue">
+          {homeContent.heroValueProposition}
+        </p>
 
-        <Button href="/platform" variant="secondary">
-          {homeContent.ctas.viewArchitecture}
-        </Button>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Button href="/demo" variant="primary">
+            {homeContent.ctas.primary}
+          </Button>
 
-        <Button href="/library/whitepaper" variant="secondary">
-          {homeContent.ctas.readWhitePaper}
-        </Button>
+          <Button href="/platform" variant="secondary">
+            {homeContent.ctas.viewArchitecture}
+          </Button>
+
+          <Button href="/library/whitepaper" variant="secondary">
+            {homeContent.ctas.readWhitePaper}
+          </Button>
+        </div>
+
       </div>
-
     </div>
+
   </div>
 </Section>
         {/* Category definition */}
