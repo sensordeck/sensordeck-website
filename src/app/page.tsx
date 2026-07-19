@@ -49,65 +49,86 @@ function ArrowLabel({ inverse = false }: { inverse?: boolean }) {
   );
 }
 
+const heroPrinciples = [
+  { title: "证据驱动", description: "Evidence before opinion" },
+  { title: "跨团队协作", description: "OEM ↔ Sensor Factory" },
+  { title: "历史资产复用", description: "Historical RGA™ recall" },
+  { title: "客户拥有数据", description: "Private. Secure. Under your control." },
+];
+
 export default function HomePage() {
   return (
     <div className="flex min-h-full flex-1 flex-col bg-white">
       <Header />
 
       <main>
-        {/* Hero: define the category before introducing the product. */}
         {/* Hero */}
-<Section
-  id="top"
-  className="relative min-h-[380px] overflow-hidden bg-white"
->
-  <Image
-    src="/images/hero-runtime.png"
-    alt=""
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover object-[78%_center] scale-[0.88]"
-  />
+        <section
+          id="top"
+          className="relative isolate overflow-hidden border-b border-border bg-white"
+        >
+          <Image
+            src="/images/hero-runtime.png"
+            alt="Atlas runtime intelligence infrastructure for robotics"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[74%_center]"
+          />
 
-  {/* 让左侧文字保持清晰 */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/88 to-white/5" />
 
-  <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8 lg:py-8">
-    <div className="max-w-[560px]">
-     
-      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
-       <>
-机器人运行时
-<br />
-智能治理基础设施
-</>
-      </h1>
+          <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-7xl items-center px-6 py-10 lg:px-8">
+            <div className="w-full max-w-[610px]">
+              <h1 className="max-w-[610px] text-4xl font-semibold leading-[1.04] tracking-tight text-ink sm:text-5xl lg:text-[58px]">
+                Runtime Intelligence
+                <br />
+                Infrastructure for Robotics
+              </h1>
 
-      <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
-        {homeContent.heroSubtitle}
-      </p>
+              <p className="mt-5 max-w-[590px] text-lg leading-8 text-ink sm:text-xl">
+                从部署前到部署后。
+                <br />
+                观察、理解、调查、改进、复用。
+              </p>
 
-      <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
-        {homeContent.heroValueProposition}
-      </p>
+              <p className="mt-4 max-w-[590px] text-base leading-7 text-muted">
+                Atlas 将机器人运行时证据连接至 Historical RGA™、
+                Investigation Workspace 与 Assist Vault™，让每一次调查从已有组织知识开始，而不是从零开始。
+              </p>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <Button href="/demo" variant="primary">
-          {homeContent.ctas.primary}
-        </Button>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button href="/demo" variant="primary">
+                  {homeContent.ctas.primary}
+                </Button>
+                <Button href="/products" variant="secondary">
+                  探索产品
+                </Button>
+              </div>
 
-        <Button href="/platform" variant="secondary">
-          {homeContent.ctas.viewArchitecture}
-        </Button>
-
-        <Button href="/library/whitepaper" variant="secondary">
-          {homeContent.ctas.readWhitePaper}
-        </Button>
-      </div>
-    </div>
-  </div>
-</Section>
+              <div className="mt-8 grid max-w-[610px] gap-4 border-t border-ink/10 pt-5 sm:grid-cols-2 lg:grid-cols-4">
+                {heroPrinciples.map((principle) => (
+                  <div className="min-w-0" key={principle.title}>
+                    <div className="flex items-center gap-2">
+                      <span
+                        aria-hidden="true"
+                        className="flex size-6 shrink-0 items-center justify-center rounded-full border border-atlas-blue/25 bg-white/75 text-xs font-semibold text-atlas-blue"
+                      >
+                        ✓
+                      </span>
+                      <p className="text-xs font-semibold leading-5 text-ink">
+                        {principle.title}
+                      </p>
+                    </div>
+                    <p className="mt-1 pl-8 text-[11px] leading-4 text-muted">
+                      {principle.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Category definition */}
         <Section id="category" className="bg-surface">
@@ -128,9 +149,7 @@ export default function HomePage() {
             <div className="grid gap-4 md:grid-cols-3">
               {homeContent.categoryDefinition.points.map((point, index) => (
                 <Card key={point.label}>
-                  <span className="font-mono text-xs text-sensor-tan">
-                    0{index + 1}
-                  </span>
+                  <span className="font-mono text-xs text-sensor-tan">0{index + 1}</span>
                   <h3 className="mt-8 text-lg font-semibold tracking-tight text-ink">
                     {point.label}
                   </h3>
@@ -154,17 +173,13 @@ export default function HomePage() {
             {homeContent.whyRuntimeGovernance.items.map((item, index) => (
               <Card key={item.label}>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs text-sensor-tan">
-                    0{index + 1}
-                  </span>
+                  <span className="font-mono text-xs text-sensor-tan">0{index + 1}</span>
                   <span className="size-2 rounded-full bg-border" />
                 </div>
                 <h3 className="mt-10 text-xl font-semibold tracking-tight text-ink">
                   {item.label}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-muted">
-                  {item.description}
-                </p>
+                <p className="mt-4 text-sm leading-7 text-muted">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -183,15 +198,8 @@ export default function HomePage() {
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {homeContent.productLines.map((product, index) => (
-              <Card
-                className="flex flex-col overflow-hidden p-0"
-                key={product.name}
-              >
-                <div
-                  className={`border-b border-border p-6 md:p-8 ${
-                    index === 0 ? "bg-white" : "bg-surface-blue"
-                  }`}
-                >
+              <Card className="flex flex-col overflow-hidden p-0" key={product.name}>
+                <div className={`border-b border-border p-6 md:p-8 ${index === 0 ? "bg-white" : "bg-surface-blue"}`}>
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="font-mono text-xs text-sensor-tan">
                       PRODUCT 0{index + 1}
@@ -214,10 +222,7 @@ export default function HomePage() {
                     </p>
                     <ul className="mt-4 grid gap-2.5">
                       {product.modules.map((module) => (
-                        <li
-                          className="flex items-start gap-2 text-sm leading-6 text-ink"
-                          key={module}
-                        >
+                        <li className="flex items-start gap-2 text-sm leading-6 text-ink" key={module}>
                           <span className="mt-2 size-1.5 shrink-0 rounded-full bg-atlas-blue" />
                           <span>{module}</span>
                         </li>
@@ -282,9 +287,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-3 border border-ink/15 bg-ink p-5 text-sm text-white sm:grid-cols-2 lg:grid-cols-4 lg:p-6">
             {homeContent.constitutionalBoundary.map((item, index) => (
               <div className="flex items-start gap-3" key={item}>
-                <span className="font-mono text-xs text-sensor-tan">
-                  0{index + 1}
-                </span>
+                <span className="font-mono text-xs text-sensor-tan">0{index + 1}</span>
                 <span className="leading-6 text-white/80">{item}</span>
               </div>
             ))}
@@ -301,24 +304,17 @@ export default function HomePage() {
             />
             <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               {homeContent.investigationLifecycle.map((step, index) => (
-                <div
-                  className="relative border border-border bg-white p-5"
-                  key={step.label}
-                >
+                <div className="relative border border-border bg-white p-5" key={step.label}>
                   <div className="flex items-center justify-between gap-3">
                     <span className="font-mono text-xs text-sensor-tan">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    {index < homeContent.investigationLifecycle.length - 1 ? (
-                      <ArrowLabel />
-                    ) : null}
+                    {index < homeContent.investigationLifecycle.length - 1 ? <ArrowLabel /> : null}
                   </div>
                   <h3 className="mt-8 text-sm font-semibold leading-6 text-ink">
                     {step.label}
                   </h3>
-                  <p className="mt-3 text-xs leading-6 text-muted">
-                    {step.description}
-                  </p>
+                  <p className="mt-3 text-xs leading-6 text-muted">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -328,23 +324,16 @@ export default function HomePage() {
                   Five-window evidence model
                 </p>
                 <p className="mt-4 text-xl leading-8 tracking-tight text-ink">
-                  Evidence is bounded around the runtime deviation, not treated
-                  as an unlimited archive.
+                  Evidence is bounded around the runtime deviation, not treated as an unlimited archive.
                 </p>
               </div>
               <div className="grid gap-2 sm:grid-cols-5">
                 {homeContent.fiveWindowModel.map((window, index) => (
                   <div
-                    className={`border p-4 ${
-                      index === 2
-                        ? "border-atlas-blue bg-surface-blue"
-                        : "border-border bg-white"
-                    }`}
+                    className={`border p-4 ${index === 2 ? "border-atlas-blue bg-surface-blue" : "border-border bg-white"}`}
                     key={window}
                   >
-                    <span className="font-mono text-[10px] text-muted">
-                      0{index + 1}
-                    </span>
+                    <span className="font-mono text-[10px] text-muted">0{index + 1}</span>
                     <p className="mt-6 text-sm font-semibold text-ink">{window}</p>
                   </div>
                 ))}
@@ -372,21 +361,15 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-3 border-b border-border pb-4">
                   <span className="size-2 rounded-full bg-sensor-tan" />
-                  <span className="text-sm font-semibold text-ink">
-                    Power / Bus / Timing
-                  </span>
+                  <span className="text-sm font-semibold text-ink">Power / Bus / Timing</span>
                 </div>
                 <div className="flex items-center gap-3 border-b border-border pb-4">
                   <span className="size-2 rounded-full bg-ink" />
-                  <span className="text-sm font-semibold text-ink">
-                    Linux / SBC / ROS
-                  </span>
+                  <span className="text-sm font-semibold text-ink">Linux / SBC / ROS</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="size-2 rounded-full border border-ink bg-white" />
-                  <span className="text-sm font-semibold text-ink">
-                    OEM / Sensor teams
-                  </span>
+                  <span className="text-sm font-semibold text-ink">OEM / Sensor teams</span>
                 </div>
               </div>
             </div>
@@ -403,10 +386,7 @@ export default function HomePage() {
               </div>
               <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {homeContent.roboticsIndustry.surfaces.map((surface, index) => (
-                  <div
-                    className="flex min-h-16 items-center gap-3 border border-border px-4 py-3"
-                    key={surface}
-                  >
+                  <div className="flex min-h-16 items-center gap-3 border border-border px-4 py-3" key={surface}>
                     <span className="font-mono text-[10px] text-muted">
                       {String(index + 1).padStart(2, "0")}
                     </span>
@@ -429,9 +409,7 @@ export default function HomePage() {
             {homeContent.evidenceOwnership.principles.map((principle, index) => (
               <Card key={principle.label}>
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-mono text-xs text-sensor-tan">
-                    0{index + 1}
-                  </span>
+                  <span className="font-mono text-xs text-sensor-tan">0{index + 1}</span>
                   <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
                     Policy
                   </span>
@@ -446,13 +424,10 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-6 grid gap-4 border border-atlas-blue/25 bg-surface-blue p-5 md:grid-cols-[auto_1fr] md:items-start md:p-6">
-            <span className="font-mono text-xs font-semibold text-atlas-blue">
-              EGP
-            </span>
+            <span className="font-mono text-xs font-semibold text-atlas-blue">EGP</span>
             <p className="text-sm leading-7 text-ink">
-              Sensor Engagement Pack is the bounded collaboration surface from
-              an OEM to a sensor manufacturer. It is not the same as an
-              internal Evidence Pack™.
+              Sensor Engagement Pack is the bounded collaboration surface from an OEM to a sensor manufacturer.
+              It is not the same as an internal Evidence Pack™.
             </p>
           </div>
         </Section>
@@ -467,20 +442,15 @@ export default function HomePage() {
           <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
             <div>
               <p className="max-w-xl text-2xl leading-10 tracking-tight text-ink">
-                Historical RGA™ is recall, reuse, and reference for human
-                investigation teams.
+                Historical RGA™ is recall, reuse, and reference for human investigation teams.
               </p>
               <p className="mt-6 max-w-xl text-base leading-8 text-muted">
-                It does not automatically learn, confirm root cause, or assign
-                responsibility. The retrieved candidate comes with the reason
-                it was retrieved and the environment differences that remain.
+                It does not automatically learn, confirm root cause, or assign responsibility.
+                The retrieved candidate comes with the reason it was retrieved and the environment differences that remain.
               </p>
               <div className="mt-8 flex flex-wrap gap-2">
                 {homeContent.organizationalMemory.labels.map((label) => (
-                  <span
-                    className="border border-border bg-surface px-3 py-2 text-xs font-medium text-ink"
-                    key={label}
-                  >
+                  <span className="border border-border bg-surface px-3 py-2 text-xs font-medium text-ink" key={label}>
                     {label}
                   </span>
                 ))}
@@ -509,9 +479,7 @@ export default function HomePage() {
                   <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
                     Why retrieved
                   </p>
-                  <p className="mt-2 text-sm text-white/85">
-                    Runtime surfaces overlap.
-                  </p>
+                  <p className="mt-2 text-sm text-white/85">Runtime surfaces overlap.</p>
                 </div>
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
