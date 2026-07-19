@@ -56,37 +56,52 @@ export default function HomePage() {
 
       <main>
         {/* Hero: define the category before introducing the product. */}
-        <Section id="top" className="overflow-hidden bg-white">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-20">
-            <div>
-              <Eyebrow>SensorDeck / Category definition</Eyebrow>
-              <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl heading-title">
-                {homeContent.heroTitle}
-              </h1>
-              <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl heading-description">
-                {homeContent.heroSubtitle}
-              </p>
-              <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue heading-description" style={{ animationDelay: '240ms' }}>
-                {homeContent.heroValueProposition}
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Button href="/demo" variant="primary" className="stagger-item" style={{ animationDelay: '320ms' }}>
-                  {homeContent.ctas.primary}
-                </Button>
-                <Button href="/platform" variant="secondary" className="stagger-item" style={{ animationDelay: '360ms' }}>
-                  {homeContent.ctas.viewArchitecture}
-                </Button>
-                <Button href="/library/whitepaper" variant="secondary" className="stagger-item" style={{ animationDelay: '400ms' }}>
-                  {homeContent.ctas.readWhitePaper}
-                </Button>
-              </div>
-            </div>
+       <Section
+  id="top"
+  className="relative min-h-[500px] overflow-hidden bg-white"
+>
+  <Image
+  src="/images/Sensordeck_hero.png"
+  alt=""
+  width={2560}
+  height={850}
+  priority
+  quality={100}
+  unoptimized
+  className="absolute top-0 left-0 w-full h-auto"
+ />
+  <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-6 lg:px-8">
+    <div className="max-w-[620px]">
+      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        机器人运行时
+        <br />
+        智能治理基础设施
+      </h1>
 
-            <div className="relative stagger-item" style={{ animationDelay: '200ms' }}>
-              <AtlasWorkflowDiagram />
-            </div>
-          </div>
-        </Section>
+      <p className="mt-8 text-xl leading-9 text-ink">
+        {homeContent.heroSubtitle}
+      </p>
+
+      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue">
+        {homeContent.heroValueProposition}
+      </p>
+
+      <div className="mt-10 flex flex-wrap gap-3">
+        <Button href="/demo" variant="primary">
+          {homeContent.ctas.primary}
+        </Button>
+
+        <Button href="/platform" variant="secondary">
+          {homeContent.ctas.viewArchitecture}
+        </Button>
+
+        <Button href="/library/whitepaper" variant="secondary">
+          {homeContent.ctas.readWhitePaper}
+        </Button>
+      </div>
+    </div>
+  </div>
+</Section>
 
         {/* Category definition */}
         <Section id="category" className="bg-surface">
