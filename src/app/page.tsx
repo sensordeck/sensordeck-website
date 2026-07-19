@@ -114,20 +114,19 @@ export default function HomePage() {
           {homeContent.heroValueProposition}
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/demo" variant="primary" style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '300ms' }}>
-            {homeContent.ctas.primary}
-          </Button>
+        <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 px-4 lg:static lg:mt-8 lg:justify-start lg:px-0">
+  <Button href="/demo" variant="primary">
+    {homeContent.ctas.primary}
+  </Button>
 
-          <Button href="/platform" variant="secondary" style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '350ms' }}>
-            {homeContent.ctas.viewArchitecture}
-          </Button>
+  <Button href="/platform" variant="secondary">
+    {homeContent.ctas.viewArchitecture}
+  </Button>
 
-          <Button href="/library/whitepaper" variant="secondary" style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '400ms' }}>
-            {homeContent.ctas.readWhitePaper}
-          </Button>
-        </div>
-
+  <Button href="/library/whitepaper" variant="secondary">
+    {homeContent.ctas.readWhitePaper}
+  </Button>
+</div>
       </div>
 
     </div>
