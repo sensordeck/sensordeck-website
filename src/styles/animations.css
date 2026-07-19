@@ -1,0 +1,285 @@
+/*
+ * SensorDeck Animation System
+ * Based on Emil Kowalski's design engineering philosophy
+ *
+ * Core principles:
+ * - UI animations < 300ms
+ * - Only animate transform and opacity (GPU accelerated)
+ * - Custom easing curves (built-in CSS easings are too weak)
+ * - Never use ease-in (feels sluggish)
+ * - Never animate from scale(0)
+ */
+
+:root {
+  /* Custom easing curves - stronger than CSS defaults */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* Standard durations */
+  --duration-button: 160ms;
+  --duration-tooltip: 150ms;
+  --duration-card: 200ms;
+  --duration-modal: 250ms;
+
+  /* Stagger delays */
+  --stagger-short: 40ms;
+  --stagger-medium: 60ms;
+  --stagger-long: 80ms;
+}
+
+/* =============================================================================
+ * Button Press Feedback
+ * Buttons must feel responsive - instant visual feedback on press
+ * ============================================================================= */
+
+.button-press {
+  transition: transform var(--duration-button) var(--ease-out);
+}
+
+.button-press:active {
+  transform: scale(0.97);
+}
+
+/* Only apply hover effects on devices with hover capability */
+@media (hover: hover) and (pointer: fine) {
+  .button-hover {
+    transition: transform var(--duration-button) var(--ease-out),
+                background-color 200ms ease,
+                border-color 200ms ease,
+                color 200ms ease;
+  }
+}
+
+/* =============================================================================
+ * Card Entry Animations
+ * Cards enter with subtle scale + opacity (never from scale(0))
+ * ============================================================================= */
+
+.card-enter {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity var(--duration-card) var(--ease-out),
+              transform var(--duration-card) var(--ease-out);
+}
+
+.card-enter[data-starting] {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+}
+
+/* Modern browsers: @starting-style */
+@supports (animation-timeline: view()) {
+  .card-enter {
+    @starting-style {
+      opacity: 0;
+      transform: scale(0.97) translateY(8px);
+    }
+  }
+}
+
+/* =============================================================================
+ * Stagger Animations
+ * Multiple elements entering together - cascade with small delays
+ * ============================================================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Stagger utility classes */
+.stagger-item {
+  animation: fadeInScale 250ms var(--ease-out) both;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0ms; }
+.stagger-item:nth-child(2) { animation-delay: 50ms; }
+.stagger-item:nth-child(3) { animation-delay: 100ms; }
+.stagger-item:nth-child(4) { animation-delay: 150ms; }
+.stagger-item:nth-child(5) { animation-delay: 200ms; }
+.stagger-item:nth-child(6) { animation-delay: 250ms; }
+.stagger-item:nth-child(7) { animation-delay: 300ms; }
+.stagger-item:nth-child(8) { animation-delay: 350ms; }
+.stagger-item:nth-child(9) { animation-delay: 400ms; }
+.stagger-item:nth-child(10) { animation-delay: 450ms; }
+
+/* Heading stagger (Eyebrow → Title → Description) */
+.heading-eyebrow {
+  animation: fadeInUp 200ms var(--ease-out) both;
+  animation-delay: 0ms;
+}
+
+.heading-title {
+  animation: fadeInUp 250ms var(--ease-out) both;
+  animation-delay: 80ms;
+}
+
+.heading-description {
+  animation: fadeInUp 200ms var(--ease-out) both;
+  animation-delay: 160ms;
+}
+
+/* =============================================================================
+ * Section Entry Animations
+ * Sections fade in when scrolling into view
+ * ============================================================================= */
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-enter {
+  animation: sectionFadeIn 400ms var(--ease-out) both;
+}
+
+/* =============================================================================
+ * Link Hover Effects
+ * Subtle underline animation for navigation links
+ * ============================================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .link-hover {
+    position: relative;
+    transition: color 150ms var(--ease-out);
+  }
+
+  .link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms var(--ease-out);
+  }
+
+  .link-hover:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* =============================================================================
+ * Five-Window Model Animation
+ * Center window (Deviation) pulses slightly to draw attention
+ * ============================================================================= */
+
+@keyframes windowPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.five-window-center {
+  animation: windowPulse 1200ms var(--ease-in-out) 600ms 1;
+}
+
+/* =============================================================================
+ * Arrow Animation
+ * Arrows slide when parent is hovered
+ * ============================================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .arrow-slide {
+    transition: transform 200ms var(--ease-out);
+  }
+
+  .arrow-parent:hover .arrow-slide {
+    transform: translateX(4px);
+  }
+}
+
+/* =============================================================================
+ * Blur Crossfade
+ * Smooth state transitions with subtle blur
+ * ============================================================================= */
+
+.blur-transition {
+  transition: filter 200ms ease, opacity 200ms ease;
+}
+
+.blur-transition.transitioning {
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+/* =============================================================================
+ * Reduced Motion Support
+ * Remove transform animations, keep opacity for accessibility
+ * ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Keep opacity transitions for comprehension */
+  .card-enter,
+  .stagger-item,
+  .section-enter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .button-press:active {
+    transform: none !important;
+  }
+}
+
+/* =============================================================================
+ * Mobile Optimizations
+ * Reduce stagger delays on smaller screens
+ * ============================================================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --stagger-short: 20ms;
+    --stagger-medium: 30ms;
+    --stagger-long: 40ms;
+  }
+
+  .stagger-item:nth-child(1) { animation-delay: 0ms; }
+  .stagger-item:nth-child(2) { animation-delay: 30ms; }
+  .stagger-item:nth-child(3) { animation-delay: 60ms; }
+  .stagger-item:nth-child(4) { animation-delay: 90ms; }
+  .stagger-item:nth-child(5) { animation-delay: 120ms; }
+  .stagger-item:nth-child(6) { animation-delay: 150ms; }
+  .stagger-item:nth-child(7) { animation-delay: 180ms; }
+  .stagger-item:nth-child(8) { animation-delay: 210ms; }
+  .stagger-item:nth-child(9) { animation-delay: 240ms; }
+  .stagger-item:nth-child(10) { animation-delay: 270ms; }
+}

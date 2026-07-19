@@ -60,6 +60,7 @@ export default function Footer() {
                 {group.links.map((link) => (
                   <a
                     className="w-fit text-sm text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+                    style={{ transitionDuration: '150ms', transitionTimingFunction: 'var(--ease-out)' }}
                     href={link.href}
                     key={link.label}
                     target={link.href.startsWith("http") ? "_blank" : undefined}

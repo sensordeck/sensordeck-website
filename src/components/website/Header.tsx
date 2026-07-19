@@ -38,7 +38,7 @@ function NavigationLinks({ mobile = false }: { mobile?: boolean }) {
     >
       {navigation.map((item) => (
         <a
-          className={`rounded-sm px-2 py-2 text-sm font-medium text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue ${
+          className={`rounded-sm px-2 py-2 text-sm font-medium text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue link-hover ${
             mobile ? "block" : ""
           }`}
           href={item.href}

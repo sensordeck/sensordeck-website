@@ -11,7 +11,7 @@ export default function Card({
 }: CardProps) {
   return (
     <div
-      className={`rounded-lg border border-border bg-white p-6 ${className}`}
+      className={`rounded-lg border border-border bg-white p-6 card-enter ${className}`}
       {...props}
     >
       {children}
