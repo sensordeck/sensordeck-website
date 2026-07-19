@@ -67,7 +67,7 @@ export default function HomePage() {
     quality={100}
     unoptimized
     className="object-cover"
-    style={{ objectPosition: '-180px right' }}
+    style={{ objectPosition: '-80px right' }}
   />
 
   {/* Overlay */}
