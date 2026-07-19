@@ -68,7 +68,7 @@ export default function HomePage() {
   className="relative w-full overflow-hidden bg-white"
   style={{
     backgroundImage: "url('/images/hero-runtime.png')",
-    backgroundSize: "cover",
+    backgroundSize: "88% auto",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   }}
