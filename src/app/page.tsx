@@ -65,7 +65,7 @@ export default function HomePage() {
       {/* Hero */}
 <Section
   id="top"
-  className="relative min-h-[380px] overflow-hidden bg-white"
+  className="relative overflow-hidden bg-white"
 >
   <Image
     src="/images/hero-runtime.png"
@@ -73,7 +73,7 @@ export default function HomePage() {
     fill
     priority
     sizes="100vw"
-    className="object-cover object-[68%_top] scale-[0.80]"
+    className="object-cover object-[68%_top] scale-[0.78]"
   />
 
   {/* 让左侧文字保持清晰 */}
