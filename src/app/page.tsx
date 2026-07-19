@@ -68,7 +68,7 @@ export default function HomePage() {
   className="relative min-h-[620px] overflow-hidden bg-white"
 >
   <Image
-    src="/images/Sensodeck_hero.png"
+    src="/images/Sensordeck_hero.png"
     alt="Atlas Runtime"
     fill
     priority
