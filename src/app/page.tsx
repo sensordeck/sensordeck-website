@@ -65,31 +65,36 @@ export default function HomePage() {
     {/* Responsive Hero */}
 <Section
   id="top"
-  className="relative min-h-[380px] overflow-hidden bg-white"
+  className="relative overflow-hidden bg-white"
 >
+  {/* Full hero artwork */}
   <Image
     src="/images/hero-runtime.png"
     alt=""
-    width={1672}
-    height={941}
+    fill
     priority
-    sizes="1100px"
-    className="pointer-events-none absolute right-0 top-0 h-auto w-[1050px] max-w-none lg:w-[1050px] xl:w-[1120px]"
+    sizes="100vw"
+    className="pointer-events-none object-cover object-center"
   />
 
-  <div className="relative z-10 mx-auto flex min-h-[380px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
-    <div className="max-w-[560px]">
-      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+  {/* White fade on the left for text readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
+
+  {/* Content */}
+  <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-center px-6 lg:px-8">
+    <div className="max-w-[620px]">
+
+      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
         机器人运行时
         <br />
         智能治理基础设施
       </h1>
 
-      <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
+      <p className="mt-8 text-xl leading-9 text-ink">
         {homeContent.heroSubtitle}
       </p>
 
-      <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
+      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue">
         {homeContent.heroValueProposition}
       </p>
 
@@ -106,6 +111,7 @@ export default function HomePage() {
           {homeContent.ctas.readWhitePaper}
         </Button>
       </div>
+
     </div>
   </div>
 </Section>
