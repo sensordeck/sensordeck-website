@@ -63,67 +63,52 @@ export default function HomePage() {
 
       <main>
     {/* Responsive Hero */}
-<section id="top" className="bg-white">
-  <div
-    className="
-      mx-auto
-      max-w-7xl
-      px-6 lg:px-8
-      grid
-      gap-10
-      items-center
-      lg:grid-cols-[540px_1fr]
-      py-12
-      lg:min-h-[620px]
-    "
-  >
-    {/* LEFT */}
-    <div className="z-10">
+<Section
+  id="top"
+  className="relative min-h-[380px] overflow-hidden bg-white"
+>
+  <Image
+    src="/images/hero-runtime.png"
+    alt=""
+    width={1672}
+    height={941}
+    priority
+    sizes="1100px"
+    className="pointer-events-none absolute right-0 top-0 h-auto w-[1050px] max-w-none lg:w-[1050px] xl:w-[1120px]"
+  />
 
-      <h1 className="text-[42px] lg:text-[58px] font-semibold leading-[1.03] tracking-tight text-ink">
-        Runtime Intelligence
+  <div className="relative z-10 mx-auto flex min-h-[380px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
+    <div className="max-w-[560px]">
+      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        机器人运行时
         <br />
-        Infrastructure for Robotics
+        智能治理基础设施
       </h1>
 
-      <p className="mt-6 text-xl leading-8 text-ink">
-        从部署前到部署后。
-        <br />
-        观察、理解、调查、改进、复用。
+      <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
+        {homeContent.heroSubtitle}
       </p>
 
-      <p className="mt-6 max-w-[540px] text-base leading-7 text-muted">
-        Atlas 将机器人运行时证据连接至 Historical RGA™、
-        Investigation Workspace 与 Assist Vault™，
-        让每一次调查从已有组织知识开始，而不是从零开始。
+      <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
+        {homeContent.heroValueProposition}
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className="mt-10 flex flex-wrap gap-3">
         <Button href="/demo" variant="primary">
-          申请演示
+          {homeContent.ctas.primary}
         </Button>
 
-        <Button href="/products" variant="secondary">
-          探索产品
+        <Button href="/platform" variant="secondary">
+          {homeContent.ctas.viewArchitecture}
+        </Button>
+
+        <Button href="/library/whitepaper" variant="secondary">
+          {homeContent.ctas.readWhitePaper}
         </Button>
       </div>
-
     </div>
-
-    {/* RIGHT */}
-    <div className="relative">
-      <Image
-        src="/images/hero-runtime.png"
-        alt="Atlas Runtime"
-        width={1672}
-        height={941}
-        priority
-        className="w-full h-auto object-contain"
-      />
-    </div>
-
   </div>
-</section>
+</Section>
         {/* Category definition */}
         <Section id="category" className="bg-surface">
           <SectionHeading
