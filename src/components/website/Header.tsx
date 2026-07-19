@@ -20,7 +20,7 @@ function Brand() {
     >
       <Image
         alt="SensorDeck"
-        className="h-10 w-auto"
+        className="h-16 w-auto"
         height={360}
         priority
         src="/logos/SensorDeck18.png"
