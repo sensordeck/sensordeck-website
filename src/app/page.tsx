@@ -72,6 +72,7 @@ export default function HomePage() {
     alt="Atlas Runtime"
     fill
     priority
+    quality={100}
     sizes="100vw"
     className="object-cover object-center"
   />
