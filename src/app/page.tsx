@@ -56,7 +56,7 @@ export default function HomePage() {
       <Header />
 
       <main>
-     <Section id="top" className="relative overflow-hidden bg-white min-h-[500px] lg:min-h-[700px]">
+     <Section id="top" className="relative overflow-hidden bg-white min-h-[430px] lg:min-h-[700px]">
 
   {/* Hero artwork */}
   <Image
