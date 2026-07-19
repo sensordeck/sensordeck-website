@@ -63,21 +63,18 @@ export default function HomePage() {
 
       <main>
     {/* Responsive Hero */}
-<section id="top" className="relative overflow-hidden bg-white">
-  {/* Desktop background: hidden on mobile */}
+<section id="top" className="relative w-full overflow-hidden bg-white">
+  {/* Desktop: exact fit to Hero */}
   <div
     className="absolute inset-0 hidden bg-no-repeat md:block"
     style={{
       backgroundImage: "url('/images/hero-runtime.png')",
-      backgroundSize: "68% auto",
-      backgroundPosition: "right top",
+      backgroundSize: "100% 100%",
+      backgroundPosition: "center",
     }}
   />
 
-  {/* Desktop left-side blend */}
-  <div className="absolute inset-y-0 left-0 hidden w-[48%] bg-gradient-to-r from-white via-white/95 to-transparent md:block" />
-
-  {/* Mobile image: full width, no cropping */}
+  {/* Mobile: preserve complete image */}
   <div className="relative block w-full md:hidden">
     <Image
       src="/images/hero-runtime.png"
@@ -87,6 +84,10 @@ export default function HomePage() {
       priority
       className="h-auto w-full"
     />
+  </div>
+
+  <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 py-10 md:min-h-[430px] md:py-8 lg:px-8">
+    {/* 左侧文字 */}
   </div>
 
   {/* Hero copy */}
