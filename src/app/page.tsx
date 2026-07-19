@@ -68,16 +68,15 @@ export default function HomePage() {
   className="relative min-h-[500px] overflow-hidden bg-white"
 >
   <Image
-    src="/images/Sensordeck_hero.png"
-    alt="Atlas Runtime"
-    fill
-    priority
-    quality={100}
-    unoptimized
-    sizes="100vw"
-    className="object-cover object-center"
-  />
-
+  src="/images/Sensordeck_hero.png"
+  alt=""
+  width={2560}
+  height={850}
+  priority
+  quality={100}
+  unoptimized
+  className="absolute top-0 left-0 w-full h-auto"
+ />
   <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-6 lg:px-8">
     <div className="max-w-[620px]">
       <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
