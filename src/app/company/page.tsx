@@ -1,3 +1,6 @@
+"use client";
+
+import { AnimatedSection } from "@/components/website/AnimatedSection";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
 import Footer from "@/components/website/Footer";
@@ -54,7 +57,8 @@ export default function CompanyPage() {
 
       <main>
         <Section id="company-hero" className="bg-white pt-24 lg:pt-32">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
+          <AnimatedSection>
+            <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
             <div className="max-w-4xl">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
                 SensorDeck / 公司
@@ -80,10 +84,12 @@ export default function CompanyPage() {
               </p>
             </div>
           </div>
+          </AnimatedSection>
         </Section>
 
         <Section id="mission" className="bg-surface section-enter">
-          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+          <AnimatedSection>
+            <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div>
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
                 使命与愿景
@@ -117,10 +123,12 @@ export default function CompanyPage() {
               </div>
             </div>
           </div>
+          </AnimatedSection>
         </Section>
 
         <Section id="category" className="bg-white section-enter">
-          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-20">
+          <AnimatedSection>
+            <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-20">
             <div className="max-w-md">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
                 类别陈述
@@ -138,6 +146,7 @@ export default function CompanyPage() {
               </p>
             </div>
           </div>
+          </AnimatedSection>
         </Section>
 
         <Section id="principles" className="bg-surface">

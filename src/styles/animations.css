@@ -302,3 +302,61 @@
   .stagger-item:nth-child(9) { animation-delay: 240ms; }
   .stagger-item:nth-child(10) { animation-delay: 270ms; }
 }
+
+/* =============================================================================
+ * Zendesk-Inspired Animations
+ * Additional animation patterns from Zendesk analysis
+ * ============================================================================= */
+
+/* Fade in with display trick - avoids flash when transitioning display:none */
+@keyframes fadeInDisplay {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* Slide up from bottom */
+@keyframes slideUpIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide down to bottom */
+@keyframes slideDownOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Utility classes for new animations */
+.animate-fade-in-display {
+  animation: fadeInDisplay var(--duration-normal) var(--ease-sensordeck);
+}
+
+.animate-slide-up {
+  animation: slideUpIn var(--duration-normal) var(--ease-snappy);
+}
+
+.animate-slide-down {
+  animation: slideDownOut var(--duration-normal) var(--ease-snappy);
+}
+

@@ -1,3 +1,6 @@
+"use client";
+
+import { AnimatedSection } from "@/components/website/AnimatedSection";
 import { technologyContent } from "@/content/zh/technology"
 import Header from "@/components/website/Header"
 import Footer from "@/components/website/Footer"
@@ -12,23 +15,25 @@ export default function TechnologyPage() {
 
       {/* Hero */}
       <section className="mx-auto max-w-screen-xl px-6 py-24 sm:px-8 lg:px-12">
-        <h1 className="mb-6 font-sans text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
-          {hero.title}
-        </h1>
-        <p className="max-w-3xl font-sans text-lg text-ink/70 sm:text-xl">
-          {hero.subtitle}
-        </p>
+        <AnimatedSection>
+          <h1 className="mb-6 font-sans text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            {hero.title}
+          </h1>
+          <p className="max-w-3xl font-sans text-lg text-ink/70 sm:text-xl">
+            {hero.subtitle}
+          </p>
+        </AnimatedSection>
       </section>
 
       {/* Sections */}
       <section className="mx-auto max-w-screen-xl px-6 pb-24 sm:px-8 lg:px-12">
         <div className="space-y-16">
           {sections.map((section, index) => (
-            <article
-              key={section.id}
-              id={section.id}
-              className="rounded-lg border border-ink/10 bg-paper p-8"
-            >
+            <AnimatedSection key={section.id}>
+              <article
+                id={section.id}
+                className="rounded-lg border border-ink/10 bg-paper p-8"
+              >
               <div className="mb-4">
                 <span className="font-mono text-sm text-atlas-blue">
                   {String(index + 1).padStart(2, "0")}
@@ -118,14 +123,16 @@ export default function TechnologyPage() {
                   {section.link.text}
                 </a>
               )}
-            </article>
+              </article>
+            </AnimatedSection>
           ))}
         </div>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-screen-xl px-6 pb-24 sm:px-8 lg:px-12">
-        <div className="rounded-lg border border-atlas-blue/20 bg-atlas-blue/5 p-12 text-center">
+        <AnimatedSection>
+          <div className="rounded-lg border border-atlas-blue/20 bg-atlas-blue/5 p-12 text-center">
           <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
             {cta.title}
           </h2>
@@ -145,7 +152,8 @@ export default function TechnologyPage() {
               {cta.secondaryButton.text}
             </Button>
           </div>
-        </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       <Footer />

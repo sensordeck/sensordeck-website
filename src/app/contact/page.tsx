@@ -27,7 +27,13 @@ const contactOptions = [
 ];
 
 const inputClass =
-  "input-focus mt-2 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-sm text-ink outline-none placeholder:text-muted/70 focus-visible:border-atlas-blue focus-visible:ring-2 focus-visible:ring-atlas-blue/20";
+  "mt-2 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-sm text-ink outline-none placeholder:text-muted/70 " +
+  "transition-[border-color,box-shadow,background-color] " +
+  "duration-[250ms,100ms,250ms] " +
+  "ease-in-out " +
+  "hover:border-border/80 " +
+  "focus-visible:border-atlas-blue " +
+  "focus-visible:ring-[3px] focus-visible:ring-atlas-blue/20";
 
 type ContactFormData = {
   name: string;

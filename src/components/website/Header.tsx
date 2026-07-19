@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import Button from "@/components/website/Button";
@@ -23,6 +26,7 @@ function Brand() {
         className="h-16 w-auto"
         height={360}
         priority
+        unoptimized
         src="/logos/SensorDeck18.png"
         width={1364}
       />
@@ -68,9 +72,30 @@ function LanguageToggle() {
 }
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white">
-      <div className="mx-auto flex min-h-18 w-full max-w-7xl items-center justify-start gap-6 px-5 sm:px-8 lg:px-10">
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-[250ms] ease-in-out ${
+        isScrolled
+          ? "border-border/60 bg-white/95 shadow-[0_2px_8px_rgba(0,0,0,0.08)] backdrop-blur-md"
+          : "border-border bg-white"
+      }`}
+    >
+      <div
+        className={`mx-auto flex w-full max-w-7xl items-center justify-start gap-6 px-5 transition-all duration-[250ms] ease-in-out sm:px-8 lg:px-10 ${
+          isScrolled ? "min-h-16" : "min-h-18"
+        }`}
+      >
         <Brand />
 
         <div className="ml-auto hidden items-center gap-4 lg:flex">

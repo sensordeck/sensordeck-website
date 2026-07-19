@@ -1,3 +1,6 @@
+"use client";
+
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
 import Footer from "@/components/website/Footer";
@@ -75,13 +78,24 @@ function ProductCard({
 }
 
 export default function ProductsPage() {
+  const heroRef = useScrollReveal();
+  const productsRef = useScrollReveal();
+  const infraRef = useScrollReveal();
+  const boundaryRef = useScrollReveal();
+  const ctaRef = useScrollReveal();
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
 
       {/* Hero */}
       <Section className="bg-white pt-24 lg:pt-32">
-        <div className="mx-auto max-w-4xl text-center">
+        <div
+          ref={heroRef.ref}
+          className={`mx-auto max-w-4xl text-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            heroRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
           <h1 className="text-4xl font-semibold tracking-tight text-ink lg:text-5xl">
             {productsContent.heroTitle}
           </h1>
@@ -93,7 +107,12 @@ export default function ProductsPage() {
 
       {/* Two Products */}
       <Section className="bg-surface">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div
+          ref={productsRef.ref}
+          className={`grid gap-8 lg:grid-cols-2 lg:gap-12 transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            productsRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
           <ProductCard
             name={productsContent.productA.name}
             audience={productsContent.productA.audience}
@@ -115,7 +134,12 @@ export default function ProductsPage() {
 
       {/* Shared Infrastructure */}
       <Section className="bg-white">
-        <div className="mx-auto max-w-3xl text-center">
+        <div
+          ref={infraRef.ref}
+          className={`mx-auto max-w-3xl text-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            infraRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
           <h2 className="text-3xl font-semibold tracking-tight text-ink">
             {productsContent.sharedInfrastructure.title}
           </h2>
@@ -127,7 +151,12 @@ export default function ProductsPage() {
 
       {/* Constitutional Boundary */}
       <Section className="bg-surface">
-        <div className="mx-auto max-w-2xl">
+        <div
+          ref={boundaryRef.ref}
+          className={`mx-auto max-w-2xl transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            boundaryRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
           <h3 className="mb-8 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
             宪法边界
           </h3>
@@ -149,7 +178,12 @@ export default function ProductsPage() {
 
       {/* CTA */}
       <Section className="bg-white">
-        <div className="mx-auto max-w-2xl text-center">
+        <div
+          ref={ctaRef.ref}
+          className={`mx-auto max-w-2xl text-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            ctaRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
           <h2 className="text-3xl font-semibold tracking-tight text-ink">
             了解 Atlas 如何适配您的组织
           </h2>

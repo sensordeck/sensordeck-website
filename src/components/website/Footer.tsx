@@ -34,10 +34,11 @@ export default function Footer() {
         <div className="max-w-sm">
           <a className="inline-flex items-center" href="#top">
             <Image
-              src="/logos/sensordeck-logo.png"
+              src="/logos/sensordeck-logo-white.png"
               alt="SensorDeck"
               width={160}
               height={40}
+              unoptimized
               className="h-8 w-auto brightness-0 invert"
             />
           </a>

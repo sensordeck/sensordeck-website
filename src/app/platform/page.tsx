@@ -1,3 +1,6 @@
+"use client";
+
+import { AnimatedSection } from "@/components/website/AnimatedSection";
 import { platformContent } from "@/content/zh/platform";
 import Button from "@/components/website/Button";
 import Header from "@/components/website/Header";
@@ -12,7 +15,7 @@ export default function PlatformPage() {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="border-b border-border py-16 md:py-24">
-          <div className="mx-auto max-w-screen-lg px-6">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
             <h1 className="mb-4 font-sans text-4xl font-semibold tracking-tight text-ink md:text-5xl">
               {hero.title}
             </h1>
@@ -22,12 +25,12 @@ export default function PlatformPage() {
             <p className="max-w-3xl font-sans text-base leading-relaxed text-ink/80">
               {hero.description}
             </p>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* Architecture Section */}
         <section className="border-b border-border py-16">
-          <div className="mx-auto max-w-screen-lg px-6">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
             <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
               {architecture.title}
             </h2>
@@ -56,12 +59,12 @@ export default function PlatformPage() {
                 ))}
               </ul>
             </div>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* 7 Capability Cards */}
         <section className="border-b border-border py-16">
-          <div className="mx-auto max-w-screen-lg px-6">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
             <h2 className="mb-12 font-sans text-3xl font-semibold text-ink">
               平台能力
             </h2>
@@ -85,12 +88,12 @@ export default function PlatformPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* Products Relationship */}
         <section className="border-b border-border py-16">
-          <div className="mx-auto max-w-screen-lg px-6">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
             <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
               {productsRelationship.title}
             </h2>
@@ -120,12 +123,12 @@ export default function PlatformPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* Documentation */}
         <section className="border-b border-border py-16">
-          <div className="mx-auto max-w-screen-lg px-6">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
             <h2 className="mb-12 font-sans text-3xl font-semibold text-ink">
               {documentation.title}
             </h2>
@@ -154,12 +157,12 @@ export default function PlatformPage() {
                 {documentation.documentationLink.description}
               </p>
             </a>
-          </div>
+          </AnimatedSection>
         </section>
 
         {/* CTA */}
         <section className="py-16">
-          <div className="mx-auto max-w-screen-lg px-6 text-center">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-6 text-center">
             <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
               {cta.title}
             </h2>
@@ -174,7 +177,7 @@ export default function PlatformPage() {
                 {cta.secondaryButton}
               </Button>
             </div>
-          </div>
+          </AnimatedSection>
         </section>
       </div>
       <Footer />

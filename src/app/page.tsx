@@ -56,21 +56,22 @@ export default function HomePage() {
       <Header />
 
       <main>
-     <Section id="top" className="relative overflow-hidden bg-white">
+     <Section id="top" className="relative overflow-hidden bg-white min-h-[600px] lg:min-h-[700px]">
 
   {/* Hero artwork */}
   <Image
     src="/images/Sensordeck_hero.png"
     alt="Atlas Runtime Governance"
-    width={2560}
-    height={850}
+    fill
     priority
     quality={100}
-    className="block w-full h-auto"
+    unoptimized
+    className="object-cover"
+    style={{ objectPosition: '-360px center' }}
   />
 
   {/* Overlay */}
-  <div className="absolute inset-0 flex items-center">
+  <div className="absolute inset-0 flex items-center z-10">
     <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
       <div className="max-w-[42rem]">
@@ -109,20 +110,20 @@ export default function HomePage() {
           sm:text-base
           font-semibold
           text-atlas-blue
-        " style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '240ms' }}>
+        " style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '200ms' }}>
           {homeContent.heroValueProposition}
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/demo" variant="primary" style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '320ms' }}>
+          <Button href="/demo" variant="primary" style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '300ms' }}>
             {homeContent.ctas.primary}
           </Button>
 
-          <Button href="/platform" variant="secondary" style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '360ms' }}>
+          <Button href="/platform" variant="secondary" style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '350ms' }}>
             {homeContent.ctas.viewArchitecture}
           </Button>
 
-          <Button href="/library/whitepaper" variant="secondary" style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '400ms' }}>
+          <Button href="/library/whitepaper" variant="secondary" style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '400ms' }}>
             {homeContent.ctas.readWhitePaper}
           </Button>
         </div>
@@ -507,7 +508,7 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <Card className="border-ink/15 bg-ink text-white">
+            <Card className="border-ink/15 bg-ink text-white opacity-100 transform-none">
               <div className="flex items-center justify-between gap-4 border-b border-white/15 pb-4">
                 <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/50">
                   Historical RGA™ / Recall candidate
