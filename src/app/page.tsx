@@ -71,7 +71,7 @@ export default function HomePage() {
   />
 
   {/* 让左侧文字保持清晰 */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/45 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
 
   <div className="relative z-10 mx-auto flex min-h-[600px] w-full max-w-7xl items-center px-6 py-20 lg:px-8">
     <div className="max-w-2xl">
