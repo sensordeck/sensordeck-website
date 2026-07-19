@@ -70,21 +70,14 @@ export default function HomePage() {
   <Image
     src="/images/hero-runtime.png"
     alt=""
-   width={1672}
-    height={941}
+    fill
     priority
-    sizes="1100px"
-  />
-
-  {/* 让左侧文字保持清晰 */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
-
+    sizes="100vw"
     className="object-cover object-[68%_top] scale-[0.78]"
   />
 
   {/* 让左侧文字保持清晰 */}
   <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
-
     <div className="max-w-[560px]">
       <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
         机器人运行时
