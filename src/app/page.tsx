@@ -66,17 +66,16 @@ export default function HomePage() {
 <section
   id="top"
   className="relative w-full overflow-hidden bg-white"
-  style={{
-    backgroundImage: "url('/images/hero-runtime.png')",
-   backgroundSize: "68% auto",
-  backgroundPosition: "right top",
-    backgroundRepeat: "no-repeat",
-  }}
+style={{
+  backgroundImage:
+    "url('/images/hero-runtime.png'), linear-gradient(90deg, #f8fbff 0%, #eef6ff 34%, #dceeff 58%, #b9daf7 100%)",
+  backgroundSize: "68% auto, 100% 100%",
+  backgroundPosition: "right top, center",
+  backgroundRepeat: "no-repeat, no-repeat",
+}}
 >
   {/* 只保护左侧文字，不洗白整张图 */}
-  <div className="absolute inset-y-0 left-0 w-[54%] bg-gradient-to-r from-white via-white/90 to-transparent" />
-
-  <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
+   <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
     <div className="max-w-[560px]">
       <h1 className="text-[52px] font-semibold leading-[1.04] tracking-tight text-ink lg:text-[58px]">
         Runtime Intelligence
