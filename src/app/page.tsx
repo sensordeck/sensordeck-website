@@ -62,77 +62,55 @@ export default function HomePage() {
       <Header />
 
       <main>
-        {/* Hero */}
-        <section
-          id="top"
-          className="relative isolate min-h-[430px] overflow-hidden border-b border-border bg-white"
-        >
-          <Image
-            src="/images/hero-runtime.png"
-            alt="Atlas runtime intelligence infrastructure for robotics"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[72%_center]"
-          />
+      {/* Hero */}
+<Section
+  id="top"
+  className="relative min-h-[380px] overflow-hidden bg-white"
+>
+  <Image
+    src="/images/hero-runtime.png"
+    alt=""
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-[78%_center] scale-[0.88]"
+  />
 
-          {/* Full-width background image with a controlled left readability layer. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/96 via-white/72 to-transparent" />
+  {/* 让左侧文字保持清晰 */}
+  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
 
-          <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
-            <div className="w-full max-w-[590px]">
-              <h1 className="text-[42px] font-semibold leading-[1.03] tracking-tight text-ink sm:text-[50px] lg:text-[56px]">
-                Runtime Intelligence
-                <br />
-                Infrastructure for Robotics
-              </h1>
+  <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8 lg:py-8">
+    <div className="max-w-[560px]">
+      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        机器人运行时
+        <br />
+        智能治理基础设施
+      </h1>
 
-              <p className="mt-4 text-lg leading-7 text-ink sm:text-xl">
-                从部署前到部署后。
-                <br />
-                观察、理解、调查、改进、复用。
-              </p>
+      <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
+        {homeContent.heroSubtitle}
+      </p>
 
-              <p className="mt-3 max-w-[560px] text-sm leading-6 text-muted sm:text-base">
-                Atlas 将机器人运行时证据连接至 Historical RGA™、
-                Investigation Workspace 与 Assist Vault™，让每一次调查从已有组织知识开始，而不是从零开始。
-              </p>
+      <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
+        {homeContent.heroValueProposition}
+      </p>
 
-              <div className="mt-5 flex flex-wrap gap-3">
-                <Button href="/demo" variant="primary">
-                  {homeContent.ctas.primary}
-                </Button>
-                <Button href="/products" variant="secondary">
-                  探索产品
-                </Button>
-              </div>
+      <div className="mt-10 flex flex-wrap gap-3">
+        <Button href="/demo" variant="primary">
+          {homeContent.ctas.primary}
+        </Button>
 
-              <div className="mt-6 grid max-w-[560px] grid-cols-2 gap-x-5 gap-y-3 border-t border-ink/10 pt-4 sm:grid-cols-4">
-                {heroPrinciples.map((principle) => (
-                  <div className="min-w-0" key={principle.title}>
-                    <div className="flex items-start gap-2">
-                      <span
-                        aria-hidden="true"
-                        className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-atlas-blue/25 bg-white/80 text-[10px] font-semibold text-atlas-blue"
-                      >
-                        ✓
-                      </span>
-                      <div>
-                        <p className="text-[11px] font-semibold leading-4 text-ink">
-                          {principle.title}
-                        </p>
-                        <p className="mt-0.5 text-[10px] leading-4 text-muted">
-                          {principle.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <Button href="/platform" variant="secondary">
+          {homeContent.ctas.viewArchitecture}
+        </Button>
 
+        <Button href="/library/whitepaper" variant="secondary">
+          {homeContent.ctas.readWhitePaper}
+        </Button>
+      </div>
+    </div>
+  </div>
+</Section>
         {/* Category definition */}
         <Section id="category" className="bg-surface">
           <SectionHeading
