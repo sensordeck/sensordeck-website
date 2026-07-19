@@ -56,89 +56,80 @@ export default function HomePage() {
       <Header />
 
       <main>
-       {/* Hero: define the category before introducing the product. */}
-<Section id="top" className="overflow-hidden bg-white">
-  <div className="relative">
+     <Section id="top" className="relative overflow-hidden bg-white">
 
-    {/* Mobile text */}
-    <div className="px-6 py-10 md:hidden">
-      <h1 className="text-[40px] font-semibold leading-[1.08] tracking-tight text-ink">
-        机器人运行时
-        <br />
-        智能治理基础设施
-      </h1>
+  {/* Hero artwork */}
+  <Image
+    src="/images/Sensordeck_hero.png"
+    alt="Atlas Runtime Governance"
+    width={2560}
+    height={850}
+    priority
+    quality={100}
+    className="block w-full h-auto"
+  />
 
-      <p className="mt-6 text-base leading-7 text-ink">
-        {homeContent.heroSubtitle}
-      </p>
+  {/* Overlay */}
+  <div className="absolute inset-0 flex items-center">
+    <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
-      <p className="mt-6 text-sm font-semibold leading-6 text-atlas-blue">
-        {homeContent.heroValueProposition}
-      </p>
+      <div className="max-w-[42rem]">
 
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Button href="/demo" variant="primary">
-          {homeContent.ctas.primary}
-        </Button>
+        <h1 className="
+          font-semibold
+          tracking-tight
+          text-ink
+          leading-[1.05]
 
-        <Button href="/platform" variant="secondary">
-          {homeContent.ctas.viewArchitecture}
-        </Button>
+          text-4xl
+          sm:text-5xl
+          lg:text-6xl
+        ">
+          机器人运行时
+          <br />
+          智能治理基础设施
+        </h1>
 
-        <Button href="/library/whitepaper" variant="secondary">
-          {homeContent.ctas.readWhitePaper}
-        </Button>
-      </div>
-    </div>
+        <p className="
+          mt-6
+          max-w-xl
+          text-base
+          sm:text-lg
+          leading-7
+          text-ink
+        ">
+          {homeContent.heroSubtitle}
+        </p>
 
-    {/* Hero image */}
-    <Image
-      src="/images/Sensordeck_hero.png"
-      alt="Atlas Runtime"
-      width={2560}
-      height={850}
-      priority
-      quality={100}
-      sizes="100vw"
-      className="block h-auto w-full"
-    />
+        <p className="
+          mt-5
+          text-sm
+          sm:text-base
+          font-semibold
+          text-atlas-blue
+        ">
+          {homeContent.heroValueProposition}
+        </p>
 
-    {/* Desktop text overlay */}
-    <div className="absolute inset-0 hidden items-center md:flex">
-      <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="max-w-[560px]">
-          <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink lg:text-6xl xl:text-7xl">
-            机器人运行时
-            <br />
-            智能治理基础设施
-          </h1>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Button href="/demo" variant="primary">
+            {homeContent.ctas.primary}
+          </Button>
 
-          <p className="mt-7 text-lg leading-8 text-ink lg:text-xl">
-            {homeContent.heroSubtitle}
-          </p>
+          <Button href="/platform" variant="secondary">
+            {homeContent.ctas.viewArchitecture}
+          </Button>
 
-          <p className="mt-7 text-base font-semibold leading-7 text-atlas-blue">
-            {homeContent.heroValueProposition}
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Button href="/demo" variant="primary">
-              {homeContent.ctas.primary}
-            </Button>
-
-            <Button href="/platform" variant="secondary">
-              {homeContent.ctas.viewArchitecture}
-            </Button>
-
-            <Button href="/library/whitepaper" variant="secondary">
-              {homeContent.ctas.readWhitePaper}
-            </Button>
-          </div>
+          <Button href="/library/whitepaper" variant="secondary">
+            {homeContent.ctas.readWhitePaper}
+          </Button>
         </div>
-      </div>
-    </div>
 
+      </div>
+
+    </div>
   </div>
+
 </Section>
         {/* Category definition */}
         <Section id="category" className="bg-surface">
