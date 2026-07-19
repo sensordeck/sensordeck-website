@@ -62,28 +62,28 @@ export default function HomePage() {
       <Header />
 
       <main>
-    {/* Responsive Hero */}
-<section id="top" className="bg-white">
-  <div
-    className="
-      mx-auto
-      max-w-7xl
-      px-6 lg:px-8
-      grid
-      gap-10
-      items-center
-      lg:grid-cols-[540px_1fr]
-      py-12
-      lg:min-h-[620px]
-    "
-  >
-    {/* LEFT */}
-    <div className="z-10">
+        {/* Hero: define the category before introducing the product. */}
+        {/* Hero */}
+<Section
+  id="top"
+  className="relative min-h-[380px] overflow-hidden bg-white"
+>
+  <Image
+    src="/images/hero-runtime.png"
+    alt=""
+    width={1672}
+    height={941}
+    priority
+    sizes="1100px"
+    className="pointer-events-none absolute right-0 top-0 h-auto w-[1050px] max-w-none lg:w-[1050px] xl:w-[1120px]"
+  />
 
-      <h1 className="text-[42px] lg:text-[58px] font-semibold leading-[1.03] tracking-tight text-ink">
-        Runtime Intelligence
+  <div className="relative z-10 mx-auto flex min-h-[380px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
+    <div className="max-w-[560px]">
+      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        机器人运行时
         <br />
-        Infrastructure for Robotics
+        智能治理基础设施
       </h1>
 
       <p className="mt-6 text-xl leading-8 text-ink">
@@ -539,7 +539,7 @@ export default function HomePage() {
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-3xl">
                 <Eyebrow>10 / Request demo</Eyebrow>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-5xl">
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:[60px]">
                   {homeContent.sectionTitles.finalCta}
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">
