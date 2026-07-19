@@ -73,6 +73,7 @@ export default function HomePage() {
     fill
     priority
     quality={100}
+    unoptimized
     sizes="100vw"
     className="object-cover object-center"
   />
