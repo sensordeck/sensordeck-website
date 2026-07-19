@@ -62,53 +62,51 @@ export default function HomePage() {
       <Header />
 
       <main>
-      {/* Hero */}
-<Section
+     {/* Hero */}
+<section
   id="top"
-  className="relative overflow-hidden bg-white"
+  className="relative w-full overflow-hidden bg-white"
+  style={{
+    backgroundImage: "url('/images/hero-runtime.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center 34%",
+    backgroundRepeat: "no-repeat",
+  }}
 >
-  <Image
-    src="/images/hero-runtime.png"
-    alt=""
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover object-[68%_top] scale-[0.78]"
-  />
+  {/* 只保护左侧文字，不洗白整张图 */}
+  <div className="absolute inset-y-0 left-0 w-[54%] bg-gradient-to-r from-white via-white/90 to-transparent" />
 
-  {/* 让左侧文字保持清晰 */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
+  <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
     <div className="max-w-[560px]">
-      <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
-        机器人运行时
+      <h1 className="text-[52px] font-semibold leading-[1.04] tracking-tight text-ink lg:text-[58px]">
+        Runtime Intelligence
         <br />
-        智能治理基础设施
+        Infrastructure for Robotics
       </h1>
 
-      <p className="mt-7 max-w-2xl text-xl leading-9 text-ink md:text-2xl">
-        {homeContent.heroSubtitle}
+      <p className="mt-4 text-xl leading-8 text-ink">
+        从部署前到部署后。
+        <br />
+        观察、理解、调查、改进、复用。
       </p>
 
-      <p className="mt-8 max-w-2xl text-base font-semibold leading-8 text-atlas-blue">
-        {homeContent.heroValueProposition}
+      <p className="mt-4 max-w-[540px] text-base leading-7 text-muted">
+        Atlas 将机器人运行时证据连接至 Historical RGA™、
+        Investigation Workspace 与 Assist Vault™，让每一次调查从已有组织知识开始，而不是从零开始。
       </p>
 
-      <div className="mt-10 flex flex-wrap gap-3">
+      <div className="mt-6 flex flex-wrap gap-3">
         <Button href="/demo" variant="primary">
-          {homeContent.ctas.primary}
+          申请演示
         </Button>
 
-        <Button href="/platform" variant="secondary">
-          {homeContent.ctas.viewArchitecture}
-        </Button>
-
-        <Button href="/library/whitepaper" variant="secondary">
-          {homeContent.ctas.readWhitePaper}
+        <Button href="/products" variant="secondary">
+          探索产品
         </Button>
       </div>
     </div>
   </div>
-</Section>
+</section>
         {/* Category definition */}
         <Section id="category" className="bg-surface">
           <SectionHeading
