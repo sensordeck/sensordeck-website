@@ -65,49 +65,45 @@ export default function HomePage() {
     {/* Responsive Hero */}
 <Section
   id="top"
-  className="relative overflow-hidden bg-white"
+  className="relative min-h-[620px] overflow-hidden bg-white"
 >
-  <div className="relative min-h-[680px] lg:min-h-[720px]">
-    <Image
-      src="/images/Sensodeck_hero.png"
-      alt="Atlas Runtime"
-      fill
-      priority
-      sizes="100vw"
-      className="object-cover object-[62%_center] lg:object-center"
-    />
+  <Image
+    src="/images/Sensodeck_hero.png"
+    alt="Atlas Runtime"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center"
+  />
 
-    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent lg:via-white/75" />
+  <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-center px-6 lg:px-8">
+    <div className="max-w-[620px]">
+      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        机器人运行时
+        <br />
+        智能治理基础设施
+      </h1>
 
-    <div className="relative z-10 mx-auto flex min-h-[680px] max-w-7xl items-center px-6 py-16 lg:min-h-[720px] lg:px-8">
-      <div className="max-w-[520px]">
-        <h1 className="text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl">
-          机器人运行时
-          <br />
-          智能治理基础设施
-        </h1>
+      <p className="mt-8 text-xl leading-9 text-ink">
+        {homeContent.heroSubtitle}
+      </p>
 
-        <p className="mt-7 max-w-[500px] text-lg leading-8 text-ink lg:text-xl">
-          {homeContent.heroSubtitle}
-        </p>
+      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue">
+        {homeContent.heroValueProposition}
+      </p>
 
-        <p className="mt-7 max-w-[500px] text-base font-semibold leading-7 text-atlas-blue">
-          {homeContent.heroValueProposition}
-        </p>
+      <div className="mt-10 flex flex-wrap gap-3">
+        <Button href="/demo" variant="primary">
+          {homeContent.ctas.primary}
+        </Button>
 
-        <div className="mt-9 flex flex-wrap gap-3">
-          <Button href="/demo" variant="primary">
-            {homeContent.ctas.primary}
-          </Button>
+        <Button href="/platform" variant="secondary">
+          {homeContent.ctas.viewArchitecture}
+        </Button>
 
-          <Button href="/platform" variant="secondary">
-            {homeContent.ctas.viewArchitecture}
-          </Button>
-
-          <Button href="/library/whitepaper" variant="secondary">
-            {homeContent.ctas.readWhitePaper}
-          </Button>
-        </div>
+        <Button href="/library/whitepaper" variant="secondary">
+          {homeContent.ctas.readWhitePaper}
+        </Button>
       </div>
     </div>
   </div>
