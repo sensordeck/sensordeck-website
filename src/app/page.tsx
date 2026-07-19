@@ -59,7 +59,7 @@ export default function HomePage() {
         {/* Hero */}
 <Section
   id="top"
-  className="relative min-h-[480px] overflow-hidden bg-white"
+  className="relative min-h-[430px] overflow-hidden bg-white"
 >
   <Image
     src="/images/hero-runtime.png"
@@ -73,7 +73,7 @@ export default function HomePage() {
   {/* 让左侧文字保持清晰 */}
   <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/10 to-transparent" />
 
-  <div className="relative z-10 mx-auto flex min-h-[480px] w-full max-w-7xl items-center px-6 py-10 lg:px-8 lg:py-12">
+  <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-10 lg:px-8 lg:py-12">
     <div className="max-w-2xl">
       <Eyebrow>SensorDeck / Category Definition</Eyebrow>
 
