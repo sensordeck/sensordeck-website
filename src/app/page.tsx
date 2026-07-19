@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AtlasWorkflowDiagram from "@/components/website/AtlasWorkflowDiagram";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
@@ -72,30 +73,30 @@ export default function HomePage() {
  />
   <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-6 lg:px-8">
     <div className="max-w-[620px]">
-      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
+      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl heading-title">
         机器人运行时
         <br />
         智能治理基础设施
       </h1>
 
-      <p className="mt-8 text-xl leading-9 text-ink">
+      <p className="mt-8 text-xl leading-9 text-ink heading-description">
         {homeContent.heroSubtitle}
       </p>
 
-      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue">
+      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue heading-description" style={{ animationDelay: '240ms' }}>
         {homeContent.heroValueProposition}
       </p>
 
       <div className="mt-10 flex flex-wrap gap-3">
-        <Button href="/demo" variant="primary">
+        <Button href="/demo" variant="primary" className="stagger-item" style={{ animationDelay: '320ms' }}>
           {homeContent.ctas.primary}
         </Button>
 
-        <Button href="/platform" variant="secondary">
+        <Button href="/platform" variant="secondary" className="stagger-item" style={{ animationDelay: '360ms' }}>
           {homeContent.ctas.viewArchitecture}
         </Button>
 
-        <Button href="/library/whitepaper" variant="secondary">
+        <Button href="/library/whitepaper" variant="secondary" className="stagger-item" style={{ animationDelay: '400ms' }}>
           {homeContent.ctas.readWhitePaper}
         </Button>
       </div>
