@@ -75,7 +75,11 @@ export default function HomePage() {
 
   <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-10 lg:px-8 lg:py-12">
     <div className="max-w-2xl">
-      <Eyebrow>SensorDeck / Category Definition</Eyebrow>
+      <Eyebrow>
+  ATLAS™
+  <br />
+  Runtime Intelligence Infrastructure™
+</Eyebrow>
 
       <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
         {homeContent.heroTitle}
