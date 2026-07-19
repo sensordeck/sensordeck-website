@@ -67,7 +67,7 @@ export default function HomePage() {
     fill
     priority
     sizes="100vw"
-    className="object-cover object-top"
+    className="object-cover object-[68%_top]"
   />
 
   {/* 让左侧文字保持清晰 */}
