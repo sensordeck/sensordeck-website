@@ -56,9 +56,8 @@ export default function HomePage() {
       <Header />
 
       <main>
-        {/* Hero: define the category before introducing the product. */}
-       <Section id="top" className="relative bg-white">
->
+       {/* Hero: define the category before introducing the product. */}
+<Section id="top" className="relative bg-white">
   <Image
     src="/images/Sensordeck_hero.png"
     alt=""
@@ -66,41 +65,46 @@ export default function HomePage() {
     height={850}
     priority
     quality={100}
-    className="w-full h-auto"
- />
+    className="block h-auto w-full"
+  />
+
   <div className="absolute inset-0 flex items-center">
-    <div className="max-w-[620px]">
-      <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl heading-title">
-        机器人运行时
-        <br />
-        智能治理基础设施
-      </h1>
+    <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+      <div className="max-w-[620px]">
+        <h1 className="heading-title text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
+          机器人运行时
+          <br />
+          智能治理基础设施
+        </h1>
 
-      <p className="mt-8 text-xl leading-9 text-ink heading-description">
-        {homeContent.heroSubtitle}
-      </p>
+        <p className="heading-description mt-8 text-xl leading-9 text-ink">
+          {homeContent.heroSubtitle}
+        </p>
 
-      <p className="mt-8 text-base font-semibold leading-8 text-atlas-blue heading-description" style={{ animationDelay: '240ms' }}>
-        {homeContent.heroValueProposition}
-      </p>
+        <p
+          className="heading-description mt-8 text-base font-semibold leading-8 text-atlas-blue"
+          style={{ animationDelay: "240ms" }}
+        >
+          {homeContent.heroValueProposition}
+        </p>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <Button href="/demo" variant="primary" className="stagger-item" style={{ animationDelay: '320ms' }}>
-          {homeContent.ctas.primary}
-        </Button>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Button href="/demo" variant="primary">
+            {homeContent.ctas.primary}
+          </Button>
 
-        <Button href="/platform" variant="secondary" className="stagger-item" style={{ animationDelay: '360ms' }}>
-          {homeContent.ctas.viewArchitecture}
-        </Button>
+          <Button href="/platform" variant="secondary">
+            {homeContent.ctas.viewArchitecture}
+          </Button>
 
-        <Button href="/library/whitepaper" variant="secondary" className="stagger-item" style={{ animationDelay: '400ms' }}>
-          {homeContent.ctas.readWhitePaper}
-        </Button>
+          <Button href="/library/whitepaper" variant="secondary">
+            {homeContent.ctas.readWhitePaper}
+          </Button>
+        </div>
       </div>
     </div>
   </div>
 </Section>
-
         {/* Category definition */}
         <Section id="category" className="bg-surface">
           <SectionHeading
