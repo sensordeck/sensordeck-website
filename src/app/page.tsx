@@ -59,7 +59,7 @@ export default function HomePage() {
         {/* Hero: define the category before introducing the product. */}
        <Section
   id="top"
-  className="relative min-h-[500px] overflow-hidden bg-white"
+  className="relative overflow-hidden bg-white"
 >
   <Image
   src="/images/Sensordeck_hero.png"
@@ -71,7 +71,7 @@ export default function HomePage() {
   unoptimized
   className="absolute top-0 left-0 w-full h-auto"
  />
-  <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-6 lg:px-8">
+  <div className="relative z-10 mx-auto flex py-20 lg:py-28 max-w-7xl items-center px-6 lg:px-8">
     <div className="max-w-[620px]">
       <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl heading-title">
         机器人运行时
