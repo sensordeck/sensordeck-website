@@ -65,7 +65,7 @@ export default function HomePage() {
     {/* Responsive Hero */}
 <Section
   id="top"
-  className="relative min-h-[620px] overflow-hidden bg-white"
+  className="relative min-h-[500px] overflow-hidden bg-white"
 >
   <Image
     src="/images/Sensordeck_hero.png"
@@ -76,7 +76,7 @@ export default function HomePage() {
     className="object-cover object-center"
   />
 
-  <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-center px-6 lg:px-8">
+  <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl items-center px-6 lg:px-8">
     <div className="max-w-[620px]">
       <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
         机器人运行时
