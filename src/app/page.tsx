@@ -56,7 +56,7 @@ export default function HomePage() {
       <Header />
 
       <main>
-     <Section id="top" className="relative overflow-hidden bg-white min-h-[430px] lg:min-h-[700px]">
+     <Section id="top" className="relative overflow-hidden bg-white min-h-[380px] lg:min-h-[700px]">
 
   {/* Hero artwork */}
   <Image
@@ -67,7 +67,7 @@ export default function HomePage() {
     quality={100}
     unoptimized
     className="object-cover"
-    style={{ objectPosition: 'center top' }}
+    style={{ objectPosition: 'center bottom' }}
   />
 
   {/* Overlay */}
