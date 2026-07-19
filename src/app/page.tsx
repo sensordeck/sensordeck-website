@@ -65,39 +65,42 @@ export default function HomePage() {
         {/* Hero */}
         <section
           id="top"
-          className="relative isolate overflow-hidden border-b border-border bg-white"
+          className="relative isolate overflow-hidden border-b border-border bg-[#f8fbff]"
         >
+          {/* Keep the full illustration visible, scale it independently, and anchor it to the right. */}
           <Image
             src="/images/hero-runtime.png"
             alt="Atlas runtime intelligence infrastructure for robotics"
-            fill
+            width={1672}
+            height={941}
             priority
-            sizes="100vw"
-            className="object-cover object-[74%_center]"
+            sizes="(min-width: 1280px) 920px, 72vw"
+            className="pointer-events-none absolute right-0 top-1/2 h-[430px] w-auto max-w-none -translate-y-1/2 object-contain lg:h-[455px] xl:h-[470px]"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/88 to-white/5" />
+          {/* Left-side contrast layer only; the right-side dashboard remains clear. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-transparent lg:via-white/82" />
 
-          <div className="relative z-10 mx-auto flex min-h-[500px] w-full max-w-7xl items-center px-6 py-10 lg:px-8">
-            <div className="w-full max-w-[610px]">
-              <h1 className="max-w-[610px] text-4xl font-semibold leading-[1.04] tracking-tight text-ink sm:text-5xl lg:text-[58px]">
+          <div className="relative z-10 mx-auto flex min-h-[390px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
+            <div className="w-full max-w-[570px]">
+              <h1 className="text-[42px] font-semibold leading-[1.03] tracking-tight text-ink sm:text-[50px] lg:text-[56px]">
                 Runtime Intelligence
                 <br />
                 Infrastructure for Robotics
               </h1>
 
-              <p className="mt-5 max-w-[590px] text-lg leading-8 text-ink sm:text-xl">
+              <p className="mt-4 text-lg leading-7 text-ink sm:text-xl">
                 从部署前到部署后。
                 <br />
                 观察、理解、调查、改进、复用。
               </p>
 
-              <p className="mt-4 max-w-[590px] text-base leading-7 text-muted">
+              <p className="mt-3 max-w-[550px] text-sm leading-6 text-muted sm:text-base">
                 Atlas 将机器人运行时证据连接至 Historical RGA™、
                 Investigation Workspace 与 Assist Vault™，让每一次调查从已有组织知识开始，而不是从零开始。
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-5 flex flex-wrap gap-3">
                 <Button href="/demo" variant="primary">
                   {homeContent.ctas.primary}
                 </Button>
@@ -106,23 +109,25 @@ export default function HomePage() {
                 </Button>
               </div>
 
-              <div className="mt-8 grid max-w-[610px] gap-4 border-t border-ink/10 pt-5 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-6 grid max-w-[560px] grid-cols-2 gap-x-5 gap-y-3 border-t border-ink/10 pt-4 sm:grid-cols-4">
                 {heroPrinciples.map((principle) => (
                   <div className="min-w-0" key={principle.title}>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-start gap-2">
                       <span
                         aria-hidden="true"
-                        className="flex size-6 shrink-0 items-center justify-center rounded-full border border-atlas-blue/25 bg-white/75 text-xs font-semibold text-atlas-blue"
+                        className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-atlas-blue/25 bg-white/80 text-[10px] font-semibold text-atlas-blue"
                       >
                         ✓
                       </span>
-                      <p className="text-xs font-semibold leading-5 text-ink">
-                        {principle.title}
-                      </p>
+                      <div>
+                        <p className="text-[11px] font-semibold leading-4 text-ink">
+                          {principle.title}
+                        </p>
+                        <p className="mt-0.5 text-[10px] leading-4 text-muted">
+                          {principle.description}
+                        </p>
+                      </div>
                     </div>
-                    <p className="mt-1 pl-8 text-[11px] leading-4 text-muted">
-                      {principle.description}
-                    </p>
                   </div>
                 ))}
               </div>
