@@ -49,19 +49,19 @@ export const homepageContent = {
       "Atlas 运行在传感器行为成为系统级运行时条件的边界上：电源、总线、Linux/SBC 运行时、ROS 输入，以及负责调查的团队。",
     benefits: [
       {
-        label: "运行时边界 (Runtime boundary)",
+        label: "运行时边界",
         description:
           "将传感器行为连接到电源、总线、Linux/SBC 运行时、ROS 输入和应用上下文。",
       },
       {
-        label: "有界证据 (Bounded evidence)",
+        label: "有界证据",
         description:
           "将长时间运行时数据集转换为标准化的证据窗口，供团队审查和交换。",
       },
       {
-        label: "可复用知识 (Reusable knowledge)",
+        label: "可复用知识",
         description:
-          "保存人工撰写的 Investigation Results (调查结果) 和 Lessons Learned (经验教训) 供未来参考。",
+          "保存人工撰写的调查结果和经验教训供未来参考。",
       },
     ],
   },
@@ -79,9 +79,9 @@ export const homepageContent = {
           "了解您的传感器在真实机器人部署中的行为表现，保留运行时知识，并使用共享证据与 OEM 调查团队协作。",
         keyModules: [
           "Runtime Profiles™",
-          "Runtime Observation",
+          "运行时观察",
           "Historical Sensor RGA™",
-          "OEM Collaboration through EGP",
+          "通过 EGP 与 OEM 协作",
         ],
         link: { text: "了解更多", href: "/products#sensor-governance" },
       },
@@ -109,9 +109,9 @@ export const homepageContent = {
       description:
         "在真实 OEM 部署中理解传感器运行时行为，与客户调查团队协作，并建立组织运行时知识。",
       capabilities: [
-        "Runtime Profile 定义",
+        "运行时配置定义",
         "运行时观察与保留",
-        "与 OEM 的证据共享 (EGP)",
+        "与 OEM 的证据共享（EGP）",
         "历史案例召回",
       ],
     },
@@ -130,10 +130,10 @@ export const homepageContent = {
 
   principle: {
     eyebrow: "05 / 运营原则",
-    title: "Evidence before conclusion",
+    title: "证据先于结论",
     subtitle: "不判因果、不归责",
     description:
-      "Atlas 结构化证据并检索历史候选。人工团队负责撰写 Investigation Results (调查结果) 和 Lessons Learned (经验教训)。",
+      "Atlas 结构化证据并检索历史候选。人工团队负责撰写调查结果和经验教训。",
     boundaries: [
       "Atlas 结构化证据。",
       "Atlas 检索历史候选。",
@@ -143,11 +143,11 @@ export const homepageContent = {
   },
 
   cta: {
-    eyebrow: "06 / Request Demo",
+    eyebrow: "06 / 申请演示",
     title: "让运行时证据在整个组织中发挥作用",
     description:
       "了解 Atlas 如何适配您的机器人组织的运行时边界、调查工作流程和证据所有权模型。",
-    note: "Illustrative demo data only",
+    note: "仅限示意性演示数据",
     button: {
       text: "联系我们",
       href: "mailto:contact@sensordeck.tech",

@@ -30,12 +30,12 @@ export default function DemoPage() {
       <main>
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm">
+          <nav aria-label="面包屑导航" className="flex items-center gap-2 text-sm">
             <a className="text-muted hover:text-ink" href="/library">
-              Library
+              资料库
             </a>
             <span className="text-muted">/</span>
-            <span className="font-semibold text-ink">Demo</span>
+            <span className="font-semibold text-ink">演示</span>
           </nav>
         </Section>
 
@@ -103,11 +103,11 @@ export default function DemoPage() {
           <div className="border border-atlas-blue/25 bg-surface-blue p-6 md:p-8">
             <div className="flex items-start gap-4">
               <span className="mt-1 font-mono text-xs text-atlas-blue">
-                NOTE
+                注意
               </span>
               <div>
                 <p className="text-sm leading-7 text-ink">
-                  所有演示数据均为示意性内容（Illustrative data only）。实际部署的 Evidence Pack 和调查资产包含客户特定的运行时上下文，不会在公开演示中展示。
+                  所有演示数据均为示意性内容。实际部署的 Evidence Pack 和调查资产包含客户特定的运行时上下文，不会在公开演示中展示。
                 </p>
                 <p className="mt-4 text-sm leading-7 text-muted">
                   如需访问完整的 Atlas Demo UI 或定制化演示，请联系我们安排演示会议。
@@ -124,13 +124,13 @@ export default function DemoPage() {
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href="/library/documentation"
             >
-              ← Documentation
+              ← 文档
             </a>
             <a
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href="/library/faq"
             >
-              FAQ →
+              常见问题 →
             </a>
           </div>
         </Section>

@@ -17,6 +17,7 @@
 
   /* Standard durations */
   --duration-button: 160ms;
+  --duration-input: 180ms;
   --duration-tooltip: 150ms;
   --duration-card: 200ms;
   --duration-modal: 250ms;
@@ -48,6 +49,20 @@
                 border-color 200ms ease,
                 color 200ms ease;
   }
+}
+
+/* =============================================================================
+ * Form Input Focus
+ * Small lift keeps focus changes perceptible without moving surrounding layout
+ * ============================================================================= */
+
+.input-focus {
+  transition: transform var(--duration-input) var(--ease-out),
+              opacity var(--duration-input) var(--ease-out);
+}
+
+.input-focus:focus-visible {
+  transform: translateY(-1px);
 }
 
 /* =============================================================================
@@ -256,6 +271,10 @@
   }
 
   .button-press:active {
+    transform: none !important;
+  }
+
+  .input-focus:focus-visible {
     transform: none !important;
   }
 }

@@ -3,21 +3,21 @@
   "candidate_id": "C03",
   "ref_id": "REF-2026-0716-0012",
   "created_at": "2026-07-16T09:18:42+08:00",
-  "surface": "USB Bus Timing",
+  "surface": "USB 总线时序",
   "primary": true,
   "five_window_summary": {
-    "pre_guard": "USB bus operating normally, average latency 1.2ms",
-    "baseline": "Stable USB 3.0 connection, 5Gbps link speed maintained",
-    "deviation": "USB bus reset detected at 08:15:22.347, connection dropped for 4.8 seconds",
-    "recovery": "USB device re-enumeration completed, LiDAR data stream resumed",
-    "post_guard": "Connection stable, no further anomalies observed"
+    "pre_guard": "USB 总线运行正常，平均延迟 1.2ms",
+    "baseline": "USB 3.0 连接稳定，链路速度保持 5Gbps",
+    "deviation": "08:15:22.347 检测到 USB 总线重置，连接中断 4.8 秒",
+    "recovery": "USB 设备重新枚举完成，LiDAR 数据流恢复",
+    "post_guard": "连接稳定，未观察到进一步异常"
   },
   "runtime_context": {
-    "affected_surfaces": ["USB Bus Timing", "LiDAR Point Cloud Quality", "ROS2 Topic Timing"],
-    "upstream": "Power supply stable, no thermal events",
-    "downstream": "Navigation module entered degraded mode, path replanning triggered"
+    "affected_surfaces": ["USB 总线时序", "LiDAR 点云质量", "ROS2 主题时序"],
+    "upstream": "电源稳定，未发生热事件",
+    "downstream": "导航模块进入降级模式，触发路径重新规划"
   },
-  "evidence_quality": "authoritative",
+  "evidence_quality": "权威",
   "metadata": {
     "runtime_dataset_id": "RD-7F3A-0716-0815",
     "collection_agent": "AGT-7F3A-7A21",

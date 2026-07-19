@@ -11,12 +11,12 @@ export const platformContent = {
     principles: [
       "运行时数据集由客户环境治理",
       "证据窗口标准化和有界",
-      "调查协调跨越 Tier 1、Tier 2/3、OEM 工程和传感器 FAE",
+      "调查协调跨越一级、二级/三级、OEM 工程和传感器 FAE",
       "Historical RGA™ 检索候选而非声称相同因果关系",
-      "Investigation Results 和 Lessons Learned 由人工团队撰写",
+      "调查结果和经验教训由人工团队撰写",
     ],
     constitutionalBoundary: {
-      title: "Atlas Constitutional Boundary",
+      title: "Atlas 宪法边界",
       items: [
         "Atlas 结构化证据。",
         "Atlas 检索历史候选。",
@@ -41,7 +41,7 @@ export const platformContent = {
       name: "Evidence Pack™",
       description: "将长时间运行时数据集转换为有界的、标准化的证据窗口。",
       keyFeatures: [
-        "Five-Window Evidence Model（Pre-Guard、Baseline、Deviation、Recovery、Post-Guard）",
+        "五窗口证据模型（前置保护、基线、偏差、恢复观察、后置保护）",
         "标准化证据窗口供团队审查",
         "有界上下文供 OEM 和传感器协作",
         "明确时序边界和运行时表面",
@@ -49,22 +49,22 @@ export const platformContent = {
     },
     {
       name: "Historical RGA™",
-      description: "召回先前的 Investigation Results 和 Lessons Learned，但不声称相同因果关系。",
+      description: "召回先前的调查结果和经验教训，但不声称相同因果关系。",
       keyFeatures: [
         "检索历史调查候选供审查",
-        "标记候选强度（Strong Candidate、Partial Candidate、Related Historical Pattern）",
-        "明确环境差异（Environment Difference）",
+        "标记候选强度（强候选、部分候选、相关历史模式）",
+        "明确环境差异",
         "不自动确认根本原因",
       ],
     },
     {
       name: "Investigation Workspace™",
-      description: "协调 Tier 1、Tier 2/3、OEM 工程和传感器 FAE 调查工作。",
+      description: "协调一级、二级/三级、OEM 工程和传感器 FAE 调查工作。",
       keyFeatures: [
         "统一调查上下文视图",
         "协调多团队工作流程",
         "Evidence Pack™ 审查界面",
-        "Investigation Results 和 Lessons Learned 撰写",
+        "调查结果和经验教训撰写",
       ],
     },
     {
@@ -80,7 +80,7 @@ export const platformContent = {
       name: "Assist Vault™",
       description: "将已完成的调查资产保存为组织记忆。",
       keyFeatures: [
-        "保存 Investigation Results 和 Lessons Learned",
+        "保存调查结果和经验教训",
         "保留 Evidence Pack™ 供未来参考",
         "支持 Historical RGA™ 检索",
         "构建可复用知识库",
@@ -107,10 +107,10 @@ export const platformContent = {
         audience: "传感器制造商",
         coreModules: [
           "Runtime Profiles™",
-          "Runtime Observation",
+          "运行时观察",
           "Historical Sensor RGA™",
           "Sensor Investigation Workspace™",
-          "OEM Collaboration through EGP",
+          "通过 EGP 与 OEM 协作",
           "Sensor Assist Vault™",
           "Runtime Knowledge Base™",
         ],
@@ -120,9 +120,9 @@ export const platformContent = {
         audience: "机器人 OEM",
         coreModules: [
           "Atlas Agent™",
-          "Runtime Dataset retention",
+          "运行时数据集保留",
           "Evidence Pack™",
-          "Candidate Evidence Packs",
+          "候选证据包",
           "Historical RGA™",
           "Investigation Workspace™",
           "Sensor Engagement Pack (EGP)",
@@ -137,7 +137,7 @@ export const platformContent = {
     title: "技术文档",
     whitePapers: [
       {
-        title: "Runtime Intelligence Infrastructure for Robotics",
+        title: "机器人运行时智能基础设施",
         description: "管理层和工程阅读层：什么是运行时智能基础设施，以及为什么它对机器人组织重要。",
       },
       {
@@ -149,21 +149,21 @@ export const platformContent = {
         description: "机器人 OEM 产品线的完整技术说明和实施指南。",
       },
       {
-        title: "Evidence Pack and Five-Window Evidence Model",
-        description: "Evidence Pack™ 的设计原理和 Five-Window 证据模型的技术实现。",
+        title: "Evidence Pack 与五窗口证据模型",
+        description: "Evidence Pack™ 的设计原理和五窗口证据模型的技术实现。",
       },
       {
-        title: "Historical RGA and Organizational Memory",
+        title: "Historical RGA 与组织记忆",
         description: "Historical RGA™ 如何检索候选、标记强度和保持组织记忆的一致性。",
       },
       {
-        title: "OEM ↔ Sensor Investigation Collaboration",
+        title: "OEM ↔ 传感器调查协作",
         description: "OEM 和传感器制造商之间的调查协作机制和证据交换模式。",
       },
     ],
     documentationLink: {
       title: "docs.sensordeck.tech",
-      description: "Canonical Schema（规范数据模式）、CLI、集成指南、工件定义、发布说明和技术实现文档。",
+      description: "规范数据模式、CLI、集成指南、工件定义、发布说明和技术实现文档。",
       href: "https://docs.sensordeck.tech",
     },
   },

@@ -7,7 +7,7 @@ import { libraryContent } from "@/content/zh/library";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
       {children}
     </p>
   );
@@ -23,15 +23,15 @@ export default function WhitePapersPage() {
       <main>
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm">
+          <nav aria-label="面包屑导航" className="flex items-center gap-2 text-sm">
             <a
               className="text-muted hover:text-ink"
               href="/library"
             >
-              Library
+              资料库
             </a>
             <span className="text-muted">/</span>
-            <span className="font-semibold text-ink">White Papers</span>
+            <span className="font-semibold text-ink">白皮书</span>
           </nav>
         </Section>
 
@@ -39,10 +39,10 @@ export default function WhitePapersPage() {
         <Section id="white-papers-hero" className="bg-white pt-8">
           <div className="max-w-3xl">
             <Eyebrow>{whitePapers.eyebrow}</Eyebrow>
-            <h1 className="mt-4 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl">
+            <h1 className="mt-4 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl heading-title">
               {whitePapers.title}
             </h1>
-            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl">
+            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl heading-description">
               {whitePapers.description}
             </p>
           </div>
@@ -51,8 +51,8 @@ export default function WhitePapersPage() {
         {/* White Papers Grid */}
         <Section id="papers" className="bg-surface">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {whitePapers.papers.map((paper) => (
-              <Card className="flex min-h-64 flex-col justify-between" key={paper.id}>
+            {whitePapers.papers.map((paper, index) => (
+              <Card className="flex min-h-64 flex-col justify-between stagger-item" key={paper.id}>
                 <div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="font-mono text-xs text-sensor-tan">
@@ -97,13 +97,13 @@ export default function WhitePapersPage() {
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href="/library"
             >
-              ← 返回 Library
+              ← 返回资料库
             </a>
             <a
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href="/library/documentation"
             >
-              Documentation →
+              文档 →
             </a>
           </div>
         </Section>

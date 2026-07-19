@@ -7,13 +7,13 @@
     "customer": "Pudu Robotics"
   },
   "robot_sn": "PUDU-T300-7F3A-0021",
-  "incident_type": "Navigation Deviation",
-  "severity": "Medium",
+  "incident_type": "导航偏差",
+  "severity": "中",
   "incident_time_approximate": "2026-07-16T08:15:00+08:00",
-  "description": "Robot deviated from planned path during delivery task. Customer reported unexpected route change and 3-minute delay.",
+  "description": "机器人在配送任务期间偏离规划路径。客户报告路线意外变化并延迟 3 分钟。",
   "environment": {
-    "location": "Floor 3, Building A, Zhangjiang Tech Park",
-    "conditions": "Indoor, normal lighting, moderate foot traffic"
+    "location": "张江科技园 A 楼 3 层",
+    "conditions": "室内，正常照明，中等人流"
   },
   "runtime_dataset_locked": true,
   "runtime_dataset_id": "RD-7F3A-0716-0815",

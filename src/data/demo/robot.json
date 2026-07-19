@@ -1,9 +1,9 @@
 {
   "serial_number": "PUDU-T300-7F3A-0021",
-  "model": "T300 Delivery",
+  "model": "T300 配送型",
   "firmware_version": "v2.8.4",
   "deployment_date": "2025-11-03",
-  "location": "Shanghai Zhangjiang Tech Park",
+  "location": "上海张江科技园",
   "customer_id": "CUST-PUDU-2024",
   "sensors": {
     "lidar": {

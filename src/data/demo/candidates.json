@@ -3,10 +3,10 @@
     {
       "id": "C01",
       "timestamp": "2026-07-16T08:15:23+08:00",
-      "surface": "LiDAR Point Cloud Quality",
+      "surface": "LiDAR 点云质量",
       "confidence": "strong",
-      "description": "Observed significant point cloud density reduction during 8:15:20-8:15:28",
-      "affected_components": ["Hesai Pandar XT32", "Localization Module"],
+      "description": "观察到 8:15:20-8:15:28 期间点云密度明显下降",
+      "affected_components": ["Hesai Pandar XT32", "定位模块"],
       "five_window": {
         "pre_guard": { "start": "08:14:53", "end": "08:15:13", "status": "baseline" },
         "baseline": { "start": "08:15:13", "end": "08:15:20", "status": "normal" },
@@ -18,10 +18,10 @@
     {
       "id": "C02",
       "timestamp": "2026-07-16T08:15:21+08:00",
-      "surface": "ROS2 Topic Timing",
+      "surface": "ROS2 主题时序",
       "confidence": "partial",
-      "description": "Localization topic publish rate dropped from 20Hz to 7Hz",
-      "affected_components": ["ROS2 /localization/pose", "Navigation Stack"],
+      "description": "定位主题发布频率从 20Hz 降至 7Hz",
+      "affected_components": ["ROS2 /localization/pose", "导航栈"],
       "five_window": {
         "pre_guard": { "start": "08:14:51", "end": "08:15:11", "status": "baseline" },
         "baseline": { "start": "08:15:11", "end": "08:15:21", "status": "normal" },
@@ -33,10 +33,10 @@
     {
       "id": "C03",
       "timestamp": "2026-07-16T08:15:22+08:00",
-      "surface": "USB Bus Timing",
+      "surface": "USB 总线时序",
       "confidence": "strong",
-      "description": "USB 3.0 bus reset detected on LiDAR interface",
-      "affected_components": ["USB Controller", "Hesai Pandar XT32"],
+      "description": "在 LiDAR 接口检测到 USB 3.0 总线重置",
+      "affected_components": ["USB 控制器", "Hesai Pandar XT32"],
       "five_window": {
         "pre_guard": { "start": "08:14:52", "end": "08:15:12", "status": "baseline" },
         "baseline": { "start": "08:15:12", "end": "08:15:22", "status": "normal" },
@@ -49,10 +49,10 @@
     {
       "id": "C04",
       "timestamp": "2026-07-16T08:15:19+08:00",
-      "surface": "Power Supply Voltage",
+      "surface": "电源电压",
       "confidence": "related",
-      "description": "Minor voltage fluctuation on 12V rail",
-      "affected_components": ["Power Distribution Unit"],
+      "description": "12V 电源轨出现轻微电压波动",
+      "affected_components": ["电源分配单元"],
       "five_window": {
         "pre_guard": { "start": "08:14:49", "end": "08:15:09", "status": "baseline" },
         "baseline": { "start": "08:15:09", "end": "08:15:19", "status": "normal" },

@@ -2,21 +2,21 @@
 
 export default function AtlasWorkflowDiagram() {
   const steps = [
-    "Sensor",
+    "传感器",
     "Atlas Agent",
     "Evidence Pack",
     "Historical RGA",
-    "Investigation",
+    "调查",
     "IR + LL",
     "Assist Vault",
-    "Future Reuse",
+    "未来复用",
   ];
 
   return (
     <div className="border border-border bg-surface p-6 sm:p-8">
       <div className="flex items-center justify-between border-b border-border pb-4">
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
-          Atlas Workflow
+          Atlas 工作流程
         </p>
         <span className="size-2 rounded-full bg-atlas-blue" />
       </div>

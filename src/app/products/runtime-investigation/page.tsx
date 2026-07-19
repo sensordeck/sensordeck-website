@@ -106,7 +106,7 @@ export default function RuntimeInvestigationPage() {
       <Section className="bg-surface">
         <div className="mx-auto max-w-3xl">
           <h2 className="mb-8 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
-            Constitutional Boundary
+            宪法边界
           </h2>
           <Card className="border-atlas-blue/20 bg-white">
             <ul className="grid gap-4">

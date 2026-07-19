@@ -6,11 +6,11 @@
       "similarity_score": 0.87,
       "original_ref": "REF-2025-1128-0203",
       "original_robot": "PUDU-T300-6D2C-0047",
-      "surface": "USB Bus Timing",
-      "pattern": "USB 3.0 bus reset during high-bandwidth sensor operation",
-      "resolution_summary": "Identified USB cable EMI sensitivity. Replaced with shielded cable, added ferrite core.",
-      "why_retrieved": "Pattern match: USB bus reset + LiDAR data interruption + navigation degradation",
-      "environment_difference": "Different robot, same sensor model, different deployment site"
+      "surface": "USB 总线时序",
+      "pattern": "高带宽传感器运行期间出现 USB 3.0 总线重置",
+      "resolution_summary": "确认 USB 线缆存在 EMI 敏感性。更换屏蔽线缆并增加磁芯。",
+      "why_retrieved": "模式匹配：USB 总线重置 + LiDAR 数据中断 + 导航降级",
+      "environment_difference": "机器人不同，传感器型号相同，部署地点不同"
     },
     {
       "id": "RGA-2026-02-0089",
@@ -18,11 +18,11 @@
       "similarity_score": 0.64,
       "original_ref": "REF-2026-0215-0089",
       "original_robot": "PUDU-T300-8A1F-0033",
-      "surface": "Power Supply Voltage",
-      "pattern": "12V rail fluctuation correlated with USB device reset",
-      "resolution_summary": "Power supply capacitor aging. Replaced PSU under preventive maintenance.",
-      "why_retrieved": "Temporal correlation between power fluctuation and USB reset",
-      "environment_difference": "Older robot (deployed 2024), higher operating hours"
+      "surface": "电源电压",
+      "pattern": "12V 电源轨波动与 USB 设备重置相关",
+      "resolution_summary": "电源电容老化。在预防性维护中更换电源。",
+      "why_retrieved": "电源波动与 USB 重置存在时间相关性",
+      "environment_difference": "机器人更旧（2024 年部署），运行时长更高"
     },
     {
       "id": "RGA-2025-09-0156",
@@ -30,11 +30,11 @@
       "similarity_score": 0.51,
       "original_ref": "REF-2025-0923-0156",
       "original_robot": "PUDU-T200-4C8B-0091",
-      "surface": "ROS2 Topic Timing",
-      "pattern": "Localization topic rate drop without sensor hardware fault",
-      "resolution_summary": "CPU thermal throttling during peak load. Improved cooling, adjusted task priority.",
-      "why_retrieved": "Similar symptom (topic rate drop) but different robot model",
-      "environment_difference": "Different model (T200 vs T300), different compute platform"
+      "surface": "ROS2 主题时序",
+      "pattern": "定位主题频率下降，但未发现传感器硬件故障",
+      "resolution_summary": "高负载期间 CPU 降频。改善散热并调整任务优先级。",
+      "why_retrieved": "症状相似（主题频率下降），但机器人型号不同",
+      "environment_difference": "型号不同（T200 与 T300），计算平台不同"
     }
   ]
 }

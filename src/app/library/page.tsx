@@ -6,7 +6,7 @@ import Section from "@/components/website/Section";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
       {children}
     </p>
   );
@@ -23,7 +23,7 @@ function ArrowLabel() {
 const libraryResources = [
   {
     id: "01",
-    title: "Technical White Papers",
+    title: "技术白皮书",
     description:
       "深入了解运行时智能基础设施、证据治理和调查生命周期。6篇技术白皮书覆盖 Atlas 核心概念。",
     href: "/library/white-papers",
@@ -31,7 +31,7 @@ const libraryResources = [
   },
   {
     id: "02",
-    title: "Documentation",
+    title: "技术文档",
     description:
       "面向开发者的完整文档站点，包含架构、CLI、集成、模式和术语。",
     href: "/library/documentation",
@@ -39,7 +39,7 @@ const libraryResources = [
   },
   {
     id: "03",
-    title: "Demo & Walkthrough",
+    title: "演示与演练",
     description:
       "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。包含 2 分钟概览和完整调查演练。",
     href: "/library/demo",
@@ -47,7 +47,7 @@ const libraryResources = [
   },
   {
     id: "04",
-    title: "FAQ",
+    title: "常见问题",
     description:
       "关于 Atlas 平台、证据所有权和运营原则的常见问题解答。",
     href: "/library/faq",
@@ -64,11 +64,11 @@ export default function LibraryIndexPage() {
         {/* Hero */}
         <Section id="library-hero" className="bg-white">
           <div className="max-w-4xl">
-            <Eyebrow>SensorDeck Library</Eyebrow>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl">
+            <Eyebrow>SensorDeck 资料库</Eyebrow>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl heading-title">
               技术阅读与资源
             </h1>
-            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl">
+            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl heading-description">
               面向工程和运营团队的技术白皮书、文档、演示和常见问题解答。
             </p>
           </div>
@@ -77,9 +77,9 @@ export default function LibraryIndexPage() {
         {/* Resources Grid */}
         <Section id="resources" className="bg-surface">
           <div className="grid gap-6 md:grid-cols-2">
-            {libraryResources.map((resource) => (
+            {libraryResources.map((resource, index) => (
               <Card
-                className="flex min-h-64 flex-col justify-between"
+                className="flex min-h-64 flex-col justify-between stagger-item"
                 key={resource.id}
               >
                 <div>
@@ -115,8 +115,8 @@ export default function LibraryIndexPage() {
         {/* Quick Links */}
         <Section id="quick-access" className="bg-white">
           <div className="max-w-3xl">
-            <Eyebrow>Quick access</Eyebrow>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+            <Eyebrow>快速访问</Eyebrow>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl heading-title">
               快速访问
             </h2>
           </div>
@@ -125,34 +125,34 @@ export default function LibraryIndexPage() {
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href="/library/white-papers"
             >
-              <span className="font-mono text-xs text-sensor-tan">WP</span>
+              <span className="font-mono text-xs text-sensor-tan">白皮书</span>
               <span className="mt-4 text-sm font-semibold text-ink">
-                White Papers
+                白皮书
               </span>
             </a>
             <a
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href="/library/documentation"
             >
-              <span className="font-mono text-xs text-sensor-tan">DOCS</span>
+              <span className="font-mono text-xs text-sensor-tan">文档</span>
               <span className="mt-4 text-sm font-semibold text-ink">
-                Documentation
+                文档
               </span>
             </a>
             <a
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href="/library/demo"
             >
-              <span className="font-mono text-xs text-sensor-tan">DEMO</span>
+              <span className="font-mono text-xs text-sensor-tan">演示</span>
               <span className="mt-4 text-sm font-semibold text-ink">
-                Demo & Videos
+                演示与视频
               </span>
             </a>
             <a
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href="/library/faq"
             >
-              <span className="font-mono text-xs text-sensor-tan">FAQ</span>
+              <span className="font-mono text-xs text-sensor-tan">常见问题</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 常见问题
               </span>
@@ -165,11 +165,11 @@ export default function LibraryIndexPage() {
           <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-3xl">
-                <Eyebrow>Request resources</Eyebrow>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-5xl">
+                <Eyebrow>申请资料</Eyebrow>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-5xl heading-title">
                   需要更多技术信息？
                 </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">
+                <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg heading-description">
                   联系我们获取完整白皮书、演示访问权限或讨论您的运行时治理需求。
                 </p>
               </div>

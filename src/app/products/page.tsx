@@ -129,7 +129,7 @@ export default function ProductsPage() {
       <Section className="bg-surface">
         <div className="mx-auto max-w-2xl">
           <h3 className="mb-8 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
-            Constitutional Boundary
+            宪法边界
           </h3>
           <Card className="border-atlas-blue/20 bg-white">
             <ul className="grid gap-4">

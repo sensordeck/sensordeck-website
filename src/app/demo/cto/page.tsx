@@ -9,6 +9,12 @@ import Section from "@/components/website/Section";
 type TimeRange = "30" | "90" | "180";
 type RoiMode = "conservative" | "expected" | "actual";
 
+const roiModeLabels: Record<RoiMode, string> = {
+  conservative: "保守",
+  expected: "预期",
+  actual: "实际",
+};
+
 export default function CTODemoPage() {
   const [timeRange, setTimeRange] = useState<TimeRange>("90");
   const [roiMode, setRoiMode] = useState<RoiMode>("expected");
@@ -34,12 +40,12 @@ export default function CTODemoPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-6">
               <span className="text-lg font-semibold text-atlas-blue">ATLAS</span>
-              <span className="text-sm text-muted">Executive Dashboard</span>
+              <span className="text-sm text-muted">管理层仪表板</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-xs text-muted">Dr. Zhou (CTO)</span>
               <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
-                Executive
+                管理层
               </span>
             </div>
           </div>
@@ -49,7 +55,7 @@ export default function CTODemoPage() {
         <Section className="bg-surface py-4">
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-xs text-muted">Time Range:</span>
+              <span className="text-xs text-muted">时间范围：</span>
               <div className="flex border border-border bg-white">
                 {(["30", "90", "180"] as const).map((range) => (
                   <button
@@ -62,13 +68,13 @@ export default function CTODemoPage() {
                     onClick={() => setTimeRange(range)}
                     type="button"
                   >
-                    {range} Days
+                    {range} 天
                   </button>
                 ))}
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs text-muted">ROI Model:</span>
+              <span className="text-xs text-muted">ROI 模型：</span>
               <div className="flex border border-border bg-white">
                 {(["conservative", "expected", "actual"] as const).map((mode) => (
                   <button
@@ -81,7 +87,7 @@ export default function CTODemoPage() {
                     onClick={() => setRoiMode(mode)}
                     type="button"
                   >
-                    {mode}
+                    {roiModeLabels[mode]}
                   </button>
                 ))}
               </div>
@@ -91,54 +97,54 @@ export default function CTODemoPage() {
 
         {/* KPI Grid */}
         <Section className="bg-white">
-          <Eyebrow>Investigation Operating Efficiency</Eyebrow>
+          <Eyebrow>调查运营效率</Eyebrow>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="border border-border bg-surface p-6">
-              <p className="text-xs text-muted">Open REF</p>
+              <p className="text-xs text-muted">开放 REF</p>
               <p className="mt-2 text-4xl font-semibold text-ink">{kpis.open_ref}</p>
-              <p className="mt-1 text-xs text-green-700">↓ 18% vs last period</p>
+              <p className="mt-1 text-xs text-green-700">↓ 18%，较上一周期</p>
             </div>
             <div className="border border-border bg-surface p-6">
-              <p className="text-xs text-muted">Safety-Relevant REF</p>
+              <p className="text-xs text-muted">安全相关 REF</p>
               <p className="mt-2 text-4xl font-semibold text-ink">{kpis.safety_relevant_ref}</p>
-              <p className="mt-1 text-xs text-muted">Requires executive review</p>
+              <p className="mt-1 text-xs text-muted">需要管理层审核</p>
             </div>
             <div className="border border-border bg-surface p-6">
-              <p className="text-xs text-muted">Median Time to First EP</p>
+              <p className="text-xs text-muted">首次 EP 中位用时</p>
               <p className="mt-2 text-4xl font-semibold text-ink">{kpis.median_time_to_first_ep}m</p>
-              <p className="mt-1 text-xs text-green-700">↓ 12 min vs target</p>
+              <p className="mt-1 text-xs text-green-700">↓ 12 分钟，较目标</p>
             </div>
             <div className="border border-border bg-surface p-6">
-              <p className="text-xs text-muted">Median Time to Closure</p>
+              <p className="text-xs text-muted">结案中位用时</p>
               <p className="mt-2 text-4xl font-semibold text-ink">{kpis.median_time_to_closure}d</p>
-              <p className="mt-1 text-xs text-green-700">↓ 35% vs manual</p>
+              <p className="mt-1 text-xs text-green-700">↓ 35%，较人工流程</p>
             </div>
           </div>
         </Section>
 
         {/* Organizational Memory */}
         <Section className="bg-surface">
-          <Eyebrow>Organizational Memory</Eyebrow>
+          <Eyebrow>组织记忆</Eyebrow>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
             历史 RGA 复用与供应商协作
           </h2>
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
             <div className="border border-border bg-white p-6">
-              <p className="text-xs text-muted">Historical RGA Reuse Rate</p>
+              <p className="text-xs text-muted">历史 RGA 复用率</p>
               <p className="mt-2 text-4xl font-semibold text-ink">{kpis.historical_rga_reuse_rate}%</p>
               <p className="mt-1 text-xs text-muted">
-                {timeRange} days: {Math.round((kpis.historical_rga_reuse_rate / 100) * kpis.open_ref * 2)} cases recalled
+                {timeRange} 天：召回 {Math.round((kpis.historical_rga_reuse_rate / 100) * kpis.open_ref * 2)} 个案例
               </p>
             </div>
             <div className="border border-border bg-white p-6">
-              <p className="text-xs text-muted">Sensor Escalation Rate</p>
+              <p className="text-xs text-muted">传感器升级率</p>
               <p className="mt-2 text-4xl font-semibold text-ink">{kpis.sensor_escalation_rate}%</p>
               <p className="mt-1 text-xs text-muted">
-                {Math.round((kpis.sensor_escalation_rate / 100) * kpis.open_ref * 2)} EGPs sent
+                已发送 {Math.round((kpis.sensor_escalation_rate / 100) * kpis.open_ref * 2)} 个 EGP
               </p>
             </div>
             <div className="border border-border bg-white p-6">
-              <p className="text-xs text-muted">Active Sensor Vendors</p>
+              <p className="text-xs text-muted">活跃传感器供应商</p>
               <p className="mt-2 text-4xl font-semibold text-ink">5</p>
               <p className="mt-1 text-xs text-muted">Hesai, Hikvision, Xsens, RoboSense, Velodyne</p>
             </div>
@@ -147,51 +153,51 @@ export default function CTODemoPage() {
 
         {/* ROI Metrics */}
         <Section className="bg-white">
-          <Eyebrow>Illustrative Demo Data</Eyebrow>
+          <Eyebrow>示意性演示数据</Eyebrow>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
             示意性 ROI 估算
           </h2>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <div className="border border-border bg-surface p-8">
-              <p className="text-sm font-semibold text-ink">Engineering Hours Saved</p>
+              <p className="text-sm font-semibold text-ink">节省工程工时</p>
               <p className="mt-4 text-5xl font-semibold text-ink">{kpis.engineering_hours_saved}h</p>
               <p className="mt-2 text-xs text-muted">
-                Based on {roiMode} model, {timeRange}-day window
+                基于{roiMode === "conservative" ? "保守" : roiMode === "expected" ? "预期" : "实际"}模型，{timeRange} 天窗口
               </p>
               <div className="mt-6 space-y-2 text-xs text-muted">
                 <div className="flex justify-between">
-                  <span>Avg. manual investigation:</span>
+                  <span>人工调查平均用时：</span>
                   <span>8.5h</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Avg. Atlas-assisted:</span>
+                  <span>Atlas 辅助平均用时：</span>
                   <span>3.2h</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Time savings per REF:</span>
+                  <span>每个 REF 节省时间：</span>
                   <span className="font-semibold text-green-700">5.3h</span>
                 </div>
               </div>
             </div>
             <div className="border border-border bg-surface p-8">
-              <p className="text-sm font-semibold text-ink">Estimated Cost Saved</p>
+              <p className="text-sm font-semibold text-ink">预计节省成本</p>
               <p className="mt-4 text-5xl font-semibold text-ink">
                 ¥{kpis.estimated_cost_saved}K
               </p>
               <p className="mt-2 text-xs text-muted">
-                Based on {roiMode} model, {timeRange}-day window
+                基于{roiMode === "conservative" ? "保守" : roiMode === "expected" ? "预期" : "实际"}模型，{timeRange} 天窗口
               </p>
               <div className="mt-6 space-y-2 text-xs text-muted">
                 <div className="flex justify-between">
-                  <span>Engineering hourly rate:</span>
+                  <span>工程师时薪：</span>
                   <span>¥200/h</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Total hours saved:</span>
+                  <span>节省总工时：</span>
                   <span>{kpis.engineering_hours_saved}h</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Cost savings:</span>
+                  <span>节省成本：</span>
                   <span className="font-semibold text-green-700">
                     ¥{kpis.estimated_cost_saved}K
                   </span>
@@ -201,7 +207,7 @@ export default function CTODemoPage() {
           </div>
           <div className="mt-6 border border-yellow-600/25 bg-yellow-50 p-5">
             <p className="text-xs leading-6 text-yellow-900">
-              <span className="font-semibold">Illustrative Demo Data：</span>
+              <span className="font-semibold">示意性演示数据：</span>
               商业指标为演示估算值，不代表具体客户的实际结果。实际 ROI
               取决于调查复杂度、团队效率和运营环境。
             </p>
@@ -210,18 +216,18 @@ export default function CTODemoPage() {
 
         {/* Candidate Surface Frequency */}
         <Section className="bg-surface">
-          <Eyebrow>Evidence Coverage</Eyebrow>
+          <Eyebrow>证据覆盖率</Eyebrow>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
             候选表面频率分布
           </h2>
           <div className="mt-8 space-y-3">
-            {[
-              { surface: "USB Bus Timing", count: 12, percentage: 28 },
-              { surface: "ROS2 Topic Timing", count: 9, percentage: 21 },
-              { surface: "LiDAR Point Cloud Quality", count: 8, percentage: 19 },
-              { surface: "Power Supply Voltage", count: 6, percentage: 14 },
-              { surface: "Network Packet Loss", count: 5, percentage: 12 },
-              { surface: "Storage I/O Timing", count: 3, percentage: 6 },
+              {[
+              { surface: "USB 总线时序", count: 12, percentage: 28 },
+              { surface: "ROS2 主题时序", count: 9, percentage: 21 },
+              { surface: "LiDAR 点云质量", count: 8, percentage: 19 },
+              { surface: "电源电压", count: 6, percentage: 14 },
+              { surface: "网络丢包", count: 5, percentage: 12 },
+              { surface: "存储 I/O 时序", count: 3, percentage: 6 },
             ].map((item) => (
               <div
                 className="flex items-center gap-4 border border-border bg-white p-4"
@@ -229,7 +235,7 @@ export default function CTODemoPage() {
               >
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-ink">{item.surface}</p>
-                  <p className="mt-1 text-xs text-muted">{item.count} occurrences</p>
+                  <p className="mt-1 text-xs text-muted">{item.count} 次出现</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="h-2 w-32 overflow-hidden bg-border">
@@ -255,7 +261,7 @@ export default function CTODemoPage() {
 
         {/* REF Volume Trend */}
         <Section className="bg-white">
-          <Eyebrow>Investigation Volume</Eyebrow>
+          <Eyebrow>调查数量</Eyebrow>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
             REF 数量与状态趋势
           </h2>
@@ -272,12 +278,12 @@ export default function CTODemoPage() {
                     <div
                       className="flex-1 bg-yellow-400"
                       style={{ height: `${(data.open / 60) * 200}px` }}
-                      title={`Open: ${data.open}`}
+                      title={`开放：${data.open}`}
                     />
                     <div
                       className="flex-1 bg-green-600"
                       style={{ height: `${(data.closed / 60) * 200}px`}}
-                      title={`Closed: ${data.closed}`}
+                      title={`已结案：${data.closed}`}
                     />
                   </div>
                   <p className="text-xs font-semibold text-ink">{data.month}</p>
@@ -287,11 +293,11 @@ export default function CTODemoPage() {
             <div className="mt-6 flex items-center justify-center gap-6 text-xs">
               <div className="flex items-center gap-2">
                 <div className="size-3 bg-yellow-400" />
-                <span className="text-muted">Open REF</span>
+                <span className="text-muted">开放 REF</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="size-3 bg-green-600" />
-                <span className="text-muted">Closed REF</span>
+                <span className="text-muted">已结案 REF</span>
               </div>
             </div>
           </div>
@@ -299,7 +305,7 @@ export default function CTODemoPage() {
 
         {/* Export Actions */}
         <Section className="bg-surface">
-          <Eyebrow>Executive Actions</Eyebrow>
+          <Eyebrow>管理层操作</Eyebrow>
           <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
             报告与审核
           </h2>
@@ -330,10 +336,10 @@ export default function CTODemoPage() {
           <div className="border border-atlas-blue/25 bg-surface-blue p-5">
             <div className="flex items-start gap-3">
               <span className="mt-1 font-mono text-[10px] font-semibold text-atlas-blue">
-                DEMO
+                演示
               </span>
               <p className="text-xs leading-6 text-muted">
-                实际 CTO Dashboard
+                实际 CTO 仪表板
                 包含完整的多客户/车队过滤、自定义时间范围、可导出治理报告和实时 SLA 追踪。
               </p>
             </div>

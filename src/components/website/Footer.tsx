@@ -2,27 +2,27 @@ import Image from "next/image";
 
 const footerGroups = [
   {
-    title: "Explore",
+    title: "探索",
     links: [
-      { label: "Products", href: "#products" },
-      { label: "Platform", href: "#platform" },
-      { label: "Technology", href: "#technology" },
+      { label: "产品", href: "#products" },
+      { label: "平台", href: "#platform" },
+      { label: "技术", href: "#technology" },
     ],
   },
   {
-    title: "Company",
+    title: "公司",
     links: [
-      { label: "About", href: "#company" },
-      { label: "Principles", href: "#evidence" },
-      { label: "Contact", href: "#request-demo" },
+      { label: "关于", href: "/company" },
+      { label: "原则", href: "#evidence" },
+      { label: "联系", href: "#request-demo" },
     ],
   },
   {
-    title: "Library",
+    title: "资料库",
     links: [
-      { label: "White Papers", href: "#resources" },
-      { label: "Documentation", href: "https://docs.sensordeck.tech" },
-      { label: "2-Min Overview", href: "#request-demo" },
+      { label: "白皮书", href: "#resources" },
+      { label: "文档", href: "https://docs.sensordeck.tech" },
+      { label: "2分钟概览", href: "#request-demo" },
     ],
   },
 ];
@@ -42,8 +42,7 @@ export default function Footer() {
             />
           </a>
           <p className="mt-6 text-sm leading-7 text-white/65">
-            Runtime intelligence infrastructure for robotics. Observe,
-            understand, investigate, improve, and reuse.
+            机器人运行时智能基础设施。观察、理解、调查、改进、复用。
           </p>
           <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-white/45">
             sensordeck.tech
@@ -77,8 +76,8 @@ export default function Footer() {
 
       <div className="border-t border-white/12">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
-          <span>© 2026 SensorDeck. All rights reserved.</span>
-          <span className="font-mono">Runtime boundary / Evidence / Memory</span>
+          <span>© 2026 SensorDeck。版权所有</span>
+          <span className="font-mono">运行时边界 / 证据 / 记忆</span>
         </div>
       </div>
     </footer>

@@ -28,12 +28,12 @@ export default function Tier1DemoPage() {
               <span className="text-lg font-semibold text-atlas-blue">
                 ATLAS
               </span>
-              <span className="text-sm text-muted">Tier 1 Portal</span>
+              <span className="text-sm text-muted">一级支持门户</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-xs text-muted">Zhang Wei</span>
               <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
-                Tier 1
+                一级支持
               </span>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Tier1DemoPage() {
         <Section className="bg-white">
           {currentStep === "incident" && (
             <div className="max-w-2xl">
-              <Eyebrow>Step 1 / 4</Eyebrow>
+              <Eyebrow>步骤 1 / 4</Eyebrow>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">
                 描述事件
               </h1>
@@ -92,9 +92,9 @@ export default function Tier1DemoPage() {
                   </label>
                   <select className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink">
                     <option>{refData.incident_type}</option>
-                    <option>Sensor Anomaly</option>
-                    <option>Communication Loss</option>
-                    <option>Performance Degradation</option>
+                    <option>传感器异常</option>
+                    <option>通信中断</option>
+                    <option>性能下降</option>
                   </select>
                 </div>
                 <div>
@@ -103,9 +103,9 @@ export default function Tier1DemoPage() {
                   </label>
                   <select className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink">
                     <option>{refData.severity}</option>
-                    <option>Low</option>
-                    <option>High</option>
-                    <option>Critical</option>
+                    <option>低</option>
+                    <option>高</option>
+                    <option>严重</option>
                   </select>
                 </div>
                 <div>
@@ -141,7 +141,7 @@ export default function Tier1DemoPage() {
 
           {currentStep === "robot" && (
             <div className="max-w-2xl">
-              <Eyebrow>Step 2 / 4</Eyebrow>
+              <Eyebrow>步骤 2 / 4</Eyebrow>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">
                 机器人与环境
               </h1>
@@ -222,7 +222,7 @@ export default function Tier1DemoPage() {
 
           {currentStep === "evidence" && (
             <div className="max-w-2xl">
-              <Eyebrow>Step 3 / 4</Eyebrow>
+              <Eyebrow>步骤 3 / 4</Eyebrow>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">
                 运行时证据
               </h1>
@@ -238,7 +238,7 @@ export default function Tier1DemoPage() {
                       </p>
                     </div>
                     <span className="border border-green-600 bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">
-                      Active
+                      活跃
                     </span>
                   </div>
                   <div className="mt-4 grid gap-3 text-xs">
@@ -257,7 +257,7 @@ export default function Tier1DemoPage() {
 
                 <div>
                   <label className="text-sm font-semibold text-ink">
-                    Runtime Dataset 时间窗口
+                    运行时数据集时间窗口
                   </label>
                   <div className="mt-2 grid gap-3 sm:grid-cols-2">
                     <input
@@ -278,15 +278,14 @@ export default function Tier1DemoPage() {
 
                 <div className="border border-atlas-blue/25 bg-surface-blue p-5">
                   <p className="text-xs font-semibold uppercase tracking-wider text-atlas-blue">
-                    Runtime Dataset 已锁定
+                    运行时数据集已锁定
                   </p>
                   <p className="mt-2 text-sm text-ink">
-                    Runtime Dataset ID:{" "}
+                    运行时数据集 ID：{" "}
                     <span className="font-mono">RD-7F3A-0716-0815</span>
                   </p>
                   <p className="mt-1 text-xs text-muted">
-                    覆盖范围: Timing, Power, Network, Storage, Sensors, ROS2
-                    Topics
+                    覆盖范围：时序、电源、网络、存储、传感器、ROS2 主题
                   </p>
                 </div>
               </div>
@@ -311,7 +310,7 @@ export default function Tier1DemoPage() {
 
           {currentStep === "review" && (
             <div className="max-w-2xl">
-              <Eyebrow>Step 4 / 4</Eyebrow>
+              <Eyebrow>步骤 4 / 4</Eyebrow>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">
                 审核并路由到 Tier 2
               </h1>
@@ -338,7 +337,7 @@ export default function Tier1DemoPage() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted">Runtime Dataset</span>
+                      <span className="text-muted">运行时数据集</span>
                       <span className="font-mono text-xs text-ink">
                         {refData.runtime_dataset_id}
                       </span>
@@ -351,9 +350,9 @@ export default function Tier1DemoPage() {
                     路由到
                   </label>
                   <select className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink">
-                    <option>Tier 2 Engineer - Li Ming</option>
-                    <option>Tier 2 Engineer - Chen Jing</option>
-                    <option>Tier 3 Specialist</option>
+                    <option>二级工程师 - Li Ming</option>
+                    <option>二级工程师 - Chen Jing</option>
+                    <option>三级专家</option>
                   </select>
                 </div>
 
@@ -390,10 +389,10 @@ export default function Tier1DemoPage() {
           <div className="border border-atlas-blue/25 bg-surface-blue p-5">
             <div className="flex items-start gap-3">
               <span className="mt-1 font-mono text-[10px] font-semibold text-atlas-blue">
-                DEMO
+                演示
               </span>
               <p className="text-xs leading-6 text-muted">
-                这是一个静态演示界面。实际 Tier 1 Portal 将提交到 Atlas 后端并触发 Tier 2 工作流。
+                这是一个静态演示界面。实际一级支持门户将提交到 Atlas 后端并触发二级工作流。
               </p>
             </div>
           </div>

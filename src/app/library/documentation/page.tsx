@@ -22,12 +22,12 @@ export default function DocumentationPage() {
       <main>
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm">
+            <nav aria-label="面包屑导航" className="flex items-center gap-2 text-sm">
             <a className="text-muted hover:text-ink" href="/library">
-              Library
+              资料库
             </a>
             <span className="text-muted">/</span>
-            <span className="font-semibold text-ink">Documentation</span>
+            <span className="font-semibold text-ink">文档</span>
           </nav>
         </Section>
 
@@ -49,7 +49,7 @@ export default function DocumentationPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div className="border border-border bg-white p-6 md:p-8">
               <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
-                Documentation topics
+                文档主题
               </p>
               <ul className="mt-6 grid gap-3">
                 {documentation.topics.map((topic) => (
@@ -91,7 +91,7 @@ export default function DocumentationPage() {
         {/* Use Cases */}
         <Section id="use-cases" className="bg-white">
           <div className="max-w-3xl">
-            <Eyebrow>Use documentation for</Eyebrow>
+            <Eyebrow>文档适用于</Eyebrow>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
               面向工程团队的完整参考
             </h2>
@@ -127,13 +127,13 @@ export default function DocumentationPage() {
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href="/library/white-papers"
             >
-              ← White Papers
+              ← 白皮书
             </a>
             <a
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href="/library/demo"
             >
-              Demo →
+              演示 →
             </a>
           </div>
         </Section>

@@ -84,6 +84,7 @@ export default function HomePage() {
           text-4xl
           sm:text-5xl
           lg:text-6xl
+          heading-title
         ">
           机器人运行时
           <br />
@@ -97,6 +98,7 @@ export default function HomePage() {
           sm:text-lg
           leading-7
           text-ink
+          heading-description
         ">
           {homeContent.heroSubtitle}
         </p>
@@ -107,20 +109,20 @@ export default function HomePage() {
           sm:text-base
           font-semibold
           text-atlas-blue
-        ">
+        " style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '240ms' }}>
           {homeContent.heroValueProposition}
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/demo" variant="primary">
+          <Button href="/demo" variant="primary" style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '320ms' }}>
             {homeContent.ctas.primary}
           </Button>
 
-          <Button href="/platform" variant="secondary">
+          <Button href="/platform" variant="secondary" style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '360ms' }}>
             {homeContent.ctas.viewArchitecture}
           </Button>
 
-          <Button href="/library/whitepaper" variant="secondary">
+          <Button href="/library/whitepaper" variant="secondary" style={{ animation: 'fadeInUp 200ms var(--ease-out) both', animationDelay: '400ms' }}>
             {homeContent.ctas.readWhitePaper}
           </Button>
         </div>
@@ -135,7 +137,7 @@ export default function HomePage() {
         <Section id="category" className="bg-surface">
           <SectionHeading
             description={homeContent.sectionDescriptions.categoryDefinition}
-            eyebrow="01 / Category"
+            eyebrow="01 / 类别"
             title={homeContent.sectionTitles.categoryDefinition}
           />
           <div className="mt-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -169,7 +171,7 @@ export default function HomePage() {
         <Section id="governance" className="bg-white">
           <SectionHeading
             description={homeContent.sectionDescriptions.whyRuntimeGovernance}
-            eyebrow="02 / The gap"
+            eyebrow="02 / 缺口"
             title={homeContent.sectionTitles.whyRuntimeGovernance}
           />
           <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -200,7 +202,7 @@ export default function HomePage() {
         <Section id="products" className="bg-surface">
           <SectionHeading
             description={homeContent.sectionDescriptions.productLines}
-            eyebrow="03 / Products"
+            eyebrow="03 / 产品"
             title={homeContent.sectionTitles.productLines}
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -216,7 +218,7 @@ export default function HomePage() {
                 >
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="font-mono text-xs text-sensor-tan">
-                      PRODUCT 0{index + 1}
+                      产品 0{index + 1}
                     </span>
                     <span className="border border-border bg-white px-2.5 py-1 text-xs font-semibold text-muted">
                       {product.audience}
@@ -232,7 +234,7 @@ export default function HomePage() {
                 <div className="grid flex-1 gap-8 p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
                   <div>
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
-                      Core modules
+                      核心模块
                     </p>
                     <ul className="mt-4 grid gap-2.5">
                       {product.modules.map((module) => (
@@ -248,7 +250,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
-                      Product lifecycle
+                      产品生命周期
                     </p>
                     <div className="mt-4 grid gap-2">
                       {product.lifecycle.map((step, stepIndex) => (
@@ -267,7 +269,7 @@ export default function HomePage() {
                     className="inline-flex items-center gap-2 text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
                     href="#platform"
                   >
-                    Explore shared platform
+                    探索共享平台
                     <ArrowLabel />
                   </a>
                 </div>
@@ -280,7 +282,7 @@ export default function HomePage() {
         <Section id="platform" className="bg-white">
           <SectionHeading
             description={homeContent.sectionDescriptions.platformCapabilities}
-            eyebrow="04 / Platform"
+            eyebrow="04 / 平台"
             title={homeContent.sectionTitles.platformCapabilities}
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -318,7 +320,7 @@ export default function HomePage() {
           <div id="lifecycle" className="scroll-mt-24">
             <SectionHeading
               description={homeContent.sectionDescriptions.investigationLifecycle}
-              eyebrow="05 / Investigation lifecycle"
+              eyebrow="05 / 调查生命周期"
               title={homeContent.sectionTitles.investigationLifecycle}
             />
             <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
@@ -347,7 +349,7 @@ export default function HomePage() {
             <div className="mt-10 grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
               <div>
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
-                  Five-window evidence model
+                  五窗口证据模型
                 </p>
                 <p className="mt-4 text-xl leading-8 tracking-tight text-ink">
                   Evidence is bounded around the runtime deviation, not treated
@@ -379,7 +381,7 @@ export default function HomePage() {
         <Section id="industry" className="bg-white">
           <SectionHeading
             description={homeContent.sectionDescriptions.roboticsIndustry}
-            eyebrow="06 / Robotics industry"
+            eyebrow="06 / 机器人行业"
             title={homeContent.sectionTitles.roboticsIndustry}
           />
           <div className="mt-12 grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
@@ -390,7 +392,7 @@ export default function HomePage() {
               <div className="mt-6 grid gap-3">
                 <div className="flex items-center gap-3 border-b border-border pb-4">
                   <span className="size-2 rounded-full bg-atlas-blue" />
-                  <span className="text-sm font-semibold text-ink">Sensor</span>
+                  <span className="text-sm font-semibold text-ink">传感器</span>
                 </div>
                 <div className="flex items-center gap-3 border-b border-border pb-4">
                   <span className="size-2 rounded-full bg-sensor-tan" />
@@ -444,7 +446,7 @@ export default function HomePage() {
         <Section id="evidence" className="bg-surface">
           <SectionHeading
             description={homeContent.sectionDescriptions.evidenceOwnership}
-            eyebrow="07 / Evidence boundary"
+            eyebrow="07 / 证据边界"
             title={homeContent.sectionTitles.evidenceOwnership}
           />
           <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -483,19 +485,16 @@ export default function HomePage() {
         <Section id="memory" className="bg-white">
           <SectionHeading
             description={homeContent.sectionDescriptions.organizationalMemory}
-            eyebrow="08 / Organizational memory"
+            eyebrow="08 / 组织记忆"
             title={homeContent.sectionTitles.organizationalMemory}
           />
           <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
             <div>
               <p className="max-w-xl text-2xl leading-10 tracking-tight text-ink">
-                Historical RGA™ is recall, reuse, and reference for human
-                investigation teams.
+                Historical RGA™ 是人工调查团队的召回、复用和参考系统。
               </p>
               <p className="mt-6 max-w-xl text-base leading-8 text-muted">
-                It does not automatically learn, confirm root cause, or assign
-                responsibility. The retrieved candidate comes with the reason
-                it was retrieved and the environment differences that remain.
+                它不会自动学习、确认根本原因或分配责任。检索到的候选项会附带检索原因和仍然存在的环境差异。
               </p>
               <div className="mt-8 flex flex-wrap gap-2">
                 {homeContent.organizationalMemory.labels.map((label) => (
@@ -529,18 +528,18 @@ export default function HomePage() {
               <div className="mt-8 grid gap-3 border-t border-white/15 pt-5 sm:grid-cols-2">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
-                    Why retrieved
+                    检索原因
                   </p>
                   <p className="mt-2 text-sm text-white/85">
-                    Runtime surfaces overlap.
+                    运行时表面重叠。
                   </p>
                 </div>
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
-                    Review boundary
+                    审查边界
                   </p>
                   <p className="mt-2 text-sm text-white/85">
-                    Environment difference stays explicit.
+                    环境差异保持明确。
                   </p>
                 </div>
               </div>
@@ -552,7 +551,7 @@ export default function HomePage() {
         <Section id="resources" className="bg-surface">
           <SectionHeading
             description={homeContent.sectionDescriptions.technicalResources}
-            eyebrow="09 / Library"
+            eyebrow="09 / 资料库"
             title={homeContent.sectionTitles.technicalResources}
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -574,7 +573,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 grid gap-8 border border-border bg-white p-6 md:grid-cols-[1fr_auto] md:items-center md:p-8">
             <div>
-              <Eyebrow>Canonical documentation</Eyebrow>
+              <Eyebrow>规范文档</Eyebrow>
               <p className="mt-4 max-w-2xl text-base leading-8 text-muted">
                 {homeContent.technicalResources.documentationDescription}
               </p>
@@ -595,24 +594,24 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* Final request demo CTA */}
+        {/* Final contact CTA */}
         <Section id="request-demo" className="bg-white">
           <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-3xl">
-                <Eyebrow>10 / Request demo</Eyebrow>
+                <Eyebrow>10 / 开始对话</Eyebrow>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-5xl">
                   {homeContent.sectionTitles.finalCta}
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">
-                  {homeContent.sectionDescriptions.finalCta}
+                  如果您正在探索运行时治理、传感器证据或调查工作流，欢迎与我们聊聊您的场景。
                 </p>
                 <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-                  Illustrative demo data only
+                  仅限示意性演示数据
                 </p>
               </div>
-              <Button href="mailto:contact@sensordeck.tech">
-                {homeContent.ctas.primary}
+              <Button href="/contact">
+                联系我们
                 <ArrowLabel inverse />
               </Button>
             </div>

@@ -16,8 +16,8 @@ function ArrowLabel() {
 const demoPages = [
   {
     id: "01",
-    role: "Tier 1 Support",
-    title: "Customer-Facing Portal",
+    role: "一级支持",
+    title: "客户门户",
     description:
       "快速创建 REF 并确认运行时数据集可用性。演示 4 步工作流：事件描述、机器人信息、运行时证据、审核路由。",
     href: "/demo/tier1",
@@ -25,8 +25,8 @@ const demoPages = [
   },
   {
     id: "02",
-    role: "Tier 2/3 Engineer",
-    title: "Investigation Dashboard",
+    role: "二级/三级工程师",
+    title: "调查仪表板",
     description:
       "将长运行时数据集归约为候选证据包。包含候选时间线、五窗口视图、历史 RGA 召回、EGP 生成器。",
     href: "/demo/investigation",
@@ -34,8 +34,8 @@ const demoPages = [
   },
   {
     id: "03",
-    role: "Sensor FAE",
-    title: "Sensor FAE Workspace",
+    role: "传感器 FAE",
+    title: "传感器 FAE 工作区",
     description:
       "验证 OEM EGP、审查共享证据上下文、召回历史传感器 RGA、编写 IR / LL，返回传感器响应。",
     href: "/demo/sensor-fae",
@@ -43,8 +43,8 @@ const demoPages = [
   },
   {
     id: "04",
-    role: "CTO / VP Engineering",
-    title: "Executive Dashboard",
+    role: "CTO / 工程副总裁",
+    title: "管理层仪表板",
     description:
       "调查运营效率、证据覆盖率、组织记忆、供应商协作和示意性 ROI 的执行视图。",
     href: "/demo/cto",
@@ -61,7 +61,7 @@ export default function DemoIndexPage() {
         {/* Hero */}
         <Section id="demo-hero" className="bg-white">
           <div className="max-w-4xl">
-            <Eyebrow>Atlas Demo UI</Eyebrow>
+            <Eyebrow>Atlas 演示界面</Eyebrow>
             <h1 className="mt-5 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl">
               四个角色演示界面
             </h1>
@@ -75,41 +75,41 @@ export default function DemoIndexPage() {
         {/* Demo Story Context */}
         <Section id="demo-context" className="bg-surface">
           <div className="border border-border bg-white p-6 md:p-8">
-            <Eyebrow>Demo scenario</Eyebrow>
+            <Eyebrow>演示场景</Eyebrow>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
               演示场景：Pudu Robotics 导航偏差调查
             </h2>
             <div className="mt-6 grid gap-4 text-sm md:grid-cols-2 lg:grid-cols-3">
               <div>
-                <p className="font-mono text-xs text-sensor-tan">Customer</p>
+                <p className="font-mono text-xs text-sensor-tan">客户</p>
                 <p className="mt-2 text-ink">Pudu Robotics</p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">Robot SN</p>
+                <p className="font-mono text-xs text-sensor-tan">机器人序列号</p>
                 <p className="mt-2 font-mono text-xs text-ink">
                   PUDU-T300-7F3A-0021
                 </p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">REF ID</p>
+                <p className="font-mono text-xs text-sensor-tan">REF 标识</p>
                 <p className="mt-2 font-mono text-xs text-ink">
                   REF-2026-0716-0012
                 </p>
               </div>
               <div>
                 <p className="font-mono text-xs text-sensor-tan">
-                  Primary Evidence Pack
+                  主要 Evidence Pack
                 </p>
                 <p className="mt-2 font-mono text-xs text-ink">EP-C03</p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">EGP ID</p>
+                <p className="font-mono text-xs text-sensor-tan">EGP 标识</p>
                 <p className="mt-2 font-mono text-xs text-ink">
                   EGP-HESAI-2026-0042
                 </p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">Sensor FAE</p>
+                <p className="font-mono text-xs text-sensor-tan">传感器 FAE</p>
                 <p className="mt-2 text-ink">Wang Kai (Hesai)</p>
               </div>
             </div>
@@ -160,12 +160,11 @@ export default function DemoIndexPage() {
           <div className="border border-atlas-blue/25 bg-surface-blue p-6 md:p-8">
             <div className="flex items-start gap-4">
               <span className="mt-1 font-mono text-xs text-atlas-blue">
-                NOTE
+                注意
               </span>
               <div>
                 <p className="text-sm leading-7 text-ink">
-                  所有演示数据均为示意性内容（Illustrative Demo
-                  Data）。实际部署的 Atlas
+                  所有演示数据均为示意性内容。实际部署的 Atlas
                   界面包含客户特定的运行时上下文和调查资产，不会在公开演示中展示。
                 </p>
                 <p className="mt-4 text-sm leading-7 text-muted">
@@ -181,7 +180,7 @@ export default function DemoIndexPage() {
           <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-2xl">
-                <Eyebrow>Request full demo</Eyebrow>
+                <Eyebrow>申请完整演示</Eyebrow>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
                   需要完整的 Atlas 演示？
                 </h2>
