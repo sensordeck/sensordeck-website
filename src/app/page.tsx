@@ -60,14 +60,14 @@ export default function HomePage() {
 
   {/* Hero artwork */}
   <Image
-    src="/images/Sensordeck_hero.png"
+    src="/images/hero_mobile.png"
     alt="Atlas Runtime Governance"
     fill
     priority
     quality={100}
     unoptimized
     className="object-cover"
-    style={{ objectPosition: 'right' }}
+    style={{ objectPosition: 'center' }}
   />
 
   {/* Overlay */}
