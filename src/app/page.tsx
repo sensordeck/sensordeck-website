@@ -65,25 +65,19 @@ export default function HomePage() {
     {/* Responsive Hero */}
 <Section
   id="top"
-  className="relative overflow-hidden bg-white"
+  className="relative min-h-[620px] overflow-hidden bg-white"
 >
-  {/* Full hero artwork */}
   <Image
-    src="/images/Sensordeck_hero.png"
-    alt=""
-    width={1717}
-    height={916}
+    src="/images/Sensodeck_hero.png"
+    alt="Atlas Runtime"
+    fill
     priority
-    className="absolute inset-0 h-full w-full object-cover"
-/>
+    sizes="100vw"
+    className="object-cover object-center"
+  />
 
-  {/* White fade on the left for text readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
-
-  {/* Content */}
   <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-center px-6 lg:px-8">
     <div className="max-w-[620px]">
-
       <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl lg:text-7xl">
         机器人运行时
         <br />
@@ -111,7 +105,6 @@ export default function HomePage() {
           {homeContent.ctas.readWhitePaper}
         </Button>
       </div>
-
     </div>
   </div>
 </Section>
