@@ -71,11 +71,11 @@ export default function HomePage() {
   <Image
     src="/images/Sensordeck_hero.png"
     alt=""
-    fill
+    width={1717}
+    height={916}
     priority
-    sizes="100vw"
-    className="pointer-events-none object-cover object-center"
-  />
+    className="absolute inset-0 h-full w-full object-cover"
+/>
 
   {/* White fade on the left for text readability */}
   <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
