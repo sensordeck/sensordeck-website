@@ -62,36 +62,52 @@ export default function HomePage() {
       <Header />
 
       <main>
-     {/* Hero */}
-<section
-  id="top"
-  className="relative w-full overflow-hidden bg-white"
-style={{
-  backgroundImage:
-    "url('/images/hero-runtime.png'), linear-gradient(90deg, #f8fbff 0%, #eef6ff 34%, #dceeff 58%, #b9daf7 100%)",
-  backgroundSize: "68% auto, 100% 100%",
-  backgroundPosition: "right top, center",
-  backgroundRepeat: "no-repeat, no-repeat",
-}}
->
-  {/* 只保护左侧文字，不洗白整张图 */}
-   <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
-    <div className="max-w-[560px]">
-      <h1 className="text-[52px] font-semibold leading-[1.04] tracking-tight text-ink lg:text-[58px]">
+    {/* Responsive Hero */}
+<section id="top" className="relative overflow-hidden bg-white">
+  {/* Desktop background: hidden on mobile */}
+  <div
+    className="absolute inset-0 hidden bg-no-repeat md:block"
+    style={{
+      backgroundImage: "url('/images/hero-runtime.png')",
+      backgroundSize: "68% auto",
+      backgroundPosition: "right top",
+    }}
+  />
+
+  {/* Desktop left-side blend */}
+  <div className="absolute inset-y-0 left-0 hidden w-[48%] bg-gradient-to-r from-white via-white/95 to-transparent md:block" />
+
+  {/* Mobile image: full width, no cropping */}
+  <div className="relative block w-full md:hidden">
+    <Image
+      src="/images/hero-runtime.png"
+      alt="Atlas Runtime Intelligence Infrastructure"
+      width={1672}
+      height={941}
+      priority
+      className="h-auto w-full"
+    />
+  </div>
+
+  {/* Hero copy */}
+  <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 py-10 md:min-h-[430px] md:py-8 lg:px-8">
+    <div className="w-full md:max-w-[560px]">
+      <h1 className="text-[40px] font-semibold leading-[1.04] tracking-tight text-ink sm:text-[46px] md:text-[52px] lg:text-[58px]">
         Runtime Intelligence
         <br />
         Infrastructure for Robotics
       </h1>
 
-      <p className="mt-4 text-xl leading-8 text-ink">
+      <p className="mt-5 text-lg leading-8 text-ink md:text-xl">
         从部署前到部署后。
         <br />
         观察、理解、调查、改进、复用。
       </p>
 
-      <p className="mt-4 max-w-[540px] text-base leading-7 text-muted">
+      <p className="mt-4 max-w-[540px] text-sm leading-7 text-muted sm:text-base">
         Atlas 将机器人运行时证据连接至 Historical RGA™、
-        Investigation Workspace 与 Assist Vault™，让每一次调查从已有组织知识开始，而不是从零开始。
+        Investigation Workspace 与 Assist Vault™，
+        让每一次调查从已有组织知识开始，而不是从零开始。
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -102,6 +118,29 @@ style={{
         <Button href="/products" variant="secondary">
           探索产品
         </Button>
+      </div>
+
+      {/* Key value points: desktop and tablet */}
+      <div className="mt-7 hidden grid-cols-2 gap-x-5 gap-y-4 border-t border-border pt-5 sm:grid lg:grid-cols-4">
+        {[
+          ["证据驱动", "Evidence before opinion"],
+          ["跨团队协作", "OEM ↔ Sensor Factory"],
+          ["历史资产复用", "Historical RGA™ recall"],
+          ["客户拥有数据", "Private. Secure. Under your control."],
+        ].map(([title, description]) => (
+          <div key={title} className="flex gap-2">
+            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-blue-200 text-xs text-blue-600">
+              ✓
+            </span>
+
+            <div>
+              <p className="text-xs font-semibold text-ink">{title}</p>
+              <p className="mt-1 text-[11px] leading-4 text-muted">
+                {description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
