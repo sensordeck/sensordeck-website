@@ -65,24 +65,22 @@ export default function HomePage() {
         {/* Hero */}
         <section
           id="top"
-          className="relative isolate overflow-hidden border-b border-border bg-[#f8fbff]"
+          className="relative isolate min-h-[430px] overflow-hidden border-b border-border bg-white"
         >
-          {/* Keep the full illustration visible, scale it independently, and anchor it to the right. */}
           <Image
             src="/images/hero-runtime.png"
             alt="Atlas runtime intelligence infrastructure for robotics"
-            width={1672}
-            height={941}
+            fill
             priority
-            sizes="(min-width: 1280px) 920px, 72vw"
-            className="pointer-events-none absolute right-0 top-1/2 h-[430px] w-auto max-w-none -translate-y-1/2 object-contain lg:h-[455px] xl:h-[470px]"
+            sizes="100vw"
+            className="object-cover object-[72%_center]"
           />
 
-          {/* Left-side contrast layer only; the right-side dashboard remains clear. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-transparent lg:via-white/82" />
+          {/* Full-width background image with a controlled left readability layer. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/96 via-white/72 to-transparent" />
 
-          <div className="relative z-10 mx-auto flex min-h-[390px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
-            <div className="w-full max-w-[570px]">
+          <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-7xl items-center px-6 py-8 lg:px-8">
+            <div className="w-full max-w-[590px]">
               <h1 className="text-[42px] font-semibold leading-[1.03] tracking-tight text-ink sm:text-[50px] lg:text-[56px]">
                 Runtime Intelligence
                 <br />
@@ -95,7 +93,7 @@ export default function HomePage() {
                 观察、理解、调查、改进、复用。
               </p>
 
-              <p className="mt-3 max-w-[550px] text-sm leading-6 text-muted sm:text-base">
+              <p className="mt-3 max-w-[560px] text-sm leading-6 text-muted sm:text-base">
                 Atlas 将机器人运行时证据连接至 Historical RGA™、
                 Investigation Workspace 与 Assist Vault™，让每一次调查从已有组织知识开始，而不是从零开始。
               </p>
