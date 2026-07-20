@@ -58,7 +58,7 @@ function NavigationLinks({ mobile = false }: { mobile?: boolean }) {
 function LanguageToggle() {
   return (
     <div
-      className="flex items-center gap-1 rounded-md border border-border bg-slate-50 p-1 font-mono text-[11px] font-semibold"
+      className="flex items-center gap-1 rounded-md border border-border bg-slate-50 p-1 font-mono text-[12px] font-semibold"
       aria-label="语言选择器"
     >
       <span className="px-2 py-1 text-muted" aria-label="英文">
