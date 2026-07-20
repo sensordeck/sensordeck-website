@@ -295,19 +295,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <div className="border-t border-border px-6 py-4 md:px-8">
-                  <a
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
-                    href="#platform"
-                  >
-                    探索共享平台
-                    <ArrowLabel />
-                  </a>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Section>
+               </Section>
 
         {/* Platform capabilities */}
         <Section id="platform" className="bg-white">
@@ -332,16 +320,6 @@ export default function HomePage() {
                   {capability.description}
                 </p>
               </Card>
-            ))}
-          </div>
-          <div className="mt-6 grid gap-3 border border-ink/15 bg-ink p-5 text-sm text-white sm:grid-cols-2 lg:grid-cols-4 lg:p-6">
-            {homeContent.constitutionalBoundary.map((item, index) => (
-              <div className="flex items-start gap-3" key={item}>
-                <span className="font-mono text-xs text-sensor-tan">
-                  0{index + 1}
-                </span>
-                <span className="leading-6 text-white/80">{item}</span>
-              </div>
             ))}
           </div>
         </Section>
