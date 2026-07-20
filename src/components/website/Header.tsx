@@ -62,7 +62,7 @@ function LanguageToggle() {
       aria-label="语言选择器"
     >
       <span className="px-2 py-1 text-muted" aria-label="英文">
-        英文
+        ENG
       </span>
       <span className="rounded-sm bg-white px-2 py-1 text-ink shadow-[0_1px_2px_rgba(10,26,42,0.06)]">
         中文
