@@ -59,7 +59,7 @@ const productsContent: ProductContent = {
     description:
       "左侧是机器人 OEM 的 Runtime Investigation；右侧是传感器制造商的 Runtime Sensor Governance；中间通过 Engagement Pack（EGP）完成有边界的跨组织调查协作。",
     imageSrc:
-      "/images/products/atlas-dual-flywheel-architecture.png",
+      "/images/product1.png",
     imageAlt:
       "Atlas Runtime Investigation 与 Runtime Sensor Governance 双飞轮产品全局架构",
   },
