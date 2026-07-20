@@ -59,17 +59,29 @@ export default function HomePage() {
      <Section id="top" className="relative overflow-hidden bg-white min-h-[600px] lg:min-h-[700px]">
 
   {/* Hero artwork */}
-  <Image
-    src="/images/hero_mobile.png"
-    alt="Atlas Runtime Governance"
-    fill
-    priority
-    quality={100}
-    unoptimized
-    className="object-cover"
-    style={{ objectPosition: 'center bottom' }}
-  />
+  {/* Desktop Hero */}
+<Image
+  src="/images/Sensordeck_hero.png"
+  alt="Atlas Runtime Governance"
+  fill
+  priority
+  quality={100}
+  unoptimized
+  className="hidden lg:block object-cover"
+  style={{ objectPosition: "center center" }}
+/>
 
+{/* Mobile Hero */}
+<Image
+  src="/images/hero_mobile.png"
+  alt="Atlas Runtime Governance"
+  fill
+  priority
+  quality={100}
+  unoptimized
+  className="block lg:hidden object-cover"
+  style={{ objectPosition: "center bottom" }}
+/>
   {/* Overlay */}
 <div className="absolute inset-0 flex items-start pt-8 sm:pt-24 lg:items-center lg:pt-0">
     <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
