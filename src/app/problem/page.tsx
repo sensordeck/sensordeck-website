@@ -1,0 +1,142 @@
+import Image from 'next/image';
+import Section from '@/components/website/Section';
+import Button from '@/components/website/Button';
+import Card from '@/components/website/Card';
+import homeContent from '@/content/zh/home';
+
+export default function ProblemPage() {
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <Section className="bg-surface">
+        <div className="max-w-4xl">
+          <p className="text-sm font-semibold tracking-wide text-atlas-blue uppercase mb-4">
+            02 / 核心问题
+          </p>
+          <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
+            {homeContent.sectionTitles.theProblem}
+          </h1>
+          <p className="text-xl leading-9 text-muted">
+            {homeContent.sectionDescriptions.theProblem}
+          </p>
+        </div>
+      </Section>
+
+      {/* Lead 文字 */}
+      <Section className="bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-2xl leading-10 tracking-tight text-ink mb-8">
+            {homeContent.theProblem.lead}
+          </p>
+          <p className="text-xl font-semibold text-atlas-blue">
+            {homeContent.theProblem.cta}
+          </p>
+        </div>
+      </Section>
+
+      {/* 大图展示 */}
+      <Section className="bg-surface">
+        <div className="mt-12">
+          <Image
+            src="/images/Sensordeck 2.png"
+            alt="核心问题 - 每一次事故排查都从零开始"
+            width={2065}
+            height={762}
+            quality={100}
+            className="w-full h-auto"
+            unoptimized
+          />
+        </div>
+      </Section>
+
+      {/* 对比说明 */}
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold tracking-tight text-ink text-center mb-12">
+            Atlas 如何改变事故排查流程
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <Card className="border-2 border-border">
+              <h3 className="text-xl font-semibold tracking-tight text-ink">
+                {homeContent.theProblem.comparison.withoutAtlas.title}
+              </h3>
+              <div className="mt-6 space-y-3">
+                {homeContent.theProblem.comparison.withoutAtlas.steps.map((step, index) => (
+                  <div key={index}>
+                    <div className="flex items-center gap-3">
+                      <span className="font-mono text-xs text-sensor-tan">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-base text-ink">{step}</span>
+                    </div>
+                    {index < homeContent.theProblem.comparison.withoutAtlas.steps.length - 1 && (
+                      <div className="ml-6 mt-2 text-muted">↓</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-sm font-semibold text-muted">
+                {homeContent.theProblem.comparison.withoutAtlas.note}
+              </p>
+            </Card>
+
+            <Card className="border-2 border-atlas-blue bg-surface-blue">
+              <h3 className="text-xl font-semibold tracking-tight text-ink">
+                {homeContent.theProblem.comparison.withAtlas.title}
+              </h3>
+              <div className="mt-6 space-y-3">
+                {homeContent.theProblem.comparison.withAtlas.steps.map((step, index) => (
+                  <div key={index}>
+                    <div className="flex items-center gap-3">
+                      <span className="font-mono text-xs text-atlas-blue">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-base font-medium text-ink">{step}</span>
+                    </div>
+                    {index < homeContent.theProblem.comparison.withAtlas.steps.length - 1 && (
+                      <div className="ml-6 mt-2 text-atlas-blue">↓</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-sm font-semibold text-atlas-blue">
+                {homeContent.theProblem.comparison.withAtlas.note}
+              </p>
+            </Card>
+          </div>
+        </div>
+      </Section>
+
+      {/* 为什么重要 */}
+      <Section className="bg-surface">
+        <div className="max-w-5xl mx-auto">
+          <div className="border border-border bg-white p-8 md:p-12">
+            <h3 className="text-2xl font-semibold tracking-tight text-ink">
+              {homeContent.theProblem.whyMatters.title}
+            </h3>
+            <p className="mt-4 text-base leading-8 text-muted">
+              {homeContent.theProblem.whyMatters.description}
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section className="bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold tracking-tight text-ink mb-6">
+            准备好了解更多？
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/demo" variant="primary">
+              申请演示
+            </Button>
+            <Button href="/" variant="secondary">
+              返回首页
+            </Button>
+          </div>
+        </div>
+      </Section>
+    </div>
+  );
+}

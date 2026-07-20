@@ -166,224 +166,70 @@ export default function HomePage() {
 </Section>
         {/* Category definition - 新品类定义 */}
         <Section id="category" className="bg-surface">
-          <SectionHeading
-            description={homeContent.sectionDescriptions.categoryDefinition}
-            eyebrow="01 / 新品类定义"
-            title={homeContent.sectionTitles.categoryDefinition}
-          />
-
-          {/* 主要描述文字 */}
-          <div className="mt-12">
-            <p className="text-xl leading-9 tracking-tight text-ink max-w-4xl">
-              {homeContent.categoryDefinition.lead}
-            </p>
-          </div>
-
-          {/* 大图展示 */}
-          <div className="mt-12">
-            <Image
-              src="/images/Sensordeck 1.png"
-              alt="新品类定义 - Atlas Runtime Intelligence Infrastructure"
-              width={2000}
-              height={1200}
-              quality={100}
-              className="w-full h-auto"
-            />
-          </div>
-
-          {/* 运行时边界说明 */}
-          <div className="mt-16">
-            <div className="border-l-2 border-sensor-tan pl-6">
-              <h3 className="text-2xl font-semibold tracking-tight text-ink">
-                {homeContent.categoryDefinition.runtimeBoundary.title}
-              </h3>
-              <div className="mt-6 space-y-3">
-                {homeContent.categoryDefinition.runtimeBoundary.steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-sensor-tan">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-base text-ink">{step}</span>
-                    </div>
-                    {index < homeContent.categoryDefinition.runtimeBoundary.steps.length - 1 && (
-                      <div className="ml-6 mt-2 text-muted">↓</div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm leading-7 text-muted">
-                {homeContent.categoryDefinition.runtimeBoundary.note}
+          {/* 左文字右图案布局 */}
+          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center">
+            {/* 左侧：标题和描述 */}
+            <div>
+              <p className="text-sm font-semibold tracking-wide text-atlas-blue uppercase mb-4">
+                01 / 新品类定义
               </p>
-            </div>
-          </div>
-
-          {/* 为什么重要 - 居中方框 */}
-          <div className="mt-16 flex justify-center">
-            <div className="max-w-4xl w-full border-2 border-atlas-blue/25 bg-surface-blue p-8 md:p-10">
-              <h3 className="text-2xl font-semibold tracking-tight text-ink text-center">
-                {homeContent.categoryDefinition.whyImportant.title}
-              </h3>
-
-              <div className="mt-8 grid gap-8 md:grid-cols-2">
-                <div className="border-l-4 border-border pl-6">
-                  <p className="text-base font-bold text-ink">
-                    {homeContent.categoryDefinition.whyImportant.traditional.title}
-                  </p>
-                  <ul className="mt-4 space-y-2.5">
-                    {homeContent.categoryDefinition.whyImportant.traditional.items.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm text-ink">
-                        <span className="size-1.5 rounded-full bg-border shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-atlas-blue pl-6">
-                  <p className="text-base font-bold text-atlas-blue">
-                    {homeContent.categoryDefinition.whyImportant.runtime.title}
-                  </p>
-                  <ul className="mt-4 space-y-2.5">
-                    {homeContent.categoryDefinition.whyImportant.runtime.items.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm text-ink">
-                        <span className="size-1.5 rounded-full bg-atlas-blue shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <p className="mt-6 text-sm leading-7 text-muted text-center border-t border-atlas-blue/15 pt-6">
-                {homeContent.categoryDefinition.whyImportant.runtime.note}
+              <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight text-ink mb-6">
+                {homeContent.sectionTitles.categoryDefinition}
+              </h2>
+              <p className="text-base lg:text-lg leading-8 text-muted mb-8">
+                {homeContent.sectionDescriptions.categoryDefinition}
               </p>
-            </div>
-          </div>
-
-          {/* Atlas 提供什么 */}
-          <div className="mt-16 border border-border bg-white p-8">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink">
-              {homeContent.categoryDefinition.whatAtlasProvides.title}
-            </h3>
-
-            <div className="mt-6 space-y-2">
-              {homeContent.categoryDefinition.whatAtlasProvides.notItems.map((item, index) => (
-                <p key={index} className="text-base text-muted">{item}</p>
-              ))}
+              <Button href="/category" variant="secondary">
+                了解更多 →
+              </Button>
             </div>
 
-            <p className="mt-6 text-lg font-semibold text-atlas-blue">
-              {homeContent.categoryDefinition.whatAtlasProvides.isItem}
-            </p>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {homeContent.categoryDefinition.whatAtlasProvides.capabilities.map((item, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-atlas-blue" />
-                  <span className="text-sm text-ink">{item}</span>
-                </div>
-              ))}
+            {/* 右侧：图片 */}
+            <div>
+              <Image
+                src="/images/Sensordeck 1.png"
+                alt="新品类定义 - Atlas Runtime Intelligence Infrastructure"
+                width={2000}
+                height={1200}
+                quality={100}
+                className="w-full h-auto"
+              />
             </div>
-
-            <p className="mt-8 text-xl font-semibold tracking-tight text-ink">
-              {homeContent.categoryDefinition.whatAtlasProvides.summary}
-            </p>
           </div>
         </Section>
 
         {/* The Problem - 核心问题 */}
         <Section id="problem" className="bg-white">
-          <SectionHeading
-            description={homeContent.sectionDescriptions.theProblem}
-            eyebrow="02 / 核心问题"
-            title={homeContent.sectionTitles.theProblem}
-          />
-
-          <div className="mt-12">
-            <p className="text-xl leading-9 tracking-tight text-ink max-w-4xl">
-              {homeContent.theProblem.lead}
-            </p>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-lg font-semibold text-atlas-blue">
-              {homeContent.theProblem.cta}
-            </p>
-          </div>
-
-          {/* 大图展示 */}
-          <div className="mt-12">
-            <Image
-              src="/images/Sensordeck 2.png"
-              alt="核心问题 - 每一次事故排查都从零开始"
-              width={2065}
-              height={762}
-              quality={100}
-              className="w-full h-auto"
-              unoptimized
-            />
-          </div>
-
-          {/* 对比说明 */}
-          <div className="mt-16 grid gap-8 lg:grid-cols-2">
-            <Card className="border-2 border-border">
-              <h3 className="text-xl font-semibold tracking-tight text-ink">
-                {homeContent.theProblem.comparison.withoutAtlas.title}
-              </h3>
-              <div className="mt-6 space-y-3">
-                {homeContent.theProblem.comparison.withoutAtlas.steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-sensor-tan">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-base text-ink">{step}</span>
-                    </div>
-                    {index < homeContent.theProblem.comparison.withoutAtlas.steps.length - 1 && (
-                      <div className="ml-6 mt-2 text-muted">↓</div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm font-semibold text-muted">
-                {homeContent.theProblem.comparison.withoutAtlas.note}
+          {/* 左文字右图案布局 */}
+          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center">
+            {/* 左侧：标题和描述 */}
+            <div>
+              <p className="text-sm font-semibold tracking-wide text-atlas-blue uppercase mb-4">
+                02 / 核心问题
               </p>
-            </Card>
-
-            <Card className="border-2 border-atlas-blue bg-surface-blue">
-              <h3 className="text-xl font-semibold tracking-tight text-ink">
-                {homeContent.theProblem.comparison.withAtlas.title}
-              </h3>
-              <div className="mt-6 space-y-3">
-                {homeContent.theProblem.comparison.withAtlas.steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-atlas-blue">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-base font-medium text-ink">{step}</span>
-                    </div>
-                    {index < homeContent.theProblem.comparison.withAtlas.steps.length - 1 && (
-                      <div className="ml-6 mt-2 text-atlas-blue">↓</div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm font-semibold text-atlas-blue">
-                {homeContent.theProblem.comparison.withAtlas.note}
+              <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight text-ink mb-6">
+                {homeContent.sectionTitles.theProblem}
+              </h2>
+              <p className="text-base lg:text-lg leading-8 text-muted mb-8">
+                {homeContent.sectionDescriptions.theProblem}
               </p>
-            </Card>
-          </div>
+              <Button href="/problem" variant="secondary">
+                {homeContent.theProblem.cta}
+              </Button>
+            </div>
 
-          {/* 为什么重要 */}
-          <div className="mt-12 border border-border bg-surface p-8">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink">
-              {homeContent.theProblem.whyMatters.title}
-            </h3>
-            <p className="mt-4 text-base leading-8 text-muted max-w-3xl">
-              {homeContent.theProblem.whyMatters.description}
-            </p>
+            {/* 右侧：图片 */}
+            <div>
+              <Image
+                src="/images/Sensordeck 2.png"
+                alt="核心问题 - 每一次事故排查都从零开始"
+                width={2065}
+                height={762}
+                quality={100}
+                className="w-full h-auto"
+                unoptimized
+              />
+            </div>
           </div>
         </Section>
 
