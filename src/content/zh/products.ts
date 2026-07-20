@@ -15,11 +15,7 @@ export interface ProductContent {
     coreModules: string[];
     lifecycle: string[];
   };
-  sharedInfrastructure: {
-    title: string;
-    description: string;
-  };
-  constitutionalBoundary: string[];
+
   ctaText: string;
 }
 
