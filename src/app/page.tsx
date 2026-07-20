@@ -103,7 +103,7 @@ export default function HomePage() {
           <br />
           智能治理基础设施
         </h1>
-
+        {/* Desktop */}
         <p className="
           mt-3
           max-w-xl
@@ -114,9 +114,20 @@ export default function HomePage() {
           text-ink
           heading-description
         ">
-          {homeContent.heroSubtitle}
+           {homeContent.heroSubtitleDesktop}
         </p>
-
+        {/* Mobile */}
+        <p className="
+          mt-3
+          max-w-xl
+          text-base
+          sm:text-lg
+          leading-7
+          text-ink
+          heading-description
+        ">
+        {homeContent.heroSubtitleMobile}
+        </p>
        <p
   className="
     mt-3
