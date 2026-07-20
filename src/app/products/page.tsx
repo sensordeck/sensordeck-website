@@ -1,150 +1,215 @@
-"use client";
+import Image from "next/image";
 
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Button from "@/components/website/Button";
-import Card from "@/components/website/Card";
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import productsContent from "@/content/zh/products";
 
-function ProductCard({
-  name,
-  audience,
-  description,
-  coreModules,
-  lifecycle,
-  href,
-}: {
-  name: string;
-  audience: string;
-  description: string;
-  coreModules: string[];
-  lifecycle: string[];
-  href: string;
-}) {
-  return (
-    <Card className="flex flex-col">
-      <div className="mb-6 flex items-center justify-between gap-4">
-        <span className="font-mono text-xs uppercase tracking-[0.16em] text-sensor-tan">
-          {audience}
-        </span>
-      </div>
-      <h3 className="mb-4 text-2xl font-semibold tracking-tight text-ink">
-        {name}
-      </h3>
-      <p className="mb-8 text-base leading-7 text-muted">{description}</p>
-
-      <div className="mb-8">
-        <h4 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
-          核心模块
-        </h4>
-        <ul className="grid gap-2">
-          {coreModules.map((module) => (
-            <li
-              key={module}
-              className="flex items-start gap-3 text-sm text-ink"
-            >
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-atlas-blue" />
-              <span>{module}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mb-8">
-        <h4 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
-          生命周期
-        </h4>
-        <div className="flex flex-col gap-2">
-          {lifecycle.map((step, index) => (
-            <div key={step} className="flex items-center gap-3">
-              <span className="font-mono text-[10px] text-muted">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="text-sm text-ink">{step}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </Card>
-  );
+function ArrowIcon() {
+  return <span aria-hidden="true">→</span>;
 }
 
 export default function ProductsPage() {
-  const heroRef = useScrollReveal();
-  const productsRef = useScrollReveal();
-  const infraRef = useScrollReveal();
-  const boundaryRef = useScrollReveal();
-  const ctaRef = useScrollReveal();
+  const products = [
+    productsContent.productA,
+    productsContent.productB,
+  ];
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
-      {/* Hero */}
-      <Section className="bg-white pt-24 lg:pt-32">
-        <div
-          ref={heroRef.ref}
-          className={`mx-auto max-w-4xl text-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-            heroRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          <h1 className="text-4xl font-semibold tracking-tight text-ink lg:text-5xl">
-            {productsContent.heroTitle}
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-muted">
-            {productsContent.heroSubtitle}
-          </p>
-        </div>
-      </Section>
+      <main className="flex-1">
+        {/* Hero */}
+        <Section className="bg-white">
+          <div className="mx-auto max-w-4xl py-10 text-center md:py-16">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              Atlas Products
+            </p>
 
-      {/* Two Products */}
-      <Section className="bg-surface">
-        <div
-          ref={productsRef.ref}
-          className={`grid gap-8 lg:grid-cols-2 lg:gap-12 transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-            productsRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          <ProductCard
-            name={productsContent.productA.name}
-            audience={productsContent.productA.audience}
-            description={productsContent.productA.description}
-            coreModules={productsContent.productA.coreModules}
-            lifecycle={productsContent.productA.lifecycle}
-            href="/products/runtime-sensor-governance"
-          />
-          <ProductCard
-            name={productsContent.productB.name}
-            audience={productsContent.productB.audience}
-            description={productsContent.productB.description}
-            coreModules={productsContent.productB.coreModules}
-            lifecycle={productsContent.productB.lifecycle}
-            href="/products/runtime-investigation"
-          />
-        </div>
-      </Section>
+            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-ink md:text-5xl lg:text-6xl">
+              {productsContent.heroTitle}
+            </h1>
 
-      {/* CTA */}
-      <Section className="bg-white">
-        <div
-          ref={ctaRef.ref}
-          className={`mx-auto max-w-2xl text-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-            ctaRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          <h2 className="text-3xl font-semibold tracking-tight text-ink">
-            了解 Atlas 如何适配您的组织
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted">
-            无论您是传感器制造商还是机器人 OEM，Atlas 都提供专注的工具来治理运行时证据、支持调查和保存组织知识。
-          </p>
-          <div className="mt-10">
-            <Button href="/#request-demo">{productsContent.ctaText}</Button>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted md:text-lg">
+              {productsContent.heroSubtitle}
+            </p>
+
+            <p className="mt-7 whitespace-pre-line text-base font-semibold leading-8 text-atlas-blue md:text-lg">
+              {productsContent.heroStatement}
+            </p>
           </div>
-        </div>
-      </Section>
+        </Section>
+
+        {/* Full architecture image */}
+        <section className="relative overflow-hidden bg-[#050b17]">
+          <div className="relative mx-auto min-h-[620px] w-full max-w-[1920px] md:min-h-[760px] lg:min-h-[900px]">
+            <Image
+              src={productsContent.architecture.imageSrc}
+              alt={productsContent.architecture.imageAlt}
+              fill
+              priority
+              quality={100}
+              className="object-contain object-center"
+              sizes="100vw"
+            />
+          </div>
+        </section>
+
+        {/* Architecture explanation */}
+        <Section className="bg-surface">
+          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start lg:gap-16">
+            <div>
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+                {productsContent.architecture.eyebrow}
+              </p>
+
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+                {productsContent.architecture.title}
+              </h2>
+
+              <p className="mt-5 text-base leading-8 text-muted md:text-lg">
+                {productsContent.architecture.description}
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {products.map((product) => (
+                <article
+                  key={product.name}
+                  className="flex h-full flex-col border border-border bg-white p-6 md:p-8"
+                >
+                  <span className="w-fit border border-border bg-surface px-3 py-1 font-mono text-[11px] font-semibold text-muted">
+                    {product.audience}
+                  </span>
+
+                  <h3 className="mt-6 text-2xl font-semibold tracking-tight text-ink">
+                    {product.name}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-muted">
+                    {product.description}
+                  </p>
+
+                  <ul className="mt-7 grid gap-3">
+                    {product.valuePoints.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 text-sm leading-7 text-ink"
+                      >
+                        <span className="mt-[10px] size-1.5 shrink-0 rounded-full bg-atlas-blue" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href={product.href}
+                    className="mt-8 inline-flex w-fit items-center gap-2 border-t border-border pt-5 text-sm font-semibold text-atlas-blue transition-colors hover:text-atlas-blue-dark"
+                  >
+                    查看产品详情
+                    <ArrowIcon />
+                  </a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        {/* Engagement Pack bridge */}
+        <Section className="bg-white">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              {productsContent.collaborationBridge.eyebrow}
+            </p>
+
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+              {productsContent.collaborationBridge.title}
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-muted md:text-lg">
+              {productsContent.collaborationBridge.description}
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 max-w-6xl">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-5">
+              {productsContent.collaborationBridge.steps.map(
+                (step, index) => (
+                  <div
+                    key={step}
+                    className="relative border border-border bg-surface p-5"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-mono text-xs font-semibold text-atlas-blue">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      {index <
+                      productsContent.collaborationBridge.steps.length -
+                        1 ? (
+                        <span
+                          aria-hidden="true"
+                          className="text-atlas-blue"
+                        >
+                          →
+                        </span>
+                      ) : null}
+                    </div>
+
+                    <p className="mt-8 text-sm font-semibold leading-7 text-ink">
+                      {step}
+                    </p>
+                  </div>
+                ),
+              )}
+            </div>
+
+            <div className="mt-6 border border-atlas-blue/25 bg-surface-blue p-6 text-center md:p-8">
+              <p className="text-base font-semibold leading-8 text-ink md:text-lg">
+                {
+                  productsContent.collaborationBridge
+                    .closingStatement
+                }
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/* Final value */}
+        <Section className="bg-surface">
+          <div className="mx-auto max-w-5xl border border-border bg-white p-7 text-center md:p-10 lg:p-14">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+              {productsContent.finalValue.title}
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-muted md:text-lg">
+              {productsContent.finalValue.description}
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button
+                href="/products/runtime-sensor-governance"
+                variant="secondary"
+              >
+                Runtime Sensor Governance
+              </Button>
+
+              <Button
+                href="/products/runtime-investigation"
+                variant="secondary"
+              >
+                Runtime Investigation
+              </Button>
+
+              <Button href="/request-demo" variant="primary">
+                {productsContent.ctaText}
+              </Button>
+            </div>
+          </div>
+        </Section>
+      </main>
 
       <Footer />
     </div>
