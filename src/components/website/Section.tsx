@@ -11,7 +11,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <section className={`border-b border-border ${className}`} {...props}>
-      <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 md:py-24 lg:px-10 lg:py-28">
+      <div className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 md:py-16 lg:px-10 lg:py-18">
         {children}
       </div>
     </section>
