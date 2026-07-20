@@ -68,7 +68,7 @@ export default function HomePage() {
   quality={100}
   unoptimized
   className="hidden lg:block object-cover"
-  style={{ objectPosition: "center center" }}
+  style={{ objectPosition: "center" }}
 />
 
 {/* Mobile Hero */}
