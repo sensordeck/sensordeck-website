@@ -85,20 +85,7 @@ const productsContent: ProductContent = {
     ],
   },
 
-  sharedInfrastructure: {
-    title: "共享的 Atlas 平台基础设施",
-    description: "两条产品线建立在同一个平台之上，确保 OEM 和传感器制造商之间的证据一致性和有界协作。",
-  },
-
-  constitutionalBoundary: [
-    "Atlas 结构化证据。",
-    "Atlas 检索历史候选。",
-    "Atlas 不自动确认根本原因。",
-    "Atlas 不分配责任。",
-    "IR 和 LL 由人工团队撰写。",
-  ],
-
-  ctaText: "申请演示",
+   ctaText: "申请演示",
 } as const;
 
 export default productsContent;
