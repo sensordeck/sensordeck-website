@@ -2,10 +2,10 @@ import type { HomeContent } from "@/content/en/home";
 
 const homeContent: HomeContent = {
   heroTitle: "机器人运行时治理基础设施",
-  heroSubtitle: "运行时数据分散在日志、设备和人员之间。每次调查都从零开始。Atlas 将运行时证据沉淀为可复用的组织知识。",
+  heroSubtitle: "运行时数据分散在日志、设备和人员之间。每次调查都从零开始。Atlas 天枢将运行时证据沉淀为可复用的组织知识。",
   heroDescription: "",
   heroPrinciple: [],
-  heroValueProposition: "每一次调查从证据开始。下一次调查，从历史开始。",
+  heroValueProposition: "每一次调查从证据开始。<br>下一次调查，从历史开始。</br>",
   sectionTitles: {
     categoryDefinition: "运行时边界的新类别",
     whyRuntimeGovernance: "为什么需要运行时治理",
