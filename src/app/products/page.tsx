@@ -23,35 +23,51 @@ export default function ProductsPage() {
       <main className="flex-1">
         {/* Hero */}
         <Section className="bg-white">
-          <div className="mx-auto max-w-4xl py-10 text-center md:py-16">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+          <div className="mx-auto max-w-5xl px-1 py-12 text-center sm:py-16 lg:py-20">
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue sm:text-xs">
               Atlas Products
             </p>
 
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-ink md:text-5xl lg:text-6xl">
+            <h1
+              className="
+                mx-auto
+                mt-5
+                max-w-4xl
+                text-[34px]
+                font-semibold
+                leading-[1.14]
+                tracking-tight
+                text-ink
+                sm:text-5xl
+                sm:leading-[1.1]
+                lg:text-[56px]
+                lg:leading-[1.08]
+              "
+            >
               {productsContent.heroTitle}
             </h1>
 
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted md:text-lg">
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
               {productsContent.heroSubtitle}
             </p>
 
-            <p className="mt-7 whitespace-pre-line text-base font-semibold leading-8 text-atlas-blue md:text-lg">
+            <p className="mx-auto mt-7 max-w-2xl whitespace-pre-line text-base font-semibold leading-8 text-atlas-blue sm:text-lg">
               {productsContent.heroStatement}
             </p>
           </div>
         </Section>
 
         {/* Full architecture image */}
-        <section className="relative overflow-hidden bg-[#050b17]">
-          <div className="relative mx-auto min-h-[620px] w-full max-w-[1920px] md:min-h-[760px] lg:min-h-[900px]">
+        <section className="overflow-hidden border-t border-white/10 bg-[#050b17]">
+          <div className="mx-auto w-full max-w-[1920px]">
             <Image
               src={productsContent.architecture.imageSrc}
               alt={productsContent.architecture.imageAlt}
-              fill
+              width={1536}
+              height={1024}
               priority
               quality={100}
-              className="object-contain object-center"
+              className="block h-auto w-full"
               sizes="100vw"
             />
           </div>
