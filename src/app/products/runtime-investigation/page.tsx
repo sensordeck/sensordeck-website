@@ -102,28 +102,6 @@ export default function RuntimeInvestigationPage() {
         </div>
       </Section>
 
-      {/* Constitutional Boundary */}
-      <Section className="bg-surface">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-8 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
-            宪法边界
-          </h2>
-          <Card className="border-atlas-blue/20 bg-white">
-            <ul className="grid gap-4">
-              {productsContent.constitutionalBoundary.map((principle) => (
-                <li
-                  key={principle}
-                  className="flex items-start gap-3 text-base leading-7 text-ink"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-atlas-blue" />
-                  <span>{principle}</span>
-                </li>
-              ))}
-            </ul>
-          </Card>
-        </div>
-      </Section>
-
       {/* CTA */}
       <Section className="bg-white">
         <div className="mx-auto max-w-2xl text-center">
