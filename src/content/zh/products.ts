@@ -25,7 +25,7 @@ export interface ProductContent {
 
 const productsContent: ProductContent = {
   heroTitle: "两条产品线。一个共享基础设施。",
-  heroSubtitle: "传感器制造商和机器人 OEM 在运行时边界的不同侧工作。Atlas 为各方提供专注的产品线，同时保持证据和协作的一致性。",
+  heroSubtitle: "传感器制造商和机器人 OEM 在运行时边界的不同侧工作。Atlas 为各方提供专注的产品线，同时保持证据和排查协作的一致性。",
 
   productA: {
     name: "Atlas Runtime Sensor Governance™",
