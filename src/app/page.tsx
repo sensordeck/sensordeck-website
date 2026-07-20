@@ -93,11 +93,11 @@ export default function HomePage() {
         </h1>
 
         <p className="
-          mt-6
+          mt-3
           max-w-xl
           text-base
           sm:text-lg
-          leading-3
+          leading-7
           text-ink
           heading-description
         ">
