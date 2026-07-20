@@ -4,6 +4,10 @@ export interface ProductOverview {
   description: string;
   href: string;
   valuePoints: string[];
+
+  // 保留给两个详细产品页面使用
+  coreModules: string[];
+  lifecycle: string[];
 }
 
 export interface CollaborationBridge {
@@ -55,7 +59,7 @@ const productsContent: ProductContent = {
     description:
       "左侧是机器人 OEM 的 Runtime Investigation；右侧是传感器制造商的 Runtime Sensor Governance；中间通过 Engagement Pack（EGP）完成有边界的跨组织调查协作。",
     imageSrc:
-      "/images/product1.png",
+      "/images/products/atlas-dual-flywheel-architecture.png",
     imageAlt:
       "Atlas Runtime Investigation 与 Runtime Sensor Governance 双飞轮产品全局架构",
   },
@@ -66,12 +70,39 @@ const productsContent: ProductContent = {
     description:
       "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收 OEM Engagement Pack，组织 Sensor FAE 调查，并将完成的 IR、LL 与历史案例沉淀为可复用的传感器运行时知识。",
     href: "/products/runtime-sensor-governance",
+
     valuePoints: [
       "建立跨 OEM、跨 Sensor SKU 的 Runtime Profile",
       "基于 OEM EGP 开展有边界的 Sensor FAE 调查",
       "召回 Historical Sensor RGA，避免重复排查",
       "返回更新后的 EGP、IR、LL 与 Sensor Response",
       "将完成案例沉淀至 Sensor Assist Vault",
+    ],
+
+    coreModules: [
+      "运行时档案（Runtime Profile™）",
+      "运行时观察（Atlas Agent Observation）",
+      "传感器与 OEM 协同调查包（Engagement Pack / EGP）",
+      "传感器 REF 工单",
+      "统一证据包（Evidence Pack™）",
+      "Historical Sensor RGA Recall™",
+      "Investigation Result（IR）",
+      "Lesson Learned（LL）",
+      "Sensor Assist Vault™",
+      "去标识化运行时知识库",
+    ],
+
+    lifecycle: [
+      "运行时受控配置",
+      "运行时观察",
+      "接收 OEM Engagement Pack",
+      "创建或关联 Sensor REF 工单",
+      "召回 Historical Sensor RGA",
+      "Sensor FAE 调查",
+      "填写 IR 与 LL",
+      "返回更新后的 EGP",
+      "知识沉淀",
+      "未来复用",
     ],
   },
 
@@ -81,12 +112,38 @@ const productsContent: ProductContent = {
     description:
       "帮助机器人 OEM 将运行时事件转化为有界 Evidence Pack，创建和管理 REF 工单，召回 Historical RGA，协调 Tier 1、Tier 2、Tier 3 与 Sensor FAE，并将调查结果转化为组织知识。",
     href: "/products/runtime-investigation",
+
     valuePoints: [
       "Atlas Agent 持续观察并保留 Runtime Dataset",
       "生成 Candidate EP 与 Primary Evidence Pack",
       "召回 Historical RGA 与既有 IR、LL",
       "创建 Sensor Engagement Pack 并升级 Sensor FAE",
       "审核返回结果、关闭 OEM REF Ticket 并沉淀知识",
+    ],
+
+    coreModules: [
+      "Atlas Agent™",
+      "Runtime Dataset 保留",
+      "Candidate Evidence Pack",
+      "Primary Evidence Pack",
+      "Historical RGA™",
+      "Investigation Workspace™",
+      "Sensor Engagement Pack（EGP）",
+      "Assist Vault™",
+      "Executive Dashboard™",
+    ],
+
+    lifecycle: [
+      "Runtime Dataset 采集与保留",
+      "生成 Candidate Evidence Pack",
+      "确认 Primary Evidence Pack",
+      "创建 OEM REF Ticket",
+      "召回 Historical RGA",
+      "OEM Tier 1 / Tier 2 / Tier 3 调查",
+      "生成 EGP 并发送 Sensor FAE",
+      "接收 Sensor IR / LL 与更新后的 EGP",
+      "关闭 OEM REF Ticket",
+      "Assist Vault 沉淀与未来复用",
     ],
   },
 
