@@ -83,8 +83,7 @@ export const homepageContent = {
           "Historical Sensor RGA™",
           "通过 EGP 与 OEM 协作",
         ],
-        link: { text: "了解更多", href: "/products#sensor-governance" },
-      },
+              },
       {
         name: "Atlas Runtime Investigation™",
         audience: "机器人 OEM",
@@ -96,8 +95,7 @@ export const homepageContent = {
           "Historical RGA™",
           "Investigation Workspace™",
         ],
-        link: { text: "了解更多", href: "/products#runtime-investigation" },
-      },
+              },
     ],
   },
 
