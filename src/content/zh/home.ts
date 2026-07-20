@@ -55,7 +55,7 @@ const homeContent: HomeContent = {
       name: "Atlas Runtime Sensor Governance™",
       audience: "传感器制造商",
       description: "了解您的传感器在真实机器人部署中的行为表现，保留运行时知识，并使用共享证据与 OEM 调查团队协作。",
-      modules: ["Runtime Profiles™", "运行时观察", "Historical Sensor RGA™", "Sensor Investigation Workspace™", "通过 EGP 与 OEM 协作", "Sensor Assist Vault™", "Runtime Knowledge Base™"],
+      modules: ["运行时档案 (Runtime Profile™)", "运行时观察 (Atlas Agent Observation)", "传感器<->OEM协同调查包 (Engagement Pack™ (EGP))", "通过 EGP 与 OEM 协作", "传感器排查REF工单", "统一证据包 (Evidence Pack™)", "传感器历史排查案例召回 (Historical Sensor RGA Recall™)", "Sensor Investigation Workspace™", "通过 EGP 与 OEM 协作", "Sensor Assist Vault™", "Runtime Knowledge Base™"],
       lifecycle: ["运行时配置", "运行时观察", "Evidence Pack / EGP", "历史 Sensor RGA 召回", "传感器调查", "OEM 协作", "Sensor Assist Vault", "知识复用"],
     },
     {
