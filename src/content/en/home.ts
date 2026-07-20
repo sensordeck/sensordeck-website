@@ -11,7 +11,8 @@ heroDescription: "",
   heroPrinciple: [] as string[],
   heroValueProposition: "Every investigation starts from evidence. Every future investigation starts from history.",
   sectionTitles: {
-    categoryDefinition: "A new category for the runtime boundary",
+    categoryDefinition: "A Missing Layer for Robotics",
+    theProblem: "Today, Every Runtime Execution Failure (REF) Starts from Scratch",
     whyRuntimeGovernance: "Why runtime governance is missing",
     productLines: "Two Atlas product lines. One shared infrastructure.",
     platformCapabilities: "The Atlas platform structures the work around evidence",
@@ -24,7 +25,9 @@ heroDescription: "",
   },
   sectionDescriptions: {
     categoryDefinition:
-      "Atlas operates across the boundary where sensor behavior becomes a system-level runtime condition: power, buses, Linux/SBC runtime, ROS inputs, and the teams responsible for investigation.",
+      "The robotics industry already has sensors, device drivers, ROS/middleware, AI & autonomy, fleet management, and cloud platforms. Yet between sensor output and system decision-making, one critical layer has remained largely undefined: unified runtime intelligence infrastructure.",
+    theProblem:
+      "Runtime evidence is scattered across logs, devices, videos, tickets, and people's memories. Every runtime investigation repeats the same work: collecting evidence, aligning timelines, contacting different teams, and rebuilding knowledge that already existed.",
     whyRuntimeGovernance:
       "The signals are available, but the operational context is usually fragmented across devices, logs, tickets, recordings, and individual memory.",
     productLines:
@@ -46,7 +49,60 @@ heroDescription: "",
   },
   categoryDefinition: {
     lead:
-      "Runtime Intelligence Infrastructure is the governed layer between runtime signals and the decisions made after an incident.",
+      "Atlas continuously transforms runtime signals into structured evidence, collaborative investigations, reusable engineering knowledge, and organizational memory. Instead of treating every runtime incident as an isolated support case, Atlas helps organizations build a continuously growing runtime intelligence capability.",
+    runtimeBoundary: {
+      title: "The Runtime Boundary Atlas Protects",
+      steps: [
+        "Physical World",
+        "Sensor",
+        "Power / Bus / Timing",
+        "Linux / Driver / Buffer",
+        "ROS Runtime",
+        "Application Input",
+        "System Decision"
+      ],
+      note: "Atlas continuously observes, records, and organizes this critical runtime boundary. It is also the area where runtime failures occur most frequently, yet where the robotics industry has historically lacked a unified governance model."
+    },
+    whyImportant: {
+      title: "Why Does This Layer Matter?",
+      traditional: {
+        title: "Traditional robotics platforms primarily focus on:",
+        items: ["Perception", "Motion Control", "AI Decision Making", "Application Software"]
+      },
+      runtime: {
+        title: "However, many real-world runtime failures originate from the layers in between:",
+        items: [
+          "Power fluctuations",
+          "USB / Ethernet / CAN communication",
+          "Linux Runtime behavior",
+          "Device Drivers",
+          "Memory Buffers",
+          "Process Scheduling",
+          "ROS Topics",
+          "Runtime Timing"
+        ],
+        note: "These runtime behaviors determine whether the system ultimately receives data that is complete, continuous, synchronized, and trustworthy. Atlas captures these runtime signals, transforms them into standardized evidence, and continuously builds reusable engineering knowledge."
+      }
+    },
+    whatAtlasProvides: {
+      title: "What Does Atlas Provide?",
+      notItems: [
+        "Atlas is not another SDK.",
+        "It is not another device driver.",
+        "It is not another ROS framework."
+      ],
+      isItem: "Atlas introduces a new infrastructure layer for robotics: Runtime Intelligence Infrastructure™",
+      capabilities: [
+        "24×7 Runtime Observation",
+        "Continuous Runtime Dataset Retention",
+        "Automated Evidence Pack Generation",
+        "Historical RGA Accumulation",
+        "OEM ↔ Sensor Collaborative Investigation",
+        "Assist Vault Organizational Memory",
+        "Continuous Knowledge Reuse Across Future REF Events"
+      ],
+      summary: "Robots understand the physical world. Atlas understands runtime behavior."
+    },
     points: [
       {
         label: "Runtime boundary",
@@ -64,6 +120,40 @@ heroDescription: "",
           "Preserve human-authored Investigation Results and Lessons Learned for future reference.",
       },
     ],
+  },
+  theProblem: {
+    lead: "When the investigation ends, most of that engineering experience disappears again. The next REF starts from scratch.",
+    cta: "See How Atlas Changes This",
+    comparison: {
+      withoutAtlas: {
+        title: "Without Atlas",
+        steps: [
+          "REF Occurs",
+          "Logs / Devices / Videos",
+          "Emails / Tickets",
+          "Engineers Investigate",
+          "Knowledge Lost"
+        ],
+        note: "Time-consuming. Expensive. Not Reusable."
+      },
+      withAtlas: {
+        title: "With Atlas",
+        steps: [
+          "REF Occurs",
+          "Evidence Pack",
+          "Historical RGA Recall",
+          "Investigation",
+          "IR / LL",
+          "Assist Vault",
+          "Future REF Reuse"
+        ],
+        note: "Every investigation begins with evidence. The next investigation begins with history."
+      }
+    },
+    whyMatters: {
+      title: "Why It Matters",
+      description: "Instead of repeating yesterday's investigation, Atlas continuously builds organizational knowledge that grows with every REF. Engineering teams spend less time rebuilding context, and more time improving products."
+    }
   },
   whyRuntimeGovernance: {
     items: [

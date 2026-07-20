@@ -11,7 +11,8 @@ const homeContent: HomeContent = {
   heroPrinciple: [],
   heroValueProposition: "每一次调查从证据开始。\n下一次调查，从历史开始。",
     sectionTitles: {
-    categoryDefinition: "运行时边界的新类别",
+    categoryDefinition: "机器人行业缺失的一层",
+    theProblem: "今天，每一次事故排查都从零开始",
     whyRuntimeGovernance: "为什么需要运行时治理",
     productLines: "两条 Atlas 产品线。一个共享基础设施。",
     platformCapabilities: "Atlas 平台围绕证据构建工作流程",
@@ -23,7 +24,8 @@ const homeContent: HomeContent = {
     finalCta: "让运行时证据在整个组织中发挥作用",
   },
   sectionDescriptions: {
-    categoryDefinition: "Atlas 运行在传感器行为成为系统级运行时条件的边界上：电源、总线、Linux/SBC 运行时、ROS 输入，以及负责调查的团队。",
+    categoryDefinition: "机器人行业已经拥有传感器、驱动程序、ROS/中间件、AI与算法、Fleet Management、云平台。但在传感器输出与系统执行决策之间，始终缺少一层统一的运行时治理基础设施。",
+    theProblem: "运行时数据分散在日志、设备、录像、工单和工程师记忆之间。每一次运行时调查，都需要重新收集证据、重新整理时间线、重新联系不同团队，并重新完成已经做过的调查工作。",
     whyRuntimeGovernance: "信号是可用的，但运营上下文通常分散在设备、日志、工单、录制和个人记忆中。",
     productLines: "传感器制造商和机器人 OEM 在运行时边界的不同侧工作。Atlas 为各方提供专注的产品线，同时保持证据和协作的一致性。",
     platformCapabilities: "这些能力由两条产品线共享。Atlas 结构化证据并检索历史候选；人工团队撰写调查结果和经验教训。",
@@ -35,12 +37,99 @@ const homeContent: HomeContent = {
     finalCta: "了解 Atlas 如何适配您的机器人组织的运行时边界、调查工作流程和证据所有权模型。",
   },
   categoryDefinition: {
-    lead: "运行时智能基础设施是运行时信号与事件后决策之间的治理层。",
+    lead: "Atlas 将持续运行的证据、调查、知识沉淀和组织记忆组织为统一的平台，让运行时问题不再只是一次性的事故处理，而成为企业可持续积累的工程能力。",
+    runtimeBoundary: {
+      title: "Atlas 守护的运行时边界",
+      steps: [
+        "真实世界",
+        "Sensor",
+        "Power / Bus / Timing",
+        "Linux / Driver / Buffer",
+        "ROS / Runtime",
+        "Application Input",
+        "System Decision"
+      ],
+      note: "Atlas 持续观察、记录并组织这一关键运行时边界。这里，也是机器人运行时问题最频繁发生，却长期缺乏统一治理的一层。"
+    },
+    whyImportant: {
+      title: "为什么这一层如此重要？",
+      traditional: {
+        title: "传统机器人系统更关注：",
+        items: ["感知能力", "控制能力", "AI 推理能力", "软件功能"]
+      },
+      runtime: {
+        title: "而真正导致大量运行时事故的，往往发生在：",
+        items: [
+          "电源波动",
+          "USB / Ethernet / CAN 通信",
+          "Linux Runtime",
+          "Driver",
+          "Buffer",
+          "Scheduler",
+          "ROS Topic",
+          "Runtime Timing"
+        ],
+        note: "这些运行时行为决定了系统最终接收到的数据是否完整、连续且可信。Atlas 将这些运行时信号组织成统一证据，并持续沉淀为可复用的组织知识。"
+      }
+    },
+    whatAtlasProvides: {
+      title: "Atlas 提供什么？",
+      notItems: [
+        "Atlas 不是新的 SDK。",
+        "不是新的 Driver。",
+        "不是新的 ROS Framework。"
+      ],
+      isItem: "Atlas 建立的是机器人行业此前不存在的一层：Runtime Intelligence Infrastructure™",
+      capabilities: [
+        "7×24 小时运行时观察",
+        "Runtime Dataset 持续保留",
+        "Evidence Pack 自动生成",
+        "Historical RGA 持续积累",
+        "OEM 与 Sensor 协同调查",
+        "Assist Vault 组织记忆",
+        "Future REF 持续复用"
+      ],
+      summary: "机器人负责感知世界。Atlas 负责理解运行时。"
+    },
     points: [
       { label: "运行时边界", description: "将传感器行为连接到电源、总线、Linux/SBC 运行时、ROS 输入和应用上下文。" },
       { label: "有界证据", description: "将长时间运行时数据集转换为标准化的证据窗口，供团队审查和交换。" },
       { label: "可复用知识", description: "保存人工撰写的调查结果和经验教训供未来参考。" },
     ],
+  },
+  theProblem: {
+    lead: "调查结束后，大部分工程经验再次散落。下一次发生相似事件，团队依然从零开始。",
+    cta: "看看 Atlas 如何让每一次事故排查从历史开始",
+    comparison: {
+      withoutAtlas: {
+        title: "没有 Atlas",
+        steps: [
+          "REF 发生",
+          "日志 / 设备 / 录像",
+          "邮件 / 工单",
+          "工程师调查",
+          "经验流失"
+        ],
+        note: "耗时、昂贵，而且无法复用。"
+      },
+      withAtlas: {
+        title: "使用 Atlas",
+        steps: [
+          "REF 发生",
+          "Evidence Pack",
+          "Historical RGA 召回",
+          "调查",
+          "IR / LL",
+          "Assist Vault",
+          "未来 REF 复用"
+        ],
+        note: "每一次调查从证据开始。下一次调查，从历史开始。"
+      }
+    },
+    whyMatters: {
+      title: "为什么重要？",
+      description: "Atlas 不只是帮助团队完成一次事故调查。它持续将运行时证据沉淀为组织知识。让工程团队减少重复调查，把更多时间投入产品研发、可靠性提升和持续创新。"
+    }
   },
   whyRuntimeGovernance: {
     items: [
