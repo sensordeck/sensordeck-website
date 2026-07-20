@@ -97,7 +97,7 @@ export default function HomePage() {
           max-w-xl
           text-base
           sm:text-lg
-          leading-7
+          leading-3
           text-ink
           heading-description
         ">
