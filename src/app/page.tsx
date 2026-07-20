@@ -61,7 +61,7 @@ export default function HomePage() {
   {/* Hero artwork */}
   {/* Desktop Hero */}
 <Image
-  src="/images/Sensordeck_hero2.png"
+  src="/images/Sensordeck_hero3.png"
   alt="Atlas Runtime Governance"
   fill
   priority
