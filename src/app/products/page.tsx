@@ -67,12 +67,6 @@ function ProductCard({
           ))}
         </div>
       </div>
-
-      <div className="mt-auto">
-        <Button href={href} variant="outline" className="w-full">
-          了解更多
-        </Button>
-      </div>
     </Card>
   );
 }
@@ -129,50 +123,6 @@ export default function ProductsPage() {
             lifecycle={productsContent.productB.lifecycle}
             href="/products/runtime-investigation"
           />
-        </div>
-      </Section>
-
-      {/* Shared Infrastructure */}
-      <Section className="bg-white">
-        <div
-          ref={infraRef.ref}
-          className={`mx-auto max-w-3xl text-center transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-            infraRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          <h2 className="text-3xl font-semibold tracking-tight text-ink">
-            {productsContent.sharedInfrastructure.title}
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted">
-            {productsContent.sharedInfrastructure.description}
-          </p>
-        </div>
-      </Section>
-
-      {/* Constitutional Boundary */}
-      <Section className="bg-surface">
-        <div
-          ref={boundaryRef.ref}
-          className={`mx-auto max-w-2xl transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-            boundaryRef.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          <h3 className="mb-8 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink/70">
-            宪法边界
-          </h3>
-          <Card className="border-atlas-blue/20 bg-white">
-            <ul className="grid gap-4">
-              {productsContent.constitutionalBoundary.map((principle) => (
-                <li
-                  key={principle}
-                  className="flex items-start gap-3 text-base leading-7 text-ink"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-atlas-blue" />
-                  <span>{principle}</span>
-                </li>
-              ))}
-            </ul>
-          </Card>
         </div>
       </Section>
 
