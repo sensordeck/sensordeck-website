@@ -104,15 +104,18 @@ export default function HomePage() {
           {homeContent.heroSubtitle}
         </p>
 
-        <p className="
-          mt-5
-          text-sm
-          sm:text-base
-          font-semibold
-          text-atlas-blue
-        " style={{ animation: 'fadeInUp var(--duration-normal) var(--ease-sensordeck) both', animationDelay: '200ms' }}>
-          {homeContent.heroValueProposition}
-        </p>
+       <p
+  className="
+    mt-3
+    text-sm
+    sm:text-base
+    font-semibold
+    text-atlas-blue
+    whitespace-pre-line
+  "
+>
+  {homeContent.heroValueProposition}
+</p>
 
         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-3 px-4 lg:static lg:mt-8 lg:justify-start lg:px-0">
   <Button href="/demo" variant="primary">
