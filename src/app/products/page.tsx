@@ -23,7 +23,7 @@ export default function ProductsPage() {
       <main className="flex-1">
         {/* Hero */}
         <Section className="bg-white">
-          <div className="mx-auto max-w-5xl px-1 py-12 text-center sm:py-16 lg:py-20">
+          <div className="mx-auto max-w-5xl px-4 py-6 text-center sm:py-10 lg:py-14">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue sm:text-xs">
               Atlas Products
             </p>
@@ -31,27 +31,28 @@ export default function ProductsPage() {
             <h1
               className="
                 mx-auto
-                mt-5
+                mt-3
                 max-w-4xl
+                whitespace-pre-line
                 text-[34px]
                 font-semibold
-                leading-[1.14]
+                leading-[1.08]
                 tracking-tight
                 text-ink
                 sm:text-5xl
-                sm:leading-[1.1]
+                sm:leading-[1.08]
                 lg:text-[56px]
-                lg:leading-[1.08]
+                lg:leading-[1.05]
               "
             >
               {productsContent.heroTitle}
             </h1>
 
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
               {productsContent.heroSubtitle}
             </p>
 
-            <p className="mx-auto mt-7 max-w-2xl whitespace-pre-line text-base font-semibold leading-8 text-atlas-blue sm:text-lg">
+            <p className="mx-auto mt-4 max-w-2xl whitespace-pre-line text-base font-semibold leading-7 text-atlas-blue sm:text-lg sm:leading-8">
               {productsContent.heroStatement}
             </p>
           </div>
@@ -163,8 +164,7 @@ export default function ProductsPage() {
                       </span>
 
                       {index <
-                      productsContent.collaborationBridge.steps.length -
-                        1 ? (
+                      productsContent.collaborationBridge.steps.length - 1 ? (
                         <span
                           aria-hidden="true"
                           className="text-atlas-blue"
