@@ -1,8 +1,13 @@
 const homeContent = {
   heroTitle: "Runtime Governance Infrastructure for Robotics",
-  heroSubtitle:
-    "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero. Atlas turns runtime evidence into reusable organizational knowledge.",
-  heroDescription: "",
+
+heroSubtitleDesktop:
+  "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero. Atlas turns runtime evidence into reusable organizational knowledge.",
+
+heroSubtitleMobile:
+  "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero.\n\nAtlas turns runtime evidence\ninto reusable organizational knowledge.",
+
+heroDescription: "",
   heroPrinciple: [] as string[],
   heroValueProposition: "Every investigation starts from evidence. Every future investigation starts from history.",
   sectionTitles: {
