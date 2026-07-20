@@ -229,13 +229,14 @@ export default function HomePage() {
           </div>
         </Section>
 
-        {/* Two Atlas product lines */}
+               {/* Two Atlas product lines */}
         <Section id="products" className="bg-surface">
           <SectionHeading
             description={homeContent.sectionDescriptions.productLines}
             eyebrow="03 / 产品"
             title={homeContent.sectionTitles.productLines}
           />
+
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {homeContent.productLines.map((product, index) => (
               <Card
@@ -251,22 +252,27 @@ export default function HomePage() {
                     <span className="font-mono text-xs text-sensor-tan">
                       产品 0{index + 1}
                     </span>
+
                     <span className="border border-border bg-white px-2.5 py-1 text-xs font-semibold text-muted">
                       {product.audience}
                     </span>
                   </div>
+
                   <h3 className="mt-8 max-w-md text-2xl font-semibold tracking-tight text-ink">
                     {product.name}
                   </h3>
+
                   <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
                     {product.description}
                   </p>
                 </div>
+
                 <div className="grid flex-1 gap-8 p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
                   <div>
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
                       核心模块
                     </p>
+
                     <ul className="mt-4 grid gap-2.5">
                       {product.modules.map((module) => (
                         <li
@@ -279,23 +285,29 @@ export default function HomePage() {
                       ))}
                     </ul>
                   </div>
+
                   <div>
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
                       产品生命周期
                     </p>
+
                     <div className="mt-4 grid gap-2">
                       {product.lifecycle.map((step, stepIndex) => (
                         <div className="flex items-center gap-3" key={step}>
                           <span className="flex size-6 shrink-0 items-center justify-center rounded-full border border-border font-mono text-[10px] text-muted">
                             {String(stepIndex + 1).padStart(2, "0")}
                           </span>
+
                           <span className="text-sm text-ink">{step}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-               </Section>
+              </Card>
+            ))}
+          </div>
+        </Section>
 
         {/* Platform capabilities */}
         <Section id="platform" className="bg-white">
