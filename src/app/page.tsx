@@ -110,6 +110,7 @@ export default function HomePage() {
           text-base
           sm:text-lg
           leading-7
+          whitespace-pre-line
           text-ink
           heading-description
         ">
