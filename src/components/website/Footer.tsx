@@ -42,10 +42,12 @@ export default function Footer() {
               className="h-8 w-auto brightness-0 invert"
             />
           </a>
-          <p className="mt-6 text-sm leading-7 text-white/65">
-            机器人运行时智能基础设施。观察、理解、调查、改进、复用。
-          </p>
-          <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-white/45">
+         <p className="mt-6 text-base leading-8 text-white/75">
+  Atlas 让核心工程资源聚焦研发与创造价值，
+  <br />
+  让运行时事故调查成为组织能力。
+</p>
+          <p className="mt-5 font-mono text-[12px] uppercase tracking-[0.16em] text-white/68">
             sensordeck.tech
           </p>
         </div>
@@ -53,13 +55,13 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-3">
           {footerGroups.map((group) => (
             <div key={group.title}>
-              <h2 className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">
+              <h2 className="font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-white/45">
                 {group.title}
               </h2>
               <nav className="mt-4 grid gap-3" aria-label={`${group.title} footer links`}>
                 {group.links.map((link) => (
                   <a
-                    className="w-fit text-sm text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+                    className="w-fit text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
                     style={{ transitionDuration: '150ms', transitionTimingFunction: 'var(--ease-out)' }}
                     href={link.href}
                     key={link.label}
