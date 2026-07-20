@@ -105,6 +105,8 @@ export default function HomePage() {
         </h1>
         {/* Desktop */}
         <p className="
+          hidden
+          lg:block
           mt-3
           max-w-xl
           text-base
@@ -118,6 +120,8 @@ export default function HomePage() {
         </p>
         {/* Mobile */}
         <p className="
+          block
+          lg:hidden
           mt-3
           max-w-xl
           text-base
@@ -126,7 +130,7 @@ export default function HomePage() {
           text-ink
           heading-description
         ">
-        {homeContent.heroSubtitleMobile}
+         {homeContent.heroSubtitleMobile}
         </p>
        <p
   className="
