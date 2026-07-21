@@ -573,16 +573,17 @@ export default function RuntimeInvestigationPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href="/#request-demo">
-                {productsContent.ctaText}
-              </Button>
+  <Button href="/#request-demo">
+    {productsContent.ctaText}
+  </Button>
 
-              <Button
-                href="/products/runtime-sensor-governance"
-                variant="outline"
-              >
-                查看 Runtime Sensor Governance
-              </Button>
+  <a
+    href="/products/runtime-sensor-governance"
+    className="inline-flex min-h-11 items-center justify-center border border-white/40 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
+  >
+    查看 Runtime Sensor Governance
+  </a>
+</div>
             </div>
           </div>
         </Section>
