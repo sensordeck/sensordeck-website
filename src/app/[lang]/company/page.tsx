@@ -70,7 +70,7 @@ export default async function CompanyPage({
       {/* Desktop illustration */}
       <div className="hidden items-center justify-center lg:flex">
         <img
-          src="/images/about-us-desktop-object.png"
+          src="/images/about-us-desktop.png"
           alt=""
           className="h-auto w-full max-w-[660px] object-contain"
         />
@@ -79,7 +79,7 @@ export default async function CompanyPage({
       {/* Mobile illustration */}
       <div className="flex justify-center lg:hidden">
         <img
-          src="/images/about-us-mobile-object.png"
+          src="/images/about-us-mobile.png"
           alt=""
           className="h-auto w-full max-w-[520px] object-contain"
         />
