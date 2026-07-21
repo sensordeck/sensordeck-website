@@ -99,7 +99,7 @@ export default function Footer() {
         <div className="max-w-sm">
           <a
             aria-label={copy.backToTopAriaLabel}
-            className="inline-flex items-center"
+            className="inline-flex min-h-11 items-center"
             href={localizeHref(currentLocale, "/#top")}
           >
             <Image
@@ -131,7 +131,7 @@ export default function Footer() {
               >
                 {group.links.map((link) => (
                   <a
-                    className="w-fit text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+                    className="inline-flex min-h-11 w-fit items-center text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
                     style={{ transitionDuration: '150ms', transitionTimingFunction: 'var(--ease-out)' }}
                     href={localizeHref(currentLocale, link.href)}
                     key={link.label}

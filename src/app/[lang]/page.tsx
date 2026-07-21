@@ -76,7 +76,7 @@ export default async function HomePage({
       <Header />
 
       <main>
-     <section id="top" className="relative overflow-hidden bg-white min-h-[600px] lg:min-h-[700px] border-b border-border">
+     <section id="top" className="relative min-h-[680px] overflow-hidden border-b border-border bg-white sm:min-h-[640px] lg:min-h-[700px]">
 
   {/* Hero artwork */}
   {/* Desktop Hero */}
@@ -103,8 +103,8 @@ export default async function HomePage({
   style={{ objectPosition: "center center" }}
 />
   {/* Overlay */}
-<div className="absolute inset-0 flex items-start pt-8 sm:pt-24 lg:items-center lg:pt-0">
-    <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+<div className="absolute inset-0 flex items-start pt-8 sm:pt-20 lg:items-center lg:pt-0">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
       <div className="max-w-[42rem]">
 
@@ -164,16 +164,16 @@ export default async function HomePage({
   {homeContent.heroValueProposition}
 </p>
 
-        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-3 px-4 lg:static lg:mt-8 lg:justify-start lg:px-0">
-  <Button href={localizeHref(lang, "/demo")} variant="primary">
+        <div className="absolute inset-x-4 bottom-4 mx-auto flex max-w-md flex-col gap-2 sm:inset-x-6 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3 lg:static lg:mx-0 lg:mt-8 lg:justify-start lg:px-0">
+  <Button className="w-full sm:w-auto" href={localizeHref(lang, "/demo")} variant="primary">
     {homeContent.ctas.primary}
   </Button>
 
-  <Button href={localizeHref(lang, "/platform")} variant="secondary">
+  <Button className="w-full sm:w-auto" href={localizeHref(lang, "/platform")} variant="secondary">
     {homeContent.ctas.viewArchitecture}
   </Button>
 
-  <Button href={localizeHref(lang, "/library/white-papers")} variant="secondary">
+  <Button className="w-full sm:w-auto" href={localizeHref(lang, "/library/white-papers")} variant="secondary">
     {homeContent.ctas.readWhitePaper}
   </Button>
 </div>
@@ -662,8 +662,9 @@ export default async function HomePage({
                 {homeContent.technicalResources.documentationDescription}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="grid gap-3 sm:flex sm:flex-wrap">
               <Button
+                className="w-full sm:w-auto"
                 href="https://docs.sensordeck.tech"
                 rel="noreferrer"
                 target="_blank"
@@ -671,7 +672,7 @@ export default async function HomePage({
               >
                 {homeContent.ctas.documentation}
               </Button>
-              <Button href="#contact-form" variant="secondary">
+              <Button className="w-full sm:w-auto" href="#contact-form" variant="secondary">
                 {homeContent.ctas.overview}
               </Button>
             </div>
@@ -694,7 +695,7 @@ export default async function HomePage({
                   {homeContent.ui.illustrativeDemoData}
                 </p>
               </div>
-              <Button href={localizeHref(lang, "/contact")}>
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
                 {homeContent.ui.contactUs}
                 <ArrowLabel inverse />
               </Button>

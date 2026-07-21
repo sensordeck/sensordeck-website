@@ -46,10 +46,10 @@ export default async function LibraryIndexPage({
         <Section id="library-hero" className="bg-white">
           <div className="max-w-4xl">
             <Eyebrow>{hero.eyebrow}</Eyebrow>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl heading-title">
+            <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-6xl heading-title">
               {hero.title}
             </h1>
-            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl heading-description">
+            <p className="mt-6 text-lg leading-8 text-muted sm:mt-7 sm:text-xl sm:leading-9 md:text-2xl heading-description">
               {hero.subtitle}
             </p>
           </div>
@@ -60,7 +60,7 @@ export default async function LibraryIndexPage({
           <div className="grid gap-6 md:grid-cols-2">
             {libraryResources.map((resource) => (
               <Card
-                className="flex min-h-64 flex-col justify-between stagger-item"
+                className="flex min-h-0 flex-col justify-between stagger-item sm:min-h-64"
                 key={resource.id}
               >
                 <div>
@@ -81,7 +81,7 @@ export default async function LibraryIndexPage({
                 </div>
                 <div className="mt-6 border-t border-border pt-4">
                   <a
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
+                    className="-my-2 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
                     href={localizeHref(lang, resource.href)}
                   >
                     {ui.browse}
@@ -143,7 +143,7 @@ export default async function LibraryIndexPage({
 
         {/* CTA */}
         <Section id="library-cta" className="bg-surface">
-          <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10 lg:p-14">
+          <div className="border border-atlas-blue/25 bg-surface-blue p-5 sm:p-7 md:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-3xl">
                 <Eyebrow>{cta.eyebrow}</Eyebrow>
@@ -154,14 +154,14 @@ export default async function LibraryIndexPage({
                   {cta.description}
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3">
-                <Button href="mailto:contact@sensordeck.tech">
+              <div className="grid gap-3 sm:flex sm:flex-wrap">
+                <Button className="w-full sm:w-auto" href="mailto:contact@sensordeck.tech">
                   {cta.primaryButton.text}
                   <span aria-hidden="true" className="text-white">
                     →
                   </span>
                 </Button>
-                <Button href={localizeHref(lang, "/contact")} variant="secondary">
+                <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")} variant="secondary">
                   {cta.secondaryButton.text}
                 </Button>
               </div>

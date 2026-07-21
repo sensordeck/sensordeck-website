@@ -37,7 +37,7 @@ export default async function ProblemPage({
           <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
             {homeContent.sectionTitles.theProblem}
           </h1>
-          <p className="text-xl leading-9 text-muted">
+          <p className="text-lg leading-8 text-muted sm:text-xl sm:leading-9">
             {homeContent.sectionDescriptions.theProblem}
           </p>
         </div>
@@ -46,7 +46,7 @@ export default async function ProblemPage({
       {/* Lead 文字 */}
       <Section className="bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-2xl leading-10 tracking-tight text-ink mb-8">
+          <p className="mb-8 text-xl leading-9 tracking-tight text-ink sm:text-2xl sm:leading-10">
             {homeContent.theProblem.lead}
           </p>
           <p className="text-xl font-semibold text-atlas-blue">
@@ -131,7 +131,7 @@ export default async function ProblemPage({
       {/* 为什么重要 */}
       <Section className="bg-surface">
         <div className="max-w-5xl mx-auto">
-          <div className="border border-border bg-white p-8 md:p-12">
+          <div className="border border-border bg-white p-5 sm:p-8 md:p-12">
             <h3 className="text-2xl font-semibold tracking-tight text-ink">
               {homeContent.theProblem.whyMatters.title}
             </h3>
@@ -149,10 +149,10 @@ export default async function ProblemPage({
             {content.ctaTitle}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href={localizeHref(lang, "/contact")} variant="primary">
+            <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")} variant="primary">
               {content.requestDemo}
             </Button>
-            <Button href={localizeHref(lang, "/")} variant="secondary">
+            <Button className="w-full sm:w-auto" href={localizeHref(lang, "/")} variant="secondary">
               {content.backHome}
             </Button>
           </div>

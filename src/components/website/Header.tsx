@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import Button from "@/components/website/Button";
@@ -60,13 +61,13 @@ function Brand({
 }) {
   return (
     <a
-      className="flex shrink-0 items-center text-ink"
+      className="flex min-h-11 shrink-0 items-center text-ink"
       href={`/${locale}`}
       aria-label={ariaLabel}
     >
       <Image
         alt="SensorDeck"
-        className="h-16 w-auto"
+        className="h-10 w-auto sm:h-12 lg:h-16"
         height={360}
         priority
         unoptimized
@@ -82,11 +83,13 @@ function NavigationLinks({
   locale,
   mobile = false,
   navigation,
+  onNavigate,
 }: {
   ariaLabel: string;
   locale: Locale;
   mobile?: boolean;
   navigation: { label: string; href: string }[];
+  onNavigate?: () => void;
 }) {
   return (
     <nav
@@ -95,11 +98,10 @@ function NavigationLinks({
     >
       {navigation.map((item) => (
         <a
-          className={`rounded-sm px-2 py-2 text-sm font-medium text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue link-hover ${
-            mobile ? "block" : ""
-          }`}
+          className="flex min-h-11 items-center rounded-sm px-2 py-2 text-sm font-medium text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue link-hover"
           href={localizeHref(locale, item.href)}
           key={item.href}
+          onClick={onNavigate}
         >
           {item.label}
         </a>
@@ -110,7 +112,10 @@ function NavigationLinks({
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const currentLocale = getCurrentLocale(usePathname());
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
   const copy = headerCopy[currentLocale];
 
   useEffect(() => {
@@ -122,6 +127,28 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!menuRef.current?.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
   return (
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-[250ms] ease-in-out ${
@@ -131,13 +158,13 @@ export default function Header() {
       }`}
     >
       <div
-        className={`mx-auto flex w-full max-w-7xl items-center justify-start gap-6 px-5 transition-all duration-[250ms] ease-in-out sm:px-8 lg:px-10 ${
-          isScrolled ? "min-h-16" : "min-h-18"
+        className={`mx-auto flex w-full max-w-7xl items-center justify-start gap-3 px-4 transition-all duration-[250ms] ease-in-out sm:gap-6 sm:px-8 lg:px-10 ${
+          isScrolled ? "min-h-16" : "min-h-16 sm:min-h-18"
         }`}
       >
         <Brand ariaLabel={copy.brandAriaLabel} locale={currentLocale} />
 
-        <div className="ml-auto hidden items-center gap-4 lg:flex">
+        <div className="ml-auto hidden items-center gap-4 xl:flex">
           <NavigationLinks
             ariaLabel={copy.desktopNavigationAriaLabel}
             locale={currentLocale}
@@ -146,38 +173,47 @@ export default function Header() {
           <LanguageSwitcher currentLocale={currentLocale} />
           <Button
             href={localizeHref(currentLocale, "/contact")}
-            className="min-h-10 px-3.5 py-2 text-xs"
+            className="px-3.5 py-2 text-xs"
           >
             {copy.requestDemo}
           </Button>
         </div>
 
-        <div className="ml-auto flex items-center gap-2 lg:hidden">
-          <LanguageSwitcher currentLocale={currentLocale} />
-          <details className="relative">
-            <summary
-              className="flex min-h-10 cursor-pointer list-none items-center rounded-md border border-border px-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+        <div className="ml-auto flex items-center gap-2 xl:hidden">
+          <LanguageSwitcher compact currentLocale={currentLocale} />
+          <div className="relative" ref={menuRef}>
+            <button
+              aria-controls="mobile-navigation-menu"
+              aria-expanded={isMenuOpen}
               aria-label={copy.openMenuAriaLabel}
+              className="flex size-11 cursor-pointer items-center justify-center rounded-md border border-border bg-white text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              type="button"
             >
-              <svg className="h-5 w-5 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </summary>
-            <div className="absolute right-0 top-12 w-64 rounded-lg border border-border bg-white p-4 shadow-[0_12px_32px_rgba(10,26,42,0.12)]">
-              <NavigationLinks
-                ariaLabel={copy.mobileNavigationAriaLabel}
-                locale={currentLocale}
-                mobile
-                navigation={copy.navigation}
-              />
-              <Button
-                href={localizeHref(currentLocale, "/contact")}
-                className="mt-4 w-full"
+              {isMenuOpen ? <X aria-hidden="true" className="size-5" /> : <Menu aria-hidden="true" className="size-5" />}
+            </button>
+            {isMenuOpen ? (
+              <div
+                className="absolute right-0 top-[calc(100%+0.5rem)] w-[min(20rem,calc(100vw-2rem))] rounded-lg border border-border bg-white p-4 shadow-[0_12px_32px_rgba(10,26,42,0.12)]"
+                id="mobile-navigation-menu"
               >
-                {copy.requestDemo}
-              </Button>
-            </div>
-          </details>
+                <NavigationLinks
+                  ariaLabel={copy.mobileNavigationAriaLabel}
+                  locale={currentLocale}
+                  mobile
+                  navigation={copy.navigation}
+                  onNavigate={() => setIsMenuOpen(false)}
+                />
+                <Button
+                  href={localizeHref(currentLocale, "/contact")}
+                  className="mt-4 w-full"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {copy.requestDemo}
+                </Button>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </header>

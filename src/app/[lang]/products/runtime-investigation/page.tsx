@@ -217,7 +217,7 @@ export default async function RuntimeInvestigationPage({
 
             </p>
 
-            <h1 className="mt-4 max-w-5xl text-[38px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
+            <h1 className="mt-4 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
               Atlas Runtime Investigation™
             </h1>
 
@@ -233,12 +233,12 @@ export default async function RuntimeInvestigationPage({
 
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={localizeHref(lang, "/contact")}>
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
                 {productsContent.ctaText}
               </Button>
 
-              <Button href={localizeHref(lang, "/products")} variant="outline">{legacyZhCopy.runtimeInvestigation.text045}
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/products")} variant="outline">{legacyZhCopy.runtimeInvestigation.text045}
 
               </Button>
             </div>
@@ -271,11 +271,11 @@ export default async function RuntimeInvestigationPage({
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid gap-3 sm:grid-cols-2">
               {refExamples.map((item) =>
               <div
                 key={item}
-                className="border border-white/15 bg-white/[0.04] px-4 py-4 font-mono text-xs font-semibold leading-6 text-white/85">
+                className="min-w-0 border border-white/15 bg-white/[0.04] px-4 py-4 font-mono text-xs font-semibold leading-6 break-words text-white/85">
                 
                   {item}
                 </div>
@@ -589,14 +589,14 @@ export default async function RuntimeInvestigationPage({
 
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href={localizeHref(lang, "/contact")}>
+            <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
                 {productsContent.ctaText}
               </Button>
 
               <a
                 href={localizeHref(lang, "/products/runtime-sensor-governance")}
-                className="inline-flex min-h-11 items-center justify-center border border-white/40 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink">{legacyZhCopy.runtimeInvestigation.text070}
+                className="inline-flex min-h-11 w-full items-center justify-center border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto">{legacyZhCopy.runtimeInvestigation.text070}
 
 
               </a>

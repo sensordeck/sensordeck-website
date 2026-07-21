@@ -25,79 +25,83 @@ export default function AnimatedCard({
   const { contextSafe } = useGSAP({ scope: containerRef });
 
   // 展开动画 (淡出)
-  const expandCard = contextSafe(() => {
-    if (!containerRef.current || !backgroundRef.current || isAnimating) return;
+  const expandCard = () => {
+    contextSafe(() => {
+      if (!containerRef.current || !backgroundRef.current || isAnimating) return;
 
-    setIsAnimating(true);
-    const lineElements = containerRef.current.querySelectorAll('.card-content-line');
-    const timeline = gsap.timeline({
-      onComplete: () => {
-        setIsExpanded(false);
-        setIsAnimating(false);
-      }
-    });
+      setIsAnimating(true);
+      const lineElements = containerRef.current.querySelectorAll('.card-content-line');
+      const timeline = gsap.timeline({
+        onComplete: () => {
+          setIsExpanded(false);
+          setIsAnimating(false);
+        }
+      });
 
-    // 2.0s: 第一行淡出
-    timeline.to(lineElements[0], {
-      opacity: 0,
-      duration: 0.2,
-      ease: 'power2.out'
-    }, 2.0);
+      // 2.0s: 第一行淡出
+      timeline.to(lineElements[0], {
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.out'
+      }, 2.0);
 
-    // 3.85s: 第二行淡出
-    timeline.to(lineElements[1], {
-      opacity: 0,
-      duration: 0.15,
-      ease: 'power2.out'
-    }, 3.85);
+      // 3.85s: 第二行淡出
+      timeline.to(lineElements[1], {
+        opacity: 0,
+        duration: 0.15,
+        ease: 'power2.out'
+      }, 3.85);
 
-    // 4.5-5.0s: 背景和剩余内容快速淡出
-    timeline.to(backgroundRef.current, {
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power2.in'
-    }, 4.5);
+      // 4.5-5.0s: 背景和剩余内容快速淡出
+      timeline.to(backgroundRef.current, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in'
+      }, 4.5);
 
-    timeline.to(Array.from(lineElements).slice(2), {
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power2.in'
-    }, 4.5);
-  });
+      timeline.to(Array.from(lineElements).slice(2), {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in'
+      }, 4.5);
+    })();
+  };
 
   // 收起动画 (淡入)
-  const collapseCard = contextSafe(() => {
-    if (!containerRef.current || !backgroundRef.current || isAnimating) return;
+  const collapseCard = () => {
+    contextSafe(() => {
+      if (!containerRef.current || !backgroundRef.current || isAnimating) return;
 
-    setIsAnimating(true);
-    const lineElements = containerRef.current.querySelectorAll('.card-content-line');
-    const timeline = gsap.timeline({
-      onComplete: () => {
-        setIsExpanded(true);
-        setIsAnimating(false);
-      }
-    });
+      setIsAnimating(true);
+      const lineElements = containerRef.current.querySelectorAll('.card-content-line');
+      const timeline = gsap.timeline({
+        onComplete: () => {
+          setIsExpanded(true);
+          setIsAnimating(false);
+        }
+      });
 
-    // 设置初始透明状态
-    gsap.set(backgroundRef.current, { opacity: 0 });
-    gsap.set(lineElements, { opacity: 0 });
+      // 设置初始透明状态
+      gsap.set(backgroundRef.current, { opacity: 0 });
+      gsap.set(lineElements, { opacity: 0 });
 
-    // 0-0.1s: 背景快速淡入
-    timeline.to(backgroundRef.current, {
-      opacity: 1,
-      duration: 0.1,
-      ease: 'power2.out'
-    }, 0);
-
-    // 1.0s 延迟后内容逐行淡入
-    lineElements.forEach((line, index) => {
-      timeline.to(line, {
+      // 0-0.1s: 背景快速淡入
+      timeline.to(backgroundRef.current, {
         opacity: 1,
         duration: 0.1,
         ease: 'power2.out'
-      }, 1.0 + (index * 0.1));
-    });
-  });
+      }, 0);
+
+      // 1.0s 延迟后内容逐行淡入
+      lineElements.forEach((line, index) => {
+        timeline.to(line, {
+          opacity: 1,
+          duration: 0.1,
+          ease: 'power2.out'
+        }, 1.0 + (index * 0.1));
+      });
+    })();
+  };
 
   return (
     <div
@@ -129,12 +133,12 @@ export default function AnimatedCard({
 
       {/* 控制按钮 - 仅在非自动播放模式显示 */}
       {!autoPlay && (
-        <div className="fixed top-20 left-6 z-[60] flex gap-3">
+        <div className="fixed top-20 left-4 right-4 z-[60] flex flex-col gap-2 sm:left-6 sm:right-auto sm:flex-row sm:gap-3">
           <button
             onClick={expandCard}
             disabled={!isExpanded || isAnimating}
             className={`
-              px-4 py-2 rounded-lg text-sm font-semibold
+              min-h-11 px-4 py-2 rounded-lg text-sm font-semibold
               transition-all duration-200
               ${isExpanded && !isAnimating
                 ? 'bg-atlas-blue text-white hover:bg-atlas-blue-dark shadow-md'
@@ -148,7 +152,7 @@ export default function AnimatedCard({
             onClick={collapseCard}
             disabled={isExpanded || isAnimating}
             className={`
-              px-4 py-2 rounded-lg text-sm font-semibold
+              min-h-11 px-4 py-2 rounded-lg text-sm font-semibold
               transition-all duration-200
               ${!isExpanded && !isAnimating
                 ? 'bg-green-600 text-white hover:bg-green-700 shadow-md'
