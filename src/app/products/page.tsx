@@ -52,9 +52,17 @@ export default function ProductsPage() {
               {productsContent.heroSubtitle}
             </p>
 
-            <p className="mx-auto mt-4 max-w-2xl whitespace-pre-line text-base font-semibold leading-7 text-atlas-blue sm:text-lg sm:leading-8">
-              {productsContent.heroStatement}
-            </p>
+           {/* Desktop */}
+<p className="hidden sm:block mx-auto mt-7 max-w-2xl text-lg font-semibold leading-8 text-atlas-blue">
+  {productsContent.heroStatement}
+</p>
+
+{/* Mobile */}
+<p className="block sm:hidden mx-auto mt-7 text-base font-semibold leading-8 text-atlas-blue">
+  当前调查从证据开始，
+  <br />
+  下一次调查，从历史开始。
+</p>
           </div>
         </Section>
 
