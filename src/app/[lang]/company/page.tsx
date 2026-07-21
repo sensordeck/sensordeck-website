@@ -40,12 +40,10 @@ export default async function CompanyPage({
   className="relative overflow-hidden bg-white py-0"
 >
   {/* Desktop background */}
-  <div
-  className="absolute inset-y-0 hidden w-[62%] bg-contain bg-no-repeat lg:block"
+ <div
+  className="absolute inset-y-0 right-0 hidden w-[58%] bg-contain bg-right bg-no-repeat lg:block"
   style={{
-    right: "4%",
     backgroundImage: "url('/images/about-us-desktop.png')",
-    backgroundPosition: "center right",
   }}
   aria-hidden="true"
 />
