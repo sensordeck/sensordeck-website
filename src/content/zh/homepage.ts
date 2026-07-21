@@ -24,7 +24,7 @@ export const homepageContent = {
     eyebrow: "01 / 问题",
     title: "为什么机器人运行时事故难以调查",
     description:
-      "信号是可用的，但运营上下文通常分散在设备、日志、工单、录制和个人记忆中。",
+      "信号并不缺失，但运行背景信息通常分散在设备、日志、工单、录像和个人记忆中。",
     challenges: [
       {
         label: "信号碎片化",
@@ -37,9 +37,9 @@ export const homepageContent = {
           "无限制的归档使得难以就重要的确切证据窗口达成一致。",
       },
       {
-        label: "知识在关闭时重置",
+        label: "知识在结案后流失",
         description:
-          "结论可能存在于工单或某人的记忆中，而不是成为可复用的调查资产。",
+          "结论可能只留在工单或个人记忆中，无法成为可复用的调查资产。",
       },
     ],
   },
@@ -56,7 +56,7 @@ export const homepageContent = {
           "将传感器行为连接到电源、总线、Linux/SBC 运行时、ROS 输入和应用上下文。",
       },
       {
-        label: "有界证据",
+        label: "边界明确的证据",
         description:
           "将长时间运行时数据集转换为标准化的证据窗口，供团队审查和交换。",
       },
@@ -90,7 +90,7 @@ export const homepageContent = {
         name: "Atlas Runtime Investigation™",
         audience: "机器人 OEM",
         description:
-          "将运行时事件转化为有界证据、协调调查和可复用的组织知识。",
+          "将运行时事件转化为边界明确的证据、协调调查和可复用的组织知识。",
         keyModules: [
           "Atlas Agent™",
           "Evidence Pack™",
@@ -146,7 +146,7 @@ export const homepageContent = {
     eyebrow: "06 / 申请演示",
     title: "让运行时证据在整个组织中发挥作用",
     description:
-      "了解 Atlas 如何适配您的机器人组织的运行时边界、调查工作流程和证据所有权模型。",
+      "了解 Atlas 如何结合您的机器人组织、运行时边界、调查工作流程和证据所有权模式。",
     note: "仅限示意性演示数据",
     button: {
       text: "联系我们",

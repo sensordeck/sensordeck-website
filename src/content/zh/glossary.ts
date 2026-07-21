@@ -25,7 +25,7 @@ export const glossaryZh = {
       term: "Runtime Governance Agent (RGA)",
       chinese: "运行时治理代理",
       definition:
-        "部署在机器人主机上的轻量级代理程序，负责 7×24 观察运行时表面、检测异常、生成证据包并管理证据提交流程。",
+        "部署在机器人主机上的轻量级代理程序，负责 7×24 监测各运行时维度、检测异常、生成证据包并管理证据提交流程。",
       category: "core",
     },
     {
@@ -58,7 +58,7 @@ export const glossaryZh = {
     },
     {
       term: "Assist Vault",
-      chinese: "协助保管库",
+      chinese: "调查资产库",
       definition:
         "Atlas 的组织记忆存储系统，保存所有历史证据包、事故报告和经验总结。Vault 支持语义检索，可自动召回相似历史案例。",
       category: "workflow",
@@ -72,9 +72,9 @@ export const glossaryZh = {
     },
     {
       term: "Five-Window Constitution",
-      chinese: "五窗口宪法",
+      chinese: "五窗口证据规范",
       definition:
-        "Atlas 证据包的标准结构规范，包含传感器窗口、日志窗口、系统窗口、历史窗口和协作窗口五个维度，确保证据的完整性和可比性。",
+        "Atlas 证据包的标准时间结构，包括前置保护、基线、偏差、恢复观察和后置保护五个窗口，确保证据上下文完整且便于比较。",
       category: "technical",
     },
     {

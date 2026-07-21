@@ -29,10 +29,10 @@ SBC / ROS 主题 / 应用输入`,
       id: "runtime-evidence",
       title: "运行时证据",
       description:
-        "有界的 Evidence Pack 不同于无限日志归档、原始 rosbag、客户视频、支持工单或单一传感器日志。",
+        "边界明确的 Evidence Pack 不同于无限日志归档、原始 rosbag、客户视频、支持工单或单一传感器日志。",
       content: null,
       explanation:
-        "Evidence Pack 是有界的、结构化的、可重现的证据容器。它不是原始数据转储，而是围绕异常事件窗口组织的治理化证据集合。有界性确保证据可传输、可审查、可存储。",
+        "Evidence Pack 是边界明确、结构化且可重现的证据容器。它不是原始数据转储，而是围绕异常事件窗口、按治理规则组织的证据集合。明确的边界确保证据可传输、可审查、可存储。",
       comparedTo: [
         "无限日志归档 → 无法传输，无法快速审查",
         "原始 rosbag → 无结构，无上下文，无异常标记",
@@ -45,9 +45,9 @@ SBC / ROS 主题 / 应用输入`,
 
     {
       id: "runtime-surfaces",
-      title: "运行时监控表面",
+      title: "运行时监测维度",
       description:
-        "Atlas 在多个运行时表面上建立可观测性，覆盖传感器、总线、内核和应用层。",
+        "Atlas 从多个运行时监测维度建立可观测性，覆盖传感器、总线、内核和应用层。",
       content: null,
       surfaces: [
         "电源健康",
@@ -64,7 +64,7 @@ SBC / ROS 主题 / 应用输入`,
         "传感器心跳 / 原始输出",
       ],
       explanation:
-        "这些表面不是孤立监控的指标，而是 Atlas 在运行时边界内建立的可观测层。每个表面都可以产生异常信号，触发 Evidence Pack 生成。",
+        "这些维度并非彼此孤立的监控指标，而是 Atlas 在运行时边界内建立的统一观测体系。每个维度都可能产生异常信号，并触发 Evidence Pack 生成。",
       href: "/technology/runtime-surfaces",
     },
 

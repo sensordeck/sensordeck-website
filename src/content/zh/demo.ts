@@ -8,7 +8,7 @@ export const demoContent = {
         role: "一级支持",
         title: "客户门户",
         description:
-          "快速创建 REF 并确认运行时数据集可用性。演示 4 步工作流：事件描述、机器人信息、运行时证据、审核路由。",
+          "快速创建 REF 并确认运行时数据集可用性。演示 4 步工作流：事件描述、机器人信息、运行时证据、审核与分派。",
         href: "/demo/tier1",
         audience: "一线支持团队",
       },
@@ -17,7 +17,7 @@ export const demoContent = {
         role: "二级/三级工程师",
         title: "调查仪表板",
         description:
-          "将长运行时数据集归约为候选证据包。包含候选时间线、五窗口视图、历史 RGA 召回、EGP 生成器。",
+          "将长时间运行数据整理为候选证据。包含候选时间线、五窗口视图、历史 RGA 召回和 EGP 生成器。",
         href: "/demo/investigation",
         audience: "OEM 工程团队",
       },
@@ -35,7 +35,7 @@ export const demoContent = {
         role: "CTO / 工程副总裁",
         title: "管理层仪表板",
         description:
-          "调查运营效率、证据覆盖率、组织记忆、供应商协作和示意性 ROI 的执行视图。",
+          "面向管理层展示调查效率、证据覆盖率、组织记忆、供应商协作和示意性 ROI。",
         href: "/demo/cto",
         audience: "工程管理层",
       },
@@ -163,7 +163,7 @@ export const demoContent = {
     daySuffix: " 天",
     roiModelLabel: "ROI 模型：",
     operationsEyebrow: "调查运营效率",
-    openRefsLabel: "开放 REF",
+    openRefsLabel: "未结案 REF",
     openRefsTrend: "↓ 18%，较上一周期",
     safetyRefsLabel: "安全相关 REF",
     safetyRefsNote: "需要管理层审核",
@@ -199,7 +199,7 @@ export const demoContent = {
     roiNotice:
       "商业指标为演示估算值，不代表具体客户的实际结果。实际 ROI 取决于调查复杂度、团队效率和运营环境。",
     coverageEyebrow: "证据覆盖率",
-    coverageTitle: "候选表面频率分布",
+    coverageTitle: "候选监测维度频率分布",
     surfaces: [
       "USB 总线时序",
       "ROS2 主题时序",
@@ -211,7 +211,7 @@ export const demoContent = {
     occurrenceSuffix: " 次出现",
     noteLabel: "注意：",
     coverageNote:
-      "候选表面频率表示观察到的模式分布，不代表根本原因排名或故障责任归属。",
+      "候选监测维度的出现频率仅表示观察到的模式分布，不代表根本原因排名或故障责任归属。",
     volumeEyebrow: "调查数量",
     volumeTitle: "REF 数量与状态趋势",
     months: ["4月", "5月", "6月", "7月"],
@@ -287,7 +287,7 @@ export const demoContent = {
     allowedLabel: "允许术语",
     allowedTerms: [
       "观察到的模式",
-      "候选表面",
+      "候选监测维度",
       "强候选 / 部分候选",
       "相关历史模式",
       "需要进一步调查",
@@ -315,7 +315,7 @@ export const demoContent = {
     evidenceQualityLabel: "证据质量",
     packageIntegrityLabel: "包完整性",
     verifiedLabel: "已验证",
-    monitoredSurfacesLabel: "包含的监控表面",
+    monitoredSurfacesLabel: "覆盖的监测维度",
     evidenceSummaryEyebrow: "Evidence Pack 摘要",
     deviationWindowLabel: "偏差窗口",
     upstreamContextLabel: "上游上下文",
@@ -353,7 +353,7 @@ export const demoContent = {
     returnResponse: "返回 EGP 响应到 OEM →",
     demoLabel: "演示",
     demoDescription:
-      "实际传感器 FAE 工作区包含完整的包验证、多传感器表面分析、IR/LL 模板库和传感器 RGA 更新工作流。",
+      "实际传感器 FAE 工作区包含完整的包验证、多传感器监测维度分析、IR/LL 模板库和传感器 RGA 更新工作流。",
   },
   tier1: {
     portalTitle: "一级支持门户",
@@ -362,7 +362,7 @@ export const demoContent = {
       incident: "事件描述",
       robot: "机器人信息",
       evidence: "运行时证据",
-      review: "审核路由",
+      review: "审核与分派",
     },
     previous: "← 上一步",
     incident: {
@@ -398,11 +398,11 @@ export const demoContent = {
       lockedLabel: "运行时数据集已锁定",
       datasetIdLabel: "运行时数据集 ID：",
       coverageLabel: "覆盖范围：时序、电源、网络、存储、传感器、ROS2 主题",
-      next: "下一步：审核路由 →",
+      next: "下一步：审核与分派 →",
     },
     review: {
       eyebrow: "步骤 4 / 4",
-      title: "审核并路由到 Tier 2",
+      title: "审核并分派给 Tier 2",
       summaryLabel: "REF 摘要",
       incidentTypeLabel: "事件类型",
       severityLabel: "严重程度",

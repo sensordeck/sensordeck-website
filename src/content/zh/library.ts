@@ -130,7 +130,7 @@ export const libraryContent = {
         id: "WP-04",
         title: "Evidence Pack 与五窗口证据模型",
         description:
-          "有界证据窗口的设计原理：前置保护、基线、偏差、恢复观察、后置保护，以及为什么证据必须有界。",
+          "边界明确的证据窗口如何设计：前置保护、基线、偏差、恢复观察、后置保护，以及为什么证据必须限定范围。",
         size: "10 页",
         format: "PDF",
       },
@@ -146,7 +146,7 @@ export const libraryContent = {
         id: "WP-06",
         title: "OEM ↔ 传感器调查协作",
         description:
-          "Sensor Engagement Pack (EGP) 的协作模型：去识别化证据交换和有界调查上下文。",
+          "Sensor Engagement Pack (EGP) 的协作模式：去标识化证据交换和边界明确的调查信息。",
         size: "11 页",
         format: "PDF",
       },
@@ -182,7 +182,7 @@ export const libraryContent = {
     items: [
       {
         title: "2 分钟概览视频",
-        description: "快速了解 Atlas 如何将运行时事件转化为有界证据和可复用知识。",
+        description: "快速了解 Atlas 如何将运行时事件转化为边界明确的证据和可复用知识。",
         type: "视频",
         href: "/demo/overview",
         disabled: false,
@@ -206,7 +206,7 @@ export const libraryContent = {
       {
         title: "示例 Evidence Pack",
         description:
-          "可下载的示例 Evidence Pack（已批准发布的去识别化示例数据）。",
+          "可下载的示例 Evidence Pack（已批准发布的去标识化示例数据）。",
         type: "下载",
         href: "#",
         disabled: true,
@@ -222,12 +222,12 @@ export const libraryContent = {
       {
         question: "Atlas 是日志平台吗？",
         answer:
-          "不是。Atlas 是运行时智能基础设施。它结构化有界证据、检索历史候选、协调调查工作流程，但不替代日志归档或时序数据库。",
+          "不是。Atlas 是运行时智能基础设施。它整理边界明确的证据、检索历史候选并协调调查工作流程，但不替代日志归档或时序数据库。",
       },
       {
         question: "SensorDeck 拥有客户数据吗？",
         answer:
-          "不。运行时数据集仍由客户的环境、保留策略和访问模型治理。Evidence Pack 和 EGP 是有界的、去识别化的协作表面，不是无限制的归档。",
+          "不。运行时数据集仍由客户的环境、保留策略和访问模型治理。Evidence Pack 和 EGP 是边界明确、经过去标识化处理的协作载体，不是无限制的归档。",
       },
       {
         question: "Atlas 确定根本原因吗？",
@@ -242,22 +242,22 @@ export const libraryContent = {
       {
         question: "数据必须离开客户环境吗？",
         answer:
-          "不一定。Atlas Agent 可以在客户环境内运行。Evidence Pack 和 EGP 是明确的、去识别化的协作上下文，只在需要时导出。",
+          "不一定。Atlas Agent 可以在客户环境内运行。Evidence Pack 和 EGP 提供边界明确、经过去标识化处理的协作信息，只在需要时导出。",
       },
       {
         question: "什么是 Evidence Pack？",
         answer:
-          "Evidence Pack 是有界的、标准化的证据窗口，围绕运行时偏差构建（五窗口模型：前置保护、基线、偏差、恢复观察、后置保护），而不是无限制的归档。",
+          "Evidence Pack 是边界明确、标准化的证据窗口，围绕运行时偏差构建（五窗口模型：前置保护、基线、偏差、恢复观察、后置保护），而不是无限制的归档。",
       },
       {
         question: "什么是 Historical RGA？",
         answer:
-          "Historical RGA™ 是召回、复用和参考机制。它检索先前的调查结果和经验教训作为候选供审查，但不声称相同因果关系或自动学习。",
+          "Historical RGA™ 是召回、复用和参考机制。它检索历史调查结果和经验教训作为审查候选，但不代表因果关系相同，也不会自动学习。",
       },
       {
         question: "什么是 EGP？",
         answer:
-          "Sensor Engagement Pack (EGP) 是 OEM 与传感器制造商之间的有界协作表面。它是去识别化的证据和调查上下文，不是完整的内部 Evidence Pack。",
+          "Sensor Engagement Pack (EGP) 是 OEM 与传感器制造商之间边界明确的协作载体。它包含去标识化的证据和调查信息，不是完整的内部 Evidence Pack。",
       },
       {
         question: "Atlas 替代 OEM 工程工具吗？",

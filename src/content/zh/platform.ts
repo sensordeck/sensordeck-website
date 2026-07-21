@@ -18,11 +18,11 @@ export const platformContent = {
       "运行时数据集由客户环境治理",
       "证据窗口标准化和有界",
       "调查协调跨越一级、二级/三级、OEM 工程和传感器 FAE",
-      "Historical RGA™ 检索候选而非声称相同因果关系",
+      "Historical RGA™ 检索候选，但不代表因果关系相同",
       "调查结果和经验教训由人工团队撰写",
     ],
     constitutionalBoundary: {
-      title: "Atlas 宪法边界",
+      title: "Atlas 产品能力边界",
       items: [
         "Atlas 结构化证据。",
         "Atlas 检索历史候选。",
@@ -37,7 +37,7 @@ export const platformContent = {
       name: "Atlas Agent™",
       description: "根据保留策略观察、保留、锁定和导出运行时数据集。",
       keyFeatures: [
-        "观察运行时表面（电源、总线、Linux 运行时、ROS 主题）",
+        "监测运行时关键维度（电源、总线、Linux 运行时、ROS 主题）",
         "根据客户保留策略治理数据集",
         "导出运行时数据集供证据转换",
         "保持证据所有权在客户边界内",
@@ -45,17 +45,17 @@ export const platformContent = {
     },
     {
       name: "Evidence Pack™",
-      description: "将长时间运行时数据集转换为有界的、标准化的证据窗口。",
+      description: "将长时间运行时数据集转换为边界明确、标准化的证据窗口。",
       keyFeatures: [
         "五窗口证据模型（前置保护、基线、偏差、恢复观察、后置保护）",
         "标准化证据窗口供团队审查",
-        "有界上下文供 OEM 和传感器协作",
-        "明确时序边界和运行时表面",
+        "为 OEM 和传感器协作提供边界明确的调查信息",
+        "明确时序边界和运行时监测维度",
       ],
     },
     {
       name: "Historical RGA™",
-      description: "召回先前的调查结果和经验教训，但不声称相同因果关系。",
+      description: "召回历史调查结果和经验教训，但不代表因果关系相同。",
       keyFeatures: [
         "检索历史调查候选供审查",
         "标记候选强度（强候选、部分候选、相关历史模式）",
@@ -75,10 +75,10 @@ export const platformContent = {
     },
     {
       name: "Sensor EGP™",
-      description: "在 OEM 和传感器制造商之间交换去识别化的证据和调查上下文。",
+      description: "在 OEM 和传感器制造商之间交换去标识化的证据和调查信息。",
       keyFeatures: [
-        "去识别化运行时证据交换",
-        "有界协作上下文",
+        "去标识化运行时证据交换",
+        "边界明确的协作信息",
         "保护双方运营隐私",
       ],
     },
@@ -128,7 +128,7 @@ export const platformContent = {
           "Atlas Agent™",
           "运行时数据集保留",
           "Evidence Pack™",
-          "候选证据包",
+          "候选证据",
           "Historical RGA™",
           "Investigation Workspace™",
           "Sensor Engagement Pack (EGP)",
@@ -144,7 +144,7 @@ export const platformContent = {
     whitePapers: [
       {
         title: "机器人运行时智能基础设施",
-        description: "管理层和工程阅读层：什么是运行时智能基础设施，以及为什么它对机器人组织重要。",
+        description: "面向管理决策者和工程团队，说明什么是运行时智能基础设施，以及它为何对机器人组织重要。",
       },
       {
         title: "Atlas Runtime Sensor Governance",
@@ -169,14 +169,14 @@ export const platformContent = {
     ],
     documentationLink: {
       title: "docs.sensordeck.tech",
-      description: "规范数据模式、CLI、集成指南、工件定义、发布说明和技术实现文档。",
+      description: "规范数据模式、CLI、集成指南、产物定义、发布说明和技术实现文档。",
       href: "https://docs.sensordeck.tech",
     },
   },
   
   cta: {
-    title: "了解 Atlas 平台如何适配您的组织",
-    description: "探索 Atlas 如何适配您的机器人组织的运行时边界、调查工作流程和证据所有权模型。",
+    title: "了解 Atlas 平台如何融入您的组织",
+    description: "探索 Atlas 如何结合您的机器人组织、运行时边界、调查工作流程和证据所有权模式。",
     primaryButton: "申请演示",
     secondaryButton: "阅读技术白皮书",
   },
