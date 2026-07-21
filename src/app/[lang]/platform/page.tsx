@@ -24,12 +24,12 @@ export default async function PlatformPage({
       <Header />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="border-b border-border py-16 md:py-24">
-          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
+        <section className="border-b border-border py-10 sm:py-14 md:py-20">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-4 sm:px-6">
             <h1 className="mb-4 font-sans text-4xl font-semibold tracking-tight text-ink md:text-5xl">
               {hero.title}
             </h1>
-            <p className="mb-6 font-sans text-xl text-ink/70">
+            <p className="mb-6 font-sans text-lg leading-8 text-ink/70 sm:text-xl">
               {hero.subtitle}
             </p>
             <p className="max-w-3xl font-sans text-base leading-relaxed text-ink/80">
@@ -39,9 +39,9 @@ export default async function PlatformPage({
         </section>
 
         {/* Architecture Section */}
-        <section className="border-b border-border py-16">
-          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
-            <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
+        <section className="border-b border-border py-10 sm:py-14 md:py-16">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-4 sm:px-6">
+            <h2 className="mb-4 font-sans text-2xl font-semibold text-ink sm:text-3xl">
               {architecture.title}
             </h2>
             <p className="mb-8 font-sans text-base leading-relaxed text-ink/80">
@@ -57,7 +57,7 @@ export default async function PlatformPage({
             </ul>
             
             {/* Constitutional Boundary within Architecture */}
-            <div className="mt-8 rounded-lg bg-ink/[0.02] p-6">
+            <div className="mt-8 rounded-lg bg-ink/[0.02] p-5 sm:p-6">
               <h3 className="mb-4 font-sans text-lg font-semibold text-ink">
                 {architecture.constitutionalBoundary.title}
               </h3>
@@ -73,14 +73,14 @@ export default async function PlatformPage({
         </section>
 
         {/* 7 Capability Cards */}
-        <section className="border-b border-border py-16">
-          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
-            <h2 className="mb-12 font-sans text-3xl font-semibold text-ink">
+        <section className="border-b border-border py-10 sm:py-14 md:py-16">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-4 sm:px-6">
+            <h2 className="mb-8 font-sans text-2xl font-semibold text-ink sm:mb-12 sm:text-3xl">
               {ui.capabilitiesTitle}
             </h2>
             <div className="grid gap-8 md:grid-cols-2">
               {capabilities.map((capability, index) => (
-                <div key={index} className="rounded-lg border border-border bg-white p-6 transition-colors hover:border-atlas-blue/30">
+                <div key={index} className="rounded-lg border border-border bg-white p-5 transition-colors hover:border-atlas-blue/30 sm:p-6">
                   <h3 className="mb-3 font-sans text-xl font-semibold text-ink">
                     {capability.name}
                   </h3>
@@ -102,9 +102,9 @@ export default async function PlatformPage({
         </section>
 
         {/* Products Relationship */}
-        <section className="border-b border-border py-16">
-          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
-            <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
+        <section className="border-b border-border py-10 sm:py-14 md:py-16">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-4 sm:px-6">
+            <h2 className="mb-4 font-sans text-2xl font-semibold text-ink sm:text-3xl">
               {productsRelationship.title}
             </h2>
             <p className="mb-12 font-sans text-base leading-relaxed text-ink/80">
@@ -112,7 +112,7 @@ export default async function PlatformPage({
             </p>
             <div className="grid gap-8 md:grid-cols-2">
               {productsRelationship.products.map((product, index) => (
-                <div key={index} className="rounded-lg border border-border bg-white p-6">
+                <div key={index} className="rounded-lg border border-border bg-white p-5 sm:p-6">
                   <h3 className="mb-2 font-sans text-xl font-semibold text-ink">
                     {product.name}
                   </h3>
@@ -137,14 +137,14 @@ export default async function PlatformPage({
         </section>
 
         {/* Documentation */}
-        <section className="border-b border-border py-16">
-          <AnimatedSection className="mx-auto max-w-screen-lg px-6">
-            <h2 className="mb-12 font-sans text-3xl font-semibold text-ink">
+        <section className="border-b border-border py-10 sm:py-14 md:py-16">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-4 sm:px-6">
+            <h2 className="mb-8 font-sans text-2xl font-semibold text-ink sm:mb-12 sm:text-3xl">
               {documentation.title}
             </h2>
             <div className="mb-12 grid gap-6 md:grid-cols-2">
               {documentation.whitePapers.map((paper, index) => (
-                <div key={index} className="rounded-lg border border-border bg-white p-6">
+                <div key={index} className="rounded-lg border border-border bg-white p-5 sm:p-6">
                   <h3 className="mb-2 font-sans text-base font-semibold text-ink">
                     {paper.title}
                   </h3>
@@ -158,7 +158,7 @@ export default async function PlatformPage({
               href={documentation.documentationLink.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-lg border border-atlas-blue/20 bg-atlas-blue/5 p-6 transition-colors hover:border-atlas-blue/40 hover:bg-atlas-blue/10"
+              className="block min-h-11 rounded-lg border border-atlas-blue/20 bg-atlas-blue/5 p-5 transition-colors hover:border-atlas-blue/40 hover:bg-atlas-blue/10 sm:p-6"
             >
               <h3 className="mb-2 font-mono text-lg font-semibold text-ink">
                 {documentation.documentationLink.title} →
@@ -171,19 +171,19 @@ export default async function PlatformPage({
         </section>
 
         {/* CTA */}
-        <section className="py-16">
-          <AnimatedSection className="mx-auto max-w-screen-lg px-6 text-center">
-            <h2 className="mb-4 font-sans text-3xl font-semibold text-ink">
+        <section className="py-10 sm:py-14 md:py-16">
+          <AnimatedSection className="mx-auto max-w-screen-lg px-4 text-center sm:px-6">
+            <h2 className="mb-4 font-sans text-2xl font-semibold text-ink sm:text-3xl">
               {cta.title}
             </h2>
             <p className="mb-8 font-sans text-base leading-relaxed text-ink/70">
               {cta.description}
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href={localizeHref(lang, "/contact")} variant="primary">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")} variant="primary">
                 {cta.primaryButton}
               </Button>
-              <Button href={localizeHref(lang, "/library/white-papers")} variant="outline">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/library/white-papers")} variant="outline">
                 {cta.secondaryButton}
               </Button>
             </div>

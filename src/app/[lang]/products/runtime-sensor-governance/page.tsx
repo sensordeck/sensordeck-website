@@ -234,7 +234,7 @@ export default async function RuntimeSensorGovernancePage({
               Sensor Runtime Boundary
             </p>
 
-            <h1 className="mt-4 max-w-5xl text-[38px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
+            <h1 className="mt-4 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
               Atlas Runtime Sensor Governance™
             </h1>
 
@@ -248,12 +248,12 @@ export default async function RuntimeSensorGovernancePage({
 
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={localizeHref(lang, "/contact")}>
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
                 {productsContent.ctaText}
               </Button>
 
-              <Button href={localizeHref(lang, "/products")} variant="outline">{legacyZhCopy.runtimeSensorGovernance.text046}
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/products")} variant="outline">{legacyZhCopy.runtimeSensorGovernance.text046}
 
               </Button>
             </div>
@@ -690,14 +690,14 @@ export default async function RuntimeSensorGovernancePage({
 
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href={localizeHref(lang, "/contact")}>
+            <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
                 {productsContent.ctaText}
               </Button>
 
               <a
                 href={localizeHref(lang, "/products/runtime-investigation")}
-                className="inline-flex min-h-11 items-center justify-center border border-white/40 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink">{legacyZhCopy.runtimeSensorGovernance.text079}
+                className="inline-flex min-h-11 w-full items-center justify-center border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto">{legacyZhCopy.runtimeSensorGovernance.text079}
 
 
               </a>

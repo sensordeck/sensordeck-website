@@ -1,6 +1,7 @@
 "use client";
 
 import { Globe } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { type Locale, locales } from "@/lib/i18n";
 
@@ -36,7 +37,15 @@ const languageSwitcherCopy: Record<
   },
 };
 
-export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
+export function LanguageSwitcher({
+  compact = false,
+  currentLocale,
+}: {
+  compact?: boolean;
+  currentLocale: Locale;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const router = useRouter();
   const copy = languageSwitcherCopy[currentLocale];
@@ -48,37 +57,71 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
     const pathWithoutLocale = pathname.replace(/^\/(zh|en)/, "") || "/";
 
     // Navigate to the new locale path
+    setIsOpen(false);
     router.push(`/${newLocale}${pathWithoutLocale}`);
   };
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
-    <div className="relative group">
+    <div className="relative" ref={containerRef}>
       <button
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
         aria-label={copy.ariaLabel}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
+        className="flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-md px-2 text-sm font-medium text-foreground transition-colors hover:text-atlas-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:px-3"
+        onClick={() => setIsOpen((open) => !open)}
         type="button"
       >
-        <Globe className="h-4 w-4" />
-        <span>{copy.languageNames[currentLocale]}</span>
+        <Globe aria-hidden="true" className="size-4" />
+        <span className={compact ? "hidden sm:inline" : ""}>
+          {copy.languageNames[currentLocale]}
+        </span>
       </button>
 
-      <div className="absolute right-0 mt-1 w-32 bg-white dark:bg-gray-800 border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        {locales.map((locale) => (
-          <button
-            aria-label={copy.switchTo[locale]}
-            key={locale}
-            onClick={() => switchLocale(locale)}
-            type="button"
-            className={`block w-full text-left px-4 py-2 text-sm hover:bg-surface transition-colors first:rounded-t-lg last:rounded-b-lg ${
-              locale === currentLocale
-                ? "bg-surface font-medium"
-                : ""
-            }`}
-          >
-            {copy.languageNames[locale]}
-          </button>
-        ))}
-      </div>
+      {isOpen ? (
+        <div
+          className="absolute right-0 z-[60] mt-1 w-36 overflow-hidden rounded-lg border border-border bg-white shadow-lg"
+          role="menu"
+        >
+          {locales.map((locale) => (
+            <button
+              aria-label={copy.switchTo[locale]}
+              key={locale}
+              onClick={() => switchLocale(locale)}
+              role="menuitem"
+              type="button"
+              className={`flex min-h-11 w-full items-center px-4 text-left text-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-atlas-blue ${
+                locale === currentLocale
+                  ? "bg-surface font-medium"
+                  : ""
+              }`}
+            >
+              {copy.languageNames[locale]}
+            </button>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

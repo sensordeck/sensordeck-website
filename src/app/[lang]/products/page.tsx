@@ -35,7 +35,7 @@ export default async function ProductsPage({
       <main className="flex-1">
         {/* Hero */}
         <Section className="bg-white">
-          <div className="mx-auto max-w-5xl px-4 py-6 text-center sm:py-10 lg:py-14">
+          <div className="mx-auto max-w-5xl py-4 text-center sm:px-4 sm:py-8 lg:py-12">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue sm:text-xs">
               {productsContent.eyebrow}
             </p>
@@ -113,7 +113,7 @@ export default async function ProductsPage({
               {products.map((product) => (
                 <article
                   key={product.name}
-                  className="flex h-full flex-col border border-border bg-white p-6 md:p-8"
+                  className="flex h-full min-w-0 flex-col border border-border bg-white p-5 sm:p-6 md:p-8"
                 >
                   <span className="w-fit border border-border bg-surface px-3 py-1 font-mono text-[11px] font-semibold text-muted">
                     {product.audience}
@@ -141,7 +141,7 @@ export default async function ProductsPage({
 
                   <a
                     href={localizeHref(lang, product.href)}
-                    className="mt-8 inline-flex w-fit items-center gap-2 border-t border-border pt-5 text-sm font-semibold text-atlas-blue transition-colors hover:text-atlas-blue-dark"
+                    className="mt-8 inline-flex min-h-11 w-fit items-center gap-2 border-t border-border pt-4 text-sm font-semibold text-atlas-blue transition-colors hover:text-atlas-blue-dark"
                   >
                     {productsContent.ui.viewProduct}
                     <ArrowIcon />
@@ -222,8 +222,9 @@ export default async function ProductsPage({
               {productsContent.finalValue.description}
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:justify-center">
               <Button
+                className="w-full sm:w-auto"
                 href={localizeHref(lang, "/products/runtime-sensor-governance")}
                 variant="secondary"
               >
@@ -231,13 +232,14 @@ export default async function ProductsPage({
               </Button>
 
               <Button
+                className="w-full sm:w-auto"
                 href={localizeHref(lang, "/products/runtime-investigation")}
                 variant="secondary"
               >
                 {productsContent.ui.runtimeInvestigation}
               </Button>
 
-              <Button href={localizeHref(lang, "/contact")} variant="primary">
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")} variant="primary">
                 {productsContent.ctaText}
               </Button>
             </div>

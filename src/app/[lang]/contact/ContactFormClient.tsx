@@ -8,7 +8,7 @@ import Section from "@/components/website/Section";
 import type { ContactContent } from "@/content/en/contact";
 
 const inputClass =
-  "mt-2 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-sm text-ink outline-none placeholder:text-muted/70 " +
+  "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-base text-ink outline-none placeholder:text-muted/70 sm:text-sm " +
   "transition-[border-color,box-shadow,background-color] duration-[250ms,100ms,250ms] ease-in-out " +
   "hover:border-border/80 focus-visible:border-atlas-blue focus-visible:ring-[3px] focus-visible:ring-atlas-blue/20";
 
@@ -86,17 +86,17 @@ export default function ContactFormClient({
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
               {content.hero.eyebrow}
             </p>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl heading-title">
+            <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-6xl heading-title">
               {content.hero.title}
             </h1>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-muted md:text-2xl heading-description">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted sm:mt-7 sm:text-xl sm:leading-9 md:text-2xl heading-description">
               {content.hero.description}
             </p>
           </div>
         </Section>
 
         <Section id="contact-form" className="bg-white">
-          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div className="max-w-md">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
                 {content.formIntro.eyebrow}
@@ -116,7 +116,7 @@ export default function ContactFormClient({
             </div>
 
             <form
-              className="grid gap-5 stagger-item"
+              className="grid min-w-0 gap-5 stagger-item"
               style={{ animationDelay: "320ms" }}
               onSubmit={handleSubmit}
             >
@@ -197,7 +197,7 @@ export default function ContactFormClient({
               </div>
 
               <button
-                className="button-press button-hover mt-2 inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+                className="button-press button-hover mt-2 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:w-fit"
                 type="submit"
               >
                 {content.submit}
@@ -212,7 +212,7 @@ export default function ContactFormClient({
             <h2 className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">
               {content.salesTitle}
             </h2>
-            <div className="mt-8 border-t border-border pt-8 text-sm leading-7 text-muted">
+            <div className="mt-7 border-t border-border pt-7 text-sm leading-7 text-muted sm:mt-8 sm:pt-8">
               <p>{content.salesNote}</p>
             </div>
           </div>
@@ -223,16 +223,16 @@ export default function ContactFormClient({
             <h2 className="text-center text-3xl font-semibold tracking-tight text-ink md:text-4xl">
               {content.locations.title}
             </h2>
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-2 md:gap-8">
               {content.locations.offices.map((office) => (
                 <div
                   key={office.city}
-                  className="rounded-lg border border-border bg-white p-8"
+                  className="min-w-0 rounded-lg border border-border bg-white p-5 sm:p-8"
                 >
                   <div className="mb-2 text-sm font-medium uppercase tracking-wider text-muted">
                     {office.city}
                   </div>
-                  <h3 className="mb-4 text-2xl font-semibold text-ink">
+                  <h3 className="mb-4 text-xl font-semibold text-ink sm:text-2xl">
                     {office.name}
                   </h3>
                   <div className="space-y-3 text-sm text-muted">
@@ -251,7 +251,7 @@ export default function ContactFormClient({
                         />
                       </svg>
                       <a
-                        className="hover:text-atlas-blue"
+                        className="-my-2 inline-flex min-h-11 min-w-0 items-center break-all hover:text-atlas-blue"
                         href={`mailto:${office.email}`}
                       >
                         {office.email}
