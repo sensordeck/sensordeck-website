@@ -41,12 +41,14 @@ export default async function CompanyPage({
 >
   {/* Desktop background */}
   <div
-    className="absolute inset-y-0 right-0 hidden w-[58%] bg-contain bg-right bg-no-repeat lg:block"
-    style={{
-      backgroundImage: "url('/images/about-us-desktop.png')",
-    }}
-    aria-hidden="true"
-  />
+  className="absolute inset-y-0 hidden w-[62%] bg-contain bg-no-repeat lg:block"
+  style={{
+    right: "4%",
+    backgroundImage: "url('/images/about-us-desktop.png')",
+    backgroundPosition: "center right",
+  }}
+  aria-hidden="true"
+/>
 
   {/* Desktop soft transition between text and image */}
   <div
@@ -55,9 +57,9 @@ export default async function CompanyPage({
   />
 
   <AnimatedSection>
-    <div className="relative z-10 grid min-h-[380px] items-center lg:grid-cols-[0.9fr_1.1fr]">
+    <div className="relative z-10 grid min-h-[330px] items-center lg:grid-cols-[0.9fr_1.1fr]">
       {/* Left content */}
-      <div className="max-w-[660px] py-10 lg:py-12">
+     <div className="max-w-[660px] py-8 lg:py-9">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
