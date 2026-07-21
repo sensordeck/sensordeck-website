@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Eyebrow from "@/components/website/Eyebrow";
 import Section from "@/components/website/Section";
-import type { DemoContent } from "@/content/zh/demo";
+import type { DemoContent } from "@/lib/content-types";
 
 type TimeRange = "30" | "90" | "180";
 type RoiMode = "conservative" | "expected" | "actual";

@@ -2,6 +2,7 @@ import type {
   AuxiliaryPagesContent,
   CompanyContent,
   ContactContent,
+  DemoContent,
   HomeContent,
   HomepageContent,
   LibraryContent,
@@ -9,23 +10,28 @@ import type {
   ProductContent,
   TechnologyContent,
 } from "./content-types";
-import type { DemoContent } from "@/content/zh/demo";
 import type { Locale } from "./i18n";
 
-interface ContentLoaders {
-  home: () => Promise<HomeContent>;
-  homepage: () => Promise<HomepageContent>;
-  technology: () => Promise<TechnologyContent>;
-  platform: () => Promise<PlatformContent>;
-  library: () => Promise<LibraryContent>;
-  products: () => Promise<ProductContent>;
-  company: () => Promise<CompanyContent>;
-  contact: () => Promise<ContactContent>;
-  auxiliaryPages: () => Promise<AuxiliaryPagesContent>;
-  demo: () => Promise<DemoContent>;
+interface ContentByPage {
+  home: HomeContent;
+  homepage: HomepageContent;
+  technology: TechnologyContent;
+  platform: PlatformContent;
+  library: LibraryContent;
+  products: ProductContent;
+  company: CompanyContent;
+  contact: ContactContent;
+  auxiliaryPages: AuxiliaryPagesContent;
+  demo: DemoContent;
 }
 
-const contentLoaders = {
+export type ContentPage = keyof ContentByPage;
+
+type ContentLoaders = {
+  [Page in ContentPage]: () => Promise<ContentByPage[Page]>;
+};
+
+const contentLoaders: Record<Locale, ContentLoaders> = {
   zh: {
     home: async () => (await import("@/content/zh/home")).default,
     homepage: async () =>
@@ -58,50 +64,62 @@ const contentLoaders = {
       (await import("@/content/en/auxiliary-pages")).auxiliaryPagesContent,
     demo: async () => (await import("@/content/en/demo")).demoContent,
   },
-} satisfies Record<Locale, ContentLoaders>;
+};
+
+export function loadContent<Page extends ContentPage>(
+  locale: Locale,
+  page: Page,
+): Promise<ContentByPage[Page]> {
+  const loader = contentLoaders[locale]?.[page];
+  if (!loader) {
+    throw new Error(`Content not found: ${locale}/${page}`);
+  }
+
+  return loader();
+}
 
 export function getHomeContent(locale: Locale): Promise<HomeContent> {
-  return contentLoaders[locale].home();
+  return loadContent(locale, "home");
 }
 
 export function getHomepageContent(
   locale: Locale,
 ): Promise<HomepageContent> {
-  return contentLoaders[locale].homepage();
+  return loadContent(locale, "homepage");
 }
 
 export function getTechnologyContent(
   locale: Locale,
 ): Promise<TechnologyContent> {
-  return contentLoaders[locale].technology();
+  return loadContent(locale, "technology");
 }
 
 export function getPlatformContent(locale: Locale): Promise<PlatformContent> {
-  return contentLoaders[locale].platform();
+  return loadContent(locale, "platform");
 }
 
 export function getLibraryContent(locale: Locale): Promise<LibraryContent> {
-  return contentLoaders[locale].library();
+  return loadContent(locale, "library");
 }
 
 export function getProductsContent(locale: Locale): Promise<ProductContent> {
-  return contentLoaders[locale].products();
+  return loadContent(locale, "products");
 }
 
 export function getCompanyContent(locale: Locale): Promise<CompanyContent> {
-  return contentLoaders[locale].company();
+  return loadContent(locale, "company");
 }
 
 export function getContactContent(locale: Locale): Promise<ContactContent> {
-  return contentLoaders[locale].contact();
+  return loadContent(locale, "contact");
 }
 
 export function getAuxiliaryPagesContent(
   locale: Locale,
 ): Promise<AuxiliaryPagesContent> {
-  return contentLoaders[locale].auxiliaryPages();
+  return loadContent(locale, "auxiliaryPages");
 }
 
 export function getDemoContent(locale: Locale): Promise<DemoContent> {
-  return contentLoaders[locale].demo();
+  return loadContent(locale, "demo");
 }

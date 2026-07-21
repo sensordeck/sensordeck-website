@@ -6,7 +6,7 @@ import Section from "@/components/website/Section";
 import refData from "@/data/demo/ref.json";
 import epData from "@/data/demo/evidence-pack.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
-import type { DemoContent } from "@/content/zh/demo";
+import type { DemoContent } from "@/lib/content-types";
 
 export default function SensorFaeDemoClient({
   content,

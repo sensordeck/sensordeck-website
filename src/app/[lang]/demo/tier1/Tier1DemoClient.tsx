@@ -6,7 +6,7 @@ import Section from "@/components/website/Section";
 import agentData from "@/data/demo/agent.json";
 import refData from "@/data/demo/ref.json";
 import robotData from "@/data/demo/robot.json";
-import type { DemoContent } from "@/content/zh/demo";
+import type { DemoContent } from "@/lib/content-types";
 
 const STEPS = ["incident", "robot", "evidence", "review"] as const;
 type Step = (typeof STEPS)[number];

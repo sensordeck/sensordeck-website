@@ -7,7 +7,7 @@ import refData from "@/data/demo/ref.json";
 import candidatesData from "@/data/demo/candidates.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
 import epData from "@/data/demo/evidence-pack.json";
-import type { DemoContent } from "@/content/zh/demo";
+import type { DemoContent } from "@/lib/content-types";
 
 type Window = "pre_guard" | "baseline" | "deviation" | "recovery" | "post_guard";
 

@@ -1,4 +1,4 @@
-import type { DemoContent } from "@/content/zh/demo";
+import type { DemoContent } from "@/lib/content-types";
 
 export const demoContent = {
   index: {
@@ -451,4 +451,4 @@ export const demoContent = {
     demoDescription:
       "This is a static demo interface. The production Tier 1 Support Portal submits to the Atlas backend and triggers the Tier 2 workflow.",
   },
-} as const satisfies DemoContent;
+} satisfies DemoContent;

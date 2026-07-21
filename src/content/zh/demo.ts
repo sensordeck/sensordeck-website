@@ -1,13 +1,4 @@
-type WidenContent<T> =
-  T extends string
-    ? string
-    : T extends number
-      ? number
-      : T extends readonly (infer Item)[]
-        ? readonly WidenContent<Item>[]
-        : T extends object
-          ? { readonly [Key in keyof T]: WidenContent<T[Key]> }
-          : T;
+import type { DemoContent } from "@/lib/content-types";
 
 export const demoContent = {
   index: {
@@ -432,6 +423,4 @@ export const demoContent = {
     demoDescription:
       "这是一个静态演示界面。实际一级支持门户将提交到 Atlas 后端并触发二级工作流。",
   },
-} as const;
-
-export type DemoContent = WidenContent<typeof demoContent>;
+} satisfies DemoContent;

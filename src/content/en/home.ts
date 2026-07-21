@@ -10,7 +10,7 @@ heroSubtitleMobile:
   "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero.\n\nAtlas turns runtime evidence\ninto reusable organizational knowledge.",
 
 heroDescription: "",
-  heroPrinciple: [] as string[],
+  heroPrinciple: [],
   heroValueProposition: "Every investigation starts from evidence. Every future investigation starts from history.",
   sectionTitles: {
     categoryDefinition: "A Missing Layer for Robotics",
