@@ -554,7 +554,7 @@ export default function RuntimeInvestigationPage() {
           </div>
         </Section>
 
-        {/* Final CTA */}
+               {/* Final CTA */}
         <Section className="bg-[#050b17]">
           <div className="mx-auto max-w-5xl text-center">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
@@ -573,17 +573,16 @@ export default function RuntimeInvestigationPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-  <Button href="/#request-demo">
-    {productsContent.ctaText}
-  </Button>
+              <Button href="/#request-demo">
+                {productsContent.ctaText}
+              </Button>
 
-  <a
-    href="/products/runtime-sensor-governance"
-    className="inline-flex min-h-11 items-center justify-center border border-white/40 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
-  >
-    查看 Runtime Sensor Governance
-  </a>
-</div>
+              <a
+                href="/products/runtime-sensor-governance"
+                className="inline-flex min-h-11 items-center justify-center border border-white/40 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
+              >
+                查看 Runtime Sensor Governance
+              </a>
             </div>
           </div>
         </Section>
