@@ -1,4 +1,8 @@
 export const platformContent = {
+  ui: {
+    capabilitiesTitle: "平台能力",
+    coreModulesLabel: "核心模块",
+  },
   hero: {
     title: "Atlas 平台",
     subtitle: "面向机器人的运行时智能基础设施",

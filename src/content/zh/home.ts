@@ -1,7 +1,7 @@
 import type { HomeContent } from "@/content/en/home";
 
 const homeContent: HomeContent = {
-  heroTitle: "机器人运行时治理基础设施",
+  heroTitle: "机器人运行时\n智能治理基础设施",
   heroSubtitleDesktop:
   "运行时数据分散在日志、设备和人员之间。每次调查都从零开始。\nAtlas 天枢将运行时证据沉淀为可复用的组织知识。",
 
@@ -212,6 +212,49 @@ const homeContent: HomeContent = {
     readWhitePaper: "阅读白皮书",
     documentation: "打开文档",
     overview: "观看 2 分钟概览",
+  },
+  ui: {
+    sectionEyebrows: {
+      categoryDefinition: "01 / 新品类定义",
+      theProblem: "02 / 核心问题",
+      whyRuntimeGovernance: "03 / 缺口",
+      productLines: "04 / 产品",
+      platformCapabilities: "05 / 平台",
+      investigationLifecycle: "06 / 调查生命周期",
+      roboticsIndustry: "07 / 机器人行业",
+      evidenceOwnership: "08 / 证据边界",
+      organizationalMemory: "09 / 组织记忆",
+      technicalResources: "10 / 资料库",
+      finalCta: "11 / 开始对话",
+    },
+    learnMore: "了解更多",
+    categoryImageAlt: "新品类定义 - Atlas 机器人运行时智能基础设施",
+    problemImageAlt: "核心问题 - 每一次事故排查都从零开始",
+    productLabel: "产品",
+    coreModules: "核心模块",
+    productLifecycle: "产品生命周期",
+    fiveWindowModel: "五窗口证据模型",
+    fiveWindowDescription:
+      "证据围绕运行时偏差划定边界，而不是被视为无限归档。",
+    runtimeSurfaces: "运行时表面",
+    sensor: "传感器",
+    policy: "策略",
+    egpDescription:
+      "Sensor Engagement Pack 是 OEM 向传感器制造商提供的有界协作界面，与内部 Evidence Pack™ 并不相同。",
+    historicalRgaDescription:
+      "Historical RGA™ 是人工调查团队的召回、复用和参考系统。",
+    historicalRgaBoundary:
+      "它不会自动学习、确认根本原因或分配责任。检索到的候选项会附带检索原因和仍然存在的环境差异。",
+    recallCandidate: "Historical RGA™ / 召回候选",
+    retrievalReason: "检索原因",
+    retrievalReasonValue: "运行时表面重叠。",
+    reviewBoundary: "审查边界",
+    reviewBoundaryValue: "环境差异保持明确。",
+    documentation: "规范文档",
+    finalCtaDescription:
+      "如果您正在探索运行时治理、传感器证据或调查工作流，欢迎与我们聊聊您的场景。",
+    illustrativeDemoData: "仅限示意性演示数据",
+    contactUs: "联系我们",
   },
 } as const;
 

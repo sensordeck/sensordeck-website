@@ -1,66 +1,78 @@
-export interface ProductContent {
-  heroTitle: string;
-  heroSubtitle: string;
-  productA: {
-    name: string;
-    audience: string;
-    description: string;
-    coreModules: string[];
-    lifecycle: string[];
-  };
-  productB: {
-    name: string;
-    audience: string;
-    description: string;
-    coreModules: string[];
-    lifecycle: string[];
-  };
-  sharedInfrastructure: {
-    title: string;
-    description: string;
-  };
-  constitutionalBoundary: string[];
-  ctaText: string;
-}
+import type { ProductContent } from "@/content/zh/products";
 
 const productsContent: ProductContent = {
-  heroTitle: "Two product lines. One shared infrastructure.",
-  heroSubtitle: "Sensor manufacturers and robot OEMs work on different sides of the runtime boundary. Atlas provides focused product lines for each, while maintaining evidence and collaboration consistency.",
-
+  eyebrow: "Atlas Products",
+  heroTitle: `Two product lines,
+one shared runtime governance infrastructure`,
+  heroSubtitle:
+    "Atlas serves robot OEMs and sensor manufacturers with focused products, then connects both sides through shared evidence, Engagement Packs, REF tickets, and investigation assets in one traceable, closable, reusable runtime investigation chain.",
+  heroStatement:
+    "The current investigation starts with evidence. The next investigation starts with history.",
+  architecture: {
+    eyebrow: "Atlas Product Architecture",
+    title: "A dual flywheel for robot OEMs and sensor manufacturers",
+    description:
+      "Runtime Investigation™ supports robot OEMs on one side. Runtime Sensor Governance™ supports sensor manufacturers on the other. Engagement Pack™ (EGP) provides bounded cross-organization investigation collaboration between them.",
+    imageSrc: "/images/product1e.png",
+    imageAlt:
+      "Atlas Runtime Investigation and Runtime Sensor Governance dual-flywheel product architecture",
+  },
   productA: {
     name: "Atlas Runtime Sensor Governance™",
     audience: "Sensor Manufacturers",
-    description: "Understand how your sensors behave across real-world robot deployments, preserve runtime knowledge, and collaborate with OEM investigation teams using shared evidence.",
+    description:
+      "Continuously understand how products behave in real robot deployments, receive sensor collaboration packages, organize Sensor FAE investigations, and preserve completed IR, LL, and Historical RGA as reusable sensor runtime knowledge.",
+    href: "/products/runtime-sensor-governance",
+    valuePoints: [
+      "Establish Runtime Profiles across OEMs and sensor SKUs",
+      "Run bounded Sensor FAE investigations from OEM EGPs",
+      "Recall Historical Sensor RGA instead of repeating prior work",
+      "Return updated EGP, IR, LL, and Sensor EGP responses",
+      "Preserve completed cases in Sensor Assist Vault™",
+    ],
     coreModules: [
-      "Runtime Profiles™",
-      "Runtime Observation",
-      "Historical Sensor RGA™",
-      "Sensor Investigation Workspace™",
-      "OEM Collaboration through EGP",
+      "Runtime Profile™",
+      "Atlas Agent Observation",
+      "Sensor and OEM Engagement Pack",
+      "Sensor REF Ticket",
+      "Evidence Pack™",
+      "Historical Sensor RGA Recall™",
+      "Investigation Result (IR)",
+      "Lesson Learned (LL)",
       "Sensor Assist Vault™",
-      "Runtime Knowledge Base™",
+      "De-identified Runtime Knowledge Base™",
     ],
     lifecycle: [
-      "Runtime Profile",
+      "Governed Runtime Configuration",
       "Runtime Observation",
-      "Evidence Pack / EGP",
-      "Historical Sensor RGA Recall",
-      "Sensor Investigation",
-      "OEM Collaboration",
-      "Sensor Assist Vault",
-      "Knowledge Reuse",
+      "Receive OEM Engagement Pack",
+      "Create or Link Sensor REF Ticket",
+      "Recall Historical Sensor RGA",
+      "Sensor FAE Investigation",
+      "Author IR and LL",
+      "Return Updated EGP",
+      "Preserve Knowledge",
+      "Future Reuse",
     ],
   },
-
   productB: {
     name: "Atlas Runtime Investigation™",
     audience: "Robot OEMs",
-    description: "Transform runtime incidents into bounded evidence, coordinated investigations, and reusable organizational knowledge.",
+    description:
+      "Transform runtime events into bounded Evidence Packs, create and manage REF tickets, recall Historical RGA, coordinate Tier 1, Tier 2, Tier 3, and Sensor FAE teams, and turn completed investigations into organizational knowledge.",
+    href: "/products/runtime-investigation",
+    valuePoints: [
+      "Continuously observe and retain Runtime Datasets with Atlas Agent",
+      "Generate investigation candidates and Evidence Packs",
+      "Recall Historical RGA and existing IR and LL assets",
+      "Create Sensor Engagement Packs and escalate to Sensor FAE",
+      "Review returned results, close OEM REF tickets, and preserve knowledge",
+    ],
     coreModules: [
       "Atlas Agent™",
-      "Runtime Dataset retention",
-      "Evidence Pack™",
+      "Runtime Dataset Retention",
       "Candidate Evidence Packs",
+      "Primary Evidence Pack",
       "Historical RGA™",
       "Investigation Workspace™",
       "Sensor Engagement Pack (EGP)",
@@ -68,32 +80,49 @@ const productsContent: ProductContent = {
       "Executive Dashboard™",
     ],
     lifecycle: [
-      "Runtime Dataset",
-      "Candidate Evidence Packs",
-      "Primary Evidence Pack",
-      "Historical RGA Recall",
-      "OEM / Sensor Investigation",
-      "IR + LL",
-      "Closure",
-      "Assist Vault",
-      "Future Reuse",
+      "Runtime Dataset Capture and Retention",
+      "Generate Candidates and Evidence Packs",
+      "Confirm Primary Evidence Pack",
+      "Create OEM REF Ticket",
+      "Recall Historical RGA",
+      "OEM Tier 1 / Tier 2 / Tier 3 Investigation",
+      "Generate EGP and Send to Sensor FAE",
+      "Receive Sensor IR, LL, and Updated EGP",
+      "Close OEM REF Ticket",
+      "Assist Vault Preservation and Future Reuse",
     ],
   },
-
-  sharedInfrastructure: {
-    title: "Shared Atlas Platform Infrastructure",
-    description: "Both product lines are built on the same platform, ensuring evidence consistency and bounded collaboration between OEMs and sensor manufacturers.",
+  collaborationBridge: {
+    eyebrow: "Shared Collaboration Bridge",
+    title: "Engagement Pack™ connects OEM and sensor factory teams",
+    description:
+      "EGP does not replace an OEM's internal Evidence Pack. It is the standard bounded carrier for starting cross-organization investigation collaboration and follows the REF ticket from Pending through Closure.",
+    steps: [
+      "OEM Runtime REF Occurs",
+      "Create OEM REF Ticket (Pending)",
+      "Generate Evidence Pack",
+      "Generate Engagement Pack (EGP)",
+      "Send to Sensor FAE",
+      "Sensor FAE Investigates and Authors IR / LL",
+      "Return Updated EGP and Sensor Response",
+      "OEM Reviews Investigation Results",
+      "Close OEM REF Ticket",
+      "Both Parties Preserve Historical RGA for Future Reuse",
+    ],
+    closingStatement:
+      "One body of runtime evidence, viewed from different organizational perspectives. One investigation chain with clear responsibility boundaries. Every completed investigation becomes history for the next REF.",
   },
-
-  constitutionalBoundary: [
-    "Atlas structures evidence.",
-    "Atlas retrieves historical candidates.",
-    "Atlas does not automatically confirm root cause.",
-    "Atlas does not assign liability.",
-    "IR and LL are human-authored.",
-  ],
-
-  ctaText: "Request Demo",
-} as const;
+  finalValue: {
+    title: "Turn bilateral investigation into a continuously growing capability",
+    description:
+      "OEMs gain faster, bounded runtime investigation. Sensor manufacturers gain realistic product feedback and reusable FAE assets. Atlas moves collaboration away from fragmented log exchanges and toward shared evidence, explicit tickets, and historical knowledge.",
+  },
+  ui: {
+    viewProduct: "View product details",
+    sensorGovernance: "Runtime Sensor Governance",
+    runtimeInvestigation: "Runtime Investigation",
+  },
+  ctaText: "Request Product Architecture Demo",
+};
 
 export default productsContent;

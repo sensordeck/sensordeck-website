@@ -3,6 +3,90 @@
  */
 
 export const libraryContent = {
+  ui: {
+    breadcrumbLabel: "面包屑导航",
+    libraryLabel: "资料库",
+    browse: "浏览",
+    resourceCards: [
+      {
+        id: "01",
+        title: "技术白皮书",
+        description:
+          "深入了解运行时智能基础设施、证据治理和调查生命周期。6 篇技术白皮书覆盖 Atlas 核心概念。",
+        href: "/library/white-papers",
+        items: "6 篇白皮书",
+      },
+      {
+        id: "02",
+        title: "技术文档",
+        description:
+          "面向开发者的完整文档站点，包含架构、CLI、集成、模式和术语。",
+        href: "/library/documentation",
+        items: "完整技术文档",
+      },
+      {
+        id: "03",
+        title: "演示与演练",
+        description:
+          "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。包含 2 分钟概览和完整调查演练。",
+        href: "/library/demo",
+        items: "4 个演示项目",
+      },
+      {
+        id: "04",
+        title: "常见问题",
+        description:
+          "关于 Atlas 平台、证据所有权和运营原则的常见问题解答。",
+        href: "/library/faq",
+        items: "10 个常见问题",
+      },
+    ],
+    quickAccessEyebrow: "快速访问",
+    quickAccessTitle: "快速访问",
+    whitePapersLabel: "白皮书",
+    documentationLabel: "文档",
+    demoLabel: "演示",
+    demoAndVideoLabel: "演示与视频",
+    faqLabel: "常见问题",
+    comingSoon: "即将推出",
+    view: "查看",
+    note: "注意",
+    demoNote:
+      "所有演示数据均为示意性内容。实际部署的 Evidence Pack 和调查资产包含客户特定的运行时上下文，不会在公开演示中展示。",
+    demoContactNote:
+      "如需访问完整的 Atlas Demo UI 或定制化演示，请联系我们安排演示会议。",
+    documentationTopics: "文档主题",
+    documentationHosting:
+      "完整的开发者和集成文档托管在独立文档站点。",
+    documentationFor: "文档适用于",
+    documentationReferenceTitle: "面向工程团队的完整参考",
+    documentationUseCases: [
+      "开发者集成指南",
+      "CLI 命令参考",
+      "Evidence Pack 模式",
+      "API 文档",
+      "部署配置",
+      "故障排查",
+      "发布说明",
+      "最佳实践",
+    ],
+    moreInfoEyebrow: "需要更多信息？",
+    moreResourcesTitle: "更多资源",
+    moreResourcesDescription:
+      "如果您的问题未在此列出，请查阅我们的技术白皮书和文档，或直接联系我们的团队。",
+    readWhitePapers: "阅读白皮书",
+    viewDocumentation: "查看文档",
+    contactUs: "联系我们",
+    whitePaperAvailability:
+      "白皮书将作为 PDF 下载或在 docs.sensordeck.tech 上托管的选定页面提供。",
+    backToLibrary: "返回资料库",
+    previousWhitePapers: "← 白皮书",
+    previousDocumentation: "← 文档",
+    previousDemo: "← 演示",
+    nextDocumentation: "文档 →",
+    nextDemo: "演示 →",
+    nextFaq: "常见问题 →",
+  },
   hero: {
     eyebrow: "SensorDeck 资料库",
     title: "技术阅读与资源",

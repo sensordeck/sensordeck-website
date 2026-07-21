@@ -368,6 +368,51 @@ heroDescription: "",
     documentation: "Open Documentation",
     overview: "Watch 2-Min Overview",
   },
+  ui: {
+    sectionEyebrows: {
+      categoryDefinition: "01 / Category Definition",
+      theProblem: "02 / Core Problem",
+      whyRuntimeGovernance: "03 / The Gap",
+      productLines: "04 / Products",
+      platformCapabilities: "05 / Platform",
+      investigationLifecycle: "06 / Investigation Lifecycle",
+      roboticsIndustry: "07 / Robotics Industry",
+      evidenceOwnership: "08 / Evidence Boundary",
+      organizationalMemory: "09 / Organizational Memory",
+      technicalResources: "10 / Library",
+      finalCta: "11 / Start a Conversation",
+    },
+    learnMore: "Learn More",
+    categoryImageAlt:
+      "Category definition - Atlas Runtime Intelligence Infrastructure",
+    problemImageAlt:
+      "Core problem - every runtime investigation starts from scratch",
+    productLabel: "Product",
+    coreModules: "Core Modules",
+    productLifecycle: "Product Lifecycle",
+    fiveWindowModel: "Five-Window Evidence Model",
+    fiveWindowDescription:
+      "Evidence is bounded around the runtime deviation, not treated as an unlimited archive.",
+    runtimeSurfaces: "Runtime Surfaces",
+    sensor: "Sensor",
+    policy: "Policy",
+    egpDescription:
+      "Sensor Engagement Pack is the bounded collaboration surface from an OEM to a sensor manufacturer. It is not the same as an internal Evidence Pack™.",
+    historicalRgaDescription:
+      "Historical RGA™ is a recall, reuse, and reference system for human investigation teams.",
+    historicalRgaBoundary:
+      "It does not learn automatically, confirm root cause, or assign responsibility. Retrieved candidates include why they were retrieved and any remaining environmental differences.",
+    recallCandidate: "Historical RGA™ / Recall Candidate",
+    retrievalReason: "Retrieval Reason",
+    retrievalReasonValue: "Runtime surfaces overlap.",
+    reviewBoundary: "Review Boundary",
+    reviewBoundaryValue: "Environmental differences remain explicit.",
+    documentation: "Canonical Documentation",
+    finalCtaDescription:
+      "If you are exploring runtime governance, sensor evidence, or investigation workflows, talk with us about your operating context.",
+    illustrativeDemoData: "Illustrative demo data only",
+    contactUs: "Contact Us",
+  },
 } as const;
 
 type Widen<T> = T extends string

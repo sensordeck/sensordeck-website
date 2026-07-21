@@ -19,6 +19,7 @@ export interface CollaborationBridge {
 }
 
 export interface ProductContent {
+  eyebrow: string;
   heroTitle: string;
   heroSubtitle: string;
   heroStatement: string;
@@ -41,10 +42,16 @@ export interface ProductContent {
     description: string;
   };
 
+  ui: {
+    viewProduct: string;
+    sensorGovernance: string;
+    runtimeInvestigation: string;
+  };
   ctaText: string;
 }
 
 const productsContent: ProductContent = {
+  eyebrow: "Atlas 产品",
  heroTitle: `两条产品线,
 一个共享运行时治理基础设施`,
 
@@ -174,6 +181,11 @@ const productsContent: ProductContent = {
       "OEM 获得更快、更有边界的运行时调查能力；传感器制造商获得更真实的产品运行反馈和可复用的 FAE 调查资产。Atlas 让双方不再围绕零散日志反复沟通，而是围绕统一证据、明确工单和历史知识持续协作。",
   },
 
+  ui: {
+    viewProduct: "查看产品详情",
+    sensorGovernance: "Runtime Sensor Governance",
+    runtimeInvestigation: "Runtime Investigation",
+  },
   ctaText: "申请产品架构演示",
 };
 
