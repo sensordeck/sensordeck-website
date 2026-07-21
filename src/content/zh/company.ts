@@ -29,7 +29,7 @@ export const companyContent = {
     eyebrow: "核心原则",
     title: "先明确边界，再扩大智能",
     description:
-      "我们对产品能力的判断，首先来自证据能否被拥有、理解和复核。以下原则贯穿 Atlas 的产品设计与工程实现。",
+      "我们对产品能力的判断，首先来自证据能否被拥有、理解和复核。以下原则贯穿Atlas的设计与工程实现。",
   },
   principles: [
     {
@@ -58,7 +58,7 @@ export const companyContent = {
     eyebrow: "工程边界",
     title: "为可协作的判断保留空间",
     description:
-      "好的基础设施不会模糊责任。它应该让团队知道系统收集了什么、结论依据是什么，以及下一步需要谁来判断。",
+      "基础设施不应模糊责任。它应该让团队知道系统收集了什么、结论依据是什么，以及下一步需要谁来判断。",
   },
   boundaries: [
     {
