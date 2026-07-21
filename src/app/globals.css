@@ -13,6 +13,7 @@
   --border: #dbe3eb;
   --surface: #f6f8fb;
   --surface-blue: #eef4ff;
+  --surface-orange: #fff4e6;
 
   /* ========== 动效时长令牌 ========== */
   --duration-instant: 0.1s;     /* 100ms - 即时反馈 */
@@ -45,6 +46,7 @@
   --color-border: var(--border);
   --color-surface: var(--surface);
   --color-surface-blue: var(--surface-blue);
+  --color-surface-orange: var(--surface-orange);
   --font-sans: "Inter", "Noto Sans SC", Arial, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
 }

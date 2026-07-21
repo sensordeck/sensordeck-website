@@ -265,7 +265,7 @@ export default function HomePage() {
         </Section>
 
         {/* Two Atlas product lines */}
-        <Section id="products" className="bg-surface">
+        <Section id="products" className="bg-white">
           <SectionHeading
             description={homeContent.sectionDescriptions.productLines}
             eyebrow="04 / 产品"
@@ -274,13 +274,17 @@ export default function HomePage() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {homeContent.productLines.map((product, index) => (
-              <Card
-                className="flex flex-col overflow-hidden p-0"
+              <div
+                className={`rounded-lg border p-6 card-enter flex flex-col overflow-hidden p-0 ${
+                  index === 0
+                    ? "bg-surface-blue border-surface-blue"
+                    : "bg-surface-orange border-surface-orange"
+                }`}
                 key={product.name}
               >
                 <div
                   className={`border-b border-border p-6 md:p-8 ${
-                    index === 0 ? "bg-white" : "bg-surface-blue"
+                    index === 0 ? "bg-surface-blue" : "bg-surface-orange"
                   }`}
                 >
                   <div className="flex flex-wrap items-center justify-between gap-3">
@@ -302,7 +306,9 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="grid flex-1 gap-8 p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
+                <div className={`grid flex-1 gap-8 p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8 ${
+                  index === 0 ? "bg-surface-blue" : "bg-surface-orange"
+                }`}>
                   <div>
                     <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
                       核心模块
@@ -339,7 +345,15 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </Card>
+
+                <div className={`border-t border-border px-6 py-5 md:px-8 ${
+                  index === 0 ? "bg-surface-blue" : "bg-surface-orange"
+                }`}>
+                  <Button href={product.link} variant="secondary" className="w-full sm:w-auto">
+                    了解更多 →
+                  </Button>
+                </div>
+              </div>
             ))}
           </div>
         </Section>

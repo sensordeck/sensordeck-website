@@ -146,6 +146,7 @@ const homeContent: HomeContent = {
       description: "了解您的传感器在真实机器人部署中的行为表现，保留运行时知识，并使用共享证据与 OEM 调查团队协作。",
       modules: ["运行时档案™", "Agent运行时观察", "传感器<->OEM协同调查包", "通过 EGP 与 OEM 协作", "传感器排查REF工单", "统一证据包™", "传感器历史排查案例召回™", "排查结果与经验分享™", "知识库沉淀™", "去标识化运行时避坑经验库™"],
       lifecycle: ["运行时受控配置", "运行时观察", "传感器<->OEM协同调查 (EGP)", "传感器排查REF工单", "证据包(EP)", "传感器调查流程", "知识库沉淀™", "OEM 协作交接", "知识复用"],
+      link: "/products/runtime-sensor-governance",
     },
     {
       name: "Atlas Runtime Investigation™",
@@ -153,6 +154,7 @@ const homeContent: HomeContent = {
       description: "将运行时事件转化为有界证据、协调调查和可复用的组织知识。",
       modules: ["Atlas Agent™", "运行时数据集保留", "Evidence Pack™", "候选证据包", "Historical RGA™", "排查结果与经验分享", "知识库沉淀", "去标识化运行时避坑经验库 ™"],
       lifecycle: ["运行时受控配置", "候选证据包", "主要证据包", "历史 RGA 召回", "OEM / 传感器调查", "IR + LL", "结案", "Assist Vault", "未来复用"],
+      link: "/products/runtime-investigation",
     },
   ],
   platformCapabilities: [
