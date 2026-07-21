@@ -35,35 +35,55 @@ export default async function CompanyPage({
       <Header />
 
       <main>
-        <Section id="company-hero" className="bg-white pt-24 lg:pt-32">
-          <AnimatedSection>
-            <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
-            <div className="max-w-4xl">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
-                {hero.eyebrow}
-              </p>
-              <h1 className="mt-5 max-w-3xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl heading-title">
-                {hero.title}
-              </h1>
-              <p className="mt-7 max-w-3xl text-xl leading-9 text-muted md:text-2xl heading-description">
-                {hero.description}
-              </p>
-            </div>
+       <Section
+  id="company-hero"
+  className="relative overflow-hidden bg-white pt-24 lg:pt-32"
+>
+  {/* Desktop background image */}
+  <div
+    className="absolute inset-0 bg-cover bg-no-repeat"
+    style={{
+      backgroundImage: "url('/images/about-us-desktop.png')",
+      backgroundPosition: "58% center",
+    }}
+    aria-hidden="true"
+  />
 
-            <div
-              className="border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted stagger-item lg:mb-2"
-              style={{ animationDelay: "240ms" }}
-            >
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
-                {hero.statementLabel}
-              </p>
-              <p className="mt-3">
-                {hero.statement}
-              </p>
-            </div>
-          </div>
-          </AnimatedSection>
-        </Section>
+  {/* 左侧文字保护层，右侧半球和管道保持清晰 */}
+  <div
+    className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/10"
+    aria-hidden="true"
+  />
+
+  <AnimatedSection>
+    <div className="relative z-10 grid min-h-[560px] gap-12 lg:min-h-[620px] lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
+      <div className="max-w-4xl">
+        <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+          {hero.eyebrow}
+        </p>
+
+        <h1 className="heading-title mt-5 max-w-3xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+          {hero.title}
+        </h1>
+
+        <p className="heading-description mt-7 max-w-3xl text-xl leading-9 text-muted md:text-2xl">
+          {hero.description}
+        </p>
+      </div>
+
+      <div
+        className="stagger-item border-l-2 border-sensor-tan bg-white/55 py-3 pl-5 pr-5 text-sm leading-7 text-muted backdrop-blur-sm lg:mb-2"
+        style={{ animationDelay: "240ms" }}
+      >
+        <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
+          {hero.statementLabel}
+        </p>
+
+        <p className="mt-3">{hero.statement}</p>
+      </div>
+    </div>
+  </AnimatedSection>
+</Section>
 
         <Section id="mission" className="bg-surface section-enter">
           <AnimatedSection>
