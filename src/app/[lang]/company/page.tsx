@@ -37,33 +37,17 @@ export default async function CompanyPage({
       <main>
 <section
   id="company-hero"
-  className="relative overflow-hidden border-b border-border bg-white"
+  className="overflow-hidden border-b border-border bg-white"
 >
-  {/* Desktop background：只在右侧显示，完整保留球体与管道 */}
-  <div
-    className="absolute inset-y-0 right-0 hidden w-[58%] bg-contain bg-right-center bg-no-repeat lg:block"
-    style={{
-      backgroundImage: "url('/images/about-us-desktop.png')",
-      backgroundPosition: "right center",
-    }}
-    aria-hidden="true"
-  />
-
-  {/* Desktop：文字与图片之间的柔和过渡 */}
-  <div
-    className="absolute inset-y-0 left-[38%] hidden w-[24%] bg-gradient-to-r from-white via-white/90 to-transparent lg:block"
-    aria-hidden="true"
-  />
-
   <AnimatedSection>
-    <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:min-h-[430px] lg:px-8">
-      {/* Text content */}
-      <div className="max-w-[640px] pb-8 pt-12 sm:pt-14 lg:flex lg:min-h-[430px] lg:flex-col lg:justify-center lg:py-10">
+    <div className="mx-auto grid w-full max-w-7xl items-center gap-8 px-6 py-12 lg:min-h-[430px] lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-8">
+      {/* Text */}
+      <div className="max-w-[620px]">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
 
-        <h1 className="heading-title mt-4 max-w-3xl text-[44px] font-semibold leading-[1.02] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="heading-title mt-4 text-[44px] font-semibold leading-[1.02] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl">
           {hero.title}
         </h1>
 
@@ -83,57 +67,26 @@ export default async function CompanyPage({
         </div>
       </div>
 
-      {/* Mobile illustration：放在文字下面，不再压住文字 */}
-      <div
-        className="mx-[-24px] h-[380px] bg-contain bg-center-top bg-no-repeat sm:h-[440px] lg:hidden"
-        style={{
-          backgroundImage: "url('/images/about-us-mobile.png')",
-          backgroundPosition: "center top",
-        }}
-        aria-hidden="true"
-      />
+      {/* Desktop illustration */}
+      <div className="hidden items-center justify-center lg:flex">
+        <img
+          src="/images/about-us-desktop-object.png"
+          alt=""
+          className="h-auto w-full max-w-[660px] object-contain"
+        />
+      </div>
+
+      {/* Mobile illustration */}
+      <div className="flex justify-center lg:hidden">
+        <img
+          src="/images/about-us-mobile-object.png"
+          alt=""
+          className="h-auto w-full max-w-[520px] object-contain"
+        />
+      </div>
     </div>
   </AnimatedSection>
 </section>
-
-        <Section id="mission" className="bg-surface section-enter">
-          <AnimatedSection>
-            <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
-            <div>
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
-                {mission.eyebrow}
-              </p>
-              <h2 className="mt-4 max-w-md text-3xl font-semibold tracking-tight text-ink md:text-4xl heading-title">
-                {mission.title}
-              </h2>
-            </div>
-
-            <div className="max-w-3xl">
-              <p className="text-lg leading-8 text-ink heading-description">
-                {mission.lead}
-              </p>
-              <p className="mt-6 text-base leading-8 text-muted stagger-item">
-                {mission.description}
-              </p>
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {mission.points.map((item, index) => (
-                  <div
-                    className="border-t-2 border-atlas-blue pt-4 stagger-item"
-                    key={item}
-                    style={{ animationDelay: `${180 + index * 60}ms` }}
-                  >
-                    <span className="font-mono text-[10px] text-muted">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p className="mt-2 text-sm font-semibold text-ink">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          </AnimatedSection>
-        </Section>
-
         <Section id="category" className="bg-white section-enter">
           <AnimatedSection>
             <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-20">
