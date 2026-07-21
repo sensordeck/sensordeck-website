@@ -36,8 +36,10 @@ const initialFormData: ContactFormData = {
 
 export default function ContactFormClient({
   content,
+  locale,
 }: {
   content: ContactContent;
+  locale: string;
 }) {
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
   const { fields } = content;
@@ -194,6 +196,20 @@ export default function ContactFormClient({
                   value={formData.message}
                   onChange={handleChange}
                 />
+              </div>
+
+              <div className="mt-4 space-y-2 text-xs text-muted">
+                <p>
+                  {content.privacyNotice}{" "}
+                  <a
+                    href={`/${locale}/privacy`}
+                    className="underline hover:text-atlas-blue"
+                  >
+                    {content.privacyPolicyLink}
+                  </a>{" "}
+                  {content.privacyNoticeSuffix}
+                </p>
+                <p>{content.dataProtectionNote}</p>
               </div>
 
               <button

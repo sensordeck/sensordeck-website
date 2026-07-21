@@ -15,5 +15,5 @@ export default async function ContactPage({
   }
 
   const content = await getContactContent(lang);
-  return <ContactFormClient content={content} />;
+  return <ContactFormClient content={content} locale={lang} />;
 }

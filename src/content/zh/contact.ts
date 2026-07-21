@@ -60,6 +60,10 @@ export const contactContent = {
   },
   submit: "打开邮件草稿",
   emailSubject: "SensorDeck 联系申请",
+  privacyNotice: "提交表单即表示您同意我们按照",
+  privacyPolicyLink: "隐私政策",
+  privacyNoticeSuffix: "处理您的个人信息。",
+  dataProtectionNote: "请勿在消息中包含密码、密钥或其他敏感信息。",
   salesTitle: "我们的销售团队",
   salesNote: "销售联系方式和团队信息将由 SensorDeck 更新",
   locations: {

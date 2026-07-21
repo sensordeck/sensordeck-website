@@ -60,6 +60,10 @@ export const contactContent = {
   },
   submit: "Open email draft",
   emailSubject: "SensorDeck contact request",
+  privacyNotice: "By submitting this form, you agree to our",
+  privacyPolicyLink: "Privacy Policy",
+  privacyNoticeSuffix: "for processing your personal information.",
+  dataProtectionNote: "Please do not include passwords, keys, or other sensitive information in your message.",
   salesTitle: "Our sales team",
   salesNote: "SensorDeck will update sales contact and team information.",
   locations: {

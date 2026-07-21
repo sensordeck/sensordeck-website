@@ -1,29 +1,29 @@
 {
-  "serial_number": "PUDU-T300-7F3A-0021",
-  "model": "T300 配送型",
-  "firmware_version": "v2.8.4",
-  "deployment_date": "2025-11-03",
-  "location": "上海张江科技园",
-  "customer_id": "CUST-PUDU-2024",
+  "serial_number": "DEMO-T300-0001-XXXX",
+  "model": "T300 Demo 配送型",
+  "firmware_version": "v1.0.0-demo",
+  "deployment_date": "2030-01-01",
+  "location": "示例科技园区",
+  "customer_id": "CUST-DEMO-0001",
   "sensors": {
     "lidar": {
-      "manufacturer": "Hesai",
-      "model": "Pandar XT32",
-      "serial": "HES-XT32-A401"
+      "manufacturer": "Example Sensor Corp",
+      "model": "Example LiDAR X32",
+      "serial": "DEMO-LIDAR-0001"
     },
     "camera": {
-      "manufacturer": "Hikvision",
-      "model": "DS-2CD2T85G1",
+      "manufacturer": "Example Vision Systems",
+      "model": "DEMO-CAM-4K",
       "count": 4
     },
     "imu": {
-      "manufacturer": "Xsens",
-      "model": "MTi-630"
+      "manufacturer": "Example Motion Labs",
+      "model": "DEMO-IMU-630"
     }
   },
   "runtime_environment": {
-    "os": "Ubuntu 22.04",
-    "ros_version": "ROS2 Humble",
-    "compute": "NVIDIA Jetson AGX Orin"
+    "os": "Demo Linux 22.04",
+    "ros_version": "Demo Robotics Middleware 2",
+    "compute": "Example Edge Compute X1"
   }
 }

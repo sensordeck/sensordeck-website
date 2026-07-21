@@ -1,8 +1,8 @@
 {
   "ep_id": "EP-C03",
   "candidate_id": "C03",
-  "ref_id": "REF-2026-0716-0012",
-  "created_at": "2026-07-16T09:18:42+08:00",
+  "ref_id": "REF-DEMO-2030-0001",
+  "created_at": "2030-01-01T09:18:42+08:00",
   "surface": "USB 总线时序",
   "primary": true,
   "five_window_summary": {
@@ -19,8 +19,8 @@
   },
   "evidence_quality": "权威",
   "metadata": {
-    "runtime_dataset_id": "RD-7F3A-0716-0815",
-    "collection_agent": "AGT-7F3A-7A21",
-    "analysis_version": "Atlas Evidence Builder v1.2.8"
+    "runtime_dataset_id": "DEMO-XXXX-XXXX-XXXX",
+    "collection_agent": "DEMO-AGT-0001-XXXX",
+    "analysis_version": "Atlas Evidence Builder v1.0.0-demo"
   }
 }

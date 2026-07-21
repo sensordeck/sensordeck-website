@@ -1,10 +1,10 @@
 {
-  "agent_id": "AGT-7F3A-7A21",
-  "robot_sn": "PUDU-T300-7F3A-0021",
-  "deployment_date": "2025-11-05",
-  "version": "Atlas Agent v1.2.8",
+  "agent_id": "DEMO-AGT-0001-XXXX",
+  "robot_sn": "DEMO-T300-0001-XXXX",
+  "deployment_date": "2030-01-01",
+  "version": "Atlas Agent v1.0.0-demo",
   "collection_status": "active",
-  "last_heartbeat": "2026-07-16T14:23:47+08:00",
+  "last_heartbeat": "2030-01-01T14:23:47+08:00",
   "runtime_dataset_coverage": {
     "timing": true,
     "power": true,

@@ -4,6 +4,8 @@ import Eyebrow from "@/components/website/Eyebrow";
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
+import customerData from "@/data/demo/customer.json";
+import refData from "@/data/demo/ref.json";
 import { getLegacyTranslations } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
 import { translateLegacyTree } from "@/lib/legacy-i18n";
@@ -97,18 +99,18 @@ export default async function DemoIndexPage({
             <div className="mt-6 grid gap-4 text-sm md:grid-cols-2 lg:grid-cols-3">
               <div>
                 <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text022}</p>
-                <p className="mt-2 text-ink">Pudu Robotics</p>
+                <p className="mt-2 text-ink">{customerData.name}</p>
               </div>
               <div>
                 <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text023}</p>
                 <p className="mt-2 font-mono text-xs text-ink">
-                  PUDU-T300-7F3A-0021
+                  {refData.robot_sn}
                 </p>
               </div>
               <div>
                 <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text024}</p>
                 <p className="mt-2 font-mono text-xs text-ink">
-                  REF-2026-0716-0012
+                  {refData.ref_id}
                 </p>
               </div>
               <div>
@@ -120,12 +122,14 @@ export default async function DemoIndexPage({
               <div>
                 <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text026}</p>
                 <p className="mt-2 font-mono text-xs text-ink">
-                  EGP-HESAI-2026-0042
+                  {refData.egp_id}
                 </p>
               </div>
               <div>
                 <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text009}</p>
-                <p className="mt-2 text-ink">Wang Kai (Hesai)</p>
+                <p className="mt-2 text-ink">
+                  {refData.sensor_fae.name} ({refData.sensor_fae.vendor})
+                </p>
               </div>
             </div>
           </div>

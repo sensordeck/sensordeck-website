@@ -50,7 +50,7 @@ export default function InvestigationDemoClient({
               <span className="text-sm text-muted">{legacyZhCopy.demoInvestigation.text009}</span>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-xs text-muted">Li Ming</span>
+              <span className="text-xs text-muted">{refData.assigned_to.name}</span>
               <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
                 Tier 2
               </span>
