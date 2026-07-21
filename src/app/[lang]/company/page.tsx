@@ -37,28 +37,27 @@ export default async function CompanyPage({
       <main>
      <Section
   id="company-hero"
-  className="relative overflow-hidden bg-white pt-20 lg:pt-24"
+  className="relative overflow-hidden bg-white py-0"
 >
-  {/* Desktop background image */}
+  {/* Desktop background */}
   <div
-    className="absolute inset-0 bg-no-repeat"
+    className="absolute inset-y-0 right-0 hidden w-[58%] bg-contain bg-right bg-no-repeat lg:block"
     style={{
       backgroundImage: "url('/images/about-us-desktop.png')",
-      backgroundSize: "78% auto",
-      backgroundPosition: "right top",
     }}
     aria-hidden="true"
   />
 
-  {/* 只保护左侧文字，不覆盖右侧重点图案 */}
+  {/* Desktop soft transition between text and image */}
   <div
-    className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-white via-white/88 to-transparent"
+    className="absolute inset-y-0 left-[34%] hidden w-[28%] bg-gradient-to-r from-white via-white/85 to-transparent lg:block"
     aria-hidden="true"
   />
 
   <AnimatedSection>
-    <div className="relative z-10 grid min-h-[620px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
-      <div className="max-w-[650px] self-center pb-10 lg:-translate-y-6 lg:pb-0">
+    <div className="relative z-10 grid min-h-[520px] items-center lg:grid-cols-[0.9fr_1.1fr]">
+      {/* Left content */}
+      <div className="max-w-[660px] py-16 lg:py-20">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
@@ -70,20 +69,23 @@ export default async function CompanyPage({
         <p className="heading-description mt-7 max-w-[620px] text-xl leading-9 text-muted md:text-2xl">
           {hero.description}
         </p>
+
+        <div
+          className="stagger-item mt-9 max-w-[590px] border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted"
+          style={{ animationDelay: "240ms" }}
+        >
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
+            {hero.statementLabel}
+          </p>
+
+          <p className="mt-3">
+            {hero.statement}
+          </p>
+        </div>
       </div>
 
-      <div
-        className="stagger-item max-w-[430px] self-end border-l-2 border-sensor-tan pb-10 pl-5 text-sm leading-7 text-muted lg:mb-6 lg:justify-self-end"
-        style={{ animationDelay: "240ms" }}
-      >
-        <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
-          {hero.statementLabel}
-        </p>
-
-        <p className="mt-3">
-          {hero.statement}
-        </p>
-      </div>
+      {/* Right side reserved for desktop illustration */}
+      <div className="hidden lg:block" aria-hidden="true" />
     </div>
   </AnimatedSection>
 </Section>
