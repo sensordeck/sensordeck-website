@@ -573,7 +573,7 @@ export default function RuntimeInvestigationPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href="/#request-demo">
+              <Button href="/request-demo">
                 {productsContent.ctaText}
               </Button>
 
