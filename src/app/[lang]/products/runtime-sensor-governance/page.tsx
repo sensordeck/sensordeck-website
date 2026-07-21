@@ -2,10 +2,9 @@ import Button from "@/components/website/Button";
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
-import { getLegacyTranslations, getProductsContent } from "@/lib/content";
+import { getProductsContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
-import { translateLegacyTree } from "@/lib/legacy-i18n";
-import { notFound } from "next/navigation";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
+import { notFound } from "next/navigation";
 
 function ArrowIcon() {
   return <span aria-hidden="true">→</span>;
@@ -36,177 +35,6 @@ function FeatureList({ items }: {items: string[];}) {
 
 }
 
-const agentCapabilities = [
-{
-  number: "01",
-  title: "Observe",
-  description: legacyZhCopy.runtimeSensorGovernance.text001
-
-},
-{
-  number: "02",
-  title: "Persist",
-  description: legacyZhCopy.runtimeSensorGovernance.text002
-
-},
-{
-  number: "03",
-  title: "Retain",
-  description: legacyZhCopy.runtimeSensorGovernance.text003
-
-},
-{
-  number: "04",
-  title: "Export",
-  description: legacyZhCopy.runtimeSensorGovernance.text004
-
-}];
-
-
-const eventGenerationModes = [
-{
-  label: "Manual Event Window",
-  title: legacyZhCopy.runtimeSensorGovernance.text005,
-  description: legacyZhCopy.runtimeSensorGovernance.text006,
-
-  examples: [legacyZhCopy.runtimeSensorGovernance.text007, legacyZhCopy.runtimeSensorGovernance.text008, legacyZhCopy.runtimeSensorGovernance.text009, legacyZhCopy.runtimeSensorGovernance.text010]
-
-
-
-
-
-},
-{
-  label: "Automatic Detection",
-  title: "Dataset Abnormal + Cross-stream Correlation",
-  description: legacyZhCopy.runtimeSensorGovernance.text011,
-
-  examples: [legacyZhCopy.runtimeSensorGovernance.text012,
-
-  "Camera Frame Interruption",
-  "USB / Ethernet Disconnect", legacyZhCopy.runtimeSensorGovernance.text013]
-
-
-}];
-
-
-const evidenceWindows = [
-{
-  number: "01",
-  title: "Pre-Guard",
-  description: legacyZhCopy.runtimeSensorGovernance.text014
-
-},
-{
-  number: "02",
-  title: "Baseline",
-  description: legacyZhCopy.runtimeSensorGovernance.text015
-
-},
-{
-  number: "03",
-  title: "Deviation",
-  description: legacyZhCopy.runtimeSensorGovernance.text016
-
-},
-{
-  number: "04",
-  title: "Recovery",
-  description: legacyZhCopy.runtimeSensorGovernance.text017
-
-},
-{
-  number: "05",
-  title: "Post-Guard",
-  description: legacyZhCopy.runtimeSensorGovernance.text018
-
-}];
-
-
-const runtimeSurfaces = [
-"Camera",
-"LiDAR",
-"IMU",
-"GNSS",
-"USB",
-"Ethernet",
-"CAN",
-"Power",
-"Timing / PPS",
-"Linux Runtime",
-"Driver Runtime",
-"ROS Topic"];
-
-
-const outputs = [
-{
-  title: "Runtime Dataset™",
-  description: legacyZhCopy.runtimeSensorGovernance.text019
-
-},
-{
-  title: "Evidence Window",
-  description: legacyZhCopy.runtimeSensorGovernance.text020
-
-},
-{
-  title: "Evidence Pack™",
-  description: legacyZhCopy.runtimeSensorGovernance.text021
-
-},
-{
-  title: "Runtime Timeline",
-  description: legacyZhCopy.runtimeSensorGovernance.text022
-
-},
-{
-  title: "Surface Coverage Snapshot",
-  description: legacyZhCopy.runtimeSensorGovernance.text023
-
-},
-{
-  title: legacyZhCopy.runtimeSensorGovernance.text024,
-  description: legacyZhCopy.runtimeSensorGovernance.text025
-
-},
-{
-  title: "Export Bundle",
-  description: legacyZhCopy.runtimeSensorGovernance.text026
-
-},
-{
-  title: "Investigation Entry",
-  description: legacyZhCopy.runtimeSensorGovernance.text027
-
-}];
-
-
-const atlasSupports = [legacyZhCopy.runtimeSensorGovernance.text028, legacyZhCopy.runtimeSensorGovernance.text029, legacyZhCopy.runtimeSensorGovernance.text030, legacyZhCopy.runtimeSensorGovernance.text031, legacyZhCopy.runtimeSensorGovernance.text032, legacyZhCopy.runtimeSensorGovernance.text033,
-
-
-
-
-
-
-"Cross-stream Correlation",
-"Five-Window Evidence Model", legacyZhCopy.runtimeSensorGovernance.text034, legacyZhCopy.runtimeSensorGovernance.text035,
-
-
-"Runtime Surface Coverage", legacyZhCopy.runtimeSensorGovernance.text024, legacyZhCopy.runtimeSensorGovernance.text036];
-
-
-
-
-const atlasDoesNotDo = [legacyZhCopy.runtimeSensorGovernance.text037, legacyZhCopy.runtimeSensorGovernance.text038, legacyZhCopy.runtimeSensorGovernance.text039, legacyZhCopy.runtimeSensorGovernance.text040, legacyZhCopy.runtimeSensorGovernance.text041, legacyZhCopy.runtimeSensorGovernance.text042, legacyZhCopy.runtimeSensorGovernance.text043];
-
-
-
-
-
-
-
-
-
 export default async function RuntimeSensorGovernancePage({
   params
 
@@ -217,12 +45,105 @@ export default async function RuntimeSensorGovernancePage({
     notFound();
   }
 
-  const [productsContent, translations] = await Promise.all([
-  getProductsContent(lang),
-  getLegacyTranslations(lang)]
-  );
+  const [productsContent, legacyCopy] = await Promise.all([
+    getProductsContent(lang),
+    lang === "zh"
+      ? import("@/content/zh/legacy-page-copy").then(
+          (content) => content.legacyZhCopy,
+        )
+      : import("@/content/en/legacy-page-copy").then(
+          (content) => content.legacyEnCopy,
+        ),
+  ]);
+  const copy = legacyCopy.runtimeSensorGovernance;
+  const { ui } = copy;
+  const agentCapabilities = ui.capabilityTitles.map((title, index) => ({
+    number: String(index + 1).padStart(2, "0"),
+    title,
+    description: [
+      copy.text001,
+      copy.text002,
+      copy.text003,
+      copy.text004,
+    ][index],
+  }));
+  const eventGenerationModes = [
+    {
+      label: ui.eventModeLabels[0],
+      title: copy.text005,
+      description: copy.text006,
+      examples: [copy.text007, copy.text008, copy.text009, copy.text010],
+    },
+    {
+      label: ui.eventModeLabels[1],
+      title: ui.automaticEventTitle,
+      description: copy.text011,
+      examples: [
+        copy.text012,
+        ...ui.automaticEventExamples,
+        copy.text013,
+      ],
+    },
+  ];
+  const evidenceWindows = ui.evidenceWindowTitles.map((title, index) => ({
+    number: String(index + 1).padStart(2, "0"),
+    title,
+    description: [
+      copy.text014,
+      copy.text015,
+      copy.text016,
+      copy.text017,
+      copy.text018,
+    ][index],
+  }));
+  const outputs = ui.outputTitles.map((title, index) => ({
+    title,
+    description: [
+      copy.text019,
+      copy.text020,
+      copy.text021,
+      copy.text022,
+      copy.text023,
+      copy.text025,
+      copy.text026,
+      copy.text027,
+    ][index],
+  }));
+  const atlasSupports = [
+    copy.text028,
+    copy.text029,
+    copy.text030,
+    copy.text031,
+    copy.text032,
+    copy.text033,
+    ui.supportItems[0],
+    ui.supportItems[1],
+    copy.text034,
+    copy.text035,
+    ui.supportItems[2],
+    copy.text024,
+    copy.text036,
+  ];
+  const atlasDoesNotDo = [
+    copy.text037,
+    copy.text038,
+    copy.text039,
+    copy.text040,
+    copy.text041,
+    copy.text042,
+    copy.text043,
+  ];
+  const investigationTiers = ui.tierTitles.map((title, index) => ({
+    title,
+    description: [
+      copy.text063,
+      copy.text064,
+      copy.text065,
+      copy.text066,
+    ][index],
+  }));
 
-  return translateLegacyTree(
+  return (
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
@@ -231,20 +152,18 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-white">
           <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan">
-              Sensor Runtime Boundary
+              {ui.heroEyebrow}
             </p>
 
             <h1 className="mt-4 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
-              Atlas Runtime Sensor Governance™
+              {ui.heroTitle}
             </h1>
 
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">{legacyZhCopy.runtimeSensorGovernance.text044}
+            <p className="mt-6 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">{copy.text044}
 
             </p>
 
-            <p className="mt-5 max-w-4xl text-base leading-8 text-muted sm:text-lg">{legacyZhCopy.runtimeSensorGovernance.text045}
-
-
+            <p className="mt-5 max-w-4xl text-base leading-8 text-muted sm:text-lg">{copy.text045}
 
             </p>
 
@@ -253,7 +172,7 @@ export default async function RuntimeSensorGovernancePage({
                 {productsContent.ctaText}
               </Button>
 
-              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/products")} variant="outline">{legacyZhCopy.runtimeSensorGovernance.text046}
+              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/products")} variant="outline">{ui.viewAllProducts}
 
               </Button>
             </div>
@@ -265,16 +184,16 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
-                Runtime Evidence Chain
+                {ui.runtimeEvidenceChainEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{legacyZhCopy.runtimeSensorGovernance.text047}
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.text047}
 
-                <br />{legacyZhCopy.runtimeSensorGovernance.text048}
+                <br />{copy.text048}
 
               </h2>
 
-              <p className="mt-5 max-w-3xl text-base leading-8 text-white/70 md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text049}
+              <p className="mt-5 max-w-3xl text-base leading-8 text-white/70 md:text-lg">{copy.text049}
 
 
               </p>
@@ -309,21 +228,21 @@ export default async function RuntimeSensorGovernancePage({
             <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
               <div>
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                  Runtime Boundary
+                  {ui.runtimeBoundaryEyebrow}
                 </p>
 
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{legacyZhCopy.runtimeSensorGovernance.text050}
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text050}
 
                 </h2>
 
-                <p className="mt-5 text-base leading-8 text-muted md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text051}
+                <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text051}
 
                 </p>
               </div>
 
               <div>
                 <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-                  {runtimeSurfaces.map((surface) =>
+                  {ui.runtimeSurfaces.map((surface) =>
                   <div
                     key={surface}
                     className="bg-white px-5 py-5 font-mono text-sm font-semibold text-ink">
@@ -335,8 +254,7 @@ export default async function RuntimeSensorGovernancePage({
 
                 <div className="mt-6 border border-atlas-blue/25 bg-surface-blue p-6">
                   <p className="text-sm font-semibold leading-7 text-ink md:text-base">
-                    Physical Sensor → Raw Output → Power / Bus → Linux Kernel /
-                    Driver → ROS Topic / Application Callback
+                    {ui.runtimeBoundaryPath}
                   </p>
                 </div>
               </div>
@@ -349,14 +267,14 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="mx-auto max-w-4xl text-center">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                Atlas Agent
+                {ui.atlasAgentEyebrow}
               </p>
 
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
-                Observe → Persist → Retain → Export
+                {ui.agentChainTitle}
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text052}
+              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text052}
 
               </p>
             </div>
@@ -395,16 +313,16 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="max-w-4xl">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                Evidence Pack Generation
+                {ui.evidencePackGenerationEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{legacyZhCopy.runtimeSensorGovernance.text053}
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text053}
 
-                <br />{legacyZhCopy.runtimeSensorGovernance.text054}
+                <br />{copy.text054}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text055}
+              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text055}
 
 
               </p>
@@ -436,7 +354,7 @@ export default async function RuntimeSensorGovernancePage({
             </div>
 
             <div className="mt-6 border border-atlas-blue/25 bg-surface-blue p-6 text-center md:p-8">
-              <p className="text-base font-semibold leading-8 text-ink md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text056}
+              <p className="text-base font-semibold leading-8 text-ink md:text-lg">{copy.text056}
 
 
               </p>
@@ -449,16 +367,16 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="mx-auto max-w-4xl text-center">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                Five-Window Evidence Model
+                {ui.fiveWindowModelEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{legacyZhCopy.runtimeSensorGovernance.text057}
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text057}
 
-                <br />{legacyZhCopy.runtimeSensorGovernance.text058}
+                <br />{copy.text058}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text059}
+              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text059}
 
 
               </p>
@@ -498,41 +416,23 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
-                Investigation Routing
+                {ui.investigationRoutingEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{legacyZhCopy.runtimeSensorGovernance.text060}
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.text060}
 
-                <br />{legacyZhCopy.runtimeSensorGovernance.text061}
+                <br />{copy.text061}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-white/70 md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text062}
+              <p className="mt-5 text-base leading-8 text-white/70 md:text-lg">{copy.text062}
 
 
               </p>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
-              {[
-              {
-                title: "Tier 1",
-                description: legacyZhCopy.runtimeSensorGovernance.text063
-              },
-              {
-                title: "Tier 2",
-                description: legacyZhCopy.runtimeSensorGovernance.text064
-              },
-              {
-                title: "Tier 3",
-                description: legacyZhCopy.runtimeSensorGovernance.text065
-              },
-              {
-                title: "Sensor FAE",
-                description: legacyZhCopy.runtimeSensorGovernance.text066
-
-              }].
-              map((tier) =>
+              {investigationTiers.map((tier) =>
               <article
                 key={tier.title}
                 className="border border-white/15 bg-white/[0.04] p-6">
@@ -548,7 +448,7 @@ export default async function RuntimeSensorGovernancePage({
               )}
             </div>
 
-            <p className="lg:col-span-2 text-sm font-semibold leading-7 text-white/85">{legacyZhCopy.runtimeSensorGovernance.text067}
+            <p className="lg:col-span-2 text-sm font-semibold leading-7 text-white/85">{copy.text067}
 
 
             </p>
@@ -560,14 +460,14 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="max-w-4xl">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                Runtime Evidence Assets
+                {ui.runtimeEvidenceAssetsEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{legacyZhCopy.runtimeSensorGovernance.text068}
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text068}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text069}
+              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text069}
 
 
               </p>
@@ -598,10 +498,10 @@ export default async function RuntimeSensorGovernancePage({
             <div className="grid gap-6 lg:grid-cols-2">
               <article className="border border-border bg-white p-7 md:p-9">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                  Atlas Supports
+                  {ui.atlasSupportsEyebrow}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">{legacyZhCopy.runtimeSensorGovernance.text070}
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">{copy.text070}
 
                 </h2>
 
@@ -612,10 +512,10 @@ export default async function RuntimeSensorGovernancePage({
 
               <article className="border border-border bg-white p-7 md:p-9">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan">
-                  Constitutional Boundary
+                  {ui.constitutionalBoundaryEyebrow}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">{legacyZhCopy.runtimeSensorGovernance.text071}
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">{copy.text071}
 
                 </h2>
 
@@ -623,7 +523,7 @@ export default async function RuntimeSensorGovernancePage({
                   <FeatureList items={atlasDoesNotDo} />
                 </div>
 
-                <p className="mt-8 border-t border-border pt-6 text-sm font-semibold leading-7 text-ink">{legacyZhCopy.runtimeSensorGovernance.text072}
+                <p className="mt-8 border-t border-border pt-6 text-sm font-semibold leading-7 text-ink">{copy.text072}
 
 
                 </p>
@@ -638,14 +538,14 @@ export default async function RuntimeSensorGovernancePage({
             <div className="grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
               <article className="border border-border bg-surface p-7 md:p-9">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                  Runtime Sensor Governance™
+                  {ui.governanceProductName}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{legacyZhCopy.runtimeSensorGovernance.text073}
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{copy.text073}
 
                 </h2>
 
-                <p className="mt-5 text-base leading-8 text-muted">{legacyZhCopy.runtimeSensorGovernance.text074}
+                <p className="mt-5 text-base leading-8 text-muted">{ui.governanceFlow}
 
                 </p>
               </article>
@@ -656,16 +556,15 @@ export default async function RuntimeSensorGovernancePage({
 
               <article className="border border-border bg-surface p-7 md:p-9">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
-                  Runtime Investigation™
+                  {ui.investigationProductName}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{legacyZhCopy.runtimeSensorGovernance.text075}
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{copy.text075}
 
                 </h2>
 
                 <p className="mt-5 text-base leading-8 text-muted">
-                  REF Admission → Historical RGA → Context → IR / LL → Closure
-                  → Assist Vault
+                  {ui.investigationFlow}
                 </p>
               </article>
             </div>
@@ -676,16 +575,16 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-[#050b17]">
           <div className="mx-auto max-w-5xl text-center">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
-              Continuous Runtime Evidence
+              {ui.continuousEvidenceEyebrow}
             </p>
 
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">{legacyZhCopy.runtimeSensorGovernance.text076}
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">{copy.text076}
 
-              <br />{legacyZhCopy.runtimeSensorGovernance.text077}
+              <br />{copy.text077}
 
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg">{legacyZhCopy.runtimeSensorGovernance.text078}
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg">{copy.text078}
 
 
             </p>
@@ -697,7 +596,7 @@ export default async function RuntimeSensorGovernancePage({
 
               <a
                 href={localizeHref(lang, "/products/runtime-investigation")}
-                className="inline-flex min-h-11 w-full items-center justify-center border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto">{legacyZhCopy.runtimeSensorGovernance.text079}
+                className="inline-flex min-h-11 w-full items-center justify-center border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto">{copy.text079}
 
 
               </a>
@@ -707,6 +606,6 @@ export default async function RuntimeSensorGovernancePage({
       </main>
 
       <Footer />
-    </div>,
-    translations);
+    </div>
+  );
 }
