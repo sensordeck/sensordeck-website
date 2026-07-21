@@ -49,15 +49,15 @@ const productsContent: ProductContent = {
 一个共享运行时治理基础设施`,
 
   heroSubtitle:
-    "Atlas 分别服务机器人 OEM 与传感器制造商，并通过统一证据、Engagement Pack、REF 工单和调查资产，将双方连接在同一条可追踪、可关闭、可复用的运行时调查链路中。",
+    "Atlas 分别服务机器人 OEM 与传感器制造商，并通过统一证据、Engagement Pack™、REF 事故工单和调查资产，将双方连接在同一条可追踪、可关闭、可复用的运行时调查链路中。",
 
  heroStatement:
   "当前调查从证据开始。下一次调查，从历史开始。",
   architecture: {
     eyebrow: "Atlas 产品全局架构",
-    title: "OEM 与 Sensor Factory 双飞轮",
+    title: "机器人OEM 与 传感器制造商双飞轮",
     description:
-      "左侧是机器人 OEM 的 Runtime Investigation；右侧是传感器制造商的 Runtime Sensor Governance；中间通过 Engagement Pack（EGP）完成有边界的跨组织调查协作。",
+      "左侧是机器人 OEM 的 Runtime Investigation™；右侧是传感器制造商的 Runtime Sensor Governance™；中间通过 Engagement Pack™（EGP）完成有边界的跨组织调查协作。",
     imageSrc:
       "/images/product1.png",
     imageAlt:
@@ -68,28 +68,28 @@ const productsContent: ProductContent = {
     name: "Atlas Runtime Sensor Governance™",
     audience: "传感器制造商",
     description:
-      "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收 OEM Engagement Pack，组织 Sensor FAE 调查，并将完成的 IR、LL 与历史案例沉淀为可复用的传感器运行时知识。",
+      "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收传感器协同调查包(EGP)，组织 Sensor FAE 工程调查，并将完成的调查结果(IR)、经验分享(LL) 与历史案例(Historical RGA)沉淀为可复用的传感器运行时知识。",
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
       "建立跨 OEM、跨 Sensor SKU 的 Runtime Profile",
       "基于 OEM EGP 开展有边界的 Sensor FAE 调查",
       "召回 Historical Sensor RGA，避免重复排查",
-      "返回更新后的 EGP、IR、LL 与 Sensor Response",
-      "将完成案例沉淀至 Sensor Assist Vault",
+      "返回更新后的 EGP、IR、LL 与 Sensor EGP Response",
+      "将完成案例沉淀至 Sensor Assist Vault™",
     ],
 
     coreModules: [
       "运行时档案（Runtime Profile™）",
       "运行时观察（Atlas Agent Observation）",
-      "传感器与 OEM 协同调查包（Engagement Pack / EGP）",
+      "传感器与 OEM 协同调查包（EGP）",
       "传感器 REF 工单",
       "统一证据包（Evidence Pack™）",
       "Historical Sensor RGA Recall™",
       "Investigation Result（IR）",
       "Lesson Learned（LL）",
       "Sensor Assist Vault™",
-      "去标识化运行时知识库",
+      "去标识化运行时知识库™",
     ],
 
     lifecycle: [
@@ -110,12 +110,12 @@ const productsContent: ProductContent = {
     name: "Atlas Runtime Investigation™",
     audience: "机器人 OEM",
     description:
-      "帮助机器人 OEM 将运行时事件转化为有界 Evidence Pack，创建和管理 REF 工单，召回 Historical RGA，协调 Tier 1、Tier 2、Tier 3 与 Sensor FAE，并将调查结果转化为组织知识。",
+      "帮助机器人 OEM 将运行时事件转化为有界 Evidence Pack™，创建和管理 REF 工单，召回 Historical RGA，协调 Tier 1、Tier 2、Tier 3 与 Sensor FAE，并将调查结果转化为组织知识。",
     href: "/products/runtime-investigation",
 
     valuePoints: [
       "Atlas Agent 持续观察并保留 Runtime Dataset",
-      "生成 Candidate EP 与 Primary Evidence Pack",
+      "生成调查优先级候选 Candidate 与 Evidence Pack",
       "召回 Historical RGA 与既有 IR、LL",
       "创建 Sensor Engagement Pack 并升级 Sensor FAE",
       "审核返回结果、关闭 OEM REF Ticket 并沉淀知识",
@@ -124,7 +124,7 @@ const productsContent: ProductContent = {
     coreModules: [
       "Atlas Agent™",
       "Runtime Dataset 保留",
-      "Candidate Evidence Pack",
+      "Candidate 调查优先级候选",
       "Primary Evidence Pack",
       "Historical RGA™",
       "Investigation Workspace™",
@@ -135,7 +135,7 @@ const productsContent: ProductContent = {
 
     lifecycle: [
       "Runtime Dataset 采集与保留",
-      "生成 Candidate Evidence Pack",
+      "生成 Candidate + Evidence Pack",
       "确认 Primary Evidence Pack",
       "创建 OEM REF Ticket",
       "召回 Historical RGA",
@@ -149,7 +149,7 @@ const productsContent: ProductContent = {
 
   collaborationBridge: {
     eyebrow: "共享协作桥梁",
-    title: "Engagement Pack 连接 OEM 与 Sensor Factory",
+    title: "Engagement Pack™ 连接 OEM 与 Sensor Factory",
     description:
       "EGP 不是 OEM 内部 Evidence Pack 的替代品。它是 OEM 向传感器制造商发起有边界调查协作的标准载体，贯穿 REF 工单从 Pending 到 Closure 的完整过程。",
     steps: [
