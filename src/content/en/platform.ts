@@ -1,3 +1,5 @@
+import type { PlatformContent } from "@/lib/content-types";
+
 export const platformContent = {
   ui: {
     capabilitiesTitle: "Platform Capabilities",
@@ -178,6 +180,4 @@ export const platformContent = {
     primaryButton: "Request Demo",
     secondaryButton: "Read Technical Whitepaper",
   },
-};
-
-export type PlatformContent = typeof platformContent;
+} satisfies PlatformContent;

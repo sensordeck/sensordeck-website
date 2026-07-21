@@ -1,3 +1,5 @@
+import type { AuxiliaryPagesContent } from "@/lib/content-types";
+
 export const auxiliaryPagesContent = {
   category: {
     eyebrow: "01 / Category Definition",
@@ -27,6 +29,4 @@ export const auxiliaryPagesContent = {
     instruction: "Use the top-left control to play the animation",
     cardLines: ["Now Playing", "Bohemian Rhapsody", "Queen / A Night at the Opera"],
   },
-} as const;
-
-export type AuxiliaryPagesContent = typeof auxiliaryPagesContent;
+} satisfies AuxiliaryPagesContent;

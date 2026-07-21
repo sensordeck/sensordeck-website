@@ -1,3 +1,5 @@
+import type { AuxiliaryPagesContent } from "@/lib/content-types";
+
 export const auxiliaryPagesContent = {
   category: {
     eyebrow: "01 / 新品类定义",
@@ -27,4 +29,4 @@ export const auxiliaryPagesContent = {
     instruction: "点击左上角按钮控制动画播放",
     cardLines: ["正在播放", "Bohemian Rhapsody", "Queen / A Night at the Opera"],
   },
-} as const;
+} satisfies AuxiliaryPagesContent;

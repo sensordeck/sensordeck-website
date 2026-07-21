@@ -2,6 +2,8 @@
  * Library 页面内容
  */
 
+import type { LibraryContent } from "@/lib/content-types";
+
 export const libraryContent = {
   ui: {
     breadcrumbLabel: "面包屑导航",
@@ -284,6 +286,4 @@ export const libraryContent = {
       href: "/#contact-form",
     },
   },
-} as const;
-
-export type LibraryContent = typeof libraryContent;
+} satisfies LibraryContent;

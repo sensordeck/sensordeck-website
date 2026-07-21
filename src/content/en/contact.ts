@@ -1,3 +1,5 @@
+import type { ContactContent } from "@/lib/content-types";
+
 export const contactContent = {
   hero: {
     eyebrow: "Contact",
@@ -83,6 +85,4 @@ export const contactContent = {
       },
     ],
   },
-} as const;
-
-export type ContactContent = typeof contactContent;
+} satisfies ContactContent;

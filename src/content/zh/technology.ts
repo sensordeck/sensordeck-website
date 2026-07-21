@@ -1,3 +1,5 @@
+import type { TechnologyContent } from "@/lib/content-types";
+
 export const technologyContent = {
   hero: {
     title: "技术架构",
@@ -172,4 +174,4 @@ Assist Vault（组织记忆）
       href: "/demo",
     },
   },
-}
+} satisfies TechnologyContent;

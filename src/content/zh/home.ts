@@ -1,6 +1,6 @@
-import type { HomeContent } from "@/content/en/home";
+import type { HomeContent } from "@/lib/content-types";
 
-const homeContent: HomeContent = {
+const homeContent = {
   heroTitle: "机器人运行时\n智能治理基础设施",
   heroSubtitleDesktop:
   "运行时数据分散在日志、设备和人员之间。每次调查都从零开始。\nAtlas 天枢将运行时证据沉淀为可复用的组织知识。",
@@ -256,8 +256,6 @@ const homeContent: HomeContent = {
     illustrativeDemoData: "仅限示意性演示数据",
     contactUs: "联系我们",
   },
-} as const;
-
-export type HomeContentZh = typeof homeContent;
+} satisfies HomeContent;
 
 export default homeContent;

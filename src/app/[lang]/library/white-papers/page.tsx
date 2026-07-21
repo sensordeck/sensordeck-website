@@ -1,6 +1,6 @@
+import Link from "next/link";
+
 import Card from "@/components/website/Card";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import { getLibraryContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -27,19 +27,17 @@ export default async function WhitePapersPage({
   const { whitePapers, ui } = await getLibraryContent(lang);
 
   return (
-    <div className="min-h-screen bg-paper font-sans text-ink">
-      <Header />
+    <div className="bg-paper font-sans text-ink">
 
-      <main>
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">
           <nav aria-label={ui.breadcrumbLabel} className="flex items-center gap-2 text-sm">
-            <a
+            <Link
               className="text-muted hover:text-ink"
               href={localizeHref(lang, "/library")}
             >
               {ui.libraryLabel}
-            </a>
+            </Link>
             <span className="text-muted">/</span>
             <span className="font-semibold text-ink">{ui.whitePapersLabel}</span>
           </nav>
@@ -103,23 +101,21 @@ export default async function WhitePapersPage({
         {/* Navigation */}
         <Section id="navigation" className="bg-white">
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
-            <a
+            <Link
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href={localizeHref(lang, "/library")}
             >
               ← {ui.backToLibrary}
-            </a>
-            <a
+            </Link>
+            <Link
               className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
               href={localizeHref(lang, "/library/documentation")}
             >
               {ui.nextDocumentation}
-            </a>
+            </Link>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

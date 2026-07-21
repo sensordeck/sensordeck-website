@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import Link from "next/link";
 
 type ButtonVariant = "primary" | "secondary" | "outline";
 
@@ -40,14 +41,22 @@ const variantClasses: Record<ButtonVariant, string> = {
 export default function Button({
   children,
   className = "",
+  href,
   variant = "primary",
   ...props
 }: ButtonProps) {
+  const buttonClassName = `inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-center text-sm font-semibold leading-5 whitespace-normal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue ${variantClasses[variant]} ${className}`;
+
+  if (href?.startsWith("/")) {
+    return (
+      <Link className={buttonClassName} href={href} {...props}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <a
-      className={`inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-center text-sm font-semibold leading-5 whitespace-normal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue ${variantClasses[variant]} ${className}`}
-      {...props}
-    >
+    <a className={buttonClassName} href={href} {...props}>
       {children}
     </a>
   );

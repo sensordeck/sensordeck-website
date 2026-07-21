@@ -1,7 +1,7 @@
+import Link from "next/link";
+
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import { getLibraryContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -38,10 +38,8 @@ export default async function LibraryIndexPage({
   const libraryResources = ui.resourceCards;
 
   return (
-    <div className="min-h-screen bg-paper font-sans text-ink">
-      <Header />
+    <div className="bg-paper font-sans text-ink">
 
-      <main>
         {/* Hero */}
         <Section id="library-hero" className="bg-white">
           <div className="max-w-4xl">
@@ -80,13 +78,13 @@ export default async function LibraryIndexPage({
                   </p>
                 </div>
                 <div className="mt-6 border-t border-border pt-4">
-                  <a
+                  <Link
                     className="-my-2 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
                     href={localizeHref(lang, resource.href)}
                   >
                     {ui.browse}
                     <ArrowLabel />
-                  </a>
+                  </Link>
                 </div>
               </Card>
             ))}
@@ -102,7 +100,7 @@ export default async function LibraryIndexPage({
             </h2>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <a
+            <Link
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/white-papers")}
             >
@@ -110,8 +108,8 @@ export default async function LibraryIndexPage({
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.whitePapersLabel}
               </span>
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/documentation")}
             >
@@ -119,8 +117,8 @@ export default async function LibraryIndexPage({
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.documentationLabel}
               </span>
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/demo")}
             >
@@ -128,8 +126,8 @@ export default async function LibraryIndexPage({
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.demoAndVideoLabel}
               </span>
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/faq")}
             >
@@ -137,7 +135,7 @@ export default async function LibraryIndexPage({
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.faqLabel}
               </span>
-            </a>
+            </Link>
           </div>
         </Section>
 
@@ -168,9 +166,7 @@ export default async function LibraryIndexPage({
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

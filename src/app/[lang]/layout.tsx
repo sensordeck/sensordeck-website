@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import Footer from "@/components/website/Footer";
+import Header from "@/components/website/Header";
 import { locales, type Locale, isValidLocale } from "@/lib/i18n";
+import "../globals.css";
 
 const metadataByLocale: Record<Locale, Metadata> = {
   zh: {
@@ -47,7 +50,11 @@ export default async function LangLayout({
 
   return (
     <html lang={lang} className="h-full antialiased" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

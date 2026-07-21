@@ -1,3 +1,5 @@
+import type { CompanyContent } from "@/lib/content-types";
+
 export const companyContent = {
   hero: {
     eyebrow: "SensorDeck / Company",
@@ -85,6 +87,4 @@ export const companyContent = {
       "Whether you build sensors, operate robot fleets, or investigate field events, the conversation can start with one concrete runtime boundary.",
     button: "Contact SensorDeck",
   },
-} as const;
-
-export type CompanyContent = typeof companyContent;
+} satisfies CompanyContent;

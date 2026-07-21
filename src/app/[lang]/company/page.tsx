@@ -1,8 +1,6 @@
 import { AnimatedSection } from "@/components/website/AnimatedSection";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import { getCompanyContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -31,10 +29,8 @@ export default async function CompanyPage({
   } = content;
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      <Header />
+    <div className="bg-white">
 
-      <main>
 <section
   id="company-hero"
   className="relative overflow-hidden border-b border-border bg-white"
@@ -225,9 +221,7 @@ export default async function CompanyPage({
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

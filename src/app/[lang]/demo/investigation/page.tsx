@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import InvestigationDemoClient from "./InvestigationDemoClient";
-import { getLegacyTranslations } from "@/lib/content";
+import { getDemoContent } from "@/lib/content";
 import { isValidLocale } from "@/lib/i18n";
 
 export default async function InvestigationDemoPage({
@@ -14,7 +14,7 @@ export default async function InvestigationDemoPage({
     notFound();
   }
 
-  return (
-    <InvestigationDemoClient translations={await getLegacyTranslations(lang)} />
-  );
+  const content = await getDemoContent(lang);
+
+  return <InvestigationDemoClient content={content} />;
 }

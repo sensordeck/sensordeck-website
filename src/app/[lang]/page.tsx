@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/website/Button";
 import Card from "@/components/website/Card";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import { getHomeContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -72,10 +70,8 @@ export default async function HomePage({
       : "/images/Sensordeck 2.png";
 
   return (
-    <div className="flex min-h-full flex-1 flex-col bg-white">
-      <Header />
+    <div className="bg-white">
 
-      <main>
      <section id="top" className="relative min-h-[680px] overflow-hidden border-b border-border bg-white sm:min-h-[640px] lg:min-h-[700px]">
 
   {/* Hero artwork */}
@@ -697,9 +693,7 @@ export default async function HomePage({
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

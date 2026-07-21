@@ -1,13 +1,66 @@
 "use client";
 
-import { useScrollReveal } from "@/hooks/useScrollReveal";
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
   threshold?: number;
   rootMargin?: string;
+}
+
+type ObserverCallback = (entry: IntersectionObserverEntry) => void;
+
+interface SharedObserver {
+  callbacks: Map<Element, ObserverCallback>;
+  observer: IntersectionObserver;
+}
+
+const sharedObservers = new Map<string, SharedObserver>();
+
+function getObserverKey(threshold: number, rootMargin: string) {
+  return `${threshold}:${rootMargin}`;
+}
+
+function observeElement(
+  element: Element,
+  threshold: number,
+  rootMargin: string,
+  callback: ObserverCallback
+) {
+  const key = getObserverKey(threshold, rootMargin);
+  let sharedObserver = sharedObservers.get(key);
+
+  if (!sharedObserver) {
+    const callbacks = new Map<Element, ObserverCallback>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          callbacks.get(entry.target)?.(entry);
+        }
+      },
+      { threshold, rootMargin }
+    );
+
+    sharedObserver = { callbacks, observer };
+    sharedObservers.set(key, sharedObserver);
+  }
+
+  sharedObserver.callbacks.set(element, callback);
+  sharedObserver.observer.observe(element);
+
+  return () => {
+    const currentObserver = sharedObservers.get(key);
+    if (!currentObserver) return;
+
+    currentObserver.observer.unobserve(element);
+    currentObserver.callbacks.delete(element);
+
+    if (currentObserver.callbacks.size === 0) {
+      currentObserver.observer.disconnect();
+      sharedObservers.delete(key);
+    }
+  };
 }
 
 /**
@@ -20,14 +73,48 @@ export function AnimatedSection({
   threshold = 0.1,
   rootMargin = "0px 0px -50px 0px",
 }: AnimatedSectionProps) {
-  const { ref, isVisible } = useScrollReveal({ threshold, rootMargin });
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const element = ref.current;
+    if (!element) return;
+
+    const prefersReducedMotion =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (
+      prefersReducedMotion ||
+      typeof window.IntersectionObserver === "undefined"
+    ) {
+      element.classList.add("in-view");
+      return;
+    }
+
+    element.classList.add("will-animate");
+
+    let stopObserving = () => {};
+    stopObserving = observeElement(
+      element,
+      threshold,
+      rootMargin,
+      (entry) => {
+        if (!entry.isIntersecting) return;
+
+        element.classList.add("in-view");
+        stopObserving();
+      }
+    );
+
+    return stopObserving;
+  }, [threshold, rootMargin]);
 
   return (
     <div
       ref={ref}
-      className={`transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-      } ${className}`}
+      className={`animated-section opacity-100 translate-y-0 ${className}`}
     >
       {children}
     </div>

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import CTODemoClient from "./CTODemoClient";
-import { getLegacyTranslations } from "@/lib/content";
+import { getDemoContent } from "@/lib/content";
 import { isValidLocale } from "@/lib/i18n";
 
 export default async function CTODemoPage({
@@ -14,5 +14,7 @@ export default async function CTODemoPage({
     notFound();
   }
 
-  return <CTODemoClient translations={await getLegacyTranslations(lang)} />;
+  const content = await getDemoContent(lang);
+
+  return <CTODemoClient content={content} />;
 }

@@ -2,43 +2,41 @@
 
 import { useState } from "react";
 import Eyebrow from "@/components/website/Eyebrow";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import agentData from "@/data/demo/agent.json";
 import refData from "@/data/demo/ref.json";
 import robotData from "@/data/demo/robot.json";
-import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
+import type { DemoContent } from "@/content/zh/demo";
 
 const STEPS = ["incident", "robot", "evidence", "review"] as const;
 type Step = (typeof STEPS)[number];
 
 export default function Tier1DemoClient({
-  translations
-
-
-}: {translations: Record<string, string>;}) {
+  content,
+}: {
+  content: DemoContent;
+}) {
   const [currentStep, setCurrentStep] = useState<Step>("incident");
 
   const stepIndex = STEPS.indexOf(currentStep);
 
   return (
-    <div className="min-h-screen bg-paper font-sans text-ink">
-      <Header />
+    <div className="bg-paper font-sans text-ink">
 
-      <main>
         {/* Demo UI Shell - Top Bar */}
         <Section className="border-b border-border bg-white py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               <span className="text-lg font-semibold text-atlas-blue">
                 ATLAS
               </span>
-              <span className="text-sm text-muted">{legacyZhCopy.demoTier1.text001}</span>
+              <span className="text-sm text-muted">{content.tier1.portalTitle}</span>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="text-xs text-muted">{refData.created_by.name}</span>
-              <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">{legacyZhCopy.demoTier1.text002}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <span className="text-xs text-muted">
+                {content.data.ref.creatorName}
+              </span>
+              <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">{content.tier1.roleLabel}
 
               </span>
             </div>
@@ -47,7 +45,8 @@ export default function Tier1DemoClient({
 
         {/* Progress Bar */}
         <Section className="bg-surface py-4">
-          <div className="flex items-center justify-between">
+          <div className="overflow-x-auto pb-2 md:overflow-visible md:pb-0">
+            <div className="flex min-w-[42rem] items-center justify-between md:min-w-0">
             {STEPS.map((step, index) =>
             <div className="flex flex-1 items-center" key={step}>
                 <div className="flex items-center gap-3">
@@ -65,10 +64,10 @@ export default function Tier1DemoClient({
                   index <= stepIndex ? "text-ink" : "text-muted"}`
                   }>
                   
-                    {step === "incident" && legacyZhCopy.demoTier1.text003}
-                    {step === "robot" && legacyZhCopy.demoTier1.text004}
-                    {step === "evidence" && legacyZhCopy.demoTier1.text005}
-                    {step === "review" && legacyZhCopy.demoTier1.text006}
+                    {step === "incident" && content.tier1.stepLabels.incident}
+                    {step === "robot" && content.tier1.stepLabels.robot}
+                    {step === "evidence" && content.tier1.stepLabels.evidence}
+                    {step === "review" && content.tier1.stepLabels.review}
                   </span>
                 </div>
                 {index < STEPS.length - 1 &&
@@ -80,6 +79,7 @@ export default function Tier1DemoClient({
               }
               </div>
             )}
+            </div>
           </div>
         </Section>
 
@@ -87,58 +87,58 @@ export default function Tier1DemoClient({
         <Section className="bg-white">
           {currentStep === "incident" &&
           <div className="max-w-2xl">
-              <Eyebrow>{legacyZhCopy.demoTier1.text007}</Eyebrow>
-              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{legacyZhCopy.demoTier1.text008}
+              <Eyebrow>{content.tier1.incident.eyebrow}</Eyebrow>
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{content.tier1.incident.title}
 
             </h1>
               <div className="mt-8 space-y-6">
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text009}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.incident.typeLabel}
 
                 </label>
-                  <select className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink">
-                    <option>{refData.incident_type}</option>
-                    <option>{legacyZhCopy.demoTier1.text010}</option>
-                    <option>{legacyZhCopy.demoTier1.text011}</option>
-                    <option>{legacyZhCopy.demoTier1.text012}</option>
+                  <select className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink">
+                    <option>{content.data.ref.incidentType}</option>
+                    <option>{content.tier1.incident.typeOptions[0]}</option>
+                    <option>{content.tier1.incident.typeOptions[1]}</option>
+                    <option>{content.tier1.incident.typeOptions[2]}</option>
                   </select>
                 </div>
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text013}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.incident.severityLabel}
 
                 </label>
-                  <select className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink">
-                    <option>{refData.severity}</option>
-                    <option>{legacyZhCopy.demoTier1.text014}</option>
-                    <option>{legacyZhCopy.demoTier1.text015}</option>
-                    <option>{legacyZhCopy.demoTier1.text016}</option>
+                  <select className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink">
+                    <option>{content.data.ref.severity}</option>
+                    <option>{content.tier1.incident.severityOptions[0]}</option>
+                    <option>{content.tier1.incident.severityOptions[1]}</option>
+                    <option>{content.tier1.incident.severityOptions[2]}</option>
                   </select>
                 </div>
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text017}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.incident.descriptionLabel}
 
                 </label>
                   <textarea
                   className="mt-2 w-full border border-border bg-surface p-3 text-sm leading-6 text-ink"
-                  defaultValue={refData.description}
+                  defaultValue={content.data.ref.description}
                   rows={4} />
                 
                 </div>
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text018}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.incident.timeLabel}
 
                 </label>
                   <input
-                  className="mt-2 w-full border border-border bg-surface p-3 font-mono text-sm text-ink"
+                  className="mt-2 min-h-11 w-full border border-border bg-surface p-3 font-mono text-sm text-ink"
                   defaultValue={refData.incident_time_approximate.slice(0, 16)}
                   type="datetime-local" />
                 
                 </div>
               </div>
               <button
-              className="mt-8 bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark"
+              className="mt-8 min-h-11 bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark"
               onClick={() => setCurrentStep("robot")}
-              type="button">{legacyZhCopy.demoTier1.text019}
+              type="button">{content.tier1.incident.next}
 
 
             </button>
@@ -147,39 +147,39 @@ export default function Tier1DemoClient({
 
           {currentStep === "robot" &&
           <div className="max-w-2xl">
-              <Eyebrow>{legacyZhCopy.demoTier1.text020}</Eyebrow>
-              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{legacyZhCopy.demoTier1.text021}
+              <Eyebrow>{content.tier1.robot.eyebrow}</Eyebrow>
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{content.tier1.robot.title}
 
             </h1>
               <div className="mt-8 space-y-6">
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text022}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.robot.serialNumberLabel}
 
                 </label>
                   <input
-                  className="mt-2 w-full border border-border bg-surface p-3 font-mono text-sm text-ink"
+                  className="mt-2 min-h-11 w-full border border-border bg-surface p-3 font-mono text-sm text-ink"
                   defaultValue={robotData.serial_number}
                   type="text" />
                 
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text023}
+                    <label className="text-sm font-semibold text-ink">{content.tier1.robot.modelLabel}
 
                   </label>
                     <input
-                    className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink"
-                    defaultValue={robotData.model}
+                    className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink"
+                    defaultValue={content.data.robot.model}
                     disabled
                     type="text" />
                   
                   </div>
                   <div>
-                    <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text024}
+                    <label className="text-sm font-semibold text-ink">{content.tier1.robot.firmwareLabel}
 
                   </label>
                     <input
-                    className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink"
+                    className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink"
                     defaultValue={robotData.firmware_version}
                     disabled
                     type="text" />
@@ -187,38 +187,38 @@ export default function Tier1DemoClient({
                   </div>
                 </div>
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text025}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.robot.locationLabel}
 
                 </label>
                   <input
-                  className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink"
-                  defaultValue={refData.environment.location}
+                  className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink"
+                  defaultValue={content.data.ref.environmentLocation}
                   type="text" />
                 
                 </div>
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text026}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.robot.conditionsLabel}
 
                 </label>
                   <input
-                  className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink"
-                  defaultValue={refData.environment.conditions}
+                  className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink"
+                  defaultValue={content.data.ref.environmentConditions}
                   type="text" />
                 
                 </div>
               </div>
-              <div className="mt-8 flex gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <button
-                className="border border-border bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-surface"
+                className="min-h-11 w-full border border-border bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-surface sm:w-auto"
                 onClick={() => setCurrentStep("incident")}
-                type="button">{legacyZhCopy.demoTier1.text027}
+                type="button">{content.tier1.previous}
 
 
               </button>
                 <button
-                className="bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark"
+                className="min-h-11 w-full bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark sm:w-auto"
                 onClick={() => setCurrentStep("evidence")}
-                type="button">{legacyZhCopy.demoTier1.text028}
+                type="button">{content.tier1.robot.next}
 
 
               </button>
@@ -228,32 +228,32 @@ export default function Tier1DemoClient({
 
           {currentStep === "evidence" &&
           <div className="max-w-2xl">
-              <Eyebrow>{legacyZhCopy.demoTier1.text029}</Eyebrow>
-              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{legacyZhCopy.demoTier1.text030}
+              <Eyebrow>{content.tier1.evidence.eyebrow}</Eyebrow>
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{content.tier1.evidence.title}
 
             </h1>
               <div className="mt-8 space-y-6">
                 <div className="border border-border bg-surface p-6">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <p className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text031}
+                      <p className="text-sm font-semibold text-ink">{content.tier1.evidence.agentStatusLabel}
 
                     </p>
                       <p className="mt-1 text-xs text-muted">
                         {agentData.agent_id}
                       </p>
                     </div>
-                    <span className="border border-green-600 bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">{legacyZhCopy.demoTier1.text032}
+                    <span className="border border-green-600 bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">{content.tier1.evidence.activeLabel}
 
                   </span>
                   </div>
                   <div className="mt-4 grid gap-3 text-xs">
-                    <div className="flex justify-between">
-                      <span className="text-muted">{legacyZhCopy.demoTier1.text033}</span>
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <span className="text-muted">{content.tier1.evidence.versionLabel}</span>
                       <span className="font-mono text-ink">{agentData.version}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted">{legacyZhCopy.demoTier1.text034}</span>
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <span className="text-muted">{content.tier1.evidence.heartbeatLabel}</span>
                       <span className="font-mono text-ink">
                         {agentData.last_heartbeat.slice(0, 19).replace("T", " ")}
                       </span>
@@ -262,51 +262,51 @@ export default function Tier1DemoClient({
                 </div>
 
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text035}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.evidence.timeWindowLabel}
 
                 </label>
                   <div className="mt-2 grid gap-3 sm:grid-cols-2">
                     <input
-                    className="border border-border bg-surface p-3 font-mono text-sm text-ink"
+                    className="min-h-11 min-w-0 border border-border bg-surface p-3 font-mono text-sm text-ink"
                     defaultValue={refData.runtime_window.start.slice(0, 19)}
                     type="datetime-local" />
                   
                     <input
-                    className="border border-border bg-surface p-3 font-mono text-sm text-ink"
+                    className="min-h-11 min-w-0 border border-border bg-surface p-3 font-mono text-sm text-ink"
                     defaultValue={refData.runtime_window.end.slice(0, 19)}
                     type="datetime-local" />
                   
                   </div>
-                  <p className="mt-2 text-xs text-muted">{legacyZhCopy.demoTier1.text036}
+                  <p className="mt-2 text-xs text-muted">{content.tier1.evidence.durationLabel}
 
                 </p>
                 </div>
 
                 <div className="border border-atlas-blue/25 bg-surface-blue p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-atlas-blue">{legacyZhCopy.demoTier1.text037}
+                  <p className="text-xs font-semibold uppercase tracking-wider text-atlas-blue">{content.tier1.evidence.lockedLabel}
 
                 </p>
-                  <p className="mt-2 text-sm text-ink">{legacyZhCopy.demoTier1.text038}
+                  <p className="mt-2 text-sm text-ink">{content.tier1.evidence.datasetIdLabel}
                   {" "}
                     <span className="font-mono">{refData.runtime_dataset_id}</span>
                   </p>
-                  <p className="mt-1 text-xs text-muted">{legacyZhCopy.demoTier1.text039}
+                  <p className="mt-1 text-xs text-muted">{content.tier1.evidence.coverageLabel}
 
                 </p>
                 </div>
               </div>
-              <div className="mt-8 flex gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <button
-                className="border border-border bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-surface"
+                className="min-h-11 w-full border border-border bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-surface sm:w-auto"
                 onClick={() => setCurrentStep("robot")}
-                type="button">{legacyZhCopy.demoTier1.text027}
+                type="button">{content.tier1.previous}
 
 
               </button>
                 <button
-                className="bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark"
+                className="min-h-11 w-full bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark sm:w-auto"
                 onClick={() => setCurrentStep("review")}
-                type="button">{legacyZhCopy.demoTier1.text040}
+                type="button">{content.tier1.evidence.next}
 
 
               </button>
@@ -316,34 +316,34 @@ export default function Tier1DemoClient({
 
           {currentStep === "review" &&
           <div className="max-w-2xl">
-              <Eyebrow>{legacyZhCopy.demoTier1.text041}</Eyebrow>
-              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{legacyZhCopy.demoTier1.text042}
+              <Eyebrow>{content.tier1.review.eyebrow}</Eyebrow>
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-ink">{content.tier1.review.title}
 
             </h1>
               <div className="mt-8 space-y-6">
                 <div className="border border-border bg-surface p-6">
-                  <p className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text043}</p>
+                  <p className="text-sm font-semibold text-ink">{content.tier1.review.summaryLabel}</p>
                   <div className="mt-4 space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted">{legacyZhCopy.demoTier1.text044}</span>
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <span className="text-muted">{content.tier1.review.incidentTypeLabel}</span>
                       <span className="font-semibold text-ink">
-                        {refData.incident_type}
+                        {content.data.ref.incidentType}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted">{legacyZhCopy.demoTier1.text045}</span>
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <span className="text-muted">{content.tier1.review.severityLabel}</span>
                       <span className="font-semibold text-ink">
-                        {refData.severity}
+                        {content.data.ref.severity}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted">{legacyZhCopy.demoTier1.text046}</span>
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <span className="text-muted">{content.tier1.review.robotLabel}</span>
                       <span className="font-mono text-xs text-ink">
                         {robotData.serial_number}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted">{legacyZhCopy.demoTier1.text047}</span>
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <span className="text-muted">{content.tier1.review.datasetLabel}</span>
                       <span className="font-mono text-xs text-ink">
                         {refData.runtime_dataset_id}
                       </span>
@@ -352,36 +352,36 @@ export default function Tier1DemoClient({
                 </div>
 
                 <div>
-                  <label className="text-sm font-semibold text-ink">{legacyZhCopy.demoTier1.text048}
+                  <label className="text-sm font-semibold text-ink">{content.tier1.review.routeToLabel}
 
                 </label>
-                  <select className="mt-2 w-full border border-border bg-surface p-3 text-sm text-ink">
-                    <option>{legacyZhCopy.demoTier1.text049}</option>
-                    <option>{legacyZhCopy.demoTier1.text050}</option>
-                    <option>{legacyZhCopy.demoTier1.text051}</option>
+                  <select className="mt-2 min-h-11 w-full border border-border bg-surface p-3 text-sm text-ink">
+                    <option>{content.tier1.review.routeOptions[0]}</option>
+                    <option>{content.tier1.review.routeOptions[1]}</option>
+                    <option>{content.tier1.review.routeOptions[2]}</option>
                   </select>
                 </div>
 
                 <div className="border border-green-600/25 bg-green-50 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-green-700">{legacyZhCopy.demoTier1.text052}
+                  <p className="text-xs font-semibold uppercase tracking-wider text-green-700">{content.tier1.review.readyLabel}
 
                 </p>
-                  <p className="mt-2 text-sm text-ink">{legacyZhCopy.demoTier1.text053}
+                  <p className="mt-2 text-sm text-ink">{content.tier1.review.readyDescription}
 
                 </p>
                 </div>
               </div>
-              <div className="mt-8 flex gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <button
-                className="border border-border bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-surface"
+                className="min-h-11 w-full border border-border bg-white px-6 py-3 text-sm font-semibold text-ink hover:bg-surface sm:w-auto"
                 onClick={() => setCurrentStep("evidence")}
-                type="button">{legacyZhCopy.demoTier1.text027}
+                type="button">{content.tier1.previous}
 
 
               </button>
                 <button
-                className="bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark"
-                type="button">{legacyZhCopy.demoTier1.text054}
+                className="min-h-11 w-full bg-atlas-blue px-6 py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark sm:w-auto"
+                type="button">{content.tier1.review.submit}
 
 
               </button>
@@ -394,17 +394,15 @@ export default function Tier1DemoClient({
         <Section className="bg-surface">
           <div className="border border-atlas-blue/25 bg-surface-blue p-5">
             <div className="flex items-start gap-3">
-              <span className="mt-1 font-mono text-[10px] font-semibold text-atlas-blue">{legacyZhCopy.demoTier1.text055}
+              <span className="mt-1 font-mono text-[10px] font-semibold text-atlas-blue">{content.tier1.demoLabel}
 
               </span>
-              <p className="text-xs leading-6 text-muted">{legacyZhCopy.demoTier1.text056}
+              <p className="text-xs leading-6 text-muted">{content.tier1.demoDescription}
 
               </p>
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>);
 }

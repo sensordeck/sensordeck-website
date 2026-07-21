@@ -2,8 +2,6 @@ import Image from 'next/image';
 import Section from '@/components/website/Section';
 import Button from '@/components/website/Button';
 import Card from '@/components/website/Card';
-import Header from '@/components/website/Header';
-import Footer from '@/components/website/Footer';
 import { getAuxiliaryPagesContent, getHomeContent } from '@/lib/content';
 import { isValidLocale, localizeHref } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
@@ -25,9 +23,7 @@ export default async function ProblemPage({
   const content = auxiliaryContent.problem;
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1 bg-white">
+    <div className="bg-white">
       {/* Hero Section */}
       <Section className="bg-surface">
         <div className="max-w-4xl">
@@ -158,8 +154,6 @@ export default async function ProblemPage({
           </div>
         </div>
       </Section>
-      </main>
-      <Footer />
     </div>
   );
 }

@@ -87,7 +87,6 @@ export function LanguageSwitcher({
     <div className="relative" ref={containerRef}>
       <button
         aria-expanded={isOpen}
-        aria-haspopup="menu"
         aria-label={copy.ariaLabel}
         className="flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-md px-2 text-sm font-medium text-foreground transition-colors hover:text-atlas-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:px-3"
         onClick={() => setIsOpen((open) => !open)}
@@ -101,15 +100,15 @@ export function LanguageSwitcher({
 
       {isOpen ? (
         <div
+          aria-label="语言选择"
           className="absolute right-0 z-[60] mt-1 w-36 overflow-hidden rounded-lg border border-border bg-white shadow-lg"
-          role="menu"
+          role="group"
         >
           {locales.map((locale) => (
             <button
               aria-label={copy.switchTo[locale]}
               key={locale}
               onClick={() => switchLocale(locale)}
-              role="menuitem"
               type="button"
               className={`flex min-h-11 w-full items-center px-4 text-left text-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-atlas-blue ${
                 locale === currentLocale

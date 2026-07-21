@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import SensorFaeDemoClient from "./SensorFaeDemoClient";
-import { getLegacyTranslations } from "@/lib/content";
+import { getDemoContent } from "@/lib/content";
 import { isValidLocale } from "@/lib/i18n";
 
 export default async function SensorFaeDemoPage({
@@ -14,7 +14,7 @@ export default async function SensorFaeDemoPage({
     notFound();
   }
 
-  return (
-    <SensorFaeDemoClient translations={await getLegacyTranslations(lang)} />
-  );
+  const content = await getDemoContent(lang);
+
+  return <SensorFaeDemoClient content={content} />;
 }

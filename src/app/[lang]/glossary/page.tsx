@@ -1,6 +1,4 @@
 import { notFound } from "next/navigation";
-import Header from "@/components/website/Header";
-import Footer from "@/components/website/Footer";
 import { isValidLocale } from "@/lib/i18n";
 import { glossaryZh } from "@/content/zh/glossary";
 import { glossaryEn } from "@/content/en/glossary";
@@ -30,10 +28,8 @@ export default async function GlossaryPage({
   );
 
   return (
-    <div className="flex min-h-full flex-1 flex-col bg-white">
-      <Header />
+    <div className="bg-white">
 
-      <main className="flex-1">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
@@ -73,9 +69,7 @@ export default async function GlossaryPage({
             ))}
           </div>
         </div>
-      </main>
 
-      <Footer />
     </div>
   );
 }

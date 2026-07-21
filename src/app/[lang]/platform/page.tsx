@@ -1,7 +1,5 @@
 import { AnimatedSection } from "@/components/website/AnimatedSection";
 import Button from "@/components/website/Button";
-import Header from "@/components/website/Header";
-import Footer from "@/components/website/Footer";
 import { getPlatformContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
 import { notFound } from "next/navigation";
@@ -21,8 +19,7 @@ export default async function PlatformPage({
 
   return (
     <>
-      <Header />
-      <div className="min-h-screen bg-white">
+      <div className="bg-white">
         {/* Hero Section */}
         <section className="border-b border-border py-10 sm:py-14 md:py-20">
           <AnimatedSection className="mx-auto max-w-screen-lg px-4 sm:px-6">
@@ -190,7 +187,6 @@ export default async function PlatformPage({
           </AnimatedSection>
         </section>
       </div>
-      <Footer />
     </>
   );
 }

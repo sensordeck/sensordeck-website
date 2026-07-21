@@ -1,6 +1,6 @@
+import Link from "next/link";
+
 import Button from "@/components/website/Button";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import { getProductsContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -144,10 +144,8 @@ export default async function RuntimeSensorGovernancePage({
   }));
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      <Header />
+    <div className="bg-white">
 
-      <main className="flex-1">
         {/* Hero */}
         <Section className="bg-white">
           <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
@@ -594,18 +592,16 @@ export default async function RuntimeSensorGovernancePage({
                 {productsContent.ctaText}
               </Button>
 
-              <a
+              <Link
                 href={localizeHref(lang, "/products/runtime-investigation")}
                 className="inline-flex min-h-11 w-full items-center justify-center border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto">{copy.text079}
 
 
-              </a>
+              </Link>
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

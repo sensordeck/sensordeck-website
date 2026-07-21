@@ -1,6 +1,4 @@
 import { AnimatedSection } from "@/components/website/AnimatedSection";
-import Header from "@/components/website/Header"
-import Footer from "@/components/website/Footer"
 import Button from "@/components/website/Button"
 import { getTechnologyContent } from "@/lib/content"
 import { isValidLocale, localizeHref } from "@/lib/i18n"
@@ -20,8 +18,7 @@ export default async function TechnologyPage({
   const { hero, sections, cta } = technologyContent
 
   return (
-    <div className="min-h-screen bg-paper font-sans text-ink">
-      <Header />
+    <div className="bg-paper font-sans text-ink">
 
       {/* Hero */}
       <section className="mx-auto max-w-screen-xl px-6 py-24 sm:px-8 lg:px-12">
@@ -169,7 +166,6 @@ export default async function TechnologyPage({
         </AnimatedSection>
       </section>
 
-      <Footer />
     </div>
   )
 }

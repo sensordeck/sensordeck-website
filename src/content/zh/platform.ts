@@ -1,3 +1,5 @@
+import type { PlatformContent } from "@/lib/content-types";
+
 export const platformContent = {
   ui: {
     capabilitiesTitle: "平台能力",
@@ -178,4 +180,4 @@ export const platformContent = {
     primaryButton: "申请演示",
     secondaryButton: "阅读技术白皮书",
   },
-};
+} satisfies PlatformContent;

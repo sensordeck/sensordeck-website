@@ -1,11 +1,10 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import Link from "next/link";
 
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
-import type { ContactContent } from "@/content/en/contact";
+import type { ContactContent } from "@/lib/content-types";
 
 const inputClass =
   "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-base text-ink outline-none placeholder:text-muted sm:text-sm " +
@@ -79,10 +78,8 @@ export default function ContactFormClient({
   }
 
   return (
-    <div className="flex min-h-full flex-1 flex-col bg-white">
-      <Header />
+    <div className="bg-white">
 
-      <main>
         <Section id="contact-hero" className="bg-white">
           <div className="max-w-4xl">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
@@ -201,12 +198,12 @@ export default function ContactFormClient({
               <div className="mt-4 space-y-2 text-xs text-muted">
                 <p>
                   {content.privacyNotice}{" "}
-                  <a
+                  <Link
                     href={`/${locale}/privacy`}
                     className="underline hover:text-atlas-blue"
                   >
                     {content.privacyPolicyLink}
-                  </a>{" "}
+                  </Link>{" "}
                   {content.privacyNoticeSuffix}
                 </p>
                 <p>{content.dataProtectionNote}</p>
@@ -300,9 +297,7 @@ export default function ContactFormClient({
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

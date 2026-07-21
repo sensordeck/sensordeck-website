@@ -1,3 +1,5 @@
+import type { CompanyContent } from "@/lib/content-types";
+
 export const companyContent = {
   hero: {
     eyebrow: "SensorDeck / 公司",
@@ -85,6 +87,4 @@ export const companyContent = {
       "无论您正在构建传感器、运营机器人车队，还是负责调查现场事件，都可以从一段具体的运行时边界开始讨论。",
     button: "申请演示",
   },
-} as const;
-
-export type CompanyContent = typeof companyContent;
+} satisfies CompanyContent;

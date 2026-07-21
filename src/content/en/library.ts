@@ -2,6 +2,8 @@
  * Library Page Content
  */
 
+import type { LibraryContent } from "@/lib/content-types";
+
 export const libraryContent = {
   ui: {
     breadcrumbLabel: "Breadcrumb",
@@ -284,6 +286,4 @@ export const libraryContent = {
       href: "/#contact-form",
     },
   },
-} as const;
-
-export type LibraryContent = typeof libraryContent;
+} satisfies LibraryContent;

@@ -3,6 +3,8 @@
  * For root path / enterprise website display
  */
 
+import type { HomepageContent } from "@/lib/content-types";
+
 export const homepageContent = {
   hero: {
     eyebrow: "SensorDeck",
@@ -151,6 +153,4 @@ export const homepageContent = {
       href: "mailto:contact@sensordeck.tech",
     },
   },
-} as const;
-
-export type HomepageContent = typeof homepageContent;
+} satisfies HomepageContent;

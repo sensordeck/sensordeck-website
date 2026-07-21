@@ -1,6 +1,6 @@
-import type { ProductContent } from "@/content/zh/products";
+import type { ProductContent } from "@/lib/content-types";
 
-const productsContent: ProductContent = {
+const productsContent = {
   eyebrow: "Atlas Products",
   heroTitle: `Two product lines,
 one shared runtime governance infrastructure`,
@@ -123,6 +123,6 @@ one shared runtime governance infrastructure`,
     runtimeInvestigation: "Runtime Investigation",
   },
   ctaText: "Request Product Architecture Demo",
-};
+} satisfies ProductContent;
 
 export default productsContent;

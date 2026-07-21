@@ -1,3 +1,5 @@
+import type { HomeContent } from "@/lib/content-types";
+
 const homeContent = {
   heroTitle: "Runtime Governance Infrastructure for Robotics",
 
@@ -413,16 +415,6 @@ heroDescription: "",
     illustrativeDemoData: "Illustrative demo data only",
     contactUs: "Contact Us",
   },
-} as const;
-
-type Widen<T> = T extends string
-  ? string
-  : T extends readonly (infer U)[]
-    ? Widen<U>[]
-    : T extends object
-      ? { -readonly [K in keyof T]: Widen<T[K]> }
-      : T;
-
-export type HomeContent = Widen<typeof homeContent>;
+} satisfies HomeContent;
 
 export default homeContent;

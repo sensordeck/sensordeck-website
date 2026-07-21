@@ -1,56 +1,6 @@
-export interface ProductOverview {
-  name: string;
-  audience: string;
-  description: string;
-  href: string;
-  valuePoints: string[];
+import type { ProductContent } from "@/lib/content-types";
 
-  // 保留给两个详细产品页面使用
-  coreModules: string[];
-  lifecycle: string[];
-}
-
-export interface CollaborationBridge {
-  eyebrow: string;
-  title: string;
-  description: string;
-  steps: string[];
-  closingStatement: string;
-}
-
-export interface ProductContent {
-  eyebrow: string;
-  heroTitle: string;
-  heroSubtitle: string;
-  heroStatement: string;
-
-  architecture: {
-    eyebrow: string;
-    title: string;
-    description: string;
-    imageSrc: string;
-    imageAlt: string;
-  };
-
-  productA: ProductOverview;
-  productB: ProductOverview;
-
-  collaborationBridge: CollaborationBridge;
-
-  finalValue: {
-    title: string;
-    description: string;
-  };
-
-  ui: {
-    viewProduct: string;
-    sensorGovernance: string;
-    runtimeInvestigation: string;
-  };
-  ctaText: string;
-}
-
-const productsContent: ProductContent = {
+const productsContent = {
   eyebrow: "Atlas 产品",
  heroTitle: `两条产品线,
 一个共享运行时治理基础设施`,
@@ -187,6 +137,6 @@ const productsContent: ProductContent = {
     runtimeInvestigation: "Runtime Investigation",
   },
   ctaText: "申请演示",
-};
+} satisfies ProductContent;
 
 export default productsContent;

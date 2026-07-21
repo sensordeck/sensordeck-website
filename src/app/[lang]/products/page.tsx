@@ -1,8 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Button from "@/components/website/Button";
-import Footer from "@/components/website/Footer";
-import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import { getProductsContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -29,10 +28,8 @@ export default async function ProductsPage({
   ];
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      <Header />
+    <div className="bg-white">
 
-      <main className="flex-1">
         {/* Hero */}
         <Section className="bg-white">
           <div className="mx-auto max-w-5xl py-4 text-center sm:px-4 sm:py-8 lg:py-12">
@@ -139,13 +136,13 @@ export default async function ProductsPage({
                     ))}
                   </ul>
 
-                  <a
+                  <Link
                     href={localizeHref(lang, product.href)}
                     className="mt-8 inline-flex min-h-11 w-fit items-center gap-2 border-t border-border pt-4 text-sm font-semibold text-atlas-blue transition-colors hover:text-atlas-blue-dark"
                   >
                     {productsContent.ui.viewProduct}
                     <ArrowIcon />
-                  </a>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -245,9 +242,7 @@ export default async function ProductsPage({
             </div>
           </div>
         </Section>
-      </main>
 
-      <Footer />
     </div>
   );
 }

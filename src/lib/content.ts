@@ -1,75 +1,107 @@
-import type { HomeContent } from "@/content/en/home";
-import type { AuxiliaryPagesContent } from "@/content/en/auxiliary-pages";
-import type { CompanyContent } from "@/content/en/company";
-import type { ContactContent } from "@/content/en/contact";
-import type { LibraryContent } from "@/content/en/library";
-import type { PlatformContent } from "@/content/en/platform";
-import type { ProductContent } from "@/content/zh/products";
-import type { TechnologyContent } from "@/content/en/technology";
+import type {
+  AuxiliaryPagesContent,
+  CompanyContent,
+  ContactContent,
+  HomeContent,
+  HomepageContent,
+  LibraryContent,
+  PlatformContent,
+  ProductContent,
+  TechnologyContent,
+} from "./content-types";
+import type { DemoContent } from "@/content/zh/demo";
 import type { Locale } from "./i18n";
 
-export async function getHomeContent(locale: Locale): Promise<HomeContent> {
-  const content = await import(`@/content/${locale}/home`);
-  return content.default as HomeContent;
+interface ContentLoaders {
+  home: () => Promise<HomeContent>;
+  homepage: () => Promise<HomepageContent>;
+  technology: () => Promise<TechnologyContent>;
+  platform: () => Promise<PlatformContent>;
+  library: () => Promise<LibraryContent>;
+  products: () => Promise<ProductContent>;
+  company: () => Promise<CompanyContent>;
+  contact: () => Promise<ContactContent>;
+  auxiliaryPages: () => Promise<AuxiliaryPagesContent>;
+  demo: () => Promise<DemoContent>;
 }
 
-export async function getHomepageContent(locale: Locale) {
-  const content = await import(`@/content/${locale}/homepage`);
-  return content.homepageContent;
+const contentLoaders = {
+  zh: {
+    home: async () => (await import("@/content/zh/home")).default,
+    homepage: async () =>
+      (await import("@/content/zh/homepage")).homepageContent,
+    technology: async () =>
+      (await import("@/content/zh/technology")).technologyContent,
+    platform: async () =>
+      (await import("@/content/zh/platform")).platformContent,
+    library: async () => (await import("@/content/zh/library")).libraryContent,
+    products: async () => (await import("@/content/zh/products")).default,
+    company: async () => (await import("@/content/zh/company")).companyContent,
+    contact: async () => (await import("@/content/zh/contact")).contactContent,
+    auxiliaryPages: async () =>
+      (await import("@/content/zh/auxiliary-pages")).auxiliaryPagesContent,
+    demo: async () => (await import("@/content/zh/demo")).demoContent,
+  },
+  en: {
+    home: async () => (await import("@/content/en/home")).default,
+    homepage: async () =>
+      (await import("@/content/en/homepage")).homepageContent,
+    technology: async () =>
+      (await import("@/content/en/technology")).technologyContent,
+    platform: async () =>
+      (await import("@/content/en/platform")).platformContent,
+    library: async () => (await import("@/content/en/library")).libraryContent,
+    products: async () => (await import("@/content/en/products")).default,
+    company: async () => (await import("@/content/en/company")).companyContent,
+    contact: async () => (await import("@/content/en/contact")).contactContent,
+    auxiliaryPages: async () =>
+      (await import("@/content/en/auxiliary-pages")).auxiliaryPagesContent,
+    demo: async () => (await import("@/content/en/demo")).demoContent,
+  },
+} satisfies Record<Locale, ContentLoaders>;
+
+export function getHomeContent(locale: Locale): Promise<HomeContent> {
+  return contentLoaders[locale].home();
 }
 
-export async function getTechnologyContent(
+export function getHomepageContent(
+  locale: Locale,
+): Promise<HomepageContent> {
+  return contentLoaders[locale].homepage();
+}
+
+export function getTechnologyContent(
   locale: Locale,
 ): Promise<TechnologyContent> {
-  const content = await import(`@/content/${locale}/technology`);
-  return content.technologyContent as TechnologyContent;
+  return contentLoaders[locale].technology();
 }
 
-export async function getPlatformContent(
-  locale: Locale,
-): Promise<PlatformContent> {
-  const content = await import(`@/content/${locale}/platform`);
-  return content.platformContent as PlatformContent;
+export function getPlatformContent(locale: Locale): Promise<PlatformContent> {
+  return contentLoaders[locale].platform();
 }
 
-export async function getLibraryContent(
-  locale: Locale,
-): Promise<LibraryContent> {
-  const content = await import(`@/content/${locale}/library`);
-  return content.libraryContent as LibraryContent;
+export function getLibraryContent(locale: Locale): Promise<LibraryContent> {
+  return contentLoaders[locale].library();
 }
 
-export async function getProductsContent(
-  locale: Locale,
-): Promise<ProductContent> {
-  const content = await import(`@/content/${locale}/products`);
-  return content.default as ProductContent;
+export function getProductsContent(locale: Locale): Promise<ProductContent> {
+  return contentLoaders[locale].products();
 }
 
-export async function getCompanyContent(
-  locale: Locale,
-): Promise<CompanyContent> {
-  const content = await import(`@/content/${locale}/company`);
-  return content.companyContent as CompanyContent;
+export function getCompanyContent(locale: Locale): Promise<CompanyContent> {
+  return contentLoaders[locale].company();
 }
 
-export async function getContactContent(
-  locale: Locale,
-): Promise<ContactContent> {
-  const content = await import(`@/content/${locale}/contact`);
-  return content.contactContent as ContactContent;
+export function getContactContent(locale: Locale): Promise<ContactContent> {
+  return contentLoaders[locale].contact();
 }
 
-export async function getAuxiliaryPagesContent(
+export function getAuxiliaryPagesContent(
   locale: Locale,
 ): Promise<AuxiliaryPagesContent> {
-  const content = await import(`@/content/${locale}/auxiliary-pages`);
-  return content.auxiliaryPagesContent as AuxiliaryPagesContent;
+  return contentLoaders[locale].auxiliaryPages();
 }
 
-export async function getLegacyTranslations(
-  locale: Locale,
-): Promise<Record<string, string>> {
-  const content = await import(`@/content/${locale}/legacy-translations`);
-  return content.legacyTranslations as Record<string, string>;
+export function getDemoContent(locale: Locale): Promise<DemoContent> {
+  return contentLoaders[locale].demo();
 }

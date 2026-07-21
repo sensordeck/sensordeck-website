@@ -145,3 +145,6 @@ vite.config.ts.timestamp-*
 
 # CodeGraph index
 .codegraph/
+
+# Playwright artifacts
+output/playwright/

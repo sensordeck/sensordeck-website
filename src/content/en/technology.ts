@@ -1,3 +1,5 @@
+import type { TechnologyContent } from "@/lib/content-types";
+
 export const technologyContent = {
   hero: {
     title: "Technical Architecture",
@@ -172,6 +174,4 @@ Future Reuse`,
       href: "/demo",
     },
   },
-}
-
-export type TechnologyContent = typeof technologyContent;
+} satisfies TechnologyContent;

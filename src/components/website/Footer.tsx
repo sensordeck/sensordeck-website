@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { getCurrentLocale, localizeHref, type Locale } from "@/lib/i18n";
@@ -97,7 +98,7 @@ export default function Footer() {
     <footer id="company" className="bg-ink text-white">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.25fr_2fr] lg:px-10 lg:py-20">
         <div className="max-w-sm">
-          <a
+          <Link
             aria-label={copy.backToTopAriaLabel}
             className="inline-flex min-h-11 items-center"
             href={localizeHref(currentLocale, "/#top")}
@@ -110,7 +111,7 @@ export default function Footer() {
               unoptimized
               className="h-8 w-auto brightness-0 invert"
             />
-          </a>
+          </Link>
           <p className="mt-6 text-base leading-8 text-white/75">
             {copy.description}
           </p>
@@ -129,18 +130,37 @@ export default function Footer() {
                 className="mt-4 grid gap-3"
                 aria-label={copy.footerLinksLabel(group.title)}
               >
-                {group.links.map((link) => (
-                  <a
-                    className="inline-flex min-h-11 w-fit items-center text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
-                    style={{ transitionDuration: '150ms', transitionTimingFunction: 'var(--ease-out)' }}
-                    href={localizeHref(currentLocale, link.href)}
-                    key={link.label}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {group.links.map((link) => {
+                  const href = localizeHref(currentLocale, link.href);
+                  const className =
+                    "inline-flex min-h-11 w-fit items-center text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue";
+                  const style = {
+                    transitionDuration: "150ms",
+                    transitionTimingFunction: "var(--ease-out)",
+                  };
+
+                  return link.href.startsWith("http") ? (
+                    <a
+                      className={className}
+                      href={href}
+                      key={link.label}
+                      rel="noreferrer"
+                      style={style}
+                      target="_blank"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      className={className}
+                      href={href}
+                      key={link.label}
+                      style={style}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
           ))}

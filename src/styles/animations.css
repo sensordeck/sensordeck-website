@@ -360,3 +360,30 @@
   animation: slideDownOut var(--duration-normal) var(--ease-snappy);
 }
 
+/*
+ * AnimatedSection is visible in SSR output. Motion is enabled only after
+ * client-side capability checks add the will-animate class.
+ */
+.animated-section.will-animate {
+  transition:
+    opacity var(--duration-normal) var(--ease-sensordeck),
+    translate var(--duration-normal) var(--ease-sensordeck);
+}
+
+.animated-section.will-animate:not(.in-view) {
+  opacity: 0;
+  translate: 0 1.25rem;
+}
+
+.animated-section.will-animate.in-view {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-section.will-animate {
+    opacity: 1;
+    translate: 0 0;
+    transition: none;
+  }
+}
