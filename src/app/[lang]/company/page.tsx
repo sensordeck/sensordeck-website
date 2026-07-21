@@ -35,60 +35,63 @@ export default async function CompanyPage({
       <Header />
 
       <main>
-     <Section
+   <section
   id="company-hero"
-  className="relative overflow-hidden bg-white py-0"
+  className="relative overflow-hidden border-b border-border bg-white"
 >
-  {/* Desktop background */}
- <div
-  className="absolute inset-y-0 right-0 hidden w-[58%] bg-contain bg-right bg-no-repeat lg:block"
-  style={{
-    backgroundImage: "url('/images/about-us-desktop.png')",
-  }}
-  aria-hidden="true"
-/>
-
-  {/* Desktop soft transition between text and image */}
+  {/* Mobile background */}
   <div
-    className="absolute inset-y-0 left-[34%] hidden w-[28%] bg-gradient-to-r from-white via-white/85 to-transparent lg:block"
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
+    style={{
+      backgroundImage: "url('/images/about-us-mobile.png')",
+    }}
+    aria-hidden="true"
+  />
+
+  {/* Desktop background */}
+  <div
+    className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block"
+    style={{
+      backgroundImage: "url('/images/about-us-desktop.png')",
+    }}
+    aria-hidden="true"
+  />
+
+  {/* Mobile readability overlay */}
+  <div
+    className="absolute inset-x-0 top-0 h-[58%] bg-gradient-to-b from-white via-white/95 to-transparent lg:hidden"
     aria-hidden="true"
   />
 
   <AnimatedSection>
-    <div className="relative z-10 grid min-h-[280px] items-center lg:grid-cols-[0.9fr_1.1fr]">
-      {/* Left content */}
-     <div className="max-w-[660px] py-8 lg:py-9">
+    <div className="relative z-10 mx-auto min-h-[720px] w-full max-w-7xl px-6 lg:min-h-[430px] lg:px-8">
+      <div className="max-w-[650px] pb-8 pt-12 lg:py-14">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
 
-        <h1 className="heading-title mt-5 max-w-3xl text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        <h1 className="heading-title mt-4 max-w-3xl text-5xl font-semibold leading-[1.04] tracking-tight text-ink md:text-6xl lg:text-7xl">
           {hero.title}
         </h1>
 
-        <p className="heading-description mt-7 max-w-[620px] text-xl leading-9 text-muted md:text-2xl">
+        <p className="heading-description mt-6 max-w-[610px] text-lg leading-8 text-muted md:text-xl md:leading-9">
           {hero.description}
         </p>
 
         <div
-          className="stagger-item mt-9 max-w-[590px] border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted"
+          className="stagger-item mt-7 max-w-[570px] border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted"
           style={{ animationDelay: "240ms" }}
         >
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
             {hero.statementLabel}
           </p>
 
-          <p className="mt-3">
-            {hero.statement}
-          </p>
+          <p className="mt-3">{hero.statement}</p>
         </div>
       </div>
-
-      {/* Right side reserved for desktop illustration */}
-      <div className="hidden lg:block" aria-hidden="true" />
     </div>
   </AnimatedSection>
-</Section>
+</section>
 
         <Section id="mission" className="bg-surface section-enter">
           <AnimatedSection>
