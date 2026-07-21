@@ -101,7 +101,7 @@ export default function Header() {
         <div className="ml-auto hidden items-center gap-4 lg:flex">
           <NavigationLinks />
           <LanguageToggle />
-          <Button href="/#request-demo" className="min-h-10 px-3.5 py-2 text-xs">
+          <Button href="/request-demo" className="min-h-10 px-3.5 py-2 text-xs">
             申请演示
           </Button>
         </div>
@@ -119,7 +119,7 @@ export default function Header() {
             </summary>
             <div className="absolute right-0 top-12 w-64 rounded-lg border border-border bg-white p-4 shadow-[0_12px_32px_rgba(10,26,42,0.12)]">
               <NavigationLinks mobile />
-              <Button href="/#request-demo" className="mt-4 w-full">
+              <Button href="/request-demo" className="mt-4 w-full">
                 申请演示
               </Button>
             </div>

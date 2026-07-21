@@ -14,7 +14,7 @@ const footerGroups = [
     links: [
       { label: "关于", href: "/company" },
       { label: "原则", href: "#evidence" },
-      { label: "联系", href: "#request-demo" },
+      { label: "联系", href: "/request-demo" },
     ],
   },
   {
