@@ -5,7 +5,7 @@ import Eyebrow from "@/components/website/Eyebrow";
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
-import { translateLegacyTree } from "@/lib/legacy-i18n";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
+import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
 
 type TimeRange = "30" | "90" | "180";
 type RoiMode = "conservative" | "expected" | "actual";
@@ -35,7 +35,7 @@ export default function CTODemoClient({
     estimated_cost_saved: roiMode === "conservative" ? 168 : roiMode === "expected" ? 252 : 316
   };
 
-  return translateLegacyTree(
+  return (
     <div className="min-h-screen bg-paper font-sans text-ink">
       <Header />
 
@@ -355,6 +355,5 @@ export default function CTODemoClient({
       </main>
 
       <Footer />
-    </div>,
-    translations);
+    </div>);
 }

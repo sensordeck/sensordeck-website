@@ -85,8 +85,7 @@ export default async function HomePage({
   alt="Atlas Runtime Governance"
   fill
   priority
-  quality={100}
-  unoptimized
+  sizes="(max-width: 1023px) 0vw, 100vw"
   className="hidden lg:block object-cover"
   style={{ objectPosition: "left" }}
 />
@@ -97,8 +96,7 @@ export default async function HomePage({
   alt="Atlas Runtime Governance"
   fill
   priority
-  quality={100}
-  unoptimized
+  sizes="(max-width: 1023px) 100vw, 0vw"
   className="block lg:hidden object-cover"
   style={{ objectPosition: "center center" }}
 />
@@ -208,7 +206,6 @@ export default async function HomePage({
                 alt={homeContent.ui.categoryImageAlt}
                 width={2000}
                 height={1200}
-                quality={100}
                 className="w-full h-auto"
               />
             </div>
@@ -239,9 +236,7 @@ export default async function HomePage({
                 alt={homeContent.ui.problemImageAlt}
                 width={2065}
                 height={762}
-                quality={100}
                 className="w-full h-auto"
-                unoptimized
               />
             </div>
           </div>

@@ -45,5 +45,9 @@ export default async function LangLayout({
     notFound();
   }
 
-  return <>{children}</>;
+  return (
+    <html lang={lang} className="h-full antialiased" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  );
 }

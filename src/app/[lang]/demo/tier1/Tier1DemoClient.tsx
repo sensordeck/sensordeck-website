@@ -8,7 +8,7 @@ import Section from "@/components/website/Section";
 import agentData from "@/data/demo/agent.json";
 import refData from "@/data/demo/ref.json";
 import robotData from "@/data/demo/robot.json";
-import { translateLegacyTree } from "@/lib/legacy-i18n";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
+import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
 
 const STEPS = ["incident", "robot", "evidence", "review"] as const;
 type Step = (typeof STEPS)[number];
@@ -22,7 +22,7 @@ export default function Tier1DemoClient({
 
   const stepIndex = STEPS.indexOf(currentStep);
 
-  return translateLegacyTree(
+  return (
     <div className="min-h-screen bg-paper font-sans text-ink">
       <Header />
 
@@ -406,6 +406,5 @@ export default function Tier1DemoClient({
       </main>
 
       <Footer />
-    </div>,
-    translations);
+    </div>);
 }

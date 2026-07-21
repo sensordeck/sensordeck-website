@@ -9,7 +9,7 @@ import refData from "@/data/demo/ref.json";
 import candidatesData from "@/data/demo/candidates.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
 import epData from "@/data/demo/evidence-pack.json";
-import { translateLegacyTree } from "@/lib/legacy-i18n";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
+import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
 
 type Window = "pre_guard" | "baseline" | "deviation" | "recovery" | "post_guard";
 
@@ -37,7 +37,7 @@ export default function InvestigationDemoClient({
 
   const candidate = candidatesData.candidates.find((c) => c.id === selectedCandidate);
 
-  return translateLegacyTree(
+  return (
     <div className="min-h-screen bg-paper font-sans text-ink">
       <Header />
 
@@ -342,6 +342,5 @@ export default function InvestigationDemoClient({
       </main>
 
       <Footer />
-    </div>,
-    translations);
+    </div>);
 }

@@ -9,7 +9,7 @@ import refData from "@/data/demo/ref.json";
 import robotData from "@/data/demo/robot.json";
 import epData from "@/data/demo/evidence-pack.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
-import { translateLegacyTree } from "@/lib/legacy-i18n";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
+import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
 
 const irStatusLabels: Record<string, string> = {
   matched_known_pattern: legacyZhCopy.demoSensorFae.text001,
@@ -31,7 +31,7 @@ export default function SensorFaeDemoClient({
 
   const sensorRga = historicalRgaData.recalled_cases[0];
 
-  return translateLegacyTree(
+  return (
     <div className="min-h-screen bg-paper font-sans text-ink">
       <Header />
 
@@ -304,6 +304,5 @@ export default function SensorFaeDemoClient({
       </main>
 
       <Footer />
-    </div>,
-    translations);
+    </div>);
 }

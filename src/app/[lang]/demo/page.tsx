@@ -8,7 +8,6 @@ import customerData from "@/data/demo/customer.json";
 import refData from "@/data/demo/ref.json";
 import { getLegacyTranslations } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
-import { translateLegacyTree } from "@/lib/legacy-i18n";
 import { notFound } from "next/navigation";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
 
 function ArrowLabel() {
@@ -70,7 +69,7 @@ export default async function DemoIndexPage({
 
   const translations = await getLegacyTranslations(lang);
 
-  return translateLegacyTree(
+  return (
     <div className="min-h-screen bg-paper font-sans text-ink">
       <Header />
 
@@ -221,6 +220,5 @@ export default async function DemoIndexPage({
       </main>
 
       <Footer />
-    </div>,
-    translations);
+    </div>);
 }
