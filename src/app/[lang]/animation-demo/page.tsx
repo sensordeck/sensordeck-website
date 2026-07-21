@@ -1,4 +1,6 @@
 import AnimatedCard from '@/components/website/AnimatedCard';
+import Header from '@/components/website/Header';
+import Footer from '@/components/website/Footer';
 import { getAuxiliaryPagesContent } from '@/lib/content';
 import { isValidLocale } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
@@ -16,7 +18,9 @@ export default async function AnimationDemoPage({
   const { animationDemo: content } = await getAuxiliaryPagesContent(lang);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 to-indigo-700 flex items-center justify-center">
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1 min-h-screen bg-gradient-to-br from-purple-600 to-indigo-700 flex items-center justify-center">
       <div className="text-center text-white">
         <h1 className="text-4xl font-bold mb-4">{content.title}</h1>
         <p className="text-lg opacity-80 mb-8">
@@ -40,6 +44,8 @@ export default async function AnimationDemoPage({
       <AnimatedCard
         lines={[...content.cardLines]}
       />
+      </main>
+      <Footer />
     </div>
   );
 }
