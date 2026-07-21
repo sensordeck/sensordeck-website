@@ -619,13 +619,13 @@ All four pages use one connected customer story and shared static JSON.
 ### Shared demo identity
 
 ```text
-Customer: Pudu Robotics
-Robot SN: PUDU-T300-7F3A-0021
-Atlas Agent ID: AGT-7F3A-7A21
+Customer: Demo Robotics
+Robot SN: DEMO-T300-0001-XXXX
+Atlas Agent ID: DEMO-AGT-0001-XXXX
 REF ID: REF-2026-0716-0012
 Primary EP: EP-C03
-EGP ID: EGP-HESAI-2026-0042
-Sensor FAE: Wang Kai
+EGP ID: EGP-DEMO-SENSOR-2030-0001
+Sensor FAE: Alice Demo
 ```
 
 ### Shared UI shell

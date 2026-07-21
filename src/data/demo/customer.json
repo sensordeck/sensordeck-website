@@ -1,9 +1,9 @@
 {
-  "name": "Pudu Robotics",
-  "id": "CUST-PUDU-2024",
+  "name": "Demo Robotics",
+  "id": "CUST-DEMO-0001",
   "type": "OEM",
   "industry": "Commercial Service Robotics",
-  "fleet_size": 847,
-  "active_agents": 23,
-  "deployment_regions": ["China", "Southeast Asia", "Europe", "North America"]
+  "fleet_size": 120,
+  "active_agents": 12,
+  "deployment_regions": ["Example Region A", "Example Region B", "Test Region"]
 }

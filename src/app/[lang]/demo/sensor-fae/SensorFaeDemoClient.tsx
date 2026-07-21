@@ -6,6 +6,7 @@ import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
 import refData from "@/data/demo/ref.json";
+import robotData from "@/data/demo/robot.json";
 import epData from "@/data/demo/evidence-pack.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
 import { translateLegacyTree } from "@/lib/legacy-i18n";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
@@ -43,9 +44,9 @@ export default function SensorFaeDemoClient({
               <span className="text-sm text-muted">{legacyZhCopy.demoSensorFae.text007}</span>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-xs text-muted">Wang Kai</span>
+              <span className="text-xs text-muted">{refData.sensor_fae.name}</span>
               <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
-                Hesai FAE
+                {refData.sensor_fae.vendor} FAE
               </span>
             </div>
           </div>
@@ -69,7 +70,9 @@ export default function SensorFaeDemoClient({
               </div>
               <div>
                 <span className="text-muted">{legacyZhCopy.demoSensorFae.text008}</span>
-                <span className="ml-2 text-xs font-semibold text-ink">Hesai Pandar XT32</span>
+                <span className="ml-2 text-xs font-semibold text-ink">
+                  {robotData.sensors.lidar.manufacturer} {robotData.sensors.lidar.model}
+                </span>
               </div>
             </div>
             <span className="border border-green-600 bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">{legacyZhCopy.demoSensorFae.text009}

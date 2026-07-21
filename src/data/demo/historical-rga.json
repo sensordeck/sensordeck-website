@@ -1,11 +1,11 @@
 {
   "recalled_cases": [
     {
-      "id": "RGA-2025-11-0203",
+      "id": "RGA-DEMO-0001",
       "match_type": "strong_candidate",
       "similarity_score": 0.87,
-      "original_ref": "REF-2025-1128-0203",
-      "original_robot": "PUDU-T300-6D2C-0047",
+      "original_ref": "REF-DEMO-HIST-0001",
+      "original_robot": "DEMO-T300-HIST-0001",
       "surface": "USB 总线时序",
       "pattern": "高带宽传感器运行期间出现 USB 3.0 总线重置",
       "resolution_summary": "确认 USB 线缆存在 EMI 敏感性。更换屏蔽线缆并增加磁芯。",
@@ -13,11 +13,11 @@
       "environment_difference": "机器人不同，传感器型号相同，部署地点不同"
     },
     {
-      "id": "RGA-2026-02-0089",
+      "id": "RGA-DEMO-0002",
       "match_type": "partial_candidate",
       "similarity_score": 0.64,
-      "original_ref": "REF-2026-0215-0089",
-      "original_robot": "PUDU-T300-8A1F-0033",
+      "original_ref": "REF-DEMO-HIST-0002",
+      "original_robot": "DEMO-T300-HIST-0002",
       "surface": "电源电压",
       "pattern": "12V 电源轨波动与 USB 设备重置相关",
       "resolution_summary": "电源电容老化。在预防性维护中更换电源。",
@@ -25,11 +25,11 @@
       "environment_difference": "机器人更旧（2024 年部署），运行时长更高"
     },
     {
-      "id": "RGA-2025-09-0156",
+      "id": "RGA-DEMO-0003",
       "match_type": "related_pattern",
       "similarity_score": 0.51,
-      "original_ref": "REF-2025-0923-0156",
-      "original_robot": "PUDU-T200-4C8B-0091",
+      "original_ref": "REF-DEMO-HIST-0003",
+      "original_robot": "DEMO-T200-HIST-0003",
       "surface": "ROS2 主题时序",
       "pattern": "定位主题频率下降，但未发现传感器硬件故障",
       "resolution_summary": "高负载期间 CPU 降频。改善散热并调整任务优先级。",

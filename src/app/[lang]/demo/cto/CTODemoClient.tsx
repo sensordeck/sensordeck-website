@@ -151,7 +151,9 @@ export default function CTODemoClient({
             <div className="border border-border bg-white p-6">
               <p className="text-xs text-muted">{legacyZhCopy.demoCto.text026}</p>
               <p className="mt-2 text-4xl font-semibold text-ink">5</p>
-              <p className="mt-1 text-xs text-muted">Hesai, Hikvision, Xsens, RoboSense, Velodyne</p>
+              <p className="mt-1 text-xs text-muted">
+                Example Sensor Corp, Demo Vision Systems, Example Motion Labs, Demo LiDAR Co, Test Optics
+              </p>
             </div>
           </div>
         </Section>

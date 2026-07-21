@@ -5,6 +5,7 @@ import Eyebrow from "@/components/website/Eyebrow";
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import Section from "@/components/website/Section";
+import agentData from "@/data/demo/agent.json";
 import refData from "@/data/demo/ref.json";
 import robotData from "@/data/demo/robot.json";
 import { translateLegacyTree } from "@/lib/legacy-i18n";import { legacyZhCopy } from "@/content/zh/legacy-page-copy";
@@ -36,7 +37,7 @@ export default function Tier1DemoClient({
               <span className="text-sm text-muted">{legacyZhCopy.demoTier1.text001}</span>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-xs text-muted">Zhang Wei</span>
+              <span className="text-xs text-muted">{refData.created_by.name}</span>
               <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">{legacyZhCopy.demoTier1.text002}
 
               </span>
@@ -129,7 +130,7 @@ export default function Tier1DemoClient({
                 </label>
                   <input
                   className="mt-2 w-full border border-border bg-surface p-3 font-mono text-sm text-ink"
-                  defaultValue="2026-07-16 08:15"
+                  defaultValue={refData.incident_time_approximate.slice(0, 16)}
                   type="datetime-local" />
                 
                 </div>
@@ -239,7 +240,7 @@ export default function Tier1DemoClient({
 
                     </p>
                       <p className="mt-1 text-xs text-muted">
-                        AGT-7F3A-7A21
+                        {agentData.agent_id}
                       </p>
                     </div>
                     <span className="border border-green-600 bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">{legacyZhCopy.demoTier1.text032}
@@ -249,12 +250,12 @@ export default function Tier1DemoClient({
                   <div className="mt-4 grid gap-3 text-xs">
                     <div className="flex justify-between">
                       <span className="text-muted">{legacyZhCopy.demoTier1.text033}</span>
-                      <span className="font-mono text-ink">v1.2.8</span>
+                      <span className="font-mono text-ink">{agentData.version}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted">{legacyZhCopy.demoTier1.text034}</span>
                       <span className="font-mono text-ink">
-                        2026-07-16 14:23:47
+                        {agentData.last_heartbeat.slice(0, 19).replace("T", " ")}
                       </span>
                     </div>
                   </div>
@@ -267,12 +268,12 @@ export default function Tier1DemoClient({
                   <div className="mt-2 grid gap-3 sm:grid-cols-2">
                     <input
                     className="border border-border bg-surface p-3 font-mono text-sm text-ink"
-                    defaultValue="2026-07-16 08:10:00"
+                    defaultValue={refData.runtime_window.start.slice(0, 19)}
                     type="datetime-local" />
                   
                     <input
                     className="border border-border bg-surface p-3 font-mono text-sm text-ink"
-                    defaultValue="2026-07-16 08:25:00"
+                    defaultValue={refData.runtime_window.end.slice(0, 19)}
                     type="datetime-local" />
                   
                   </div>
@@ -287,7 +288,7 @@ export default function Tier1DemoClient({
                 </p>
                   <p className="mt-2 text-sm text-ink">{legacyZhCopy.demoTier1.text038}
                   {" "}
-                    <span className="font-mono">RD-7F3A-0716-0815</span>
+                    <span className="font-mono">{refData.runtime_dataset_id}</span>
                   </p>
                   <p className="mt-1 text-xs text-muted">{legacyZhCopy.demoTier1.text039}
 

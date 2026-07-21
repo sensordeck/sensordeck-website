@@ -59,7 +59,7 @@
         <h3 className="mt-2 text-lg font-semibold">毫秒级时序控制</h3>
       </div>
       <AnimatedCard
-        lines={['Runtime Evidence', 'EP-C03', 'Pudu T300']}
+        lines={['Runtime Evidence', 'EP-C03', 'Demo Robotics T300']}
         className="scale-75 origin-right"
       />
     </div>
