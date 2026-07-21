@@ -38,7 +38,7 @@ export default async function LibraryIndexPage({
   const libraryResources = ui.resourceCards;
 
   return (
-    <div className="bg-paper font-sans text-ink">
+    <div className="bg-white font-sans text-ink">
 
         {/* Hero */}
         <Section id="library-hero" className="bg-white">

@@ -135,7 +135,7 @@ export default function Footer() {
                   const className =
                     "inline-flex min-h-11 w-fit items-center text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue";
                   const style = {
-                    transitionDuration: "150ms",
+                    transitionDuration: "var(--duration-tooltip)",
                     transitionTimingFunction: "var(--ease-out)",
                   };
 

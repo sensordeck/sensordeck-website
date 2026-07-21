@@ -8,34 +8,31 @@ type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   variant?: ButtonVariant;
 };
 
+const transitionClasses =
+  "[transition-property:border-color,box-shadow,background-color,color,transform] " +
+  "[transition-duration:var(--duration-fast),var(--duration-instant),var(--duration-fast),var(--duration-fast),var(--duration-fast)] " +
+  "[transition-timing-function:var(--ease-standard)] " +
+  "active:[transition-duration:var(--duration-instant)]";
+
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "border-atlas-blue bg-atlas-blue text-white " +
     "hover:border-atlas-blue-dark hover:bg-atlas-blue-dark " +
     "hover:shadow-[0_4px_12px_rgba(21,94,239,0.3)] " +
     "active:scale-[0.98] " +
-    "[transition-property:border-color,box-shadow,background-color,color,transform] " +
-    "[transition-duration:0.25s,0.1s,0.25s,0.25s,0.25s] " +
-    "[transition-timing-function:ease-in-out] " +
-    "active:[transition-duration:0.1s]",
+    transitionClasses,
   secondary:
     "border-border bg-white text-ink " +
     "hover:border-atlas-blue hover:text-atlas-blue hover:bg-surface-blue " +
     "hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] " +
     "active:scale-[0.98] " +
-    "[transition-property:border-color,box-shadow,background-color,color,transform] " +
-    "[transition-duration:0.25s,0.1s,0.25s,0.25s,0.25s] " +
-    "[transition-timing-function:ease-in-out] " +
-    "active:[transition-duration:0.1s]",
+    transitionClasses,
   outline:
     "border-ink/20 bg-transparent text-ink " +
     "hover:border-atlas-blue hover:bg-atlas-blue/5 hover:text-atlas-blue " +
     "hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)] " +
     "active:scale-[0.98] " +
-    "[transition-property:border-color,box-shadow,background-color,color,transform] " +
-    "[transition-duration:0.25s,0.1s,0.25s,0.25s,0.25s] " +
-    "[transition-timing-function:ease-in-out] " +
-    "active:[transition-duration:0.1s]",
+    transitionClasses,
 };
 
 export default function Button({

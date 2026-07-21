@@ -193,7 +193,7 @@ export default function Header() {
         />
       </div>
       <header
-        className={`sticky top-0 z-50 border-b transition-colors duration-[250ms] ease-in-out ${
+        className={`sticky top-0 z-50 border-b transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)] ${
           isScrolled
             ? "border-border/60 bg-white/95 shadow-[0_2px_8px_rgba(0,0,0,0.08)] backdrop-blur-md"
             : "border-border bg-white"

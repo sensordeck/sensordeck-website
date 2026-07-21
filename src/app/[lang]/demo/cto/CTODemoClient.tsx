@@ -28,7 +28,7 @@ export default function CTODemoClient({
   };
 
   return (
-    <div className="bg-paper font-sans text-ink">
+    <div className="bg-white font-sans text-ink">
 
         {/* Demo UI Shell - Top Bar */}
         <Section className="border-b border-border bg-white py-3">

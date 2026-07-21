@@ -26,7 +26,7 @@ export default async function FAQPage({
   const { faq, ui } = await getLibraryContent(lang);
 
   return (
-    <div className="bg-paper font-sans text-ink">
+    <div className="bg-white font-sans text-ink">
 
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">

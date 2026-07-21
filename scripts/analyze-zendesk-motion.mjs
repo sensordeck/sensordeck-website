@@ -95,7 +95,7 @@ async function analyzeZendeskMotion() {
               }
             }
           }
-        } catch (e) {
+        } catch {
           // 跨域样式表访问限制
           console.warn('无法访问样式表:', sheet.href);
         }

@@ -27,7 +27,7 @@ export default async function DocumentationPage({
   const { documentation, ui } = await getLibraryContent(lang);
 
   return (
-    <div className="bg-paper font-sans text-ink">
+    <div className="bg-white font-sans text-ink">
 
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">

@@ -19,7 +19,6 @@ export default async function CompanyPage({
   const content = await getCompanyContent(lang);
   const {
     hero,
-    mission,
     category,
     principlesSection,
     principles,

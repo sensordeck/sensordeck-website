@@ -17,14 +17,22 @@
   --surface-orange: #fff4e6;
 
   /* ========== 动效时长令牌 ========== */
-  --duration-instant: 0.1s;     /* 100ms - 即时反馈 */
-  --duration-fast: 0.25s;       /* 250ms - 快速交互 */
-  --duration-normal: 0.4s;      /* 400ms - 标准动画 */
-  --duration-slow: 0.6s;        /* 600ms - 大型转换 */
+  --duration-instant: 100ms;    /* 即时反馈 */
+  --duration-tooltip: 150ms;    /* 提示与轻量颜色变化 */
+  --duration-button: 160ms;     /* 按压反馈 */
+  --duration-input: 180ms;      /* 表单反馈 */
+  --duration-card: 200ms;       /* 卡片与局部过渡 */
+  --duration-fast: 250ms;       /* 快速交互 */
+  --duration-normal: 400ms;     /* 标准动画 */
+  --duration-slow: 600ms;       /* 大型转换 */
+  --duration-pulse: 1200ms;     /* 强调脉冲 */
 
   /* ========== 缓动函数令牌 ========== */
   --ease-linear: linear;
+  --ease-default: ease;
   --ease-standard: ease-in-out;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-snappy: cubic-bezier(0.7, 0, 0.3, 1);      /* Zendesk 品牌曲线 */
   --ease-sensordeck: cubic-bezier(0.4, 0, 0.2, 1);  /* Material Design - 科技感 */
 
@@ -34,6 +42,7 @@
   --delay-stagger-3: 0.1s;
   --delay-stagger-4: 0.15s;
   --delay-stagger-5: 0.2s;
+  --delay-pulse: 600ms;
 }
 
 @theme inline {

@@ -30,7 +30,7 @@ export default async function DemoIndexPage({
   const content = await getDemoContent(lang);
 
   return (
-    <div className="bg-paper font-sans text-ink">
+    <div className="bg-white font-sans text-ink">
       <Section id="demo-hero" className="bg-white">
         <div className="max-w-4xl">
           <Eyebrow>{content.index.hero.eyebrow}</Eyebrow>

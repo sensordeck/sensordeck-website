@@ -11,17 +11,6 @@
  */
 
 :root {
-  /* Custom easing curves - stronger than CSS defaults */
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
-
-  /* Standard durations */
-  --duration-button: 160ms;
-  --duration-input: 180ms;
-  --duration-tooltip: 150ms;
-  --duration-card: 200ms;
-  --duration-modal: 250ms;
-
   /* Stagger delays */
   --stagger-short: 40ms;
   --stagger-medium: 60ms;
@@ -45,9 +34,9 @@
 @media (hover: hover) and (pointer: fine) {
   .button-hover {
     transition: transform var(--duration-button) var(--ease-out),
-                background-color 200ms ease,
-                border-color 200ms ease,
-                color 200ms ease;
+                background-color var(--duration-card) var(--ease-default),
+                border-color var(--duration-card) var(--ease-default),
+                color var(--duration-card) var(--ease-default);
   }
 }
 
@@ -121,7 +110,7 @@
 
 /* Stagger utility classes */
 .stagger-item {
-  animation: fadeInScale 250ms var(--ease-out) both;
+  animation: fadeInScale var(--duration-fast) var(--ease-out) both;
 }
 
 .stagger-item:nth-child(1) { animation-delay: 0ms; }
@@ -137,17 +126,17 @@
 
 /* Heading stagger (Eyebrow → Title → Description) */
 .heading-eyebrow {
-  animation: fadeInUp 200ms var(--ease-out) both;
+  animation: fadeInUp var(--duration-card) var(--ease-out) both;
   animation-delay: 0ms;
 }
 
 .heading-title {
-  animation: fadeInUp 250ms var(--ease-out) both;
+  animation: fadeInUp var(--duration-fast) var(--ease-out) both;
   animation-delay: 80ms;
 }
 
 .heading-description {
-  animation: fadeInUp 200ms var(--ease-out) both;
+  animation: fadeInUp var(--duration-card) var(--ease-out) both;
   animation-delay: 160ms;
 }
 
@@ -168,7 +157,7 @@
 }
 
 .section-enter {
-  animation: sectionFadeIn 400ms var(--ease-out) both;
+  animation: sectionFadeIn var(--duration-normal) var(--ease-out) both;
 }
 
 /* =============================================================================
@@ -179,7 +168,7 @@
 @media (hover: hover) and (pointer: fine) {
   .link-hover {
     position: relative;
-    transition: color 150ms var(--ease-out);
+    transition: color var(--duration-tooltip) var(--ease-out);
   }
 
   .link-hover::after {
@@ -192,7 +181,7 @@
     background: currentColor;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 200ms var(--ease-out);
+    transition: transform var(--duration-card) var(--ease-out);
   }
 
   .link-hover:hover::after {
@@ -215,7 +204,7 @@
 }
 
 .five-window-center {
-  animation: windowPulse 1200ms var(--ease-in-out) 600ms 1;
+  animation: windowPulse var(--duration-pulse) var(--ease-in-out) var(--delay-pulse) 1;
 }
 
 /* =============================================================================
@@ -225,7 +214,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .arrow-slide {
-    transition: transform 200ms var(--ease-out);
+    transition: transform var(--duration-card) var(--ease-out);
   }
 
   .arrow-parent:hover .arrow-slide {
@@ -239,7 +228,9 @@
  * ============================================================================= */
 
 .blur-transition {
-  transition: filter 200ms ease, opacity 200ms ease;
+  transition:
+    filter var(--duration-card) var(--ease-default),
+    opacity var(--duration-card) var(--ease-default);
 }
 
 .blur-transition.transitioning {

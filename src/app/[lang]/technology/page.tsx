@@ -18,7 +18,7 @@ export default async function TechnologyPage({
   const { hero, sections, cta } = technologyContent
 
   return (
-    <div className="bg-paper font-sans text-ink">
+    <div className="bg-white font-sans text-ink">
 
       {/* Hero */}
       <section className="mx-auto max-w-screen-xl px-6 py-24 sm:px-8 lg:px-12">
@@ -39,7 +39,7 @@ export default async function TechnologyPage({
             <AnimatedSection key={section.id}>
               <article
                 id={section.id}
-                className="rounded-lg border border-ink/10 bg-paper p-8"
+                className="rounded-lg border border-ink/10 bg-white p-8"
               >
               <div className="mb-4">
                 <span className="font-mono text-sm text-atlas-blue">
