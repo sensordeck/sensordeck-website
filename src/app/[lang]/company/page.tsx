@@ -56,8 +56,8 @@ export default async function CompanyPage({
   className="absolute inset-0 hidden bg-no-repeat lg:block"
   style={{
     backgroundImage: "url('/images/about-us-desktop.png')",
-    backgroundSize: "68% auto",
-    backgroundPosition: "right center",
+    backgroundSize: "100% 100%",
+    backgroundPosition: "center center",
   }}
   aria-hidden="true"
 />
