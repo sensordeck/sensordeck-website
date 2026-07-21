@@ -55,9 +55,9 @@ export default async function CompanyPage({
   />
 
   <AnimatedSection>
-    <div className="relative z-10 grid min-h-[520px] items-center lg:grid-cols-[0.9fr_1.1fr]">
+    <div className="relative z-10 grid min-h-[380px] items-center lg:grid-cols-[0.9fr_1.1fr]">
       {/* Left content */}
-      <div className="max-w-[660px] py-16 lg:py-20">
+      <div className="max-w-[660px] py-10 lg:py-12">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
