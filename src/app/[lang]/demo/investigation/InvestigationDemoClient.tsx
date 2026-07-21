@@ -130,7 +130,7 @@ export default function InvestigationDemoClient({
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-sensor-tan">{c.id}</span>
+                      <span className="font-mono text-xs text-sensor-tan-text">{c.id}</span>
                       <span className="text-sm font-semibold text-ink">{c.surface}</span>
                       {c.primary &&
                     <span className="border border-atlas-blue bg-surface-blue px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-atlas-blue">{legacyZhCopy.demoInvestigation.text021}
@@ -246,7 +246,7 @@ export default function InvestigationDemoClient({
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-sensor-tan">{rga.id}</span>
+                      <span className="font-mono text-xs text-sensor-tan-text">{rga.id}</span>
                       <span
                       className={`px-2 py-1 text-[10px] font-semibold uppercase tracking-wider ${
                       rga.match_type === "strong_candidate" ?

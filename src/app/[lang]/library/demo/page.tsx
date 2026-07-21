@@ -75,7 +75,7 @@ export default async function DemoPage({
               >
                 <div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan">
+                    <span className="font-mono text-xs text-sensor-tan-text">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">

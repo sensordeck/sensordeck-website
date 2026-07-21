@@ -85,7 +85,7 @@ export default async function ProblemPage({
                 {homeContent.theProblem.comparison.withoutAtlas.steps.map((step, index) => (
                   <div key={index}>
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-sensor-tan">
+                      <span className="font-mono text-xs text-sensor-tan-text">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                       <span className="text-base text-ink">{step}</span>

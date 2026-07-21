@@ -98,35 +98,35 @@ export default async function DemoIndexPage({
             </h2>
             <div className="mt-6 grid gap-4 text-sm md:grid-cols-2 lg:grid-cols-3">
               <div>
-                <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text022}</p>
+                <p className="font-mono text-xs text-sensor-tan-text">{legacyZhCopy.demoIndex.text022}</p>
                 <p className="mt-2 text-ink">{customerData.name}</p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text023}</p>
+                <p className="font-mono text-xs text-sensor-tan-text">{legacyZhCopy.demoIndex.text023}</p>
                 <p className="mt-2 font-mono text-xs text-ink">
                   {refData.robot_sn}
                 </p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text024}</p>
+                <p className="font-mono text-xs text-sensor-tan-text">{legacyZhCopy.demoIndex.text024}</p>
                 <p className="mt-2 font-mono text-xs text-ink">
                   {refData.ref_id}
                 </p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text025}
+                <p className="font-mono text-xs text-sensor-tan-text">{legacyZhCopy.demoIndex.text025}
 
                 </p>
                 <p className="mt-2 font-mono text-xs text-ink">EP-C03</p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text026}</p>
+                <p className="font-mono text-xs text-sensor-tan-text">{legacyZhCopy.demoIndex.text026}</p>
                 <p className="mt-2 font-mono text-xs text-ink">
                   {refData.egp_id}
                 </p>
               </div>
               <div>
-                <p className="font-mono text-xs text-sensor-tan">{legacyZhCopy.demoIndex.text009}</p>
+                <p className="font-mono text-xs text-sensor-tan-text">{legacyZhCopy.demoIndex.text009}</p>
                 <p className="mt-2 text-ink">
                   {refData.sensor_fae.name} ({refData.sensor_fae.vendor})
                 </p>
@@ -145,7 +145,7 @@ export default async function DemoIndexPage({
               
                 <div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan">
+                    <span className="font-mono text-xs text-sensor-tan-text">
                       {page.id}
                     </span>
                     <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">

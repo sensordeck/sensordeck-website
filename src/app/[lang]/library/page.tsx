@@ -65,7 +65,7 @@ export default async function LibraryIndexPage({
               >
                 <div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan">
+                    <span className="font-mono text-xs text-sensor-tan-text">
                       {resource.id}
                     </span>
                     <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
@@ -106,7 +106,7 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/white-papers")}
             >
-              <span className="font-mono text-xs text-sensor-tan">{ui.whitePapersLabel}</span>
+              <span className="font-mono text-xs text-sensor-tan-text">{ui.whitePapersLabel}</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.whitePapersLabel}
               </span>
@@ -115,7 +115,7 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/documentation")}
             >
-              <span className="font-mono text-xs text-sensor-tan">{ui.documentationLabel}</span>
+              <span className="font-mono text-xs text-sensor-tan-text">{ui.documentationLabel}</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.documentationLabel}
               </span>
@@ -124,7 +124,7 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/demo")}
             >
-              <span className="font-mono text-xs text-sensor-tan">{ui.demoLabel}</span>
+              <span className="font-mono text-xs text-sensor-tan-text">{ui.demoLabel}</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.demoAndVideoLabel}
               </span>
@@ -133,7 +133,7 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/faq")}
             >
-              <span className="font-mono text-xs text-sensor-tan">{ui.faqLabel}</span>
+              <span className="font-mono text-xs text-sensor-tan-text">{ui.faqLabel}</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.faqLabel}
               </span>

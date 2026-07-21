@@ -65,7 +65,7 @@ export default async function WhitePapersPage({
               <Card className="flex min-h-64 flex-col justify-between stagger-item" key={paper.id}>
                 <div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan">
+                    <span className="font-mono text-xs text-sensor-tan-text">
                       {paper.id}
                     </span>
                     <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
@@ -93,7 +93,7 @@ export default async function WhitePapersPage({
             ))}
           </div>
           <div className="mt-6 flex gap-4 border border-border bg-white px-5 py-4 text-sm leading-7 text-muted md:px-6">
-            <span className="mt-1 font-mono text-xs text-sensor-tan">/</span>
+            <span className="mt-1 font-mono text-xs text-sensor-tan-text">/</span>
             <p>
               {ui.whitePaperAvailability}
             </p>

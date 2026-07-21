@@ -258,7 +258,7 @@ export default async function HomePage({
             {homeContent.whyRuntimeGovernance.items.map((item: {label: string; description: string}, index: number) => (
               <Card key={item.label} className="stagger-item">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs text-sensor-tan">
+                  <span className="font-mono text-xs text-sensor-tan-text">
                     0{index + 1}
                   </span>
                   <span className="size-2 rounded-full bg-border" />
@@ -273,7 +273,7 @@ export default async function HomePage({
             ))}
           </div>
           <div className="mt-6 flex gap-4 border border-border bg-surface px-5 py-4 text-sm leading-7 text-muted md:px-6">
-            <span className="mt-1 font-mono text-xs text-sensor-tan">/</span>
+            <span className="mt-1 font-mono text-xs text-sensor-tan-text">/</span>
             <p>{homeContent.whyRuntimeGovernance.boundaryNote}</p>
           </div>
         </Section>
@@ -302,7 +302,7 @@ export default async function HomePage({
                   }`}
                 >
                   <div className="flex flex-wrap items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan">
+                    <span className="font-mono text-xs text-sensor-tan-text">
                       {homeContent.ui.productLabel} 0{index + 1}
                     </span>
 
@@ -386,7 +386,7 @@ export default async function HomePage({
                 className={`stagger-item ${index === 0 ? "border-atlas-blue/35 bg-surface-blue" : ""}`}
                 key={capability.title}
               >
-                <span className="font-mono text-xs text-sensor-tan">
+                <span className="font-mono text-xs text-sensor-tan-text">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-8 text-lg font-semibold tracking-tight text-ink">
@@ -415,7 +415,7 @@ export default async function HomePage({
                   key={step.label}
                 >
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan">
+                    <span className="font-mono text-xs text-sensor-tan-text">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     {index < homeContent.investigationLifecycle.length - 1 ? (
@@ -539,7 +539,7 @@ export default async function HomePage({
             {homeContent.evidenceOwnership.principles.map((principle, index) => (
               <Card key={principle.label} className="stagger-item">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-mono text-xs text-sensor-tan">
+                  <span className="font-mono text-xs text-sensor-tan-text">
                     0{index + 1}
                   </span>
                   <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
@@ -593,14 +593,14 @@ export default async function HomePage({
             </div>
             <Card className="border-ink/15 !bg-ink !text-white opacity-100 transform-none">
               <div className="flex items-center justify-between gap-4 border-b border-white/15 pb-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/50">
+                <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/70">
                   {homeContent.ui.recallCandidate}
                 </span>
                 <span className="font-mono text-xs text-sensor-tan">
                   {homeContent.organizationalMemory.recallExample.reference}
                 </span>
               </div>
-              <p className="mt-8 text-xs uppercase tracking-[0.16em] text-white/50">
+              <p className="mt-8 text-xs uppercase tracking-[0.16em] text-white/70">
                 {homeContent.organizationalMemory.recallExample.status}
               </p>
               <h3 className="mt-3 text-xl font-semibold tracking-tight">
@@ -611,7 +611,7 @@ export default async function HomePage({
               </p>
               <div className="mt-8 grid gap-3 border-t border-white/15 pt-5 sm:grid-cols-2">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/70">
                     {homeContent.ui.retrievalReason}
                   </p>
                   <p className="mt-2 text-sm text-white/85">
@@ -619,7 +619,7 @@ export default async function HomePage({
                   </p>
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/70">
                     {homeContent.ui.reviewBoundary}
                   </p>
                   <p className="mt-2 text-sm text-white/85">
@@ -642,7 +642,7 @@ export default async function HomePage({
             {homeContent.technicalResources.whitePapers.map((paper, index) => (
               <Card className="flex min-h-44 flex-col justify-between stagger-item arrow-parent" key={paper}>
                 <div className="flex items-start justify-between gap-3">
-                  <span className="font-mono text-xs text-sensor-tan">
+                  <span className="font-mono text-xs text-sensor-tan-text">
                     WP-{String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="arrow-slide">

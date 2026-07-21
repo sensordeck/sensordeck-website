@@ -84,7 +84,7 @@ export default async function CompanyPage({
           className="stagger-item mt-7 max-w-[560px] border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted"
           style={{ animationDelay: "240ms" }}
         >
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan-text">
             {hero.statementLabel}
           </p>
 
@@ -143,7 +143,7 @@ export default async function CompanyPage({
                       <span className="font-mono text-xs font-semibold text-atlas-blue">
                         {principle.number}
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-sensor-tan">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-sensor-tan-text">
                         {principle.label}
                       </span>
                     </div>

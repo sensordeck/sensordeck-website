@@ -62,7 +62,7 @@ export default async function FAQPage({
                 className="border-l-2 border-atlas-blue bg-white p-6 md:p-8 stagger-item"
                 key={item.question}
               >
-                <span className="font-mono text-xs text-sensor-tan">
+                <span className="font-mono text-xs text-sensor-tan-text">
                   Q{String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-4 text-lg font-semibold leading-7 text-ink">
@@ -90,7 +90,7 @@ export default async function FAQPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/white-papers")}
             >
-              <span className="font-mono text-xs text-sensor-tan">01</span>
+              <span className="font-mono text-xs text-sensor-tan-text">01</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.readWhitePapers}
               </span>
@@ -99,7 +99,7 @@ export default async function FAQPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/documentation")}
             >
-              <span className="font-mono text-xs text-sensor-tan">02</span>
+              <span className="font-mono text-xs text-sensor-tan-text">02</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.viewDocumentation}
               </span>
@@ -108,7 +108,7 @@ export default async function FAQPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href="mailto:contact@sensordeck.tech"
             >
-              <span className="font-mono text-xs text-sensor-tan">03</span>
+              <span className="font-mono text-xs text-sensor-tan-text">03</span>
               <span className="mt-4 text-sm font-semibold text-ink">
                 {ui.contactUs}
               </span>

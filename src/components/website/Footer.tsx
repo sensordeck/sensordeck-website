@@ -122,7 +122,7 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-3">
           {copy.groups.map((group) => (
             <div key={group.title}>
-              <h2 className="font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-white/45">
+              <h2 className="font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-white/70">
                 {group.title}
               </h2>
               <nav
@@ -148,7 +148,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/12">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
           <span>{copy.copyright}</span>
           <span className="font-mono">{copy.tagline}</span>
         </div>

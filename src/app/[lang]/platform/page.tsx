@@ -119,7 +119,7 @@ export default async function PlatformPage({
                   <p className="mb-4 font-sans text-sm text-atlas-blue">
                     {product.audience}
                   </p>
-                  <p className="mb-4 font-sans text-xs font-medium uppercase tracking-wide text-ink/40">
+                  <p className="mb-4 font-sans text-xs font-medium uppercase tracking-wide text-ink/70">
                     {ui.coreModulesLabel}
                   </p>
                   <ul className="space-y-2">

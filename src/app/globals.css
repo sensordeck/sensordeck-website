@@ -8,6 +8,7 @@
   --atlas-blue: #155eef;
   --atlas-blue-dark: #0d46bb;
   --sensor-tan: #b47e4b;
+  --sensor-tan-text: #89592f;
   --ink: #0a1a2a;
   --muted: #5d6b7b;
   --border: #dbe3eb;
@@ -41,6 +42,7 @@
   --color-atlas-blue: var(--atlas-blue);
   --color-atlas-blue-dark: var(--atlas-blue-dark);
   --color-sensor-tan: var(--sensor-tan);
+  --color-sensor-tan-text: var(--sensor-tan-text);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-border: var(--border);

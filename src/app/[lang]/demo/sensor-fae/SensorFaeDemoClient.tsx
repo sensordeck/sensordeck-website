@@ -162,7 +162,7 @@ export default function SensorFaeDemoClient({
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-sensor-tan">{sensorRga.id}</span>
+                  <span className="font-mono text-xs text-sensor-tan-text">{sensorRga.id}</span>
                   <span className="bg-green-100 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-green-700">
                     {sensorRga.match_type === "strong_candidate" ? legacyZhCopy.demoSensorFae.text023 : legacyZhCopy.demoSensorFae.text024}
                   </span>

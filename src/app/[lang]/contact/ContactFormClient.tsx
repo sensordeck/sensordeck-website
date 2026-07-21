@@ -8,7 +8,7 @@ import Section from "@/components/website/Section";
 import type { ContactContent } from "@/content/en/contact";
 
 const inputClass =
-  "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-base text-ink outline-none placeholder:text-muted/70 sm:text-sm " +
+  "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-base text-ink outline-none placeholder:text-muted sm:text-sm " +
   "transition-[border-color,box-shadow,background-color] duration-[250ms,100ms,250ms] ease-in-out " +
   "hover:border-border/80 focus-visible:border-atlas-blue focus-visible:ring-[3px] focus-visible:ring-atlas-blue/20";
 

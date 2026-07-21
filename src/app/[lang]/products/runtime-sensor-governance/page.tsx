@@ -151,7 +151,7 @@ export default async function RuntimeSensorGovernancePage({
         {/* Hero */}
         <Section className="bg-white">
           <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan-text">
               {ui.heroEyebrow}
             </p>
 
@@ -511,7 +511,7 @@ export default async function RuntimeSensorGovernancePage({
               </article>
 
               <article className="border border-border bg-white p-7 md:p-9">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan">
+                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan-text">
                   {ui.constitutionalBoundaryEyebrow}
                 </p>
 

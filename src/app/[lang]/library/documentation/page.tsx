@@ -113,7 +113,7 @@ export default async function DocumentationPage({
                 className="border border-border bg-surface p-5"
                 key={item}
               >
-                <span className="font-mono text-xs text-sensor-tan">
+                <span className="font-mono text-xs text-sensor-tan-text">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <p className="mt-4 text-sm font-semibold text-ink">{item}</p>
