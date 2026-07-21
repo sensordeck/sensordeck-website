@@ -60,6 +60,25 @@ export const contactContent = {
   },
   submit: "Open email draft",
   emailSubject: "SensorDeck contact request",
+  salesTitle: "Our sales team",
+  salesNote: "SensorDeck will update sales contact and team information.",
+  locations: {
+    title: "Global Locations",
+    offices: [
+      {
+        city: "Shenzhen, China",
+        name: "SensorDeck China",
+        email: "sales.china@sensordeck.com",
+        address: "Nanshan District, Shenzhen, Guangdong, China",
+      },
+      {
+        city: "California, USA",
+        name: "SensorDeck USA",
+        email: "sales.usa@sensordeck.com",
+        address: "California, United States",
+      },
+    ],
+  },
 } as const;
 
 export type ContactContent = typeof contactContent;

@@ -177,7 +177,7 @@ export default async function CategoryPage({
             {content.ctaTitle}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href={localizeHref(lang, "/request-demo")} variant="primary">
+            <Button href={localizeHref(lang, "/contact")} variant="primary">
               {content.requestDemo}
             </Button>
             <Button href={localizeHref(lang, "/")} variant="secondary">

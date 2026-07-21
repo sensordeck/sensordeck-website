@@ -145,7 +145,7 @@ export default function Header() {
           />
           <LanguageSwitcher currentLocale={currentLocale} />
           <Button
-            href={localizeHref(currentLocale, "/request-demo")}
+            href={localizeHref(currentLocale, "/contact")}
             className="min-h-10 px-3.5 py-2 text-xs"
           >
             {copy.requestDemo}
@@ -171,7 +171,7 @@ export default function Header() {
                 navigation={copy.navigation}
               />
               <Button
-                href={localizeHref(currentLocale, "/request-demo")}
+                href={localizeHref(currentLocale, "/contact")}
                 className="mt-4 w-full"
               >
                 {copy.requestDemo}

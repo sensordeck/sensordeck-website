@@ -168,7 +168,7 @@ Assist Vault（组织记忆）
       href: "https://docs.sensordeck.tech",
     },
     secondaryButton: {
-      text: "查看演示",
+      text: "申请演示",
       href: "/demo",
     },
   },

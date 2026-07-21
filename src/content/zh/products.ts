@@ -186,7 +186,7 @@ const productsContent: ProductContent = {
     sensorGovernance: "Runtime Sensor Governance",
     runtimeInvestigation: "Runtime Investigation",
   },
-  ctaText: "申请产品架构演示",
+  ctaText: "申请演示",
 };
 
 export default productsContent;

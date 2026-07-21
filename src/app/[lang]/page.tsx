@@ -671,7 +671,7 @@ export default async function HomePage({
               >
                 {homeContent.ctas.documentation}
               </Button>
-              <Button href="#request-demo" variant="secondary">
+              <Button href="#contact-form" variant="secondary">
                 {homeContent.ctas.overview}
               </Button>
             </div>
@@ -679,7 +679,7 @@ export default async function HomePage({
         </Section>
 
         {/* Final contact CTA */}
-        <Section id="request-demo" className="bg-surface">
+        <Section id="final-cta" className="bg-surface">
           <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-3xl">

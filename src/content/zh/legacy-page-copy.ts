@@ -179,7 +179,7 @@ export const legacyZhCopy = {
     text024: "REF 标识",
     text025: "\n                  主要 Evidence Pack\n                ",
     text026: "EGP 标识",
-    text027: "\n                    查看演示\n                    ",
+    text027: "\n                    申请演示\n                    ",
     text028: "\n                注意\n              ",
     text029: "\n                  所有演示数据均为示意性内容。实际部署的 Atlas\n                  界面包含客户特定的运行时上下文和调查资产，不会在公开演示中展示。\n                ",
     text030: "\n                  商业指标（工时节省、成本节省）为演示估算值，不代表具体客户的实际结果。\n                ",

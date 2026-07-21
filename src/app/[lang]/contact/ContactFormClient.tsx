@@ -95,33 +95,6 @@ export default function ContactFormClient({
           </div>
         </Section>
 
-        <Section id="contact-options" className="bg-surface">
-          <div className="grid gap-4 md:grid-cols-3">
-            {content.options.map((option, index) => (
-              <article
-                className="card-enter stagger-item flex min-h-64 flex-col justify-between border border-border bg-white p-6"
-                key={option.title}
-                style={{ animationDelay: `${index * 40}ms` }}
-              >
-                <div>
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
-                    {option.eyebrow}
-                  </p>
-                  <h2 className="mt-8 text-xl font-semibold leading-7 tracking-tight text-ink">
-                    {option.title}
-                  </h2>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    {option.description}
-                  </p>
-                </div>
-                <span className="mt-6 border-t border-border pt-4 text-xs font-semibold uppercase tracking-[0.14em] text-atlas-blue">
-                  {content.optionAction}
-                </span>
-              </article>
-            ))}
-          </div>
-        </Section>
-
         <Section id="contact-form" className="bg-white">
           <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div className="max-w-md">
@@ -231,6 +204,84 @@ export default function ContactFormClient({
                 <span aria-hidden="true">→</span>
               </button>
             </form>
+          </div>
+        </Section>
+
+        <Section id="demo-info" className="bg-surface">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">
+              {content.salesTitle}
+            </h2>
+            <div className="mt-8 border-t border-border pt-8 text-sm leading-7 text-muted">
+              <p>{content.salesNote}</p>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="global-locations" className="bg-white">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-center text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+              {content.locations.title}
+            </h2>
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              {content.locations.offices.map((office) => (
+                <div
+                  key={office.city}
+                  className="rounded-lg border border-border bg-white p-8"
+                >
+                  <div className="mb-2 text-sm font-medium uppercase tracking-wider text-muted">
+                    {office.city}
+                  </div>
+                  <h3 className="mb-4 text-2xl font-semibold text-ink">
+                    {office.name}
+                  </h3>
+                  <div className="space-y-3 text-sm text-muted">
+                    <div className="flex items-start gap-3">
+                      <svg
+                        className="mt-0.5 h-5 w-5 flex-shrink-0 text-atlas-blue"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <a
+                        className="hover:text-atlas-blue"
+                        href={`mailto:${office.email}`}
+                      >
+                        {office.email}
+                      </a>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg
+                        className="mt-0.5 h-5 w-5 flex-shrink-0 text-atlas-blue"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <span>{office.address}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Section>
       </main>

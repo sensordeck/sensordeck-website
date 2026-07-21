@@ -237,7 +237,7 @@ export default async function ProductsPage({
                 {productsContent.ui.runtimeInvestigation}
               </Button>
 
-              <Button href={localizeHref(lang, "/request-demo")} variant="primary">
+              <Button href={localizeHref(lang, "/contact")} variant="primary">
                 {productsContent.ctaText}
               </Button>
             </div>

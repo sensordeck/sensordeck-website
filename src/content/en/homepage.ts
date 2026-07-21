@@ -13,7 +13,7 @@ export const homepageContent = {
       "Robot teams need more than another log archive. SensorDeck defines the infrastructure layer to observe runtime conditions, structure evidence, support investigations, and preserve organizational learning.",
     principles: ["Observe", "Understand", "Investigate", "Improve", "Reuse"],
     cta: {
-      primary: { text: "Request Demo", href: "#request-demo" },
+      primary: { text: "Request Demo", href: "#contact-form" },
       secondary: { text: "Technical Whitepaper", href: "#resources" },
     },
   },

@@ -5,7 +5,6 @@ import type { ContactContent } from "@/content/en/contact";
 import type { LibraryContent } from "@/content/en/library";
 import type { PlatformContent } from "@/content/en/platform";
 import type { ProductContent } from "@/content/zh/products";
-import type { RequestDemoContent } from "@/content/en/request-demo";
 import type { TechnologyContent } from "@/content/en/technology";
 import type { Locale } from "./i18n";
 
@@ -59,13 +58,6 @@ export async function getContactContent(
 ): Promise<ContactContent> {
   const content = await import(`@/content/${locale}/contact`);
   return content.contactContent as ContactContent;
-}
-
-export async function getRequestDemoContent(
-  locale: Locale,
-): Promise<RequestDemoContent> {
-  const content = await import(`@/content/${locale}/request-demo`);
-  return content.requestDemoContent as RequestDemoContent;
 }
 
 export async function getAuxiliaryPagesContent(

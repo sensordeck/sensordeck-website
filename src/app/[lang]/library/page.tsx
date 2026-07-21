@@ -161,7 +161,7 @@ export default async function LibraryIndexPage({
                     →
                   </span>
                 </Button>
-                <Button href={localizeHref(lang, "/request-demo")} variant="secondary">
+                <Button href={localizeHref(lang, "/contact")} variant="secondary">
                   {cta.secondaryButton.text}
                 </Button>
               </div>

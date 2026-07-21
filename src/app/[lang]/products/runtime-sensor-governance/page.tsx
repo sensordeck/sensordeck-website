@@ -249,7 +249,7 @@ export default async function RuntimeSensorGovernancePage({
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={localizeHref(lang, "/request-demo")}>
+              <Button href={localizeHref(lang, "/contact")}>
                 {productsContent.ctaText}
               </Button>
 
@@ -691,7 +691,7 @@ export default async function RuntimeSensorGovernancePage({
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href={localizeHref(lang, "/request-demo")}>
+              <Button href={localizeHref(lang, "/contact")}>
                 {productsContent.ctaText}
               </Button>
 

@@ -15,7 +15,7 @@ export const legacyTranslations: Record<string, string> = {
   "演示场景": "Demo Scenario",
   "申请完整演示": "Request a Full Demo",
   "需要完整的 Atlas 演示？": "Need a Complete Atlas Demo?",
-  "查看演示": "View Demo",
+  "申请演示": "View Demo",
   "客户": "Customer",
   "机器人序列号": "Robot Serial Number",
   "REF 标识": "REF ID",

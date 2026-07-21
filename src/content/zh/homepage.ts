@@ -13,7 +13,7 @@ export const homepageContent = {
       "机器人团队需要的不只是另一个日志归档。SensorDeck 定义了基础设施层，用于观察运行时条件、结构化证据、支持调查，并保存组织学习到的知识。",
     principles: ["观察", "理解", "调查", "改进", "复用"],
     cta: {
-      primary: { text: "请求演示", href: "#request-demo" },
+      primary: { text: "申请演示", href: "#contact-form" },
       secondary: { text: "技术白皮书", href: "#resources" },
     },
   },

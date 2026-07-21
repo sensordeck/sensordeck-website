@@ -281,7 +281,7 @@ export const libraryContent = {
     },
     secondaryButton: {
       text: "Request Demo",
-      href: "/#request-demo",
+      href: "/#contact-form",
     },
   },
 } as const;

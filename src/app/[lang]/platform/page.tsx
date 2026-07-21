@@ -180,7 +180,7 @@ export default async function PlatformPage({
               {cta.description}
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href={localizeHref(lang, "/request-demo")} variant="primary">
+              <Button href={localizeHref(lang, "/contact")} variant="primary">
                 {cta.primaryButton}
               </Button>
               <Button href={localizeHref(lang, "/library/white-papers")} variant="outline">

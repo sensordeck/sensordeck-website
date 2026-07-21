@@ -280,8 +280,8 @@ export const libraryContent = {
       href: "mailto:contact@sensordeck.tech",
     },
     secondaryButton: {
-      text: "请求演示",
-      href: "/#request-demo",
+      text: "申请演示",
+      href: "/#contact-form",
     },
   },
 } as const;

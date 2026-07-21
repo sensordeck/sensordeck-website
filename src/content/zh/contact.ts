@@ -60,6 +60,25 @@ export const contactContent = {
   },
   submit: "打开邮件草稿",
   emailSubject: "SensorDeck 联系申请",
+  salesTitle: "我们的销售团队",
+  salesNote: "销售联系方式和团队信息将由 SensorDeck 更新",
+  locations: {
+    title: "全球办事处",
+    offices: [
+      {
+        city: "深圳, 中国",
+        name: "SensorDeck 中国",
+        email: "sales.china@sensordeck.com",
+        address: "广东省深圳市南山区",
+      },
+      {
+        city: "加州, 美国",
+        name: "SensorDeck USA",
+        email: "sales.usa@sensordeck.com",
+        address: "California, United States",
+      },
+    ],
+  },
 } as const;
 
 export type ContactContent = typeof contactContent;
