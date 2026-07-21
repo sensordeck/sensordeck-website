@@ -50,12 +50,13 @@ export default async function CompanyPage({
 
   {/* Desktop background */}
   <div
-    className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block"
-    style={{
-      backgroundImage: "url('/images/about-us-desktop.png')",
-    }}
-    aria-hidden="true"
-  />
+  className="absolute right-0 top-0 hidden h-full w-[52%] bg-contain bg-right bg-no-repeat lg:block"
+  style={{
+    backgroundImage: "url('/images/about-us-desktop.png')",
+    backgroundPosition: "95% center",
+  }}
+  aria-hidden="true"
+/>
 
   {/* Mobile readability overlay */}
   <div
