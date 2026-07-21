@@ -35,29 +35,30 @@ export default async function CompanyPage({
       <Header />
 
       <main>
-       <Section
+     <Section
   id="company-hero"
-  className="relative overflow-hidden bg-white pt-24 lg:pt-32"
+  className="relative overflow-hidden bg-white pt-20 lg:pt-24"
 >
   {/* Desktop background image */}
   <div
-    className="absolute inset-0 bg-cover bg-no-repeat"
+    className="absolute inset-0 bg-no-repeat"
     style={{
       backgroundImage: "url('/images/about-us-desktop.png')",
-      backgroundPosition: "58% center",
+      backgroundSize: "78% auto",
+      backgroundPosition: "right top",
     }}
     aria-hidden="true"
   />
 
-  {/* 左侧文字保护层，右侧半球和管道保持清晰 */}
+  {/* 只保护左侧文字，不覆盖右侧重点图案 */}
   <div
-    className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/10"
+    className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-white via-white/88 to-transparent"
     aria-hidden="true"
   />
 
   <AnimatedSection>
-    <div className="relative z-10 grid min-h-[560px] gap-12 lg:min-h-[620px] lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
-      <div className="max-w-4xl">
+    <div className="relative z-10 grid min-h-[620px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+      <div className="max-w-[650px] self-center pb-10 lg:-translate-y-6 lg:pb-0">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
@@ -66,20 +67,22 @@ export default async function CompanyPage({
           {hero.title}
         </h1>
 
-        <p className="heading-description mt-7 max-w-3xl text-xl leading-9 text-muted md:text-2xl">
+        <p className="heading-description mt-7 max-w-[620px] text-xl leading-9 text-muted md:text-2xl">
           {hero.description}
         </p>
       </div>
 
       <div
-        className="stagger-item border-l-2 border-sensor-tan bg-white/55 py-3 pl-5 pr-5 text-sm leading-7 text-muted backdrop-blur-sm lg:mb-2"
+        className="stagger-item max-w-[430px] self-end border-l-2 border-sensor-tan pb-10 pl-5 text-sm leading-7 text-muted lg:mb-6 lg:justify-self-end"
         style={{ animationDelay: "240ms" }}
       >
         <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
           {hero.statementLabel}
         </p>
 
-        <p className="mt-3">{hero.statement}</p>
+        <p className="mt-3">
+          {hero.statement}
+        </p>
       </div>
     </div>
   </AnimatedSection>
