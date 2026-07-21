@@ -37,12 +37,39 @@ export default async function CompanyPage({
       <main>
 <section
   id="company-hero"
-  className="overflow-hidden border-b border-border bg-white"
+  className="relative overflow-hidden border-b border-border bg-white"
 >
+  {/* Mobile background */}
+  <div
+    className="absolute inset-0 bg-no-repeat lg:hidden"
+    style={{
+      backgroundImage: "url('/images/about-us-mobile.png')",
+      backgroundSize: "100% auto",
+      backgroundPosition: "center bottom",
+    }}
+    aria-hidden="true"
+  />
+
+  {/* Desktop background */}
+  <div
+    className="absolute inset-0 hidden bg-no-repeat lg:block"
+    style={{
+      backgroundImage: "url('/images/about-us-desktop.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center center",
+    }}
+    aria-hidden="true"
+  />
+
+  {/* Mobile readability overlay */}
+  <div
+    className="absolute inset-x-0 top-0 h-[62%] bg-gradient-to-b from-white via-white/95 to-transparent lg:hidden"
+    aria-hidden="true"
+  />
+
   <AnimatedSection>
-    <div className="mx-auto grid w-full max-w-7xl items-center gap-8 px-6 py-12 lg:min-h-[430px] lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-8">
-      {/* Text */}
-      <div className="max-w-[620px]">
+    <div className="relative z-10 mx-auto min-h-[760px] w-full max-w-7xl px-6 lg:min-h-[430px] lg:px-8">
+      <div className="max-w-[620px] pb-8 pt-14 lg:flex lg:min-h-[430px] lg:flex-col lg:justify-center lg:py-8">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
@@ -65,24 +92,6 @@ export default async function CompanyPage({
 
           <p className="mt-3">{hero.statement}</p>
         </div>
-      </div>
-
-      {/* Desktop illustration */}
-      <div className="hidden items-center justify-center lg:flex">
-        <img
-          src="/images/about-us-desktop.png"
-          alt=""
-          className="h-auto w-full max-w-[660px] object-contain"
-        />
-      </div>
-
-      {/* Mobile illustration */}
-      <div className="flex justify-center lg:hidden">
-        <img
-          src="/images/about-us-mobile.png"
-          alt=""
-          className="h-auto w-full max-w-[520px] object-contain"
-        />
       </div>
     </div>
   </AnimatedSection>
