@@ -52,9 +52,10 @@ export default async function CompanyPage({
 
 {/* Desktop background */}
 <div
-  className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block"
+  className="absolute inset-0 hidden bg-cover bg-no-repeat lg:block"
   style={{
     backgroundImage: "url('/images/about-us-desktop.png')",
+    backgroundPosition: "center -38px",
   }}
   aria-hidden="true"
 />
