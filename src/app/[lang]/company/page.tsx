@@ -35,54 +35,44 @@ export default async function CompanyPage({
       <Header />
 
       <main>
-   <section
+<section
   id="company-hero"
   className="relative overflow-hidden border-b border-border bg-white"
 >
-  {/* Mobile background */}
+  {/* Desktop background：只在右侧显示，完整保留球体与管道 */}
   <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
+    className="absolute inset-y-0 right-0 hidden w-[58%] bg-contain bg-right-center bg-no-repeat lg:block"
     style={{
-      backgroundImage: "url('/images/about-us-mobile.png')",
+      backgroundImage: "url('/images/about-us-desktop.png')",
+      backgroundPosition: "right center",
     }}
     aria-hidden="true"
   />
 
-  {/* Desktop background */}
- {/* Desktop background */}
-<div
-  className="absolute inset-0 hidden bg-no-repeat lg:block"
-  style={{
-    backgroundImage: "url('/images/about-us-desktop.png')",
-    backgroundSize: "92% auto",
-    backgroundPosition: "right center",
-  }}
-  aria-hidden="true"
-/>
-
-  {/* Mobile readability overlay */}
+  {/* Desktop：文字与图片之间的柔和过渡 */}
   <div
-    className="absolute inset-x-0 top-0 h-[58%] bg-gradient-to-b from-white via-white/95 to-transparent lg:hidden"
+    className="absolute inset-y-0 left-[38%] hidden w-[24%] bg-gradient-to-r from-white via-white/90 to-transparent lg:block"
     aria-hidden="true"
   />
 
   <AnimatedSection>
-    <div className="relative z-10 mx-auto min-h-[720px] w-full max-w-7xl px-6 lg:min-h-[430px] lg:px-8">
-      <div className="max-w-[650px] pb-8 pt-12 lg:py-14">
+    <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:min-h-[430px] lg:px-8">
+      {/* Text content */}
+      <div className="max-w-[640px] pb-8 pt-12 sm:pt-14 lg:flex lg:min-h-[430px] lg:flex-col lg:justify-center lg:py-10">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
         </p>
 
-        <h1 className="heading-title mt-4 max-w-3xl text-5xl font-semibold leading-[1.04] tracking-tight text-ink md:text-6xl lg:text-7xl">
+        <h1 className="heading-title mt-4 max-w-3xl text-[44px] font-semibold leading-[1.02] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl">
           {hero.title}
         </h1>
 
-        <p className="heading-description mt-6 max-w-[610px] text-lg leading-8 text-muted md:text-xl md:leading-9">
+        <p className="heading-description mt-6 max-w-[590px] text-lg leading-8 text-muted sm:text-xl sm:leading-9">
           {hero.description}
         </p>
 
         <div
-          className="stagger-item mt-7 max-w-[570px] border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted"
+          className="stagger-item mt-7 max-w-[560px] border-l-2 border-sensor-tan pl-5 text-sm leading-7 text-muted"
           style={{ animationDelay: "240ms" }}
         >
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sensor-tan">
@@ -92,6 +82,16 @@ export default async function CompanyPage({
           <p className="mt-3">{hero.statement}</p>
         </div>
       </div>
+
+      {/* Mobile illustration：放在文字下面，不再压住文字 */}
+      <div
+        className="mx-[-24px] h-[380px] bg-contain bg-center-top bg-no-repeat sm:h-[440px] lg:hidden"
+        style={{
+          backgroundImage: "url('/images/about-us-mobile.png')",
+          backgroundPosition: "center top",
+        }}
+        aria-hidden="true"
+      />
     </div>
   </AnimatedSection>
 </section>
