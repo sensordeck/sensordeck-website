@@ -45,15 +45,14 @@ export interface ProductContent {
 }
 
 const productsContent: ProductContent = {
- heroTitle: `两条产品线。
-一个共享运行时治理基础设施。`,
+ heroTitle: `两条产品线,
+一个共享运行时治理基础设施`,
 
   heroSubtitle:
     "Atlas 分别服务机器人 OEM 与传感器制造商，并通过统一证据、Engagement Pack、REF 工单和调查资产，将双方连接在同一条可追踪、可关闭、可复用的运行时调查链路中。",
 
-  heroStatement:
-    "当前调查从证据开始。下一次调查，从历史开始。",
-
+ heroStatement:
+  "当前调查从证据开始。下一次调查，从历史开始。",
   architecture: {
     eyebrow: "Atlas 产品全局架构",
     title: "OEM 与 Sensor Factory 双飞轮",
