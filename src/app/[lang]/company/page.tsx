@@ -64,7 +64,7 @@ export default async function CompanyPage({
   />
 
   <AnimatedSection>
-    <div className="relative z-10 mx-auto min-h-[800px] w-full max-w-7xl px-6 lg:min-h-[500px] lg:px-8">
+    <div className="relative z-10 mx-auto min-h-[720px] w-full max-w-7xl px-6 lg:min-h-[430px] lg:px-8">
       <div className="max-w-[650px] pb-8 pt-12 lg:py-14">
         <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
           {hero.eyebrow}
