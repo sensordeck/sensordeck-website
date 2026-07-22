@@ -51,6 +51,10 @@ export default async function RuntimeInvestigationPage({
         );
   const copy = legacyCopy.runtimeInvestigation;
   const { ui } = copy;
+  const heroTitleHasTrademark = ui.heroTitle.endsWith("™");
+  const heroTitle = heroTitleHasTrademark
+    ? ui.heroTitle.slice(0, -1)
+    : ui.heroTitle;
   const investigationFlow = ui.flowTitles.map((title, index) => ({
     number: String(index + 1).padStart(2, "0"),
     title,
@@ -114,8 +118,19 @@ export default async function RuntimeInvestigationPage({
 
             </p>
 
-            <h1 className="mt-4 max-w-5xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-              {ui.heroTitle}
+            <h1
+              className={`mt-4 max-w-5xl font-sans font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg ${
+                lang === "zh"
+                  ? "whitespace-nowrap text-[2.25rem] min-[360px]:text-[2.5625rem]"
+                  : "text-display"
+              }`}
+            >
+              {heroTitle}
+              {heroTitleHasTrademark ? (
+                <sup className="ml-1 inline-block align-super text-[0.4em] leading-none">
+                  ™
+                </sup>
+              ) : null}
             </h1>
 
             <p className="mt-6 max-w-4xl text-body-lg leading-8 text-muted sm:text-body-lg-md sm:leading-9">{copy.text043}
