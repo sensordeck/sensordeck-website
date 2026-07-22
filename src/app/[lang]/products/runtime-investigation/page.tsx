@@ -133,18 +133,7 @@ export default async function RuntimeInvestigationPage({
 
             </p>
 
-            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
-              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
-                {productsContent.ctaText}
-              </Button>
-
-              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/products")} variant="outline">{ui.viewAllProducts}
-
-              </Button>
-            </div>
-          </div>
-        </Section>
-
+           
         {/* Product statement */}
         <Section className="border-y border-border bg-[#050b17]">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
