@@ -288,11 +288,15 @@ export default async function HomePage({
                 index === 0 ? "bg-surface-blue" : "bg-surface-orange"
               }`}
             >
-              {index === 0 && (
-                <p className="text-left text-xs font-semibold uppercase leading-5 text-atlas-blue sm:text-right sm:text-sm">
-                  {product.audience}
-                </p>
-              )}
+             <p
+  className={`text-left text-xs font-semibold uppercase leading-5 sm:text-right sm:text-sm ${
+    index === 0
+      ? "text-atlas-blue"
+      : "text-orange-600"
+  }`}
+>
+  {product.audience}
+</p>
 
               <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:gap-6 md:mt-7 lg:gap-8">
                 <div className="flex size-12 shrink-0 items-center justify-center md:size-16 lg:size-20">
