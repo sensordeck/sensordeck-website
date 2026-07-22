@@ -21,42 +21,42 @@ const reasons: Reason[] = [
     icon: Clock3,
     titleZh: "缩短\n调查时间",
     titleEn: "Reduce\nInvestigation Time",
-    descriptionZh: "借助有界证据与历史 RGA 召回，将调查时间从数天缩短到数小时。",
+    descriptionZh: "借助边界明确的证据与历史 RGA 召回，将调查时间从数天压缩到数小时。",
     descriptionEn: "From days to hours with bounded evidence and historical RGA recall.",
   },
   {
     icon: BarChart3,
     titleZh: "提升\n知识复用",
     titleEn: "Increase\nKnowledge Reuse",
-    descriptionZh: "每一次调查都会强化您的组织记忆。",
+    descriptionZh: "每一次调查都沉淀为可检索、可审查、可复用的组织记忆。",
     descriptionEn: "Every investigation strengthens your organizational memory.",
   },
   {
     icon: UsersRound,
     titleZh: "保护 Tier 3\n工程团队",
     titleEn: "Protect Tier 3\nEngineering",
-    descriptionZh: "让核心工程师专注于创新，而非重复性的事故救火。",
+    descriptionZh: "让核心工程师专注于高价值分析，而不是重复寻找日志和重建时间线。",
     descriptionEn: "Core engineers focus on innovation, not repeated incident firefighting.",
   },
   {
     icon: Network,
-    titleZh: "跨 OEM\n学习",
+    titleZh: "改善 OEM\n与传感器厂协作",
     titleEn: "Cross-OEM\nLearning",
-    descriptionZh: "在保护隐私的同时学习行业经验。",
+    descriptionZh: "通过统一证据与 EGP，减少跨团队反复确认、责任争议与沟通损耗。",
     descriptionEn: "Learn from industry experience while protecting privacy.",
   },
   {
     icon: Box,
-    titleZh: "跨 SKU\n可扩展性",
+    titleZh: "支撑跨 SKU\n扩展",
     titleEn: "Cross-SKU\nScalability",
-    descriptionZh: "一套基础设施即可扩展到机器人、传感器和平台。",
+    descriptionZh: "同一套运行时治理能力可复用于不同机器人、传感器和部署环境。",
     descriptionEn: "One infrastructure scales across robots, sensors, and platforms.",
   },
   {
     icon: Shield,
-    titleZh: "更强的产品\n与运营",
+    titleZh: "持续提升\n产品与运营",
     titleEn: "Stronger Products\n& Operations",
-    descriptionZh: "提升可靠性、客户信任与部署成功率。",
+    descriptionZh: "将调查结果转化为可靠性改进、供应商管理和运营决策依据。",
     descriptionEn: "Improve reliability, customer trust, and deployment success.",
   },
 ];
@@ -73,16 +73,16 @@ export default function WhyAtlasSection({ lang }: WhyAtlasSectionProps) {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
         <div className="max-w-6xl">
           <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-atlas-blue md:text-sm lg:text-base">
-            {isChinese ? "04 / 领导者为何选择 ATLAS" : "04 / Why Leaders Choose Atlas"}
+            {isChinese ? "04 / 为什么选择 Atlas" : "04 / Why Atlas"}
           </p>
           <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]">
             {isChinese
-              ? "以更少的工程成本，创造更多价值"
+              ? "减少重复调查，保护核心工程资源"
               : "Deliver More Value with Less Engineering Cost"}
           </h2>
           <p className="mt-4 max-w-5xl text-base leading-7 text-ink/80 md:mt-5 md:text-lg md:leading-8 lg:text-xl">
             {isChinese
-              ? "Atlas 帮助组织降低调查成本，保护核心工程资源，并持续改进产品与运营。"
+              ? "Atlas 将一次次分散、重复的事故排查，转化为可复用的证据、调查资产和组织知识。通过缩短调查周期、减少 Tier 3 工程师被重复事故牵制，让每一次调查持续改善产品、供应商协作与运营决策。"
               : "Atlas helps organizations reduce investigation cost, protect core engineering resources, and continuously improve products and operations."}
           </p>
         </div>
