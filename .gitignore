@@ -148,3 +148,4 @@ vite.config.ts.timestamp-*
 
 # Playwright artifacts
 output/playwright/
+REMAINING_ISSUES_FOR_BOSS.md
