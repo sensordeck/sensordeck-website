@@ -35,7 +35,7 @@ export default async function CategoryPage({
   Atlas 位于 Sensor 与 System Decision 之间
 </h1>
 
-    <p className="mx-auto mt-6 max-w-4xl text-xl leading-9 tracking-tight text-ink sm:text-2xl sm:leading-10">
+  <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-8">
       {homeContent.categoryDefinition.lead}
     </p>
   </div>
