@@ -283,8 +283,8 @@ const homeContent = {
     reviewBoundaryValue: "环境差异保持明确。",
     documentation: "规范文档",
     finalCtaDescription:
-      "如果您正在探索运行时治理、传感器证据或调查工作流，欢迎与我们聊聊您的场景。",
-    illustrativeDemoData: "仅限示意性演示数据",
+      "无论您正在规划新的机器人平台、优化已有产品，还是建立运行时调查体系，我们都愿意了解您的场景，并一起探讨 Atlas 是否适合您的团队。",
+    illustrativeDemoData: "演示内容仅用于说明 Atlas 工作流程，不包含任何客户运行时数据。",
     contactUs: "联系我们",
   },
 } satisfies HomeContent;
