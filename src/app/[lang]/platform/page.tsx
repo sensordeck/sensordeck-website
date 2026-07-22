@@ -326,39 +326,43 @@ export default async function PlatformPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-ink py-16 sm:py-20 md:py-24">
-        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="heading-title text-3xl font-semibold tracking-tight text-white md:text-4xl">
-              {cta.title}
-            </h2>
+      <section className="border-b border-border bg-surface py-16 sm:py-20 md:py-24">
+  <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+        Next Step
+      </p>
 
-            <p className="heading-description mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70">
-              {cta.description}
-            </p>
+      <h2 className="heading-title mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        {cta.title}
+      </h2>
 
-            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button
-                className="w-full sm:w-auto"
-                href={localizeHref(lang, "/contact")}
-                variant="primary"
-              >
-                {cta.primaryButton}
-              </Button>
+      <p className="heading-description mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
+        {cta.description}
+      </p>
 
-              <a
-                href={documentation.documentationLink.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto"
-              >
-                {cta.secondaryButton}
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
+      <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Button
+          className="w-full sm:w-auto"
+          href={localizeHref(lang, "/contact")}
+          variant="primary"
+        >
+          {cta.primaryButton}
+        </Button>
+
+        <a
+          href={documentation.documentationLink.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-sm font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white sm:w-auto"
+        >
+          {cta.secondaryButton}
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </AnimatedSection>
+</section>
     </div>
   );
 }
