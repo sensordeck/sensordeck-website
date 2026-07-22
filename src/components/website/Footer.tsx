@@ -45,12 +45,22 @@ const footerCopy: Record<
         ],
       },
       {
-        title: "资料库",
-        links: [
-          { label: "白皮书", href: "/library/white-papers" },
-          { label: "文档", href: "https://docs.sensordeck.tech" },
-          { label: "2分钟概览", href: "/library/demo" },
-        ],
+        title: "技术资源",
+
+links: [
+  {
+    label: "Atlas 中文文档",
+    href: "/library",
+  },
+  {
+    label: "参考资料",
+    href: "/library/faq",
+  },
+  {
+    label: "2分钟概览",
+    href: "/library/demo",
+  },
+],
       },
     ],
   },
