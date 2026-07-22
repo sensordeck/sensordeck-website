@@ -1,10 +1,13 @@
-import Image from 'next/image';
-import Section from '@/components/website/Section';
-import Button from '@/components/website/Button';
-import Card from '@/components/website/Card';
-import { getAuxiliaryPagesContent, getHomeContent } from '@/lib/content';
-import { isValidLocale, localizeHref } from '@/lib/i18n';
-import { notFound } from 'next/navigation';
+import Image from "next/image";
+import Section from "@/components/website/Section";
+import Button from "@/components/website/Button";
+import Card from "@/components/website/Card";
+import {
+  getAuxiliaryPagesContent,
+  getHomeContent,
+} from "@/lib/content";
+import { isValidLocale, localizeHref } from "@/lib/i18n";
+import { notFound } from "next/navigation";
 
 export default async function ProblemPage({
   params,
@@ -12,6 +15,7 @@ export default async function ProblemPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+
   if (!isValidLocale(lang)) {
     notFound();
   }
@@ -20,78 +24,87 @@ export default async function ProblemPage({
     getHomeContent(lang),
     getAuxiliaryPagesContent(lang),
   ]);
+
   const content = auxiliaryContent.problem;
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <Section className="bg-surface">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold tracking-wide text-atlas-blue uppercase mb-4">
+      {/* Problem Introduction */}
+      <Section className="bg-white">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-atlas-blue">
             {content.eyebrow}
           </p>
-          <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
-            {homeContent.sectionTitles.theProblem}
+
+          <h1 className="mx-auto max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
+            {homeContent.theProblem.lead}
           </h1>
-          <p className="text-lg leading-8 text-muted sm:text-xl sm:leading-9">
+
+          <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-8">
             {homeContent.sectionDescriptions.theProblem}
           </p>
-        </div>
-      </Section>
 
-      {/* Lead 文字 */}
-      <Section className="bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="mb-8 text-xl leading-9 tracking-tight text-ink sm:text-2xl sm:leading-10">
-            {homeContent.theProblem.lead}
-          </p>
-          <p className="text-xl font-semibold text-atlas-blue">
+          <p className="mt-8 text-base font-semibold text-atlas-blue sm:text-lg">
             {homeContent.theProblem.cta}
           </p>
         </div>
       </Section>
 
-      {/* 大图展示 */}
+      {/* Main Comparison Image */}
       <Section className="bg-surface">
-        <div className="mt-12">
+        <div className="mx-auto max-w-7xl">
           <Image
-            src={lang === "en" ? "/images/Sensordeck 2e.png" : "/images/Sensordeck 2.png"}
+            src={
+              lang === "en"
+                ? "/images/Sensordeck 2e.png"
+                : "/images/Sensordeck 2.png"
+            }
             alt={content.imageAlt}
             width={2065}
             height={762}
             quality={100}
-            className="w-full h-auto"
+            className="h-auto w-full"
             unoptimized
           />
         </div>
       </Section>
 
-      {/* 对比说明 */}
+      {/* Comparison Details */}
       <Section className="bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold tracking-tight text-ink text-center mb-12">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight text-ink">
             {content.comparisonTitle}
           </h2>
+
           <div className="grid gap-8 lg:grid-cols-2">
             <Card className="border-2 border-border">
               <h3 className="text-xl font-semibold tracking-tight text-ink">
                 {homeContent.theProblem.comparison.withoutAtlas.title}
               </h3>
+
               <div className="mt-6 space-y-3">
-                {homeContent.theProblem.comparison.withoutAtlas.steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-sensor-tan-text">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-base text-ink">{step}</span>
+                {homeContent.theProblem.comparison.withoutAtlas.steps.map(
+                  (step, index) => (
+                    <div key={step}>
+                      <div className="flex items-center gap-3">
+                        <span className="font-mono text-xs text-sensor-tan-text">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <span className="text-base text-ink">{step}</span>
+                      </div>
+
+                      {index <
+                        homeContent.theProblem.comparison.withoutAtlas.steps
+                          .length -
+                          1 && (
+                        <div className="ml-6 mt-2 text-muted">↓</div>
+                      )}
                     </div>
-                    {index < homeContent.theProblem.comparison.withoutAtlas.steps.length - 1 && (
-                      <div className="ml-6 mt-2 text-muted">↓</div>
-                    )}
-                  </div>
-                ))}
+                  ),
+                )}
               </div>
+
               <p className="mt-6 text-sm font-semibold text-muted">
                 {homeContent.theProblem.comparison.withoutAtlas.note}
               </p>
@@ -101,21 +114,32 @@ export default async function ProblemPage({
               <h3 className="text-xl font-semibold tracking-tight text-ink">
                 {homeContent.theProblem.comparison.withAtlas.title}
               </h3>
+
               <div className="mt-6 space-y-3">
-                {homeContent.theProblem.comparison.withAtlas.steps.map((step, index) => (
-                  <div key={index}>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-atlas-blue">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-base font-medium text-ink">{step}</span>
+                {homeContent.theProblem.comparison.withAtlas.steps.map(
+                  (step, index) => (
+                    <div key={step}>
+                      <div className="flex items-center gap-3">
+                        <span className="font-mono text-xs text-atlas-blue">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <span className="text-base font-medium text-ink">
+                          {step}
+                        </span>
+                      </div>
+
+                      {index <
+                        homeContent.theProblem.comparison.withAtlas.steps
+                          .length -
+                          1 && (
+                        <div className="ml-6 mt-2 text-atlas-blue">↓</div>
+                      )}
                     </div>
-                    {index < homeContent.theProblem.comparison.withAtlas.steps.length - 1 && (
-                      <div className="ml-6 mt-2 text-atlas-blue">↓</div>
-                    )}
-                  </div>
-                ))}
+                  ),
+                )}
               </div>
+
               <p className="mt-6 text-sm font-semibold text-atlas-blue">
                 {homeContent.theProblem.comparison.withAtlas.note}
               </p>
@@ -124,13 +148,14 @@ export default async function ProblemPage({
         </div>
       </Section>
 
-      {/* 为什么重要 */}
+      {/* Why It Matters */}
       <Section className="bg-surface">
-        <div className="max-w-5xl mx-auto">
+        <div className="mx-auto max-w-5xl">
           <div className="border border-border bg-white p-5 sm:p-8 md:p-12">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink">
+            <h2 className="text-2xl font-semibold tracking-tight text-ink">
               {homeContent.theProblem.whyMatters.title}
-            </h3>
+            </h2>
+
             <p className="mt-4 text-base leading-8 text-muted">
               {homeContent.theProblem.whyMatters.description}
             </p>
@@ -138,17 +163,27 @@ export default async function ProblemPage({
         </div>
       </Section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <Section className="bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-ink mb-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-6 text-3xl font-semibold tracking-tight text-ink">
             {content.ctaTitle}
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")} variant="primary">
+
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Button
+              className="w-full sm:w-auto"
+              href={localizeHref(lang, "/contact")}
+              variant="primary"
+            >
               {content.requestDemo}
             </Button>
-            <Button className="w-full sm:w-auto" href={localizeHref(lang, "/")} variant="secondary">
+
+            <Button
+              className="w-full sm:w-auto"
+              href={localizeHref(lang, "/")}
+              variant="secondary"
+            >
               {content.backHome}
             </Button>
           </div>
