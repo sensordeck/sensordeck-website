@@ -113,27 +113,27 @@ export default async function RuntimeInvestigationPage({
   return (
     <div className="bg-white">
 
-        {/* Hero */}
+               {/* Hero */}
         <Section className="bg-white">
           <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan-text">{ui.heroEyebrow}
-
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan-text">
+              {ui.heroEyebrow}
             </p>
 
             <h1 className="mt-4 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
               {ui.heroTitle}
             </h1>
 
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">{copy.text043}
-
-
+            <p className="mt-6 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">
+              {copy.text043}
             </p>
 
-            <p className="mt-5 max-w-4xl text-base leading-8 text-muted sm:text-lg">{copy.text044}
-
+            <p className="mt-5 max-w-4xl text-base leading-8 text-muted sm:text-lg">
+              {copy.text044}
             </p>
+          </div>
+        </Section>
 
-           
         {/* Product statement */}
         <Section className="border-y border-border bg-[#050b17]">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
