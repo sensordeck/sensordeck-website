@@ -360,20 +360,22 @@ export const libraryContent = {
 },
 
   cta: {
-    eyebrow: "下一步",
-    title: "从您的运行时场景开始",
-    description:
-      "介绍您的机器人平台、主要传感器、部署环境和当前调查流程。我们将共同评估适合的 Atlas 部署范围和交付方式。",
+  eyebrow: "下一步",
 
-    primaryButton: {
-      text: "联系我们",
-      href: "/contact",
-    },
+  title: "进一步了解 Atlas",
 
-    secondaryButton: {
-      text: "查看参考资料",
-      href:
-        "https://sensordeck.github.io/atlas-docs-cn/category/参考资料",
-    },
+  description:
+    "查看完整 Atlas 中文技术文档，或联系我们讨论您的机器人平台、运行时边界和部署计划。",
+
+  primaryButton: {
+    text: "联系我们",
+    href: "/contact",
   },
+
+  secondaryButton: {
+    text: "Atlas 中文文档",
+    href:
+      "https://sensordeck.github.io/atlas-docs-cn/",
+  },
+},
 } satisfies LibraryContent;
