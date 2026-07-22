@@ -36,19 +36,21 @@ const homeContent = {
     technicalResources: "白皮书兼顾管理决策者和工程团队；独立文档站点提供数据模式、集成方式和实现细节。",
     finalCta: "了解 Atlas 如何结合您的机器人组织、运行时边界、调查工作流程和证据所有权模式。",
   },
- lead:
-  "机器人行业已经拥有先进的传感器、成熟的计算平台、完善的 ROS 中间件，以及快速发展的 AI 与应用软件。然而，在 Sensor 输出与 System Decision 之间，始终缺少一层统一的运行时治理基础设施。这一层负责持续观察、保留和组织运行时行为，也是机器人运行时问题最容易发生、却长期缺乏系统治理的关键边界。",
-  runtimeBoundary: {
-    title: "机器人真正缺失的是运行时治理层",
-    steps: [
-      "Real World",
-      "Sensor",
-      "Connectivity & Power",
-      "Linux Runtime",
-      "ROS Runtime",
-      "Application",
-      "System Decision"
-    ],
+ categoryDefinition: {
+    lead:
+      "机器人行业已经拥有先进的传感器、成熟的计算平台、完善的 ROS 中间件，以及快速发展的 AI 与应用软件。然而，在 Sensor 输出与 System Decision 之间，始终缺少一层统一的运行时治理基础设施。这一层负责持续观察、保留和组织运行时行为，也是机器人运行时问题最容易发生、却长期缺乏系统治理的关键边界。",
+
+    runtimeBoundary: {
+      title: "机器人真正缺失的是运行时治理层",
+      steps: [
+        "Real World",
+        "Sensor",
+        "Connectivity & Power",
+        "Linux Runtime",
+        "ROS Runtime",
+        "Application",
+        "System Decision",
+      ],
     note:
       "机器人进入真实世界后，传感器数据需要经过供电、通信、Linux、驱动、缓冲区、调度器以及 ROS Runtime 等多个运行时环节，最终才能成为系统决策输入。今天行业拥有每一个独立组件，却缺少持续治理这一整条运行时链路的基础设施。"
   },
