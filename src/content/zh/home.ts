@@ -119,14 +119,15 @@ const homeContent = {
     ],
   },
 
-  theProblem: {
+ theProblem: {
   lead:
     "REF 发生之后，工程团队通常需要重新寻找日志、重新同步录像、重新联系不同团队，再重新拼凑整个运行过程。大量调查时间，并没有花在分析问题，而是花在寻找证据。",
 
-    comparison: {
+  cta: "查看 Atlas 如何解决",
+
+  comparison: {
     withoutAtlas: {
       title: "传统调查流程",
-
       steps: [
         "REF 发生",
         "寻找日志",
@@ -134,16 +135,13 @@ const homeContent = {
         "联系不同团队",
         "重新整理时间线",
         "人工分析",
-        "经验散落"
+        "经验散落",
       ],
-
-      note:
-        "每一次调查都重新开始。"
+      note: "每一次调查都重新开始。",
     },
 
     withAtlas: {
       title: "Atlas Runtime Investigation",
-
       steps: [
         "REF 发生",
         "Evidence Pack",
@@ -151,21 +149,17 @@ const homeContent = {
         "调查工作区",
         "IR / Lessons Learned",
         "Assist Vault",
-        "未来直接复用"
+        "未来直接复用",
       ],
-
-      note:
-        "第一次建立组织记忆，之后不断复用。"
-    }
+      note: "第一次建立组织记忆，之后不断复用。",
+    },
   },
 
   whyMatters: {
-    title:
-      "Atlas 改变的不是一次调查，而是整个组织。",
-
+    title: "Atlas 改变的不是一次调查，而是整个组织。",
     description:
-      "Atlas 将持续运行的数据组织为 Runtime Evidence，再把调查结果沉淀为 Historical RGA 与 Assist Vault。每一次 REF 都会成为下一次调查的起点，而不是终点。工程经验第一次能够随着产品持续积累。"
-  }
+      "Atlas 将持续运行的数据组织为 Runtime Evidence，再把调查结果沉淀为 Historical RGA 与 Assist Vault。每一次 REF 都会成为下一次调查的起点，而不是终点。工程经验第一次能够随着产品持续积累。",
+  },
 },
     
   whyRuntimeGovernance: {
