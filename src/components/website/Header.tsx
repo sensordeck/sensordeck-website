@@ -111,7 +111,7 @@ function NavigationLinks({
         const active = isActive(item.href);
         return (
           <Link
-            className={`flex min-h-11 items-center rounded-sm px-2 py-2 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue link-hover ${
+            className={`flex min-h-11 items-center rounded-sm px-2 py-2 text-label transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue link-hover ${
               active
                 ? "font-semibold text-ink border-b-2 border-atlas-blue"
                 : "font-medium text-muted hover:text-ink"
@@ -229,7 +229,7 @@ export default function Header() {
             <LanguageSwitcher currentLocale={currentLocale} />
             <Button
               href={localizeHref(currentLocale, "/contact")}
-              className="px-3.5 py-2 text-xs"
+              className="px-3.5 py-2 text-caption"
             >
               {copy.requestDemo}
             </Button>

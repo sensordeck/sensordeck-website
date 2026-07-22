@@ -14,7 +14,7 @@ const homeContent = {
     categoryDefinition: "机器人行业此前不存在的一层",
     theProblem: "事故排查为何总从零开始",
     whyRuntimeGovernance: "为什么需要运行时治理",
-    productLines: "一套基础设施，两条产品线。",
+    productLines: "两种方案，一个使命",
     platformCapabilities: "Atlas 平台围绕证据构建工作流程",
     investigationLifecycle: "从 REF 到未来复用",
     roboticsIndustry: "为机器人行业打造",

@@ -33,10 +33,10 @@ export default async function GlossaryPage({
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+            <h1 className="font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {content.title}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted">
+            <p className="mt-6 text-body-lg leading-relaxed text-muted md:text-body-lg-md">
               {content.description}
             </p>
           </div>
@@ -45,21 +45,21 @@ export default async function GlossaryPage({
           <div className="mx-auto mt-16 max-w-5xl space-y-16">
             {Object.entries(termsByCategory).map(([category, terms]) => (
               <div key={category}>
-                <h2 className="text-2xl font-semibold tracking-tight text-ink border-b border-border pb-3">
+                <h2 className="border-b border-border pb-3 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                   {content.categories[category as keyof typeof content.categories]}
                 </h2>
                 <dl className="mt-8 space-y-8">
                   {terms.map((term) => (
                     <div key={term.term} className="border-l-2 border-atlas-blue pl-6">
-                      <dt className="text-lg font-semibold text-ink">
+                      <dt className="text-card-title font-semibold leading-snug text-ink md:text-card-title-md">
                         {term.term}
                         {term.chinese && (
-                          <span className="ml-3 text-base font-normal text-muted">
+                          <span className="ml-3 text-body font-normal leading-normal text-muted">
                             {term.chinese}
                           </span>
                         )}
                       </dt>
-                      <dd className="mt-3 text-base leading-7 text-muted">
+                      <dd className="mt-3 text-body leading-relaxed text-muted">
                         {term.definition}
                       </dd>
                     </div>

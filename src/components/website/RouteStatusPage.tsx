@@ -89,7 +89,7 @@ const copyByLocale: Record<Locale, Record<StatusKind, StatusCopy>> = {
 };
 
 const actionClassName =
-  "inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-center text-sm font-semibold leading-5 whitespace-normal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue button-press button-hover";
+  "inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-center text-label font-semibold leading-normal whitespace-normal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue button-press button-hover";
 
 export default function RouteStatusPage({
   kind,
@@ -148,15 +148,15 @@ export default function RouteStatusPage({
                   className="block h-px w-10 bg-atlas-blue"
                 />
               )}
-              <p className="font-mono text-[11px] font-semibold uppercase text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase leading-normal tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
                 {copy.eyebrow}
               </p>
             </div>
 
-            <h1 className="mt-5 text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+            <h1 className="mt-5 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink md:text-page-title-md lg:text-page-title-lg">
               {copy.title}
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-8 text-muted sm:text-lg">
+            <p className="mt-5 max-w-xl text-body-lg leading-relaxed text-muted md:text-body-lg-md">
               {copy.description}
             </p>
 

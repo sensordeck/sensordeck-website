@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+    <p className="font-mono text-eyebrow font-semibold uppercase leading-normal tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
       {children}
     </p>
   );
@@ -31,7 +31,7 @@ export default async function DocumentationPage({
 
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">
-            <nav aria-label={ui.breadcrumbLabel} className="flex items-center gap-2 text-sm">
+            <nav aria-label={ui.breadcrumbLabel} className="flex items-center gap-2 text-label leading-normal">
             <Link className="text-muted hover:text-ink" href={localizeHref(lang, "/library")}>
               {ui.libraryLabel}
             </Link>
@@ -44,10 +44,10 @@ export default async function DocumentationPage({
         <Section id="documentation-hero" className="bg-white pt-8">
           <div className="max-w-3xl">
             <Eyebrow>{documentation.eyebrow}</Eyebrow>
-            <h1 className="mt-4 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl">
+            <h1 className="mt-4 font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {documentation.title}
             </h1>
-            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl">
+            <p className="mt-7 text-body-lg leading-relaxed text-muted md:text-body-lg-md">
               {documentation.description}
             </p>
           </div>
@@ -57,13 +57,13 @@ export default async function DocumentationPage({
         <Section id="docs-content" className="bg-surface">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div className="border border-border bg-white p-6 md:p-8">
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
+              <p className="font-mono text-eyebrow font-semibold uppercase leading-normal tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
                 {ui.documentationTopics}
               </p>
               <ul className="mt-6 grid gap-3">
                 {documentation.topics.map((topic) => (
                   <li
-                    className="flex items-start gap-3 text-sm leading-6 text-ink"
+                    className="flex items-start gap-3 text-body leading-normal text-ink"
                     key={topic}
                   >
                     <span className="mt-2 size-1.5 shrink-0 rounded-full bg-atlas-blue" />
@@ -74,10 +74,10 @@ export default async function DocumentationPage({
             </div>
             <div className="flex flex-col justify-between">
               <div>
-                <p className="text-2xl leading-10 tracking-tight text-ink">
+                <p className="text-body-lg leading-relaxed tracking-tight text-ink md:text-body-lg-md">
                   {ui.documentationHosting}
                 </p>
-                <p className="mt-6 text-base leading-8 text-muted">
+                <p className="mt-6 text-body leading-relaxed text-muted">
                   {documentation.note}
                 </p>
               </div>
@@ -101,7 +101,7 @@ export default async function DocumentationPage({
         <Section id="use-cases" className="bg-white">
           <div className="max-w-3xl">
             <Eyebrow>{ui.documentationFor}</Eyebrow>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+            <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
               {ui.documentationReferenceTitle}
             </h2>
           </div>
@@ -111,10 +111,10 @@ export default async function DocumentationPage({
                 className="border border-border bg-surface p-5"
                 key={item}
               >
-                <span className="font-mono text-xs text-sensor-tan-text">
+                <span className="font-mono text-code leading-normal text-atlas-blue">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-4 text-sm font-semibold text-ink">{item}</p>
+                <p className="mt-4 text-label font-semibold leading-normal text-ink">{item}</p>
               </div>
             ))}
           </div>
@@ -124,13 +124,13 @@ export default async function DocumentationPage({
         <Section id="navigation" className="bg-surface">
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
             <Link
-              className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
               href={localizeHref(lang, "/library/white-papers")}
             >
               {ui.previousWhitePapers}
             </Link>
             <Link
-              className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
               href={localizeHref(lang, "/library/demo")}
             >
               {ui.nextDemo}

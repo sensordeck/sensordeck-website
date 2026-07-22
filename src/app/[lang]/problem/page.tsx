@@ -33,19 +33,19 @@ export default async function ProblemPage({
       {/* Page Introduction */}
       <Section className="bg-surface">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+          <p className="mb-5 font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
             {content.eyebrow}
           </p>
 
-          <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.12] tracking-[-0.025em] text-ink sm:text-5xl">
+          <h1 className="mx-auto max-w-4xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
             {homeContent.sectionTitles.theProblem}
           </h1>
 
-          <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-muted sm:text-xl sm:leading-10">
+          <p className="mx-auto mt-8 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
             {problem.lead}
           </p>
 
-          <p className="mx-auto mt-6 max-w-4xl text-lg leading-9 text-muted sm:text-xl sm:leading-10">
+          <p className="mx-auto mt-6 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
             {homeContent.sectionDescriptions.theProblem}
           </p>
         </div>
@@ -74,7 +74,7 @@ export default async function ProblemPage({
       <Section className="bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h2 className="text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl">
+            <h2 className="font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
               {content.comparisonTitle}
             </h2>
           </div>
@@ -82,11 +82,11 @@ export default async function ProblemPage({
           <div className="grid gap-8 lg:grid-cols-2">
             <Card className="h-full border-2 border-border bg-white p-6 sm:p-8">
               <div className="border-b border-border pb-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   01
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-ink">
+                <h3 className="mt-3 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                   {problem.comparison.withoutAtlas.title}
                 </h3>
               </div>
@@ -95,11 +95,11 @@ export default async function ProblemPage({
                 {problem.comparison.withoutAtlas.steps.map((step, index) => (
                   <div key={`${step}-${index}`}>
                     <div className="flex min-h-12 items-center gap-4">
-                      <span className="w-7 shrink-0 font-mono text-xs text-sensor-tan-text">
+                      <span className="w-7 shrink-0 font-mono text-caption text-sensor-tan-text">
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <span className="text-base leading-7 text-ink">
+                      <span className="text-body leading-7 text-ink">
                         {step}
                       </span>
                     </div>
@@ -112,18 +112,18 @@ export default async function ProblemPage({
                 ))}
               </div>
 
-              <p className="mt-8 border-t border-border pt-5 text-sm font-semibold leading-6 text-muted">
+              <p className="mt-8 border-t border-border pt-5 text-label font-semibold leading-6 text-muted">
                 {problem.comparison.withoutAtlas.note}
               </p>
             </Card>
 
             <Card className="h-full border-2 border-atlas-blue bg-surface-blue p-6 sm:p-8">
               <div className="border-b border-atlas-blue/20 pb-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   02
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-ink">
+                <h3 className="mt-3 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                   {problem.comparison.withAtlas.title}
                 </h3>
               </div>
@@ -132,11 +132,11 @@ export default async function ProblemPage({
                 {problem.comparison.withAtlas.steps.map((step, index) => (
                   <div key={`${step}-${index}`}>
                     <div className="flex min-h-12 items-center gap-4">
-                      <span className="w-7 shrink-0 font-mono text-xs text-atlas-blue">
+                      <span className="w-7 shrink-0 font-mono text-caption text-atlas-blue">
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <span className="text-base font-medium leading-7 text-ink">
+                      <span className="text-body font-medium leading-7 text-ink">
                         {step}
                       </span>
                     </div>
@@ -148,7 +148,7 @@ export default async function ProblemPage({
                 ))}
               </div>
 
-              <p className="mt-8 border-t border-atlas-blue/20 pt-5 text-sm font-semibold leading-6 text-atlas-blue">
+              <p className="mt-8 border-t border-atlas-blue/20 pt-5 text-label font-semibold leading-6 text-atlas-blue">
                 {problem.comparison.withAtlas.note}
               </p>
             </Card>
@@ -161,17 +161,17 @@ export default async function ProblemPage({
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 border border-border bg-white p-6 sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:p-14">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 03 / 为什么重要
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl">
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                 {problem.whyMatters.title}
               </h2>
             </div>
 
             <div className="lg:border-l lg:border-border lg:pl-16">
-              <p className="text-lg leading-9 text-muted">
+              <p className="text-body-lg leading-9 text-muted">
                 {problem.whyMatters.description}
               </p>
             </div>
@@ -182,15 +182,15 @@ export default async function ProblemPage({
       {/* Closing Statement */}
       <Section className="bg-white">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+          <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
             Atlas Runtime Governance
           </p>
 
-          <h2 className="mx-auto mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl lg:text-5xl">
+          <h2 className="mx-auto mt-5 max-w-4xl font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
             {content.ctaTitle}
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-9">
+          <p className="mx-auto mt-6 max-w-3xl text-body leading-8 text-muted sm:text-body-lg sm:leading-9">
             {problem.comparison.withAtlas.note}
           </p>
 

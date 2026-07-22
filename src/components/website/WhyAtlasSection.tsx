@@ -75,12 +75,12 @@ export default function WhyAtlasSection({ lang }: WhyAtlasSectionProps) {
           <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow md:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
             {isChinese ? "04 / 为什么选择 Atlas" : "04 / Why Atlas"}
           </p>
-          <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]">
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-section-title-md">
             {isChinese
               ? "减少重复调查，保护核心工程资源"
               : "Deliver More Value with Less Engineering Cost"}
           </h2>
-          <p className="mt-4 max-w-5xl text-base leading-7 text-ink/80 md:mt-5 md:text-lg md:leading-8 lg:text-xl">
+          <p className="mt-4 max-w-5xl text-body leading-7 text-ink/80 md:mt-5 md:text-body-lg md:leading-8 lg:text-body-lg-md">
             {isChinese
               ? "Atlas 将一次次分散、重复的事故排查，转化为可复用的证据、调查资产和组织知识。通过缩短调查周期、减少 Tier 3 工程师被重复事故牵制，让每一次调查持续改善产品、供应商协作与运营决策。"
               : "Atlas helps organizations reduce investigation cost, protect core engineering resources, and continuously improve products and operations."}
@@ -101,10 +101,10 @@ export default function WhyAtlasSection({ lang }: WhyAtlasSectionProps) {
                   className="size-12 text-atlas-blue md:size-16 lg:size-20"
                   strokeWidth={1.7}
                 />
-                <h3 className="mt-6 whitespace-pre-line text-lg font-semibold leading-7 text-ink md:mt-8 md:text-xl md:leading-8 lg:mt-10">
+                <h3 className="mt-6 whitespace-pre-line font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:mt-8 md:text-card-title-md lg:mt-10 lg:text-card-title-lg">
                   {isChinese ? reason.titleZh : reason.titleEn}
                 </h3>
-                <p className="mt-5 text-base leading-7 text-muted md:mt-8 md:text-lg md:leading-8 lg:mt-10 xl:text-base">
+                <p className="mt-5 text-body leading-7 text-muted md:mt-8 md:text-body-lg md:leading-8 lg:mt-10 xl:text-body">
                   {isChinese ? reason.descriptionZh : reason.descriptionEn}
                 </p>
               </article>

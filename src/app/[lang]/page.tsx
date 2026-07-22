@@ -11,17 +11,17 @@ const unifiedSectionContainerClassName =
   "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12";
 
 const unifiedSectionEyebrowClassName =
-  "font-mono font-semibold uppercase text-[var(--text-eyebrow)] tracking-[var(--tracking-eyebrow)] md:text-[var(--text-eyebrow-md)] lg:text-[var(--text-eyebrow-lg)] text-atlas-blue";
+  "font-mono font-semibold uppercase text-eyebrow tracking-eyebrow md:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue";
 
 const unifiedSectionTitleClassName =
-  "mt-4 text-[var(--text-section-title-lg)] font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-[var(--text-section-title-lg-md)] lg:text-[var(--text-section-title-lg-lg)]";
+  "mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-section-title-md";
 
 const unifiedSectionDescriptionClassName =
-  "mt-4 text-[var(--text-body)] leading-7 text-ink/80 md:mt-5 md:text-[var(--text-body-lg)] md:leading-8 lg:text-[var(--text-body-lg-md)]";
+  "mt-4 text-body leading-7 text-ink/80 md:mt-5 md:text-body-lg md:leading-8 lg:text-body-lg-md";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="heading-eyebrow font-mono font-semibold uppercase text-[var(--text-eyebrow)] tracking-[var(--tracking-eyebrow)] md:text-[var(--text-eyebrow-md)] text-atlas-blue">
+    <p className="heading-eyebrow font-mono font-semibold uppercase text-eyebrow tracking-eyebrow md:text-eyebrow-md text-atlas-blue">
       {children}
     </p>
   );
@@ -42,11 +42,11 @@ function SectionHeading({
     <div className={`max-w-3xl ${className}`}>
       <Eyebrow>{eyebrow}</Eyebrow>
 
-      <h2 className="heading-title mt-4 text-[var(--text-section-title-lg)] font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-[var(--text-section-title-lg-md)] lg:text-[var(--text-section-title-lg-lg)]">
+      <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-section-title-md">
         {title}
       </h2>
 
-      <p className="heading-description mt-4 text-[var(--text-body)] leading-7 text-muted md:mt-5 md:text-[var(--text-body-lg)] md:leading-8 lg:text-[var(--text-body-lg-md)]">
+      <p className="heading-description mt-4 text-body leading-7 text-muted md:mt-5 md:text-body-lg md:leading-8 lg:text-body-lg-md">
         {description}
       </p>
     </div>
@@ -124,13 +124,14 @@ export default async function HomePage({
                 className="
                   heading-title
                   whitespace-pre-line
-                  text-4xl
+                  font-sans
+                  text-display
                   font-semibold
-                  leading-[1.05]
+                  leading-tight
                   tracking-tight
                   text-ink
-                  sm:text-5xl
-                  lg:text-6xl
+                  sm:text-display-md
+                  lg:text-display-lg
                 "
               >
                 {homeContent.heroTitle}
@@ -144,10 +145,10 @@ export default async function HomePage({
                   hidden
                   max-w-xl
                   whitespace-pre-line
-                  text-base
+                  text-body
                   leading-7
                   text-ink
-                  sm:text-lg
+                  sm:text-body-lg
                   lg:block
                 "
               >
@@ -161,10 +162,10 @@ export default async function HomePage({
                   mt-3
                   block
                   max-w-xl
-                  text-base
+                  text-body
                   leading-7
                   text-ink
-                  sm:text-lg
+                  sm:text-body-lg
                   lg:hidden
                 "
               >
@@ -175,10 +176,10 @@ export default async function HomePage({
                 className="
                   mt-3
                   whitespace-pre-line
-                  text-sm
+                  text-label
                   font-semibold
                   text-atlas-blue
-                  sm:text-base
+                  sm:text-body
                 "
               >
                 {homeContent.heroValueProposition}
@@ -289,7 +290,7 @@ export default async function HomePage({
               }`}
             >
              <p
-  className={`text-left text-xs font-semibold uppercase leading-5 sm:text-right sm:text-sm ${
+  className={`text-left text-caption font-semibold uppercase leading-5 sm:text-right sm:text-label ${
     index === 0
       ? "text-atlas-blue"
       : "text-orange-600"
@@ -313,16 +314,12 @@ export default async function HomePage({
                   )}
                 </div>
 
-                <h3
-                  className={`max-w-md text-2xl font-semibold leading-tight tracking-tight md:text-3xl lg:text-4xl ${
-                    index === 0 ? "text-atlas-blue" : "text-ink"
-                  }`}
-                >
+                <h3 className="max-w-md font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                   {product.name}
                 </h3>
               </div>
 
-              <p className="mt-6 max-w-xl text-base leading-7 text-ink md:mt-8 md:text-lg md:leading-8">
+              <p className="mt-6 max-w-xl text-body leading-7 text-ink md:mt-8 md:text-body-lg md:leading-8">
                 {product.description}
               </p>
 
@@ -330,7 +327,7 @@ export default async function HomePage({
                 {product.modules.map((module) => (
                   <li
                     key={module}
-                    className="flex items-start gap-3 text-base leading-7 text-ink"
+                    className="flex items-start gap-3 text-body leading-7 text-ink"
                   >
                     <Check
                       aria-hidden="true"
@@ -348,12 +345,12 @@ export default async function HomePage({
 
               <div className="mt-auto pt-8 md:pt-10">
                 <a
-                  className="inline-flex min-h-11 w-full items-center justify-between gap-3 text-base font-semibold text-atlas-blue transition-transform duration-200 hover:translate-x-1 sm:w-auto sm:justify-start"
+                  className="inline-flex min-h-11 w-full items-center justify-between gap-3 text-body font-semibold text-atlas-blue transition-transform duration-200 hover:translate-x-1 sm:w-auto sm:justify-start"
                   href={localizeHref(lang, product.link)}
                 >
                   {homeContent.ui.learnMore}
 
-                  <span aria-hidden="true" className="text-2xl leading-none">
+                  <span aria-hidden="true" className="text-section-title leading-none">
                     →
                   </span>
                 </a>
@@ -375,15 +372,15 @@ export default async function HomePage({
                 {homeContent.ui.sectionEyebrows.finalCta}
               </Eyebrow>
 
-              <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl">
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-section-title-md">
                 {homeContent.sectionTitles.finalCta}
               </h2>
 
-              <p className="mt-4 max-w-2xl text-base leading-7 text-muted md:mt-5 md:text-lg md:leading-8">
+              <p className="mt-4 max-w-2xl text-body leading-7 text-muted md:mt-5 md:text-body-lg md:leading-8">
                 {homeContent.ui.finalCtaDescription}
               </p>
 
-              <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+              <p className="mt-6 font-mono text-eyebrow uppercase tracking-eyebrow text-muted">
                 {homeContent.ui.illustrativeDemoData}
               </p>
             </div>

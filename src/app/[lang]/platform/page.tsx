@@ -66,19 +66,19 @@ export default async function PlatformPage({
       <section className="border-b border-border bg-white py-16 sm:py-20 md:py-28">
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-5xl">
-            <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
               Platform Architecture
             </p>
 
-            <h1 className="heading-title mt-6 max-w-4xl text-4xl font-semibold leading-[1.06] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="heading-title mt-6 max-w-4xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {hero.title}
             </h1>
 
-            <p className="heading-description mt-7 max-w-4xl text-xl leading-9 text-ink sm:text-2xl">
+            <p className="heading-description mt-7 max-w-4xl text-body-lg leading-9 text-ink sm:text-body-lg-md">
               {hero.subtitle}
             </p>
 
-            <p className="heading-description mt-7 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+            <p className="heading-description mt-7 max-w-3xl text-body leading-8 text-muted sm:text-body-lg">
               {hero.description}
             </p>
           </div>
@@ -90,15 +90,15 @@ export default async function PlatformPage({
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
             <div>
-              <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
                 Architecture
               </p>
 
-              <h2 className="heading-title mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+              <h2 className="heading-title mt-4 max-w-3xl font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                 {architecture.title}
               </h2>
 
-              <p className="heading-description mt-6 max-w-3xl text-base leading-8 text-muted">
+              <p className="heading-description mt-6 max-w-3xl text-body leading-8 text-muted">
                 {architecture.description}
               </p>
 
@@ -106,7 +106,7 @@ export default async function PlatformPage({
                 {architecture.principles.map((principle) => (
                   <li
                     key={principle}
-                    className="flex items-start gap-4 text-sm leading-7 text-ink"
+                    className="flex items-start gap-4 text-label leading-7 text-ink"
                   >
                     <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-atlas-blue" />
                     <span>{principle}</span>
@@ -116,11 +116,11 @@ export default async function PlatformPage({
             </div>
 
             <div className="border-l-2 border-sensor-tan bg-white p-6 sm:p-8">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 Constitutional Boundary
               </p>
 
-              <h3 className="mt-4 text-xl font-semibold text-ink">
+              <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                 {architecture.constitutionalBoundary.title}
               </h3>
 
@@ -128,7 +128,7 @@ export default async function PlatformPage({
                 {architecture.constitutionalBoundary.items.map((item) => (
                   <li
                     key={item}
-                    className="font-mono text-sm leading-7 text-muted"
+                    className="font-mono text-code leading-7 text-muted"
                   >
                     {item}
                   </li>
@@ -143,15 +143,15 @@ export default async function PlatformPage({
       <section className="border-b border-border bg-white py-14 sm:py-18 md:py-24">
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
               Runtime Evidence Flow
             </p>
 
-            <h2 className="heading-title mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
               {ui.capabilitiesTitle}
             </h2>
 
-            <p className="heading-description mt-5 text-base leading-8 text-muted">
+            <p className="heading-description mt-5 text-body leading-8 text-muted">
               从持续观察，到事件证据、调查协作和组织记忆，Atlas
               将原本分散的运行时调查活动连接为一条完整链路。
             </p>
@@ -164,15 +164,15 @@ export default async function PlatformPage({
                 className="grid gap-6 border-t border-border pt-8 lg:grid-cols-[0.32fr_0.68fr]"
               >
                 <div>
-                  <p className="font-mono text-xs font-semibold tracking-[0.15em] text-atlas-blue">
+                  <p className="font-mono text-caption font-semibold tracking-eyebrow text-atlas-blue">
                     {stage.number}
                   </p>
 
-                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">
+                  <h3 className="mt-3 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                     {stage.title}
                   </h3>
 
-                  <p className="mt-3 max-w-sm text-sm leading-7 text-muted">
+                  <p className="mt-3 max-w-sm text-label leading-7 text-muted">
                     {stage.description}
                   </p>
                 </div>
@@ -189,11 +189,11 @@ export default async function PlatformPage({
                       key={capability.name}
                       className="rounded-lg border border-border bg-white p-6 transition-colors hover:border-atlas-blue/40"
                     >
-                      <h4 className="text-xl font-semibold text-ink">
+                      <h4 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                         {capability.name}
                       </h4>
 
-                      <p className="mt-3 text-sm leading-7 text-muted">
+                      <p className="mt-3 text-label leading-7 text-muted">
                         {capability.description}
                       </p>
 
@@ -201,7 +201,7 @@ export default async function PlatformPage({
                         {capability.keyFeatures.map((feature) => (
                           <li
                             key={feature}
-                            className="flex items-start gap-3 text-sm leading-6 text-ink/75"
+                            className="flex items-start gap-3 text-label leading-6 text-ink/75"
                           >
                             <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-atlas-blue" />
                             <span>{feature}</span>
@@ -221,15 +221,15 @@ export default async function PlatformPage({
       <section className="border-b border-border bg-surface py-14 sm:py-18 md:py-24">
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
               Two Products. One Infrastructure.
             </p>
 
-            <h2 className="heading-title mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
               {productsRelationship.title}
             </h2>
 
-            <p className="heading-description mt-5 text-base leading-8 text-muted">
+            <p className="heading-description mt-5 text-body leading-8 text-muted">
               {productsRelationship.description}
             </p>
           </div>
@@ -241,20 +241,20 @@ export default async function PlatformPage({
                 className="rounded-lg border border-border bg-white p-6 sm:p-8"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <p className="font-mono text-xs font-semibold text-atlas-blue">
+                  <p className="font-mono text-caption font-semibold text-atlas-blue">
                     0{index + 1}
                   </p>
 
-                  <p className="text-sm font-semibold text-atlas-blue">
+                  <p className="text-label font-semibold text-atlas-blue">
                     {product.audience}
                   </p>
                 </div>
 
-                <h3 className="mt-6 max-w-lg text-2xl font-semibold leading-tight text-ink">
+                <h3 className="mt-6 max-w-lg font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                   {product.name}
                 </h3>
 
-                <p className="mt-7 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+                <p className="mt-7 font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   {ui.coreModulesLabel}
                 </p>
 
@@ -262,7 +262,7 @@ export default async function PlatformPage({
                   {product.coreModules.map((module) => (
                     <li
                       key={module}
-                      className="flex items-start gap-3 text-sm leading-6 text-ink/75"
+                      className="flex items-start gap-3 text-label leading-6 text-ink/75"
                     >
                       <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-atlas-blue" />
                       <span>{module}</span>
@@ -280,11 +280,11 @@ export default async function PlatformPage({
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div>
-              <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
                 Documentation
               </p>
 
-              <h2 className="heading-title mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+              <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                 {documentation.title}
               </h2>
 
@@ -292,7 +292,7 @@ export default async function PlatformPage({
                 href={documentation.documentationLink.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark"
+                className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark"
               >
                 {documentation.documentationLink.title}
                 <span aria-hidden="true">↗</span>
@@ -300,7 +300,7 @@ export default async function PlatformPage({
             </div>
 
             <div>
-              <p className="mb-7 text-base leading-8 text-muted">
+              <p className="mb-7 text-body leading-8 text-muted">
                 {documentation.documentationLink.description}
               </p>
 
@@ -310,11 +310,11 @@ export default async function PlatformPage({
                     key={paper.title}
                     className="border-t border-border pt-5"
                   >
-                    <h3 className="text-base font-semibold text-ink">
+                    <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                       {paper.title}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-7 text-muted">
+                    <p className="mt-2 text-label leading-7 text-muted">
                       {paper.description}
                     </p>
                   </article>
@@ -329,15 +329,15 @@ export default async function PlatformPage({
       <section className="border-b border-border bg-surface py-16 sm:py-20 md:py-24">
   <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto max-w-4xl text-center">
-      <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+      <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
         Next Step
       </p>
 
-      <h2 className="heading-title mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+      <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
         {cta.title}
       </h2>
 
-      <p className="heading-description mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
+      <p className="heading-description mx-auto mt-6 max-w-2xl text-body leading-8 text-muted">
         {cta.description}
       </p>
 
@@ -354,7 +354,7 @@ export default async function PlatformPage({
           href={documentation.documentationLink.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-sm font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white sm:w-auto"
+          className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-label font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white sm:w-auto"
         >
           {cta.secondaryButton}
           <span aria-hidden="true">↗</span>

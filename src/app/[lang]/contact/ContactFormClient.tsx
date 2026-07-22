@@ -7,7 +7,7 @@ import Section from "@/components/website/Section";
 import type { ContactContent } from "@/lib/content-types";
 
 const inputClass =
-  "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-base text-ink outline-none placeholder:text-muted sm:text-sm " +
+  "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-body text-ink outline-none placeholder:text-muted " +
   "transition-[border-color,box-shadow,background-color] duration-[var(--duration-fast),var(--duration-instant),var(--duration-fast)] ease-[var(--ease-standard)] " +
   "hover:border-border/80 focus-visible:border-atlas-blue focus-visible:ring-[3px] focus-visible:ring-atlas-blue/20";
 
@@ -99,15 +99,15 @@ export default function ContactFormClient({
       {/* Hero */}
       <Section id="contact-hero" className="bg-white">
         <div className="max-w-4xl">
-          <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+          <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
             {content.hero.eyebrow}
           </p>
 
-          <h1 className="heading-title mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-6xl">
+          <h1 className="heading-title mt-5 font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
             {content.hero.title}
           </h1>
 
-          <p className="heading-description mt-6 max-w-3xl whitespace-pre-line text-lg leading-8 text-muted sm:mt-7 sm:text-xl sm:leading-9 md:text-2xl">
+          <p className="heading-description mt-6 max-w-3xl whitespace-pre-line text-body-lg leading-8 text-muted sm:mt-7 sm:text-body-lg-md sm:leading-9">
             {content.hero.description}
           </p>
         </div>
@@ -117,20 +117,20 @@ export default function ContactFormClient({
       <Section id="contact-form" className="bg-white">
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
           <div className="max-w-md">
-            <p className="heading-eyebrow font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
               {content.formIntro.eyebrow}
             </p>
 
-            <h2 className="heading-title mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
               {content.formIntro.title}
             </h2>
 
-            <p className="heading-description mt-5 whitespace-pre-line text-base leading-8 text-muted">
+            <p className="heading-description mt-5 whitespace-pre-line text-body leading-8 text-muted">
               {content.formIntro.description}
             </p>
 
             <p
-              className="stagger-item mt-8 border-l-2 border-sensor-tan pl-4 text-sm leading-7 text-muted"
+              className="stagger-item mt-8 border-l-2 border-sensor-tan pl-4 text-label leading-7 text-muted"
               style={{ animationDelay: "240ms" }}
             >
               {content.formIntro.note}
@@ -207,7 +207,7 @@ export default function ContactFormClient({
 
             <div>
               <label
-                className="text-sm font-semibold text-ink"
+                className="text-label font-semibold text-ink"
                 htmlFor="message"
               >
                 {fields.message.label}
@@ -225,7 +225,7 @@ export default function ContactFormClient({
               />
             </div>
 
-            <div className="mt-4 space-y-2 text-xs text-muted">
+            <div className="mt-4 space-y-2 text-caption text-muted">
               <p>
                 {content.privacyNotice}{" "}
                 <Link
@@ -241,7 +241,7 @@ export default function ContactFormClient({
             </div>
 
             <button
-              className="button-press button-hover mt-2 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:w-fit"
+              className="button-press button-hover mt-2 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:w-fit"
               type="submit"
             >
               {content.submit}
@@ -254,11 +254,11 @@ export default function ContactFormClient({
       {/* Documentation */}
       <Section id="deployment-guide" className="bg-surface">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">
+          <h2 className="font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
             {content.salesTitle}
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-muted">
+          <p className="mx-auto mt-5 max-w-2xl text-body leading-8 text-muted">
             {content.salesNote}
           </p>
 
@@ -266,7 +266,7 @@ export default function ContactFormClient({
             href="https://sensordeck.github.io/atlas-docs-cn/category/部署指南"
             target="_blank"
             rel="noreferrer"
-            className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+            className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
           >
             {deploymentGuideLabel}
             <span aria-hidden="true">↗</span>
@@ -277,7 +277,7 @@ export default function ContactFormClient({
       {/* Locations */}
       <Section id="global-locations" className="bg-white">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+          <h2 className="text-center font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
             {content.locations.title}
           </h2>
 
@@ -287,15 +287,15 @@ export default function ContactFormClient({
                 key={office.city}
                 className="min-w-0 rounded-lg border border-border bg-white p-5 sm:p-8"
               >
-                <div className="mb-2 text-sm font-medium uppercase tracking-wider text-muted">
+                <div className="mb-2 text-label font-medium uppercase tracking-wider text-muted">
                   {office.city}
                 </div>
 
-                <h3 className="mb-4 text-xl font-semibold text-ink sm:text-2xl">
+                <h3 className="mb-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                   {office.name}
                 </h3>
 
-                <div className="space-y-3 text-sm text-muted">
+                <div className="space-y-3 text-label text-muted">
                   <div className="flex items-start gap-3">
                     <svg
                       className="mt-0.5 h-5 w-5 flex-shrink-0 text-atlas-blue"
@@ -373,7 +373,7 @@ function TextInput({
   return (
     <div>
       <label
-        className="text-sm font-semibold text-ink"
+        className="text-label font-semibold text-ink"
         htmlFor={name}
       >
         {field.label}
@@ -411,7 +411,7 @@ function SelectInput({
   return (
     <div>
       <label
-        className="text-sm font-semibold text-ink"
+        className="text-label font-semibold text-ink"
         htmlFor={name}
       >
         {field.label}

@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
+    <p className="font-mono text-eyebrow font-semibold uppercase leading-normal tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg heading-eyebrow text-atlas-blue">
       {children}
     </p>
   );
@@ -44,10 +44,10 @@ export default async function LibraryIndexPage({
         <Section id="library-hero" className="bg-white">
           <div className="max-w-4xl">
             <Eyebrow>{hero.eyebrow}</Eyebrow>
-            <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-6xl heading-title">
+            <h1 className="mt-5 font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg heading-title">
               {hero.title}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted sm:mt-7 sm:text-xl sm:leading-9 md:text-2xl heading-description">
+            <p className="mt-6 text-body-lg leading-relaxed text-muted sm:mt-7 sm:text-body-lg-md heading-description">
               {hero.subtitle}
             </p>
           </div>
@@ -63,23 +63,23 @@ export default async function LibraryIndexPage({
               >
                 <div>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-mono text-xs text-sensor-tan-text">
+                    <span className="font-mono text-code leading-normal text-atlas-blue">
                       {resource.id}
                     </span>
-                    <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
+                    <span className="border border-border px-2 py-1 font-mono text-caption uppercase leading-normal tracking-eyebrow text-muted">
                       {resource.items}
                     </span>
                   </div>
-                  <h2 className="mt-8 text-2xl font-semibold tracking-tight text-ink">
+                  <h2 className="mt-8 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                     {resource.title}
                   </h2>
-                  <p className="mt-4 text-sm leading-7 text-muted">
+                  <p className="mt-4 text-body leading-relaxed text-muted">
                     {resource.description}
                   </p>
                 </div>
                 <div className="mt-6 border-t border-border pt-4">
                   <Link
-                    className="-my-2 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
+                    className="-my-2 inline-flex min-h-11 items-center gap-2 text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
                     href={localizeHref(lang, resource.href)}
                   >
                     {ui.browse}
@@ -95,7 +95,7 @@ export default async function LibraryIndexPage({
         <Section id="quick-access" className="bg-white">
           <div className="max-w-3xl">
             <Eyebrow>{ui.quickAccessEyebrow}</Eyebrow>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl heading-title">
+            <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md heading-title">
               {ui.quickAccessTitle}
             </h2>
           </div>
@@ -104,8 +104,8 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/white-papers")}
             >
-              <span className="font-mono text-xs text-sensor-tan-text">{ui.whitePapersLabel}</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">{ui.whitePapersLabel}</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.whitePapersLabel}
               </span>
             </Link>
@@ -113,8 +113,8 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/documentation")}
             >
-              <span className="font-mono text-xs text-sensor-tan-text">{ui.documentationLabel}</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">{ui.documentationLabel}</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.documentationLabel}
               </span>
             </Link>
@@ -122,8 +122,8 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/demo")}
             >
-              <span className="font-mono text-xs text-sensor-tan-text">{ui.demoLabel}</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">{ui.demoLabel}</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.demoAndVideoLabel}
               </span>
             </Link>
@@ -131,8 +131,8 @@ export default async function LibraryIndexPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/faq")}
             >
-              <span className="font-mono text-xs text-sensor-tan-text">{ui.faqLabel}</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">{ui.faqLabel}</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.faqLabel}
               </span>
             </Link>
@@ -145,10 +145,10 @@ export default async function LibraryIndexPage({
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-3xl">
                 <Eyebrow>{cta.eyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-5xl heading-title">
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md heading-title">
                   {cta.title}
                 </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg heading-description">
+                <p className="mt-5 max-w-2xl text-body leading-relaxed text-muted md:text-body-lg heading-description">
                   {cta.description}
                 </p>
               </div>

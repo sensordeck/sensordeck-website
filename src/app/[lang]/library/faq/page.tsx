@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-atlas-blue heading-eyebrow">
+    <p className="font-mono text-eyebrow font-semibold uppercase leading-normal tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg heading-eyebrow text-atlas-blue">
       {children}
     </p>
   );
@@ -30,7 +30,7 @@ export default async function FAQPage({
 
         {/* Breadcrumb */}
         <Section className="bg-white pb-0">
-            <nav aria-label={ui.breadcrumbLabel} className="flex items-center gap-2 text-sm">
+            <nav aria-label={ui.breadcrumbLabel} className="flex items-center gap-2 text-label leading-normal">
             <Link className="text-muted hover:text-ink" href={localizeHref(lang, "/library")}>
               {ui.libraryLabel}
             </Link>
@@ -43,10 +43,10 @@ export default async function FAQPage({
         <Section id="faq-hero" className="bg-white pt-8">
           <div className="max-w-3xl">
             <Eyebrow>{faq.eyebrow}</Eyebrow>
-            <h1 className="mt-4 text-5xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl heading-title">
+            <h1 className="mt-4 font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg heading-title">
               {faq.title}
             </h1>
-            <p className="mt-7 text-xl leading-9 text-muted md:text-2xl heading-description">
+            <p className="mt-7 text-body-lg leading-relaxed text-muted md:text-body-lg-md heading-description">
               {faq.description}
             </p>
           </div>
@@ -60,13 +60,13 @@ export default async function FAQPage({
                 className="border-l-2 border-atlas-blue bg-white p-6 md:p-8 stagger-item"
                 key={item.question}
               >
-                <span className="font-mono text-xs text-sensor-tan-text">
+                <span className="font-mono text-code leading-normal text-atlas-blue">
                   Q{String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold leading-7 text-ink">
+                <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                   {item.question}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-muted">{item.answer}</p>
+                <p className="mt-4 text-body leading-relaxed text-muted">{item.answer}</p>
               </div>
             ))}
           </div>
@@ -76,10 +76,10 @@ export default async function FAQPage({
         <Section id="more-info" className="bg-white">
           <div className="max-w-3xl">
             <Eyebrow>{ui.moreInfoEyebrow}</Eyebrow>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl heading-title">
+            <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md heading-title">
               {ui.moreResourcesTitle}
             </h2>
-            <p className="mt-6 text-base leading-8 text-muted heading-description">
+            <p className="mt-6 text-body leading-relaxed text-muted heading-description">
               {ui.moreResourcesDescription}
             </p>
           </div>
@@ -88,8 +88,8 @@ export default async function FAQPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/white-papers")}
             >
-              <span className="font-mono text-xs text-sensor-tan-text">01</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">01</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.readWhitePapers}
               </span>
             </Link>
@@ -97,8 +97,8 @@ export default async function FAQPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href={localizeHref(lang, "/library/documentation")}
             >
-              <span className="font-mono text-xs text-sensor-tan-text">02</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">02</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.viewDocumentation}
               </span>
             </Link>
@@ -106,8 +106,8 @@ export default async function FAQPage({
               className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
               href="mailto:contact@sensordeck.tech"
             >
-              <span className="font-mono text-xs text-sensor-tan-text">03</span>
-              <span className="mt-4 text-sm font-semibold text-ink">
+              <span className="font-mono text-code leading-normal text-atlas-blue">03</span>
+              <span className="mt-4 text-label font-semibold leading-normal text-ink">
                 {ui.contactUs}
               </span>
             </a>
@@ -118,13 +118,13 @@ export default async function FAQPage({
         <Section id="navigation" className="bg-surface">
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
             <Link
-              className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
               href={localizeHref(lang, "/library/demo")}
             >
               {ui.previousDemo}
             </Link>
             <Link
-              className="text-sm font-semibold text-atlas-blue hover:text-atlas-blue-dark"
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
               href={localizeHref(lang, "/library")}
             >
               {ui.backToLibrary}

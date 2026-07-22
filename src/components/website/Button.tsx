@@ -42,7 +42,7 @@ export default function Button({
   variant = "primary",
   ...props
 }: ButtonProps) {
-  const buttonClassName = `inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-center text-sm font-semibold leading-5 whitespace-normal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue ${variantClasses[variant]} ${className}`;
+  const buttonClassName = `inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-center text-label font-semibold leading-5 whitespace-normal focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue ${variantClasses[variant]} ${className}`;
 
   if (href?.startsWith("/")) {
     return (

@@ -21,7 +21,7 @@ function FeatureList({ items }: {items: string[];}) {
       {items.map((item) =>
       <li
         key={item}
-        className="flex items-start gap-3 text-sm leading-7 text-ink md:text-base">
+        className="flex items-start gap-3 text-label leading-7 text-ink md:text-body">
         
           <DotIcon />
           <span>{item}</span>
@@ -143,19 +143,19 @@ export default async function RuntimeSensorGovernancePage({
         {/* Hero */}
         <Section className="bg-white">
           <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan-text">
+            <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
               {ui.heroEyebrow}
             </p>
 
-            <h1 className="mt-4 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[60px]">
+            <h1 className="mt-4 max-w-5xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {ui.heroTitle}
             </h1>
 
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">{copy.text044}
+            <p className="mt-6 max-w-4xl text-body-lg leading-8 text-muted sm:text-body-lg-md sm:leading-9">{copy.text044}
 
             </p>
 
-            <p className="mt-5 max-w-4xl text-base leading-8 text-muted sm:text-lg">{copy.text045}
+            <p className="mt-5 max-w-4xl text-body leading-8 text-muted sm:text-body-lg">{copy.text045}
 
             </p>
           </div>
@@ -165,17 +165,17 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="border-y border-border bg-[#050b17]">
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {ui.runtimeEvidenceChainEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.text047}
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-white md:text-section-title-md">{copy.text047}
 
                 <br />{copy.text048}
 
               </h2>
 
-              <p className="mt-5 max-w-3xl text-base leading-8 text-white/70 md:text-lg">{copy.text049}
+              <p className="mt-5 max-w-3xl text-body leading-8 text-white/70 md:text-body-lg">{copy.text049}
 
 
               </p>
@@ -187,15 +187,15 @@ export default async function RuntimeSensorGovernancePage({
                 key={item.number}
                 className="min-h-[220px] border border-white/15 bg-white/[0.04] p-5">
                 
-                  <span className="font-mono text-xs font-semibold text-[#70a9ff]">
+                  <span className="font-mono text-caption font-semibold text-atlas-blue">
                     {item.number}
                   </span>
 
-                  <h3 className="mt-8 text-lg font-semibold text-white">
+                  <h3 className="mt-8 font-sans text-card-title font-semibold leading-snug tracking-tight text-white md:text-card-title-md lg:text-card-title-lg">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-white/65">
+                  <p className="mt-3 text-label leading-7 text-white/65">
                     {item.description}
                   </p>
                 </article>
@@ -209,15 +209,15 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
               <div>
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   {ui.runtimeBoundaryEyebrow}
                 </p>
 
-                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text050}
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text050}
 
                 </h2>
 
-                <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text051}
+                <p className="mt-5 text-body leading-8 text-muted md:text-body-lg">{copy.text051}
 
                 </p>
               </div>
@@ -227,7 +227,7 @@ export default async function RuntimeSensorGovernancePage({
                   {ui.runtimeSurfaces.map((surface) =>
                   <div
                     key={surface}
-                    className="bg-white px-5 py-5 font-mono text-sm font-semibold text-ink">
+                    className="bg-white px-5 py-5 font-mono text-code font-semibold text-ink">
                     
                       {surface}
                     </div>
@@ -235,7 +235,7 @@ export default async function RuntimeSensorGovernancePage({
                 </div>
 
                 <div className="mt-6 border border-atlas-blue/25 bg-surface-blue p-6">
-                  <p className="text-sm font-semibold leading-7 text-ink md:text-base">
+                  <p className="text-label font-semibold leading-7 text-ink md:text-body">
                     {ui.runtimeBoundaryPath}
                   </p>
                 </div>
@@ -248,15 +248,15 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-white">
           <div className="mx-auto max-w-6xl">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {ui.atlasAgentEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                 {ui.agentChainTitle}
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text052}
+              <p className="mt-5 text-body leading-8 text-muted md:text-body-lg">{copy.text052}
 
               </p>
             </div>
@@ -268,7 +268,7 @@ export default async function RuntimeSensorGovernancePage({
                 className="flex min-h-[230px] flex-col border border-border bg-white p-6">
                 
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-semibold text-atlas-blue">
+                    <span className="font-mono text-caption font-semibold text-atlas-blue">
                       {item.number}
                     </span>
 
@@ -277,11 +277,11 @@ export default async function RuntimeSensorGovernancePage({
                   null}
                   </div>
 
-                  <h3 className="mt-8 text-xl font-semibold tracking-tight text-ink">
+                  <h3 className="mt-8 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-muted">
+                  <p className="mt-4 text-label leading-7 text-muted">
                     {item.description}
                   </p>
                 </article>
@@ -294,17 +294,17 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-surface">
           <div className="mx-auto max-w-6xl">
             <div className="max-w-4xl">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {ui.evidencePackGenerationEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text053}
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text053}
 
                 <br />{copy.text054}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text055}
+              <p className="mt-5 text-body leading-8 text-muted md:text-body-lg">{copy.text055}
 
 
               </p>
@@ -316,15 +316,15 @@ export default async function RuntimeSensorGovernancePage({
                 key={mode.label}
                 className="border border-border bg-white p-7 md:p-9">
                 
-                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-atlas-blue">
+                  <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                     {mode.label}
                   </p>
 
-                  <h3 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
+                  <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                     {mode.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-muted md:text-base">
+                  <p className="mt-4 text-label leading-7 text-muted md:text-body">
                     {mode.description}
                   </p>
 
@@ -336,7 +336,7 @@ export default async function RuntimeSensorGovernancePage({
             </div>
 
             <div className="mt-6 border border-atlas-blue/25 bg-surface-blue p-6 text-center md:p-8">
-              <p className="text-base font-semibold leading-8 text-ink md:text-lg">{copy.text056}
+              <p className="text-body font-semibold leading-8 text-ink md:text-body-lg">{copy.text056}
 
 
               </p>
@@ -348,17 +348,17 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-white">
           <div className="mx-auto max-w-6xl">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {ui.fiveWindowModelEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text057}
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text057}
 
                 <br />{copy.text058}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text059}
+              <p className="mt-5 text-body leading-8 text-muted md:text-body-lg">{copy.text059}
 
 
               </p>
@@ -371,7 +371,7 @@ export default async function RuntimeSensorGovernancePage({
                 className="flex min-h-[240px] flex-col border border-border bg-surface p-6">
                 
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-semibold text-atlas-blue">
+                    <span className="font-mono text-caption font-semibold text-atlas-blue">
                       {window.number}
                     </span>
 
@@ -380,11 +380,11 @@ export default async function RuntimeSensorGovernancePage({
                   null}
                   </div>
 
-                  <h3 className="mt-8 text-lg font-semibold tracking-tight text-ink">
+                  <h3 className="mt-8 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                     {window.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-muted">
+                  <p className="mt-4 text-label leading-7 text-muted">
                     {window.description}
                   </p>
                 </article>
@@ -397,17 +397,17 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-[#050b17]">
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {ui.investigationRoutingEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.text060}
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-white md:text-section-title-md">{copy.text060}
 
                 <br />{copy.text061}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-white/70 md:text-lg">{copy.text062}
+              <p className="mt-5 text-body leading-8 text-white/70 md:text-body-lg">{copy.text062}
 
 
               </p>
@@ -419,18 +419,18 @@ export default async function RuntimeSensorGovernancePage({
                 key={tier.title}
                 className="border border-white/15 bg-white/[0.04] p-6">
                 
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-white md:text-card-title-md lg:text-card-title-lg">
                     {tier.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-white/65">
+                  <p className="mt-3 text-label leading-7 text-white/65">
                     {tier.description}
                   </p>
                 </article>
               )}
             </div>
 
-            <p className="lg:col-span-2 text-sm font-semibold leading-7 text-white/85">{copy.text067}
+            <p className="lg:col-span-2 text-label font-semibold leading-7 text-white/85">{copy.text067}
 
 
             </p>
@@ -441,15 +441,15 @@ export default async function RuntimeSensorGovernancePage({
         <Section className="bg-white">
           <div className="mx-auto max-w-6xl">
             <div className="max-w-4xl">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {ui.runtimeEvidenceAssetsEyebrow}
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">{copy.text068}
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text068}
 
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">{copy.text069}
+              <p className="mt-5 text-body leading-8 text-muted md:text-body-lg">{copy.text069}
 
 
               </p>
@@ -461,11 +461,11 @@ export default async function RuntimeSensorGovernancePage({
                 key={output.title}
                 className="border border-border bg-white p-6">
                 
-                  <h3 className="text-lg font-semibold tracking-tight text-ink">
+                  <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                     {output.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-muted">
+                  <p className="mt-3 text-label leading-7 text-muted">
                     {output.description}
                   </p>
                 </article>
@@ -479,11 +479,11 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-2">
               <article className="border border-border bg-white p-7 md:p-9">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   {ui.atlasSupportsEyebrow}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">{copy.text070}
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text070}
 
                 </h2>
 
@@ -493,11 +493,11 @@ export default async function RuntimeSensorGovernancePage({
               </article>
 
               <article className="border border-border bg-white p-7 md:p-9">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sensor-tan-text">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   {ui.constitutionalBoundaryEyebrow}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink md:text-3xl">{copy.text071}
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text071}
 
                 </h2>
 
@@ -505,7 +505,7 @@ export default async function RuntimeSensorGovernancePage({
                   <FeatureList items={atlasDoesNotDo} />
                 </div>
 
-                <p className="mt-8 border-t border-border pt-6 text-sm font-semibold leading-7 text-ink">{copy.text072}
+                <p className="mt-8 border-t border-border pt-6 text-label font-semibold leading-7 text-ink">{copy.text072}
 
 
                 </p>
@@ -519,33 +519,33 @@ export default async function RuntimeSensorGovernancePage({
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
               <article className="border border-border bg-surface p-7 md:p-9">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   {ui.governanceProductName}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{copy.text073}
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text073}
 
                 </h2>
 
-                <p className="mt-5 text-base leading-8 text-muted">{ui.governanceFlow}
+                <p className="mt-5 text-body leading-8 text-muted">{ui.governanceFlow}
 
                 </p>
               </article>
 
-              <div className="hidden items-center justify-center px-3 text-2xl text-atlas-blue lg:flex">
+              <div className="hidden items-center justify-center px-3 text-section-title text-atlas-blue lg:flex">
                 <ArrowIcon />
               </div>
 
               <article className="border border-border bg-surface p-7 md:p-9">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-atlas-blue">
+                <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                   {ui.investigationProductName}
                 </p>
 
-                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{copy.text075}
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{copy.text075}
 
                 </h2>
 
-                <p className="mt-5 text-base leading-8 text-muted">
+                <p className="mt-5 text-body leading-8 text-muted">
                   {ui.investigationFlow}
                 </p>
               </article>
@@ -556,17 +556,17 @@ export default async function RuntimeSensorGovernancePage({
         {/* Final CTA */}
         <Section className="bg-[#050b17]">
           <div className="mx-auto max-w-5xl text-center">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#70a9ff]">
+            <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
               {ui.continuousEvidenceEyebrow}
             </p>
 
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">{copy.text076}
+            <h2 className="mt-5 font-sans text-section-title font-semibold leading-snug tracking-tight text-white md:text-section-title-md">{copy.text076}
 
               <br />{copy.text077}
 
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg">{copy.text078}
+            <p className="mx-auto mt-6 max-w-3xl text-body leading-8 text-white/70 md:text-body-lg">{copy.text078}
 
 
             </p>

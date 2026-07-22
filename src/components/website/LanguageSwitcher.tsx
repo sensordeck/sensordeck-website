@@ -88,7 +88,7 @@ export function LanguageSwitcher({
       <button
         aria-expanded={isOpen}
         aria-label={copy.ariaLabel}
-        className="flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-md px-2 text-sm font-medium text-foreground transition-colors hover:text-atlas-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:px-3"
+        className="flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-md px-2 text-label font-medium text-foreground transition-colors hover:text-atlas-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue sm:px-3"
         onClick={() => setIsOpen((open) => !open)}
         type="button"
       >
@@ -110,7 +110,7 @@ export function LanguageSwitcher({
               key={locale}
               onClick={() => switchLocale(locale)}
               type="button"
-              className={`flex min-h-11 w-full items-center px-4 text-left text-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-atlas-blue ${
+              className={`flex min-h-11 w-full items-center px-4 text-left text-label transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-atlas-blue ${
                 locale === currentLocale
                   ? "bg-surface font-medium"
                   : ""

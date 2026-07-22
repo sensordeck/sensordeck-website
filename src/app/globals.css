@@ -100,10 +100,10 @@
   --leading-loose: 1.75;
 
   /* ========== 字重令牌 ========== */
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   /* ========== 字距令牌 ========== */
   --tracking-tight: -0.025em;

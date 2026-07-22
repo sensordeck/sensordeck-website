@@ -26,14 +26,14 @@ export default function SensorFaeDemoClient({
         <Section className="border-b border-border bg-white py-3">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              <span className="text-lg font-semibold text-atlas-blue">ATLAS</span>
-              <span className="text-sm text-muted">{content.sensorFae.workspaceTitle}</span>
+              <span className="text-card-title font-semibold text-atlas-blue">ATLAS</span>
+              <span className="text-label text-muted">{content.sensorFae.workspaceTitle}</span>
             </div>
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              <span className="text-xs text-muted">
+              <span className="text-caption text-muted">
                 {content.data.ref.sensorFaeName}
               </span>
-              <span className="border border-border px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
+              <span className="border border-border px-2 py-1 text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">
                 {content.data.ref.sensorFaeVendor} FAE
               </span>
             </div>
@@ -43,28 +43,28 @@ export default function SensorFaeDemoClient({
         {/* EGP Context */}
         <Section className="bg-surface py-4">
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-label">
               <div>
                 <span className="text-muted">EGP</span>
-                <span className="ml-2 font-mono text-xs font-semibold text-ink">
+                <span className="ml-2 font-mono text-code font-semibold text-ink">
                   {refData.egp_id}
                 </span>
               </div>
               <div>
                 <span className="text-muted">REF</span>
-                <span className="ml-2 font-mono text-xs font-semibold text-ink">
+                <span className="ml-2 font-mono text-code font-semibold text-ink">
                   {refData.ref_id}
                 </span>
               </div>
               <div>
                 <span className="text-muted">{content.sensorFae.sensorLabel}</span>
-                <span className="ml-2 text-xs font-semibold text-ink">
+                <span className="ml-2 text-caption font-semibold text-ink">
                   {content.data.robot.lidarManufacturer}{" "}
                   {content.data.robot.lidarModel}
                 </span>
               </div>
             </div>
-            <span className="border border-green-600 bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">{content.sensorFae.packageValidLabel}
+            <span className="border border-green-600 bg-green-50 px-3 py-1 text-eyebrow font-semibold uppercase tracking-eyebrow text-green-700">{content.sensorFae.packageValidLabel}
 
             </span>
           </div>
@@ -73,31 +73,31 @@ export default function SensorFaeDemoClient({
         {/* EGP Package Validation */}
         <Section className="bg-white">
           <Eyebrow>{content.sensorFae.validationEyebrow}</Eyebrow>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{content.sensorFae.validationTitle}</h2>
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{content.sensorFae.validationTitle}</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="border border-border bg-surface p-5">
-              <p className="text-xs text-muted">{content.sensorFae.evidencePackIdLabel}</p>
-              <p className="mt-2 font-mono text-sm font-semibold text-ink">{epData.ep_id}</p>
+              <p className="text-caption text-muted">{content.sensorFae.evidencePackIdLabel}</p>
+              <p className="mt-2 font-mono text-code font-semibold text-ink">{epData.ep_id}</p>
             </div>
             <div className="border border-border bg-surface p-5">
-              <p className="text-xs text-muted">{content.sensorFae.evidenceQualityLabel}</p>
-              <p className="mt-2 text-sm font-semibold capitalize text-ink">
+              <p className="text-caption text-muted">{content.sensorFae.evidenceQualityLabel}</p>
+              <p className="mt-2 text-label font-semibold capitalize text-ink">
                 {content.data.evidencePack.evidenceQuality}
               </p>
             </div>
             <div className="border border-border bg-surface p-5">
-              <p className="text-xs text-muted">{content.sensorFae.packageIntegrityLabel}</p>
-              <p className="mt-2 text-sm font-semibold text-green-700">{content.sensorFae.verifiedLabel}</p>
+              <p className="text-caption text-muted">{content.sensorFae.packageIntegrityLabel}</p>
+              <p className="mt-2 text-label font-semibold text-green-700">{content.sensorFae.verifiedLabel}</p>
             </div>
           </div>
           <div className="mt-6 border border-border bg-surface p-6">
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted">{content.sensorFae.monitoredSurfacesLabel}
+            <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">{content.sensorFae.monitoredSurfacesLabel}
 
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {content.data.evidencePack.affectedSurfaces.map((surface) =>
               <span
-                className="border border-border bg-white px-3 py-1 text-xs text-ink"
+                className="border border-border bg-white px-3 py-1 text-caption text-ink"
                 key={surface}>
                 
                   {surface}
@@ -110,31 +110,31 @@ export default function SensorFaeDemoClient({
         {/* Evidence Pack Summary */}
         <Section className="bg-surface">
           <Eyebrow>{content.sensorFae.evidenceSummaryEyebrow}</Eyebrow>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
             {content.data.evidencePack.surface}
           </h2>
           <div className="mt-8 space-y-6">
             <div className="border border-border bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">{content.sensorFae.deviationWindowLabel}
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">{content.sensorFae.deviationWindowLabel}
 
               </p>
-              <p className="mt-3 text-sm leading-7 text-ink">
+              <p className="mt-3 text-body leading-relaxed text-ink">
                 {content.data.evidencePack.fiveWindowSummary.deviation}
               </p>
             </div>
             <div className="border border-border bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">{content.sensorFae.upstreamContextLabel}
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">{content.sensorFae.upstreamContextLabel}
 
               </p>
-              <p className="mt-3 text-sm leading-7 text-ink">
+              <p className="mt-3 text-body leading-relaxed text-ink">
                 {content.data.evidencePack.upstream}
               </p>
             </div>
             <div className="border border-border bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">{content.sensorFae.downstreamContextLabel}
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">{content.sensorFae.downstreamContextLabel}
 
               </p>
-              <p className="mt-3 text-sm leading-7 text-ink">
+              <p className="mt-3 text-body leading-relaxed text-ink">
                 {content.data.evidencePack.downstream}
               </p>
             </div>
@@ -144,28 +144,28 @@ export default function SensorFaeDemoClient({
         {/* Historical Sensor RGA Recall */}
         <Section className="bg-white">
           <Eyebrow>{content.sensorFae.historicalEyebrow}</Eyebrow>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{content.sensorFae.historicalTitle}
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{content.sensorFae.historicalTitle}
 
           </h2>
           <div className="mt-8 border border-border bg-surface p-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="font-mono text-xs text-sensor-tan-text">{sensorRga.id}</span>
-                  <span className="bg-green-100 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-green-700">
+                  <span className="font-mono text-code text-sensor-tan-text">{sensorRga.id}</span>
+                  <span className="bg-green-100 px-2 py-1 text-eyebrow font-semibold uppercase tracking-eyebrow text-green-700">
                     {sensorRga.match_type === "strong_candidate" ? content.sensorFae.strongCandidateLabel : content.sensorFae.relatedHistoricalLabel}
                   </span>
                 </div>
-                <p className="mt-3 text-sm font-semibold text-ink">
+                <p className="mt-3 text-label font-semibold text-ink">
                   {sensorRgaContent.surface}
                 </p>
-                <p className="mt-2 text-xs leading-5 text-muted">
+                <p className="mt-2 text-caption leading-normal text-muted">
                   {sensorRgaContent.pattern}
                 </p>
-                <div className="mt-4 space-y-2 text-xs">
+                <div className="mt-4 space-y-2 text-caption">
                   <div>
                     <span className="font-semibold text-ink">{content.sensorFae.originalRefLabel}</span>
-                    <span className="ml-2 font-mono text-muted">{sensorRga.original_ref}</span>
+                    <span className="ml-2 font-mono text-code text-muted">{sensorRga.original_ref}</span>
                   </div>
                   <div>
                     <span className="font-semibold text-ink">{content.sensorFae.historicalResolutionLabel}</span>
@@ -176,8 +176,8 @@ export default function SensorFaeDemoClient({
                 </div>
               </div>
               <div className="self-start text-left sm:shrink-0 sm:text-right">
-                <p className="text-xs text-muted">{content.sensorFae.similarityLabel}</p>
-                <p className="mt-1 text-2xl font-semibold text-ink">
+                <p className="text-caption text-muted">{content.sensorFae.similarityLabel}</p>
+                <p className="mt-1 text-page-title font-semibold leading-tight text-ink">
                   {Math.round(sensorRga.similarity_score * 100)}%
                 </p>
               </div>
@@ -188,12 +188,12 @@ export default function SensorFaeDemoClient({
         {/* IR Editor */}
         <Section className="bg-surface">
           <Eyebrow>{content.sensorFae.resultEyebrow}</Eyebrow>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{content.sensorFae.resultTitle}</h2>
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{content.sensorFae.resultTitle}</h2>
           <div className="mt-8 space-y-6">
             <div>
-              <label className="text-sm font-semibold text-ink">{content.sensorFae.resultStatusLabel}</label>
+              <label className="text-label font-semibold text-ink">{content.sensorFae.resultStatusLabel}</label>
               <select
-                className="mt-2 min-h-11 w-full border border-border bg-white p-3 text-sm text-ink"
+                className="mt-2 min-h-11 w-full border border-border bg-white p-3 text-label text-ink"
                 onChange={(e) => setIrStatus(e.target.value)}
                 value={irStatus}>
                 
@@ -207,10 +207,10 @@ export default function SensorFaeDemoClient({
               </select>
             </div>
             <div className="border border-border bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">{content.sensorFae.resultSummaryLabel}
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">{content.sensorFae.resultSummaryLabel}
 
               </p>
-              <p className="mt-3 text-sm leading-7 text-ink">{content.sensorFae.resultSummaryPrefix}
+              <p className="mt-3 text-body leading-relaxed text-ink">{content.sensorFae.resultSummaryPrefix}
                 {sensorRga.id}{content.sensorFae.resultSummarySuffix}
               </p>
             </div>
@@ -220,18 +220,18 @@ export default function SensorFaeDemoClient({
         {/* LL Editor */}
         <Section className="bg-white">
           <Eyebrow>{content.sensorFae.lessonEyebrow}</Eyebrow>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{content.sensorFae.lessonTitle}
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{content.sensorFae.lessonTitle}
 
           </h2>
           <div className="mt-8">
-            <label className="text-sm font-semibold text-ink">{content.sensorFae.lessonContentLabel}</label>
+            <label className="text-label font-semibold text-ink">{content.sensorFae.lessonContentLabel}</label>
             <textarea
-              className="mt-2 w-full border border-border bg-surface p-4 text-sm leading-7 text-ink"
+              className="mt-2 w-full border border-border bg-surface p-4 text-body leading-relaxed text-ink"
               onChange={(e) => setLlDraft(e.target.value)}
               rows={6}
               value={llDraft} />
             
-            <p className="mt-2 text-xs text-muted">{content.sensorFae.lessonNote}
+            <p className="mt-2 text-caption text-muted">{content.sensorFae.lessonNote}
 
             </p>
           </div>
@@ -240,15 +240,15 @@ export default function SensorFaeDemoClient({
         {/* Sensor Response */}
         <Section className="bg-surface">
           <Eyebrow>{content.sensorFae.responseEyebrow}</Eyebrow>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink">{content.sensorFae.responseTitle}
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{content.sensorFae.responseTitle}
 
           </h2>
           <div className="mt-8 space-y-6">
             <div className="border border-border bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">{content.sensorFae.responseSummaryLabel}
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-muted">{content.sensorFae.responseSummaryLabel}
 
               </p>
-              <div className="mt-4 space-y-3 text-sm">
+              <div className="mt-4 space-y-3 text-label">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                   <span className="text-muted">{content.sensorFae.irStatusLabel}</span>
                   <span className="font-semibold capitalize text-ink">
@@ -268,15 +268,15 @@ export default function SensorFaeDemoClient({
               </div>
             </div>
             <div className="border border-green-600/25 bg-green-50 p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-green-700">{content.sensorFae.readyLabel}
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-green-700">{content.sensorFae.readyLabel}
 
               </p>
-              <p className="mt-2 text-sm text-ink">{content.sensorFae.readyDescription}
+              <p className="mt-2 text-label text-ink">{content.sensorFae.readyDescription}
 
               </p>
             </div>
             <button
-              className="min-h-11 w-full bg-atlas-blue py-3 text-sm font-semibold text-white hover:bg-atlas-blue-dark"
+              className="min-h-11 w-full bg-atlas-blue py-3 text-label font-semibold text-white hover:bg-atlas-blue-dark"
               type="button">{content.sensorFae.returnResponse}
 
 
@@ -288,10 +288,10 @@ export default function SensorFaeDemoClient({
         <Section className="bg-white">
           <div className="border border-atlas-blue/25 bg-surface-blue p-5">
             <div className="flex items-start gap-3">
-              <span className="mt-1 font-mono text-[10px] font-semibold text-atlas-blue">{content.sensorFae.demoLabel}
+              <span className="mt-1 font-mono text-eyebrow font-semibold text-atlas-blue">{content.sensorFae.demoLabel}
 
               </span>
-              <p className="text-xs leading-6 text-muted">{content.sensorFae.demoDescription}
+              <p className="text-caption leading-relaxed text-muted">{content.sensorFae.demoDescription}
 
 
               </p>

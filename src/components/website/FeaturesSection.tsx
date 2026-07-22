@@ -69,13 +69,13 @@ export default function FeaturesSection({ lang }: FeaturesSectionProps) {
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
         <div className="text-center">
-          <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-atlas-blue md:text-sm lg:text-base">
+          <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow md:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
             {isChinese ? "05 / 统一共享平台" : "05 / One Shared Platform"}
           </p>
-          <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]">
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-section-title-md">
             {isChinese ? "一个平台，双方共享。" : "One Platform. Shared by Both."}
           </h2>
-          <p className="mt-4 text-base leading-7 text-ink/80 md:mt-5 md:text-lg md:leading-8 lg:text-xl">
+          <p className="mt-4 text-body leading-7 text-ink/80 md:mt-5 md:text-body-lg md:leading-8 lg:text-body-lg-md">
             {isChinese
               ? "Atlas 产品运行在同一套运行时智能基础设施之上。"
               : "Atlas products run on the same runtime intelligence infrastructure."}
@@ -94,10 +94,10 @@ export default function FeaturesSection({ lang }: FeaturesSectionProps) {
                     className="size-12 text-atlas-blue md:size-16 lg:size-20"
                     strokeWidth={1.8}
                   />
-                  <h3 className="mt-4 text-lg font-semibold leading-7 text-atlas-blue md:mt-6 md:text-xl lg:mt-7">
+                  <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-card-title-md lg:mt-7 lg:text-card-title-lg">
                     {isChinese ? module.titleZh : module.titleEn}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-ink md:mt-3 md:text-base md:leading-7 lg:text-lg">
+                  <p className="mt-2 text-label leading-6 text-ink md:mt-3 md:text-body md:leading-7 lg:text-body-lg">
                     {isChinese ? module.descriptionZh : module.descriptionEn}
                   </p>
                 </div>
@@ -119,7 +119,7 @@ export default function FeaturesSection({ lang }: FeaturesSectionProps) {
             className="size-7 shrink-0 text-atlas-blue md:size-9"
             strokeWidth={1.9}
           />
-          <p className="text-base font-semibold leading-6 text-atlas-blue md:text-2xl md:leading-8">
+          <p className="text-body font-semibold leading-6 text-atlas-blue md:text-body-lg-md md:leading-8">
             {isChinese ? "安全、私密、由您掌控。" : "Secure. Private. Owned by You."}
           </p>
         </div>

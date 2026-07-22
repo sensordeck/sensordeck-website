@@ -27,15 +27,15 @@ export default async function CategoryPage({
       {/* Category Definition */}
 <Section className="bg-surface">
   <div className="max-w-5xl mx-auto text-center">
-    <p className="mb-4 text-sm font-semibold tracking-wide text-atlas-blue uppercase">
+    <p className="mb-4 font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
       {content.eyebrow}
     </p>
 
-   <h1 className="mx-auto max-w-5xl text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
+   <h1 className="mx-auto max-w-5xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
   Atlas 位于 Sensor 与 System Decision 之间
 </h1>
 
-  <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-8">
+  <p className="mx-auto mt-8 max-w-3xl text-body leading-8 text-muted sm:text-body-lg sm:leading-8">
       {homeContent.categoryDefinition.lead}
     </p>
   </div>
@@ -60,17 +60,17 @@ export default async function CategoryPage({
       <Section className="bg-surface">
         <div className="max-w-4xl mx-auto">
           <div className="border-l-2 border-sensor-tan pl-6">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink">
+            <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
               {homeContent.categoryDefinition.runtimeBoundary.title}
             </h3>
             <div className="mt-6 space-y-3">
               {homeContent.categoryDefinition.runtimeBoundary.steps.map((step, index) => (
                 <div key={index}>
                   <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs text-sensor-tan-text">
+                    <span className="font-mono text-caption text-sensor-tan-text">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-base text-ink">{step}</span>
+                    <span className="text-body text-ink">{step}</span>
                   </div>
                   {index < homeContent.categoryDefinition.runtimeBoundary.steps.length - 1 && (
                     <div className="ml-6 mt-2 text-muted">↓</div>
@@ -78,7 +78,7 @@ export default async function CategoryPage({
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-sm leading-7 text-muted">
+            <p className="mt-6 text-label leading-7 text-muted">
               {homeContent.categoryDefinition.runtimeBoundary.note}
             </p>
           </div>
@@ -89,18 +89,18 @@ export default async function CategoryPage({
       <Section className="bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="border-2 border-atlas-blue/25 bg-surface-blue p-5 sm:p-8 md:p-10">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink text-center">
+            <h3 className="text-center font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
               {homeContent.categoryDefinition.whyImportant.title}
             </h3>
 
             <div className="mt-8 grid gap-8 md:grid-cols-2">
               <div className="border-l-4 border-border pl-6">
-                <p className="text-base font-bold text-ink">
+                <p className="text-body font-bold text-ink">
                   {homeContent.categoryDefinition.whyImportant.traditional.title}
                 </p>
                 <ul className="mt-4 space-y-2.5">
                   {homeContent.categoryDefinition.whyImportant.traditional.items.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2 text-sm text-ink">
+                    <li key={index} className="flex items-center gap-2 text-label text-ink">
                       <span className="size-1.5 rounded-full bg-border shrink-0" />
                       {item}
                     </li>
@@ -109,12 +109,12 @@ export default async function CategoryPage({
               </div>
 
               <div className="border-l-4 border-atlas-blue pl-6">
-                <p className="text-base font-bold text-atlas-blue">
+                <p className="text-body font-bold text-atlas-blue">
                   {homeContent.categoryDefinition.whyImportant.runtime.title}
                 </p>
                 <ul className="mt-4 space-y-2.5">
                   {homeContent.categoryDefinition.whyImportant.runtime.items.map((item, index) => (
-                    <li key={index} className="flex items-center gap-2 text-sm text-ink">
+                    <li key={index} className="flex items-center gap-2 text-label text-ink">
                       <span className="size-1.5 rounded-full bg-atlas-blue shrink-0" />
                       {item}
                     </li>
@@ -123,7 +123,7 @@ export default async function CategoryPage({
               </div>
             </div>
 
-            <p className="mt-6 text-sm leading-7 text-muted text-center border-t border-atlas-blue/15 pt-6">
+            <p className="mt-6 border-t border-atlas-blue/15 pt-6 text-center text-label leading-7 text-muted">
               {homeContent.categoryDefinition.whyImportant.runtime.note}
             </p>
           </div>
@@ -134,17 +134,17 @@ export default async function CategoryPage({
       <Section className="bg-surface">
         <div className="max-w-5xl mx-auto">
           <div className="border border-border bg-white p-5 sm:p-8 md:p-12">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink">
+            <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
               {homeContent.categoryDefinition.whatAtlasProvides.title}
             </h3>
 
             <div className="mt-6 space-y-2">
               {homeContent.categoryDefinition.whatAtlasProvides.notItems.map((item, index) => (
-                <p key={index} className="text-base text-muted">{item}</p>
+                <p key={index} className="text-body text-muted">{item}</p>
               ))}
             </div>
 
-            <p className="mt-6 text-lg font-semibold text-atlas-blue">
+            <p className="mt-6 text-body-lg font-semibold text-atlas-blue">
               {homeContent.categoryDefinition.whatAtlasProvides.isItem}
             </p>
 
@@ -152,12 +152,12 @@ export default async function CategoryPage({
               {homeContent.categoryDefinition.whatAtlasProvides.capabilities.map((item, index) => (
                 <div key={index} className="flex items-start gap-2">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-atlas-blue" />
-                  <span className="text-sm text-ink">{item}</span>
+                  <span className="text-label text-ink">{item}</span>
                 </div>
               ))}
             </div>
 
-            <p className="mt-8 text-xl font-semibold tracking-tight text-ink text-center">
+            <p className="mt-8 text-center text-body-lg-md font-semibold tracking-tight text-ink">
               {homeContent.categoryDefinition.whatAtlasProvides.summary}
             </p>
           </div>
@@ -167,7 +167,7 @@ export default async function CategoryPage({
       {/* CTA Section */}
       <Section className="bg-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-ink mb-6">
+          <h2 className="mb-6 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
             {content.ctaTitle}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

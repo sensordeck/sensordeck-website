@@ -64,13 +64,13 @@ export default function WorkflowSection({ lang }: WorkflowSectionProps) {
     <section id="resources" className="border-b border-border bg-surface py-12 md:py-16 lg:py-20">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
         <div className="max-w-6xl">
-          <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-atlas-blue md:text-sm lg:text-base">
+          <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow md:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
             {isChinese ? "07 / 资源" : "07 / Resources"}
           </p>
-          <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]">
+          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:mt-6 md:text-section-title-md">
             {isChinese ? "探索技术资源" : "Explore Technical Resources"}
           </h2>
-          <p className="mt-4 text-base leading-7 text-ink/80 md:mt-5 md:text-lg md:leading-8 lg:text-xl">
+          <p className="mt-4 text-body leading-7 text-ink/80 md:mt-5 md:text-body-lg md:leading-8 lg:text-body-lg-md">
             {isChinese
               ? "加深您对 Atlas 架构、工作流程及真实价值的理解。"
               : "Deepen your understanding of Atlas architecture, workflows, and real-world value."}
@@ -96,16 +96,16 @@ export default function WorkflowSection({ lang }: WorkflowSectionProps) {
                     strokeWidth={1.7}
                   />
                   <div className="mt-5 min-w-0 md:mt-7 lg:mt-8">
-                    <h3 className="text-xl font-semibold leading-8 text-ink md:text-2xl md:leading-9">
+                    <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
                       {isChinese ? resource.titleZh : resource.titleEn}
                     </h3>
-                    <p className="mt-4 text-base leading-7 text-muted md:mt-5 md:text-lg md:leading-8">
+                    <p className="mt-4 text-body leading-7 text-muted md:mt-5 md:text-body-lg md:leading-8">
                       {isChinese ? resource.descriptionZh : resource.descriptionEn}
                     </p>
                   </div>
                 </div>
                 <a
-                  className="mt-auto inline-flex min-h-11 w-full items-center justify-between gap-4 pt-8 text-base font-semibold text-atlas-blue transition-colors hover:text-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-atlas-blue sm:w-fit sm:justify-start md:pt-10 md:text-lg lg:text-xl"
+                  className="mt-auto inline-flex min-h-11 w-full items-center justify-between gap-4 pt-8 text-body font-semibold text-atlas-blue transition-colors hover:text-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-atlas-blue sm:w-fit sm:justify-start md:pt-10 md:text-body-lg lg:text-body-lg-md"
                   href={href}
                   rel={resource.external ? "noreferrer" : undefined}
                   target={resource.external ? "_blank" : undefined}

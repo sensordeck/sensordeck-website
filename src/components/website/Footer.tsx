@@ -112,10 +112,10 @@ export default function Footer() {
               className="h-8 w-auto brightness-0 invert"
             />
           </Link>
-          <p className="mt-6 text-base leading-8 text-white/75">
+          <p className="mt-6 text-body leading-8 text-white/75">
             {copy.description}
           </p>
-          <p className="mt-5 font-mono text-[12px] uppercase tracking-[0.16em] text-white/68">
+          <p className="mt-5 font-mono text-eyebrow-md uppercase tracking-eyebrow text-white/68">
             sensordeck.tech
           </p>
         </div>
@@ -123,9 +123,9 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-3">
           {copy.groups.map((group) => (
             <div key={group.title}>
-              <h2 className="font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-white/70">
+              <p className="font-mono text-eyebrow-md font-semibold uppercase tracking-eyebrow text-white/70">
                 {group.title}
-              </h2>
+              </p>
               <nav
                 className="mt-4 grid gap-3"
                 aria-label={copy.footerLinksLabel(group.title)}
@@ -133,7 +133,7 @@ export default function Footer() {
                 {group.links.map((link) => {
                   const href = localizeHref(currentLocale, link.href);
                   const className =
-                    "inline-flex min-h-11 w-fit items-center text-base text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue";
+                    "inline-flex min-h-11 w-fit items-center text-body text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue";
                   const style = {
                     transitionDuration: "var(--duration-tooltip)",
                     transitionTimingFunction: "var(--ease-out)",
@@ -168,7 +168,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/12">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-caption text-white/70 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
           <span>{copy.copyright}</span>
           <span className="font-mono">{copy.tagline}</span>
         </div>
