@@ -116,8 +116,26 @@ export default async function HomePage({
           style={{ objectPosition: "center center" }}
         />
 
+        {/* Hero readability overlays */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-10 lg:hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.94) 38%, rgba(255,255,255,0) 78%)",
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-10 hidden lg:block"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.94) 36%, rgba(255,255,255,0.58) 48%, rgba(255,255,255,0) 68%)",
+          }}
+        />
+
         {/* Hero Content */}
-        <div className="absolute inset-0 flex items-start pt-8 sm:pt-20 lg:items-center lg:pt-0">
+        <div className="absolute inset-0 z-20 flex items-start pt-8 sm:pt-20 lg:items-center lg:pt-0">
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-[42rem]">
               <h1
@@ -146,6 +164,7 @@ export default async function HomePage({
                   max-w-xl
                   whitespace-pre-line
                   text-body
+                  font-medium
                   leading-7
                   text-ink
                   sm:text-body-lg
@@ -163,6 +182,7 @@ export default async function HomePage({
                   block
                   max-w-xl
                   text-body
+                  font-medium
                   leading-7
                   text-ink
                   sm:text-body-lg
@@ -178,7 +198,7 @@ export default async function HomePage({
                   whitespace-pre-line
                   text-label
                   font-semibold
-                  text-atlas-blue
+                  text-atlas-blue-dark
                   sm:text-body
                 "
               >

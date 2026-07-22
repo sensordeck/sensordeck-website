@@ -11,7 +11,7 @@ heroSubtitleMobile:
 
 heroDescription: "",
   heroPrinciple: [],
-  heroValueProposition: "Every investigation starts from evidence. Every future investigation starts from history.",
+  heroValueProposition: "Every investigation starts from evidence.\nEvery future investigation starts from history.",
   sectionTitles: {
     categoryDefinition: "A Missing Layer for Robotics",
     theProblem: "Today, Every Runtime Execution Failure (REF) Starts from Scratch",
