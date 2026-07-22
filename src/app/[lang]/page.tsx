@@ -171,25 +171,12 @@ export default async function HomePage({
   {homeContent.heroValueProposition}
 </p>
 
-        <div className="absolute inset-x-4 bottom-4 mx-auto flex max-w-md flex-col gap-2 sm:inset-x-6 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3 lg:static lg:mx-0 lg:mt-8 lg:justify-start lg:px-0">
-  <Button className="w-full sm:w-auto" href={localizeHref(lang, "/demo")} variant="primary">
-    {homeContent.ctas.primary}
-  </Button>
+{/* Hero buttons removed */}
 
-  <Button className="w-full sm:w-auto" href={localizeHref(lang, "/platform")} variant="secondary">
-    {homeContent.ctas.viewArchitecture}
-  </Button>
-
-  <Button className="w-full sm:w-auto" href={localizeHref(lang, "/library/white-papers")} variant="secondary">
-    {homeContent.ctas.readWhitePaper}
-  </Button>
 </div>
-      </div>
-
-    </div>
-  </div>
-
-</section>
+</div>
+</div>
+</Section>
         {/* Category definition */}
         <Section
           id="category"
