@@ -240,64 +240,124 @@ export const libraryContent = {
   },
 
   faq: {
-    eyebrow: "01 / 常见问题",
-    title: "常见问题解答",
-    description:
-      "关于 Atlas 定位、部署、数据所有权、调查边界和现有系统集成的常见问题。",
+  eyebrow: "01 / 常见问题",
+  title: "常见问题解答",
+  description:
+    "关于 Atlas 的产品定位、技术适配、部署方式、数据所有权和运行时调查边界。",
 
-    questions: [
-      {
-        question: "Atlas 是另一个日志系统吗？",
-        answer:
-          "不是。Atlas 不是日志采集平台。日志可以成为运行时证据来源之一，但 Atlas 关注运行时观测、证据组织、运行时调查、历史知识复用和跨组织协作。",
-      },
-      {
-        question: "Atlas 会替代车队管理系统吗？",
-        answer:
-          "不会。车队管理系统负责设备管理、OTA、任务调度和机器人运营；Atlas 负责运行时调查、Evidence Pack、Historical RGA、调查工作流和运行时治理。",
-      },
-      {
-        question: "Atlas 会替代工单系统吗？",
-        answer:
-          "不会。Atlas 可以与 Jira、ServiceNow 等现有工单流程集成，并在运行时执行失败被报告后组织调查证据和上下文。",
-      },
-      {
-        question: "Atlas 会自动判定根本原因吗？",
-        answer:
-          "不会。Atlas 不自动判定根本原因、责任归属、产品缺陷或客户过失。工程团队仍然对最终技术结论负责。",
-      },
-      {
-        question: "Atlas 需要 ROS 吗？",
-        answer:
-          "不需要。ROS 是可选的。Atlas 可以在有 ROS 或没有 ROS 的系统中观察和治理运行时表面。",
-      },
-      {
-        question: "Atlas 需要持续云连接吗？",
-        answer:
-          "不需要。Atlas 支持客户本地、总部服务器、私有云、离线运行、手动导出和混合部署。",
-      },
-      {
-        question: "Atlas 需要替换现有基础设施吗？",
-        answer:
-          "不需要。Atlas 设计为与现有车队管理、云平台、工单系统、对象存储和监控平台协同运行。",
-      },
-      {
-        question: "运行时数据归谁所有？",
-        answer:
-          "客户拥有自己的运行时数据。Atlas 不主张对客户 Runtime Dataset、Evidence Pack 或内部调查资产的所有权。",
-      },
-      {
-        question: "Atlas 可以自动在公司之间共享客户数据吗？",
-        answer:
-          "不可以。跨组织协作必须遵循客户授权。Assist Vault 支持的是经过授权的非标识性知识复用，而不是自动共享客户运行时数据。",
-      },
-      {
-        question: "Atlas 通常如何部署？",
-        answer:
-          "典型部署路径为 Pilot、Controlled Deployment、Production Readiness 和 Full Deployment，并可以进一步扩展到更多 Robot SKU、Sensor SKU 和运行环境。",
-      },
-    ],
-  },
+  questions: [
+    {
+      question: "Atlas 是另一个日志系统吗？",
+      answer:
+        "不是。Atlas 不是日志采集或日志归档平台。日志可以成为运行时证据来源之一，但 Atlas 的核心职责是持续观察运行时、组织调查证据、形成事件上下文、召回历史调查资产，并支持跨团队协作。",
+    },
+    {
+      question: "Atlas 会替代车队管理系统吗？",
+      answer:
+        "不会。车队管理系统通常负责设备管理、OTA、远程监控、任务调度和机器人运营。Atlas 负责运行时证据、Evidence Pack™、Historical RGA™、调查工作流和组织记忆。两者属于互补关系。",
+    },
+    {
+      question: "Atlas 会替代 Jira、ServiceNow 等工单系统吗？",
+      answer:
+        "不会。工单系统负责事件记录、任务流转和组织协作。Atlas 可以与现有工单流程配合，在运行时执行失败被报告后，为调查提供结构化证据、事件时间线和历史上下文。",
+    },
+    {
+      question: "Atlas 会自动判定根本原因或责任吗？",
+      answer:
+        "不会。Atlas 不自动确认根本原因、产品缺陷、客户过失或责任归属。Atlas 负责组织运行时证据、调查上下文和历史候选，最终技术结论仍由授权的工程团队确认。",
+    },
+    {
+      question: "Atlas 支持 AI 辅助调查吗？",
+      answer:
+        "支持。Atlas 可以为 AI 辅助分析提供结构化、边界明确并且可审查的运行时证据。但 Atlas 不强制依赖 AI，调查流程仍可保持确定性，所有关键结论仍需人工确认。",
+    },
+    {
+      question: "Atlas 支持哪些机器人平台？",
+      answer:
+        "Atlas 不绑定特定机器人品牌或控制架构。它可以部署在不同机器人平台、SBC、Linux 环境、ROS 系统和自定义机器人软件中。具体部署范围依据客户的运行时表面和调查目标确定。",
+    },
+    {
+      question: "Atlas 支持哪些传感器？",
+      answer:
+        "Atlas 不绑定特定传感器类型。典型对象包括摄像头、激光雷达、IMU、GNSS、雷达和编码器。其他传感器也可以通过运行时表面映射和适配器纳入治理范围。",
+    },
+    {
+      question: "Atlas 必须运行在 ROS 环境中吗？",
+      answer:
+        "不需要。ROS 和 ROS2 都是可选的运行时数据来源。Atlas 也可以在没有 ROS 的机器人系统中，通过设备接口、Linux Runtime、驱动状态、日志和自定义适配器建立运行时观察能力。",
+    },
+    {
+      question: "Atlas 需要持续连接公共云吗？",
+      answer:
+        "不需要。Atlas 支持客户本地服务器、总部服务器、私有云、离线环境、手动导出和混合部署。是否连接云端由客户的部署、安全和运营要求决定。",
+    },
+    {
+      question: "Atlas 需要替换现有机器人基础设施吗？",
+      answer:
+        "不需要。Atlas 设计为与现有车队管理、云平台、工单系统、对象存储、监控平台和机器人软件共存。部署重点是连接现有运行时数据源，而不是进行大规模替换。",
+    },
+    {
+      question: "Atlas 可以覆盖多种机器人型号吗？",
+      answer:
+        "可以。Atlas 可以从一个明确的机器人型号或运行时场景开始，再逐步扩展到多种 Robot SKU、SBC 平台、传感器配置和部署环境，而不需要重新设计整套调查体系。",
+    },
+    {
+      question: "Atlas 可以与多家传感器厂商协作吗？",
+      answer:
+        "可以。OEM 可以通过 Sensor Engagement Pack™ 与不同传感器制造商开展边界明确的调查协作。每家传感器厂商可以维护自己的运行时画像、历史调查资产和 FAE 调查流程。",
+    },
+    {
+      question: "什么是传感器运行时画像？",
+      answer:
+        "传感器运行时画像描述传感器在已知机器人平台、部署环境和运行时扰动下的行为表现。它不是认证证书、产品护照或合规文件，而是可用于未来调查的运行时知识资产。",
+    },
+    {
+      question: "什么是 Evidence Pack™？",
+      answer:
+        "Evidence Pack™ 是围绕特定运行时事件生成的标准化证据窗口。它包含事件前后经过边界限定的相关数据、时间线和运行环境上下文，不是无限日志归档，也不是简单的原始数据转储。",
+    },
+    {
+      question: "什么是 Historical RGA™？",
+      answer:
+        "Historical Runtime Governance Asset™ 保存已完成调查中可复用的运行时模式、调查路径、调查结果、经验教训和运行时表面引用。它帮助未来调查从组织记忆开始，但历史相似性不代表根因相同。",
+    },
+    {
+      question: "Atlas 会永久保存所有运行时数据吗？",
+      answer:
+        "不会。Atlas 按客户批准的保留策略运行。典型方式包括滚动缓冲区、指定保留周期、事件触发后的数据锁定，以及按时间范围生成和导出调查证据。",
+    },
+    {
+      question: "运行时数据和调查资产归谁所有？",
+      answer:
+        "客户拥有自己的运行时数据和内部调查资产。OEM 保留其 Runtime Dataset™、Evidence Pack™ 和历史调查资产；传感器制造商保留自己的传感器运行时画像和历史调查资产。SensorDeck 不主张客户运行时数据的所有权。",
+    },
+    {
+      question: "Atlas 会在不同公司之间自动共享客户数据吗？",
+      answer:
+        "不会。任何跨组织证据协作都必须经过客户授权，并限制在明确的调查边界内。行业知识复用只适用于经过批准的非标识性知识，不等于共享客户原始数据或内部 Evidence Pack™。",
+    },
+    {
+      question: "Atlas 是标准 SaaS 产品吗？",
+      answer:
+        "不一定。Atlas 可以部署在客户本地、客户控制的基础设施、私有云或混合环境中。实际部署模式由数据安全、网络条件、组织流程和项目范围共同决定。",
+    },
+    {
+      question: "Atlas 是开源项目吗？",
+      answer:
+        "不是。Atlas 是 SensorDeck 开发的商业运行时治理基础设施，通常通过专业集成、部署配置、培训和验收项目交付给客户。",
+    },
+    {
+      question: "Atlas 只适用于一个机器人项目吗？",
+      answer:
+        "不是。Atlas 的目标是形成可复用的运行时治理基础设施。完成初始 Pilot 后，可以逐步扩展至更多机器人型号、传感器产品、运行环境和调查团队。",
+    },
+    {
+      question: "Atlas 通常如何从 Pilot 进入正式部署？",
+      answer:
+        "典型路径是：场景确认、运行时边界评审、Agent 与数据源接入、金丝雀验证、Pilot、受控部署、Production Readiness，最后扩展至正式生产环境。",
+    },
+  ],
+},
 
   cta: {
     eyebrow: "下一步",
