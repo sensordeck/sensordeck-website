@@ -1,9 +1,5 @@
-import Link from "next/link";
-
-import Button from "@/components/website/Button";
 import Section from "@/components/website/Section";
-import { getProductsContent } from "@/lib/content";
-import { isValidLocale, localizeHref } from "@/lib/i18n";
+import { isValidLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 
 function ArrowIcon() {
@@ -45,16 +41,14 @@ export default async function RuntimeSensorGovernancePage({
     notFound();
   }
 
-  const [productsContent, legacyCopy] = await Promise.all([
-    getProductsContent(lang),
+  const legacyCopy =
     lang === "zh"
-      ? import("@/content/zh/legacy-page-copy").then(
+      ? await import("@/content/zh/legacy-page-copy").then(
           (content) => content.legacyZhCopy,
         )
-      : import("@/content/en/legacy-page-copy").then(
+      : await import("@/content/en/legacy-page-copy").then(
           (content) => content.legacyEnCopy,
-        ),
-  ]);
+        );
   const copy = legacyCopy.runtimeSensorGovernance;
   const { ui } = copy;
   const agentCapabilities = ui.capabilityTitles.map((title, index) => ({
@@ -164,8 +158,8 @@ export default async function RuntimeSensorGovernancePage({
             <p className="mt-5 max-w-4xl text-base leading-8 text-muted sm:text-lg">{copy.text045}
 
             </p>
-
-          </Section>
+          </div>
+        </Section>
 
         {/* Core positioning */}
         <Section className="border-y border-border bg-[#050b17]">
@@ -577,18 +571,7 @@ export default async function RuntimeSensorGovernancePage({
 
             </p>
 
-            <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
-              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
-                {productsContent.ctaText}
-              </Button>
 
-              <Link
-                href={localizeHref(lang, "/products/runtime-investigation")}
-                className="inline-flex min-h-11 w-full items-center justify-center border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:w-auto">{copy.text079}
-
-
-              </Link>
-            </div>
           </div>
         </Section>
 
