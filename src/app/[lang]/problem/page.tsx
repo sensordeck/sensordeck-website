@@ -26,31 +26,38 @@ export default async function ProblemPage({
   ]);
 
   const content = auxiliaryContent.problem;
+  const problem = homeContent.theProblem;
 
   return (
-    <div className="bg-white">
-      {/* Problem Introduction */}
+    <main className="bg-white">
+      {/* Page Introduction */}
       <Section className="bg-white">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-atlas-blue">
-            {content.eyebrow}
-          </p>
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-4xl">
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+              {content.eyebrow}
+            </p>
 
-          <h1 className="mx-auto max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
-            {homeContent.theProblem.lead}
-          </h1>
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.03em] text-ink sm:text-5xl lg:text-6xl">
+              {homeContent.sectionTitles.theProblem}
+            </h1>
 
-          <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-8">
-            {homeContent.sectionDescriptions.theProblem}
-          </p>
+            <p className="mt-8 max-w-3xl text-xl font-medium leading-9 tracking-[-0.015em] text-ink sm:text-2xl sm:leading-10">
+              {problem.lead}
+            </p>
 
-          <p className="mt-8 text-base font-semibold text-atlas-blue sm:text-lg">
-            {homeContent.theProblem.cta}
-          </p>
+            <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-9">
+              {homeContent.sectionDescriptions.theProblem}
+            </p>
+
+            <p className="mt-8 max-w-3xl text-base font-semibold leading-8 text-atlas-blue">
+              {problem.cta}
+            </p>
+          </div>
         </div>
       </Section>
 
-      {/* Main Comparison Image */}
+      {/* Main Problem Image */}
       <Section className="bg-surface">
         <div className="mx-auto max-w-7xl">
           <Image
@@ -69,79 +76,88 @@ export default async function ProblemPage({
         </div>
       </Section>
 
-      {/* Comparison Details */}
+      {/* Investigation Comparison */}
       <Section className="bg-white">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight text-ink">
-            {content.comparisonTitle}
-          </h2>
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl">
+              {content.comparisonTitle}
+            </h2>
+          </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
-            <Card className="border-2 border-border">
-              <h3 className="text-xl font-semibold tracking-tight text-ink">
-                {homeContent.theProblem.comparison.withoutAtlas.title}
-              </h3>
+            {/* Without Atlas */}
+            <Card className="h-full border-2 border-border bg-white p-6 sm:p-8">
+              <div className="border-b border-border pb-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+                  01
+                </p>
 
-              <div className="mt-6 space-y-3">
-                {homeContent.theProblem.comparison.withoutAtlas.steps.map(
-                  (step, index) => (
-                    <div key={step}>
-                      <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs text-sensor-tan-text">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-
-                        <span className="text-base text-ink">{step}</span>
-                      </div>
-
-                      {index <
-                        homeContent.theProblem.comparison.withoutAtlas.steps
-                          .length -
-                          1 && (
-                        <div className="ml-6 mt-2 text-muted">↓</div>
-                      )}
-                    </div>
-                  ),
-                )}
+                <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-ink">
+                  {problem.comparison.withoutAtlas.title}
+                </h3>
               </div>
 
-              <p className="mt-6 text-sm font-semibold text-muted">
-                {homeContent.theProblem.comparison.withoutAtlas.note}
+              <div className="mt-7 space-y-0">
+                {problem.comparison.withoutAtlas.steps.map((step, index) => (
+                  <div key={`${step}-${index}`}>
+                    <div className="flex min-h-12 items-center gap-4">
+                      <span className="w-7 shrink-0 font-mono text-xs text-sensor-tan-text">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span className="text-base leading-7 text-ink">
+                        {step}
+                      </span>
+                    </div>
+
+                    {index <
+                      problem.comparison.withoutAtlas.steps.length - 1 && (
+                      <div className="ml-[13px] h-5 border-l border-border" />
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-8 border-t border-border pt-5 text-sm font-semibold leading-6 text-muted">
+                {problem.comparison.withoutAtlas.note}
               </p>
             </Card>
 
-            <Card className="border-2 border-atlas-blue bg-surface-blue">
-              <h3 className="text-xl font-semibold tracking-tight text-ink">
-                {homeContent.theProblem.comparison.withAtlas.title}
-              </h3>
+            {/* With Atlas */}
+            <Card className="h-full border-2 border-atlas-blue bg-surface-blue p-6 sm:p-8">
+              <div className="border-b border-atlas-blue/20 pb-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+                  02
+                </p>
 
-              <div className="mt-6 space-y-3">
-                {homeContent.theProblem.comparison.withAtlas.steps.map(
-                  (step, index) => (
-                    <div key={step}>
-                      <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs text-atlas-blue">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-
-                        <span className="text-base font-medium text-ink">
-                          {step}
-                        </span>
-                      </div>
-
-                      {index <
-                        homeContent.theProblem.comparison.withAtlas.steps
-                          .length -
-                          1 && (
-                        <div className="ml-6 mt-2 text-atlas-blue">↓</div>
-                      )}
-                    </div>
-                  ),
-                )}
+                <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-ink">
+                  {problem.comparison.withAtlas.title}
+                </h3>
               </div>
 
-              <p className="mt-6 text-sm font-semibold text-atlas-blue">
-                {homeContent.theProblem.comparison.withAtlas.note}
+              <div className="mt-7 space-y-0">
+                {problem.comparison.withAtlas.steps.map((step, index) => (
+                  <div key={`${step}-${index}`}>
+                    <div className="flex min-h-12 items-center gap-4">
+                      <span className="w-7 shrink-0 font-mono text-xs text-atlas-blue">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span className="text-base font-medium leading-7 text-ink">
+                        {step}
+                      </span>
+                    </div>
+
+                    {index < problem.comparison.withAtlas.steps.length - 1 && (
+                      <div className="ml-[13px] h-5 border-l border-atlas-blue/30" />
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-8 border-t border-atlas-blue/20 pt-5 text-sm font-semibold leading-6 text-atlas-blue">
+                {problem.comparison.withAtlas.note}
               </p>
             </Card>
           </div>
@@ -150,27 +166,43 @@ export default async function ProblemPage({
 
       {/* Why It Matters */}
       <Section className="bg-surface">
-        <div className="mx-auto max-w-5xl">
-          <div className="border border-border bg-white p-5 sm:p-8 md:p-12">
-            <h2 className="text-2xl font-semibold tracking-tight text-ink">
-              {homeContent.theProblem.whyMatters.title}
-            </h2>
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-8 border border-border bg-white p-6 sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:p-14">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+                {content.eyebrow}
+              </p>
 
-            <p className="mt-4 text-base leading-8 text-muted">
-              {homeContent.theProblem.whyMatters.description}
-            </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl">
+                {problem.whyMatters.title}
+              </h2>
+            </div>
+
+            <div className="lg:border-l lg:border-border lg:pl-16">
+              <p className="text-lg leading-9 text-muted">
+                {problem.whyMatters.description}
+              </p>
+            </div>
           </div>
         </div>
       </Section>
 
-      {/* CTA */}
+      {/* Closing Statement */}
       <Section className="bg-white">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-3xl font-semibold tracking-tight text-ink">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-atlas-blue">
+            Atlas Runtime Governance
+          </p>
+
+          <h2 className="mx-auto mt-5 max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-4xl lg:text-5xl">
             {content.ctaTitle}
           </h2>
 
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg sm:leading-9">
+            {problem.comparison.withAtlas.note}
+          </p>
+
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <Button
               className="w-full sm:w-auto"
               href={localizeHref(lang, "/contact")}
@@ -189,6 +221,6 @@ export default async function ProblemPage({
           </div>
         </div>
       </Section>
-    </div>
+    </main>
   );
 }
