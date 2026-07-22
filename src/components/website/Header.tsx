@@ -30,7 +30,7 @@ const headerCopy: Record<
     navigation: [
       { label: "产品", href: "/products" },
       { label: "平台", href: "/platform" },
-      { label: "技术", href: "/technology" },
+      { label: "部署", href: "/technology" },
       { label: "资料库", href: "/library" },
       { label: "公司", href: "/company" },
       { label: "联系", href: "/contact" },
