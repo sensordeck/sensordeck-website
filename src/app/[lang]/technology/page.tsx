@@ -46,37 +46,17 @@ export default async function TechnologyPage({
             </p>
 
             <h1 className="heading-title mt-6 text-4xl font-semibold leading-[1.06] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl">
-              {hero.title}
-            </h1>
+             {hero.title}
+</h1>
 
-            <p className="heading-description mt-7 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">
-              {hero.subtitle}
-            </p>
+<p className="heading-description mt-7 max-w-4xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">
+  {hero.subtitle}
+</p>
+</div>
+</AnimatedSection>
+</section>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Button
-                variant="primary"
-                href={cta.primaryButton.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                {cta.primaryButton.text}
-              </Button>
-
-              <Button
-                variant="outline"
-                href={localizeHref(lang, cta.secondaryButton.href)}
-                className="w-full sm:w-auto"
-              >
-                {cta.secondaryButton.text}
-              </Button>
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* Main deployment paths */}
+{/* Main deployment paths */}
       <section className="border-b border-border bg-surface py-14 sm:py-18 md:py-24">
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
