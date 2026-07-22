@@ -8,181 +8,206 @@ export const libraryContent = {
   ui: {
     breadcrumbLabel: "面包屑导航",
     libraryLabel: "资料库",
-    browse: "浏览",
+    browse: "查看",
+
     resourceCards: [
       {
         id: "01",
-        title: "技术白皮书",
+        title: "常见问题",
         description:
-          "深入了解运行时智能基础设施、证据治理和调查生命周期。6 篇技术白皮书覆盖 Atlas 核心概念。",
-        href: "/library/white-papers",
-        items: "6 篇白皮书",
+          "了解 Atlas 与日志系统、车队管理、工单平台和现有机器人基础设施之间的关系，以及数据所有权、部署模式和人工调查边界。",
+        href: "/library/faq",
+        items: "核心问题",
       },
       {
         id: "02",
-        title: "技术文档",
+        title: "企业交付与下载",
         description:
-          "面向开发者的完整文档站点，包含架构、CLI、集成、模式和术语。",
-        href: "/library/documentation",
-        items: "完整技术文档",
+          "了解 Atlas 企业部署项目的典型运行时组件、调查组件、配置、文档、培训材料和客户可交付成果。",
+        href: "https://sensordeck.github.io/atlas-docs-cn/reference/downloads",
+        items: "交付说明",
       },
       {
         id: "03",
-        title: "演示与演练",
+        title: "演示与示例",
         description:
-          "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。包含 2 分钟概览和完整调查演练。",
+          "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。查看一级支持、调查工作区、传感器 FAE 和 CTO 视图。",
         href: "/library/demo",
-        items: "4 个演示项目",
+        items: "公开演示",
       },
       {
         id: "04",
-        title: "常见问题",
+        title: "发布说明",
         description:
-          "关于 Atlas 平台、证据所有权和运营原则的常见问题解答。",
-        href: "/library/faq",
-        items: "10 个常见问题",
+          "查看 Atlas Runtime Governance™ 的主要版本、核心能力、兼容性、部署模式、已知限制和重要产品变更。",
+        href: "https://sensordeck.github.io/atlas-docs-cn/reference/release-notes",
+        items: "版本记录",
       },
     ],
-    quickAccessEyebrow: "快速访问",
-    quickAccessTitle: "快速访问",
-    whitePapersLabel: "白皮书",
-    documentationLabel: "文档",
+
+    quickAccessEyebrow: "完整文档",
+    quickAccessTitle: "Atlas 中文技术文档",
+
+    whitePapersLabel: "常见问题",
+    documentationLabel: "交付与下载",
     demoLabel: "演示",
-    demoAndVideoLabel: "演示与视频",
-    faqLabel: "常见问题",
+    demoAndVideoLabel: "演示与示例",
+    faqLabel: "发布说明",
+
     comingSoon: "即将推出",
     view: "查看",
     note: "注意",
+
     demoNote:
-      "所有演示数据均为示意性内容。实际部署的 Evidence Pack 和调查资产包含客户特定的运行时上下文，不会在公开演示中展示。",
+      "所有公开演示数据均为示意性内容。实际部署的 Evidence Pack、Historical RGA 和调查资产包含客户特定的运行时上下文，不会在公开演示中展示。",
+
     demoContactNote:
-      "如需访问完整的 Atlas Demo UI 或定制化演示，请联系我们安排演示会议。",
+      "如需访问完整的 Atlas Demo UI，或希望根据您的机器人平台和运行时场景安排定制化演示，请联系我们。",
+
     documentationTopics: "文档主题",
+
     documentationHosting:
-      "完整的开发者和集成文档托管在独立文档站点。",
+      "完整的 Atlas 中文技术文档在独立文档中心持续维护。",
+
     documentationFor: "文档适用于",
-    documentationReferenceTitle: "面向工程团队的完整参考",
+
+    documentationReferenceTitle:
+      "面向工程、调查、部署和管理团队的完整参考",
+
     documentationUseCases: [
-      "开发者集成指南",
-      "CLI 命令参考",
-      "Evidence Pack 模式",
-      "API 文档",
-      "部署配置",
-      "故障排查",
-      "发布说明",
-      "最佳实践",
+      "基础理论",
+      "产品体系",
+      "平台架构",
+      "OEM 部署指南",
+      "传感器厂商部署指南",
+      "Pilot 到 Production",
+      "常见问题",
+      "企业交付与发布说明",
     ],
+
     moreInfoEyebrow: "需要更多信息？",
-    moreResourcesTitle: "更多资源",
+    moreResourcesTitle: "进一步了解 Atlas",
     moreResourcesDescription:
-      "如果您的问题未在此列出，请查阅我们的技术白皮书和文档，或直接联系我们的团队。",
-    readWhitePapers: "阅读白皮书",
-    viewDocumentation: "查看文档",
+      "查看完整中文技术文档，或联系我们讨论您的运行时环境、部署范围和调查流程。",
+
+    readWhitePapers: "查看常见问题",
+    viewDocumentation: "打开技术文档",
     contactUs: "联系我们",
+
     whitePaperAvailability:
-      "白皮书将作为 PDF 下载或在 docs.sensordeck.tech 上托管的选定页面提供。",
+      "Atlas 技术资料、项目文档和培训材料根据部署范围及商业协议提供。",
+
     backToLibrary: "返回资料库",
-    previousWhitePapers: "← 白皮书",
-    previousDocumentation: "← 文档",
+    previousWhitePapers: "← 参考资料",
+    previousDocumentation: "← 企业交付",
     previousDemo: "← 演示",
-    nextDocumentation: "文档 →",
+    nextDocumentation: "交付说明 →",
     nextDemo: "演示 →",
     nextFaq: "常见问题 →",
   },
+
   hero: {
     eyebrow: "SensorDeck 资料库",
-    title: "技术阅读与资源",
+    title: "Atlas 参考资料",
     subtitle:
-      "面向工程和运营团队的技术白皮书、文档、演示和常见问题解答。",
+      "查看常见问题、企业交付说明、公开演示和版本发布记录。完整技术内容在 Atlas 中文文档中心持续维护。",
   },
 
   whitePapers: {
-    eyebrow: "01 / 白皮书",
-    title: "技术白皮书",
+    eyebrow: "01 / 技术资料",
+    title: "Atlas 技术资料",
     description:
-      "深入了解运行时智能基础设施、证据治理和调查生命周期。",
+      "了解 Atlas 的基础理论、平台架构、运行时治理方式和企业部署路径。",
+
     papers: [
       {
-        id: "WP-01",
-        title: "机器人运行时智能基础设施",
+        id: "REF-01",
+        title: "Atlas Runtime Governance",
         description:
-          "定义运行时智能基础设施类别、运行时边界以及为什么机器人组织需要受治理的证据层。",
-        size: "12 页",
-        format: "PDF",
+          "了解 Atlas 如何持续观察运行时、组织证据、保存历史，并让每一次调查形成可复用的组织资产。",
+        size: "在线文档",
+        format: "HTML",
       },
       {
-        id: "WP-02",
-        title: "Atlas Runtime Sensor Governance",
+        id: "REF-02",
+        title: "Atlas Runtime Sensor Governance™",
         description:
-          "面向传感器制造商的运行时治理产品线：Runtime Profiles、运行时观察、Historical Sensor RGA 和 OEM 协作。",
-        size: "16 页",
-        format: "PDF",
+          "面向传感器制造商的运行时治理产品体系、运行时画像、历史 RGA 和 OEM 调查协作方式。",
+        size: "在线文档",
+        format: "HTML",
       },
       {
-        id: "WP-03",
-        title: "Atlas Runtime Investigation",
+        id: "REF-03",
+        title: "Atlas Runtime Investigation™",
         description:
-          "面向机器人 OEM 的调查平台：运行时数据集、Evidence Pack、Historical RGA、Investigation Workspace 和 Assist Vault。",
-        size: "18 页",
-        format: "PDF",
+          "面向机器人 OEM 的运行时证据、调查协作、历史召回和 Assist Vault 体系。",
+        size: "在线文档",
+        format: "HTML",
       },
       {
-        id: "WP-04",
-        title: "Evidence Pack 与五窗口证据模型",
+        id: "REF-04",
+        title: "平台架构",
         description:
-          "边界明确的证据窗口如何设计：前置保护、基线、偏差、恢复观察、后置保护，以及为什么证据必须限定范围。",
-        size: "10 页",
-        format: "PDF",
+          "了解 Atlas Agent、Runtime Surface、Runtime Dataset、Evidence Pack 和调查资产之间的关系。",
+        size: "在线文档",
+        format: "HTML",
       },
       {
-        id: "WP-05",
-        title: "Historical RGA 与组织记忆",
+        id: "REF-05",
+        title: "部署指南",
         description:
-          "历史召回、复用与参考：Historical RGA 如何检索候选而不声称相同根本原因或责任。",
-        size: "14 页",
-        format: "PDF",
+          "了解 OEM 部署、传感器制造商部署，以及从 Pilot 到 Production 的阶段化上线方式。",
+        size: "在线文档",
+        format: "HTML",
       },
       {
-        id: "WP-06",
-        title: "OEM ↔ 传感器调查协作",
+        id: "REF-06",
+        title: "参考资料",
         description:
-          "Sensor Engagement Pack (EGP) 的协作模式：去标识化证据交换和边界明确的调查信息。",
-        size: "11 页",
-        format: "PDF",
+          "查看常见问题、企业交付与下载说明，以及 Atlas 版本发布记录。",
+        size: "在线文档",
+        format: "HTML",
       },
     ],
   },
 
   documentation: {
     eyebrow: "02 / 文档",
-    title: "技术文档",
+    title: "Atlas 中文技术文档",
     description:
-      "面向开发者的完整文档站点，包含架构、CLI、集成、模式和术语。",
+      "完整文档覆盖基础理论、产品体系、平台架构、部署指南和参考资料。",
+
     link: {
-      text: "打开 docs.sensordeck.tech",
-      href: "https://docs.sensordeck.tech",
+      text: "打开 Atlas 中文文档",
+      href: "https://sensordeck.github.io/atlas-docs-cn/",
     },
+
     topics: [
-      "开发者文档",
-      "模式定义",
-      "CLI 参考",
-      "集成指南",
-      "Artifact 定义",
-      "规范术语",
-      "发布说明",
-      "技术实施指南",
+      "基础理论",
+      "Runtime Sensor Governance™",
+      "Runtime Investigation™",
+      "平台架构",
+      "OEM Deployment",
+      "Sensor Manufacturer Deployment",
+      "Pilot to Production",
+      "参考资料",
     ],
-    note: "文档站点独立维护，不在营销网站内复制。",
+
+    note:
+      "文档站点独立维护，官网仅提供关键概览和访问入口。",
   },
 
   demo: {
     eyebrow: "03 / 演示",
     title: "演示与示例",
-    description: "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。",
+    description:
+      "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。",
+
     items: [
       {
         title: "2 分钟概览视频",
-        description: "快速了解 Atlas 如何将运行时事件转化为边界明确的证据和可复用知识。",
+        description:
+          "快速了解 Atlas 如何将运行时事件转化为边界明确的证据和可复用组织资产。",
         type: "视频",
         href: "/demo/overview",
         disabled: false,
@@ -190,7 +215,7 @@ export const libraryContent = {
       {
         title: "Atlas 演示界面",
         description:
-          "交互式演示：一级支持、Investigation Workspace、传感器 FAE 和 CTO 视图。",
+          "查看一级受理、Investigation Workspace、传感器 FAE 和 CTO 治理视图。",
         type: "交互式",
         href: "/demo",
         disabled: false,
@@ -198,7 +223,7 @@ export const libraryContent = {
       {
         title: "运行时调查演练",
         description:
-          "完整调查生命周期演练：从 REF 到 Evidence Pack、Historical RGA 到 IR + LL。",
+          "从 REF、Runtime Dataset、Evidence Pack 和 Historical RGA，到 IR、LL 和 Assist Vault 的完整演练。",
         type: "演练",
         href: "/demo/investigation",
         disabled: false,
@@ -206,8 +231,8 @@ export const libraryContent = {
       {
         title: "示例 Evidence Pack",
         description:
-          "可下载的示例 Evidence Pack（已批准发布的去标识化示例数据）。",
-        type: "下载",
+          "查看经过批准、去标识化并仅供演示和培训使用的示例调查资产。",
+        type: "示例",
         href: "#",
         disabled: true,
       },
@@ -215,75 +240,80 @@ export const libraryContent = {
   },
 
   faq: {
-    eyebrow: "04 / 常见问题",
+    eyebrow: "01 / 常见问题",
     title: "常见问题解答",
-    description: "关于 Atlas 平台、证据所有权和运营原则的常见问题。",
+    description:
+      "关于 Atlas 定位、部署、数据所有权、调查边界和现有系统集成的常见问题。",
+
     questions: [
       {
-        question: "Atlas 是日志平台吗？",
+        question: "Atlas 是另一个日志系统吗？",
         answer:
-          "不是。Atlas 是运行时智能基础设施。它整理边界明确的证据、检索历史候选并协调调查工作流程，但不替代日志归档或时序数据库。",
+          "不是。Atlas 不是日志采集平台。日志可以成为运行时证据来源之一，但 Atlas 关注运行时观测、证据组织、运行时调查、历史知识复用和跨组织协作。",
       },
       {
-        question: "SensorDeck 拥有客户数据吗？",
+        question: "Atlas 会替代车队管理系统吗？",
         answer:
-          "不。运行时数据集仍由客户的环境、保留策略和访问模型治理。Evidence Pack 和 EGP 是边界明确、经过去标识化处理的协作载体，不是无限制的归档。",
+          "不会。车队管理系统负责设备管理、OTA、任务调度和机器人运营；Atlas 负责运行时调查、Evidence Pack、Historical RGA、调查工作流和运行时治理。",
       },
       {
-        question: "Atlas 确定根本原因吗？",
+        question: "Atlas 会替代工单系统吗？",
         answer:
-          "不。Atlas 结构化证据并检索历史候选。人工团队负责撰写调查结果和经验教训。",
+          "不会。Atlas 可以与 Jira、ServiceNow 等现有工单流程集成，并在运行时执行失败被报告后组织调查证据和上下文。",
       },
       {
-        question: "Atlas 分配责任吗？",
+        question: "Atlas 会自动判定根本原因吗？",
         answer:
-          "不。Atlas 不自动确认根本原因、不分配责任。它提供受治理的证据和历史参考，供人工团队审查和决策。",
+          "不会。Atlas 不自动判定根本原因、责任归属、产品缺陷或客户过失。工程团队仍然对最终技术结论负责。",
       },
       {
-        question: "数据必须离开客户环境吗？",
+        question: "Atlas 需要 ROS 吗？",
         answer:
-          "不一定。Atlas Agent 可以在客户环境内运行。Evidence Pack 和 EGP 提供边界明确、经过去标识化处理的协作信息，只在需要时导出。",
+          "不需要。ROS 是可选的。Atlas 可以在有 ROS 或没有 ROS 的系统中观察和治理运行时表面。",
       },
       {
-        question: "什么是 Evidence Pack？",
+        question: "Atlas 需要持续云连接吗？",
         answer:
-          "Evidence Pack 是边界明确、标准化的证据窗口，围绕运行时偏差构建（五窗口模型：前置保护、基线、偏差、恢复观察、后置保护），而不是无限制的归档。",
+          "不需要。Atlas 支持客户本地、总部服务器、私有云、离线运行、手动导出和混合部署。",
       },
       {
-        question: "什么是 Historical RGA？",
+        question: "Atlas 需要替换现有基础设施吗？",
         answer:
-          "Historical RGA™ 是召回、复用和参考机制。它检索历史调查结果和经验教训作为审查候选，但不代表因果关系相同，也不会自动学习。",
+          "不需要。Atlas 设计为与现有车队管理、云平台、工单系统、对象存储和监控平台协同运行。",
       },
       {
-        question: "什么是 EGP？",
+        question: "运行时数据归谁所有？",
         answer:
-          "Sensor Engagement Pack (EGP) 是 OEM 与传感器制造商之间边界明确的协作载体。它包含去标识化的证据和调查信息，不是完整的内部 Evidence Pack。",
+          "客户拥有自己的运行时数据。Atlas 不主张对客户 Runtime Dataset、Evidence Pack 或内部调查资产的所有权。",
       },
       {
-        question: "Atlas 替代 OEM 工程工具吗？",
+        question: "Atlas 可以自动在公司之间共享客户数据吗？",
         answer:
-          "不。Atlas 在传感器行为成为系统级运行时条件的边界上工作。它补充（而非替代）现有的日志平台、仪表板、ROS 工具和调查工作流程。",
+          "不可以。跨组织协作必须遵循客户授权。Assist Vault 支持的是经过授权的非标识性知识复用，而不是自动共享客户运行时数据。",
       },
       {
-        question: "Atlas 可以与现有机器人传感器一起运行吗？",
+        question: "Atlas 通常如何部署？",
         answer:
-          "可以。Atlas 观察运行时边界（电源、总线、时序、Linux/SBC 运行时、ROS 输入），不要求更换传感器或修改现有硬件。",
+          "典型部署路径为 Pilot、Controlled Deployment、Production Readiness 和 Full Deployment，并可以进一步扩展到更多 Robot SKU、Sensor SKU 和运行环境。",
       },
     ],
   },
 
   cta: {
-    eyebrow: "申请资料",
-    title: "需要更多技术信息？",
+    eyebrow: "下一步",
+    title: "从您的运行时场景开始",
     description:
-      "联系我们获取完整白皮书、演示访问权限或讨论您的运行时治理需求。",
+      "介绍您的机器人平台、主要传感器、部署环境和当前调查流程。我们将共同评估适合的 Atlas 部署范围和交付方式。",
+
     primaryButton: {
       text: "联系我们",
-      href: "mailto:contact@sensordeck.tech",
+      href: "/contact",
     },
+
     secondaryButton: {
-      text: "申请演示",
-      href: "/#contact-form",
+      text: "查看参考资料",
+      href:
+        "https://sensordeck.github.io/atlas-docs-cn/category/参考资料",
     },
   },
 } satisfies LibraryContent;
