@@ -1,6 +1,3 @@
-import Link from "next/link";
-
-import Button from "@/components/website/Button";
 import Section from "@/components/website/Section";
 import { getProductsContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
