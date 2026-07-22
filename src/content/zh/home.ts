@@ -256,7 +256,7 @@ const homeContent = {
       evidenceOwnership: "08 / 证据边界",
       organizationalMemory: "09 / 组织记忆",
       technicalResources: "08 / 资料库",
-      finalCta: "09 / 开始对话",
+      finalCta: "05 / 开始对话",
     },
     learnMore: "了解更多",
     categoryImageAlt: "新品类定义 - Atlas 机器人运行时智能基础设施",

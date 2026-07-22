@@ -73,7 +73,7 @@ export default function WhyAtlasSection({ lang }: WhyAtlasSectionProps) {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
         <div className="max-w-6xl">
           <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-atlas-blue md:text-sm lg:text-base">
-            {isChinese ? "06 / 领导者为何选择 ATLAS" : "06 / Why Leaders Choose Atlas"}
+            {isChinese ? "04 / 领导者为何选择 ATLAS" : "04 / Why Leaders Choose Atlas"}
           </p>
           <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]">
             {isChinese

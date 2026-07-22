@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/website/Button";
-import Card from "@/components/website/Card";
 import Section from "@/components/website/Section";
-import FeaturesSection from "@/components/website/FeaturesSection";
-import WorkflowSection from "@/components/website/WorkflowSection";
 import WhyAtlasSection from "@/components/website/WhyAtlasSection";
 import { getHomeContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -274,65 +271,6 @@ export default async function HomePage({
         </div>
       </Section>
 
-      {/* Why Runtime Governance Is Missing */}
-      <Section
-        id="governance"
-        className="bg-surface py-12 md:py-16 lg:py-20"
-        containerClassName={unifiedSectionContainerClassName}
-      >
-        <div className="max-w-6xl">
-          <p className={unifiedSectionEyebrowClassName}>
-            {homeContent.ui.sectionEyebrows.whyRuntimeGovernance}
-          </p>
-
-          <h2 className={unifiedSectionTitleClassName}>
-            {homeContent.sectionTitles.whyRuntimeGovernance}
-          </h2>
-
-          <p className={`${unifiedSectionDescriptionClassName} max-w-5xl`}>
-            {homeContent.sectionDescriptions.whyRuntimeGovernance}
-          </p>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-12 md:gap-6 lg:grid-cols-3 lg:gap-8">
-          {homeContent.whyRuntimeGovernance.items.map(
-            (
-              item: {
-                label: string;
-                description: string;
-              },
-              index: number,
-            ) => (
-              <Card key={item.label} className="stagger-item">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs text-sensor-tan-text">
-                    0{index + 1}
-                  </span>
-
-                  <span className="size-2 rounded-full bg-border" />
-                </div>
-
-                <h3 className="mt-7 text-lg font-semibold tracking-tight text-ink md:mt-10 md:text-xl">
-                  {item.label}
-                </h3>
-
-                <p className="mt-4 text-sm leading-7 text-muted">
-                  {item.description}
-                </p>
-              </Card>
-            ),
-          )}
-        </div>
-
-        <div className="mt-6 flex gap-3 border border-border bg-surface px-4 py-4 text-sm leading-7 text-muted md:gap-4 md:px-6">
-          <span className="mt-1 font-mono text-xs text-sensor-tan-text">
-            /
-          </span>
-
-          <p>{homeContent.whyRuntimeGovernance.boundaryNote}</p>
-        </div>
-      </Section>
-
       {/* Two Atlas Product Lines */}
       <Section id="products" className="bg-white">
         <SectionHeading
@@ -421,84 +359,8 @@ export default async function HomePage({
         </div>
       </Section>
 
-      {/* Feature Sections */}
-      <FeaturesSection lang={lang} />
+      {/* Why Leaders Choose Atlas */}
       <WhyAtlasSection lang={lang} />
-      <WorkflowSection lang={lang} />
-
-      {/* Technical White Papers and Documentation */}
-      <Section
-        id="library"
-        className="bg-white py-12 md:py-16 lg:py-20"
-        containerClassName={unifiedSectionContainerClassName}
-      >
-        <div className="max-w-6xl">
-          <p className={unifiedSectionEyebrowClassName}>
-            {homeContent.ui.sectionEyebrows.technicalResources}
-          </p>
-
-          <h2 className={unifiedSectionTitleClassName}>
-            {homeContent.sectionTitles.technicalResources}
-          </h2>
-
-          <p className={`${unifiedSectionDescriptionClassName} max-w-5xl`}>
-            {homeContent.sectionDescriptions.technicalResources}
-          </p>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-12 md:gap-6 lg:grid-cols-3 lg:gap-8">
-          {homeContent.technicalResources.whitePapers.map((paper, index) => (
-            <Card
-              key={paper}
-              className="arrow-parent stagger-item flex min-h-40 flex-col justify-between md:min-h-44"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <span className="font-mono text-xs text-sensor-tan-text">
-                  WP-{String(index + 1).padStart(2, "0")}
-                </span>
-
-                <span className="arrow-slide">
-                  <ArrowLabel />
-                </span>
-              </div>
-
-              <h3 className="mt-8 text-lg font-semibold leading-7 tracking-tight text-ink md:mt-10">
-                {paper}
-              </h3>
-            </Card>
-          ))}
-        </div>
-
-        <div className="mt-6 grid gap-6 border border-border bg-white p-5 md:mt-8 md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:p-8">
-          <div>
-            <Eyebrow>{homeContent.ui.documentation}</Eyebrow>
-
-            <p className="mt-4 max-w-2xl text-base leading-8 text-muted">
-              {homeContent.technicalResources.documentationDescription}
-            </p>
-          </div>
-
-          <div className="grid gap-3 sm:flex sm:flex-wrap md:justify-end">
-            <Button
-              className="w-full sm:w-auto"
-              href="https://docs.sensordeck.tech"
-              rel="noreferrer"
-              target="_blank"
-              variant="secondary"
-            >
-              {homeContent.ctas.documentation}
-            </Button>
-
-            <Button
-              className="w-full sm:w-auto"
-              href="#contact-form"
-              variant="secondary"
-            >
-              {homeContent.ctas.overview}
-            </Button>
-          </div>
-        </div>
-      </Section>
 
       {/* Final Contact CTA */}
       <Section id="final-cta" className="bg-surface">

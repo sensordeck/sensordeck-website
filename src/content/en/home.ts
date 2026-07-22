@@ -380,7 +380,7 @@ heroDescription: "",
       evidenceOwnership: "08 / Evidence Boundary",
       organizationalMemory: "09 / Organizational Memory",
       technicalResources: "08 / Library",
-      finalCta: "09 / Start a Conversation",
+      finalCta: "05 / Start a Conversation",
     },
     learnMore: "Learn More",
     categoryImageAlt:
