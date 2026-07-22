@@ -11,7 +11,7 @@ const homeContent = {
   heroPrinciple: [],
   heroValueProposition: "每一次调查从证据开始。\n下一次调查，从历史开始。",
     sectionTitles: {
-    categoryDefinition: "机器人行业的新基础设施",
+    categoryDefinition: "机器人行业此前不存在的一层",
     theProblem: "事故排查为何总从零开始",
     whyRuntimeGovernance: "为什么需要运行时治理",
     productLines: "两种方案，一个使命。",
