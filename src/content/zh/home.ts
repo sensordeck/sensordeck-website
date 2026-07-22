@@ -24,8 +24,7 @@ const homeContent = {
     finalCta: "让运行时证据在整个组织中发挥作用",
   },
   sectionDescriptions: {
-    categoryDefinition: "机器人行业已经拥有传感器、驱动程序、ROS/中间件、AI 与算法、Fleet Management，以及云平台。
-但在 Sensor 输出 与 System Decision 之间，始终缺少一层持续观察、保留和组织运行时行为的基础设施。",
+    categoryDefinition: "Atlas 建立了位于传感器输出与机器人执行感知决策之间的运行时治理基础设施。",
     theProblem: "运行时数据分散在日志、设备、录像、工单和工程师记忆之间。每一次运行时调查，都需要重新收集证据、重新整理时间线、重新联系不同团队，并重新完成已经做过的调查工作。",
     whyRuntimeGovernance: "信号并不缺失，但运行背景信息通常分散在设备、日志、工单、录像和个人记忆中。",
     productLines: "专为机器人生态系统中的两类关键参与者打造。",
@@ -39,7 +38,7 @@ const homeContent = {
   },
  categoryDefinition: {
     lead:
-      "机器人行业已经拥有先进的传感器、成熟的计算平台、完善的 ROS 中间件，以及快速发展的 AI 与应用软件。然而，在 Sensor 输出与 System Decision 之间，始终缺少一层统一的运行时治理基础设施。这一层负责持续观察、保留和组织运行时行为，也是机器人运行时问题最容易发生、却长期缺乏系统治理的关键边界。",
+  "机器人行业已经拥有先进的传感器、成熟的计算平台、完善的 ROS 中间件，以及快速发展的 AI 与应用软件。然而，在传感器输出与机器人执行决策之间，始终缺少一层持续观察、保留和组织运行时行为的基础设施。Atlas 正是为填补这一关键空白而建立。"
 
     runtimeBoundary: {
       title: "机器人真正缺失的是运行时治理层",
