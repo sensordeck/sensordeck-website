@@ -165,17 +165,7 @@ export default async function RuntimeSensorGovernancePage({
 
             </p>
 
-            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
-              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/contact")}>
-                {productsContent.ctaText}
-              </Button>
-
-              <Button className="w-full sm:w-auto" href={localizeHref(lang, "/products")} variant="outline">{ui.viewAllProducts}
-
-              </Button>
-            </div>
-          </div>
-        </Section>
+          </Section>
 
         {/* Core positioning */}
         <Section className="border-y border-border bg-[#050b17]">
