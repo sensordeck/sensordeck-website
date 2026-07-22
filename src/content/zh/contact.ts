@@ -116,19 +116,23 @@ export const contactContent = {
   locations: {
     title: "联系我们",
 
-    offices: [
-      {
-        city: "中国",
-        name: "SensorDeck 中国 - 惠州深时传感科技有限公司",
-        email: "sales.china@sensordeck.tech",
-        address: "广东惠州",
-      },
-      {
-        city: "美国",
-        name: "SensorDeck Inc",
-        email: "contact@sensordeck.tech",
-        address: "555 Pierce St, Ste 842 Albany CA 94706, United States",
-      },
-    ],
+    locations: {
+  title: "全球办公室",
+
+  offices: [
+    {
+      city: "中国 · 大湾区",
+      name: "惠州深时传感科技有限公司",
+      email: "sales.china@sensordeck.tech",
+      address: "广东省惠州市",
+    },
+    {
+      city: "美国 · 加利福尼亚",
+      name: "SensorDeck Inc.",
+      email: "contact@sensordeck.tech",
+      address: "555 Pierce St, Ste 842, Albany, CA 94706, United States",
+    },
+  ],
+},
   },
 } satisfies ContactContent;
