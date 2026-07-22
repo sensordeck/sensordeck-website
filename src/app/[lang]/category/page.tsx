@@ -31,9 +31,9 @@ export default async function CategoryPage({
       {content.eyebrow}
     </p>
 
-    <h1 className="text-4xl font-semibold tracking-tight text-ink lg:text-5xl">
-      Atlas 位于 Sensor 与 System Decision 之间
-    </h1>
+   <h1 className="mx-auto max-w-5xl text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl">
+  Atlas 位于 Sensor 与 System Decision 之间
+</h1>
 
     <p className="mx-auto mt-6 max-w-4xl text-xl leading-9 tracking-tight text-ink sm:text-2xl sm:leading-10">
       {homeContent.categoryDefinition.lead}
