@@ -120,39 +120,57 @@ const homeContent = {
   },
 
   theProblem: {
-    lead: "调查结束后，大部分工程经验再次散落。下一次发生相似事件，团队依然从零开始。",
-    cta: "看看 Atlas 如何让每一次事故排查从历史开始",
-    comparison: {
-      withoutAtlas: {
-        title: "没有 Atlas",
-        steps: [
-          "REF 发生",
-          "日志 / 设备 / 录像",
-          "邮件 / 工单",
-          "工程师调查",
-          "经验流失"
-        ],
-        note: "耗时、昂贵，而且无法复用。"
-      },
-      withAtlas: {
-        title: "使用 Atlas",
-        steps: [
-          "REF 发生",
-          "Evidence Pack",
-          "Historical RGA 召回",
-          "调查",
-          "IR / LL",
-          "Assist Vault",
-          "未来 REF 复用"
-        ],
-        note: "每一次调查从证据开始。下一次调查，从历史开始。"
-      }
+  lead:
+    "REF 发生之后，工程团队通常需要重新寻找日志、重新同步录像、重新联系不同团队，再重新拼凑整个运行过程。大量调查时间，并没有花在分析问题，而是花在寻找证据。",
+
+  cta:
+    "真正缺失的不是更多日志，而是能够持续组织运行时证据的基础设施。",
+
+  comparison: {
+    withoutAtlas: {
+      title: "传统调查流程",
+
+      steps: [
+        "REF 发生",
+        "寻找日志",
+        "寻找录像",
+        "联系不同团队",
+        "重新整理时间线",
+        "人工分析",
+        "经验散落"
+      ],
+
+      note:
+        "每一次调查都重新开始。"
     },
-    whyMatters: {
-      title: "为什么重要？",
-      description: "Atlas 不只是帮助团队完成一次事故调查。它持续将运行时证据沉淀为组织知识。让工程团队减少重复调查，把更多时间投入产品研发、可靠性提升和持续创新。"
+
+    withAtlas: {
+      title: "Atlas Runtime Investigation",
+
+      steps: [
+        "REF 发生",
+        "Evidence Pack",
+        "Historical RGA",
+        "调查工作区",
+        "IR / Lessons Learned",
+        "Assist Vault",
+        "未来直接复用"
+      ],
+
+      note:
+        "第一次建立组织记忆，之后不断复用。"
     }
   },
+
+  whyMatters: {
+    title:
+      "Atlas 改变的不是一次调查，而是整个组织。",
+
+    description:
+      "Atlas 将持续运行的数据组织为 Runtime Evidence，再把调查结果沉淀为 Historical RGA 与 Assist Vault。每一次 REF 都会成为下一次调查的起点，而不是终点。工程经验第一次能够随着产品持续积累。"
+  }
+},
+    
   whyRuntimeGovernance: {
     items: [
       { label: "信号碎片化", description: "传感器输出、电源、时序、网络、主机运行时和 ROS 上下文通常在不同工具中审查。" },
