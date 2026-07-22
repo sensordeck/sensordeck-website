@@ -23,40 +23,38 @@ export default async function CategoryPage({
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <Section className="bg-surface">
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold tracking-wide text-atlas-blue uppercase mb-4">
-            {content.eyebrow}
-          </p>
-          <h1 className="mb-6 text-4xl font-semibold tracking-tight text-ink lg:text-5xl">
-            {homeContent.sectionTitles.categoryDefinition}
-          </h1>
-          <p className="text-lg leading-8 text-muted sm:text-xl sm:leading-9">
-            {homeContent.sectionDescriptions.categoryDefinition}
-          </p>
-        </div>
-      </Section>
+     
+      {/* Category Definition */}
+<Section className="bg-surface">
+  <div className="max-w-5xl mx-auto text-center">
+    <p className="mb-4 text-sm font-semibold tracking-wide text-atlas-blue uppercase">
+      {content.eyebrow}
+    </p>
 
-      {/* Lead 文字 + 大图 */}
-      <Section className="bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="mb-10 text-xl leading-9 tracking-tight text-ink sm:mb-12 sm:text-2xl sm:leading-10">
-            {homeContent.categoryDefinition.lead}
-          </p>
-        </div>
+    <h1 className="text-4xl font-semibold tracking-tight text-ink lg:text-5xl">
+      Atlas 位于 Sensor 与 System Decision 之间
+    </h1>
 
-        <div className="mt-12">
-          <Image
-            src={lang === "en" ? "/images/Sensordeck 1e.png" : "/images/Sensordeck 1.png"}
-            alt={content.imageAlt}
-            width={2000}
-            height={1200}
-            quality={100}
-            className="w-full h-auto"
-          />
-        </div>
-      </Section>
+    <p className="mx-auto mt-6 max-w-4xl text-xl leading-9 tracking-tight text-ink sm:text-2xl sm:leading-10">
+      {homeContent.categoryDefinition.lead}
+    </p>
+  </div>
+
+  <div className="mt-12">
+    <Image
+      src={
+        lang === "en"
+          ? "/images/Sensordeck 1e.png"
+          : "/images/Sensordeck 1.png"
+      }
+      alt={content.imageAlt}
+      width={2000}
+      height={1200}
+      quality={100}
+      className="h-auto w-full"
+    />
+  </div>
+</Section>
 
       {/* 运行时边界说明 */}
       <Section className="bg-surface">
