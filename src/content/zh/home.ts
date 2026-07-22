@@ -25,7 +25,7 @@ const homeContent = {
   },
   sectionDescriptions: {
     categoryDefinition: "Atlas 建立了位于传感器输出与机器人执行决策之间的运行时治理基础设施。",
-    theProblem: "运行时证据分散在日志、设备、录像、工单和工程师记忆之间，缺乏统一组织与持续保留。每一次运行时调查，都必须重新收集证据、重新建立时间线、重新协调团队，让调查工作不断重复。",
+    theProblem: "运行时证据分散在不同系统和人员之间，缺乏统一组织与持续保留。每一次调查，都不得不重新开始。",
     whyRuntimeGovernance: "信号并不缺失，但运行背景信息通常分散在设备、日志、工单、录像和个人记忆中。",
     productLines: "专为机器人生态系统中的两类关键参与者打造。",
     platformCapabilities: "这些能力由两条产品线共享。Atlas 结构化证据并检索历史候选；人工团队撰写调查结果和经验教训。",
