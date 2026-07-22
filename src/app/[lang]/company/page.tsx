@@ -40,7 +40,7 @@ export default async function CompanyPage({
     style={{
       backgroundImage: "url('/images/about-us-mobile.png')",
       backgroundSize: "100% auto",
-      backgroundPosition: "center bottom",
+      backgroundPosition: "center calc(100% + 48px)",
     }}
     aria-hidden="true"
   />
@@ -50,6 +50,7 @@ export default async function CompanyPage({
   className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block"
   style={{
     backgroundImage: "url('/images/about-us-desktop.png')",
+    backgroundPosition: "center calc(50% + 80px)",
   }}
   aria-hidden="true"
 />
