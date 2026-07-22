@@ -72,48 +72,7 @@ export default async function FAQPage({
           </div>
         </Section>
 
-        {/* Additional Resources */}
-        <Section id="more-info" className="bg-white">
-          <div className="max-w-3xl">
-            <Eyebrow>{ui.moreInfoEyebrow}</Eyebrow>
-            <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md heading-title">
-              {ui.moreResourcesTitle}
-            </h2>
-            <p className="mt-6 text-body leading-relaxed text-muted heading-description">
-              {ui.moreResourcesDescription}
-            </p>
-          </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <Link
-              className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
-              href={localizeHref(lang, "/library/white-papers")}
-            >
-              <span className="font-mono text-code leading-normal text-atlas-blue">01</span>
-              <span className="mt-4 text-label font-semibold leading-normal text-ink">
-                {ui.readWhitePapers}
-              </span>
-            </Link>
-            <Link
-              className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
-              href={localizeHref(lang, "/library/documentation")}
-            >
-              <span className="font-mono text-code leading-normal text-atlas-blue">02</span>
-              <span className="mt-4 text-label font-semibold leading-normal text-ink">
-                {ui.viewDocumentation}
-              </span>
-            </Link>
-            <a
-              className="flex min-h-32 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-atlas-blue hover:bg-surface-blue"
-              href="mailto:contact@sensordeck.tech"
-            >
-              <span className="font-mono text-code leading-normal text-atlas-blue">03</span>
-              <span className="mt-4 text-label font-semibold leading-normal text-ink">
-                {ui.contactUs}
-              </span>
-            </a>
-          </div>
-        </Section>
-
+       
         {/* Navigation */}
         <Section id="navigation" className="bg-surface">
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
