@@ -53,7 +53,7 @@ links: [
     href: "/library",
   },
   {
-    label: "参考资料",
+    label: "常见问题",
     href: "/library/faq",
   },
   {
