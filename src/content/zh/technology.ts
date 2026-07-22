@@ -2,176 +2,307 @@ import type { TechnologyContent } from "@/lib/content-types";
 
 export const technologyContent = {
   hero: {
-    title: "技术架构",
+    title: "Atlas 部署",
     subtitle:
-      "Atlas 技术基础设施解释了为什么运行时治理有效。这不是编程语言或框架的列表，而是关于证据治理、运行时边界和调查生命周期的基本原则。",
+      "Atlas 部署在客户控制的运行环境中，通过现有机器人系统、运行时数据源和调查流程建立治理能力。无需替换机器人核心架构，运行时数据、保留策略和证据导出始终由客户控制。",
   },
 
   sections: [
     {
-      id: "runtime-boundary",
-      title: "运行时边界",
+      id: "deployment-principles",
+      title: "部署原则",
       description:
-        "Atlas 治理的边界从传感器物理接口开始，经过内核和驱动层，到达应用输入。",
-      content: `传感器
+        "Atlas 作为运行时治理基础设施进入客户现有工程体系，而不是替换机器人控制系统、业务应用或现有日志工具。",
+      content: `客户运行环境
   ↓
-电源 / USB / Ethernet / CAN / CSI / 触发 / PPS
+Atlas Agent™
   ↓
-Linux 内核 / 驱动 / 缓冲区 / IRQ / 调度器
+Runtime Surface™
   ↓
-SBC / ROS 主题 / 应用输入`,
+Runtime Dataset™
+  ↓
+Evidence Pack™
+  ↓
+调查与组织记忆`,
       explanation:
-        "这个边界定义了 Atlas 监控和捕获运行时证据的范围。每一层都可能引入延迟、丢失或异常，因此需要在整个路径上建立可观测性。",
-      href: "/technology/runtime-boundary",
-    },
-
-    {
-      id: "runtime-evidence",
-      title: "运行时证据",
-      description:
-        "边界明确的 Evidence Pack 不同于无限日志归档、原始 rosbag、客户视频、支持工单或单一传感器日志。",
-      content: null,
-      explanation:
-        "Evidence Pack 是边界明确、结构化且可重现的证据容器。它不是原始数据转储，而是围绕异常事件窗口、按治理规则组织的证据集合。明确的边界确保证据可传输、可审查、可存储。",
+        "Atlas 可以部署在机器人主控板、边缘计算节点或客户调查服务器环境中，并通过 Runtime Surface Adapter 接入现有运行时数据源。客户拥有原始数据，决定数据保留范围，并授权调查证据的生成和导出。",
       comparedTo: [
-        "无限日志归档 → 无法传输，无法快速审查",
-        "原始 rosbag → 无结构，无上下文，无异常标记",
-        "客户视频 → 主观，不完整，无传感器原始数据",
-        "支持工单 → 文本描述，缺乏运行时证据",
-        "单一传感器日志 → 缺少跨传感器上下文和系统状态",
+        "不替换现有机器人核心架构",
+        "不要求修改机器人业务逻辑",
+        "不要求将全部原始数据上传至公共云",
+        "不改变客户现有工程责任和审批流程",
+        "不自动确认根本原因或分配责任",
       ],
-      href: "/technology/runtime-evidence",
+      href: "/technology/deployment-principles",
     },
 
     {
-      id: "runtime-surfaces",
-      title: "运行时监测维度",
+      id: "oem-deployment",
+      title: "机器人 OEM 部署",
       description:
-        "Atlas 从多个运行时监测维度建立可观测性，覆盖传感器、总线、内核和应用层。",
-      content: null,
+        "面向机器人 OEM 的部署，围绕运行时数据保留、Evidence Pack™ 生成、调查协作和组织记忆建立完整能力。",
+      content: `机器人 / 设备集群
+  ↓
+Atlas Agent™
+  ↓
+Runtime Surface™
+  ↓
+Runtime Dataset™
+  ↓
+Evidence Pack™
+  ↓
+Investigation Context™
+  ↓
+Historical RGA™
+  ↓
+Assist Vault™`,
+      explanation:
+        "Atlas Agent™ 在 OEM 控制的环境中持续观察已授权的运行时信号。发生运行时事件后，Atlas 从 Runtime Dataset™ 中提取事件前后的相关数据，形成有时间边界、可审查的 Evidence Pack™，并支持 Tier 1、Tier 2 / Tier 3、OEM 工程和传感器 FAE 之间的调查协作。",
       surfaces: [
-        "电源健康",
-        "时序",
-        "Ethernet（以太网）",
-        "USB",
-        "CAN",
-        "LiDAR（激光雷达）",
-        "摄像头",
-        "IMU（惯性测量单元）",
-        "Linux 运行时",
-        "ROS 主题",
-        "存储",
-        "传感器心跳 / 原始输出",
+        "机器人主控板",
+        "边缘计算节点",
+        "Linux Runtime",
+        "ROS / ROS2",
+        "设备与驱动状态",
+        "USB / Ethernet / CAN",
+        "传感器原始输出",
+        "客户调查服务器",
+        "现有日志系统",
       ],
-      explanation:
-        "这些维度并非彼此孤立的监控指标，而是 Atlas 在运行时边界内建立的统一观测体系。每个维度都可能产生异常信号，并触发 Evidence Pack 生成。",
-      href: "/technology/runtime-surfaces",
+      href: "/technology/oem-deployment",
     },
 
     {
-      id: "five-window-model",
-      title: "五窗口模型",
+      id: "oem-deployment-scope",
+      title: "OEM 部署范围",
       description:
-        "Evidence Pack 的时间结构由五个窗口组成，提供异常事件的完整上下文。",
-      content: `前置保护窗口
-基线窗口
-偏差窗口
-恢复观察窗口
-后置保护窗口`,
-      explanation:
-        "恢复是一个观察窗口，不是保证恢复的结论。五窗口模型确保 Evidence Pack 包含足够的前后上下文，使调查人员能够理解异常如何发生、持续和结束。",
-      href: "/technology/five-window-model",
-    },
-
-    {
-      id: "historical-recall",
-      title: "历史召回",
-      description:
-        "Atlas 从 Assist Vault 中召回历史相似案例，但从不声称历史相似性证明相同根因。",
+        "OEM 部署范围根据机器人平台、传感器配置、运行环境和调查目标共同确定。",
       content: null,
+      explanation:
+        "Atlas 不默认采集机器人环境中的全部数据。部署前，双方首先确认运行时边界、数据来源、保留周期、事件触发条件、调查角色和证据导出方式，再形成明确的部署范围。",
       concepts: [
         {
-          term: "强候选",
-          definition: "高度相似的历史案例，多个维度匹配",
+          term: "运行时边界",
+          definition:
+            "确认 Atlas 需要观察的传感器、接口、Linux Runtime、设备状态和 ROS Topic。",
         },
         {
-          term: "部分候选",
-          definition: "部分匹配的历史案例，某些维度相似",
+          term: "数据来源",
+          definition:
+            "确认现有日志、设备接口、ROS Topic、驱动状态和其他可接入数据源。",
         },
         {
-          term: "相关历史模式",
-          definition: "相关但不完全匹配的历史案例",
+          term: "保留策略",
+          definition:
+            "由客户决定数据保留范围、周期、容量和清理规则。",
         },
         {
-          term: "召回原因",
-          definition: "解释为什么这个历史案例被召回",
+          term: "事件规则",
+          definition:
+            "定义哪些运行时异常需要标记、锁定数据并进入调查流程。",
         },
         {
-          term: "环境差异",
-          definition: "标记历史案例与当前案例的环境差异",
+          term: "证据导出",
+          definition:
+            "确定 Evidence Pack™ 的生成范围、授权对象和导出方式。",
+        },
+        {
+          term: "调查角色",
+          definition:
+            "明确 Tier 1、Tier 2 / Tier 3、OEM 工程和传感器 FAE 的参与方式。",
         },
       ],
-      warning:
-        "⚠️ 历史相似性不证明相同根因。Historical RGA 提供调查起点，不是自动诊断结论。",
-      href: "/technology/historical-recall",
+      href: "/technology/oem-deployment-scope",
     },
 
     {
-      id: "investigation-lifecycle",
-      title: "调查生命周期",
+      id: "sensor-manufacturer-deployment",
+      title: "传感器制造商部署",
       description:
-        "从 REF 触发到 Assist Vault 存储，Atlas 支持完整的调查生命周期。",
-      content: `REF（运行时事件标记）
+        "面向传感器制造商的部署，围绕产品运行时表现、客户调查协作和历史案例复用建立治理能力。",
+      content: `传感器产品与运行时场景
   ↓
-运行时数据集
+Runtime Profiles™
   ↓
-Evidence Pack（证据包）
+运行时观察与证据接收
   ↓
-历史 RGA 召回
+Sensor Investigation Workspace™
   ↓
-调查上下文
+Historical Sensor RGA™
   ↓
-EGP（证据治理协议）
+Sensor Assist Vault™
   ↓
-OEM / 传感器 IR + LL（调查报告 + 经验教训）
-  ↓
-结案
-  ↓
-Assist Vault（组织记忆）
-  ↓
-未来复用`,
+Runtime Knowledge Base™`,
       explanation:
-        "这个生命周期不是线性的自动化流程，而是 Atlas 支持的调查协作框架。每个阶段都需要人类判断，Atlas 提供结构化证据和历史上下文支持决策。",
-      href: "/technology/investigation-lifecycle",
+        "传感器制造商可以在自己的实验室、技术支持或客户调查环境中部署 Atlas。通过 Runtime Profiles™、Sensor Engagement Pack™ 和历史调查资产，传感器团队能够更快理解客户现场的运行时条件，并在明确的数据边界内与 OEM 协作。",
+      surfaces: [
+        "传感器实验室",
+        "技术支持团队",
+        "FAE 调查流程",
+        "产品运行时场景",
+        "客户现场证据",
+        "Sensor Engagement Pack™",
+        "Historical Sensor RGA™",
+        "Sensor Assist Vault™",
+        "Runtime Knowledge Base™",
+      ],
+      href: "/technology/sensor-manufacturer-deployment",
     },
 
     {
-      id: "architecture",
-      title: "架构",
+      id: "sensor-engagement-boundary",
+      title: "OEM 与传感器厂商协作边界",
       description:
-        "Atlas 平台架构将证据治理、历史记忆和调查协作集成到统一基础设施中。",
+        "Sensor Engagement Pack™ 用于在 OEM 与传感器制造商之间传递与调查相关、范围明确的运行时信息。",
+      content: `OEM 调查环境
+  ↓
+Evidence Pack™
+  ↓
+Sensor Engagement Pack™
+  ↓
+传感器 FAE 调查
+  ↓
+IR + Lessons Learned
+  ↓
+OEM 结案与组织记忆`,
+      explanation:
+        "协作包只包含与传感器调查边界相关的信息，不要求 OEM 交付全部机器人运行数据。传感器厂商可以基于明确的事件上下文和证据开展调查，同时保护 OEM 的产品架构、客户信息和运营数据。",
+      comparedTo: [
+        "仅传递与当前传感器调查相关的信息",
+        "保留事件时间线和运行环境上下文",
+        "减少不必要的 OEM 运营信息暴露",
+        "支持传感器 FAE 形成调查结果和经验教训",
+        "双方继续保有各自的数据和责任边界",
+      ],
+      href: "/technology/sensor-engagement-boundary",
+    },
+
+    {
+      id: "pilot-to-production",
+      title: "从 Pilot 到 Production",
+      description:
+        "Atlas 采用分阶段部署路径，从一个明确的运行时场景开始验证，再逐步扩展至正式生产环境。",
+      content: `场景确认
+  ↓
+运行时边界评审
+  ↓
+部署计划
+  ↓
+Atlas Agent™ 安装
+  ↓
+Runtime Surface™ 接入
+  ↓
+保留策略配置
+  ↓
+金丝雀验证
+  ↓
+Pilot
+  ↓
+Production`,
+      explanation:
+        "部署不从全设备、全数据和全组织范围开始。首个 Pilot 应围绕一个明确的机器人平台、传感器边界或代表性调查场景，验证数据接入、事件切片、Evidence Pack™ 生成和调查协作流程。验证完成后，再逐步扩展至更多设备、场景和团队。",
+      href: "/technology/pilot-to-production",
+    },
+
+    {
+      id: "canary-validation",
+      title: "金丝雀验证",
+      description:
+        "在 Pilot 进入正式运行前，通过可控的代表性事件验证整条部署链路。",
+      content: `受控运行时事件
+  ↓
+Atlas Agent™ 观察
+  ↓
+Runtime Dataset™ 保留
+  ↓
+事件窗口生成
+  ↓
+Evidence Pack™
+  ↓
+调查流程验证
+  ↓
+历史资产保存与未来召回`,
+      explanation:
+        "金丝雀验证用于确认 Atlas Agent™、数据来源、时间边界、保留策略、Evidence Pack™ 和调查工作流能够协同运行。验证目标不是模拟所有可能的机器人事故，而是证明部署范围内的完整链路可观察、可生成、可审查和可复用。",
+      concepts: [
+        {
+          term: "数据接入验证",
+          definition:
+            "确认已授权的运行时信号能够持续进入 Runtime Dataset™。",
+        },
+        {
+          term: "事件边界验证",
+          definition:
+            "确认事件发生前后所需数据能够被正确保留和切片。",
+        },
+        {
+          term: "证据生成验证",
+          definition:
+            "确认 Evidence Pack™ 能够按预定范围生成并供团队审查。",
+        },
+        {
+          term: "调查流程验证",
+          definition:
+            "确认事件能够进入正确的调查角色和协作路径。",
+        },
+        {
+          term: "历史复用验证",
+          definition:
+            "确认完成的调查资产可以进入 Assist Vault™ 并支持未来召回。",
+        },
+      ],
+      href: "/technology/canary-validation",
+    },
+
+    {
+      id: "production-readiness",
+      title: "Production 就绪条件",
+      description:
+        "当部署边界、运行策略、调查流程和组织责任全部明确后，Atlas 才进入正式生产运行。",
       content: null,
       explanation:
-        "完整的 Atlas 架构图和实现细节请参考技术文档。架构设计围绕运行时数据集治理、Evidence Pack 标准化和 Historical RGA 组织记忆构建。",
+        "Production 并不只是扩大 Agent 部署数量。正式上线前，需要确认数据保留、访问授权、事件升级、证据导出、调查角色、运行维护和版本管理等组织条件。",
+      comparedTo: [
+        "部署范围和数据来源已经确认",
+        "保留周期和容量策略已经批准",
+        "事件触发与升级流程已经验证",
+        "Evidence Pack™ 的审查和导出权限已经明确",
+        "OEM 与传感器厂商协作方式已经确定",
+        "运行维护、版本升级和故障处理责任已经分配",
+        "Pilot 和金丝雀验证结果已经完成审查",
+      ],
+      warning:
+        "Atlas Production 部署必须保持客户数据所有权、人工根因判断和组织授权边界。扩大部署规模不会改变这些基础原则。",
+      href: "/technology/production-readiness",
+    },
+
+    {
+      id: "deployment-documentation",
+      title: "完整部署文档",
+      description:
+        "查看机器人 OEM 部署、传感器制造商部署以及从 Pilot 到 Production 的完整说明。",
+      content: null,
+      explanation:
+        "部署文档包含更详细的角色分工、部署流程、验证方法和生产运行说明。",
       link: {
-        text: "查看完整架构文档 →",
-        href: "https://docs.sensordeck.tech",
+        text: "查看完整部署指南 →",
+        href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
       },
-      href: "/technology/architecture",
+      href: "/technology/deployment-documentation",
     },
   ],
 
   cta: {
-    title: "深入了解 Atlas 技术架构",
+    title: "从您的运行环境开始",
     description:
-      "访问完整的技术文档、架构图和实现细节。",
+      "介绍您的机器人平台、主要传感器、部署环境和当前调查流程。我们将共同确认适合的 Atlas 部署边界和 Pilot 范围。",
     primaryButton: {
-      text: "技术文档",
-      href: "https://docs.sensordeck.tech",
+      text: "阅读部署指南",
+      href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
     },
     secondaryButton: {
       text: "申请演示",
-      href: "/demo",
+      href: "/contact",
     },
   },
 } satisfies TechnologyContent;
