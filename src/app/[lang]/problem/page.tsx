@@ -50,8 +50,13 @@ export default async function ProblemPage({
               {homeContent.sectionDescriptions.theProblem}
             </p>
 
-            <p className="mt-8 max-w-3xl text-base font-semibold leading-8 text-atlas-blue">
-              {problem.cta}
+            <Button
+  className="mt-8"
+  href={localizeHref(lang, "/products")}
+  variant="secondary"
+>
+  查看 Atlas 如何解决
+</Button>
             </p>
           </div>
         </div>
