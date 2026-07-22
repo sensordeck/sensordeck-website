@@ -114,25 +114,22 @@ export const contactContent = {
     "您也可以先阅读 Atlas 中文部署指南，了解系统架构、安装部署流程、运行时治理模型以及产品能力。",
 
   locations: {
-    title: "联系我们",
+    title: "全球办公室",
 
-    locations: {
-  title: "全球办公室",
-
-  offices: [
-    {
-      city: "中国 · 大湾区",
-      name: "惠州深时传感科技有限公司",
-      email: "sales.china@sensordeck.tech",
-      address: "广东省惠州市",
-    },
-    {
-      city: "美国 · 加利福尼亚",
-      name: "SensorDeck Inc.",
-      email: "contact@sensordeck.tech",
-      address: "555 Pierce St, Ste 842, Albany, CA 94706, United States",
-    },
-  ],
-},
+    offices: [
+      {
+        city: "中国 · 大湾区",
+        name: "惠州深时传感科技有限公司",
+        email: "sales.china@sensordeck.tech",
+        address: "广东省惠州市",
+      },
+      {
+        city: "美国 · 加利福尼亚",
+        name: "SensorDeck Inc.",
+        email: "contact@sensordeck.tech",
+        address:
+          "555 Pierce St, Ste 842, Albany, CA 94706, United States",
+      },
+    ],
   },
 } satisfies ContactContent;
