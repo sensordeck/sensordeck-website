@@ -125,49 +125,52 @@ export default async function TechnologyPage({
 
       {/* Deployment details */}
       <section className="border-b border-border bg-white py-14 sm:py-18 md:py-24">
-        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
-              Deployment Guide
-            </p>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="max-w-3xl">
+              <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
+                Deployment Guide
+              </p>
 
-            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-              从部署边界到 Production 就绪
-            </h2>
+              <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+                从部署边界到 Production 就绪
+              </h2>
 
-            <p className="heading-description mt-5 text-body leading-8 text-muted">
-              每一次 Atlas 部署都从明确的运行环境、数据范围和调查目标开始，
-              再通过金丝雀验证和 Pilot 进入正式生产运行。
-            </p>
-          </div>
+              <p className="heading-description mt-5 text-body leading-8 text-muted">
+                每一次 Atlas 部署都从明确的运行环境、数据范围和调查目标开始，
+                再通过金丝雀验证和 Pilot 进入正式生产运行。
+              </p>
+            </div>
+          </AnimatedSection>
 
           <div className="mt-12 space-y-8">
             {deploymentDetails.map((section, index) => (
-              <article
-                key={section.id}
-                id={section.id}
-                className="grid gap-8 border-t border-border pt-8 lg:grid-cols-[0.34fr_0.66fr]"
-              >
-                <div>
-                  <p className="font-mono text-caption font-semibold tracking-eyebrow text-atlas-blue">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
+              <AnimatedSection key={section.id}>
+                <article
+                  key={section.id}
+                  id={section.id}
+                  className="grid gap-8 border-t border-border pt-8 lg:grid-cols-[0.34fr_0.66fr]"
+                >
+                  <div>
+                    <p className="font-mono text-caption font-semibold tracking-eyebrow text-atlas-blue">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
 
-                  <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
-                    {section.title}
-                  </h3>
+                    <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                      {section.title}
+                    </h3>
 
-                  <p className="mt-4 text-label leading-7 text-muted">
-                    {section.description}
-                  </p>
-                </div>
+                    <p className="mt-4 text-label leading-7 text-muted">
+                      {section.description}
+                    </p>
+                  </div>
 
-                <div>
-                  {section.content && (
-                    <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg border border-border bg-surface p-5 font-mono text-code leading-7 text-ink/75">
-                      {section.content}
-                    </pre>
-                  )}
+                  <div>
+                    {section.content && (
+                      <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg border border-border bg-surface p-5 font-mono text-code leading-7 text-ink/75">
+                        {section.content}
+                      </pre>
+                    )}
 
                   {section.explanation && (
                     <p
@@ -233,22 +236,23 @@ export default async function TechnologyPage({
                     </div>
                   )}
 
-                  {section.link && (
-                    <a
-                      href={section.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button-press button-hover mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-label font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white"
-                    >
-                      {section.link.text}
-                      <span aria-hidden="true">↗</span>
-                    </a>
-                  )}
-                </div>
-              </article>
+                    {section.link && (
+                      <a
+                        href={section.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button-press button-hover mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-label font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white"
+                      >
+                        {section.link.text}
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </div>
+                </article>
+              </AnimatedSection>
             ))}
           </div>
-        </AnimatedSection>
+        </div>
       </section>
 
       {/* Deployment ownership */}
