@@ -72,7 +72,7 @@ export default function WhyAtlasSection({ lang }: WhyAtlasSectionProps) {
     <section id="why-atlas" className="border-b border-border bg-surface py-12 md:py-16 lg:py-20">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12">
         <div className="max-w-6xl">
-          <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-atlas-blue md:text-sm lg:text-base">
+          <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow md:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
             {isChinese ? "04 / 为什么选择 Atlas" : "04 / Why Atlas"}
           </p>
           <h2 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]">

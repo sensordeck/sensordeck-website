@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Inter, JetBrains_Mono } from "next/font/google";
 
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import { locales, type Locale, isValidLocale } from "@/lib/i18n";
 import "../globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 
 const metadataByLocale: Record<Locale, Metadata> = {
   zh: {
@@ -49,7 +62,11 @@ export default async function LangLayout({
   }
 
   return (
-    <html lang={lang} className="h-full antialiased" suppressHydrationWarning>
+    <html
+      lang={lang}
+      className={`h-full antialiased ${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>

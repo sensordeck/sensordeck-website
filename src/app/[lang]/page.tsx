@@ -11,17 +11,17 @@ const unifiedSectionContainerClassName =
   "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 xl:px-12";
 
 const unifiedSectionEyebrowClassName =
-  "font-mono text-xs font-semibold uppercase tracking-[0.12em] text-atlas-blue md:text-sm lg:text-base";
+  "font-mono font-semibold uppercase text-[var(--text-eyebrow)] tracking-[var(--tracking-eyebrow)] md:text-[var(--text-eyebrow-md)] lg:text-[var(--text-eyebrow-lg)] text-atlas-blue";
 
 const unifiedSectionTitleClassName =
-  "mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl xl:text-[3.35rem]";
+  "mt-4 text-[var(--text-section-title-lg)] font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-[var(--text-section-title-lg-md)] lg:text-[var(--text-section-title-lg-lg)]";
 
 const unifiedSectionDescriptionClassName =
-  "mt-4 text-base leading-7 text-ink/80 md:mt-5 md:text-lg md:leading-8 lg:text-xl";
+  "mt-4 text-[var(--text-body)] leading-7 text-ink/80 md:mt-5 md:text-[var(--text-body-lg)] md:leading-8 lg:text-[var(--text-body-lg-md)]";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="heading-eyebrow font-mono text-xs font-semibold uppercase tracking-[0.14em] text-atlas-blue md:text-sm">
+    <p className="heading-eyebrow font-mono font-semibold uppercase text-[var(--text-eyebrow)] tracking-[var(--tracking-eyebrow)] md:text-[var(--text-eyebrow-md)] text-atlas-blue">
       {children}
     </p>
   );
@@ -42,11 +42,11 @@ function SectionHeading({
     <div className={`max-w-3xl ${className}`}>
       <Eyebrow>{eyebrow}</Eyebrow>
 
-      <h2 className="heading-title mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-4xl lg:text-5xl">
+      <h2 className="heading-title mt-4 text-[var(--text-section-title-lg)] font-semibold leading-tight tracking-tight text-ink md:mt-6 md:text-[var(--text-section-title-lg-md)] lg:text-[var(--text-section-title-lg-lg)]">
         {title}
       </h2>
 
-      <p className="heading-description mt-4 text-base leading-7 text-muted md:mt-5 md:text-lg md:leading-8 lg:text-xl">
+      <p className="heading-description mt-4 text-[var(--text-body)] leading-7 text-muted md:mt-5 md:text-[var(--text-body-lg)] md:leading-8 lg:text-[var(--text-body-lg-md)]">
         {description}
       </p>
     </div>
