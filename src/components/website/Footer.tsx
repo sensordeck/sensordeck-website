@@ -33,7 +33,7 @@ const footerCopy: Record<
         links: [
           { label: "产品", href: "/products" },
           { label: "平台", href: "/platform" },
-          { label: "技术", href: "/technology" },
+          { label: "部署", href: "/technology" },
         ],
       },
       {
