@@ -110,12 +110,13 @@ const homeContent = {
         "机器人负责理解世界，Atlas 负责理解机器人运行时。"
     },
 
-    points: [
+      points: [
       { label: "运行时边界", description: "将传感器行为连接到电源、总线、Linux/SBC 运行时、ROS 输入和应用上下文。" },
       { label: "边界明确的证据", description: "将长时间运行时数据集转换为标准化的证据窗口，供团队审查和交换。" },
       { label: "可复用知识", description: "保存人工撰写的调查结果和经验教训供未来参考。" },
     ],
   },
+
   theProblem: {
     lead: "调查结束后，大部分工程经验再次散落。下一次发生相似事件，团队依然从零开始。",
     cta: "看看 Atlas 如何让每一次事故排查从历史开始",
