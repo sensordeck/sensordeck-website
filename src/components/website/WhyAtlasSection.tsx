@@ -21,7 +21,7 @@ const reasons: Reason[] = [
     icon: Clock3,
     titleZh: "缩短\n调查时间",
     titleEn: "Reduce\nInvestigation Time",
-    descriptionZh: "借助边界明确的证据与历史 RGA 召回，将调查时间从数天压缩到数小时。",
+    descriptionZh: "借助边界明确的证据与历史案例召回，将调查时间从数天压缩到数小时。",
     descriptionEn: "From days to hours with bounded evidence and historical RGA recall.",
   },
   {
@@ -42,7 +42,7 @@ const reasons: Reason[] = [
     icon: Network,
     titleZh: "改善 OEM\n与传感器厂协作",
     titleEn: "Cross-OEM\nLearning",
-    descriptionZh: "通过统一证据与 EGP，减少跨团队反复确认、责任争议与沟通损耗。",
+    descriptionZh: "通过统一证据与协同调查包 EGP，减少跨团队反复确认、责任争议与沟通损耗。",
     descriptionEn: "Learn from industry experience while protecting privacy.",
   },
   {
