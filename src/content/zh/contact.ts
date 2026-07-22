@@ -119,15 +119,15 @@ export const contactContent = {
     offices: [
       {
         city: "中国",
-        name: "SensorDeck 中国",
+        name: "SensorDeck 中国 - 惠州深时传感科技有限公司",
         email: "sales.china@sensordeck.tech",
         address: "广东惠州",
       },
       {
         city: "美国",
-        name: "SensorDeck USA",
+        name: "SensorDeck Inc",
         email: "contact@sensordeck.tech",
-        address: "California, United States",
+        address: "555 Pierce St, Ste 842 Albany CA 94706, United States",
       },
     ],
   },
