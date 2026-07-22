@@ -108,10 +108,10 @@ const homeContent = {
       "组织运行时记忆"
     ],
 
-    summary:
-      "机器人负责理解世界，Atlas 负责理解机器人运行时。"
-  },
-}
+   summary:
+        "机器人负责理解世界，Atlas 负责理解机器人运行时。"
+    },
+
     points: [
       { label: "运行时边界", description: "将传感器行为连接到电源、总线、Linux/SBC 运行时、ROS 输入和应用上下文。" },
       { label: "边界明确的证据", description: "将长时间运行时数据集转换为标准化的证据窗口，供团队审查和交换。" },
