@@ -31,7 +31,7 @@ const headerCopy: Record<
       { label: "产品", href: "/products" },
       { label: "平台", href: "/platform" },
       { label: "部署", href: "/technology" },
-      { label: "资料库", href: "/library" },
+      { label: "技术资源", href: "/library" },
       { label: "公司", href: "/company" },
       { label: "联系", href: "/contact" },
     ],
