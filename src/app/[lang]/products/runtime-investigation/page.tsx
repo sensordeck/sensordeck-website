@@ -109,7 +109,7 @@ export default async function RuntimeInvestigationPage({
 
         {/* Hero */}
         <Section className="bg-white">
-          <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
+          <div className="mx-auto max-w-5xl px-1">
             <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">{ui.heroEyebrow}
 
             </p>
