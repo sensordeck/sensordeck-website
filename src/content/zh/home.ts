@@ -37,60 +37,81 @@ const homeContent = {
     finalCta: "了解 Atlas 如何结合您的机器人组织、运行时边界、调查工作流程和证据所有权模式。",
   },
   categoryDefinition: {
-    lead: "Atlas 将持续运行的证据、调查、知识沉淀和组织记忆组织为统一的平台，让运行时问题不再只是一次性的事故处理，而成为企业可持续积累的工程能力。",
-    runtimeBoundary: {
-      title: "Atlas 守护的运行时边界",
-      steps: [
-        "真实世界",
-        "Sensor",
-        "Power / Bus / Timing",
-        "Linux / Driver / Buffer",
-        "ROS / Runtime",
-        "Application Input",
-        "System Decision"
-      ],
-      note: "Atlas 持续观察、记录并组织这一关键运行时边界。这里，也是机器人运行时问题最频繁发生，却长期缺乏统一治理的一层。"
+  lead:
+    "机器人行业已经拥有优秀的传感器、成熟的计算平台、完善的 ROS 中间件，以及不断发展的 AI 与应用软件。但在 Sensor 输出与 System Decision 之间，长期缺少一层能够持续观察、组织和治理运行时行为的基础设施。这正是机器人运行时事故最容易发生，却始终无人负责的一层。",
+
+  runtimeBoundary: {
+    title: "机器人真正缺失的是运行时治理层",
+    steps: [
+      "Real World",
+      "Sensor",
+      "Connectivity & Power",
+      "Linux Runtime",
+      "ROS Runtime",
+      "Application",
+      "System Decision"
+    ],
+    note:
+      "机器人进入真实世界后，传感器数据需要经过供电、通信、Linux、驱动、缓冲区、调度器以及 ROS Runtime 等多个运行时环节，最终才能成为系统决策输入。今天行业拥有每一个独立组件，却缺少持续治理这一整条运行时链路的基础设施。"
+  },
+
+  whyImportant: {
+    title: "为什么这一层如此重要？",
+
+    traditional: {
+      title: "行业长期投入于：",
+      items: [
+        "更好的 Sensor",
+        "更强的 AI",
+        "更复杂的算法",
+        "更多的软件功能"
+      ]
     },
-    whyImportant: {
-      title: "为什么这一层如此重要？",
-      traditional: {
-        title: "传统机器人系统更关注：",
-        items: ["感知能力", "控制能力", "AI 推理能力", "软件功能"]
-      },
-      runtime: {
-        title: "而真正导致大量运行时事故的，往往发生在：",
-        items: [
-          "电源波动",
-          "USB / Ethernet / CAN 通信",
-          "Linux Runtime",
-          "Driver",
-          "Buffer",
-          "Scheduler",
-          "ROS Topic",
-          "Runtime Timing"
-        ],
-        note: "这些运行时行为决定了系统最终接收到的数据是否完整、连续且可信。Atlas 将这些运行时信号组织成统一证据，并持续沉淀为可复用的组织知识。"
-      }
-    },
-    whatAtlasProvides: {
-      title: "Atlas 提供什么？",
-      notItems: [
-        "Atlas 不是新的 SDK。",
-        "不是新的 Driver。",
-        "不是新的 ROS Framework。"
+
+    runtime: {
+      title: "但大量运行时问题却发生在：",
+      items: [
+        "Power",
+        "USB / Ethernet / CAN",
+        "Linux Runtime",
+        "Driver",
+        "Buffer",
+        "Scheduler",
+        "ROS Runtime",
+        "Timing"
       ],
-      isItem: "Atlas 建立的是机器人行业此前不存在的一层：Runtime Intelligence Infrastructure™",
-      capabilities: [
-        "7×24 小时运行时观察",
-        "Runtime Dataset 持续保留",
-        "Evidence Pack 自动生成",
-        "Historical RGA 持续积累",
-        "OEM 与 Sensor 协同调查",
-        "Assist Vault 组织记忆",
-        "Future REF 持续复用"
-      ],
-      summary: "机器人负责感知世界。Atlas 负责理解运行时。"
-    },
+
+      note:
+        "这些环节不会改变算法，却决定系统最终收到的数据是否完整、连续、可信。大量机器人事故并非来自 AI，而是来自这一层运行时环境。"
+    }
+  },
+
+  whatAtlasProvides: {
+    title: "Atlas 填补这一层",
+
+    notItems: [
+      "不是新的 Sensor。",
+      "不是新的 Driver。",
+      "不是新的 ROS Framework。"
+    ],
+
+    isItem:
+      "Atlas 建立机器人行业此前不存在的一层：Runtime Intelligence Infrastructure™",
+
+    capabilities: [
+      "持续运行时观察",
+      "运行时证据保留",
+      "Evidence Pack",
+      "Runtime Investigation",
+      "Historical RGA",
+      "Assist Vault",
+      "组织运行时记忆"
+    ],
+
+    summary:
+      "机器人负责理解世界，Atlas 负责理解机器人运行时。"
+  },
+}
     points: [
       { label: "运行时边界", description: "将传感器行为连接到电源、总线、Linux/SBC 运行时、ROS 输入和应用上下文。" },
       { label: "边界明确的证据", description: "将长时间运行时数据集转换为标准化的证据窗口，供团队审查和交换。" },
