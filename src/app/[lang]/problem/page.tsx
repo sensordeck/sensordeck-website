@@ -51,13 +51,12 @@ export default async function ProblemPage({
             </p>
 
             <Button
-  className="mt-8"
-  href={localizeHref(lang, "/products")}
-  variant="secondary"
->
-  查看 Atlas 如何解决
-</Button>
-            
+              className="mt-8"
+              href={localizeHref(lang, "/products")}
+              variant="secondary"
+            >
+              查看 Atlas 如何解决
+            </Button>
           </div>
         </div>
       </Section>
