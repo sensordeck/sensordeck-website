@@ -4,7 +4,7 @@ export const technologyContent = {
   hero: {
     title: "Atlas Deployment",
     subtitle:
-      "Atlas is deployed within customer-controlled runtime environments, establishing governance through existing robotic systems, runtime data sources, and investigation workflows. No replacement of the core robotics architecture is required, and runtime data, retention policies, and evidence exports always remain under customer control.",
+      "Atlas is deployed within customer-controlled runtime environments, integrating with existing robot platforms, runtime data sources, and investigation workflows. It preserves customer ownership of runtime data, retention policies, and evidence throughout the investigation lifecycle.",
   },
 
   sections: [
@@ -12,7 +12,7 @@ export const technologyContent = {
       id: "deployment-principles",
       title: "Deployment Principles",
       description:
-        "Atlas enters the customer's existing engineering system as runtime-governance infrastructure rather than replacing robot control systems, business applications, or existing logging tools.",
+        "Atlas integrates with the customer's existing robotics environment as runtime-governance infrastructure without replacing robot control systems, enterprise applications, or existing observability tools.",
       content: `Customer Runtime Environment
   ↓
 Atlas Agent™
@@ -25,12 +25,12 @@ Evidence Pack™
   ↓
 Investigation and Organizational Memory`,
       explanation:
-        "Atlas can be deployed on robot host controllers, edge-computing nodes, or customer investigation servers, and connects to existing runtime data sources through Runtime Surface Adapters. Customers own the raw data, determine the scope of data retention, and authorize the generation and export of investigation evidence.",
+        "Atlas can be deployed on robot host controllers, edge-computing nodes, or customer investigation servers, and connects to existing runtime data sources through Runtime Surface Adapters. Customers own the raw data, define retention scope and duration, and authorize the generation and export of investigation evidence.",
       comparedTo: [
         "Does not replace the existing core robotics architecture",
-        "Does not require changes to robot business logic",
+        "Does not require changes to robot application logic",
         "Does not require all raw data to be uploaded to a public cloud",
-        "Does not change the customer's existing engineering responsibilities or approval workflows",
+        "Does not change existing engineering responsibilities or approval workflows",
         "Does not automatically confirm root cause or assign responsibility",
       ],
       href: "/technology/deployment-principles",
@@ -40,7 +40,7 @@ Investigation and Organizational Memory`,
       id: "oem-deployment",
       title: "Robot OEM Deployment",
       description:
-        "Deployment for robot OEMs establishes complete capabilities around runtime-data retention, Evidence Pack™ generation, investigation collaboration, and organizational memory.",
+        "Deployment for robot OEMs provides runtime-data retention, Evidence Pack™ generation, investigation workflows, and reusable organizational knowledge.",
       content: `Robot / Device Fleet
   ↓
 Atlas Agent™
@@ -57,17 +57,17 @@ Historical RGA™
   ↓
 Assist Vault™`,
       explanation:
-        "Atlas Agent™ continuously observes authorized runtime signals within the OEM-controlled environment. When a runtime event occurs, Atlas extracts relevant data from before and after the event from Runtime Dataset™, creates a time-bounded, reviewable Evidence Pack™, and supports investigation collaboration across Tier 1, Tier 2 / Tier 3, OEM engineering, and sensor FAE teams.",
+        "Atlas Agent™ continuously observes authorized runtime signals within the OEM-controlled environment. When a runtime event occurs, Atlas retrieves relevant data from before, during, and after the event from Runtime Dataset™, creates a bounded, reviewable Evidence Pack™, and supports investigation across Tier 1, Tier 2 / Tier 3, OEM engineering, and sensor FAE teams.",
       surfaces: [
         "Robot Host Controller",
         "Edge-Computing Node",
         "Linux Runtime",
-        "ROS / ROS2",
+        "ROS / ROS 2",
         "Device and Driver State",
         "USB / Ethernet / CAN",
         "Raw Sensor Output",
         "Customer Investigation Server",
-        "Existing Logging Systems",
+        "Existing Observability Systems",
       ],
       href: "/technology/oem-deployment",
     },
@@ -76,35 +76,35 @@ Assist Vault™`,
       id: "oem-deployment-scope",
       title: "OEM Deployment Scope",
       description:
-        "OEM deployment scope is determined jointly by the robotics platform, sensor configuration, runtime environment, and investigation objectives.",
+        "OEM deployment scope is defined jointly based on the robot platform, sensor configuration, runtime environment, and investigation objectives.",
       content: null,
       explanation:
-        "Atlas does not collect all data in the robotics environment by default. Before deployment, both parties first confirm the runtime boundary, data sources, retention period, event-trigger conditions, investigation roles, and evidence-export method, then establish an explicit deployment scope.",
+        "Atlas does not collect all data in the robotics environment by default. Before deployment, both parties confirm the runtime boundary, authorized data sources, retention period, event-trigger conditions, investigation roles, and evidence-export method, then document an explicit deployment scope.",
       concepts: [
         {
           term: "Runtime Boundary",
           definition:
-            "Confirm the sensors, interfaces, Linux Runtime, device states, and ROS Topics that Atlas needs to observe.",
+            "Define the sensors, interfaces, Linux runtime, device states, and ROS topics that Atlas will observe.",
         },
         {
           term: "Data Sources",
           definition:
-            "Confirm existing logs, device interfaces, ROS Topics, driver states, and other accessible data sources.",
+            "Confirm the existing logs, device interfaces, ROS topics, driver states, and other accessible runtime sources.",
         },
         {
           term: "Retention Policy",
           definition:
-            "The customer determines the data-retention scope, period, capacity, and deletion rules.",
+            "The customer defines data-retention scope, duration, capacity, and deletion rules.",
         },
         {
           term: "Event Rules",
           definition:
-            "Define which runtime anomalies should be flagged, have their data locked, and enter the investigation workflow.",
+            "Define which runtime anomalies should be flagged, preserved, and routed into the investigation workflow.",
         },
         {
           term: "Evidence Export",
           definition:
-            "Determine the generation scope, authorized recipients, and export method for Evidence Packs™.",
+            "Define the generation scope, authorized recipients, and export method for Evidence Packs™.",
         },
         {
           term: "Investigation Roles",
@@ -119,7 +119,7 @@ Assist Vault™`,
       id: "sensor-manufacturer-deployment",
       title: "Sensor Manufacturer Deployment",
       description:
-        "Deployment for sensor manufacturers establishes governance around product runtime performance, customer investigation collaboration, and reuse of historical cases.",
+        "Deployment for sensor manufacturers establishes governance around product runtime performance, customer investigations, and reuse of historical cases.",
       content: `Sensor Products and Runtime Scenarios
   ↓
 Runtime Profiles™
@@ -134,7 +134,7 @@ Sensor Assist Vault™
   ↓
 Runtime Knowledge Base™`,
       explanation:
-        "Sensor manufacturers can deploy Atlas in their own laboratories, technical-support environments, or customer-investigation environments. Through Runtime Profiles™, Sensor Engagement Packs™, and historical investigation assets, sensor teams can understand runtime conditions in the field more quickly and collaborate with OEMs within explicit data boundaries.",
+        "Sensor manufacturers can deploy Atlas in laboratories, technical-support environments, or customer-investigation environments. Through Runtime Profiles™, Sensor Engagement Packs™, and historical investigation assets, sensor teams can understand customer runtime conditions more quickly and collaborate with OEMs within explicit data and responsibility boundaries.",
       surfaces: [
         "Sensor Laboratory",
         "Technical-Support Team",
@@ -153,7 +153,7 @@ Runtime Knowledge Base™`,
       id: "sensor-engagement-boundary",
       title: "OEM–Sensor Manufacturer Collaboration Boundary",
       description:
-        "Sensor Engagement Pack™ transfers investigation-relevant runtime information with an explicit scope between an OEM and a sensor manufacturer.",
+        "Sensor Engagement Pack™ transfers only the runtime information required for a defined investigation between an OEM and a sensor manufacturer.",
       content: `OEM Investigation Environment
   ↓
 Evidence Pack™
@@ -162,17 +162,17 @@ Sensor Engagement Pack™
   ↓
 Sensor FAE Investigation
   ↓
-IR + Lessons Learned
+Investigation Result + Lessons Learned
   ↓
 OEM Closure and Organizational Memory`,
       explanation:
-        "The collaboration package contains only information relevant to the sensor-investigation boundary and does not require the OEM to provide all robot runtime data. The sensor manufacturer can investigate from explicit event context and evidence while the OEM's product architecture, customer information, and operational data remain protected.",
+        "The collaboration package contains only information relevant to the sensor-investigation boundary and does not require the OEM to provide all robot runtime data. The sensor manufacturer receives explicit event context and evidence, while the OEM's product architecture, customer information, and operational data remain protected.",
       comparedTo: [
         "Transfer only information relevant to the current sensor investigation",
         "Preserve the event timeline and runtime-environment context",
         "Reduce unnecessary exposure of OEM operational information",
-        "Enable sensor FAEs to produce investigation results and lessons learned",
-        "Allow both parties to retain their respective data and responsibility boundaries",
+        "Enable sensor FAEs to produce investigation results and Lessons Learned",
+        "Allow both parties to preserve their respective data and responsibility boundaries",
       ],
       href: "/technology/sensor-engagement-boundary",
     },
@@ -181,7 +181,7 @@ OEM Closure and Organizational Memory`,
       id: "pilot-to-production",
       title: "From Pilot to Production",
       description:
-        "Atlas follows a phased deployment path, starting validation with one explicit runtime scenario and gradually expanding into a formal production environment.",
+        "Atlas follows a phased deployment path, beginning with one defined runtime scenario and expanding into production after the deployment chain has been validated.",
       content: `Scenario Confirmation
   ↓
 Runtime-Boundary Review
@@ -200,7 +200,7 @@ Pilot
   ↓
 Production`,
       explanation:
-        "Deployment does not begin across all devices, all data, and the entire organization. The first Pilot should focus on one explicit robotics platform, sensor boundary, or representative investigation scenario to validate data integration, event slicing, Evidence Pack™ generation, and the investigation-collaboration workflow. Once validated, deployment can gradually expand to more devices, scenarios, and teams.",
+        "Deployment does not begin across every device, data source, and team. The initial pilot should focus on one robot platform, sensor boundary, or representative investigation scenario to validate data integration, event slicing, Evidence Pack™ generation, and the investigation workflow. Once validated, deployment can expand gradually across additional devices, scenarios, and teams.",
       href: "/technology/pilot-to-production",
     },
 
@@ -208,7 +208,7 @@ Production`,
       id: "canary-validation",
       title: "Canary Validation",
       description:
-        "Before a Pilot enters formal operation, validate the complete deployment chain through a controlled, representative event.",
+        "Before a pilot enters formal operation, the complete deployment chain is validated through a controlled, representative runtime event.",
       content: `Controlled Runtime Event
   ↓
 Atlas Agent™ Observation
@@ -223,7 +223,7 @@ Investigation-Workflow Validation
   ↓
 Historical-Asset Preservation and Future Recall`,
       explanation:
-        "Canary validation confirms that Atlas Agent™, data sources, time boundaries, retention policies, Evidence Pack™, and the investigation workflow operate together. The goal is not to simulate every possible robot incident, but to prove that the complete chain within the deployment scope is observable, generative, reviewable, and reusable.",
+        "Canary validation confirms that Atlas Agent™, data sources, time boundaries, retention policies, Evidence Pack™, and the investigation workflow operate together. The objective is not to simulate every possible robot incident, but to prove that the deployment chain is observable, reviewable, and reusable within the defined scope.",
       concepts: [
         {
           term: "Data-Ingestion Validation",
@@ -233,17 +233,17 @@ Historical-Asset Preservation and Future Recall`,
         {
           term: "Event-Boundary Validation",
           definition:
-            "Confirm that the required data from before and after an event is retained and sliced correctly.",
+            "Confirm that the required data from before, during, and after an event is retained and sliced correctly.",
         },
         {
           term: "Evidence-Generation Validation",
           definition:
-            "Confirm that Evidence Pack™ can be generated within the defined scope and reviewed by the team.",
+            "Confirm that Evidence Pack™ can be generated within the defined scope and reviewed by the appropriate teams.",
         },
         {
           term: "Investigation-Workflow Validation",
           definition:
-            "Confirm that events enter the correct investigation roles and collaboration path.",
+            "Confirm that events are routed to the correct investigation roles and collaboration path.",
         },
         {
           term: "Historical-Reuse Validation",
@@ -258,12 +258,12 @@ Historical-Asset Preservation and Future Recall`,
       id: "production-readiness",
       title: "Production Readiness Criteria",
       description:
-        "Atlas enters formal production operation only after the deployment boundary, runtime policies, investigation workflow, and organizational responsibilities are all explicit.",
+        "Atlas is ready for production once the deployment boundary, runtime policies, investigation workflow, and organizational responsibilities are explicit and validated.",
       content: null,
       explanation:
-        "Production is not simply an increase in the number of deployed Agents. Before launch, organizational conditions including data retention, access authorization, event escalation, evidence export, investigation roles, operations, maintenance, and version management must be confirmed.",
+        "Production readiness is not determined only by the number of deployed Atlas Agents. Before launch, the customer must confirm data retention, access control, event escalation, evidence export, investigation roles, operations, maintenance, and version-management responsibilities.",
       comparedTo: [
-        "Deployment scope and data sources have been confirmed",
+        "Deployment scope and authorized data sources have been confirmed",
         "Retention periods and capacity policies have been approved",
         "Event-trigger and escalation workflows have been validated",
         "Evidence Pack™ review and export permissions are explicit",
@@ -272,7 +272,7 @@ Historical-Asset Preservation and Future Recall`,
         "Pilot and canary-validation results have been reviewed",
       ],
       warning:
-        "Atlas Production deployment must preserve customer data ownership, human root-cause judgment, and organizational authorization boundaries. Expanding the deployment does not change these foundational principles.",
+        "Production deployment must preserve customer data ownership, human root-cause judgment, and organizational authorization boundaries. Expanding Atlas does not change these foundational principles.",
       href: "/technology/production-readiness",
     },
 
@@ -280,10 +280,10 @@ Historical-Asset Preservation and Future Recall`,
       id: "deployment-documentation",
       title: "Complete Deployment Documentation",
       description:
-        "View the complete instructions for robot OEM deployment, sensor manufacturer deployment, and the path from Pilot to Production.",
+        "Review detailed guidance for robot OEM deployment, sensor manufacturer deployment, validation, and the path from pilot to production.",
       content: null,
       explanation:
-        "The deployment documentation provides more detailed descriptions of roles, deployment workflows, validation methods, and production operations.",
+        "The deployment documentation provides detailed descriptions of roles, deployment workflows, validation methods, and production operations.",
       link: {
         text: "View the Complete Deployment Guide →",
         href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
@@ -293,9 +293,9 @@ Historical-Asset Preservation and Future Recall`,
   ],
 
   cta: {
-    title: "Start with Your Runtime Environment",
+    title: "Start With Your Runtime Environment",
     description:
-      "Tell us about your robotics platform, primary sensors, deployment environment, and current investigation workflow. Together, we will confirm the appropriate Atlas deployment boundary and Pilot scope.",
+      "Tell us about your robot platform, primary sensors, deployment environment, and current investigation workflow. We will help define the appropriate Atlas deployment boundary and pilot scope for your environment.",
     primaryButton: {
       text: "Read the Deployment Guide",
       href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
