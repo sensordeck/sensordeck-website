@@ -213,13 +213,14 @@ export const libraryContent = {
         href: "/demo/overview",
         disabled: false,
       },
-      {
-        title: "Atlas 演示界面",
-        description:
-          "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板。",
-        href: "/demo",
-        disabled: false,
-      },
+     {
+  title: "Atlas 演示界面",
+  description:
+    "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板。",
+  type: "交互式",
+  href: "/demo",
+  disabled: false,
+},
       {
         title: "运行时调查演练",
         description:
