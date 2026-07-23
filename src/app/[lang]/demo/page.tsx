@@ -72,8 +72,8 @@ export default async function DemoIndexPage({
         </div>
       </Section>
 
-      {/* Demo scenario */}
-      <Section id="demo-context" className="bg-white">
+    {/* Demo scenario */}
+<Section id="demo-scenario" className="bg-white">
         <div className="border border-border bg-white p-6 md:p-8">
           <Eyebrow>{content.index.scenario.eyebrow}</Eyebrow>
 
