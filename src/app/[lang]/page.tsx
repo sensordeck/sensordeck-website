@@ -136,24 +136,24 @@ export default async function HomePage({
 
         {/* Hero Content */}
         <div className="absolute inset-0 z-20 flex items-start pt-8 sm:pt-20 lg:items-center lg:pt-0">
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-[42rem]">
-           <h1
-  className="
-    heading-title
-    whitespace-pre-line
-    font-sans
-    text-[2.9rem]
-    font-semibold
-    leading-tight
-    tracking-tight
-    text-ink
-    sm:text-display-md
-    lg:text-display-lg
-  "
->
-  {homeContent.heroTitle}
-</h1>
+  <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="max-w-[42rem]">
+      <h1
+        className="
+          heading-title
+          whitespace-pre-line
+          font-sans
+          !text-[2.5rem]
+          font-semibold
+          !leading-[1.08]
+          tracking-tight
+          text-ink
+          sm:!text-display-md
+          lg:!text-display-lg
+        "
+      >
+        {homeContent.heroTitle}
+      </h1>
 
               {/* Desktop Subtitle */}
               <p
