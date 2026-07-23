@@ -1,7 +1,3 @@
-/**
- * Library Page Content
- */
-
 import type { LibraryContent } from "@/lib/content-types";
 
 export const libraryContent = {
@@ -13,47 +9,47 @@ export const libraryContent = {
     resourceCards: [
       {
         id: "01",
-        title: "Demos & Examples",
+        title: "Product Demonstrations",
         description:
-          "Learn how Atlas works through videos, interactive UI, and sample data. Explore Tier 1 support, the Investigation Workspace, the Sensor FAE workspace, and the CTO governance view.",
+          "See Atlas in action through product videos, interactive investigation workflows, and representative runtime scenarios for robot OEM and sensor-manufacturer teams.",
         href: "/library/demo",
-        items: "Public Demos",
+        items: "Demos",
       },
       {
         id: "02",
-        title: "Frequently Asked Questions",
+        title: "Technical Overview",
         description:
-          "Learn how Atlas relates to logging systems, fleet management, ticketing platforms, and existing robotics infrastructure, as well as its approach to data ownership, deployment, and the boundaries of human-led investigation.",
+          "Understand the Atlas product architecture, runtime governance model, Evidence Packs™, Historical RGAs™, and the investigation workflows that connect OEM and sensor teams.",
         href: "/library/faq",
-        items: "Core Questions",
+        items: "Technical Reference",
       },
       {
         id: "03",
-        title: "Enterprise Delivery & Downloads",
+        title: "Enterprise Deployment Resources",
         description:
-          "Learn about the typical runtime components, investigation components, configuration files, project documentation, training materials, and customer deliverables included in an Atlas enterprise deployment.",
+          "Review deployment components, integration requirements, configuration assets, project documentation, training materials, and typical enterprise deliverables.",
         href:
           "https://sensordeck.github.io/atlas-docs-cn/reference/downloads",
-        items: "Delivery Guide",
+        items: "Deployment",
       },
       {
         id: "04",
         title: "Release Notes",
         description:
-          "Review major Atlas Runtime Governance™ releases, core capabilities, compatibility, deployment modes, known limitations, and important product changes.",
+          "Review major Atlas releases, core capabilities, compatibility information, deployment modes, known limitations, and important product changes.",
         href:
           "https://sensordeck.github.io/atlas-docs-cn/reference/release-notes",
-        items: "Version History",
+        items: "Product Updates",
       },
     ],
 
-    quickAccessEyebrow: "Complete Documentation",
-    quickAccessTitle: "Atlas Chinese Technical Documentation",
+    quickAccessEyebrow: "Complete Technical Documentation",
+    quickAccessTitle: "Atlas Documentation Center",
 
     whitePapersLabel: "Frequently Asked Questions",
-    documentationLabel: "Delivery & Downloads",
+    documentationLabel: "Deployment Resources",
     demoLabel: "Demo",
-    demoAndVideoLabel: "Demos & Examples",
+    demoAndVideoLabel: "Product Demonstrations",
     faqLabel: "Release Notes",
 
     comingSoon: "Coming Soon",
@@ -61,72 +57,72 @@ export const libraryContent = {
     note: "Note",
 
     demoNote:
-      "All public demo data is illustrative. Evidence Packs, Historical RGAs, and investigation assets from actual deployments contain customer-specific runtime context and are not shown in public demos.",
+      "All public demo data is illustrative. Evidence Packs™, Historical RGAs™, and investigation assets from customer deployments contain deployment-specific context and are not included in public demonstrations.",
 
     demoContactNote:
-      "Contact us if you need access to the complete Atlas Demo UI or would like to arrange a tailored demonstration based on your robotics platform and runtime scenarios.",
+      "Contact SensorDeck to arrange a tailored demonstration based on your robot platform, sensor configuration, deployment environment, and investigation workflow.",
 
-    documentationTopics: "Documentation Topics",
+    documentationTopics: "Documentation Coverage",
 
     documentationHosting:
-      "The complete Atlas Chinese technical documentation is continuously maintained in a separate documentation center.",
+      "The complete Atlas technical documentation is maintained in a dedicated documentation center. The current documentation is available in Chinese, with English documentation under development.",
 
-    documentationFor: "Documentation For",
+    documentationFor: "Designed For",
 
     documentationReferenceTitle:
-      "A complete reference for engineering, investigation, deployment, and management teams",
+      "Technical reference for engineering, investigation, deployment, and management teams",
 
     documentationUseCases: [
-      "Foundational Theory",
-      "Product System",
-      "Platform Architecture",
-      "OEM Deployment Guide",
-      "Sensor Manufacturer Deployment Guide",
+      "Foundational Concepts",
+      "Product Architecture",
+      "Runtime Investigation™",
+      "Runtime Sensor Governance™",
+      "OEM Deployment",
+      "Sensor-Manufacturer Deployment",
       "Pilot to Production",
-      "Frequently Asked Questions",
-      "Enterprise Delivery & Release Notes",
+      "Enterprise Delivery and Release Notes",
     ],
 
     moreInfoEyebrow: "Need More Information?",
-    moreResourcesTitle: "Learn More About Atlas",
+    moreResourcesTitle: "Discuss Your Runtime Environment",
     moreResourcesDescription:
-      "Review the complete Chinese technical documentation, or contact us to discuss your runtime environment, deployment scope, and investigation workflow.",
+      "Review the complete technical documentation or speak with SensorDeck about your robot platform, deployment scope, runtime boundaries, and investigation workflow.",
 
     readWhitePapers: "View Frequently Asked Questions",
     viewDocumentation: "Open Technical Documentation",
     contactUs: "Contact Us",
 
     whitePaperAvailability:
-      "Atlas technical materials, project documentation, and training materials are provided according to the deployment scope and commercial agreement.",
+      "Atlas technical materials, project documentation, training content, and deployment assets are provided according to the agreed project scope and commercial terms.",
 
-    backToLibrary: "Back to Library",
-    previousWhitePapers: "← Reference Materials",
-    previousDocumentation: "← Enterprise Delivery",
-    previousDemo: "← Demo",
-    nextDocumentation: "Delivery Guide →",
-    nextDemo: "Demo →",
+    backToLibrary: "Back to Resource Center",
+    previousWhitePapers: "← Technical Reference",
+    previousDocumentation: "← Deployment Resources",
+    previousDemo: "← Product Demonstrations",
+    nextDocumentation: "Deployment Resources →",
+    nextDemo: "Product Demonstrations →",
     nextFaq: "Frequently Asked Questions →",
   },
 
   hero: {
-    eyebrow: "SensorDeck Library",
-    title: "Atlas Reference Materials",
+    eyebrow: "SensorDeck Resource Center",
+    title: "Atlas Technical Resources",
     subtitle:
-      "Explore frequently asked questions, enterprise delivery information, public demos, and release notes. Complete technical content is continuously maintained in the Atlas Chinese documentation center.",
+      "Explore product demonstrations, technical documentation, deployment guidance, engineering references, and product updates for Atlas Runtime Governance™.",
   },
 
   whitePapers: {
-    eyebrow: "01 / Technical Materials",
-    title: "Atlas Technical Materials",
+    eyebrow: "01 / Technical Overview",
+    title: "Understand the Atlas System",
     description:
-      "Learn about Atlas foundational theory, platform architecture, runtime governance approach, and enterprise deployment path.",
+      "Explore the principles, architecture, products, and deployment model behind Atlas Runtime Governance™.",
 
     papers: [
       {
         id: "REF-01",
-        title: "Atlas Runtime Governance",
+        title: "Atlas Runtime Governance™",
         description:
-          "Learn how Atlas continuously observes runtime behavior, organizes evidence, preserves history, and turns every investigation into a reusable organizational asset.",
+          "Learn how Atlas observes runtime behavior, preserves evidence, supports structured investigations, and converts completed investigations into reusable organizational knowledge.",
         size: "Online Documentation",
         format: "HTML",
       },
@@ -134,7 +130,7 @@ export const libraryContent = {
         id: "REF-02",
         title: "Atlas Runtime Sensor Governance™",
         description:
-          "Runtime governance for sensor manufacturers, including Runtime Profiles, Historical RGA, and OEM investigation collaboration.",
+          "Explore runtime governance for sensor manufacturers, including Runtime Profiles™, Sensor FAE investigations, Historical Sensor RGAs™, and OEM collaboration.",
         size: "Online Documentation",
         format: "HTML",
       },
@@ -142,7 +138,7 @@ export const libraryContent = {
         id: "REF-03",
         title: "Atlas Runtime Investigation™",
         description:
-          "Runtime evidence, investigation collaboration, historical recall, and the Assist Vault system for robot OEMs.",
+          "Explore runtime evidence, investigation workflows, Historical RGA™ recall, Sensor Engagement Packs™, and Assist Vault™ for robot OEMs.",
         size: "Online Documentation",
         format: "HTML",
       },
@@ -150,23 +146,23 @@ export const libraryContent = {
         id: "REF-04",
         title: "Platform Architecture",
         description:
-          "Learn how Atlas Agent, Runtime Surface, Runtime Dataset, Evidence Pack, and investigation assets relate to one another.",
+          "Understand how Atlas Agent™, Runtime Surface, Runtime Dataset™, Evidence Pack™, investigation workspaces, and historical assets work together.",
         size: "Online Documentation",
         format: "HTML",
       },
       {
         id: "REF-05",
-        title: "Deployment Guide",
+        title: "Deployment Framework",
         description:
-          "Learn about OEM deployment, sensor manufacturer deployment, and the phased rollout path from Pilot to Production.",
+          "Review deployment approaches for robot OEMs and sensor manufacturers, including the phased path from initial validation to production expansion.",
         size: "Online Documentation",
         format: "HTML",
       },
       {
         id: "REF-06",
-        title: "Reference Materials",
+        title: "Reference Resources",
         description:
-          "Explore demo interfaces, frequently asked questions, enterprise delivery and download information, and Atlas release notes.",
+          "Access demonstrations, frequently asked questions, enterprise deployment information, and Atlas release notes.",
         size: "Online Documentation",
         format: "HTML",
       },
@@ -175,49 +171,49 @@ export const libraryContent = {
 
   documentation: {
     eyebrow: "02 / Documentation",
-    title: "Atlas Chinese Technical Documentation",
+    title: "Atlas Documentation Center",
     description:
-      "The complete documentation covers foundational theory, the product system, platform architecture, deployment guides, and reference materials.",
+      "The documentation center covers foundational concepts, product architecture, deployment guidance, operational workflows, and technical reference materials.",
 
     link: {
-      text: "Open Atlas Chinese Documentation",
+      text: "Open Atlas Documentation Center",
       href: "https://sensordeck.github.io/atlas-docs-cn/",
     },
 
     topics: [
-      "Foundational Theory",
+      "Foundational Concepts",
       "Runtime Sensor Governance™",
       "Runtime Investigation™",
       "Platform Architecture",
       "OEM Deployment",
-      "Sensor Manufacturer Deployment",
+      "Sensor-Manufacturer Deployment",
       "Pilot to Production",
-      "Reference Materials",
+      "Reference Resources",
     ],
 
     note:
-      "The documentation site is maintained independently. The website provides only key overviews and access points.",
+      "The documentation center is maintained separately from the corporate website. The current documentation is available in Chinese, with English documentation under development.",
   },
 
   demo: {
-    eyebrow: "01 / Demo",
-    title: "Demos & Examples",
+    eyebrow: "01 / Product Demonstrations",
+    title: "See Atlas in Action",
     description:
-      "Learn how Atlas works through product videos and interactive UI.",
+      "Explore Atlas through product videos and interactive interface demonstrations.",
 
     items: [
       {
-        title: "Product Demo Videos",
+        title: "Product Demonstration Videos",
         description:
-          "Watch demo videos for Atlas Runtime Investigation™ and Atlas Runtime Sensor Governance™ to understand Atlas product positioning, runtime investigation workflows, and sensor governance capabilities.",
+          "Watch demonstrations of Atlas Runtime Investigation™ and Atlas Runtime Sensor Governance™ to understand the product architecture, investigation workflow, and cross-organization collaboration model.",
         type: "Video",
         href: "/demo",
         disabled: false,
       },
       {
-        title: "Atlas Demo Interfaces",
+        title: "Interactive Atlas Interfaces",
         description:
-          "Explore Tier 1 intake, the Investigation Dashboard, the Sensor FAE Workspace, and the executive dashboard.",
+          "Explore representative interfaces for Tier 1 intake, investigation management, Sensor FAE collaboration, and executive governance reporting.",
         type: "Interactive",
         href: "/demo#demo-scenario",
         disabled: false,
@@ -229,141 +225,141 @@ export const libraryContent = {
     eyebrow: "01 / Frequently Asked Questions",
     title: "Frequently Asked Questions",
     description:
-      "Questions about Atlas product positioning, technical compatibility, deployment, data ownership, and the boundaries of runtime investigation.",
+      "Answers to common questions about Atlas positioning, technical compatibility, deployment, data ownership, and investigation boundaries.",
 
     questions: [
       {
         question: "Is Atlas another logging system?",
         answer:
-          "No. Atlas is not a log collection or log archival platform. Logs can be one source of runtime evidence, but Atlas is responsible for continuously observing runtime behavior, organizing investigation evidence, forming event context, recalling historical investigation assets, and supporting cross-team collaboration.",
+          "No. Atlas is not a log collection or archival platform. Logs may be one source of runtime evidence, but Atlas is designed to continuously observe runtime behavior, organize bounded evidence, preserve event context, recall historical investigation assets, and support structured investigations.",
       },
       {
         question: "Does Atlas replace fleet management systems?",
         answer:
-          "No. Fleet management systems typically handle device management, OTA updates, remote monitoring, task scheduling, and robot operations. Atlas handles runtime evidence, Evidence Packs™, Historical RGAs™, investigation workflows, and organizational memory. The two are complementary.",
+          "No. Fleet management systems typically support device administration, OTA updates, remote monitoring, scheduling, and robot operations. Atlas supports runtime evidence, Evidence Packs™, Historical RGAs™, investigation workflows, and reusable organizational knowledge. The systems are complementary.",
       },
       {
         question:
           "Does Atlas replace ticketing systems such as Jira or ServiceNow?",
         answer:
-          "No. Ticketing systems manage incident records, task routing, and organizational collaboration. Atlas works with existing ticketing workflows by providing structured evidence, event timelines, and historical context for investigation after a runtime execution failure is reported.",
+          "No. Ticketing systems manage incident records, task ownership, routing, and organizational workflows. Atlas can work alongside those systems by providing structured runtime evidence, timelines, investigation context, and historical references.",
       },
       {
         question:
           "Does Atlas automatically determine root cause or responsibility?",
         answer:
-          "No. Atlas does not automatically confirm root cause, product defects, customer error, or assignment of responsibility. Atlas organizes runtime evidence, investigation context, and historical candidates; final technical conclusions remain subject to confirmation by authorized engineering teams.",
+          "No. Atlas does not automatically confirm root cause, assign responsibility, or determine whether an incident resulted from a product defect, integration issue, environmental condition, or operational error. Atlas structures the evidence and investigation context; authorized engineering teams confirm final conclusions.",
       },
       {
         question: "Does Atlas support AI-assisted investigation?",
         answer:
-          "Yes. Atlas can provide structured, clearly bounded, and reviewable runtime evidence for AI-assisted analysis. Atlas does not require AI, however; investigation workflows can remain deterministic, and every critical conclusion still requires human confirmation.",
+          "Yes. Atlas can provide structured, bounded, and reviewable runtime evidence for AI-assisted analysis. AI is not required, and critical engineering conclusions remain subject to human review and authorization.",
       },
       {
         question: "Which robotics platforms does Atlas support?",
         answer:
-          "Atlas is not tied to a specific robot brand or control architecture. It can be deployed across different robotics platforms, SBCs, Linux environments, ROS systems, and custom robotics software. The exact deployment scope is determined by the customer runtime surfaces and investigation objectives.",
+          "Atlas is not tied to a specific robot brand, control architecture, or software stack. It can be deployed across different robot platforms, SBCs, Linux environments, ROS and ROS 2 systems, and custom robotics software. The deployment scope is determined by the customer's runtime surfaces and investigation objectives.",
       },
       {
         question: "Which sensors does Atlas support?",
         answer:
-          "Atlas is not tied to a specific sensor type. Typical targets include cameras, LiDAR, IMU, GNSS, radar, and encoders. Other sensors can also be brought into governance through runtime surface mapping and adapters.",
+          "Atlas is sensor-agnostic. Typical targets include cameras, LiDAR, IMU, GNSS, radar, encoders, and other devices connected through Ethernet, USB, CAN, CSI, serial interfaces, or custom data paths.",
       },
       {
         question: "Must Atlas run in a ROS environment?",
         answer:
-          "No. ROS and ROS2 are optional runtime data sources. In robotics systems without ROS, Atlas can establish runtime observation through device interfaces, Linux Runtime, driver state, logs, and custom adapters.",
+          "No. ROS and ROS 2 are optional runtime data sources. In systems without ROS, Atlas can observe device interfaces, Linux runtime state, driver behavior, system logs, application inputs, and customer-defined adapters.",
       },
       {
         question:
           "Does Atlas require a continuous connection to a public cloud?",
         answer:
-          "No. Atlas supports customer-local servers, headquarters servers, private cloud, offline environments, manual export, and hybrid deployment. Cloud connectivity is determined by the customer deployment, security, and operational requirements.",
+          "No. Atlas can support customer-local servers, headquarters infrastructure, private cloud, offline environments, controlled export, and hybrid deployment. Connectivity is determined by customer security, operational, and deployment requirements.",
       },
       {
         question:
           "Does Atlas require replacing existing robotics infrastructure?",
         answer:
-          "No. Atlas is designed to coexist with existing fleet management, cloud platforms, ticketing systems, object storage, monitoring platforms, and robotics software. Deployment focuses on connecting existing runtime data sources rather than large-scale replacement.",
+          "No. Atlas is designed to coexist with existing fleet platforms, cloud systems, ticketing tools, object storage, monitoring platforms, and robotics software. Deployment focuses on connecting relevant runtime data sources rather than replacing the customer's existing architecture.",
       },
       {
-        question: "Can Atlas cover multiple robot models?",
+        question: "Can Atlas support multiple robot models?",
         answer:
-          "Yes. Atlas can start with a clearly defined robot model or runtime scenario and gradually expand across multiple Robot SKUs, SBC platforms, sensor configurations, and deployment environments without redesigning the entire investigation system.",
+          "Yes. Atlas can begin with one defined robot model, sensor configuration, or runtime scenario and expand across additional robot SKUs, SBC platforms, sensor combinations, and deployment environments.",
       },
       {
-        question: "Can Atlas collaborate with multiple sensor vendors?",
+        question: "Can Atlas work with multiple sensor vendors?",
         answer:
-          "Yes. OEMs can use Sensor Engagement Packs™ to conduct clearly bounded investigation collaboration with different sensor manufacturers. Each sensor vendor can maintain its own Runtime Profiles, historical investigation assets, and FAE investigation workflows.",
+          "Yes. Robot OEMs can use Sensor Engagement Packs™ to conduct bounded investigations with different sensor manufacturers. Each sensor manufacturer can maintain its own Runtime Profiles™, investigation records, Historical Sensor RGAs™, and Sensor FAE workflows.",
       },
       {
-        question: "What is a Sensor Runtime Profile?",
+        question: "What is a Sensor Runtime Profile™?",
         answer:
-          "A Sensor Runtime Profile describes how a sensor behaves on known robotics platforms, in deployment environments, and under runtime disturbances. It is not a certification, product passport, or compliance document; it is a runtime knowledge asset for future investigations.",
+          "A Sensor Runtime Profile™ describes known sensor behavior across robot platforms, deployment environments, system configurations, and runtime disturbances. It is an investigation and engineering knowledge asset, not a certification, compliance document, or product passport.",
       },
       {
         question: "What is an Evidence Pack™?",
         answer:
-          "An Evidence Pack™ is a standardized evidence window generated around a specific runtime event. It contains bounded relevant data, a timeline, and runtime environment context from before and after the event. It is neither an unlimited log archive nor a simple raw data dump.",
+          "An Evidence Pack™ is a bounded and structured evidence window created around a specific runtime event. It may include relevant data, timelines, system state, and environmental context from before, during, and after the event. It is not an unlimited log archive or unstructured raw-data export.",
       },
       {
         question: "What is a Historical RGA™?",
         answer:
-          "A Historical Runtime Governance Asset™ preserves reusable runtime patterns, investigation paths, investigation outcomes, lessons learned, and runtime surface references from completed investigations. It helps future investigations start from organizational memory, but historical similarity does not mean the root cause is the same.",
+          "A Historical Runtime Governance Asset™ preserves reusable patterns, investigation paths, engineering findings, lessons learned, and runtime references from completed investigations. It helps future teams begin with relevant organizational knowledge, while recognizing that historical similarity does not establish identical root cause.",
       },
       {
         question: "Does Atlas permanently retain all runtime data?",
         answer:
-          "No. Atlas operates under customer-approved retention policies. Typical methods include rolling buffers, specified retention periods, event-triggered data locking, and generating and exporting investigation evidence for a defined time range.",
+          "No. Atlas operates according to customer-approved retention policies. Typical approaches include rolling buffers, defined retention periods, event-triggered preservation, and export of bounded investigation evidence.",
       },
       {
         question: "Who owns runtime data and investigation assets?",
         answer:
-          "Customers own their runtime data and internal investigation assets. OEMs retain their Runtime Datasets™, Evidence Packs™, and historical investigation assets; sensor manufacturers retain their own Sensor Runtime Profiles and historical investigation assets. SensorDeck does not claim ownership of customer runtime data.",
+          "Customers retain ownership and control of their runtime data and internal investigation assets. Robot OEMs retain their Runtime Datasets™, Evidence Packs™, and investigation records. Sensor manufacturers retain their Runtime Profiles™, Sensor FAE findings, and historical investigation assets. SensorDeck does not claim ownership of customer runtime data.",
       },
       {
         question:
-          "Does Atlas automatically share customer data between companies?",
+          "Does Atlas automatically share customer data between organizations?",
         answer:
-          "No. Any cross-organizational evidence collaboration must be customer-authorized and limited to clearly defined investigation boundaries. Reuse of industry knowledge applies only to approved, non-identifying knowledge and does not mean sharing customer raw data or internal Evidence Packs™.",
+          "No. Cross-organization evidence exchange must be authorized by the customer and limited to a clearly defined investigation boundary. Reusable industry knowledge is restricted to approved, de-identified content and does not include customer raw data or internal Evidence Packs™.",
       },
       {
         question: "Is Atlas a standard SaaS product?",
         answer:
-          "Not necessarily. Atlas can be deployed on customer premises, on customer-controlled infrastructure, in a private cloud, or in a hybrid environment. The deployment model is determined by data security, network conditions, organizational processes, and project scope.",
+          "Not necessarily. Atlas can be deployed on premises, on customer-controlled infrastructure, in a private cloud, or in a hybrid environment. The deployment model depends on security requirements, network conditions, operational processes, and project scope.",
       },
       {
         question: "Is Atlas open source?",
         answer:
-          "No. Atlas is commercial runtime governance infrastructure developed by SensorDeck and is typically delivered through professional integration, deployment configuration, training, and acceptance projects.",
+          "No. Atlas is commercial runtime governance infrastructure developed by SensorDeck and is typically delivered through professional integration, deployment configuration, training, and acceptance activities.",
       },
       {
-        question: "Is Atlas only suitable for one robotics project?",
+        question: "Is Atlas limited to a single robotics project?",
         answer:
-          "No. Atlas is intended to form reusable runtime governance infrastructure. After the initial Pilot, it can gradually expand to additional robot models, sensor products, operating environments, and investigation teams.",
+          "No. Atlas is designed as reusable runtime governance infrastructure. After an initial pilot, it can expand across additional robot models, sensor products, deployment environments, and investigation teams.",
       },
       {
         question:
-          "How does Atlas typically progress from Pilot to production deployment?",
+          "How does Atlas typically progress from pilot to production?",
         answer:
-          "A typical path is scenario confirmation, runtime boundary review, Agent and data-source integration, canary validation, Pilot, controlled deployment, Production Readiness, and finally expansion into the production environment.",
+          "A typical deployment path includes scenario confirmation, runtime-boundary review, Atlas Agent and data-source integration, canary validation, pilot deployment, controlled expansion, production-readiness review, and broader production rollout.",
       },
     ],
   },
 
   cta: {
-    eyebrow: "Next Step",
-    title: "Learn More About Atlas",
+    eyebrow: "Technical Discussion",
+    title: "Discuss Your Runtime Environment",
     description:
-      "Review the complete Atlas Chinese technical documentation, or contact us to discuss your robotics platform, runtime boundaries, and deployment plan.",
+      "Tell us about your robot platform, sensor configuration, deployment environment, and current investigation process. We will discuss how Atlas can fit within your existing runtime architecture.",
 
     primaryButton: {
-      text: "Contact Us",
+      text: "Contact SensorDeck",
       href: "/contact",
     },
 
     secondaryButton: {
-      text: "Atlas Chinese Documentation",
+      text: "Open Technical Documentation",
       href: "https://sensordeck.github.io/atlas-docs-cn/",
     },
   },
