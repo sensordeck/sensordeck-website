@@ -10,7 +10,6 @@ import historicalRgaData from "@/data/demo/historical-rga.json";
 import epData from "@/data/demo/evidence-pack.json";
 import type { DemoContent } from "@/lib/content-types";
 import { localizeHref } from "@/lib/i18n";
-import type { DemoContent } from "@/lib/content-types";
 
 
 type Window = "pre_guard" | "baseline" | "deviation" | "recovery" | "post_guard";
