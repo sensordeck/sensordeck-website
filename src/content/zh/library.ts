@@ -199,16 +199,16 @@ export const libraryContent = {
   },
 
   demo: {
-    eyebrow: "03 / 演示",
+    eyebrow: "01 / 演示",
     title: "演示与示例",
     description:
       "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。",
 
     items: [
       {
-        title: "2 分钟概览视频",
+        title: "产品演示视频",
         description:
-          "快速了解 Atlas 如何将运行时事件转化为边界明确的证据和可复用组织资产。",
+          "观看 Atlas Runtime Investigation™ 与 Atlas Runtime Sensor Governance™ 两条产品线的 Demo 视频，系统了解 Atlas 的产品定位、运行时调查流程和传感器治理能力。",
         type: "视频",
         href: "/demo/overview",
         disabled: false,
@@ -216,8 +216,7 @@ export const libraryContent = {
       {
         title: "Atlas 演示界面",
         description:
-          "查看一级受理、Investigation Workspace、传感器 FAE 和 CTO 治理视图。",
-        type: "交互式",
+          "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板。",
         href: "/demo",
         disabled: false,
       },
