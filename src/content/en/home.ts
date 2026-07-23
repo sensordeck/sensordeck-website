@@ -1,189 +1,203 @@
 import type { HomeContent } from "@/lib/content-types";
 
 const homeContent = {
-  heroTitle: "Runtime Governance Infrastructure for Robotics",
-
-heroSubtitleDesktop:
-  "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero. Atlas turns runtime evidence into reusable organizational knowledge.",
-
-heroSubtitleMobile:
-  "Runtime data is fragmented. Evidence disappears. Every investigation starts from zero.\n\nAtlas turns runtime evidence\ninto reusable organizational knowledge.",
-
-heroDescription: "",
+  heroTitle: "Runtime Governance\nInfrastructure for Robotics",
+  heroSubtitleDesktop:
+    "Runtime data is fragmented across logs, devices, and people. Every investigation starts from scratch.\nAtlas turns runtime evidence into reusable organizational knowledge.",
+  heroSubtitleMobile:
+    "Runtime data is fragmented across logs, devices, and people. Every investigation starts from scratch. Atlas turns runtime evidence into reusable organizational knowledge.",
+  heroDescription: "",
   heroPrinciple: [],
-  heroValueProposition: "Every investigation starts from evidence.\nEvery future investigation starts from history.",
+  heroValueProposition:
+    "Every investigation starts with evidence.\nThe next investigation starts with history.",
   sectionTitles: {
-    categoryDefinition: "A Missing Layer for Robotics",
-    theProblem: "Today, Every Runtime Execution Failure (REF) Starts from Scratch",
-    whyRuntimeGovernance: "Why runtime governance is missing",
+    categoryDefinition: "A Layer the Robotics Industry Did Not Have Before",
+    theProblem: "Why Incident Investigation Always Starts from Scratch",
+    whyRuntimeGovernance: "Why Runtime Governance Is Needed",
     productLines: "Two Solutions. One Mission.",
-    platformCapabilities: "The Atlas platform structures the work around evidence",
-    investigationLifecycle: "From REF to future reuse",
-    roboticsIndustry: "Built for the robotics industry",
-    evidenceOwnership: "Evidence ownership stays with the operating boundary",
-    organizationalMemory: "Turn completed investigations into organizational memory",
-    technicalResources: "Technical reading for engineering and operations",
-    finalCta: "Make runtime evidence useful across the organization",
+    platformCapabilities: "Atlas Builds Workflows Around Evidence",
+    investigationLifecycle: "From REF to Future Reuse",
+    roboticsIndustry: "Built for the Robotics Industry",
+    evidenceOwnership: "Evidence Ownership Stays at the Operating Boundary",
+    organizationalMemory:
+      "Turn Completed Investigations into Organizational Memory",
+    technicalResources: "Technical Reading for Engineering and Operations",
+    finalCta: "Make Runtime Evidence Work Across Your Organization",
   },
   sectionDescriptions: {
     categoryDefinition:
-      "The robotics industry already has sensors, device drivers, ROS/middleware, AI & autonomy, fleet management, and cloud platforms. Yet between sensor output and system decision-making, one critical layer has remained largely undefined: unified runtime intelligence infrastructure.",
+      "Atlas establishes runtime governance infrastructure between sensor output and robot execution decisions.",
     theProblem:
-      "Runtime evidence is scattered across logs, devices, videos, tickets, and people's memories. Every runtime investigation repeats the same work: collecting evidence, aligning timelines, contacting different teams, and rebuilding knowledge that already existed.",
+      "Runtime evidence is scattered across systems and people, without unified organization or continuous retention. Every investigation has to start over.",
     whyRuntimeGovernance:
-      "The signals are available, but the operational context is usually fragmented across devices, logs, tickets, recordings, and individual memory.",
+      "Signals are not missing, but runtime context is often scattered across devices, logs, tickets, recordings, and personal memory.",
     productLines:
-      "Built for the two key players in the robotics ecosystem.",
+      "Atlas provides a complete approach to robotics runtime governance through two product lines.",
     platformCapabilities:
       "These capabilities are shared by both product lines. Atlas structures evidence and retrieves historical candidates; human teams author Investigation Results and Lessons Learned.",
     investigationLifecycle:
-      "A runtime incident becomes a bounded, reviewable sequence of evidence and decisions. Recovery is an observation window, not a guaranteed recovery conclusion.",
+      "Runtime incidents are organized into bounded, reviewable sequences of evidence and decisions. Recovery is an observation window, not proof that the system has recovered.",
     roboticsIndustry:
-      "The platform is shaped around the surfaces that make robotics incidents difficult to isolate, from trigger timing and buses to Linux runtime and ROS topics.",
+      "The platform is designed around the runtime surfaces that make robotics incidents hardest to investigate, including trigger timing, buses, Linux runtime, and ROS topics.",
     evidenceOwnership:
-      "Atlas is designed to work within customer evidence policies. It structures and exports bounded context for collaboration without changing who governs the underlying evidence.",
+      "Atlas follows customer evidence policies, organizing and exporting bounded context for collaboration without changing governance of the underlying evidence.",
     organizationalMemory:
-      "Assist Vault preserves completed investigation assets. Historical RGA recalls previous patterns as candidates for review, never as proof of identical causality.",
+      "Assist Vault™ preserves completed investigation assets. Historical RGA™ recalls historical patterns as candidates for review, without claiming identical causality.",
     technicalResources:
-      "Use white papers for the public executive and engineering reading layer. Use the independent documentation site for schemas, integrations, and implementation detail.",
+      "White papers serve both management decision-makers and engineering teams; the independent documentation site provides data schemas, integration methods, and implementation details.",
     finalCta:
-      "See how Atlas can fit the runtime boundary, investigation workflow, and evidence ownership model of your robotics organization.",
+      "See how Atlas can fit your robotics organization, runtime boundaries, investigation workflows, and evidence ownership model.",
   },
   categoryDefinition: {
     lead:
-      "Atlas continuously transforms runtime signals into structured evidence, collaborative investigations, reusable engineering knowledge, and organizational memory. Instead of treating every runtime incident as an isolated support case, Atlas helps organizations build a continuously growing runtime intelligence capability.",
+      "The robotics industry already has advanced sensors, mature computing platforms, robust ROS middleware, and rapidly evolving AI and application software. Yet runtime behavior between sensor output and robot execution decisions still lacks unified governance. When an incident occurs, engineering teams are often left to reconstruct the entire runtime process from fragmented logs, devices, recordings, and human experience.",
     runtimeBoundary: {
-      title: "The Runtime Boundary Atlas Protects",
+      title: "What Robotics Is Really Missing Is a Runtime Governance Layer",
       steps: [
-        "Physical World",
+        "Real World",
         "Sensor",
-        "Power / Bus / Timing",
-        "Linux / Driver / Buffer",
+        "Connectivity & Power",
+        "Linux Runtime",
         "ROS Runtime",
-        "Application Input",
-        "System Decision"
+        "Application",
+        "System Decision",
       ],
-      note: "Atlas continuously observes, records, and organizes this critical runtime boundary. It is also the area where runtime failures occur most frequently, yet where the robotics industry has historically lacked a unified governance model."
+      note:
+        "Once a robot enters the real world, sensor data must pass through power, connectivity, Linux, drivers, buffers, schedulers, and the ROS runtime before it can become an input to system decisions. The industry has every individual component today, but lacks infrastructure to continuously govern this entire runtime chain.",
     },
     whyImportant: {
-      title: "Why Does This Layer Matter?",
+      title: "Why Is This Layer So Important?",
       traditional: {
-        title: "Traditional robotics platforms primarily focus on:",
-        items: ["Perception", "Motion Control", "AI Decision Making", "Application Software"]
+        title: "The industry has long invested in:",
+        items: [
+          "Better Sensors",
+          "More Capable AI",
+          "More Complex Algorithms",
+          "More Software Features",
+        ],
       },
       runtime: {
-        title: "However, many real-world runtime failures originate from the layers in between:",
+        title: "But many runtime problems occur in:",
         items: [
-          "Power fluctuations",
-          "USB / Ethernet / CAN communication",
-          "Linux Runtime behavior",
-          "Device Drivers",
-          "Memory Buffers",
-          "Process Scheduling",
-          "ROS Topics",
-          "Runtime Timing"
+          "Power",
+          "USB / Ethernet / CAN",
+          "Linux Runtime",
+          "Driver",
+          "Buffer",
+          "Scheduler",
+          "ROS Runtime",
+          "Timing",
         ],
-        note: "These runtime behaviors determine whether the system ultimately receives data that is complete, continuous, synchronized, and trustworthy. Atlas captures these runtime signals, transforms them into standardized evidence, and continuously builds reusable engineering knowledge."
-      }
+        note:
+          "These layers do not change the algorithm, but they determine whether the data the system ultimately receives is complete, continuous, and trustworthy. Many robotics incidents originate not in AI, but in this runtime environment.",
+      },
     },
     whatAtlasProvides: {
-      title: "What Does Atlas Provide?",
+      title: "Atlas Fills This Gap",
       notItems: [
-        "Atlas is not another SDK.",
-        "It is not another device driver.",
-        "It is not another ROS framework."
+        "Not a new Sensor.",
+        "Not a new Driver.",
+        "Not a new ROS Framework.",
       ],
-      isItem: "Atlas introduces a new infrastructure layer for robotics: Runtime Intelligence Infrastructure™",
+      isItem:
+        "Atlas establishes a layer the robotics industry did not have before: Runtime Intelligence Infrastructure™",
       capabilities: [
-        "24×7 Runtime Observation",
-        "Continuous Runtime Dataset Retention",
-        "Automated Evidence Pack Generation",
-        "Historical RGA Accumulation",
-        "OEM ↔ Sensor Collaborative Investigation",
-        "Assist Vault Organizational Memory",
-        "Continuous Knowledge Reuse Across Future REF Events"
+        "Continuous Runtime Observation",
+        "Runtime Evidence Retention",
+        "Evidence Pack",
+        "Runtime Investigation",
+        "Historical RGA",
+        "Assist Vault",
+        "Organizational Runtime Memory",
       ],
-      summary: "Robots understand the physical world. Atlas understands runtime behavior."
+      summary:
+        "Robots are responsible for understanding the world. Atlas is responsible for understanding robot runtime.",
     },
     points: [
       {
-        label: "Runtime boundary",
+        label: "Runtime Boundary",
         description:
           "Connect sensor behavior to power, buses, Linux/SBC runtime, ROS inputs, and application context.",
       },
       {
-        label: "Bounded evidence",
+        label: "Bounded Evidence",
         description:
           "Convert long runtime datasets into standardized evidence windows that teams can review and exchange.",
       },
       {
-        label: "Reusable knowledge",
+        label: "Reusable Knowledge",
         description:
           "Preserve human-authored Investigation Results and Lessons Learned for future reference.",
       },
     ],
   },
   theProblem: {
-    lead: "When the investigation ends, most of that engineering experience disappears again. The next REF starts from scratch.",
-    cta: "See How Atlas Changes This",
+    lead:
+      "After a Runtime Execution Failure (REF), engineering teams usually face evidence collection before they can begin analysis. Logs must be extracted again, recordings resynchronized, device states reconfirmed, relevant teams recoordinated, and the entire runtime process reconstructed. The real cost is not identifying the problem; it is finding and organizing the evidence.",
+    cta: "See How Atlas Solves This",
     comparison: {
       withoutAtlas: {
-        title: "Without Atlas",
+        title: "Traditional Investigation Process",
         steps: [
           "REF Occurs",
-          "Logs / Devices / Videos",
-          "Emails / Tickets",
-          "Engineers Investigate",
-          "Knowledge Lost"
+          "Find Logs",
+          "Find Recordings",
+          "Contact Different Teams",
+          "Rebuild the Timeline",
+          "Manual Analysis",
+          "Knowledge Remains Scattered",
         ],
-        note: "Time-consuming. Expensive. Not Reusable."
+        note: "Every investigation starts over.",
       },
       withAtlas: {
-        title: "With Atlas",
+        title: "Atlas Runtime Investigation",
         steps: [
           "REF Occurs",
-          "Evidence Pack",
-          "Historical RGA Recall",
-          "Investigation",
-          "IR / LL",
-          "Assist Vault",
-          "Future REF Reuse"
+          "Generate an Evidence Pack",
+          "Recall Historical RGA Investigation Cases",
+          "Investigation Workspace",
+          "Record IR / Lessons Learned",
+          "Preserve Knowledge in Assist Vault",
+          "Reuse It Directly in the Future",
         ],
-        note: "Every investigation begins with evidence. The next investigation begins with history."
-      }
+        note:
+          "Build organizational memory once, then keep reusing it.",
+      },
     },
     whyMatters: {
-      title: "Why It Matters",
-      description: "Instead of repeating yesterday's investigation, Atlas continuously builds organizational knowledge that grows with every REF. Engineering teams spend less time rebuilding context, and more time improving products."
-    }
+      title:
+        "Atlas Changes More Than a Single Investigation. It Changes the Entire Organization.",
+      description:
+        "Atlas organizes continuously collected data into Runtime Evidence, then preserves investigation results in Historical RGA and Assist Vault. Every REF becomes the starting point for the next investigation, not the endpoint. Engineering experience can finally accumulate alongside the product.",
+    },
   },
   whyRuntimeGovernance: {
     items: [
       {
-        label: "Signals are fragmented",
+        label: "Fragmented Signals",
         description:
-          "Sensor output, power, timing, network, host runtime, and ROS context are often reviewed in separate tools.",
+          "Sensor output, power, timing, network, host runtime, and ROS context are typically reviewed in different tools.",
       },
       {
-        label: "Incidents are unbounded",
+        label: "Unbounded Incidents",
         description:
-          "An unlimited archive makes it difficult to agree on the exact evidence window that matters.",
+          "Unlimited archives make it difficult to agree on the exact evidence window that matters.",
       },
       {
-        label: "Knowledge resets at closure",
+        label: "Knowledge Is Lost at Closure",
         description:
-          "The conclusion may live in a ticket or in a person’s memory instead of becoming a reusable investigation asset.",
+          "Conclusions may remain only in tickets or personal memory instead of becoming reusable investigation assets.",
       },
     ],
     boundaryNote:
-      "Atlas is not presented as a logging platform, an AI chatbot, a robotics dashboard vendor, or a generic sensor-validation laboratory.",
+      "Atlas is not positioned as a logging platform, an AI chatbot, a robotics dashboard vendor, or a general-purpose sensor validation laboratory.",
   },
   productLines: [
     {
       name: "Atlas Runtime Sensor Governance™",
-      audience: "FOR SENSOR MANUFACTURERS",
+      audience: "For Sensor Manufacturers",
       description:
-        "Understand how your sensors behave across real-world deployments, preserve runtime knowledge, and collaborate with OEM investigation teams.",
+        "Understand how your sensors perform in real-world deployments, preserve runtime knowledge, and collaborate with OEM investigation teams.",
       modules: [
         "Runtime Profiles™",
         "Runtime Observation",
@@ -194,20 +208,21 @@ heroDescription: "",
         "Runtime Knowledge Base™",
       ],
       lifecycle: [
-        "Runtime Profile",
+        "Runtime Governed Configuration",
         "Runtime Observation",
-        "Evidence Pack / EGP",
-        "Historical Sensor RGA Recall",
-        "Sensor Investigation",
-        "OEM Collaboration",
-        "Sensor Assist Vault",
+        "Sensor <-> OEM Collaborative Investigation (EGP)",
+        "Sensor REF Ticket Investigation",
+        "Evidence Pack (EP)",
+        "Sensor Investigation Process",
+        "Knowledge Base Retention™",
+        "OEM Collaboration Handoff",
         "Knowledge Reuse",
       ],
       link: "/products/runtime-sensor-governance",
     },
     {
       name: "Atlas Runtime Investigation™",
-      audience: "FOR ROBOT OEMs",
+      audience: "Robot OEMs",
       description:
         "Turn runtime incidents into bounded evidence, coordinated investigations, and reusable organizational knowledge.",
       modules: [
@@ -220,8 +235,8 @@ heroDescription: "",
         "Executive Dashboard™",
       ],
       lifecycle: [
-        "Runtime Dataset",
-        "Candidate Evidence Packs",
+        "Runtime Governed Configuration",
+        "Candidate Evidence",
         "Primary Evidence Pack",
         "Historical RGA Recall",
         "OEM / Sensor Investigation",
@@ -247,17 +262,17 @@ heroDescription: "",
     {
       title: "Historical RGA™",
       description:
-        "Recall previous Investigation Results and Lessons Learned without claiming identical causality.",
+        "Recall historical Investigation Results and Lessons Learned without claiming identical causality.",
     },
     {
       title: "Investigation Workspace™",
       description:
-        "Coordinate Tier 1, Tier 2/3, OEM engineering, and Sensor FAE investigation work.",
+        "Coordinate Tier 1, Tier 2/3, OEM engineering, and Sensor FAE investigations.",
     },
     {
       title: "Sensor EGP™",
       description:
-        "Exchange de-identified evidence and investigation context between an OEM and a sensor manufacturer.",
+        "Exchange de-identified evidence and investigation information between OEMs and sensor manufacturers.",
     },
     {
       title: "Assist Vault™",
@@ -267,32 +282,53 @@ heroDescription: "",
     {
       title: "Executive Dashboard™",
       description:
-        "Surface investigation throughput, evidence coverage, reuse, SLA, and illustrative ROI.",
+        "Present investigation throughput, evidence coverage, reuse rates, SLA, and illustrative ROI.",
     },
   ],
   constitutionalBoundary: [
     "Atlas structures evidence.",
     "Atlas retrieves historical candidates.",
     "Atlas does not automatically confirm root cause.",
-    "Atlas does not assign liability.",
+    "Atlas does not assign responsibility.",
   ],
   investigationLifecycle: [
     { label: "REF", description: "Reference the runtime incident." },
-    { label: "Runtime Dataset", description: "Retain the governed runtime context." },
+    {
+      label: "Runtime Dataset",
+      description: "Retain governed runtime context.",
+    },
     { label: "Evidence Pack", description: "Bound the evidence window." },
-    { label: "Historical RGA Recall", description: "Recall candidates for review." },
-    { label: "Investigation Context", description: "Align the relevant surfaces." },
-    { label: "EGP", description: "Share bounded context with the sensor side." },
-    { label: "OEM / Sensor IR + LL", description: "Author the human investigation record." },
+    {
+      label: "Historical RGA Recall",
+      description: "Recall candidates for review.",
+    },
+    {
+      label: "Investigation Context",
+      description: "Connect the relevant runtime surfaces.",
+    },
+    {
+      label: "EGP",
+      description: "Share bounded investigation information with the sensor side.",
+    },
+    {
+      label: "OEM / Sensor IR + LL",
+      description: "Author the human investigation record.",
+    },
     { label: "Closure", description: "Close the active investigation." },
-    { label: "Assist Vault", description: "Preserve the completed asset." },
-    { label: "Future Reuse", description: "Make the record available for reference." },
+    {
+      label: "Assist Vault",
+      description: "Preserve the completed asset.",
+    },
+    {
+      label: "Future Reuse",
+      description: "Make the record available for reference.",
+    },
   ],
   fiveWindowModel: [
     "Pre-Guard",
     "Baseline",
     "Deviation",
-    "Recovery",
+    "Recovery Observation",
     "Post-Guard",
   ],
   roboticsIndustry: {
@@ -309,25 +345,25 @@ heroDescription: "",
       "Linux Runtime",
       "ROS Topics",
       "Storage",
-      "Sensor heartbeat / raw output",
+      "Sensor Heartbeat / Raw Output",
     ],
   },
   evidenceOwnership: {
     principles: [
       {
-        label: "Customer-controlled evidence",
+        label: "Customer-Controlled Evidence",
         description:
-          "Runtime datasets remain governed by the customer’s environment, retention policy, and access model.",
+          "Runtime datasets remain governed by the customer's environment, retention policy, and access model.",
       },
       {
-        label: "Bounded collaboration",
+        label: "Controlled Collaboration",
         description:
-          "Evidence Pack and Sensor EGP provide a defined context for review rather than exposing an unlimited archive.",
+          "Evidence Pack™ and Sensor EGP™ provide bounded information for review instead of exposing unlimited archives.",
       },
       {
-        label: "De-identified exchange",
+        label: "De-Identified Exchange",
         description:
-          "OEM and sensor manufacturer teams can exchange the investigation context needed for collaboration.",
+          "OEM and sensor manufacturer teams can exchange the investigation information needed for collaboration.",
       },
     ],
   },
@@ -336,15 +372,15 @@ heroDescription: "",
       "Strong Candidate",
       "Partial Candidate",
       "Related Historical Pattern",
-      "Why Retrieved",
-      "Environment Difference",
+      "Recall Reason",
+      "Environmental Difference",
     ],
     recallExample: {
       reference: "RGA-2026-014",
-      title: "Timing deviation near trigger boundary",
+      title: "Timing Deviation Near the Trigger Boundary",
       status: "Related Historical Pattern",
       note:
-        "Retrieved for review because the runtime surfaces overlap. Environment differences remain explicit.",
+        "Recalled for review because the runtime surfaces overlap, with environmental differences explicitly identified.",
     },
   },
   technicalResources: {
@@ -352,25 +388,25 @@ heroDescription: "",
       "Runtime Intelligence Infrastructure for Robotics",
       "Atlas Runtime Sensor Governance",
       "Atlas Runtime Investigation",
-      "Evidence Pack and Five-Window Evidence Model",
+      "Evidence Pack and the Five-Window Evidence Model",
       "Historical RGA and Organizational Memory",
       "OEM ↔ Sensor Investigation Collaboration",
     ],
     documentationDescription:
-      "Canonical schemas, CLI, integration guides, artifact definitions, release notes, and technical implementation documentation live at docs.sensordeck.tech.",
+      "Canonical data schemas, CLI documentation, integration guides, artifact definitions, release notes, and technical implementation documents are available at docs.sensordeck.tech.",
   },
   ctas: {
-    primary: "Request Demo",
+    primary: "Request a Demo",
     exploreProducts: "Explore Products",
-    technicalWhitePaper: "Read Technical White Paper",
+    technicalWhitePaper: "Read the Technical White Paper",
     viewArchitecture: "View Architecture",
-    readWhitePaper: "Read White Paper",
+    readWhitePaper: "Read the White Paper",
     documentation: "Open Documentation",
-    overview: "Watch 2-Min Overview",
+    overview: "Watch the 2-Minute Overview",
   },
   ui: {
     sectionEyebrows: {
-      categoryDefinition: "01 / Category Definition",
+      categoryDefinition: "01 / New Category Definition",
       theProblem: "02 / Core Problem",
       whyRuntimeGovernance: "03 / The Gap",
       productLines: "03 / TWO ATLAS PRODUCT LINES",
@@ -384,24 +420,24 @@ heroDescription: "",
     },
     learnMore: "Learn More",
     categoryImageAlt:
-      "Category definition - Atlas Runtime Intelligence Infrastructure",
+      "New category definition - Atlas Runtime Intelligence Infrastructure for Robotics",
     problemImageAlt:
-      "Core problem - every runtime investigation starts from scratch",
+      "Core problem - every incident investigation starts from scratch",
     productLabel: "Product",
     coreModules: "Core Modules",
     productLifecycle: "Product Lifecycle",
     fiveWindowModel: "Five-Window Evidence Model",
     fiveWindowDescription:
-      "Evidence is bounded around the runtime deviation, not treated as an unlimited archive.",
+      "Evidence is bounded around a runtime deviation instead of being treated as an unlimited archive.",
     runtimeSurfaces: "Runtime Surfaces",
     sensor: "Sensor",
     policy: "Policy",
     egpDescription:
-      "Sensor Engagement Pack is the bounded collaboration surface from an OEM to a sensor manufacturer. It is not the same as an internal Evidence Pack™.",
+      "Sensor Engagement Pack is a bounded collaboration interface that an OEM provides to a sensor manufacturer. It is not the same as an internal Evidence Pack™.",
     historicalRgaDescription:
       "Historical RGA™ is a recall, reuse, and reference system for human investigation teams.",
     historicalRgaBoundary:
-      "It does not learn automatically, confirm root cause, or assign responsibility. Retrieved candidates include why they were retrieved and any remaining environmental differences.",
+      "It does not learn automatically, confirm root cause, or assign responsibility. Retrieved candidates include the reason for retrieval and any remaining environmental differences.",
     recallCandidate: "Historical RGA™ / Recall Candidate",
     retrievalReason: "Retrieval Reason",
     retrievalReasonValue: "Runtime surfaces overlap.",
@@ -409,8 +445,9 @@ heroDescription: "",
     reviewBoundaryValue: "Environmental differences remain explicit.",
     documentation: "Canonical Documentation",
     finalCtaDescription:
-      "If you are exploring runtime governance, sensor evidence, or investigation workflows, talk with us about your operating context.",
-    illustrativeDemoData: "Illustrative demo data only",
+      "Whether you are planning a new robotics platform, improving an existing product, or building a runtime investigation system, we would like to understand your scenario and explore whether Atlas is right for your team.",
+    illustrativeDemoData:
+      "Demo content illustrates Atlas workflows only and contains no customer runtime data.",
     contactUs: "Contact Us",
   },
 } satisfies HomeContent;
