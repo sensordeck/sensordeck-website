@@ -229,4 +229,253 @@ export const demoContent = {
     coverageEyebrow: "证据覆盖",
     coverageTitle: "候选监测维度频率分布",
     surfaces: [
-      "USB 总线时
+      "USB 总线时序",
+      "ROS 2 主题时序",
+      "LiDAR 点云质量",
+      "电源电压",
+      "网络丢包",
+      "存储 I/O 时序",
+    ],
+    occurrenceSuffix: " 次观察",
+    noteLabel: "说明：",
+    coverageNote:
+      "候选监测维度的出现频率仅表示观察到的模式分布，不代表根本原因排序，也不表示故障或责任归属。",
+
+    volumeEyebrow: "调查数量",
+    volumeTitle: "REF 数量与状态趋势",
+    months: ["4 月", "5 月", "6 月", "7 月"],
+    closedRefsLabel: "已结案 REF",
+    openChartLabel: "进行中：",
+    closedChartLabel: "已结案：",
+
+    actionsEyebrow: "管理层操作",
+    actionsTitle: "报告与审核",
+    exportReportTitle: "导出治理报告",
+    exportReportDescription:
+      "生成包含调查效率、证据覆盖、组织知识复用和供应商协作的执行摘要",
+    reviewSafetyTitle: "审核安全相关 REF",
+    reviewSafetyPrefix: "当前有 ",
+    reviewSafetySuffix: " 个安全相关 REF 等待管理层审核",
+
+    demoLabel: "演示说明",
+    demoDescription:
+      "实际管理层仪表板支持机器人或车队筛选、自定义时间范围、治理报告导出和 SLA 跟踪。",
+  },
+
+  investigation: {
+    confidenceLabels: {
+      strong: "强候选",
+      partial: "部分候选",
+      related: "相关候选",
+    },
+
+    windowLabels: {
+      pre_guard: "前置观察",
+      baseline: "基线",
+      deviation: "偏差",
+      recovery: "恢复观察",
+      post_guard: "后置观察",
+    },
+
+    statusLabels: {
+      baseline: "基线",
+      normal: "正常",
+      anomaly_detected: "观察到异常",
+      timing_anomaly: "时序异常",
+      bus_reset: "总线重置",
+      returning_to_baseline: "正在返回基线",
+      partial_recovery: "部分恢复",
+      reconnection: "重新连接",
+      minor_fluctuation: "轻微波动",
+      recovered: "已恢复",
+      stable: "稳定",
+    },
+
+    dashboardTitle: "调查仪表板",
+    robotLabel: "机器人",
+    statusLabel: "状态",
+    investigatingLabel: "调查中",
+    generateEgp: "生成 EGP →",
+
+    metricsEyebrow: "调查关键指标",
+    candidatesIdentifiedLabel: "已识别候选",
+    primaryEvidencePackLabel: "主要 EP",
+    historicalRecallLabel: "历史召回",
+    timeToFirstEvidencePackLabel: "首次 EP 用时",
+
+    timelineEyebrow: "候选时间线",
+    timelineTitle: "观察到的运行时模式",
+    primaryCandidateLabel: "主要候选",
+
+    fiveWindowEyebrow: "五窗口证据模型",
+
+    historicalEyebrow: "历史 RGA 召回",
+    historicalTitle: "相关历史模式",
+    relatedHistoricalLabel: "相关历史模式",
+    whyRetrievedLabel: "召回依据：",
+    environmentDifferenceLabel: "环境差异：",
+    historicalResolutionLabel: "历史调查结论：",
+    similarityLabel: "相似度",
+    noteLabel: "说明：",
+    historicalNote:
+      "历史模式相似性不表示根本原因相同。环境差异、软硬件版本和运行条件可能对应不同的调查路径。",
+
+    languageEyebrow: "",
+    languageTitle: "",
+    prohibitedLabel: "",
+    prohibitedTerms: [],
+    allowedLabel: "",
+    allowedTerms: [],
+
+    demoLabel: "演示说明",
+    demoDescription:
+      "实际调查仪表板支持主要候选设置、候选延后或排除、EGP 生成、SLA 跟踪和团队协作。",
+  },
+
+  sensorFae: {
+    irStatusLabels: {
+      matched_known_pattern: "观察到已知模式",
+      matched_with_mitigation: "相关模式及缓解措施",
+      candidate_investigation_path: "候选调查路径",
+      candidate_field_test: "建议开展现场验证",
+      not_applicable: "与当前传感器边界不相关",
+    },
+
+    initialLessonLearned:
+      "在高带宽 LiDAR 数据传输期间观察到 USB 3.0 总线重置。该现象与 Example LiDAR X32 演示线缆组件的历史 EMI 敏感模式相似。建议进一步验证屏蔽线缆和设备端磁芯对运行稳定性的影响。",
+
+    workspaceTitle: "传感器 FAE 工作区",
+    sensorLabel: "传感器",
+    packageValidLabel: "包状态正常",
+
+    validationEyebrow: "EGP 包验证",
+    validationTitle: "包完整性检查",
+    evidencePackIdLabel: "Evidence Pack 标识",
+    evidenceQualityLabel: "证据质量",
+    packageIntegrityLabel: "包完整性",
+    verifiedLabel: "已验证",
+    monitoredSurfacesLabel: "覆盖的监测维度",
+
+    evidenceSummaryEyebrow: "Evidence Pack 摘要",
+    deviationWindowLabel: "偏差窗口",
+    upstreamContextLabel: "上游上下文",
+    downstreamContextLabel: "下游上下文",
+
+    historicalEyebrow: "历史 Sensor RGA",
+    historicalTitle: "Example Sensor Corp 相关历史模式",
+    strongCandidateLabel: "强候选",
+    relatedHistoricalLabel: "相关历史模式",
+    originalRefLabel: "原始 REF：",
+    historicalResolutionLabel: "历史调查结论：",
+    similarityLabel: "相似度",
+
+    resultEyebrow: "调查结果（IR）",
+    resultTitle: "编写调查结论",
+    resultStatusLabel: "调查状态",
+    resultSummaryLabel: "IR 摘要（演示）",
+    resultSummaryPrefix: "观察到与 ",
+    resultSummarySuffix:
+      " 相似的历史运行时模式。高带宽运行期间出现的 USB 3.0 总线重置与 Example LiDAR X32 线缆组件的历史 EMI 敏感模式具有相关性。当前证据未显示固件或传感器硬件缺陷，建议通过更换屏蔽线缆开展进一步验证。",
+
+    lessonEyebrow: "经验教训（LL）",
+    lessonTitle: "记录可复用知识",
+    lessonContentLabel: "经验教训内容",
+    lessonNote:
+      "经授权审核后，LL 可更新至 Example Sensor Corp Historical Sensor RGA，供未来调查召回。",
+
+    responseEyebrow: "传感器响应",
+    responseTitle: "返回 OEM 调查响应",
+    responseSummaryLabel: "响应摘要",
+    irStatusLabel: "IR 状态",
+    lessonAuthoredLabel: "LL 已撰写",
+    yesLabel: "是",
+    historicalUpdatedLabel: "Historical RGA 更新状态",
+    pendingLabel: "等待审核",
+    readyLabel: "准备返回 OEM",
+    readyDescription:
+      "IR、LL 和相关候选分析将随 EGP 响应返回 OEM 二级 / 三级工程团队，用于后续工程审核和调查决策。",
+
+    returnResponse: "返回 EGP 响应至 OEM →",
+
+    demoLabel: "演示说明",
+    demoDescription:
+      "实际传感器 FAE 工作区支持完整的包验证、多传感器监测维度分析、IR / LL 模板和 Sensor RGA 更新工作流。",
+  },
+
+  tier1: {
+    portalTitle: "一级支持门户",
+    roleLabel: "一级支持",
+
+    stepLabels: {
+      incident: "事件描述",
+      robot: "机器人信息",
+      evidence: "运行时证据",
+      review: "审核与分派",
+    },
+
+    previous: "← 上一步",
+
+    incident: {
+      eyebrow: "步骤 1 / 4",
+      title: "描述事件",
+      typeLabel: "事件类型",
+      typeOptions: ["传感器异常", "通信中断", "性能下降"],
+      severityLabel: "严重程度",
+      severityOptions: ["低", "高", "严重"],
+      descriptionLabel: "事件描述",
+      timeLabel: "事件时间（近似）",
+      next: "下一步：机器人信息 →",
+    },
+
+    robot: {
+      eyebrow: "步骤 2 / 4",
+      title: "机器人与运行环境",
+      serialNumberLabel: "机器人序列号",
+      modelLabel: "型号",
+      firmwareLabel: "固件版本",
+      locationLabel: "部署位置",
+      conditionsLabel: "环境条件",
+      next: "下一步：运行时证据 →",
+    },
+
+    evidence: {
+      eyebrow: "步骤 3 / 4",
+      title: "运行时证据",
+      agentStatusLabel: "Atlas Agent 状态",
+      activeLabel: "运行中",
+      versionLabel: "版本",
+      heartbeatLabel: "最近心跳",
+      timeWindowLabel: "运行时数据集时间窗口",
+      durationLabel: "持续时间：15 分钟",
+      lockedLabel: "运行时数据集已锁定",
+      datasetIdLabel: "运行时数据集 ID：",
+      coverageLabel:
+        "覆盖范围：时序、电源、网络、存储、传感器和 ROS 2 主题",
+      next: "下一步：审核与分派 →",
+    },
+
+    review: {
+      eyebrow: "步骤 4 / 4",
+      title: "审核并分派至二级工程团队",
+      summaryLabel: "REF 摘要",
+      incidentTypeLabel: "事件类型",
+      severityLabel: "严重程度",
+      robotLabel: "机器人",
+      datasetLabel: "运行时数据集",
+      routeToLabel: "分派至",
+      routeOptions: [
+        "二级工程师 - Li Hua（演示）",
+        "二级工程师 - Chen Example",
+        "三级工程专家",
+      ],
+      readyLabel: "准备创建 REF",
+      readyDescription:
+        "创建后，系统将生成 REF 标识并分派至指定工程师。运行时数据集已锁定，可用于后续 Evidence Pack 生成。",
+      submit: "创建 REF 并分派 →",
+    },
+
+    demoLabel: "演示说明",
+    demoDescription:
+      "这是静态演示界面。实际一级支持门户会将 REF 提交至 Atlas 后端，并启动后续工程调查工作流。",
+  },
+} satisfies DemoContent;
