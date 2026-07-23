@@ -210,7 +210,7 @@ export const libraryContent = {
       description:
         "观看 Atlas Runtime Investigation™ 与 Atlas Runtime Sensor Governance™ 两条产品线的 Demo 视频，系统了解 Atlas 的产品定位、运行时调查流程和传感器治理能力。",
       type: "视频",
-      href: "/demo/overview",
+      href: "/demo",
       disabled: false,
     },
     {
