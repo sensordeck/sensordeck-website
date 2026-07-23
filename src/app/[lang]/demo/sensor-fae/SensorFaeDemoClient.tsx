@@ -10,6 +10,7 @@ import type { DemoContent } from "@/lib/content-types";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { localizeHref } from "@/lib/i18n";
+import { useParams } from "next/navigation";
 
 export default function SensorFaeDemoClient({
   content,
