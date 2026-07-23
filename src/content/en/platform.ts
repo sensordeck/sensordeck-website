@@ -2,7 +2,7 @@ import type { PlatformContent } from "@/lib/content-types";
 
 export const platformContent = {
   ui: {
-    capabilitiesTitle: "Platform Components",
+    capabilitiesTitle: "How Atlas Works",
     coreModulesLabel: "Core Capabilities",
   },
 
@@ -17,13 +17,13 @@ export const platformContent = {
   architecture: {
     title: "One governed chain from observation to organizational knowledge",
     description:
-      "Atlas provides the infrastructure for continuous observation, evidence generation, investigation workflows, historical recall, and knowledge reuse. It complements existing robotics systems while supporting engineering teams with structured, reviewable evidence.",
+      "Atlas provides the infrastructure for continuous observation, evidence preservation, event reconstruction, investigation collaboration, historical recall, and knowledge reuse. It supports engineering judgment without replacing robot control systems, operational platforms, or authorized decision-making.",
 
     principles: [
       "Customer runtime data remains within the customer's governance boundary",
       "Continuous data is converted into bounded Evidence Packs™",
       "Evidence, context, ownership, and investigation status remain reviewable",
-      "Historical RGA™ recalls relevant prior cases without asserting causality",
+      "Historical RGA™ identifies relevant prior cases without asserting causality",
       "Authorized engineering teams confirm root cause, responsibility, and Lessons Learned",
     ],
 
@@ -42,7 +42,7 @@ export const platformContent = {
     {
       name: "Atlas Agent™",
       description:
-        "A continuously operating agent that observes and governs runtime data inside the customer environment.",
+        "A continuously operating agent that observes and governs data inside the customer environment.",
       keyFeatures: [
         "Observe critical runtime signals continuously",
         "Cover power, buses, Linux, devices, and ROS topics",
@@ -148,12 +148,12 @@ export const platformContent = {
     },
 
     {
-      name: "CTO Dashboard",
+      name: "Executive Dashboard™",
       description:
         "A management view of investigation performance, recurring issues, and governance outcomes.",
       keyFeatures: [
         "Track investigation volume, cycle time, and SLA performance",
-        "Measure evidence coverage and investigation-asset reuse",
+        "Measure evidence coverage and asset reuse",
         "Identify recurring runtime-boundary issues",
         "Present governance progress and operational impact",
       ],
@@ -161,14 +161,14 @@ export const platformContent = {
   ],
 
   productsRelationship: {
-    title: "Shared Infrastructure. Different Responsibilities.",
+    title: "Shared Infrastructure for Two Responsibility Boundaries",
     description:
-      "Atlas Runtime Investigation™ serves robot OEMs. Atlas Runtime Sensor Governance™ serves sensor manufacturers. Both products share the same runtime-governance platform while preserving distinct data ownership and engineering responsibilities.",
+      "Atlas Runtime Investigation™ serves robot OEMs. Atlas Runtime Sensor Governance™ serves sensor manufacturers. Both use the same evidence, collaboration, and knowledge infrastructure while preserving distinct data ownership and engineering responsibilities.",
 
     products: [
       {
         name: "Atlas Runtime Investigation™",
-        audience: "For Robot OEMs",
+        audience: "Robot OEMs",
         coreModules: [
           "Atlas Agent™",
           "Runtime Surface™",
@@ -179,19 +179,19 @@ export const platformContent = {
           "Historical RGA™",
           "Sensor Engagement Pack™",
           "Assist Vault™",
-          "CTO Dashboard",
+          "Executive Dashboard™",
         ],
       },
 
       {
         name: "Atlas Runtime Sensor Governance™",
-        audience: "For Sensor Manufacturers",
+        audience: "Sensor Manufacturers",
         coreModules: [
-          "Sensor Runtime-Boundary Observation",
+          "Sensor Boundary Observation",
           "Runtime Profiles™",
           "Sensor Investigation Workspace™",
           "Historical Sensor RGA™",
-          "Sensor Engagement Pack™ Collaboration",
+          "Sensor Engagement Pack™",
           "Sensor Assist Vault™",
           "Runtime Knowledge Base™",
         ],
@@ -221,7 +221,7 @@ export const platformContent = {
       {
         title: "Historical RGA™",
         description:
-          "How prior investigations are recalled without replacing engineering judgment.",
+          "How prior cases are recalled without replacing engineering judgment.",
       },
       {
         title: "Investigation Context™",
@@ -238,15 +238,15 @@ export const platformContent = {
     documentationLink: {
       title: "Open Platform Documentation",
       description:
-        "Review the complete architecture for Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, Sensor Engagement Pack™, Assist Vault™, and CTO Dashboard.",
+        "Review the complete architecture for Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, Sensor Engagement Pack™, Assist Vault™, and Executive Dashboard™.",
       href: "https://sensordeck.github.io/atlas-docs-cn/category/平台架构",
     },
   },
 
   cta: {
-    title: "Discuss Your Runtime Environment",
+    title: "Start with Your Runtime Boundary",
     description:
-      "Tell us about your robot platform, runtime architecture, deployment environment, and investigation workflow. We will assess how Atlas fits within your existing engineering system.",
+      "Tell us about your robot platform, sensor configuration, deployment environment, and current investigation process. We will assess where Atlas fits within your existing architecture.",
     primaryButton: "Request a Demo",
     secondaryButton: "Open Platform Documentation",
   },
