@@ -198,47 +198,31 @@ export const libraryContent = {
     note: "文档站点独立维护，官网仅提供关键概览和访问入口。",
   },
 
-  demo: {
-    eyebrow: "01 / 演示",
-    title: "演示与示例",
-    description:
-      "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。",
-
-    items: [
-      {
-        title: "产品演示视频",
-        description:
-          "观看 Atlas Runtime Investigation™ 与 Atlas Runtime Sensor Governance™ 两条产品线的 Demo 视频，系统了解 Atlas 的产品定位、运行时调查流程和传感器治理能力。",
-        type: "视频",
-        href: "/demo/overview",
-        disabled: false,
-      },
-     {
-  title: "Atlas 演示界面",
+ demo: {
+  eyebrow: "01 / 演示",
+  title: "演示与示例",
   description:
-    "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板的模拟交付UI演示界面，展示 Atlas 如何为不同角色提供运行时调查支持。",
-  type: "交互式",
-  href: "/demo",
-  disabled: false,
+    "通过产品视频和交互式 UI 了解 Atlas 的工作方式。",
+
+  items: [
+    {
+      title: "产品演示视频",
+      description:
+        "观看 Atlas Runtime Investigation™ 与 Atlas Runtime Sensor Governance™ 两条产品线的 Demo 视频，系统了解 Atlas 的产品定位、运行时调查流程和传感器治理能力。",
+      type: "视频",
+      href: "/demo/overview",
+      disabled: false,
+    },
+    {
+      title: "Atlas 演示界面",
+      description:
+        "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板。",
+      type: "交互式",
+      href: "/demo",
+      disabled: false,
+    },
+  ],
 },
-      {
-        title: "运行时调查演练",
-        description:
-          "从 REF、Runtime Dataset、Evidence Pack 和 Historical RGA，到 IR、LL 和 Assist Vault 的完整演练。",
-        type: "演练",
-        href: "/demo/investigation",
-        disabled: false,
-      },
-      {
-        title: "示例 Evidence Pack",
-        description:
-          "查看经过批准、去标识化并仅供演示和培训使用的示例调查资产。",
-        type: "示例",
-        href: "#",
-        disabled: true,
-      },
-    ],
-  },
 
   faq: {
     eyebrow: "01 / 常见问题",
