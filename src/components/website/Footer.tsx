@@ -49,16 +49,16 @@ const footerCopy: Record<
 
 links: [
   {
-    label: "Atlas 中文文档",
+    label: "参考资料",
     href: "/library",
   },
   {
-    label: "常见问题",
-    href: "/library/faq",
+    label: "产品演示",
+    href: "/demo",
   },
   {
-    label: "2分钟概览",
-    href: "/library/demo",
+    label: "界面演示",
+    href: "/demo#demo-scenario",
   },
 ],
       },
