@@ -236,13 +236,12 @@ export default async function DemoIndexPage({
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Button href="mailto:contact@sensordeck.tech">
-                {content.index.cta.button}
-                <span aria-hidden="true" className="text-white">
-                  →
-                </span>
-              </Button>
+           <Button href={localizeHref(lang, "/contact")}>
+  {content.index.cta.button}
+  <span aria-hidden="true" className="text-white">
+    →
+  </span>
+</Button>
             </div>
           </div>
         </div>
