@@ -10,32 +10,42 @@ export const libraryContent = {
     libraryLabel: "资料库",
     browse: "查看",
 
-    resourceCards: [
-      {
-        id: "01",
-        title: "常见问题",
-        description:
-          "了解 Atlas 与日志系统、车队管理、工单平台和现有机器人基础设施之间的关系，以及数据所有权、部署模式和人工调查边界。",
-        href: "/library/faq",
-        items: "核心问题",
-      },
-      {
-        id: "02",
-        title: "企业交付与下载",
-        description:
-          "了解 Atlas 企业部署项目的典型运行时组件、调查组件、配置、文档、培训材料和客户可交付成果。",
-        href: "https://sensordeck.github.io/atlas-docs-cn/reference/downloads",
-        items: "交付说明",
-      },
-      {
-        id: "03",
-        title: "发布说明",
-        description:
-          "查看 Atlas Runtime Governance™ 的主要版本、核心能力、兼容性、部署模式、已知限制和重要产品变更。",
-        href: "https://sensordeck.github.io/atlas-docs-cn/reference/release-notes",
-        items: "版本记录",
-      },
-    ],
+   resourceCards: [
+  {
+    id: "01",
+    title: "演示与示例",
+    description:
+      "通过视频、交互式 UI 和示例数据了解 Atlas 工作方式。查看一级支持、调查工作区、传感器 FAE 和 CTO 治理视图。",
+    href: "/library/demo",
+    items: "公开演示",
+  },
+  {
+    id: "02",
+    title: "常见问题",
+    description:
+      "了解 Atlas 与日志系统、车队管理、工单平台和现有机器人基础设施之间的关系，以及数据所有权、部署方式和人工调查边界。",
+    href: "/library/faq",
+    items: "核心问题",
+  },
+  {
+    id: "03",
+    title: "企业交付与下载",
+    description:
+      "了解 Atlas 企业部署项目的典型运行时组件、调查组件、配置文件、项目文档、培训材料和客户可交付成果。",
+    href:
+      "https://sensordeck.github.io/atlas-docs-cn/reference/downloads",
+    items: "交付说明",
+  },
+  {
+    id: "04",
+    title: "发布说明",
+    description:
+      "查看 Atlas Runtime Governance™ 的主要版本、核心能力、兼容性、部署模式、已知限制和重要产品变更。",
+    href:
+      "https://sensordeck.github.io/atlas-docs-cn/reference/release-notes",
+    items: "版本记录",
+  },
+],
 
     quickAccessEyebrow: "完整文档",
     quickAccessTitle: "Atlas 中文技术文档",
