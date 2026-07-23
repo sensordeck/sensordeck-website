@@ -220,7 +220,7 @@ export default async function DemoIndexPage({
         </div>
       </Section>
 
-      {/* CTA */}
+            {/* CTA */}
       <Section id="demo-cta" className="bg-surface">
         <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
@@ -236,12 +236,13 @@ export default async function DemoIndexPage({
               </p>
             </div>
 
-           <Button href={localizeHref(lang, "/contact")}>
-  {content.index.cta.button}
-  <span aria-hidden="true" className="text-white">
-    →
-  </span>
-</Button>
+            <div className="flex flex-wrap gap-3">
+              <Button href={localizeHref(lang, "/contact")}>
+                {content.index.cta.button}
+                <span aria-hidden="true" className="text-white">
+                  →
+                </span>
+              </Button>
             </div>
           </div>
         </div>
