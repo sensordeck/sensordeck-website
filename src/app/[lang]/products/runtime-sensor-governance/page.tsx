@@ -51,6 +51,10 @@ export default async function RuntimeSensorGovernancePage({
         );
   const copy = legacyCopy.runtimeSensorGovernance;
   const { ui } = copy;
+  const heroTitleHasTrademark = ui.heroTitle.endsWith("™");
+  const heroTitle = heroTitleHasTrademark
+    ? ui.heroTitle.slice(0, -1)
+    : ui.heroTitle;
   const agentCapabilities = ui.capabilityTitles.map((title, index) => ({
     number: String(index + 1).padStart(2, "0"),
     title,
@@ -142,13 +146,24 @@ export default async function RuntimeSensorGovernancePage({
 
         {/* Hero */}
         <Section className="bg-white">
-          <div className="mx-auto max-w-5xl px-1 py-12 sm:py-16 lg:py-20">
+          <div className="mx-auto max-w-5xl px-1">
             <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
               {ui.heroEyebrow}
             </p>
 
-            <h1 className="mt-4 max-w-5xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-              {ui.heroTitle}
+            <h1
+              className={`mt-4 max-w-5xl font-sans font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg ${
+                lang === "zh"
+                  ? "text-[2.25rem] min-[360px]:text-[2.5625rem]"
+                  : "text-display"
+              }`}
+            >
+              {heroTitle}
+              {heroTitleHasTrademark ? (
+                <sup className="ml-1 inline-block align-super text-[0.4em] leading-none">
+                  ™
+                </sup>
+              ) : null}
             </h1>
 
             <p className="mt-6 max-w-4xl text-body-lg leading-8 text-muted sm:text-body-lg-md sm:leading-9">{copy.text044}
