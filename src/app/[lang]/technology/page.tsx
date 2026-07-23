@@ -17,6 +17,58 @@ export default async function TechnologyPage({
 
   const technologyContent = await getTechnologyContent(lang);
   const { hero, sections, cta } = technologyContent;
+  const pageCopy =
+    lang === "zh"
+      ? {
+          deploymentPathsTitle: "两类部署对象，一条上线路径",
+          deploymentPathsDescription:
+            "Atlas 分别支持机器人 OEM 和传感器制造商部署，并通过从 Pilot 到 Production 的阶段化路径进入正式运行。",
+          deploymentGuideTitle: "从部署边界到 Production 就绪",
+          deploymentGuideDescription:
+            "每一次 Atlas 部署都从明确的运行环境、数据范围和调查目标开始，再通过金丝雀验证和 Pilot 进入正式生产运行。",
+          ownership: [
+            {
+              title: "客户拥有运行时数据",
+              description:
+                "原始运行时数据、保留策略和调查证据均由客户治理。",
+            },
+            {
+              title: "不替换核心架构",
+              description:
+                "Atlas 通过现有接口和 Runtime Surface Adapter 接入客户环境。",
+            },
+            {
+              title: "人工确认调查结论",
+              description:
+                "Atlas 提供证据和历史候选，不自动确认根因或分配责任。",
+            },
+          ],
+        }
+      : {
+          deploymentPathsTitle: "Two Deployment Audiences, One Path to Launch",
+          deploymentPathsDescription:
+            "Atlas supports deployments for both robot OEMs and sensor manufacturers, following a phased path from Pilot to Production before entering formal operation.",
+          deploymentGuideTitle: "From Deployment Boundary to Production Readiness",
+          deploymentGuideDescription:
+            "Every Atlas deployment begins with an explicit runtime environment, data scope, and investigation objective, then progresses through canary validation and a Pilot into formal production operation.",
+          ownership: [
+            {
+              title: "Customers Own Their Runtime Data",
+              description:
+                "Raw runtime data, retention policies, and investigation evidence are all governed by the customer.",
+            },
+            {
+              title: "No Replacement of the Core Architecture",
+              description:
+                "Atlas connects to the customer environment through existing interfaces and Runtime Surface Adapters.",
+            },
+            {
+              title: "Humans Confirm Investigation Conclusions",
+              description:
+                "Atlas provides evidence and historical candidates; it does not automatically confirm root cause or assign responsibility.",
+            },
+          ],
+        };
 
   const deploymentStages = sections.filter((section) =>
     [
@@ -65,12 +117,11 @@ export default async function TechnologyPage({
             </p>
 
             <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-              两类部署对象，一条上线路径
+              {pageCopy.deploymentPathsTitle}
             </h2>
 
             <p className="heading-description mt-5 text-body leading-8 text-muted">
-              Atlas 分别支持机器人 OEM 和传感器制造商部署，并通过从
-              Pilot 到 Production 的阶段化路径进入正式运行。
+              {pageCopy.deploymentPathsDescription}
             </p>
           </div>
 
@@ -133,12 +184,11 @@ export default async function TechnologyPage({
               </p>
 
               <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-                从部署边界到 Production 就绪
+                {pageCopy.deploymentGuideTitle}
               </h2>
 
               <p className="heading-description mt-5 text-body leading-8 text-muted">
-                每一次 Atlas 部署都从明确的运行环境、数据范围和调查目标开始，
-                再通过金丝雀验证和 Pilot 进入正式生产运行。
+                {pageCopy.deploymentGuideDescription}
               </p>
             </div>
           </AnimatedSection>
@@ -265,11 +315,11 @@ export default async function TechnologyPage({
               </p>
 
               <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-                客户拥有运行时数据
+                {pageCopy.ownership[0].title}
               </h2>
 
               <p className="mt-4 text-label leading-7 text-muted">
-                原始运行时数据、保留策略和调查证据均由客户治理。
+                {pageCopy.ownership[0].description}
               </p>
             </div>
 
@@ -279,12 +329,11 @@ export default async function TechnologyPage({
               </p>
 
               <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-                不替换核心架构
+                {pageCopy.ownership[1].title}
               </h2>
 
               <p className="mt-4 text-label leading-7 text-muted">
-                Atlas 通过现有接口和 Runtime Surface Adapter
-                接入客户环境。
+                {pageCopy.ownership[1].description}
               </p>
             </div>
 
@@ -294,11 +343,11 @@ export default async function TechnologyPage({
               </p>
 
               <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-                人工确认调查结论
+                {pageCopy.ownership[2].title}
               </h2>
 
               <p className="mt-4 text-label leading-7 text-muted">
-                Atlas 提供证据和历史候选，不自动确认根因或分配责任。
+                {pageCopy.ownership[2].description}
               </p>
             </div>
           </div>

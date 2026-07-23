@@ -11,29 +11,66 @@ type ProductVideo = {
   src: string;
 };
 
-const productVideos: ProductVideo[] = [
-  {
-    id: "01",
-    eyebrow: "机器人 OEM",
-    title: "Atlas Runtime Investigation™",
-    description:
-      "演示 Atlas 如何从机器人运行时事件出发，形成 Runtime Dataset™、Evidence Pack™、Historical RGA™ 和调查上下文，并将完成的调查沉淀为可复用的组织资产。",
-    audience: "面向机器人 OEM、工程团队和运行时调查组织",
-    src: "/videos/runtime-investigation-demo.mp4",
-  },
-  {
-    id: "02",
-    eyebrow: "传感器制造商",
-    title: "Atlas Runtime Sensor Governance™",
-    description:
-      "演示 Atlas 如何观察传感器运行时边界、组织调查证据、支持传感器 FAE 与 OEM 协作，并沉淀可复用的传感器运行时知识。",
-    audience: "面向传感器制造商、FAE 团队和产品工程组织",
-    src: "/videos/runtime-sensor-governance-demo.mp4",
-  },
-];
+const productVideosByLocale: Record<"zh" | "en", ProductVideo[]> = {
+  zh: [
+    {
+      id: "01",
+      eyebrow: "机器人 OEM",
+      title: "Atlas Runtime Investigation™",
+      description:
+        "演示 Atlas 如何从机器人运行时事件出发，形成 Runtime Dataset™、Evidence Pack™、Historical RGA™ 和调查上下文，并将完成的调查沉淀为可复用的组织资产。",
+      audience: "面向机器人 OEM、工程团队和运行时调查组织",
+      src: "/videos/runtime-investigation-demo.mp4",
+    },
+    {
+      id: "02",
+      eyebrow: "传感器制造商",
+      title: "Atlas Runtime Sensor Governance™",
+      description:
+        "演示 Atlas 如何观察传感器运行时边界、组织调查证据、支持传感器 FAE 与 OEM 协作，并沉淀可复用的传感器运行时知识。",
+      audience: "面向传感器制造商、FAE 团队和产品工程组织",
+      src: "/videos/runtime-sensor-governance-demo.mp4",
+    },
+  ],
+  en: [
+    {
+      id: "01",
+      eyebrow: "Robot OEM",
+      title: "Atlas Runtime Investigation™",
+      description:
+        "See how Atlas starts from a robot runtime event to create a Runtime Dataset™, Evidence Pack™, Historical RGA™, and investigation context, then turns the completed investigation into a reusable organizational asset.",
+      audience:
+        "For robot OEMs, engineering teams, and runtime investigation organizations",
+      src: "/videos/runtime-investigation-demo.mp4",
+    },
+    {
+      id: "02",
+      eyebrow: "Sensor Manufacturer",
+      title: "Atlas Runtime Sensor Governance™",
+      description:
+        "See how Atlas observes sensor runtime boundaries, organizes investigation evidence, supports collaboration between sensor FAEs and OEMs, and captures reusable sensor runtime knowledge.",
+      audience:
+        "For sensor manufacturers, FAE teams, and product engineering organizations",
+      src: "/videos/runtime-sensor-governance-demo.mp4",
+    },
+  ],
+};
 
-export default function ProductVideosClient() {
+export default function ProductVideosClient({ lang }: { lang: "zh" | "en" }) {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const productVideos = productVideosByLocale[lang];
+  const playbackCopy =
+    lang === "zh"
+      ? {
+          playing: "正在播放",
+          play: "播放产品视频",
+          unsupported: "您的浏览器不支持视频播放。",
+        }
+      : {
+          playing: "Now Playing",
+          play: "Play Product Video",
+          unsupported: "Your browser does not support video playback.",
+        };
 
   const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
 
@@ -113,7 +150,7 @@ export default function ProductVideosClient() {
                 </p>
 
                 <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-atlas-blue">
-                  {isActive ? "正在播放" : "播放产品视频"}
+                  {isActive ? playbackCopy.playing : playbackCopy.play}
                   <span aria-hidden="true">{isActive ? "↓" : "→"}</span>
                 </span>
               </div>
@@ -134,7 +171,7 @@ export default function ProductVideosClient() {
                   preload="metadata"
                 >
                   <source src={video.src} type="video/mp4" />
-                  您的浏览器不支持视频播放。
+                  {playbackCopy.unsupported}
                 </video>
               </div>
             )}

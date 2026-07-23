@@ -32,8 +32,10 @@ export default async function CategoryPage({
     </p>
 
    <h1 className="mx-auto max-w-5xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-  Atlas 位于 Sensor 与 System Decision 之间
-</h1>
+     {lang === "zh"
+       ? "Atlas 位于 Sensor 与 System Decision 之间"
+       : "Atlas Sits Between the Sensor and the System Decision"}
+   </h1>
 
   <p className="mx-auto mt-8 max-w-3xl text-body leading-8 text-muted sm:text-body-lg sm:leading-8">
       {homeContent.categoryDefinition.lead}

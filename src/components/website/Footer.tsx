@@ -77,7 +77,7 @@ links: [
         links: [
           { label: "Products", href: "/products" },
           { label: "Platform", href: "/platform" },
-          { label: "Technology", href: "/technology" },
+          { label: "Deployment", href: "/technology" },
         ],
       },
       {
@@ -89,11 +89,11 @@ links: [
         ],
       },
       {
-        title: "Library",
+        title: "Technical Resources",
         links: [
-          { label: "White Papers", href: "/library/white-papers" },
-          { label: "Documentation", href: "https://docs.sensordeck.tech" },
-          { label: "2-Min Overview", href: "/library/demo" },
+          { label: "Resources", href: "/library" },
+          { label: "Product Demo", href: "/demo" },
+          { label: "Interface Demo", href: "/demo#demo-scenario" },
         ],
       },
     ],

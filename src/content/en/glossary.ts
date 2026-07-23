@@ -58,7 +58,7 @@ export const glossaryEn = {
     },
     {
       term: "Assist Vault",
-      chinese: "协助保管库",
+      chinese: "调查资产库",
       definition:
         "Atlas organizational memory storage system that preserves all historical Evidence Packs, Incident Reports, and Lessons Learned. The Vault supports semantic retrieval to automatically recall similar historical cases.",
       category: "workflow",
@@ -72,9 +72,9 @@ export const glossaryEn = {
     },
     {
       term: "Five-Window Constitution",
-      chinese: "五窗口宪法",
+      chinese: "五窗口证据规范",
       definition:
-        "The standard structural specification for Atlas Evidence Packs, comprising five dimensions: Sensor Window, Log Window, System Window, Historical Window, and Collaboration Window, ensuring evidence completeness and comparability.",
+        "The standard time structure for Atlas Evidence Packs, comprising five windows: Pre-Guard, Baseline, Deviation, Recovery Observation, and Post-Guard. It ensures that evidence context is complete and easy to compare.",
       category: "technical",
     },
     {

@@ -92,7 +92,9 @@ export default function ContactFormClient({
   }
 
   const deploymentGuideLabel =
-    locale === "zh" ? "查看中文部署指南" : "View deployment guide";
+    locale === "zh"
+      ? "查看中文部署指南"
+      : "View the Chinese Deployment Guide";
 
   return (
     <div className="bg-white">
@@ -291,7 +293,7 @@ export default function ContactFormClient({
                   {office.city}
                 </div>
 
-                <h3 className="mb-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                <h3 className="mb-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:min-h-[2lh] md:text-card-title-md lg:text-card-title-lg">
                   {office.name}
                 </h3>
 

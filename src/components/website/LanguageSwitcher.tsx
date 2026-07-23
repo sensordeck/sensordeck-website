@@ -100,7 +100,7 @@ export function LanguageSwitcher({
 
       {isOpen ? (
         <div
-          aria-label="语言选择"
+          aria-label={copy.ariaLabel}
           className="absolute right-0 z-[60] mt-1 w-36 overflow-hidden rounded-lg border border-border bg-white shadow-lg"
           role="group"
         >

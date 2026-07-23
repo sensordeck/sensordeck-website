@@ -5,86 +5,99 @@ export const companyContent = {
     eyebrow: "SensorDeck / Company",
     title: "About SensorDeck",
     description:
-      "Defining runtime intelligence infrastructure so robotics teams can observe, understand, investigate, improve, and reuse knowledge from real-world operations.",
-    statementLabel: "Runtime Intelligence Infrastructure",
+      "We build runtime governance infrastructure for the robotics industry, enabling engineering teams to preserve evidence during real-world operations, conduct investigations, and turn the experience from every resolved issue into reusable organizational assets.",
+    statementLabel: "Runtime Governance Infrastructure",
     statement:
-      "From pre-deployment runtime profiles to post-deployment investigations and organizational memory, SensorDeck focuses on what happens as robotic systems operate across boundaries.",
+      "SensorDeck does not focus on how robots should plan and control. We focus on what actually happens after robots enter real-world environments and operate across sensor, bus, power, Linux/SBC, and application boundaries.",
   },
+
   mission: {
-    eyebrow: "Mission & Vision",
-    title: "Make every runtime event a reliable engineering input",
+    eyebrow: "Our Mission",
+    title: "Ensure Robotics Runtime Investigations Never Have to Start from Scratch",
     lead:
-      "Robotic system failures rarely belong to one component. Sensors, buses, power, Linux/SBC runtime, ROS inputs, and field conditions jointly determine how systems behave under pressure.",
+      "Robots have entered restaurants, hospitals, warehouses, factories, and public spaces, yet investigating runtime issues still depends heavily on scattered logs, individual experience, and ad hoc collaboration.",
     description:
-      "SensorDeck created Atlas to organize these fragmented runtime facts into bounded, reviewable, collaborative evidence. We help teams identify deviations faster, investigate with greater precision, and carry what they learn into the next deployment.",
-    points: ["Observe real operations", "Understand evidence boundaries", "Reuse organizational memory"],
+      "SensorDeck created Atlas to continuously preserve runtime facts after deployment, produce bounded and reviewable evidence when incidents occur, and enable organizations to continuously reuse investigation results, lessons learned, and historical cases.",
+    points: [
+      "Preserve Runtime Facts",
+      "Support Cross-Team Investigations",
+      "Build Organizational Memory",
+    ],
   },
+
   category: {
-    eyebrow: "Category Statement",
-    title: "Runtime Intelligence Infrastructure for Robotics",
+    eyebrow: "Who We Are",
+    title: "An Infrastructure Company Focused on Robotics Runtime Governance",
     lead:
-      "Robotics needs more than additional logs. It needs infrastructure that governs evidence across runtime boundaries, supports investigations, and preserves knowledge.",
+      "We serve robot OEMs and sensor manufacturers, helping both parties conduct runtime investigations within clear data, evidence, and responsibility boundaries.",
     description:
-      "Atlas serves sensor manufacturers and robot OEMs across pre- and post-deployment runtime work. It connects runtime observation, Evidence Packs, investigation workspaces, and Historical RGA into a reviewable engineering path.",
+      "Atlas connects continuous observation in deployed environments, incident evidence, investigation collaboration, and historical memory. We do not replace robot control systems, fleet platforms, or engineering judgment. Instead, we establish a reviewable and reusable runtime investigation path between these systems.",
   },
+
   principlesSection: {
-    eyebrow: "Core Principles",
-    title: "Define the boundary before expanding intelligence",
+    eyebrow: "How We Work",
+    title: "Infrastructure Must First Be Trustworthy",
     description:
-      "We evaluate product capability by whether evidence can be owned, understood, and reviewed. These principles guide Atlas product design and engineering.",
+      "SensorDeck's products and partnerships are built on three long-term principles: customers own their evidence, systems remain reviewable, and engineering responsibility boundaries always remain clear.",
   },
+
   principles: [
     {
       number: "01",
-      label: "Evidence Ownership",
-      title: "Customers own their evidence",
+      label: "Customer Ownership",
+      title: "Customers Own Their Runtime Data and Investigation Assets",
       description:
-        "Runtime data, investigation materials, and the organizational memory they create should remain within customer operating boundaries. SensorDeck provides structure and tools without turning customer evidence into our asset.",
+        "Runtime data, Evidence Pack™, investigation conclusions, and organizational memory are governed by the customer. SensorDeck provides infrastructure, structure, and tools without turning customer evidence into our data assets.",
     },
     {
       number: "02",
       label: "No Black Box",
-      title: "Systems remain reviewable",
+      title: "Critical Evidence and Judgments Remain Reviewable",
       description:
-        "Atlas helps teams observe, organize, and investigate runtime events without hiding critical judgments. Engineering teams must be able to review evidence sources, reasoning scope, and responsibility boundaries.",
+        "Atlas explicitly records evidence sources, incident time boundaries, and the basis for historical recall. The system can assist investigations, but it does not replace engineering teams' review and judgment with unexplainable results.",
     },
     {
       number: "03",
-      label: "Explicit Boundaries",
-      title: "Engineering and responsibility stay clear",
+      label: "Responsibility Boundaries",
+      title: "Help Teams Make Judgments Without Making Conclusions for Them",
       description:
-        "Atlas does not replace OEM engineering tools or invent root-cause and liability decisions. It organizes runtime facts into collaborative evidence so accountable teams can make final judgments.",
+        "Atlas does not automatically confirm root cause, assign responsibility, or replace the formal engineering processes of OEMs, sensor manufacturers, or safety teams. Final conclusions are always confirmed by authorized teams.",
     },
   ],
+
   boundariesSection: {
-    eyebrow: "Engineering Boundaries",
-    title: "Preserve room for collaborative judgment",
+    eyebrow: "Our Role",
+    title: "Build a Reliable Foundation Between Evidence and Judgment",
     description:
-      "Good infrastructure does not blur responsibility. It shows teams what the system collected, what supports a conclusion, and who must decide the next step.",
+      "SensorDeck's role is to make runtime facts easier to preserve, understand, and reuse while leaving clear space for customers' existing engineering, quality, and safety systems.",
   },
+
   boundaries: [
     {
-      title: "What we provide",
+      title: "What SensorDeck Provides",
       items: [
-        "Runtime evidence structures spanning sensors, buses, Linux/SBC, and ROS inputs",
-        "A path from one completed investigation to reusable organizational knowledge",
-        "Shared evidence for OEM, sensor manufacturer, and investigation team collaboration",
+        "A runtime observation structure spanning sensors, buses, power, Linux/SBC, and application inputs",
+        "Bounded and reviewable Evidence Pack™ generated around specific incidents",
+        "Investigation infrastructure supporting collaboration among OEMs, sensor FAEs, and investigation teams",
+        "Organizational memory built from completed investigations, lessons learned, and historical patterns",
       ],
     },
     {
-      title: "What we do not replace",
+      title: "What SensorDeck Does Not Replace",
       items: [
-        "Existing customer engineering, quality, testing, or safety processes",
-        "Human root-cause judgment with automated correlation claims",
-        "Customer data ownership with opaque or unexplained decision paths",
+        "Robot control systems, fleet management platforms, or existing logging infrastructure",
+        "Customers' engineering, testing, quality, safety, or compliance processes",
+        "Automated root-cause conclusions presented from historical similarity",
+        "Customer ownership of runtime data, investigation assets, or decision-making authority",
       ],
     },
   ],
+
   contact: {
     eyebrow: "Talk With Us",
-    title: "Start with a real runtime problem",
+    title: "Start With a Real Runtime Scenario",
     description:
-      "Whether you build sensors, operate robot fleets, or investigate field events, the conversation can start with one concrete runtime boundary.",
-    button: "Contact SensorDeck",
+      "Tell us about your robotics platform, primary sensors, deployment environment, and current investigation process. Together, we will evaluate whether Atlas is right for your organization and which runtime boundary to start with.",
+    button: "Request a Demo",
   },
 } satisfies CompanyContent;

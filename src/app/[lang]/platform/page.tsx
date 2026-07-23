@@ -27,35 +27,78 @@ export default async function PlatformPage({
     cta,
   } = platformContent;
 
+  const pageCopy =
+    lang === "zh"
+      ? {
+          evidenceFlowDescription:
+            "从持续观察，到事件证据、调查协作和组织记忆，Atlas 将原本分散的运行时调查活动连接为一条完整链路。",
+          stages: [
+            ["运行时观察", "持续观察并治理客户环境中的运行时数据。"],
+            ["证据生成", "将连续数据流压缩为有边界的事件证据。"],
+            ["调查组织", "形成统一上下文、历史候选和调查层级。"],
+            ["跨组织协作", "连接 OEM 工程团队与传感器制造商。"],
+            [
+              "组织记忆与决策",
+              "沉淀调查资产，并向管理层呈现治理结果。",
+            ],
+          ],
+        }
+      : {
+          evidenceFlowDescription:
+            "From continuous observation to event evidence, investigation collaboration, and organizational memory, Atlas connects previously fragmented runtime-investigation activities into one complete chain.",
+          stages: [
+            [
+              "Runtime Observation",
+              "Continuously observe and govern runtime data in the customer environment.",
+            ],
+            [
+              "Evidence Generation",
+              "Compress continuous data streams into bounded event evidence.",
+            ],
+            [
+              "Investigation Organization",
+              "Establish unified context, historical candidates, and investigation tiers.",
+            ],
+            [
+              "Cross-Organization Collaboration",
+              "Connect OEM engineering teams with sensor manufacturers.",
+            ],
+            [
+              "Organizational Memory and Decisions",
+              "Preserve investigation assets and present governance outcomes to management.",
+            ],
+          ],
+        };
+
   const architectureStages = [
     {
       number: "01",
-      title: "运行时观察",
-      description: "持续观察并治理客户环境中的运行时数据。",
+      title: pageCopy.stages[0][0],
+      description: pageCopy.stages[0][1],
       modules: capabilities.slice(0, 3),
     },
     {
       number: "02",
-      title: "证据生成",
-      description: "将连续数据流压缩为有边界的事件证据。",
+      title: pageCopy.stages[1][0],
+      description: pageCopy.stages[1][1],
       modules: capabilities.slice(3, 4),
     },
     {
       number: "03",
-      title: "调查组织",
-      description: "形成统一上下文、历史候选和调查层级。",
+      title: pageCopy.stages[2][0],
+      description: pageCopy.stages[2][1],
       modules: capabilities.slice(4, 7),
     },
     {
       number: "04",
-      title: "跨组织协作",
-      description: "连接 OEM 工程团队与传感器制造商。",
+      title: pageCopy.stages[3][0],
+      description: pageCopy.stages[3][1],
       modules: capabilities.slice(7, 8),
     },
     {
       number: "05",
-      title: "组织记忆与决策",
-      description: "沉淀调查资产，并向管理层呈现治理结果。",
+      title: pageCopy.stages[4][0],
+      description: pageCopy.stages[4][1],
       modules: capabilities.slice(8, 10),
     },
   ];
@@ -152,8 +195,7 @@ export default async function PlatformPage({
             </h2>
 
             <p className="heading-description mt-5 text-body leading-8 text-muted">
-              从持续观察，到事件证据、调查协作和组织记忆，Atlas
-              将原本分散的运行时调查活动连接为一条完整链路。
+              {pageCopy.evidenceFlowDescription}
             </p>
           </div>
 

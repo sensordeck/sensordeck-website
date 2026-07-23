@@ -17,7 +17,7 @@ export const demoContent = {
         role: "Tier 2 / Tier 3 Engineers",
         title: "Investigation Dashboard",
         description:
-          "Reduce long Runtime Datasets into candidate Evidence Packs with timelines, five-window views, Historical RGA recall, and an EGP generator.",
+          "Organize long-running data into candidate evidence, including a Candidate Timeline, five-window views, Historical RGA recall, and an EGP generator.",
         href: "/demo/investigation",
         audience: "OEM engineering teams",
       },
@@ -278,7 +278,7 @@ export const demoContent = {
     robotLabel: "Robot",
     statusLabel: "Status",
     investigatingLabel: "Under Investigation",
-    generateEgp: "Generate EGP ->",
+    generateEgp: "Generate EGP →",
     metricsEyebrow: "Investigation KPIs",
     candidatesIdentifiedLabel: "Candidates Identified",
     primaryEvidencePackLabel: "Primary EP",
@@ -317,7 +317,7 @@ export const demoContent = {
     ],
     demoLabel: "Demo",
     demoDescription:
-      "The production investigation dashboard includes complete candidate actions, an EGP generator, SLA tracking, and team collaboration.",
+      "The production Investigation Dashboard includes complete candidate actions (set as primary, defer, or ignore), an EGP generator, SLA tracking, and team collaboration.",
   },
   sensorFae: {
     irStatusLabels: {
@@ -373,7 +373,7 @@ export const demoContent = {
     readyLabel: "Ready to Return to OEM",
     readyDescription:
       "The IR and LL will be returned with the EGP response package to the OEM Tier 2/3 engineer for the next investigation decision.",
-    returnResponse: "Return EGP Response to OEM ->",
+    returnResponse: "Return EGP Response to OEM →",
     demoLabel: "Demo",
     demoDescription:
       "The production Sensor FAE workspace includes full package validation, multi-sensor surface analysis, IR/LL template libraries, and Sensor RGA update workflows.",
@@ -387,7 +387,7 @@ export const demoContent = {
       evidence: "Runtime Evidence",
       review: "Routing Review",
     },
-    previous: "<- Previous",
+    previous: "← Previous",
     incident: {
       eyebrow: "Step 1 / 4",
       title: "Describe the Incident",
@@ -401,7 +401,7 @@ export const demoContent = {
       severityOptions: ["Low", "High", "Critical"],
       descriptionLabel: "Incident Description",
       timeLabel: "Approximate Incident Time",
-      next: "Next: Robot Information ->",
+      next: "Next: Robot Information →",
     },
     robot: {
       eyebrow: "Step 2 / 4",
@@ -411,7 +411,7 @@ export const demoContent = {
       firmwareLabel: "Firmware Version",
       locationLabel: "Deployment Location",
       conditionsLabel: "Environmental Conditions",
-      next: "Next: Runtime Evidence ->",
+      next: "Next: Runtime Evidence →",
     },
     evidence: {
       eyebrow: "Step 3 / 4",
@@ -426,7 +426,7 @@ export const demoContent = {
       datasetIdLabel: "Runtime Dataset ID:",
       coverageLabel:
         "Coverage: timing, power, network, storage, sensors, and ROS2 topics",
-      next: "Next: Routing Review ->",
+      next: "Next: Routing Review →",
     },
     review: {
       eyebrow: "Step 4 / 4",
@@ -445,7 +445,7 @@ export const demoContent = {
       readyLabel: "Ready to Create REF",
       readyDescription:
         "Creating the REF will generate an ID and route it to the selected engineer. The Runtime Dataset is locked and ready for evidence generation.",
-      submit: "Create REF and Route ->",
+      submit: "Create REF and Route →",
     },
     demoLabel: "Demo",
     demoDescription:

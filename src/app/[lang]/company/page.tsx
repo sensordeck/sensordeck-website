@@ -41,9 +41,14 @@ export default async function CompanyPage({
         <div
           className="absolute inset-0 bg-no-repeat lg:hidden"
           style={{
-            backgroundImage: "url('/images/about-us-mobile.png')",
+            backgroundImage: `url('/images/${
+              lang === "en" ? "about-us-mobile-e.png" : "about-us-mobile.png"
+            }')`,
             backgroundSize: "100% auto",
-            backgroundPosition: "center calc(100% + 48px)",
+            backgroundPosition:
+              lang === "en"
+                ? "center calc(100% - 60px)"
+                : "center calc(100% + 48px)",
           }}
           aria-hidden="true"
         />
@@ -52,7 +57,11 @@ export default async function CompanyPage({
         <div
           className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block"
           style={{
-            backgroundImage: "url('/images/about-us-desktop.png')",
+            backgroundImage: `url('/images/${
+              lang === "en"
+                ? "about-us-desktop-e.png"
+                : "about-us-desktop.png"
+            }')`,
             backgroundPosition: "center calc(50% + 80px)",
           }}
           aria-hidden="true"
@@ -65,7 +74,11 @@ export default async function CompanyPage({
         />
 
         <AnimatedSection>
-          <div className="relative z-10 mx-auto min-h-[760px] w-full max-w-7xl px-6 lg:min-h-[560px] lg:px-8">
+          <div
+            className={`relative z-10 mx-auto w-full max-w-7xl px-6 lg:min-h-[560px] lg:px-8 ${
+              lang === "en" ? "min-h-[1120px]" : "min-h-[760px]"
+            }`}
+          >
             <div className="max-w-[620px] pb-8 pt-14 lg:flex lg:min-h-[560px] lg:flex-col lg:justify-center lg:py-10">
               <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
                 {hero.eyebrow}

@@ -51,7 +51,7 @@ const platformModules: PlatformModule[] = [
     titleZh: "Assist 知识库™",
     titleEn: "Assist Vault™",
     descriptionZh: "（组织记忆）",
-    descriptionEn: "(Organization Memory)",
+    descriptionEn: "(Organizational Memory)",
   },
 ];
 
@@ -120,7 +120,9 @@ export default function FeaturesSection({ lang }: FeaturesSectionProps) {
             strokeWidth={1.9}
           />
           <p className="text-body font-semibold leading-6 text-atlas-blue md:text-body-lg-md md:leading-8">
-            {isChinese ? "安全、私密、由您掌控。" : "Secure. Private. Owned by You."}
+            {isChinese
+              ? "安全、私密、由您掌控。"
+              : "Secure. Private. Under Your Control."}
           </p>
         </div>
       </div>

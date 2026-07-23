@@ -162,7 +162,7 @@ export default async function ProblemPage({
           <div className="grid gap-8 border border-border bg-white p-6 sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:p-14">
             <div>
               <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
-                03 / 为什么重要
+                {lang === "zh" ? "03 / 为什么重要" : "03 / Why It Matters"}
               </p>
 
               <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">

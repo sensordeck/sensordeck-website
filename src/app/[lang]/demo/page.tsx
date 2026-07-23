@@ -31,21 +31,51 @@ export default async function DemoIndexPage({
   }
 
   const content = await getDemoContent(lang);
+  const pageCopy =
+    lang === "zh"
+      ? {
+          heroEyebrow: "Atlas 演示",
+          heroTitle: "产品演示与交互式界面",
+          heroDescription:
+            "通过两条产品线的视频和四个角色的交互式演示界面，了解 Atlas 如何组织运行时证据、支持调查协作，并将完成的调查沉淀为可复用的组织资产。",
+          videosEyebrow: "Atlas 产品视频",
+          videosTitle: "两条产品线，同一套运行时治理基础设施",
+          videosDescription:
+            "通过两条产品线的演示视频，了解 Atlas Runtime Investigation™ 如何帮助机器人 OEM 形成运行时证据和调查资产，以及 Atlas Runtime Sensor Governance™ 如何帮助传感器制造商建立运行时调查与客户协作能力。",
+          interfacesEyebrow: "Atlas Demo UI",
+          interfacesTitle: "从调查受理到管理层视图",
+          interfacesDescription:
+            "进入不同角色的演示页面，查看 Atlas 如何组织运行时证据、调查协作和治理指标。",
+        }
+      : {
+          heroEyebrow: "Atlas Demos",
+          heroTitle: "Product Demos and Interactive Interfaces",
+          heroDescription:
+            "Explore videos for both product lines and interactive demo interfaces for four roles to see how Atlas organizes runtime evidence, supports investigation collaboration, and turns completed investigations into reusable organizational assets.",
+          videosEyebrow: "Atlas Product Videos",
+          videosTitle:
+            "Two Product Lines, One Runtime Governance Infrastructure",
+          videosDescription:
+            "Watch demo videos for both product lines to see how Atlas Runtime Investigation™ helps robot OEMs create runtime evidence and investigation assets, and how Atlas Runtime Sensor Governance™ helps sensor manufacturers establish runtime investigation and customer collaboration capabilities.",
+          interfacesEyebrow: "Atlas Demo UI",
+          interfacesTitle: "From Investigation Intake to Executive View",
+          interfacesDescription:
+            "Enter the role-specific demo pages to see how Atlas organizes runtime evidence, investigation collaboration, and governance metrics.",
+        };
 
   return (
     <div className="bg-white font-sans text-ink">
      {/* Hero */}
 <Section id="demo-hero" className="bg-white">
   <div className="max-w-4xl">
-    <Eyebrow>Atlas 演示</Eyebrow>
+    <Eyebrow>{pageCopy.heroEyebrow}</Eyebrow>
 
     <h1 className="mt-5 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink md:text-page-title-md lg:text-page-title-lg">
-      产品演示与交互式界面
+      {pageCopy.heroTitle}
     </h1>
 
     <p className="mt-7 max-w-3xl text-body-lg leading-relaxed text-muted md:text-body-lg-md">
-      通过两条产品线的视频和四个角色的交互式演示界面，了解 Atlas
-      如何组织运行时证据、支持调查协作，并将完成的调查沉淀为可复用的组织资产。
+      {pageCopy.heroDescription}
     </p>
   </div>
 </Section>
@@ -53,22 +83,19 @@ export default async function DemoIndexPage({
       {/* Product videos */}
       <Section id="atlas-product-videos" className="bg-surface">
         <div className="max-w-4xl">
-          <Eyebrow>Atlas 产品视频</Eyebrow>
+          <Eyebrow>{pageCopy.videosEyebrow}</Eyebrow>
 
           <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-            两条产品线，同一套运行时治理基础设施
+            {pageCopy.videosTitle}
           </h2>
 
           <p className="mt-5 max-w-3xl text-body leading-8 text-muted">
-            通过两条产品线的演示视频，了解 Atlas Runtime
-            Investigation™ 如何帮助机器人 OEM
-            形成运行时证据和调查资产，以及 Atlas Runtime Sensor
-            Governance™ 如何帮助传感器制造商建立运行时调查与客户协作能力。
+            {pageCopy.videosDescription}
           </p>
         </div>
 
         <div className="mt-12">
-          <ProductVideosClient />
+          <ProductVideosClient lang={lang} />
         </div>
       </Section>
 
@@ -143,15 +170,14 @@ export default async function DemoIndexPage({
       {/* Demo UI pages */}
       <Section id="demo-pages" className="bg-surface">
         <div className="max-w-4xl">
-          <Eyebrow>Atlas Demo UI</Eyebrow>
+          <Eyebrow>{pageCopy.interfacesEyebrow}</Eyebrow>
 
           <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-            从调查受理到管理层视图
+            {pageCopy.interfacesTitle}
           </h2>
 
           <p className="mt-5 max-w-3xl text-body leading-8 text-muted">
-            进入不同角色的演示页面，查看 Atlas
-            如何组织运行时证据、调查协作和治理指标。
+            {pageCopy.interfacesDescription}
           </p>
         </div>
 

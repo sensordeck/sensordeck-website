@@ -2,32 +2,38 @@ import type { PlatformContent } from "@/lib/content-types";
 
 export const platformContent = {
   ui: {
-    capabilitiesTitle: "Platform Capabilities",
-    coreModulesLabel: "Core Modules",
+    capabilitiesTitle: "Core Platform Architecture",
+    coreModulesLabel: "Core Capabilities",
   },
+
   hero: {
-    title: "Atlas Platform",
-    subtitle: "Runtime Intelligence Infrastructure for Robotics",
-    description: "The Atlas platform provides shared infrastructure for sensor manufacturers and robot OEMs to govern runtime evidence, coordinate investigations, and build organizational memory.",
+    title: "Atlas Platform Architecture",
+    subtitle:
+      "From runtime data to reviewable evidence and reusable organizational assets",
+    description:
+      "Atlas is governance infrastructure for the robotics runtime boundary. It continuously observes operating conditions across sensors, buses, Linux Runtime, host controllers, and ROS Topics, transforming data scattered across devices, logs, and people into bounded, reviewable, and collaborative investigation assets.",
   },
 
   architecture: {
-    title: "Platform Architecture",
-    description: "The Atlas platform is built around evidence governance and investigation collaboration, supporting two product lines sharing the same infrastructure.",
+    title:
+      "Infrastructure spanning the full lifecycle of runtime investigation",
+    description:
+      "Atlas does not replace robot control systems, nor does it replace engineering teams in making root-cause judgments. It establishes a complete infrastructure chain from runtime observation, evidence retention, and event-window generation to cross-team investigation, historical recall, and the preservation of organizational memory.",
     principles: [
-      "Runtime datasets governed by customer environment",
-      "Evidence windows standardized and bounded",
-      "Investigation coordination across L1, L2/L3, OEM engineering, and sensor FAE",
-      "Historical RGA™ retrieves candidates without claiming identical causality",
-      "Investigation results and lessons learned authored by human teams",
+      "Runtime data remains within the customer's governance boundary",
+      "Long-running data streams are compressed into time-bounded Evidence Packs™",
+      "Investigation context, candidate tiers, and collaborators are organized in one place",
+      "Historical RGA™ recalls historical candidates without automatically determining causality",
+      "Investigation conclusions, responsibility judgments, and lessons learned are always confirmed by authorized teams",
     ],
+
     constitutionalBoundary: {
-      title: "Atlas Constitutional Boundary",
+      title: "Atlas Capability Boundary",
       items: [
-        "Atlas structures evidence.",
-        "Atlas retrieves historical candidates.",
-        "Atlas does not automatically confirm root cause.",
-        "Atlas does not assign responsibility.",
+        "Atlas observes, retains, and structures runtime evidence.",
+        "Atlas generates reviewable event windows and investigation context.",
+        "Atlas recalls relevant historical investigation assets and candidate patterns.",
+        "Atlas does not automatically confirm root cause or assign responsibility.",
       ],
     },
   },
@@ -35,149 +41,212 @@ export const platformContent = {
   capabilities: [
     {
       name: "Atlas Agent™",
-      description: "Observe, retain, lock, and export runtime datasets according to retention policies.",
+      description:
+        "A continuous observation and data-governance agent deployed in the customer's runtime environment.",
       keyFeatures: [
-        "Observe runtime surfaces (power, bus, Linux runtime, ROS topics)",
-        "Govern datasets according to customer retention policies",
-        "Export runtime datasets for evidence transformation",
-        "Keep evidence ownership within customer boundaries",
+        "Observe critical runtime signals 24/7",
+        "Cover power, buses, Linux Runtime, devices, and ROS Topics",
+        "Retain, lock, and export data according to customer policy",
+        "Keep data and evidence ownership within the customer boundary",
       ],
     },
+
+    {
+      name: "Runtime Surface™",
+      description:
+        "Unifies distributed runtime signals into an observable and accessible runtime surface.",
+      keyFeatures: [
+        "Unify runtime signals across device and software layers",
+        "Connect existing logs, devices, and data sources through adapters",
+        "Provide a standard entry point for event slicing and evidence generation",
+        "Require no replacement of the customer's existing robotics architecture",
+      ],
+    },
+
+    {
+      name: "Runtime Dataset™",
+      description:
+        "A continuously created, managed, and exportable runtime dataset governed by retention policy.",
+      keyFeatures: [
+        "Preserve continuous runtime data from before and after an event",
+        "Support customer-defined retention periods and data scope",
+        "Maintain temporal order, provenance, and runtime-environment context",
+        "Provide the raw evidence foundation for Evidence Pack™ generation",
+      ],
+    },
+
     {
       name: "Evidence Pack™",
-      description: "Transform long-running runtime datasets into bounded, standardized evidence windows.",
+      description:
+        "Compresses large volumes of runtime data into bounded, time-aligned, reviewable evidence windows.",
       keyFeatures: [
-        "Five-window evidence model (pre-guard, baseline, deviation, recovery observation, post-guard)",
-        "Standardized evidence windows for team review",
-        "Bounded context for OEM and sensor collaboration",
-        "Explicit temporal boundaries and runtime surfaces",
+        "Generate evidence windows for before, during, and after an event",
+        "Align signals from multiple sources with key points in time",
+        "Preserve evidence provenance, integrity, and generation context",
+        "Enable joint review by OEMs, sensor manufacturers, and investigation teams",
       ],
     },
+
     {
       name: "Historical RGA™",
-      description: "Recall prior investigation results and lessons learned without claiming identical causality.",
+      description:
+        "Recalls relevant candidates, patterns, and lessons from completed historical investigations.",
       keyFeatures: [
-        "Retrieve historical investigation candidates for review",
-        "Mark candidate strength (strong candidates, partial candidates, related historical patterns)",
-        "Explicit environmental differences",
-        "No automatic root cause confirmation",
+        "Retrieve historical investigation records related to the current event",
+        "Mark strong candidates, partial candidates, and related historical patterns",
+        "Make differences between current and historical environments explicit",
+        "Keep recall results distinct from root-cause confirmation",
       ],
     },
+
     {
-      name: "Investigation Workspace™",
-      description: "Coordinate L1, L2/L3, OEM engineering, and sensor FAE investigation work.",
+      name: "Investigation Context™",
+      description:
+        "Organizes the event, devices, runtime environment, evidence, and investigation objectives into one investigation context.",
       keyFeatures: [
-        "Unified investigation context view",
-        "Coordinate multi-team workflows",
-        "Evidence Pack™ review interface",
-        "Investigation result and lesson learned authoring",
+        "Record the robot, sensors, software versions, and deployment environment",
+        "Associate the Evidence Pack™ with the event timeline",
+        "Clarify investigation scope, current status, and participating teams",
+        "Reduce repeated collection of background information across teams",
       ],
     },
+
     {
-      name: "Sensor EGP™",
-      description: "Exchange de-identified evidence and investigation context between OEMs and sensor manufacturers.",
+      name: "Investigation Tier Candidate™",
+      description:
+        "Forms candidate investigation tiers from the available evidence to help route an event into the appropriate workflow.",
       keyFeatures: [
-        "De-identified runtime evidence exchange",
-        "Bounded collaboration context",
-        "Protect operational privacy for both parties",
+        "Support Tier 1 initial classification and evidence review",
+        "Support escalation to Tier 2 / Tier 3 engineering investigation",
+        "Flag candidates requiring OEM engineering or sensor FAE involvement",
+        "Provide investigation direction without replacing human judgment",
       ],
     },
+
+    {
+      name: "Sensor Engagement Pack™",
+      description:
+        "Establishes a bounded investigation collaboration package between an OEM and a sensor manufacturer.",
+      keyFeatures: [
+        "Extract investigation evidence directly related to the sensor boundary",
+        "Remove unnecessary customer operational information",
+        "Standardize the event context and evidence format needed by sensor FAEs",
+        "Preserve each party's data and responsibility boundaries",
+      ],
+    },
+
     {
       name: "Assist Vault™",
-      description: "Preserve completed investigation assets as organizational memory.",
+      description:
+        "Preserves completed investigation results, evidence assets, and lessons learned as organizational memory.",
       keyFeatures: [
-        "Save investigation results and lessons learned",
-        "Retain Evidence Packs™ for future reference",
-        "Support Historical RGA™ retrieval",
-        "Build reusable knowledge base",
+        "Store investigation results and Lessons Learned",
+        "Associate original Evidence Packs™ and investigation context",
+        "Support future Historical RGA™ recall",
+        "Let the next investigation begin with organizational memory instead of zero",
       ],
     },
+
     {
-      name: "Executive Dashboard™",
-      description: "Present investigation throughput, evidence coverage, reuse rate, SLA, and illustrative ROI.",
+      name: "CTO Dashboard",
+      description:
+        "Transforms runtime investigations into traceable organizational-governance and engineering-operations metrics.",
       keyFeatures: [
-        "Investigation throughput and SLA tracking",
-        "Evidence coverage visualization",
-        "Historical RGA™ reuse rate",
-        "Illustrative ROI metrics",
+        "Track investigation volume, cycle time, and SLA",
+        "Monitor evidence coverage and investigation-asset reuse rates",
+        "Identify recurring runtime-boundary issues",
+        "Present runtime-governance investment and illustrative ROI",
       ],
     },
   ],
 
   productsRelationship: {
-    title: "Platform and Product Relationship",
-    description: "The Atlas platform supports two focused product lines, each serving different sides of the runtime boundary.",
+    title: "One Platform, Two Product Lines",
+    description:
+      "Both product lines share Atlas infrastructure for runtime observation, evidence governance, investigation collaboration, and organizational memory, while serving the distinct responsibility boundaries of robot OEMs and sensor manufacturers.",
+
     products: [
       {
-        name: "Atlas Runtime Sensor Governance™",
-        audience: "Sensor Manufacturers",
+        name: "Atlas Runtime Investigation™",
+        audience: "For Robot OEMs",
         coreModules: [
-          "Runtime Profiles™",
-          "Runtime Observation",
-          "Historical Sensor RGA™",
-          "Sensor Investigation Workspace™",
-          "OEM Collaboration via EGP",
-          "Sensor Assist Vault™",
-          "Runtime Knowledge Base™",
+          "Atlas Agent™ and Runtime Surface™",
+          "Runtime Dataset™ retention",
+          "Evidence Pack™ event windows",
+          "Investigation Context™",
+          "Investigation Tier Candidate™",
+          "Historical RGA™",
+          "Sensor Engagement Pack™",
+          "Assist Vault™",
+          "CTO Dashboard",
         ],
       },
+
       {
-        name: "Atlas Runtime Investigation™",
-        audience: "Robot OEMs",
+        name: "Atlas Runtime Sensor Governance™",
+        audience: "For Sensor Manufacturers",
         coreModules: [
-          "Atlas Agent™",
-          "Runtime Dataset Retention",
-          "Evidence Pack™",
-          "Candidate Evidence Packs",
-          "Historical RGA™",
-          "Investigation Workspace™",
-          "Sensor Engagement Pack (EGP)",
-          "Assist Vault™",
-          "Executive Dashboard™",
+          "Sensor runtime-boundary observation",
+          "Runtime Profiles™",
+          "Sensor Investigation Workspace™",
+          "Historical Sensor RGA™",
+          "Sensor Engagement Pack™ collaboration",
+          "Sensor Assist Vault™",
+          "Runtime Knowledge Base™",
         ],
       },
     ],
   },
 
   documentation: {
-    title: "Technical Documentation",
+    title: "Explore the Platform Architecture",
+
     whitePapers: [
       {
-        title: "Runtime Intelligence Infrastructure for Robotics",
-        description: "Management and engineering reading layer: what runtime intelligence infrastructure is and why it matters for robot organizations.",
+        title: "Atlas Agent™",
+        description:
+          "Learn how Atlas continuously observes, retains, and exports runtime data in the customer environment.",
       },
       {
-        title: "Atlas Runtime Sensor Governance",
-        description: "Complete technical specification and implementation guide for the sensor manufacturer product line.",
+        title: "Runtime Surface™ and Runtime Dataset™",
+        description:
+          "Learn how Atlas connects to existing runtime environments and turns distributed data sources into governable datasets.",
       },
       {
-        title: "Atlas Runtime Investigation",
-        description: "Complete technical specification and implementation guide for the robot OEM product line.",
+        title: "Evidence Pack™",
+        description:
+          "Learn how runtime events are compressed into bounded, time-aligned, reviewable evidence windows.",
       },
       {
-        title: "Evidence Pack and Five-Window Evidence Model",
-        description: "Design rationale for Evidence Pack™ and technical implementation of the five-window evidence model.",
+        title: "Historical RGA™",
+        description:
+          "Learn how Atlas recalls historical investigation candidates while preserving the boundary of human root-cause judgment.",
       },
       {
-        title: "Historical RGA and Organizational Memory",
-        description: "How Historical RGA™ retrieves candidates, marks strength, and maintains organizational memory consistency.",
+        title: "Investigation Context™",
+        description:
+          "Learn how event background, runtime environment, evidence, and investigation workflow are organized in one place.",
       },
       {
-        title: "OEM ↔ Sensor Investigation Collaboration",
-        description: "Investigation collaboration mechanisms and evidence exchange patterns between OEMs and sensor manufacturers.",
+        title: "Sensor Engagement Pack™",
+        description:
+          "Learn how OEMs and sensor manufacturers collaborate through investigation packages with explicit boundaries.",
       },
     ],
+
     documentationLink: {
-      title: "docs.sensordeck.tech",
-      description: "Canonical data schemas, CLI, integration guides, artifact definitions, release notes, and technical implementation documentation.",
-      href: "https://docs.sensordeck.tech",
+      title: "Read the Complete Platform Architecture Documentation",
+      description:
+        "View the complete technical descriptions of Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, Sensor Engagement Pack™, Assist Vault™, and CTO Dashboard.",
+      href: "https://sensordeck.github.io/atlas-docs-cn/category/平台架构",
     },
   },
 
   cta: {
-    title: "Learn How Atlas Platform Fits Your Organization",
-    description: "Explore how Atlas fits your robot organization's runtime boundaries, investigation workflows, and evidence ownership model.",
-    primaryButton: "Request Demo",
-    secondaryButton: "Read Technical Whitepaper",
+    title: "Start with Your Runtime Boundary",
+    description:
+      "Tell us about your robotics platform, primary sensors, deployment environment, and current investigation workflow. Together, we will assess how Atlas can fit into your existing engineering system.",
+    primaryButton: "Request a Demo",
+    secondaryButton: "Read the Platform Architecture Documentation",
   },
 } satisfies PlatformContent;

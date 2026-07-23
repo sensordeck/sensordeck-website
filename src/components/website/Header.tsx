@@ -45,8 +45,8 @@ const headerCopy: Record<
     navigation: [
       { label: "Products", href: "/products" },
       { label: "Platform", href: "/platform" },
-      { label: "Technology", href: "/technology" },
-      { label: "Library", href: "/library" },
+      { label: "Deployment", href: "/technology" },
+      { label: "Technical Resources", href: "/library" },
       { label: "Company", href: "/company" },
       { label: "Contact", href: "/contact" },
     ],
