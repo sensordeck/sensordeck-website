@@ -218,7 +218,7 @@ export const libraryContent = {
       description:
         "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板。",
       type: "交互式",
-      href: "/demo",
+      href: "/demo#demo-scenario",
       disabled: false,
     },
   ],
