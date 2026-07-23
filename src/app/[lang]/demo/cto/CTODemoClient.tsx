@@ -348,17 +348,17 @@ const lang = params.lang === "en" ? "en" : "zh";
             </div>
           </div>
         </Section>
-{/* Navigation */}
-<Section id="navigation" className="bg-surface">
-  <div className="border-t border-border pt-6">
-    <Link
-      href={localizeHref(lang, "/demo")}
-      className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
-    >
-      {lang === "zh" ? "← 返回演示中心" : "← Back to Demo"}
-    </Link>
-  </div>
-</Section>
-      
-    </div>);
+        {/* Navigation */}
+        <Section id="navigation" className="bg-surface">
+          <div className="border-t border-border pt-6">
+            <Link
+              href={localizeHref(lang, "/demo")}
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+            >
+              {lang === "zh" ? "← 返回演示中心" : "← Back to Demo"}
+            </Link>
+          </div>
+        </Section>
+    </div>
+  );
 }
