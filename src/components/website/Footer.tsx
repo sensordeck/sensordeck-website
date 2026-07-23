@@ -50,7 +50,7 @@ const footerCopy: Record<
 links: [
   {
     label: "常见问题",
-    href: "/faq",
+    href: "/library/faq",
   },
   {
     label: "产品演示",
@@ -91,7 +91,7 @@ links: [
       {
         title: "Resources",
         links: [
-          { label: "FAQ", href: "/faq" },
+          { label: "FAQ", href: "/library/faq" },
           { label: "Product Demo", href: "/demo" },
           { label: "Interface Demo", href: "/demo#demo-scenario" },
         ],
