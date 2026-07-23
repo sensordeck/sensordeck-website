@@ -1,11 +1,14 @@
 "use client";
 
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 import Eyebrow from "@/components/website/Eyebrow";
 import Section from "@/components/website/Section";
 import agentData from "@/data/demo/agent.json";
 import refData from "@/data/demo/ref.json";
 import robotData from "@/data/demo/robot.json";
+import { localizeHref } from "@/lib/i18n";
 import type { DemoContent } from "@/lib/content-types";
 
 const STEPS = ["incident", "robot", "evidence", "review"] as const;
@@ -16,6 +19,9 @@ export default function Tier1DemoClient({
 }: {
   content: DemoContent;
 }) {
+  const params = useParams<{ lang: string }>();
+  const lang = params.lang === "en" ? "en" : "zh";
+
   const [currentStep, setCurrentStep] = useState<Step>("incident");
 
   const stepIndex = STEPS.indexOf(currentStep);
@@ -404,5 +410,16 @@ export default function Tier1DemoClient({
           </div>
         </Section>
 
+        {/* Navigation */}
+        <Section id="navigation" className="bg-surface">
+          <div className="border-t border-border pt-6">
+            <Link
+              href={localizeHref(lang, "/demo")}
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+            >
+              {lang === "zh" ? "← 返回演示中心" : "← Back to Demo"}
+            </Link>
+          </div>
+        </Section>
+
     </div>);
-}
