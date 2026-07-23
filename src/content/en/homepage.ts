@@ -1,6 +1,6 @@
 /**
- * SensorDeck Official Website Homepage Content (Simplified)
- * For root path / enterprise website display
+ * SensorDeck Official Website Homepage Content
+ * English Homepage
  */
 
 import type { HomepageContent } from "@/lib/content-types";
@@ -10,9 +10,9 @@ export const homepageContent = {
     eyebrow: "SensorDeck",
     title: "Runtime Intelligence Infrastructure for Robotics",
     subtitle:
-      "Establish governed runtime boundaries between sensors, systems, and engineering decisions.",
+      "Govern runtime behavior across sensors, embedded systems, and robot operations.",
     description:
-      "Robot teams need more than another log archive. SensorDeck defines the infrastructure layer to observe runtime conditions, structure evidence, support investigations, and preserve organizational learning.",
+      "Robot teams need more than logs. SensorDeck provides the infrastructure layer for runtime evidence, investigation, and reusable operational knowledge.",
     principles: ["Observe", "Understand", "Investigate", "Improve", "Reuse"],
     cta: {
       primary: { text: "Request Demo", href: "#contact-form" },
@@ -22,48 +22,48 @@ export const homepageContent = {
 
   problem: {
     eyebrow: "01 / Problem",
-    title: "Why Robot Runtime Incidents Are Hard to Investigate",
+    title: "Why Robot Runtime Incidents Are Difficult to Investigate",
     description:
-      "Signals are available, but operational context is often scattered across devices, logs, tickets, recordings, and personal memory.",
+      "Runtime signals exist, but the evidence is often scattered across devices, logs, tickets, recordings, and engineering teams.",
     challenges: [
       {
-        label: "Fragmented Signals",
+        label: "Fragmented Runtime Evidence",
         description:
-          "Sensor output, power, timing, network, host runtime, and ROS context are typically reviewed in different tools.",
+          "Sensor output, power, timing, networking, Linux runtime, and ROS context are typically analyzed in separate tools.",
       },
       {
-        label: "Unbounded Events",
+        label: "Undefined Evidence Boundaries",
         description:
-          "Unlimited archives make it hard to agree on the exact evidence window that matters.",
+          "Long-running runtime data makes it difficult to identify the precise evidence window required for investigation.",
       },
       {
-        label: "Knowledge Resets on Close",
+        label: "Knowledge Lost After Investigation",
         description:
-          "Conclusions may live in tickets or someone's memory, rather than becoming reusable investigation assets.",
+          "Investigation results often remain in tickets or personal experience instead of becoming reusable organizational knowledge.",
       },
     ],
   },
 
   value: {
     eyebrow: "02 / Atlas Core Value",
-    title: "From Runtime Boundaries to Organizational Memory",
+    title: "From Runtime Boundaries to Organizational Knowledge",
     description:
-      "Atlas operates at the boundary where sensor behavior becomes system-level runtime conditions: power, bus, Linux/SBC runtime, ROS inputs, and the teams responsible for investigation.",
+      "Atlas connects runtime observations with structured evidence, investigation workflows, and reusable operational knowledge across the sensor-to-system boundary.",
     benefits: [
       {
         label: "Runtime Boundaries",
         description:
-          "Connect sensor behavior to power, bus, Linux/SBC runtime, ROS inputs, and application context.",
+          "Connect sensor behavior with power, communication buses, Linux runtime, ROS inputs, and application context.",
       },
       {
-        label: "Bounded Evidence",
+        label: "Structured Evidence",
         description:
-          "Transform long-running runtime datasets into standardized evidence windows for team review and exchange.",
+          "Transform continuous runtime data into standardized evidence windows for investigation and collaboration.",
       },
       {
         label: "Reusable Knowledge",
         description:
-          "Preserve human-authored investigation results and lessons learned for future reference.",
+          "Preserve investigation results and lessons learned for future engineering teams.",
       },
     ],
   },
@@ -72,13 +72,13 @@ export const homepageContent = {
     eyebrow: "03 / Product Lines",
     title: "Two Atlas Product Lines. One Shared Infrastructure.",
     description:
-      "Sensor manufacturers and robot OEMs work on different sides of the runtime boundary. Atlas provides focused product lines for each party while maintaining consistency in evidence and collaboration.",
+      "Sensor manufacturers and robot OEMs operate on different sides of the runtime boundary. Atlas provides purpose-built products for each organization while maintaining a shared runtime evidence model.",
     lines: [
       {
         name: "Atlas Runtime Sensor Governance™",
         audience: "Sensor Manufacturers",
         description:
-          "Understand how your sensors perform in real robot deployments, preserve runtime knowledge, and collaborate with OEM investigation teams using shared evidence.",
+          "Understand sensor behavior in real robot deployments, preserve runtime knowledge, and collaborate with OEM investigation teams using shared runtime evidence.",
         keyModules: [
           "Runtime Profiles™",
           "Runtime Observation",
@@ -90,7 +90,7 @@ export const homepageContent = {
         name: "Atlas Runtime Investigation™",
         audience: "Robot OEMs",
         description:
-          "Transform runtime events into bounded evidence, coordinate investigations, and build reusable organizational knowledge.",
+          "Transform runtime events into structured evidence, coordinate investigations, and build reusable organizational knowledge.",
         keyModules: [
           "Atlas Agent™",
           "Evidence Pack™",
@@ -103,27 +103,27 @@ export const homepageContent = {
 
   customers: {
     eyebrow: "04 / Customer Focus",
-    title: "Serving the Robotics Ecosystem",
+    title: "Built for Robot OEMs and Sensor Manufacturers",
     sensorManufacturers: {
       title: "Sensor Manufacturers",
       description:
-        "Understand sensor runtime behavior in real OEM deployments, collaborate with customer investigation teams, and build organizational runtime knowledge.",
+        "Understand sensor runtime behavior in real robot deployments, collaborate with OEM investigation teams, and continuously improve product reliability.",
       capabilities: [
         "Runtime Profile Definition",
         "Runtime Observation & Retention",
-        "Evidence Sharing with OEMs (EGP)",
+        "Evidence Sharing via EGP",
         "Historical Case Recall",
       ],
     },
     robotOems: {
       title: "Robot OEMs",
       description:
-        "Transform runtime events into governed evidence, coordinate multi-party investigations, build organizational memory, and support future reuse.",
+        "Transform runtime events into structured evidence, coordinate cross-functional investigations, preserve engineering knowledge, and improve future response efficiency.",
       capabilities: [
         "Runtime Dataset Retention",
         "Evidence Pack Generation",
         "Investigation Workflow Coordination",
-        "Assist Vault Organizational Memory",
+        "Assist Vault Organizational Knowledge",
       ],
     },
   },
@@ -131,23 +131,23 @@ export const homepageContent = {
   principle: {
     eyebrow: "05 / Operating Principles",
     title: "Evidence Before Conclusions",
-    subtitle: "No Causality Claims, No Blame Assignment",
+    subtitle: "Structured Evidence. Human Judgment.",
     description:
-      "Atlas structures evidence and retrieves historical candidates. Human teams are responsible for authoring investigation results and lessons learned.",
+      "Atlas structures runtime evidence and retrieves historical investigation candidates. Engineering teams remain responsible for determining root cause, authoring conclusions, and recording lessons learned.",
     boundaries: [
-      "Atlas structures evidence.",
-      "Atlas retrieves historical candidates.",
-      "Atlas does not automatically confirm root cause.",
+      "Atlas structures runtime evidence.",
+      "Atlas retrieves historical investigation candidates.",
+      "Atlas does not determine root cause.",
       "Atlas does not assign responsibility.",
     ],
   },
 
   cta: {
     eyebrow: "06 / Request Demo",
-    title: "Make Runtime Evidence Work Across Your Organization",
+    title: "Bring Runtime Evidence Into Your Investigation Workflow",
     description:
-      "Learn how Atlas fits your robot organization's runtime boundaries, investigation workflows, and evidence ownership model.",
-    note: "Demo data for illustration only",
+      "Discuss your robot platform, runtime environment, and investigation workflow to see where Atlas fits within your engineering organization.",
+    note: "Illustration data used for demonstration purposes only.",
     button: {
       text: "Contact Us",
       href: "mailto:contact@sensordeck.tech",
