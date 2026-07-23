@@ -410,7 +410,7 @@ export default function Tier1DemoClient({
           </div>
         </Section>
 
-        {/* Navigation */}
+    {/* Navigation */}
         <Section id="navigation" className="bg-surface">
           <div className="border-t border-border pt-6">
             <Link
@@ -421,5 +421,6 @@ export default function Tier1DemoClient({
             </Link>
           </div>
         </Section>
-
-    </div>);
+    </div>
+  );
+}
