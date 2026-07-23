@@ -92,7 +92,7 @@ export default async function HomePage({
       {/* Hero */}
       <section
         id="top"
-        className="relative min-h-[930px] overflow-hidden border-b border-border bg-white sm:min-h-[600px] lg:min-h-[780px]"
+        className="relative min-h-[780px] overflow-hidden border-b border-border bg-white sm:min-h-[600px] lg:min-h-[720px]"
       >
         {/* Desktop Hero */}
         <Image
@@ -138,20 +138,22 @@ export default async function HomePage({
         <div className="absolute inset-0 z-20 flex items-start pt-8 sm:pt-20 lg:items-center lg:pt-0">
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-[42rem]">
-              <h1
-                className="
-                  heading-title
-                  whitespace-pre-line
-                  font-sans
-                  text-display
-                  font-semibold
-                  leading-tight
-                  tracking-tight
-                  text-ink
-                  sm:text-display-md
-                  lg:text-display-lg
-                "
-              >
+            <h1
+  className="
+    heading-title
+    whitespace-pre-line
+    font-sans
+    text-[2.9rem]
+    font-semibold
+    leading-tight
+    tracking-tight
+    text-ink
+    sm:text-display-md
+    lg:text-display-lg
+  "
+>
+  {homeContent.heroTitle}
+</h1>
                 {homeContent.heroTitle}
               </h1>
 
