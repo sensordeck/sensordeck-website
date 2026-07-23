@@ -92,7 +92,7 @@ export default async function HomePage({
       {/* Hero */}
       <section
         id="top"
-        className="relative min-h-[680px] overflow-hidden border-b border-border bg-white sm:min-h-[640px] lg:min-h-[880px]"
+        className="relative min-h-[780px] overflow-hidden border-b border-border bg-white sm:min-h-[600px] lg:min-h-[780px]"
       >
         {/* Desktop Hero */}
         <Image
