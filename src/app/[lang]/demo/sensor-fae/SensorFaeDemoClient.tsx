@@ -7,12 +7,17 @@ import refData from "@/data/demo/ref.json";
 import epData from "@/data/demo/evidence-pack.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
 import type { DemoContent } from "@/lib/content-types";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { localizeHref } from "@/lib/i18n";
 
 export default function SensorFaeDemoClient({
   content,
 }: {
   content: DemoContent;
 }) {
+  const params = useParams<{ lang: string }>();
+const lang = params.lang === "en" ? "en" : "zh";
   const [irStatus, setIrStatus] = useState("matched_known_pattern");
   const [llDraft, setLlDraft] = useState(content.sensorFae.initialLessonLearned);
 
@@ -298,6 +303,17 @@ export default function SensorFaeDemoClient({
             </div>
           </div>
         </Section>
-
-    </div>);
+ {/* Navigation */}
+        <Section id="navigation" className="bg-surface">
+          <div className="border-t border-border pt-6">
+            <Link
+              href={localizeHref(lang, "/demo")}
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+            >
+              {lang === "zh" ? "← 返回演示中心" : "← Back to Demo"}
+            </Link>
+          </div>
+        </Section>
+    </div>
+  );
 }
