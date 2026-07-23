@@ -89,9 +89,9 @@ links: [
         ],
       },
       {
-        title: "Technical Resources",
+        title: "Resources",
         links: [
-          { label: "Resources", href: "/library" },
+          { label: "Explore Atlas", href: "/library" },
           { label: "Product Demo", href: "/demo" },
           { label: "Interface Demo", href: "/demo#demo-scenario" },
         ],
