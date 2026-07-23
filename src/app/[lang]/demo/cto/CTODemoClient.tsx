@@ -4,6 +4,9 @@ import { useState } from "react";
 import Eyebrow from "@/components/website/Eyebrow";
 import Section from "@/components/website/Section";
 import type { DemoContent } from "@/lib/content-types";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { localizeHref } from "@/lib/i18n";
 
 type TimeRange = "30" | "90" | "180";
 type RoiMode = "conservative" | "expected" | "actual";
@@ -13,6 +16,9 @@ export default function CTODemoClient({
 }: {
   content: DemoContent;
 }) {
+  const params = useParams<{ lang: string }>();
+const lang = params.lang === "en" ? "en" : "zh";
+  
   const [timeRange, setTimeRange] = useState<TimeRange>("90");
   const [roiMode, setRoiMode] = useState<RoiMode>("expected");
 
@@ -342,6 +348,17 @@ export default function CTODemoClient({
             </div>
           </div>
         </Section>
-
+{/* Navigation */}
+<Section id="navigation" className="bg-surface">
+  <div className="border-t border-border pt-6">
+    <Link
+      href={localizeHref(lang, "/demo")}
+      className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+    >
+      {lang === "zh" ? "← 返回演示中心" : "← Back to Demo"}
+    </Link>
+  </div>
+</Section>
+      
     </div>);
 }
