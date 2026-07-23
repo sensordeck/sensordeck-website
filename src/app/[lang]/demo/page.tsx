@@ -34,20 +34,21 @@ export default async function DemoIndexPage({
 
   return (
     <div className="bg-white font-sans text-ink">
-      {/* Hero */}
-      <Section id="demo-hero" className="bg-white">
-        <div className="max-w-4xl">
-          <Eyebrow>{content.index.hero.eyebrow}</Eyebrow>
+     {/* Hero */}
+<Section id="demo-hero" className="bg-white">
+  <div className="max-w-4xl">
+    <Eyebrow>Atlas 演示</Eyebrow>
 
-          <h1 className="mt-5 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink md:text-page-title-md lg:text-page-title-lg">
-            {content.index.hero.title}
-          </h1>
+    <h1 className="mt-5 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink md:text-page-title-md lg:text-page-title-lg">
+      产品演示与交互式界面
+    </h1>
 
-          <p className="mt-7 text-body-lg leading-relaxed text-muted md:text-body-lg-md">
-            {content.index.hero.description}
-          </p>
-        </div>
-      </Section>
+    <p className="mt-7 max-w-3xl text-body-lg leading-relaxed text-muted md:text-body-lg-md">
+      通过两条产品线的视频和四个角色的交互式演示界面，了解 Atlas
+      如何组织运行时证据、支持调查协作，并将完成的调查沉淀为可复用的组织资产。
+    </p>
+  </div>
+</Section>
 
       {/* Product videos */}
       <Section id="atlas-product-videos" className="bg-surface">
