@@ -304,47 +304,6 @@ export default function InvestigationDemoClient({
           </div>
         </Section>
 
-        {/* Forbidden Language Demo */}
-        <Section className="bg-white">
-          <Eyebrow>{content.investigation.languageEyebrow}</Eyebrow>
-          <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{content.investigation.languageTitle}
-
-          </h2>
-          <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div>
-              <p className="text-label font-semibold text-red-700">{content.investigation.prohibitedLabel}</p>
-              <ul className="mt-4 space-y-2 text-label text-muted">
-                <li className="line-through">{content.investigation.prohibitedTerms[0]}</li>
-                <li className="line-through">{content.investigation.prohibitedTerms[1]}</li>
-                <li className="line-through">{content.investigation.prohibitedTerms[2]}</li>
-                <li className="line-through">{content.investigation.prohibitedTerms[3]}</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-label font-semibold text-green-700">{content.investigation.allowedLabel}</p>
-              <ul className="mt-4 space-y-2 text-label text-ink">
-                <li>{content.investigation.allowedTerms[0]}</li>
-                <li>{content.investigation.allowedTerms[1]}</li>
-                <li>{content.investigation.allowedTerms[2]}</li>
-                <li>{content.investigation.allowedTerms[3]}</li>
-                <li>{content.investigation.allowedTerms[4]}</li>
-              </ul>
-            </div>
-          </div>
-        </Section>
-
-        {/* Demo Notice */}
-        <Section className="bg-surface">
-          <div className="border border-atlas-blue/25 bg-surface-blue p-5">
-            <div className="flex items-start gap-3">
-              <span className="mt-1 font-mono text-eyebrow font-semibold text-atlas-blue">{content.investigation.demoLabel}</span>
-              <p className="text-caption leading-relaxed text-muted">{content.investigation.demoDescription}
-
-
-              </p>
-            </div>
-          </div>
-        </Section>
-
+        
     </div>);
 }
