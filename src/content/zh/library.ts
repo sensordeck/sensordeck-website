@@ -166,7 +166,7 @@ export const libraryContent = {
         id: "REF-06",
         title: "参考资料",
         description:
-          "查看常见问题、企业交付与下载说明，以及 Atlas 版本发布记录。",
+          "查看演示界面、常见问题、企业交付与下载说明，以及 Atlas 版本发布记录。",
         size: "在线文档",
         format: "HTML",
       },
