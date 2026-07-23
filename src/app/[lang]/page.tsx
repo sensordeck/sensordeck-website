@@ -138,7 +138,7 @@ export default async function HomePage({
         <div className="absolute inset-0 z-20 flex items-start pt-8 sm:pt-20 lg:items-center lg:pt-0">
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-[42rem]">
-            <h1
+           <h1
   className="
     heading-title
     whitespace-pre-line
@@ -154,8 +154,6 @@ export default async function HomePage({
 >
   {homeContent.heroTitle}
 </h1>
-                {homeContent.heroTitle}
-              </h1>
 
               {/* Desktop Subtitle */}
               <p
