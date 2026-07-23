@@ -15,18 +15,6 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-function ArrowLabel({
-  external = false,
-}: {
-  external?: boolean;
-}) {
-  return (
-    <span aria-hidden="true" className="text-atlas-blue">
-      {external ? "↗" : "→"}
-    </span>
-  );
-}
-
 function isExternalHref(href: string) {
   return href.startsWith("http://") || href.startsWith("https://");
 }
@@ -44,7 +32,6 @@ export default async function LibraryIndexPage({
 
   const content = await getLibraryContent(lang);
   const { hero, cta, ui } = content;
-  const libraryResources = ui.resourceCards;
 
   return (
     <div className="bg-white font-sans text-ink">
@@ -63,36 +50,23 @@ export default async function LibraryIndexPage({
         </div>
       </Section>
 
-      {/* Resource cards */}
+      {/* Four resource cards */}
       <Section id="resources" className="bg-surface">
-        <div className="max-w-3xl">
-          <Eyebrow>Resources</Eyebrow>
-
-          <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-            Atlas 资料与演示
-          </h2>
-
-          <p className="heading-description mt-5 text-body leading-8 text-muted">
-            从公开演示开始了解 Atlas，也可以查看常见问题、企业交付说明和版本发布记录。
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {libraryResources.map((resource, index) => {
+        <div className="grid gap-6 md:grid-cols-2">
+          {ui.resourceCards.map((resource, index) => {
             const external = isExternalHref(resource.href);
+
             const href = external
               ? resource.href
               : localizeHref(lang, resource.href);
 
-            return (
-              <Card
-                className={`stagger-item flex min-h-0 flex-col justify-between sm:min-h-72 ${
-                  index === 0
-                    ? "border-atlas-blue/40 bg-surface-blue"
-                    : ""
-                }`}
-                key={resource.id}
-              >
+            const cardClassName =
+              index === 0
+                ? "stagger-item flex min-h-0 flex-col justify-between border-atlas-blue/40 bg-surface-blue sm:min-h-72"
+                : "stagger-item flex min-h-0 flex-col justify-between sm:min-h-72";
+
+            const cardContent = (
+              <>
                 <div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="font-mono text-code leading-normal text-atlas-blue">
@@ -104,9 +78,9 @@ export default async function LibraryIndexPage({
                     </span>
                   </div>
 
-                  <h3 className="mt-8 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+                  <h2 className="mt-8 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
                     {resource.title}
-                  </h3>
+                  </h2>
 
                   <p className="mt-4 text-body leading-8 text-muted">
                     {resource.description}
@@ -114,27 +88,42 @@ export default async function LibraryIndexPage({
                 </div>
 
                 <div className="mt-7 border-t border-border pt-4">
-                  {external ? (
-                    <a
-                      className="-my-2 inline-flex min-h-11 items-center gap-2 text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {ui.browse}
-                      <ArrowLabel external />
-                    </a>
-                  ) : (
-                    <Link
-                      className="-my-2 inline-flex min-h-11 items-center gap-2 text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
-                      href={href}
-                    >
-                      {ui.browse}
-                      <ArrowLabel />
-                    </Link>
-                  )}
+                  <span className="-my-2 inline-flex min-h-11 items-center gap-2 text-label font-semibold leading-normal text-atlas-blue">
+                    {ui.browse}
+                    <span aria-hidden="true">
+                      {external ? "↗" : "→"}
+                    </span>
+                  </span>
                 </div>
-              </Card>
+              </>
+            );
+
+            if (external) {
+              return (
+                <a
+                  key={resource.id}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Card className={cardClassName}>
+                    {cardContent}
+                  </Card>
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={resource.id}
+                href={href}
+                className="block"
+              >
+                <Card className={cardClassName}>
+                  {cardContent}
+                </Card>
+              </Link>
             );
           })}
         </div>
