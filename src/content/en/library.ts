@@ -104,12 +104,12 @@ export const libraryContent = {
     nextFaq: "Frequently Asked Questions →",
   },
 
-  hero: {
-    eyebrow: "SensorDeck Resource Center",
-    title: "Atlas Technical Resources",
-    subtitle:
-      "Explore product demonstrations, technical documentation, deployment guidance, engineering references, and product updates for Atlas Runtime Governance™.",
-  },
+hero: {
+  eyebrow: "SensorDeck Resources",
+  title: "Explore Atlas",
+  subtitle:
+    "Access product demonstrations, technical documentation, deployment guidance, frequently asked questions, and product updates for Atlas Runtime Governance™.",
+},
 
   whitePapers: {
     eyebrow: "01 / Technical Overview",
