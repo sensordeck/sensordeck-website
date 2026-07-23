@@ -216,7 +216,7 @@ export const libraryContent = {
      {
   title: "Atlas 演示界面",
   description:
-    "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板。",
+    "查看一级受理、调查仪表板、传感器 FAE 工作区和管理层仪表板的模拟交付UI演示界面，展示 Atlas 如何为不同角色提供运行时调查支持。",
   type: "交互式",
   href: "/demo",
   disabled: false,
