@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Eyebrow from "@/components/website/Eyebrow";
 import Section from "@/components/website/Section";
@@ -8,6 +9,9 @@ import candidatesData from "@/data/demo/candidates.json";
 import historicalRgaData from "@/data/demo/historical-rga.json";
 import epData from "@/data/demo/evidence-pack.json";
 import type { DemoContent } from "@/lib/content-types";
+import { localizeHref } from "@/lib/i18n";
+import type { DemoContent } from "@/lib/content-types";
+
 
 type Window = "pre_guard" | "baseline" | "deviation" | "recovery" | "post_guard";
 
@@ -16,6 +20,8 @@ export default function InvestigationDemoClient({
 }: {
   content: DemoContent;
 }) {
+   const params = useParams<{ lang: string }>();
+  const lang = params.lang === "en" ? "en" : "zh";
   const [selectedCandidate, setSelectedCandidate] = useState(candidatesData.candidates[2].id);
   const [selectedWindow, setSelectedWindow] = useState<Window>("deviation");
 
@@ -303,7 +309,17 @@ export default function InvestigationDemoClient({
             </p>
           </div>
         </Section>
-
-        
-    </div>);
+ {/* Navigation */}
+        <Section id="navigation" className="bg-surface">
+          <div className="border-t border-border pt-6">
+            <Link
+              href={localizeHref(lang, "/demo")}
+              className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+            >
+              {lang === "zh" ? "← 返回演示中心" : "← Back to Demo"}
+            </Link>
+          </div>
+        </Section>
+    </div>
+  );
 }
