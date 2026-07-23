@@ -46,7 +46,7 @@ const headerCopy: Record<
       { label: "Products", href: "/products" },
       { label: "Platform", href: "/platform" },
       { label: "Deployment", href: "/technology" },
-      { label: "Technical Resources", href: "/library" },
+      { label: "Resources", href: "/library" },
       { label: "Company", href: "/company" },
       { label: "Contact", href: "/contact" },
     ],
