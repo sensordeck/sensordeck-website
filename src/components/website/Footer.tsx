@@ -49,8 +49,8 @@ const footerCopy: Record<
 
 links: [
   {
-    label: "参考资料",
-    href: "/library",
+    label: "常见问题",
+    href: "/faq",
   },
   {
     label: "产品演示",
@@ -91,7 +91,7 @@ links: [
       {
         title: "Resources",
         links: [
-          { label: "Explore Atlas", href: "/library" },
+          { label: "FAQ", href: "/faq" },
           { label: "Product Demo", href: "/demo" },
           { label: "Interface Demo", href: "/demo#demo-scenario" },
         ],
