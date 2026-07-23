@@ -1,253 +1,415 @@
-import type { PlatformContent } from "@/lib/content-types";
+import { AnimatedSection } from "@/components/website/AnimatedSection";
+import Button from "@/components/website/Button";
+import { getPlatformContent } from "@/lib/content";
+import { isValidLocale, localizeHref } from "@/lib/i18n";
+import { notFound } from "next/navigation";
 
-export const platformContent = {
-  ui: {
-    capabilitiesTitle: "How Atlas Works",
-    coreModulesLabel: "Core Capabilities",
-  },
+export default async function PlatformPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
 
-  hero: {
-    title: "Atlas Runtime Governance Platform",
-    subtitle:
-      "Turn distributed runtime data into bounded evidence, governed investigations, and reusable engineering knowledge.",
-    description:
-      "Atlas governs the runtime boundary across sensors, buses, power, Linux, host controllers, and application inputs. It connects evidence that is otherwise scattered across devices, logs, and engineering teams.",
-  },
+  if (!isValidLocale(lang)) {
+    notFound();
+  }
 
-  architecture: {
-    title: "One governed chain from observation to organizational knowledge",
-    description:
-      "Atlas provides the infrastructure for continuous observation, evidence preservation, event reconstruction, investigation collaboration, historical recall, and knowledge reuse. It supports engineering judgment without replacing robot control systems, operational platforms, or authorized decision-making.",
+  const platformContent = await getPlatformContent(lang);
 
-    principles: [
-      "Customer runtime data remains within the customer's governance boundary",
-      "Continuous data is converted into bounded Evidence Packs™",
-      "Evidence, context, ownership, and investigation status remain reviewable",
-      "Historical RGA™ identifies relevant prior cases without asserting causality",
-      "Authorized engineering teams confirm root cause, responsibility, and Lessons Learned",
-    ],
+  const {
+    ui,
+    hero,
+    architecture,
+    capabilities,
+    productsRelationship,
+    documentation,
+    cta,
+  } = platformContent;
 
-    constitutionalBoundary: {
-      title: "What Atlas Does—and Does Not Do",
-      items: [
-        "Observes, retains, and structures runtime evidence.",
-        "Creates reviewable event windows and investigation context.",
-        "Recalls relevant historical cases and candidate patterns.",
-        "Does not confirm root cause or assign responsibility.",
-      ],
-    },
-  },
+  const pageCopy =
+    lang === "zh"
+      ? {
+          heroEyebrow: "Atlas Platform",
+          architectureEyebrow: "Governance Architecture",
+          boundaryEyebrow: "能力边界",
+          flowEyebrow: "Runtime Evidence Flow",
+          productsEyebrow: "Two Products. One Platform.",
+          documentationEyebrow: "Platform Documentation",
+          ctaEyebrow: "Next Step",
+          evidenceFlowDescription:
+            "Atlas 将持续观察、事件证据、调查协作与知识沉淀连接为一条可审查、可复用的运行时治理链路。",
+          stages: [
+            ["运行时观察", "持续观察并治理客户环境中的关键运行时信号。"],
+            ["证据生成", "将连续数据压缩为有边界、可审查的事件证据。"],
+            ["调查组织", "统一事件上下文、历史候选与调查路径。"],
+            ["跨组织协作", "在明确边界内连接 OEM 与传感器工程团队。"],
+            ["知识与决策", "沉淀调查成果并呈现治理绩效。"],
+          ],
+        }
+      : {
+          heroEyebrow: "Atlas Platform",
+          architectureEyebrow: "Governance Architecture",
+          boundaryEyebrow: "Capability Boundary",
+          flowEyebrow: "Runtime Evidence Flow",
+          productsEyebrow: "Two Products. One Platform.",
+          documentationEyebrow: "Platform Documentation",
+          ctaEyebrow: "Next Step",
+          evidenceFlowDescription:
+            "Atlas connects continuous observation, bounded evidence, investigation workflows, and reusable knowledge into one governed runtime chain.",
+          stages: [
+            [
+              "Runtime Observation",
+              "Continuously observe critical signals in the customer environment.",
+            ],
+            [
+              "Evidence Generation",
+              "Convert continuous data into bounded, reviewable event evidence.",
+            ],
+            [
+              "Investigation Context",
+              "Organize event context, historical candidates, and investigation paths.",
+            ],
+            [
+              "Cross-Organization Collaboration",
+              "Connect OEM and sensor engineering teams within explicit boundaries.",
+            ],
+            [
+              "Knowledge and Decisions",
+              "Preserve investigation outcomes and surface governance performance.",
+            ],
+          ],
+        };
 
-  capabilities: [
+  const architectureStages = [
     {
-      name: "Atlas Agent™",
-      description:
-        "A continuously operating agent that observes and governs data inside the customer environment.",
-      keyFeatures: [
-        "Observe critical runtime signals continuously",
-        "Cover power, buses, Linux, devices, and ROS topics",
-        "Retain, lock, and export data under customer policy",
-        "Keep evidence ownership within the customer boundary",
-      ],
+      number: "01",
+      title: pageCopy.stages[0][0],
+      description: pageCopy.stages[0][1],
+      modules: capabilities.slice(0, 3),
     },
-
     {
-      name: "Runtime Surface™",
-      description:
-        "A unified access layer for distributed device, system, and application signals.",
-      keyFeatures: [
-        "Connect signals across hardware and software layers",
-        "Integrate existing devices, logs, and data sources through adapters",
-        "Provide a standard entry point for event slicing",
-        "Coexist with the customer's existing robotics architecture",
-      ],
+      number: "02",
+      title: pageCopy.stages[1][0],
+      description: pageCopy.stages[1][1],
+      modules: capabilities.slice(3, 4),
     },
-
     {
-      name: "Runtime Dataset™",
-      description:
-        "A governed, time-ordered runtime dataset managed under customer-defined retention policies.",
-      keyFeatures: [
-        "Preserve data before, during, and after an event",
-        "Support configurable scope and retention periods",
-        "Maintain timing, provenance, and environment context",
-        "Provide the source data for Evidence Pack™ generation",
-      ],
+      number: "03",
+      title: pageCopy.stages[2][0],
+      description: pageCopy.stages[2][1],
+      modules: capabilities.slice(4, 7),
     },
-
     {
-      name: "Evidence Pack™",
-      description:
-        "A bounded, time-aligned evidence window generated around a specific runtime event.",
-      keyFeatures: [
-        "Capture relevant data before, during, and after an event",
-        "Align multiple signals to a shared timeline",
-        "Preserve provenance, integrity, and generation context",
-        "Support review across OEM, sensor, and investigation teams",
-      ],
+      number: "04",
+      title: pageCopy.stages[3][0],
+      description: pageCopy.stages[3][1],
+      modules: capabilities.slice(7, 8),
     },
-
     {
-      name: "Historical RGA™",
-      description:
-        "A recall layer for relevant prior cases, patterns, findings, and Lessons Learned.",
-      keyFeatures: [
-        "Retrieve related historical investigations",
-        "Distinguish strong, partial, and contextual candidates",
-        "Expose differences between current and prior environments",
-        "Keep historical similarity separate from root-cause confirmation",
-      ],
+      number: "05",
+      title: pageCopy.stages[4][0],
+      description: pageCopy.stages[4][1],
+      modules: capabilities.slice(8, 10),
     },
+  ];
 
-    {
-      name: "Investigation Context™",
-      description:
-        "A shared structure for the event, environment, evidence, objectives, and participating teams.",
-      keyFeatures: [
-        "Record the robot, sensors, software, and deployment environment",
-        "Connect the event timeline to the Evidence Pack™",
-        "Define scope, status, ownership, and participants",
-        "Reduce repeated collection of background information",
-      ],
-    },
+  return (
+    <main className="bg-white">
+      <section className="border-b border-border bg-white py-16 sm:py-20 md:py-28">
+        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-5xl">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+              {pageCopy.heroEyebrow}
+            </p>
 
-    {
-      name: "Investigation Tier Candidate™",
-      description:
-        "A structured routing signal that helps move an event into the appropriate investigation path.",
-      keyFeatures: [
-        "Support Tier 1 classification and evidence review",
-        "Support Tier 2 and Tier 3 engineering escalation",
-        "Identify cases requiring OEM or Sensor FAE involvement",
-        "Guide routing without replacing human judgment",
-      ],
-    },
+            <h1 className="heading-title mt-6 max-w-4xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
+              {hero.title}
+            </h1>
 
-    {
-      name: "Sensor Engagement Pack™",
-      description:
-        "A bounded evidence package for investigation between an OEM and a sensor manufacturer.",
-      keyFeatures: [
-        "Include evidence relevant to the sensor boundary",
-        "Exclude unnecessary customer operational information",
-        "Standardize context and evidence for Sensor FAE review",
-        "Preserve data, scope, and responsibility boundaries",
-      ],
-    },
+            <p className="heading-description mt-7 max-w-4xl text-body-lg leading-9 text-ink sm:text-body-lg-md">
+              {hero.subtitle}
+            </p>
 
-    {
-      name: "Assist Vault™",
-      description:
-        "A governed repository for completed investigations, findings, evidence, and Lessons Learned.",
-      keyFeatures: [
-        "Preserve Investigation Results and Lessons Learned",
-        "Link findings to original evidence and context",
-        "Support future Historical RGA™ recall",
-        "Let future investigations begin with prior knowledge",
-      ],
-    },
+            <p className="heading-description mt-7 max-w-3xl text-body leading-8 text-muted sm:text-body-lg">
+              {hero.description}
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
 
-    {
-      name: "Executive Dashboard™",
-      description:
-        "A management view of investigation performance, recurring issues, and governance outcomes.",
-      keyFeatures: [
-        "Track investigation volume, cycle time, and SLA performance",
-        "Measure evidence coverage and asset reuse",
-        "Identify recurring runtime-boundary issues",
-        "Present governance progress and operational impact",
-      ],
-    },
-  ],
+      <section className="border-b border-border bg-surface py-14 sm:py-18 md:py-24">
+        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
+            <div>
+              <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+                {pageCopy.architectureEyebrow}
+              </p>
 
-  productsRelationship: {
-    title: "Shared Infrastructure for Two Responsibility Boundaries",
-    description:
-      "Atlas Runtime Investigation™ serves robot OEMs. Atlas Runtime Sensor Governance™ serves sensor manufacturers. Both use the same evidence, collaboration, and knowledge infrastructure while preserving distinct data ownership and engineering responsibilities.",
+              <h2 className="heading-title mt-4 max-w-3xl font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+                {architecture.title}
+              </h2>
 
-    products: [
-      {
-        name: "Atlas Runtime Investigation™",
-        audience: "Robot OEMs",
-        coreModules: [
-          "Atlas Agent™",
-          "Runtime Surface™",
-          "Runtime Dataset™",
-          "Evidence Pack™",
-          "Investigation Context™",
-          "Investigation Tier Candidate™",
-          "Historical RGA™",
-          "Sensor Engagement Pack™",
-          "Assist Vault™",
-          "Executive Dashboard™",
-        ],
-      },
+              <p className="heading-description mt-6 max-w-3xl text-body leading-8 text-muted">
+                {architecture.description}
+              </p>
 
-      {
-        name: "Atlas Runtime Sensor Governance™",
-        audience: "Sensor Manufacturers",
-        coreModules: [
-          "Sensor Boundary Observation",
-          "Runtime Profiles™",
-          "Sensor Investigation Workspace™",
-          "Historical Sensor RGA™",
-          "Sensor Engagement Pack™",
-          "Sensor Assist Vault™",
-          "Runtime Knowledge Base™",
-        ],
-      },
-    ],
-  },
+              <ul className="mt-8 space-y-4">
+                {architecture.principles.map((principle) => (
+                  <li
+                    key={principle}
+                    className="flex items-start gap-4 text-label leading-7 text-ink"
+                  >
+                    <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-atlas-blue" />
+                    <span>{principle}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-  documentation: {
-    title: "Explore the Architecture",
+            <div className="border-l-2 border-sensor-tan bg-white p-6 sm:p-8">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
+                {pageCopy.boundaryEyebrow}
+              </p>
 
-    whitePapers: [
-      {
-        title: "Atlas Agent™",
-        description:
-          "Continuous observation, retention, and controlled export inside the customer environment.",
-      },
-      {
-        title: "Runtime Surface™ and Runtime Dataset™",
-        description:
-          "How Atlas connects distributed signals and creates governed runtime datasets.",
-      },
-      {
-        title: "Evidence Pack™",
-        description:
-          "How Atlas creates bounded, time-aligned evidence around runtime events.",
-      },
-      {
-        title: "Historical RGA™",
-        description:
-          "How prior cases are recalled without replacing engineering judgment.",
-      },
-      {
-        title: "Investigation Context™",
-        description:
-          "How evidence, environment, ownership, and workflow are organized.",
-      },
-      {
-        title: "Sensor Engagement Pack™",
-        description:
-          "How OEM and sensor teams collaborate within explicit evidence boundaries.",
-      },
-    ],
+              <h3 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                {architecture.constitutionalBoundary.title}
+              </h3>
 
-    documentationLink: {
-      title: "Open Platform Documentation",
-      description:
-        "Review the complete architecture for Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, Sensor Engagement Pack™, Assist Vault™, and Executive Dashboard™.",
-      href: "https://sensordeck.github.io/atlas-docs-cn/category/平台架构",
-    },
-  },
+              <ul className="mt-6 space-y-4">
+                {architecture.constitutionalBoundary.items.map((item) => (
+                  <li
+                    key={item}
+                    className="font-mono text-code leading-7 text-muted"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
 
-  cta: {
-    title: "Start with Your Runtime Boundary",
-    description:
-      "Tell us about your robot platform, sensor configuration, deployment environment, and current investigation process. We will assess where Atlas fits within your existing architecture.",
-    primaryButton: "Request a Demo",
-    secondaryButton: "Open Platform Documentation",
-  },
-} satisfies PlatformContent;
+      <section className="border-b border-border bg-white py-14 sm:py-18 md:py-24">
+        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+              {pageCopy.flowEyebrow}
+            </p>
+
+            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+              {ui.capabilitiesTitle}
+            </h2>
+
+            <p className="heading-description mt-5 text-body leading-8 text-muted">
+              {pageCopy.evidenceFlowDescription}
+            </p>
+          </div>
+
+          <div className="mt-12 space-y-6 md:mt-16">
+            {architectureStages.map((stage) => (
+              <div
+                key={stage.number}
+                className="grid gap-6 border-t border-border pt-8 lg:grid-cols-[0.32fr_0.68fr]"
+              >
+                <div>
+                  <p className="font-mono text-caption font-semibold tracking-eyebrow text-atlas-blue">
+                    {stage.number}
+                  </p>
+
+                  <h3 className="mt-3 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                    {stage.title}
+                  </h3>
+
+                  <p className="mt-3 max-w-sm text-label leading-7 text-muted">
+                    {stage.description}
+                  </p>
+                </div>
+
+                <div
+                  className={`grid gap-5 ${
+                    stage.modules.length > 1
+                      ? "md:grid-cols-2"
+                      : "grid-cols-1"
+                  }`}
+                >
+                  {stage.modules.map((capability) => (
+                    <article
+                      key={capability.name}
+                      className="rounded-lg border border-border bg-white p-6 transition-colors hover:border-atlas-blue/40"
+                    >
+                      <h4 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                        {capability.name}
+                      </h4>
+
+                      <p className="mt-3 text-label leading-7 text-muted">
+                        {capability.description}
+                      </p>
+
+                      <ul className="mt-5 space-y-3">
+                        {capability.keyFeatures.map((feature) => (
+                          <li
+                            key={feature}
+                            className="flex items-start gap-3 text-label leading-6 text-ink/75"
+                          >
+                            <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-atlas-blue" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="border-b border-border bg-surface py-14 sm:py-18 md:py-24">
+        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+              {pageCopy.productsEyebrow}
+            </p>
+
+            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+              {productsRelationship.title}
+            </h2>
+
+            <p className="heading-description mt-5 text-body leading-8 text-muted">
+              {productsRelationship.description}
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {productsRelationship.products.map((product, index) => (
+              <article
+                key={product.name}
+                className="rounded-lg border border-border bg-white p-6 sm:p-8"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <p className="font-mono text-caption font-semibold text-atlas-blue">
+                    0{index + 1}
+                  </p>
+
+                  <p className="text-label font-semibold text-atlas-blue">
+                    {product.audience}
+                  </p>
+                </div>
+
+                <h3 className="mt-6 max-w-lg font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                  {product.name}
+                </h3>
+
+                <p className="mt-7 font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
+                  {ui.coreModulesLabel}
+                </p>
+
+                <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {product.coreModules.map((module) => (
+                    <li
+                      key={module}
+                      className="flex items-start gap-3 text-label leading-6 text-ink/75"
+                    >
+                      <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-atlas-blue" />
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="border-b border-border bg-white py-14 sm:py-18 md:py-24">
+        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+            <div>
+              <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+                {pageCopy.documentationEyebrow}
+              </p>
+
+              <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+                {documentation.title}
+              </h2>
+
+              <a
+                href={documentation.documentationLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark"
+              >
+                {documentation.documentationLink.title}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <div>
+              <p className="mb-7 text-body leading-8 text-muted">
+                {documentation.documentationLink.description}
+              </p>
+
+              <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                {documentation.whitePapers.map((paper) => (
+                  <article
+                    key={paper.title}
+                    className="border-t border-border pt-5"
+                  >
+                    <h3 className="font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
+                      {paper.title}
+                    </h3>
+
+                    <p className="mt-2 text-label leading-7 text-muted">
+                      {paper.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="border-b border-border bg-surface py-16 sm:py-20 md:py-24">
+        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+              {pageCopy.ctaEyebrow}
+            </p>
+
+            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+              {cta.title}
+            </h2>
+
+            <p className="heading-description mx-auto mt-6 max-w-2xl text-body leading-8 text-muted">
+              {cta.description}
+            </p>
+
+            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button
+                className="w-full sm:w-auto"
+                href={localizeHref(lang, "/contact")}
+                variant="primary"
+              >
+                {cta.primaryButton}
+              </Button>
+
+              <a
+                href={documentation.documentationLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-label font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white sm:w-auto"
+              >
+                {cta.secondaryButton}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+    </main>
+  );
+}
