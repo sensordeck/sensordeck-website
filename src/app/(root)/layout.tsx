@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh"
+      data-scroll-behavior="smooth"
       className={`h-full antialiased ${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >

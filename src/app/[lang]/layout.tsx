@@ -64,6 +64,7 @@ export default async function LangLayout({
   return (
     <html
       lang={lang}
+      data-scroll-behavior="smooth"
       className={`h-full antialiased ${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
