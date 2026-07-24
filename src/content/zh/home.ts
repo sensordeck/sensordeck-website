@@ -121,7 +121,7 @@ const homeContent = {
 
  theProblem: {
   lead:
-    "当事故 Runtime Execution Failure (REF) 发生后，工程团队首先面对的通常不是分析问题，而是寻找证据。日志需要重新提取，录像需要重新同步，设备状态需要重新确认，相关团队需要重新协调，整个运行过程需要重新拼凑。真正耗费时间的，并不是定位问题，而是寻找和组织证据。",
+    "当事故 Runtime Execution Failure (REF) 发生后，工程团队首先面对的通常不是分析问题，而是寻找证据。日志需要重新提取，录像需要重新同步，设备状态需要重新确认，相关团队需要重新协调，整个运行过程需要重新拼凑。真正耗费时间的，并不是定位问题，而是寻找和组织证据。核心工程资源不段被卷入调查管道。",
 
   cta: "查看 Atlas 如何解决",
 
@@ -175,7 +175,7 @@ const homeContent = {
       name: "Atlas Runtime Sensor Governance™",
       audience: "面向传感器制造商",
       description: "了解您的传感器在真实部署中的表现，保留运行时知识，并与 OEM 调查团队协作。",
-      modules: ["运行时画像™", "运行时观测", "历史传感器 RGA™", "传感器调查工作区™", "借助 EGP™ 的 OEM 协作", "传感器 Assist 知识库™", "运行时知识库™"],
+      modules: ["运行时画像™", "运行时观测", "传感器运行时证据包 EP™", "历史传感器调查案例召回 Historical RGA Recall™", "传感器调查工作区™", "借助 EGP™ 的 OEM 协作", "传感器 Assist 知识库™", "运行时知识库™"],
       lifecycle: ["运行时受控配置", "运行时观察", "传感器<->OEM协同调查 (EGP)", "传感器排查REF工单", "证据包(EP)", "传感器调查流程", "知识库沉淀™", "OEM 协作交接", "知识复用"],
       link: "/products/runtime-sensor-governance",
     },
@@ -183,8 +183,8 @@ const homeContent = {
       name: "Atlas Runtime Investigation™",
       audience: "机器人 OEM",
       description: "将运行时事件转化为边界明确的证据、协调调查和可复用的组织知识。",
-      modules: ["Atlas Agent™ 与运行时数据集", "证据包™ 与候选 EPs", "历史 RGA™ 召回", "调查工作区™（Tier 1 / 2 / 3）", "传感器参与包（EGP）™", "Assist 知识库™", "高管仪表板™"],
-      lifecycle: ["运行时受控配置", "候选证据", "主要证据包", "历史 RGA 召回", "OEM / 传感器调查", "IR + LL", "结案", "Assist Vault", "未来复用"],
+      modules: ["Atlas Agent™ 与运行时数据集", "证据包™ 与候选 EPs", "历史调查案例召回 Historical RGA Recall™", "调查工作区™（Tier 1 / 2 / 3）", "传感器参与包（EGP）™", "Runtime Assist 知识库™", "运行时知识库™", "高管仪表板™"],
+      lifecycle: ["运行时受控配置", "候选证据", "主要证据包(EP)", "历史案例 RGA 召回", "OEM / 传感器调查", "调查结案", "Assist Vault", "未来复用"],
       link: "/products/runtime-investigation",
     },
   ],
