@@ -99,12 +99,12 @@ const homeContent = {
       "Atlas 建立机器人行业此前不存在的一层：Runtime Intelligence Infrastructure™",
 
     capabilities: [
-      "持续运行时观察",
+      "Atlas Agent 持续运行时观察",
       "运行时证据保留",
-      "Evidence Pack",
-      "Runtime Investigation",
-      "Historical RGA",
-      "Assist Vault",
+      "自动生成证据包 Evidence Pack",
+      "事故工单调查流程 Runtime Investigation",
+      "历史调查案例回溯 Historical RGA",
+      "调查知识库沉淀与复用 Assist Vault",
       "组织运行时记忆"
     ],
 
@@ -121,7 +121,7 @@ const homeContent = {
 
  theProblem: {
   lead:
-    "当事故 Runtime Execution Failure (REF) 发生后，工程团队首先面对的通常不是分析问题，而是寻找证据。日志需要重新提取，录像需要重新同步，设备状态需要重新确认，相关团队需要重新协调，整个运行过程需要重新拼凑。真正耗费时间的，并不是定位问题，而是寻找和组织证据。核心工程资源不段被卷入调查管道。",
+    "当事故 Runtime Execution Failure (REF) 发生后，工程团队首先面对的通常不是分析问题，而是寻找证据。日志需要重新提取，录像需要重新同步，设备状态需要重新确认，相关团队需要重新协调，整个运行过程需要重新拼凑。真正耗费时间的，并不是定位问题，而是寻找和组织证据。核心工程资源不断被卷入调查管道。",
 
   cta: "查看 Atlas 如何解决",
 
