@@ -77,15 +77,14 @@ export default async function LibraryIndexPage({
 
       <Section id="start-here" className="bg-surface">
         <div className="mb-10 max-w-3xl md:mb-14">
-          <Eyebrow>Start Here</Eyebrow>
+          <Eyebrow>{ui.startHereEyebrow}</Eyebrow>
 
           <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-            Explore Atlas by Objective
+            {ui.startHereTitle}
           </h2>
 
           <p className="heading-description mt-5 text-body leading-relaxed text-muted md:text-body-lg">
-            Choose the resource that best matches your evaluation, deployment,
-            or investigation objective.
+            {ui.startHereDescription}
           </p>
         </div>
 

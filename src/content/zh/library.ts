@@ -9,6 +9,9 @@ export const libraryContent = {
     breadcrumbLabel: "面包屑导航",
     libraryLabel: "资料库",
     browse: "查看",
+    startHereEyebrow: "从这里开始",
+    startHereTitle: "按目标探索 Atlas",
+    startHereDescription: "选择最符合您的评估、部署或调查目标的资源。",
 
    resourceCards: [
   {

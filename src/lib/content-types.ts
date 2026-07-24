@@ -332,6 +332,9 @@ export interface LibraryContent {
     breadcrumbLabel: string;
     libraryLabel: string;
     browse: string;
+    startHereEyebrow: string;
+    startHereTitle: string;
+    startHereDescription: string;
     resourceCards: Array<{
       id: string;
       title: string;

@@ -5,6 +5,10 @@ export const libraryContent = {
     breadcrumbLabel: "Breadcrumb",
     libraryLabel: "Library",
     browse: "View",
+    startHereEyebrow: "Start Here",
+    startHereTitle: "Explore Atlas by Objective",
+    startHereDescription:
+      "Choose the resource that best matches your evaluation, deployment, or investigation objective.",
 
     resourceCards: [
       {
