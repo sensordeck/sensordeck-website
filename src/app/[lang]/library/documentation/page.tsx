@@ -44,7 +44,7 @@ export default async function DocumentationPage({
         <Section id="documentation-hero" className="bg-white pt-8">
           <div className="max-w-3xl">
             <Eyebrow>{documentation.eyebrow}</Eyebrow>
-            <h1 className="mt-4 font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
+            <h1 className="mt-4 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {documentation.title}
             </h1>
             <p className="mt-7 text-body-lg leading-relaxed text-muted md:text-body-lg-md">

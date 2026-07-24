@@ -47,7 +47,7 @@ export default async function WhitePapersPage({
         <Section id="white-papers-hero" className="bg-white pt-8">
           <div className="max-w-3xl">
             <Eyebrow>{whitePapers.eyebrow}</Eyebrow>
-            <h1 className="mt-4 font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg heading-title">
+            <h1 className="mt-4 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg heading-title">
               {whitePapers.title}
             </h1>
             <p className="mt-7 text-body-lg leading-relaxed text-muted md:text-body-lg-md heading-description">

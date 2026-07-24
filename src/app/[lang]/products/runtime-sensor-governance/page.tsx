@@ -152,11 +152,7 @@ export default async function RuntimeSensorGovernancePage({
             </p>
 
             <h1
-              className={`mt-4 max-w-5xl font-sans font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg ${
-                lang === "zh"
-                  ? "text-[2.25rem] min-[360px]:text-[2.5625rem]"
-                  : "text-display"
-              }`}
+              className="mt-4 max-w-5xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg"
             >
               {heroTitle}
               {heroTitleHasTrademark ? (

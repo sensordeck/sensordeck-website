@@ -33,7 +33,7 @@ export default async function GlossaryPage({
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
+            <h1 className="font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {content.title}
             </h1>
             <p className="mt-6 text-body-lg leading-relaxed text-muted md:text-body-lg-md">

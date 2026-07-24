@@ -44,7 +44,7 @@ export default async function ProductsPage({
                 max-w-4xl
                 whitespace-pre-line
                 font-sans
-                text-display
+                text-page-title
                 font-semibold
                 leading-tight
                 tracking-tight

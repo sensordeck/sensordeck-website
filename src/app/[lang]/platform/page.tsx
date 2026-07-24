@@ -123,7 +123,7 @@ export default async function PlatformPage({
               {pageCopy.heroEyebrow}
             </p>
 
-            <h1 className="heading-title mt-6 max-w-4xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
+            <h1 className="heading-title mt-6 max-w-4xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
               {hero.title}
             </h1>
 

@@ -37,7 +37,7 @@ export default async function ProblemPage({
             {content.eyebrow}
           </p>
 
-          <h1 className="mx-auto max-w-4xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
+          <h1 className="mx-auto max-w-4xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
             {homeContent.sectionTitles.theProblem}
           </h1>
 

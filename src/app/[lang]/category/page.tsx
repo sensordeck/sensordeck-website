@@ -31,7 +31,7 @@ export default async function CategoryPage({
       {content.eyebrow}
     </p>
 
-   <h1 className="mx-auto max-w-5xl font-sans text-display font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
+   <h1 className="mx-auto max-w-5xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
      {lang === "zh"
        ? "Atlas 位于 Sensor 与 System Decision 之间"
        : "Atlas Sits Between the Sensor and the System Decision"}
