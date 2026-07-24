@@ -45,9 +45,7 @@ export default async function ProblemPage({
             {problem.lead}
           </p>
 
-          <p className="mx-auto mt-6 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
-            {homeContent.sectionDescriptions.theProblem}
-          </p>
+          
         </div>
       </Section>
 
