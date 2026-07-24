@@ -143,7 +143,7 @@ export default async function HomePage({
           heading-title
           whitespace-pre-line
           font-sans
-          !text-[2.2rem]
+          !text-[1.8rem]
           font-semibold
           !leading-[1.08]
           tracking-tight
