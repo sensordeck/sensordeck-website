@@ -228,8 +228,8 @@ export default async function DemoIndexPage({
       {/* Notice */}
       <Section id="demo-notice" className="bg-white">
         <div className="border border-atlas-blue/25 bg-surface-blue p-6 md:p-8">
-          <div className="flex items-start gap-4">
-            <span className="mt-1 font-mono text-code text-atlas-blue">
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
+            <span className="shrink-0 whitespace-nowrap font-mono text-code text-atlas-blue sm:mt-1">
               {content.index.notice.label}
             </span>
 

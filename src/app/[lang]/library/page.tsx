@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import Button from "@/components/website/Button";
-import Card from "@/components/website/Card";
 import Section from "@/components/website/Section";
 import { getLibraryContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
@@ -13,10 +11,6 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
       {children}
     </p>
   );
-}
-
-function isExternalHref(href: string) {
-  return href.startsWith("http://") || href.startsWith("https://");
 }
 
 export default async function LibraryIndexPage({
@@ -72,96 +66,6 @@ export default async function LibraryIndexPage({
               teams.
             </p>
           </div>
-        </div>
-      </Section>
-
-      <Section id="start-here" className="bg-surface">
-        <div className="mb-10 max-w-3xl md:mb-14">
-          <Eyebrow>Start Here</Eyebrow>
-
-          <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-            Explore Atlas by Objective
-          </h2>
-
-          <p className="heading-description mt-5 text-body leading-relaxed text-muted md:text-body-lg">
-            Choose the resource that best matches your evaluation, deployment,
-            or investigation objective.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {ui.resourceCards.map((resource, index) => {
-            const external = isExternalHref(resource.href);
-            const href = external
-              ? resource.href
-              : localizeHref(lang, resource.href);
-
-            const cardClassName =
-              index === 0
-                ? "stagger-item group flex h-full min-h-0 flex-col justify-between border-atlas-blue/35 bg-surface-blue transition duration-200 hover:-translate-y-1 hover:border-atlas-blue/60 hover:shadow-sm sm:min-h-[320px]"
-                : "stagger-item group flex h-full min-h-0 flex-col justify-between bg-white transition duration-200 hover:-translate-y-1 hover:border-atlas-blue/40 hover:shadow-sm sm:min-h-[320px]";
-
-            const cardContent = (
-              <>
-                <div>
-                  <div className="flex items-start justify-between gap-4">
-                    <span className="font-mono text-code font-semibold leading-normal text-atlas-blue">
-                      {resource.id}
-                    </span>
-
-                    <span className="border border-border bg-white px-2.5 py-1 font-mono text-caption uppercase leading-normal tracking-eyebrow text-muted">
-                      {resource.items}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-9 max-w-xl font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-                    {resource.title}
-                  </h3>
-
-                  <p className="mt-5 max-w-2xl text-body leading-8 text-muted">
-                    {resource.description}
-                  </p>
-                </div>
-
-                <div className="mt-8 border-t border-border pt-5">
-                  <span className="inline-flex min-h-11 items-center gap-2 text-label font-semibold leading-normal text-atlas-blue">
-                    {ui.browse}
-
-                    <span
-                      aria-hidden="true"
-                      className="transition-transform duration-200 group-hover:translate-x-1"
-                    >
-                      {external ? "↗" : "→"}
-                    </span>
-                  </span>
-                </div>
-              </>
-            );
-
-            if (external) {
-              return (
-                <a
-                  key={resource.id}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block h-full"
-                >
-                  <Card className={cardClassName}>{cardContent}</Card>
-                </a>
-              );
-            }
-
-            return (
-              <Link
-                key={resource.id}
-                href={href}
-                className="block h-full"
-              >
-                <Card className={cardClassName}>{cardContent}</Card>
-              </Link>
-            );
-          })}
         </div>
       </Section>
 

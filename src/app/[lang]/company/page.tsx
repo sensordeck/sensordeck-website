@@ -45,10 +45,7 @@ export default async function CompanyPage({
               lang === "en" ? "about-us-mobile-e.png" : "about-us-mobile.png"
             }')`,
             backgroundSize: "100% auto",
-            backgroundPosition:
-              lang === "en"
-                ? "center calc(100% - 60px)"
-                : "center calc(100% + 48px)",
+            backgroundPosition: "center calc(100% + 48px)",
           }}
           aria-hidden="true"
         />
@@ -76,7 +73,7 @@ export default async function CompanyPage({
         <AnimatedSection>
           <div
             className={`relative z-10 mx-auto w-full max-w-7xl px-6 lg:min-h-[560px] lg:px-8 ${
-              lang === "en" ? "min-h-[1120px]" : "min-h-[760px]"
+              lang === "en" ? "min-h-[840px]" : "min-h-[760px]"
             }`}
           >
             <div className="max-w-[620px] pb-8 pt-14 lg:flex lg:min-h-[560px] lg:flex-col lg:justify-center lg:py-10">
