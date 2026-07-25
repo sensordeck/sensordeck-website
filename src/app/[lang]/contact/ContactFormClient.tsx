@@ -94,7 +94,7 @@ export default function ContactFormClient({
   const deploymentGuideLabel =
     locale === "zh"
       ? "查看中文部署指南"
-      : "View the Chinese Deployment Guide";
+      : "View the Deployment Guide";
 
   return (
     <div className="bg-white">
@@ -265,7 +265,7 @@ export default function ContactFormClient({
           </p>
 
           <a
-            href="https://sensordeck.github.io/atlas-docs-cn/category/部署指南"
+            href="https://docs.sensordeck.tech/category/deployment"
             target="_blank"
             rel="noreferrer"
             className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
