@@ -67,7 +67,7 @@ links: [
   en: {
     backToTopAriaLabel: "Back to top",
     description:
-      "Atlas keeps engineering focused on building robots while making runtime investigation repeatable, structured, and reusable.",
+      "Atlas keeps engineering focused on building robots while turning runtime investigation into an organizational capability.",
     copyright: "© 2026 SensorDeck. All rights reserved.",
     tagline: "Runtime Boundary / Evidence / Memory",
     footerLinksLabel: (groupTitle) => `${groupTitle} footer links`,
