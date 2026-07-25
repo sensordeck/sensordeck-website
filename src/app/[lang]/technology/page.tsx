@@ -378,7 +378,7 @@ export default async function TechnologyPage({
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                {cta.primaryButton.text}
+                href={localizeHref(lang, cta.primaryButton.href)}
               </Button>
 
              
