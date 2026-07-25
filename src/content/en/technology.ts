@@ -286,7 +286,7 @@ Historical-Asset Preservation and Future Recall`,
         "The deployment documentation provides detailed descriptions of roles, deployment workflows, validation methods, and production operations.",
       link: {
         text: "View the Complete Deployment Guide →",
-        href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
+        href: "https://docs.sensordeck.tech/category/deployment",
       },
       href: "/technology/deployment-documentation",
     },
@@ -298,7 +298,7 @@ Historical-Asset Preservation and Future Recall`,
       "Tell us about your robot platform, primary sensors, deployment environment, and current investigation workflow. We will help define the appropriate Atlas deployment boundary and pilot scope for your environment.",
     primaryButton: {
       text: "Read the Deployment Guide",
-      href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
+      href: "https://docs.sensordeck.tech/category/deployment",
     },
     secondaryButton: {
       text: "Request a Demo",
