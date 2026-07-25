@@ -293,16 +293,12 @@ Historical-Asset Preservation and Future Recall`,
   ],
 
   cta: {
-    title: "Start With Your Runtime Environment",
-    description:
-      "Tell us about your robot platform, primary sensors, deployment environment, and current investigation workflow. We will help define the appropriate Atlas deployment boundary and pilot scope for your environment.",
-    primaryButton: {
-      text: "Read the Deployment Guide",
-      href: "https://docs.sensordeck.tech/category/deployment",
-    },
-    secondaryButton: {
-      text: "Request a Demo",
-      href: "/contact",
-    },
+  title: "Start With Your Runtime Environment",
+  description:
+    "Tell us about your robot platform, primary sensors, deployment environment, and current investigation workflow. We will help define the appropriate Atlas deployment boundary and pilot scope for your environment.",
+  primaryButton: {
+    text: "Request a Demo",
+    href: "/contact",
   },
+},
 } satisfies TechnologyContent;
