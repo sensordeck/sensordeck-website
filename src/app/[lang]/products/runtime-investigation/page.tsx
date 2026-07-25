@@ -1,5 +1,6 @@
+import Button from "@/components/website/Button";
 import Section from "@/components/website/Section";
-import { isValidLocale } from "@/lib/i18n";
+import { isValidLocale, localizeHref } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 
 function ArrowIcon() {
