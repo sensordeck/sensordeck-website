@@ -548,6 +548,8 @@ export interface ContactContent {
   fields: {
     name: { label: string; placeholder: string };
     email: { label: string; placeholder: string };
+    phone: { label: string; placeholder: string };
+    wechat?: { label: string; placeholder: string };
     company: { label: string; placeholder: string };
     role: { label: string; placeholder: string };
     organizationType: {

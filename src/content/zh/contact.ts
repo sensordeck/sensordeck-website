@@ -51,6 +51,16 @@ export const contactContent = {
       placeholder: "请输入工作邮箱",
     },
 
+    phone: {
+      label: "手机号",
+      placeholder: "请输入手机号",
+    },
+
+    wechat: {
+      label: "微信号（选填）",
+      placeholder: "请输入微信号",
+    },
+
     company: {
       label: "公司名称",
       placeholder: "请输入公司名称",
