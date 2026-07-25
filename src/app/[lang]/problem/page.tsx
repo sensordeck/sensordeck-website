@@ -32,7 +32,7 @@ export default async function ProblemPage({
     <main className="bg-white">
       {/* Page Introduction */}
       <Section className="bg-surface">
-        <div className="mx-auto max-w-5xl text-center">
+        <div className="mx-auto max-w-5xl text-left sm:text-center">
           <p className="mb-5 font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
             {content.eyebrow}
           </p>
