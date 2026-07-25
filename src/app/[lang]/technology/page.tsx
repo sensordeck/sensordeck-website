@@ -381,13 +381,7 @@ export default async function TechnologyPage({
                 {cta.primaryButton.text}
               </Button>
 
-              <Button
-                variant="outline"
-                href={localizeHref(lang, cta.secondaryButton.href)}
-                className="w-full sm:w-auto"
-              >
-                {cta.secondaryButton.text}
-              </Button>
+             
             </div>
           </div>
         </AnimatedSection>
