@@ -90,7 +90,7 @@ export const libraryContent = {
       "Review the complete technical documentation or speak with SensorDeck about your robot platform, deployment scope, runtime boundaries, and investigation workflow.",
 
     readWhitePapers: "View Frequently Asked Questions",
-    viewDocumentation: "Open Technical Documentation",
+    viewDocumentation: "Open Developement Documentation",
     contactUs: "Contact Us",
 
     whitePaperAvailability:
