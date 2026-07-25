@@ -71,9 +71,6 @@ export const libraryContent = {
 
     documentationTopics: "文档主题",
 
-    documentationHosting:
-      "完整的 Atlas 中文技术文档在独立文档中心持续维护。",
-
     documentationFor: "文档适用于",
 
     documentationReferenceTitle:
