@@ -177,13 +177,7 @@ export default async function LibraryIndexPage({
               {ui.documentationHosting}
             </p>
 
-            <div className="mt-8 border-l-2 border-atlas-blue bg-surface-blue px-5 py-4">
-              <p className="text-sm leading-7 text-muted">
-                English documentation is being developed. The current technical
-                documentation center is available in Chinese.
-              </p>
-            </div>
-
+            
             <a
               href="https://sensordeck.github.io/atlas-docs-cn/"
               target="_blank"
