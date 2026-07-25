@@ -131,7 +131,7 @@ export default async function PlatformPage({
               {hero.subtitle}
             </p>
 
-            <p className="heading-description mt-7 max-w-3xl text-body leading-8 text-muted sm:text-body-lg">
+            <p className="heading-description mt-7 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
               {hero.description}
             </p>
           </div>

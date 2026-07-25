@@ -37,7 +37,7 @@ export default async function CategoryPage({
        : "Atlas Sits Between the Sensor and the System Decision"}
    </h1>
 
-  <p className="mx-auto mt-8 max-w-3xl text-body leading-8 text-muted sm:text-body-lg sm:leading-8">
+  <p className="mx-auto mt-8 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
       {homeContent.categoryDefinition.lead}
     </p>
   </div>
