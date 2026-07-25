@@ -253,28 +253,32 @@ export default function ContactFormClient({
         </div>
       </Section>
 
-      {/* Documentation */}
-      <Section id="deployment-guide" className="bg-surface">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-            {content.salesTitle}
-          </h2>
+     {/* Documentation */}
+<Section id="deployment-guide" className="bg-surface">
+  <div className="mx-auto max-w-3xl text-center">
+    <h2 className="font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+      {content.salesTitle}
+    </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-body leading-8 text-muted">
-            {content.salesNote}
-          </p>
+    <p className="mx-auto mt-5 max-w-2xl text-body leading-8 text-muted">
+      {content.salesNote}
+    </p>
 
-          <a
-            href="https://docs.sensordeck.tech/category/deployment"
-            target="_blank"
-            rel="noreferrer"
-            className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
-          >
-            {deploymentGuideLabel}
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </Section>
+    <a
+      href={
+        lang === "zh"
+          ? "https://sensordeck.github.io/atlas-docs-cn/category/部署指南"
+          : "https://docs.sensordeck.tech/category/deployment"
+      }
+      target="_blank"
+      rel="noreferrer"
+      className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
+    >
+      {deploymentGuideLabel}
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</Section>
 
       {/* Locations */}
       <Section id="global-locations" className="bg-white">
