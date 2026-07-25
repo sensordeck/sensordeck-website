@@ -362,27 +362,23 @@ export default async function TechnologyPage({
               Next Step
             </p>
 
-            <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
-              {cta.title}
-            </h2>
+           <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+  {cta.title}
+</h2>
 
-            <p className="heading-description mx-auto mt-6 max-w-2xl text-body leading-8 text-muted">
-              {cta.description}
-            </p>
+<p className="heading-description mx-auto mt-6 max-w-2xl text-body leading-8 text-muted">
+  {cta.description}
+</p>
 
-            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button
-                variant="primary"
-                href={cta.primaryButton.href}
-               /en/technology → /en/contact
-/zh/technology → /zh/contact
-                className="w-full sm:w-auto"
-              >
-                href={localizeHref(lang, cta.primaryButton.href)}
-              </Button>
-
-             
-            </div>
+<div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+  <Button
+    variant="primary"
+    href={localizeHref(lang, cta.primaryButton.href)}
+    className="w-full sm:w-auto"
+  >
+    {cta.primaryButton.text}
+  </Button>
+</div>
           </div>
         </AnimatedSection>
       </section>
