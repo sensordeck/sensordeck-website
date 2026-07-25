@@ -14,6 +14,8 @@ const inputClass =
 type ContactFormData = {
   name: string;
   email: string;
+  phone: string;
+  wechat: string;
   company: string;
   role: string;
   "organization-type": string;
@@ -25,6 +27,8 @@ type ContactFormData = {
 const initialFormData: ContactFormData = {
   name: "",
   email: "",
+  phone: "",
+  wechat: "",
   company: "",
   role: "",
   "organization-type": "",
@@ -64,6 +68,8 @@ export default function ContactFormClient({
     const body = [
       [fields.name.label, formData.name],
       [fields.email.label, formData.email],
+      [fields.phone.label, formData.phone],
+      ...(fields.wechat && formData.wechat ? [[fields.wechat.label, formData.wechat]] : []),
       [fields.company.label, formData.company],
       [fields.role.label, formData.role],
       [
@@ -162,6 +168,27 @@ export default function ContactFormClient({
                 value={formData.email}
                 onChange={handleChange}
               />
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              <TextInput
+                field={fields.phone}
+                name="phone"
+                required
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+
+              {fields.wechat && (
+                <TextInput
+                  field={fields.wechat}
+                  name="wechat"
+                  type="text"
+                  value={formData.wechat}
+                  onChange={handleChange}
+                />
+              )}
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">

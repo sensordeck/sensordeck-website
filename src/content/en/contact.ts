@@ -51,6 +51,11 @@ export const contactContent = {
       placeholder: "Enter your work email",
     },
 
+    phone: {
+      label: "Phone Number",
+      placeholder: "Enter your phone number",
+    },
+
     company: {
       label: "Company",
       placeholder: "Enter your company name",
