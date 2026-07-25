@@ -173,11 +173,6 @@ export default async function LibraryIndexPage({
               {ui.quickAccessTitle}
             </h2>
 
-            <p className="heading-description mt-5 text-body leading-relaxed text-muted md:text-body-lg">
-              {ui.documentationHosting}
-            </p>
-
-            
             <a
               href="https://sensordeck.github.io/atlas-docs-cn/"
               target="_blank"
