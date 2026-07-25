@@ -355,7 +355,6 @@ export interface LibraryContent {
     demoNote: string;
     demoContactNote: string;
     documentationTopics: string;
-    documentationHosting: string;
     documentationFor: string;
     documentationReferenceTitle: string;
     documentationUseCases: string[];
