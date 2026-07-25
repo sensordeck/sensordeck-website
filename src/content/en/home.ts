@@ -133,7 +133,7 @@ const homeContent = {
   },
   theProblem: {
     lead:
-      "After a Runtime Execution Failure (REF), engineering teams usually face evidence collection before they can begin analysis. Logs must be extracted again, recordings resynchronized, device states reconfirmed, relevant teams recoordinated, and the entire runtime process reconstructed. The real cost is not identifying the problem; it is finding and organizing the evidence.",
+      "When a Runtime Execution Failure (REF) occurs, engineering teams must first locate, collect, and reconstruct fragmented runtime evidence before analysis can begin. The biggest challenge is often not diagnosing the failure—it is finding and organizing the evidence. As investigations drag on, critical engineering resources are repeatedly pulled into the investigation pipeline instead of building the next generation of products.",
     cta: "See How Atlas Solves This",
     comparison: {
       withoutAtlas: {
