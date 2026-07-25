@@ -270,10 +270,7 @@ export interface TechnologyContent {
       text: string;
       href: string;
     };
-    secondaryButton: {
-      text: string;
-      href: string;
-    };
+    
   };
 }
 
