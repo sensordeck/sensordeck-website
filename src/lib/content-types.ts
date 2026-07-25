@@ -323,8 +323,7 @@ export interface PlatformContent {
     title: string;
     description: string;
     primaryButton: string;
-    secondaryButton: string;
-  };
+      };
 }
 
 export interface LibraryContent {
