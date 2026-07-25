@@ -581,6 +581,11 @@ export interface ContactContent {
       email: string;
       address: string;
     }>;
+    assistVault?: {
+      title: string;
+      description: string;
+      email: string;
+    };
   };
 }
 

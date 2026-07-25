@@ -139,5 +139,11 @@ export const contactContent = {
           "555 Pierce St, Suite 842, Albany, CA 94706, United States",
       },
     ],
+
+    assistVault: {
+      title: "Atlas Non-identifiable Assist Vault™",
+      description: "Cross-organization Runtime Investigation Knowledge Exchange",
+      email: "assist@sensordeck.tech",
+    },
   },
 } satisfies ContactContent;
