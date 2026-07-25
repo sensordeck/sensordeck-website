@@ -245,6 +245,5 @@ export const platformContent = {
     description:
       "介绍您的机器人平台、主要传感器、部署环境和当前调查流程。我们将共同评估 Atlas 如何融入您的现有工程体系。",
     primaryButton: "申请演示",
-    secondaryButton: "阅读平台架构文档",
-  },
+    },
 } satisfies PlatformContent;
