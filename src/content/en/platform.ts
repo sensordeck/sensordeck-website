@@ -248,6 +248,6 @@ export const platformContent = {
     description:
       "Tell us about your robot platform, sensor configuration, deployment environment, and current investigation process. We will assess where Atlas fits within your existing architecture.",
     primaryButton: "Request a Demo",
-    secondaryButton: "Open Platform Documentation",
+   
   },
 } satisfies PlatformContent;
