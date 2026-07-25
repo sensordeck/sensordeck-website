@@ -126,7 +126,7 @@ export const contactContent = {
       {
         city: "美国 · 加利福尼亚",
         name: "SensorDeck Inc.",
-        email: "contact@sensordeck.tech",
+        email: "sales@sensordeck.tech",
         address:
           "555 Pierce St, Ste 842, Albany, CA 94706, United States",
       },

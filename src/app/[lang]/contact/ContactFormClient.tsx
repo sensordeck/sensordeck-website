@@ -86,7 +86,7 @@ export default function ContactFormClient({
       .join("%0A");
 
     window.location.href =
-      `mailto:contact@sensordeck.tech?subject=${encodeURIComponent(
+      `mailto:sales@sensordeck.tech?subject=${encodeURIComponent(
         content.emailSubject,
       )}` + `&body=${body}`;
   }
