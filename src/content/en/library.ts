@@ -33,7 +33,7 @@ export const libraryContent = {
         description:
           "Review deployment components, integration requirements, configuration assets, project documentation, training materials, and typical enterprise deliverables.",
         href:
-          "https://sensordeck.github.io/atlas-docs-cn/reference/downloads",
+          "https://docs.sensordeck.tech/reference/downloads",
         items: "Deployment",
       },
       {
@@ -42,7 +42,7 @@ export const libraryContent = {
         description:
           "Review major Atlas releases, core capabilities, compatibility information, deployment modes, known limitations, and important product changes.",
         href:
-          "https://sensordeck.github.io/atlas-docs-cn/reference/release-notes",
+          "https://docs.sensordeck.tech/reference/release-notes",
         items: "Product Updates",
       },
     ],
@@ -67,9 +67,6 @@ export const libraryContent = {
       "Contact SensorDeck to arrange a tailored demonstration based on your robot platform, sensor configuration, deployment environment, and investigation workflow.",
 
     documentationTopics: "Documentation Coverage",
-
-    documentationHosting:
-      "The complete Atlas technical documentation is maintained in a dedicated documentation center. The current documentation is available in Chinese, with English documentation under development.",
 
     documentationFor: "Designed For",
 
@@ -181,7 +178,7 @@ hero: {
 
     link: {
       text: "Open Atlas Documentation Center",
-      href: "https://sensordeck.github.io/atlas-docs-cn/",
+      href: "https://docs.sensordeck.tech/",
     },
 
     topics: [
@@ -363,7 +360,7 @@ hero: {
     },
 
     secondaryButton: {
-      text: "Open Technical Documentation",
+      text: "Open Development Documentation",
       href: "https://sensordeck.github.io/atlas-docs-cn/",
     },
   },
