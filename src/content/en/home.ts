@@ -50,7 +50,7 @@ const homeContent = {
   },
   categoryDefinition: {
     lead:
-      "The robotics industry already has advanced sensors, mature computing platforms, robust ROS middleware, and rapidly evolving AI and application software. Yet runtime behavior between sensor output and robot execution decisions still lacks unified governance. When an incident occurs, engineering teams are often left to reconstruct the entire runtime process from fragmented logs, devices, recordings, and human experience.",
+      "The robotics industry has advanced sensors, powerful computing platforms, mature ROS middleware, and rapidly evolving AI. Yet the runtime boundary between sensor output and robot execution decisions remains largely ungoverned. When incidents occur, engineering teams are forced to reconstruct runtime evidence from fragmented logs, recordings, devices, and human experience.",
     runtimeBoundary: {
       title: "What Robotics Is Really Missing Is a Runtime Governance Layer",
       steps: [
