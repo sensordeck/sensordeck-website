@@ -114,7 +114,7 @@ export const contactContent = {
   salesTitle: "Explore Atlas Before We Speak",
 
   salesNote:
-    "Review the Atlas technical documentation to learn about the platform architecture, deployment approach, runtime governance model, and product capabilities. Current documentation is available in Chinese, with English documentation under development.",
+    "Review the Atlas technical documentation to learn about the platform architecture, deployment approach, runtime governance model, and product capabilities.",
 
   locations: {
     title: "Company Locations",
