@@ -397,15 +397,7 @@ export default async function PlatformPage({
                 {cta.primaryButton}
               </Button>
 
-              <a
-                href={documentation.documentationLink.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-atlas-blue px-5 py-2.5 text-label font-semibold text-atlas-blue transition-colors hover:bg-atlas-blue hover:text-white sm:w-auto"
-              >
-                {cta.secondaryButton}
-                <span aria-hidden="true">↗</span>
-              </a>
+           
             </div>
           </div>
         </AnimatedSection>
