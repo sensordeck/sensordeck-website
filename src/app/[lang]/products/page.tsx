@@ -56,7 +56,7 @@ export default async function ProductsPage({
               {productsContent.heroTitle}
             </h1>
 
-            <p className="mx-auto mt-4 max-w-3xl text-body leading-7 text-muted sm:text-body-lg sm:leading-8">
+            <p className="mx-auto mt-4 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
               {productsContent.heroSubtitle}
             </p>
 
