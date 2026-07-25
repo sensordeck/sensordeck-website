@@ -263,7 +263,7 @@ export default async function RuntimeSensorGovernancePage({
         </div>
       </Section>
 
-      {/* CTA */}
+          {/* CTA */}
       <Section className="bg-white">
         <div className="mx-auto max-w-5xl text-center">
           <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
@@ -283,6 +283,20 @@ export default async function RuntimeSensorGovernancePage({
               {productsContent.ctaText}
             </Button>
           </div>
+        </div>
+      </Section>
+
+      {/* Back to Products */}
+      <Section className="border-t border-border bg-surface py-6">
+        <div className="mx-auto flex max-w-6xl">
+          <Button
+            href={localizeHref(lang, "/products")}
+            variant="secondary"
+          >
+            {lang === "zh"
+              ? "← 返回产品主页"
+              : "← Back to Products"}
+          </Button>
         </div>
       </Section>
     </main>
