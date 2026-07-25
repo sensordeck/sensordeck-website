@@ -25,14 +25,15 @@ const productsContent = {
     name: "Atlas Runtime Sensor Governance™",
     audience: "传感器制造商",
     description:
-      "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收传感器协同调查包（EGP），组织 Sensor FAE 工程调查，并将完成的调查结果（IR）、经验总结（LL）与历史案例（Historical RGA）沉淀为可复用的传感器运行时知识。",
+      "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收传感器协同调查包（EGP），组织 Sensor FAE 工程调查，并将完成的调查结果（IR）、经验分享（LL）与历史案例（Historical RGA）沉淀为可复用的传感器运行时调查知识。",
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
       "建立跨 OEM、跨 Sensor SKU 的 Runtime Profile",
       "基于 OEM EGP 开展边界明确的 Sensor FAE 调查",
+      "使用统一时间轴证据包(EP)调查",
       "召回 Historical Sensor RGA，避免重复排查",
-      "返回更新后的 EGP、IR、LL 与 Sensor EGP Response",
+      "返回OEM更新后的 EGP Response",
       "将完成案例沉淀至 Sensor Assist Vault™",
     ],
 
@@ -42,11 +43,11 @@ const productsContent = {
       "传感器与 OEM 协同调查包（EGP）",
       "传感器 REF 工单",
       "统一证据包（Evidence Pack™）",
-      "Historical Sensor RGA Recall™",
-      "Investigation Result（IR）",
-      "Lesson Learned（LL）",
-      "Sensor Assist Vault™",
-      "去标识化运行时知识库™",
+      "历史调查案例回溯 (Historical Sensor RGA Recall™)",
+      "历史调查结论参考 （Investigation Result / IR）",
+      "案例排查经验分享套用 (Lesson Learned / LL）",
+      "知识库更新 (Sensor Assist Vault™)",
+      "去标识化运行时避坑知识库™",
     ],
 
     lifecycle: [
@@ -79,15 +80,16 @@ const productsContent = {
     ],
 
     coreModules: [
-      "Atlas Agent™",
-      "Runtime Dataset 保留",
+      "运行时观察 (Atlas Agent™)",
+      "数据保留 (Runtime Dataset)",
       "调查优先级候选项",
-      "Primary Evidence Pack",
-      "Historical RGA™",
-      "Investigation Workspace™",
-      "Sensor Engagement Pack（EGP）",
-      "Assist Vault™",
-      "Executive Dashboard™",
+      "统一证据包（Evidence Pack™）",
+      "历史调查案例回溯 (Historical Sensor RGA Recall™)",
+      "历史调查结论参考 （Investigation Result / IR）",
+      "案例排查经验分享套用 (Lesson Learned / LL）",
+      "知识库更新 (Assist Vault™)",
+      "去标识化运行时避坑知识库™",
+      "管理层视图 (Executive Dashboard™)",
     ],
 
     lifecycle: [
