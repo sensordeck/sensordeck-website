@@ -239,7 +239,7 @@ export const platformContent = {
       title: "Open Platform Documentation",
       description:
         "Review the complete architecture for Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, Sensor Engagement Pack™, Assist Vault™, and Executive Dashboard™.",
-      href: "https://sensordeck.github.io/atlas-docs-cn/category/平台架构",
+      href: "https://docs.sensordeck.tech/category/platform",
     },
   },
 
