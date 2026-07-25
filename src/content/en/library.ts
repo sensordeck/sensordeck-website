@@ -361,7 +361,7 @@ hero: {
 
     secondaryButton: {
       text: "Open Development Documentation",
-      href: "https://sensordeck.github.io/atlas-docs-cn/",
+      href: "https://docs.sensordeck.tech/",
     },
   },
 } satisfies LibraryContent;
