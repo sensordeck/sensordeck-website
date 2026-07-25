@@ -293,16 +293,12 @@ Evidence Pack™
   ],
 
   cta: {
-    title: "从您的运行环境开始",
-    description:
-      "介绍您的机器人平台、主要传感器、部署环境和当前调查流程。我们将共同确认适合的 Atlas 部署边界和 Pilot 范围。",
-    primaryButton: {
-      text: "阅读部署指南",
-      href: "https://sensordeck.github.io/atlas-docs-cn/category/部署指南",
-    },
-    secondaryButton: {
-      text: "申请演示",
-      href: "/contact",
-    },
+  title: "从您的运行环境开始",
+  description:
+    "介绍您的机器人平台、主要传感器、部署环境和当前调查流程。我们将共同确认适合的 Atlas 部署边界和 Pilot 范围。",
+  primaryButton: {
+    text: "申请演示",
+    href: "/contact",
   },
+},
 } satisfies TechnologyContent;
