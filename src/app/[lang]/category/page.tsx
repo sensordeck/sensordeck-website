@@ -26,7 +26,7 @@ export default async function CategoryPage({
      
       {/* Category Definition */}
 <Section className="bg-surface">
-  <div className="max-w-5xl mx-auto text-center">
+  <div className="max-w-5xl mx-auto text-left sm:text-center">
     <p className="mb-4 font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
       {content.eyebrow}
     </p>
