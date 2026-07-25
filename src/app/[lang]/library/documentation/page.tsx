@@ -74,9 +74,7 @@ export default async function DocumentationPage({
             </div>
             <div className="flex flex-col justify-between">
               <div>
-                <p className="text-body-lg leading-relaxed tracking-tight text-ink md:text-body-lg-md">
-                  {ui.documentationHosting}
-                </p>
+               
                 <p className="mt-6 text-body leading-relaxed text-muted">
                   {documentation.note}
                 </p>
