@@ -266,10 +266,10 @@ export default function ContactFormClient({
 
     <a
       href={
-        lang === "zh"
-          ? "https://sensordeck.github.io/atlas-docs-cn/category/部署指南"
-          : "https://docs.sensordeck.tech/category/deployment"
-      }
+  locale === "zh"
+    ? "https://sensordeck.github.io/atlas-docs-cn/category/部署指南"
+    : "https://docs.sensordeck.tech/category/deployment"
+}
       target="_blank"
       rel="noreferrer"
       className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-label font-semibold text-white hover:border-atlas-blue-dark hover:bg-atlas-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-atlas-blue"
