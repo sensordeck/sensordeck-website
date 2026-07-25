@@ -451,7 +451,7 @@ export default async function RuntimeInvestigationPage({
           </div>
         </Section>
 
-        {/* Final CTA */}
+               {/* Final CTA */}
         <Section className="bg-[#050b17]">
           <div className="mx-auto max-w-5xl text-center">
             <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
@@ -467,8 +467,13 @@ export default async function RuntimeInvestigationPage({
             <p className="mx-auto mt-6 max-w-3xl text-body leading-8 text-white/70 md:text-body-lg">
               {copy.text069}
             </p>
+
+            <div className="mt-10">
+              <Button href={localizeHref(lang, "/products")} variant="secondary">
+                {lang === "zh"
+                  ? "← 返回产品主页"
+                  : "← Back to Products"}
+              </Button>
+            </div>
           </div>
         </Section>
-    </div>
-  );
-}
