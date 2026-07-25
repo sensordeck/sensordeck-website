@@ -239,15 +239,7 @@ export default async function LibraryIndexPage({
                 </span>
               </Button>
 
-              <a
-                href={cta.secondaryButton.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-press button-hover inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-border bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-atlas-blue hover:text-atlas-blue sm:w-auto"
-              >
-                {cta.secondaryButton.text}
-                <span aria-hidden="true">↗</span>
-              </a>
+             
             </div>
           </div>
         </div>
