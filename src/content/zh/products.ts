@@ -30,9 +30,10 @@ const productsContent = {
 
     valuePoints: [
       "建立跨 OEM、跨 Sensor SKU 的 Runtime Profile",
+      "建立历史传感器调查案例 Historical Sensor Runtime Governance™ (RGA) & Assist Vault™",
       "基于 OEM EGP 开展边界明确的 Sensor FAE 调查",
-      "使用统一时间轴证据包(EP)调查",
-      "召回 Historical Sensor RGA，避免重复排查",
+      "使用统一时间轴证据包(Evidence Pack™)调查",
+      "召回 Historical Sensor RGA™，避免重复排查",
       "返回OEM更新后的 EGP Response",
       "将完成案例沉淀至 Sensor Assist Vault™",
     ],
@@ -73,8 +74,9 @@ const productsContent = {
 
     valuePoints: [
       "Atlas Agent 持续观察并保留 Runtime Dataset",
-      "生成调查优先级候选项和 Evidence Pack",
-      "召回 Historical RGA 与既有 IR、LL",
+      "建立历史调查案例 Historical Runtime Governance™ (RGA) & Assist Vault™",
+      "生成调查优先级候选项和 Evidence Pack™",
+      "召回 Historical RGA™ 与既有 IR、LL",
       "创建 Sensor Engagement Pack 并升级 Sensor FAE",
       "审核返回结果、关闭 OEM REF Ticket 并沉淀知识",
     ],
