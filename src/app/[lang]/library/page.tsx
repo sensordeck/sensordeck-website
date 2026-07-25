@@ -174,11 +174,15 @@ export default async function LibraryIndexPage({
             </h2>
 
             <a
-              href="https://sensordeck.github.io/atlas-docs-cn/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-            >
+  href={
+    lang === "zh"
+      ? "https://sensordeck.github.io/atlas-docs-cn/"
+      : "https://docs.sensordeck.tech/"
+  }
+  target="_blank"
+  rel="noopener noreferrer"
+  className="button-press button-hover mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-atlas-blue bg-atlas-blue px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+>
               {ui.viewDocumentation}
               <span aria-hidden="true">↗</span>
             </a>
