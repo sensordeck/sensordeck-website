@@ -130,7 +130,7 @@ export const contactContent = {
       {
         city: "中国 · 大湾区",
         name: "惠州深时传感科技有限公司",
-        email: "sales.china@sensordeck.tech",
+        email: "sales@sensordeck.tech",
         address: "广东省惠州市",
       },
       {

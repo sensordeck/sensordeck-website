@@ -128,7 +128,7 @@ export const contactContent = {
       {
         city: "Guangdong · China",
         name: "Huizhou Shenshi Sensor Technology Co., Ltd.",
-        email: "sales.china@sensordeck.tech",
+        email: "sales@sensordeck.tech",
         address: "Huizhou, Guangdong, China",
       },
       {
