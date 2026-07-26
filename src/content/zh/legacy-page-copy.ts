@@ -2,7 +2,7 @@ export const legacyZhCopy = {
   runtimeInvestigation: {
     ui: {
       heroEyebrow: "机器人 OEM",
-      heroTitle: "Atlas 运行时调查™",
+      heroTitle: "Atlas Runtime Investigation™",
       runtimeFailureEyebrow: "运行时执行故障",
       standardChainEyebrow: "标准调查链",
       coreCapabilitiesEyebrow: "核心能力",
