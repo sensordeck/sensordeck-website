@@ -3,9 +3,9 @@ import type { ContactContent } from "@/lib/content-types";
 export const contactContent = {
   hero: {
     eyebrow: "Contact SensorDeck",
-    title: "Start With Your Runtime Boundary",
+    title: "In the field, things get real",
     description:
-      "Every robotics platform has different runtime boundaries, operating environments, and investigation workflows. Our first conversation is focused on understanding your current system, the evidence available today, and the operational problem you need to solve.\n\nWhether you are developing a new robot platform, improving an existing product, or establishing a repeatable runtime investigation process, we will help you assess where Atlas can fit within your engineering environment.",
+      "Whether you're building the platform, managing fleet operations, or troubleshooting on-site as a Sensor FAE, Atlas is designed to help you resolve incidents faster.\n\nIn our first conversation, we want to understand a few things: What environment does your robot operate in (warehouses, production lines, outdoor sites, or indoor spaces)? When something goes wrong, how long does it take your team to get to the root cause? And right now, are you pulling sensor data, system logs, and field context together manually, or do you already have a unified way to investigate?",
   },
 
   options: [
@@ -33,11 +33,11 @@ export const contactContent = {
 
   formIntro: {
     eyebrow: "Request a Technical Discussion",
-    title: "Share Your Runtime Scenario",
+    title: "Briefly describe your scenario",
     description:
-      "Briefly describe your robot platform, primary sensors, deployment environment, and the runtime issue or investigation challenge you want to address. We will use this information to prepare a focused and relevant discussion.\n\nSubmitting this form opens an email draft addressed to the SensorDeck team. You can review and edit the message before sending it.",
+      "Tell us briefly about your platform, sensors, deployment environment, and your key operational challenges.\n\nAfter you submit, your default email app will open with a draft addressed to the SensorDeck team — feel free to review and edit before sending.",
     note:
-      "Atlas supports runtime evidence governance, investigation workflows, and collaboration between robot OEMs and sensor manufacturers. It supports engineering judgment without replacing your engineering teams or existing operational systems.",
+      "What we care about: once your robot is in the field, how do you investigate incidents quickly and accurately — without leaving your field engineers to figure it out alone. Atlas doesn't replace your engineering or ops team; it helps your team build a repeatable investigation capability that stays with the team. New people can pick it up. New projects can use it.",
   },
 
   fields: {
