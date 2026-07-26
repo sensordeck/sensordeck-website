@@ -121,7 +121,7 @@ export default async function RuntimeInvestigationPage({
 
             <h1
               className={`mt-4 max-w-5xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg ${
-                lang === "zh" ? "whitespace-nowrap" : ""
+                lang === "zh" ? "lg:whitespace-nowrap" : ""
               }`}
             >
               {heroTitle}
