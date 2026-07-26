@@ -49,9 +49,9 @@ export default async function RuntimeSensorGovernancePage({
           heroEyebrow: "Atlas Runtime Sensor Governance",
           audienceLabel: "服务对象",
           valueEyebrow: "核心价值",
-          valueTitle: "让传感器运行时调查从一次性响应变成持续积累",
+          valueTitle: "把每一次传感器‘救火’，变成全产品线的‘防火经验’。",
           valueDescription:
-            "Atlas 帮助传感器制造商围绕真实部署环境建立 Runtime Profile，接收 OEM 提供的 EGP，并将每一次 Sensor FAE 调查沉淀为未来可召回的历史调查资产。",
+            "Atlas 帮助传感器制造商围绕真实部署环境，为每一款传感器建立动态的 Runtime Profile™（运行时画像）。系统自动接收并解析来自 OEM 的协同调查包（EGP），将每一次 Sensor FAE 的现场排查，从一次性的“成本消耗”转化为结构化的“知识资产”。历史调查（IR）、根因案例（RGA）与经验教训（LL）由此被持续召回与复用，让传感器的现场表现成为驱动下一代产品定义的永动机。",
           modulesEyebrow: "产品能力",
           modulesTitle: "传感器运行时治理核心模块",
           modulesDescription:
