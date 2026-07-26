@@ -110,7 +110,7 @@ export const legacyZhCopy = {
     text040: "自动生成未经工程师确认的最终 IR 或 LL",
     text041: "将历史调查结论直接复制为当前结论",
     text042: "\n              机器人 OEM\n            ",
-    text043: "\n              将一次运行时执行故障，从客户报告推进到统一证据、\n              历史召回、工程调查、调查关闭和未来复用。\n            ",
+    text043: "\n              将碎片化的现场故障，转化为结构化的调查闭环、\n              让每一次故障调查，都有章可循、有史可鉴、有果可存。\n            ",
     text044: "\n              Atlas 帮助机器人 OEM 将运行时事件转化为有界\n              Evidence Pack™，创建和管理 REF 工单，召回 Historical\n              RGA™，协调 Tier 1、Tier 2、Tier 3 与 Sensor FAE，并将完成的\n              IR 与 LL 沉淀为组织调查资产。\n            ",
     text045: "\n                查看所有产品\n              ",
     text046: "\n                REF 描述运行时事件，\n                ",
