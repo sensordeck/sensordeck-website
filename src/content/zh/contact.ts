@@ -3,7 +3,7 @@ import type { ContactContent } from "@/lib/content-types";
 export const contactContent = {
   hero: {
     eyebrow: "联系我们",
-    title: "从机器人部署并实际跑起来之后开始",
+    title: "从机器人部署之后开始",
     description:
       "不管您是做整机、搞客户运维支持的，还是一线跑现场的FAE， Atlas 就是为了帮您把事故查清楚并解决问题而设计的。\n\n第一次沟通，我们只想弄清楚几件事：您的机器人跑在什么环境里（产线、仓储、室外，还是楼宇内）？现场事故出现后，团队要花多久才能定位？传感器数据、系统日志、现场信息，现在是分开查还是串在一起查？",
   },
