@@ -379,40 +379,7 @@ export default function ContactFormClient({
               </div>
             ))}
 
-            {content.locations.assistVault && (
-              <div className="min-w-0 rounded-lg border border-border bg-white p-5 sm:p-8 md:col-span-2">
-                <h3 className="mb-2 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md lg:text-card-title-lg">
-                  {content.locations.assistVault.title}
-                </h3>
-
-                <p className="mb-4 text-label text-muted">
-                  {content.locations.assistVault.description}
-                </p>
-
-                <div className="flex items-start gap-3 text-label text-muted">
-                  <svg
-                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-atlas-blue"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-
-                  <a
-                    className="-my-2 inline-flex min-h-11 min-w-0 items-center break-all hover:text-atlas-blue"
-                    href={`mailto:${content.locations.assistVault.email}`}
-                  >
-                    {content.locations.assistVault.email}
-                  </a>
-                </div>
-              </div>
-            )}
+           
           </div>
         </div>
       </Section>
