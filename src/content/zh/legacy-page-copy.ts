@@ -122,7 +122,7 @@ export const legacyZhCopy = {
     text052: "\n                当前调查从结构化证据开始。\n                ",
     text053: "\n                下一次调查，从组织记忆开始。\n              ",
     text054: "\n                  为机器人 OEM 建立标准化调查能力\n                ",
-    text055: "\n                  Atlas 不替代现有日志、ROS2、驱动工具链或工程团队。\n                  它在这些系统之上，建立证据入口、历史召回、调查路由和资产复用层。\n                ",
+    text055: "\n                  Atlas 它运行在 ROS2、日志系统、驱动与调试工具之上，\n                  专门解决跨团队、跨层级、跨传感器的调查协同难题。一套系统，覆盖从事件报告到经验复用的全链路。\n                ",
     text056: "\n                Engagement Pack™（协同调查包）\n              ",
     text057: "\n                当 REF 涉及传感器相关候选时，OEM 可以通过 Sensor\n                Engagement Pack™，将相关 Evidence Pack、调查上下文、\n                传感器监测维度、历史候选、问题清单与数据交换边界发送给\n                Sensor FAE。\n              ",
     text058: "\n                  在 OEM 授权情况下，Sensor FAE 可以查看指定的原始数据、\n                  Packet Capture、Frame、Point Cloud、Driver Log\n                  或运行时时间线引用。\n                ",
