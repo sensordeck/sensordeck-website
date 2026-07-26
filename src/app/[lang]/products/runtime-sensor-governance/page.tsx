@@ -113,9 +113,9 @@ export default async function RuntimeSensorGovernancePage({
             </span>
           </div>
 
-          <p className="mt-7 max-w-4xl text-body-lg leading-8 text-muted sm:text-body-lg-md sm:leading-9">
-            {product.description}
-          </p>
+        <p className="mt-7 max-w-4xl whitespace-pre-line text-body-lg leading-8 text-muted sm:text-body-lg-md sm:leading-9">
+  {product.description}
+</p>
         </div>
       </Section>
 
