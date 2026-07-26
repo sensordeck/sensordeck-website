@@ -25,7 +25,7 @@ const productsContent = {
     name: "Atlas Runtime Sensor Governance™",
     audience: "传感器制造商",
     description:
-      "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收传感器协同调查包（EGP），组织 Sensor FAE 工程调查，并将完成的调查结果（IR）、经验分享（LL）与历史案例（Historical RGA）沉淀为可复用的传感器运行时调查知识。",
+      "帮助传感器制造商持续了解产品在真实机器人部署中的运行时表现，接收传感器协同调查包（EGP），组织 Sensor FAE 工程调查，并将完成的调查结果（IR）、经验分享（LL）与历史案例（Historical RGA）沉淀为可复用的传感器运行时调查知识。一套系统，可跨 OEM、跨部署场景、跨传感器部署。 ",
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
