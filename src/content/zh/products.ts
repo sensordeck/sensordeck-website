@@ -29,7 +29,7 @@ const productsContent = {
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
-      "建立跨 OEM、跨 Sensor SKU 的 Runtime Profile",
+      "建立跨 OEM、跨部署场景、跨 Sensor SKU 的 Runtime Profile",
       "建立历史传感器调查案例与知识库 Historical Sensor Runtime Governance™ (RGA) & Assist Vault™",
       "基于 OEM EGP 开展边界明确的 Sensor FAE 调查",
       "使用统一时间轴证据包(Evidence Pack™)调查",
