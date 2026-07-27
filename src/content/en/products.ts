@@ -7,10 +7,10 @@ const productsContent = {
 one shared runtime governance infrastructure`,
 
   heroSubtitle:
-    "Atlas connects robot OEMs and sensor manufacturers through a shared runtime governance infrastructure, enabling structured evidence, coordinated investigations, and reusable organizational knowledge.",
+    "Atlas governs the runtime boundary between sensor output and robot system decision-making—an area that has long lacked unified operational governance. \n\nAtlas connects robot manufacturers and sensor manufacturers through a shared investigation framework, enabling runtime evidence to support collaborative investigations, turning every field incident into traceable and reusable organizational memory, and allowing validated, de-identified knowledge to continuously build shared industry experience.",
 
   heroStatement:
-    "Building the runtime governance infrastructure for the robotics industry.",
+    "From incidents, to organizational memory, to industry knowledge—so the robotics industry does not have to solve the same problems again and again.",
 
   architecture: {
     eyebrow: "Atlas Product Architecture",
