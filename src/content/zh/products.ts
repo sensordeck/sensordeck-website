@@ -25,7 +25,7 @@ const productsContent = {
     name: "Atlas Runtime Sensor Governance™",
     audience: "传感器制造商",
     description:
-      "定义传感器运行的‘事后’标准，跨OEM、跨场景实时监控传感器运行时健康度。通过智能协同调查包（EGP）驱动FAE高效作业，自动归档调查报告（IR）与经验教训（LL）。\n\n我们将离散的‘事故’转化为可复用的‘知识’（Historical RGA），帮助传感器厂商在部署后持续迭代，让运维经验成为下一代产品的设计输入。 ",
+      "定义传感器运行的‘部署后’标准，跨OEM、跨场景实时监控传感器运行时健康度。通过智能协同调查包（EGP）驱动FAE高效作业，自动归档调查报告（IR）与经验教训（LL）。\n\n我们将离散的‘事故’转化为可复用的‘知识’（Historical RGA），帮助传感器厂商在部署后持续迭代，让运维经验成为下一代产品的设计输入。 ",
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
