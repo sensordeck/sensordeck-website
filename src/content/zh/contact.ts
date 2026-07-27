@@ -75,8 +75,8 @@ export const contactContent = {
       label: "组织类型",
       placeholder: "请选择",
       options: [
-        "机器人 OEM",
-        "传感器制造商",
+        "机器人 OEM 运维团队",
+        "传感器制造商 FAE 运维团队",
         "系统集成商",
         "其他",
       ],
@@ -94,7 +94,7 @@ export const contactContent = {
         "Atlas Runtime Investigation™",
         "Atlas Runtime Sensor Governance™",
         "部署与架构评审",
-        "技术文档",
+        "系统集成探讨",
       ],
     },
 
