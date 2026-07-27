@@ -11,7 +11,7 @@ const homeContent = {
   heroPrinciple: [],
   heroValueProposition: "每一次调查从证据开始。\n下一次调查，从历史开始。",
     sectionTitles: {
-    categoryDefinition: "机器人行业此前不存在的一层",
+    categoryDefinition: "机器人行业此前缺失的一层",
     theProblem: "事故排查为何总从零开始",
     whyRuntimeGovernance: "为什么需要运行时治理",
     productLines: "两种方案，一个使命",
@@ -24,7 +24,7 @@ const homeContent = {
     finalCta: "让运行时证据在整个组织中发挥作用",
   },
   sectionDescriptions: {
-    categoryDefinition: "Atlas 建立了位于传感器输出与机器人执行决策之间的运行时治理基础设施。",
+    categoryDefinition: "Atlas 建立传感器输出与系统决策之间的运行时治理基础设施。",
     theProblem: "运行时证据分散在不同系统和人员之间，缺乏统一组织与持续保留。每一次调查，都不得不重新开始。",
     whyRuntimeGovernance: "信号并不缺失，但运行背景信息通常分散在设备、日志、工单、录像和个人记忆中。",
     productLines: "Atlas 通过两条产品线，为机器人运行时治理提供完整解决方案。",
@@ -38,7 +38,7 @@ const homeContent = {
   },
  categoryDefinition: {
     lead:
-  "机器人行业已经拥有先进的传感器、成熟的计算平台、完善的 ROS 中间件，以及快速发展的 AI 与应用软件。然而，在传感器输出与机器人执行决策之间，运行时行为始终缺乏统一治理。因此，当事故发生时，工程团队往往只能依赖分散的日志、设备、录像和人工经验重新还原整个运行过程。",
+  "机器人已经拥有先进的传感器、计算平台、ROS 中间件，以及快速发展的 AI 与应用软件。\n\n但从传感器输出到系统决策之间，运行时行为始终缺少统一治理。当异常发生，工程团队仍需要从分散的日志、设备状态、录像与人工经验中，重新还原问题发生时的真实运行过程。",
 
     runtimeBoundary: {
       title: "机器人真正缺失的是运行时治理层",
