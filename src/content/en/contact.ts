@@ -70,8 +70,8 @@ export const contactContent = {
       label: "Organization Type",
       placeholder: "Select an organization type",
       options: [
-        "Robot OEM",
-        "Sensor Manufacturer",
+        "Robot Operations Center",
+        "Sensor Manufacturer Operations Center",
         "Robotics System Integrator",
         "Technology Partner",
         "Other",
@@ -91,7 +91,7 @@ export const contactContent = {
         "Atlas Runtime Sensor Governance™",
         "Architecture and Deployment Review",
         "Product Demonstration",
-        "Technical Documentation",
+        "System Integration Discussion",
       ],
     },
 
