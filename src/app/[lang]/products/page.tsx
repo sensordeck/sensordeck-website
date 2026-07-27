@@ -56,9 +56,9 @@ export default async function ProductsPage({
               {productsContent.heroTitle}
             </h1>
 
-            <p className="mx-auto mt-4 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
-              {productsContent.heroSubtitle}
-            </p>
+            <p className="mx-auto mt-4 max-w-4xl whitespace-pre-line text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
+  {productsContent.heroSubtitle}
+</p>
 
            {/* Desktop */}
 <p className="hidden sm:block mx-auto mt-7 max-w-2xl text-body-lg font-semibold leading-8 text-atlas-blue">
