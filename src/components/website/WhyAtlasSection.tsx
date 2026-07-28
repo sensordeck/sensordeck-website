@@ -35,7 +35,7 @@ const reasons: Reason[] = [
   },
   {
     icon: UsersRound,
-    titleZh: "保护 Tier 3\n工程团队",
+    titleZh: "保护核心\n工程资源",
     titleEn: "Protect Tier 3\nEngineering Teams",
     descriptionZh: "让核心工程师专注于高价值分析，而不是重复寻找日志和重建时间线。",
     descriptionEn:
