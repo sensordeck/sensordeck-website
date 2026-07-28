@@ -11,7 +11,7 @@ export const platformContent = {
     subtitle:
       "The runtime governance infrastructure for modern robotics.",
     description:
-      "Atlas transforms distributed runtime data into bounded evidence, enabling structured investigation, cross-organization collaboration, and reusable engineering knowledge.",
+      "Atlas structures and aligns heterogeneous runtime signals into bounded, reviewable evidence for investigation and cross-organization collaboration. Each completed investigation becomes reusable organizational memory, giving future investigations a stronger starting point.",
   },
 
   architecture: {
