@@ -12,7 +12,7 @@ export const technologyContent = {
       id: "deployment-principles",
       title: "部署原则",
       description:
-        "Atlas 作为运行时治理基础设施进入客户现有工程体系，而不是替换机器人控制系统、业务应用或现有日志工具。",
+        "Atlas 进入客户现有工程与运维体系，不替换机器人控制系统、Cloud、Fleet Manager、告警、售后工单或现有工程工具。",
       content: `客户运行环境
   ↓
 Atlas Agent™
@@ -36,6 +36,36 @@ Evidence Pack™
       href: "/technology/deployment-principles",
     },
 
+{
+  id: "design-partner-program",
+  title: "从一个真实场景开始",
+  description:
+    "Atlas Runtime Governance Design Partner Program 从一个机器人平台、一类真实运行异常和一个运维或工程团队开始，在客户现有体系中验证 Runtime Evidence、Investigation 与 Historical Recall 的实际价值。",
+  content: `现有运维体系
+Cloud · Fleet · Alert · Service Ticket
+  ↓
+一个机器人平台 / SKU
++
+一类真实 REF
+  ↓
+Atlas Read-only Integration
+Runtime Evidence · Evidence Pack · Historical Recall
+  ↓
+联合验证
+Investigation Efficiency · Historical Reuse`,
+  explanation:
+    "Atlas 不要求 OEM 重新建设 Cloud、Fleet Manager、告警、售后工单或工程流程。首个 Design Partner 项目以小范围、只读方式接入现有运行环境，先验证 Atlas 是否能够让工程团队更快获得调查证据、减少重复调查，并让已经完成的工程调查成为下一次可以召回的组织记忆。",
+  comparedTo: [
+    "一个机器人平台或 SKU",
+    "一类真实运行异常",
+    "一个运维或工程团队",
+    "Atlas Agent™ 只读部署",
+    "不修改现有控制栈",
+    "先验证一次真实调查，再逐步扩大范围",
+  ],
+  href: "/technology/design-partner-program",
+},
+    
     {
       id: "oem-deployment",
       title: "机器人 OEM 部署",
