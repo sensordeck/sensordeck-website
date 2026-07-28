@@ -114,7 +114,7 @@ export default async function RuntimeInvestigationPage({
 
         {/* Hero */}
         <Section className="bg-white">
-          <div className="mx-auto max-w-5xl px-1">
+          <div className="mx-auto max-w-6xl">
             <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">{ui.heroEyebrow}
 
             </p>
