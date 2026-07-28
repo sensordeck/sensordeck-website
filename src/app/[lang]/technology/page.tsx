@@ -91,14 +91,7 @@ const deploymentDetails = sections.filter(
       "pilot-to-production",
     ].includes(section.id),
 );
-    (section) =>
-      ![
-        "oem-deployment",
-        "sensor-manufacturer-deployment",
-        "pilot-to-production",
-      ].includes(section.id),
-  );
-
+   
   return (
     <div className="bg-white text-ink">
       {/* Hero */}
