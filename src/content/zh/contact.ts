@@ -5,31 +5,31 @@ export const contactContent = {
     eyebrow: "联系我们",
     title: "从机器人部署之后开始",
     description:
-      "不管您是做整机、搞客户运维支持的，还是一线跑现场的FAE， Atlas 就是为了帮您把事故查清楚并解决问题而设计的。\n\n第一次沟通，我们只想弄清楚几件事：您的机器人跑在什么环境里（产线、仓储、室外，还是楼宇内）？现场事故出现后，团队要花多久才能定位？传感器数据、系统日志、现场信息，现在是分开查还是串在一起查？",
+      "如果您的机器人已经进入真实部署，Atlas 可以从一个平台、一类运行异常和一个运维或工程团队开始。\n\n我们不会要求您替换现有 Cloud、Fleet Manager、告警、售后工单或工程流程。第一次交流，我们希望先了解您现在如何接收现场问题、保留运行时数据、开展工程调查，以及历史经验如何被下一次调查复用。",
   },
 
   options: [
-    {
-      eyebrow: "架构评审",
-      title: "讨论您的运行时边界",
-      description:
-        "带上一个传感器、设备集群或调查流程。我们可以梳理证据边界，并确定聚焦的试点范围。",
-    },
-    {
-      eyebrow: "技术资料",
-      title: "获取技术文档",
-      description:
-        "了解 Atlas 的系统架构、运行时治理模型、部署流程和产品能力。",
-    },
-    {
-      eyebrow: "产品演示",
-      title: "在真实场景中了解 Atlas",
-      description:
-        "通过代表性的运行时调查流程，了解证据保留、事件窗口和组织记忆如何形成。",
-    },
-  ],
+  {
+    eyebrow: "DESIGN PARTNER",
+    title: "讨论一个真实调查场景",
+    description:
+      "从一个机器人平台、一类真实运行异常和一个运维或工程团队开始，共同验证 Atlas 是否能够改善现有调查流程。",
+  },
+  {
+    eyebrow: "架构评审",
+    title: "讨论您的运行时边界",
+    description:
+      "梳理机器人、传感器、Linux Runtime、ROS、网络与现有运维系统之间的调查边界，确认适合的 Atlas 接入范围。",
+  },
+  {
+    eyebrow: "产品与技术",
+    title: "了解 Atlas 如何工作",
+    description:
+      "了解 Runtime Evidence、Evidence Pack、Historical Recall、调查协作与组织记忆如何形成完整闭环。",
+  },
+],
 
-  optionAction: "联系团队",
+optionAction: "开始交流",
 
   formIntro: {
     eyebrow: "预约产品演示",
