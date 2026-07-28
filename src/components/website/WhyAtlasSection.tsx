@@ -60,7 +60,7 @@ const reasons: Reason[] = [
   {
     icon: Shield,
     titleZh: "持续提升\n产品与运营",
-    titleEn: "Drive Prodcuts\n& Operational Improvement",
+    titleEn: "Drive Prodcut\n& Operational Improvement",
     descriptionZh: "将调查结果转化为可靠性改进、供应商管理和运营决策依据。",
     descriptionEn:
       "Turn investigation results into insights for reliability, supplier management, and operations.",
