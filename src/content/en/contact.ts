@@ -2,42 +2,42 @@ import type { ContactContent } from "@/lib/content-types";
 
 export const contactContent = {
   hero: {
-    eyebrow: "Contact SensorDeck",
-    title: "In the field, things get real",
+    eyebrow: "Contact",
+    title: "Start with a Real Runtime Scenario",
     description:
-      "Whether you're building the platform, managing fleet operations, or troubleshooting on-site as a Sensor FAE, Atlas is designed to help you resolve incidents faster.\n\nIn our first conversation, we want to understand a few things: What environment does your robot operate in (warehouses, production lines, outdoor sites, or indoor spaces)? When something goes wrong, how long does it take your team to get to the root cause? And right now, are you pulling sensor data, system logs, and field context together manually, or do you already have a unified way to investigate?",
+      "If your robots are already operating in real-world deployments, Atlas can start with one platform, one class of runtime incident, and one operations or engineering team.\n\nWe do not ask you to replace your existing cloud platform, fleet manager, alerting system, service ticketing, or engineering workflows. The first conversation is about understanding how your team handles field incidents today, retains runtime data, conducts engineering investigations, and reuses what has already been learned.",
   },
 
   options: [
     {
-      eyebrow: "Architecture Review",
-      title: "Discuss Your Runtime Boundary",
+      eyebrow: "DESIGN PARTNER",
+      title: "Discuss a Real Investigation Scenario",
       description:
-        "Bring a robot platform, sensor configuration, fleet environment, or investigation workflow. We will map the relevant evidence boundary and define a focused evaluation scope.",
+        "Start with one robot platform, one class of real runtime incident, and one operations or engineering team to validate how Atlas can improve the existing investigation workflow.",
     },
     {
-      eyebrow: "Technical Documentation",
-      title: "Review the Atlas Architecture",
+      eyebrow: "ARCHITECTURE REVIEW",
+      title: "Review Your Runtime Boundary",
       description:
-        "Explore the Atlas runtime governance model, platform architecture, deployment approach, and core product capabilities.",
+        "Map the investigation boundary across robots, sensors, Linux Runtime, ROS, networks, and existing operations systems to define an appropriate Atlas integration scope.",
     },
     {
-      eyebrow: "Product Demonstration",
-      title: "See Atlas in a Runtime Investigation",
+      eyebrow: "PRODUCT & TECHNOLOGY",
+      title: "See How Atlas Works",
       description:
-        "Walk through a representative investigation to see how runtime evidence, event windows, cross-team collaboration, and reusable engineering knowledge are created.",
+        "Explore how Runtime Evidence, Evidence Pack™, Historical Recall, investigation collaboration, and organizational memory form a reusable investigation loop.",
     },
   ],
 
-  optionAction: "Contact the Team",
+  optionAction: "Start a Conversation",
 
   formIntro: {
-    eyebrow: "Request a Technical Discussion",
-    title: "Briefly describe your scenario",
+    eyebrow: "PROJECT DISCUSSION",
+    title: "Tell Us About a Runtime Problem You Are Facing",
     description:
-      "Tell us briefly about your platform, sensors, deployment environment, and your key operational challenges.\n\nAfter you submit, your default email app will open with a draft addressed to the SensorDeck team — feel free to review and edit before sending.",
+      "Briefly describe your robot platform, deployment environment, and current investigation workflow. For a Design Partner project, we can start with one real, recurring, or difficult-to-reproduce runtime incident.\n\nSubmitting this form opens a draft in your default email application. You can review the message before sending it to the SensorDeck team.",
     note:
-      "What we care about: once your robot is in the field, how do you investigate incidents quickly and accurately — without leaving your field engineers to figure it out alone. Atlas doesn't replace your engineering or ops team; it helps your team build a repeatable investigation capability that stays with the team. New people can pick it up. New projects can use it.",
+      "Atlas does not replace your cloud platform, fleet manager, service ticketing, or engineering teams, and it does not automatically determine root cause or assign responsibility. The first goal is to validate whether your team can reach investigation evidence faster, reduce repeated investigation work, and turn completed investigations into reusable organizational memory.",
   },
 
   fields: {
@@ -52,8 +52,13 @@ export const contactContent = {
     },
 
     phone: {
-      label: "Phone Number",
+      label: "Phone",
       placeholder: "Enter your phone number",
+    },
+
+    wechat: {
+      label: "WeChat (Optional)",
+      placeholder: "Enter your WeChat ID",
     },
 
     company: {
@@ -62,71 +67,73 @@ export const contactContent = {
     },
 
     role: {
-      label: "Job Title",
-      placeholder: "Enter your job title",
+      label: "Role",
+      placeholder: "Enter your role",
     },
 
     organizationType: {
       label: "Organization Type",
-      placeholder: "Select an organization type",
+      placeholder: "Select one",
       options: [
-        "Robot Operations Center",
-        "Sensor Manufacturer Operations Center",
-        "Robotics System Integrator",
-        "Technology Partner",
+        "Robot OEM",
+        "Sensor Manufacturer",
+        "System Integrator",
+        "Robot Operator / End User",
         "Other",
       ],
     },
 
     fleetScale: {
-      label: "Fleet or Product Scale",
-      placeholder: "For example: 2,000 deployed robots",
+      label: "Robot Platform / Deployment Scale",
+      placeholder: "e.g. T10 / approximately 2,000 robots deployed",
     },
 
     primaryInterest: {
-      label: "Primary Area of Interest",
-      placeholder: "Select an area of interest",
+      label: "What Would You Like to Discuss?",
+      placeholder: "Select one",
       options: [
+        "Atlas Design Partner Program",
         "Atlas Runtime Investigation™",
         "Atlas Runtime Sensor Governance™",
-        "Architecture and Deployment Review",
-        "Product Demonstration",
-        "System Integration Discussion",
+        "Deployment & Architecture Review",
+        "System Integration",
+        "Product Demo & Technical Discussion",
       ],
     },
 
     message: {
-      label: "Runtime Scenario",
+      label: "Runtime Scenario / Investigation Challenge",
       placeholder:
-        "Describe your robot platform, primary sensors, deployment environment, current investigation workflow, and the runtime issue you want to address.",
+        "For example: intermittent field incidents are difficult to reproduce; similar incidents are repeatedly investigated across customers; Robot, Fleet Manager, network, and facility data are difficult to investigate on one timeline; or previous investigation knowledge is difficult to reuse in future incidents.",
     },
   },
 
-  submit: "Open Email Draft",
+  submit: "Open Project Email Draft",
 
-  emailSubject: "SensorDeck Technical Discussion Request",
+  emailSubject: "SensorDeck Atlas Project Discussion / Design Partner",
 
-  privacyNotice: "By submitting this form, you acknowledge our",
+  privacyNotice:
+    "By submitting this form, you agree to our",
 
   privacyPolicyLink: "Privacy Policy",
 
   privacyNoticeSuffix:
-    "and consent to the processing of the information you provide for the purpose of responding to your inquiry.",
+    "regarding the processing of your personal information.",
 
   dataProtectionNote:
-    "Do not include passwords, credentials, encryption keys, customer data, proprietary logs, or other confidential information in your message.",
+    "Please do not include passwords, credentials, customer data, or other sensitive information in your message.",
 
-  salesTitle: "Explore Atlas Before We Speak",
+  salesTitle: "Want to See How Atlas Fits into Your Existing Stack?",
 
   salesNote:
-    "Review the Atlas technical documentation to learn about the platform architecture, deployment approach, runtime governance model, and product capabilities.",
+    "Review the Atlas deployment guide to understand the read-only Agent, runtime boundaries, Evidence Pack™, investigation workflow, and the path from Pilot to Production.",
 
   locations: {
-    title: "Company Locations",
+    title: "Global Offices",
 
     offices: [
       {
-        city: "Guangdong · China",
+        city: "Greater Bay Area · China",
         name: "Huizhou Shenshi Sensor Technology Co., Ltd.",
         email: "sales@sensordeck.tech",
         address: "Huizhou, Guangdong, China",
@@ -136,13 +143,13 @@ export const contactContent = {
         name: "SensorDeck Inc.",
         email: "sales@sensordeck.tech",
         address:
-          "555 Pierce St, Suite 842, Albany, CA 94706, United States",
+          "555 Pierce St, Ste 842, Albany, CA 94706, United States",
       },
     ],
 
     assistVault: {
       title: "Atlas Non-identifiable Assist Vault™",
-      description: "Cross-organization Runtime Investigation Knowledge Exchange",
+      description: "Cross-organization runtime investigation knowledge exchange",
       email: "assist@sensordeck.tech",
     },
   },
