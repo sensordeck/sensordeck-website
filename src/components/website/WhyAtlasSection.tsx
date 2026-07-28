@@ -43,7 +43,7 @@ const reasons: Reason[] = [
   },
   {
     icon: Network,
-    titleZh: "改善 OEM\n与传感器厂协作",
+    titleZh: "改善OEM与\n传感器厂协作",
     titleEn: "Improve OEM–Sensor\nCollaboration",
     descriptionZh: "通过统一证据与协同调查包 EGP，减少跨团队反复确认、责任争议与沟通损耗。",
     descriptionEn:
