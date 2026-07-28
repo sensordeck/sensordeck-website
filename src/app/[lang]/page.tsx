@@ -299,7 +299,7 @@ export default async function HomePage({
   <SectionHeading
     description={
       <Link
-        href={localizeHref("/products", lang)}
+       href={localizeHref(lang, "/products")}
         className="transition-colors hover:text-atlas-blue"
       >
         {homeContent.sectionDescriptions.productLines}
