@@ -37,9 +37,9 @@ const reasons: Reason[] = [
     icon: UsersRound,
     titleZh: "保护核心\n工程资源",
     titleEn: "Protect Core\nEngineering Resources",
-    descriptionZh: "让核心工程师专注于高价值分析，而不是重复寻找日志和重建时间线。",
+    descriptionZh: "减少重复事故对核心工程团队的持续占用，让关键工程能力回到产品开发与复杂问题解决。",
     descriptionEn:
-      "Keep core engineers focused on high-value analysis instead of repeatedly finding logs and rebuilding timelines.",
+      "Keep critical engineering expertise focused on product development and complex problems.",
   },
   {
     icon: Network,
