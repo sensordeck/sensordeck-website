@@ -88,7 +88,7 @@ export default function WhyAtlasSection({ lang }: WhyAtlasSectionProps) {
           </h2>
           <p className="mt-4 max-w-5xl text-body leading-7 text-ink/80 md:mt-5 md:text-body-lg md:leading-8 lg:text-body-lg-md">
             {isChinese
-              ? "Atlas 将一次次分散、重复的事故排查，转化为可复用的证据、调查资产和组织知识。通过缩短调查周期、减少 Tier 3 工程师被重复事故牵制，让每一次调查持续改善产品、供应商协作与运营决策。"
+              ? "Atlas 将分散的事故排查，沉淀为可复用的证据、调查资产和组织知识。缩短调查周期，减少 Tier 3 工程师被重复事故牵制，并让每一次调查持续反哺产品、供应商协作与运营决策"
               : "Atlas turns fragmented, repetitive incident investigations into reusable evidence, investigation assets, and organizational knowledge. By shortening investigation cycles and reducing the time Tier 3 engineers spend on recurring incidents, every investigation can continuously improve products, supplier collaboration, and operational decisions."}
           </p>
         </div>
