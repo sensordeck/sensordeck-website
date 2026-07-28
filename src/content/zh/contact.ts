@@ -32,13 +32,13 @@ export const contactContent = {
 optionAction: "开始交流",
 
   formIntro: {
-    eyebrow: "预约产品演示",
-    title: "简单说两句您的场景",
-    description:
-      "请简单介绍您的机器人平台、主要传感器、部署环境，以及目前希望解决的运维问题。我们会根据这些信息准备更有针对性的交流内容，让第一次沟通更高效、更聚焦。\n\n提交后将用你的 email default app 打开邮件草稿，发送给 SensorDeck 团队，您可以检查内容后再发送。",
-    note:
-      "我们关注的是：机器人跑起来之后，故障怎么查得快、查得准，不让现场FAE一个人扛着。Atlas 不替代您的工程师或运维，而是帮团队把排查能力沉淀下来。 换个人也能查，换个项目也能用。",
-  },
+  eyebrow: "项目交流",
+  title: "介绍一个您正在面对的运行时问题",
+  description:
+    "请简单介绍您的机器人平台、部署环境和当前调查流程。如果您希望讨论 Design Partner 项目，可以从一个真实、高频或难以复现的现场运行异常开始。\n\n提交后将使用您的默认 Email 应用打开邮件草稿，您可以检查内容后再发送给 SensorDeck 团队。",
+  note:
+    "Atlas 不替代您的 Cloud、Fleet Manager、售后工单或工程团队，也不自动判断根因或责任。我们希望先验证：现有团队能否更快获得调查证据、更少从零调查，并让已经完成的调查成为下一次可以复用的组织记忆。",
+},
 
   fields: {
     name: {
@@ -71,43 +71,44 @@ optionAction: "开始交流",
       placeholder: "请输入您的职位",
     },
 
-    organizationType: {
-      label: "组织类型",
-      placeholder: "请选择",
-      options: [
-        "机器人 OEM 运维团队",
-        "传感器制造商 FAE 运维团队",
-        "系统集成商",
-        "其他",
-      ],
-    },
-
+   organizationType: {
+  label: "组织类型",
+  placeholder: "请选择",
+  options: [
+    "机器人 OEM",
+    "传感器制造商",
+    "系统集成商",
+    "机器人最终用户 / 运营方",
+    "其他",
+  ],
+},
     fleetScale: {
-      label: "设备集群 / 产品规模",
-      placeholder: "例如：已部署 2,000 台设备",
-    },
+  label: "机器人平台 / 部署规模",
+  placeholder: "例如：T10 / 已部署约 2,000 台",
+},
 
-    primaryInterest: {
-      label: "主要关注方向",
-      placeholder: "请选择",
-      options: [
-        "Atlas Runtime Investigation™",
-        "Atlas Runtime Sensor Governance™",
-        "部署与架构评审",
-        "系统集成探讨",
-      ],
-    },
+   primaryInterest: {
+  label: "希望讨论的方向",
+  placeholder: "请选择",
+  options: [
+    "Atlas Design Partner Program",
+    "Atlas Runtime Investigation™",
+    "Atlas Runtime Sensor Governance™",
+    "部署与架构评审",
+    "系统集成探讨",
+    "产品演示与技术交流",
+  ],
+},
 
-    message: {
-      label: "运行时场景",
-      placeholder:
-        "请介绍您的机器人平台、主要传感器、部署环境，以及目前希望解决的运行时问题。",
-    },
-  },
+   message: {
+  label: "运行时场景 / 调查问题",
+  placeholder:
+    "例如：机器人现场偶发停机难以复现；类似问题在不同客户重复排查；Robot、Fleet Manager、网络和现场系统之间难以统一调查；历史调查经验难以在下一次工单中复用。",
+},
 
-  submit: "打开邮件草稿",
+submit: "打开项目邮件草稿",
 
-  emailSubject: "SensorDeck 产品演示与技术交流申请",
+emailSubject: "SensorDeck Atlas 项目交流 / Design Partner",
 
   privacyNotice: "提交表单即表示您同意我们按照",
 
@@ -118,10 +119,10 @@ optionAction: "开始交流",
   dataProtectionNote:
     "请勿在留言中包含密码、密钥、客户数据或其他敏感信息。",
 
-  salesTitle: "希望先了解 Atlas？",
+  salesTitle: "希望先了解 Atlas 如何进入现有体系？",
 
-  salesNote:
-    "您也可以先阅读 Atlas 中文部署指南，了解系统架构、安装部署流程、运行时治理模型以及产品能力。",
+salesNote:
+  "查看 Atlas 部署指南，了解 read-only Agent、运行时边界、Evidence Pack、调查流程以及从 Pilot 到 Production 的部署方式。",
 
   locations: {
     title: "全球办公室",
