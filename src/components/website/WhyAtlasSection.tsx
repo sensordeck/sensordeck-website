@@ -47,7 +47,7 @@ const reasons: Reason[] = [
     titleEn: "Improve OEM–Sensor\nCollaboration",
     descriptionZh: "通过统一证据与协同调查包 EGP，减少跨团队反复确认、责任争议与沟通损耗。",
     descriptionEn:
-      "Use unified evidence and the collaborative EGP investigation package to reduce repeated cross-team confirmation, responsibility disputes, and communication overhead.",
+      "Use unified evidence and EGP to streamline cross-team investigations and reduce communication overhead.",
   },
   {
     icon: Box,
@@ -60,10 +60,10 @@ const reasons: Reason[] = [
   {
     icon: Shield,
     titleZh: "持续提升\n产品与运营",
-    titleEn: "Continuously Improve\nProducts & Operations",
+    titleEn: "Drive Prodcuts\n& Operational Improvement",
     descriptionZh: "将调查结果转化为可靠性改进、供应商管理和运营决策依据。",
     descriptionEn:
-      "Turn investigation results into a basis for reliability improvements, supplier management, and operational decisions.",
+      "Turn investigation results into insights for reliability, supplier management, and operations.",
   },
 ];
 
