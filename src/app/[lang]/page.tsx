@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { ReactNode } from "react";
 import Button from "@/components/website/Button";
 import Section from "@/components/website/Section";
 import WhyAtlasSection from "@/components/website/WhyAtlasSection";
@@ -35,7 +37,7 @@ function SectionHeading({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description: ReactNode;
   className?: string;
 }) {
   return (
@@ -293,13 +295,20 @@ export default async function HomePage({
       </Section>
 
       {/* Two Atlas Product Lines */}
-      <Section id="products" className="bg-white">
-        <SectionHeading
-          description={homeContent.sectionDescriptions.productLines}
-          eyebrow={homeContent.ui.sectionEyebrows.productLines}
-          title={homeContent.sectionTitles.productLines}
-          className="mx-auto text-center"
-        />
+     <Section id="products" className="bg-white">
+  <SectionHeading
+    description={
+      <Link
+        href={localizeHref("/products", lang)}
+        className="transition-colors hover:text-atlas-blue"
+      >
+        {homeContent.sectionDescriptions.productLines}
+      </Link>
+    }
+    eyebrow={homeContent.ui.sectionEyebrows.productLines}
+    title={homeContent.sectionTitles.productLines}
+    className="mx-auto text-center"
+  />
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:mt-12 md:gap-6 lg:grid-cols-2 lg:gap-8">
           {homeContent.productLines.map((product, index) => (
