@@ -139,7 +139,7 @@ Assist Vault™`,
         {
           term: "调查角色",
           definition:
-            "明确 Tier 1、Tier 2 / Tier 3、OEM 工程和传感器 FAE 的参与方式。",
+            "明确 OEM 运维工程和传感器 FAE 的参与方式。",
         },
       ],
       href: "/technology/oem-deployment-scope",
