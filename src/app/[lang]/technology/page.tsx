@@ -70,15 +70,27 @@ export default async function TechnologyPage({
           ],
         };
 
-  const deploymentStages = sections.filter((section) =>
-    [
+  const designPartnerSection = sections.find(
+  (section) => section.id === "design-partner-program",
+);
+
+const deploymentStages = sections.filter((section) =>
+  [
+    "oem-deployment",
+    "sensor-manufacturer-deployment",
+    "pilot-to-production",
+  ].includes(section.id),
+);
+
+const deploymentDetails = sections.filter(
+  (section) =>
+    ![
+      "design-partner-program",
       "oem-deployment",
       "sensor-manufacturer-deployment",
       "pilot-to-production",
     ].includes(section.id),
-  );
-
-  const deploymentDetails = sections.filter(
+);
     (section) =>
       ![
         "oem-deployment",
@@ -108,6 +120,73 @@ export default async function TechnologyPage({
 </AnimatedSection>
 </section>
 
+{/* Design Partner Program */}
+{designPartnerSection && (
+  <section
+    id="design-partner-program"
+    className="border-b border-border bg-surface py-14 sm:py-18 md:py-24"
+  >
+    <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="grid gap-10 lg:grid-cols-[0.38fr_0.62fr] lg:gap-14">
+        {/* Left */}
+        <div>
+          <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
+            Design Partner Program
+          </p>
+
+          <h2 className="heading-title mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+            {designPartnerSection.title}
+          </h2>
+
+          <p className="heading-description mt-5 text-body leading-8 text-muted">
+            {designPartnerSection.description}
+          </p>
+
+          <div className="mt-8">
+            <Button
+              variant="primary"
+              href={localizeHref(lang, "/contact")}
+            >
+              {lang === "zh"
+                ? "讨论 Design Partner 项目"
+                : "Discuss a Design Partner Project"}
+            </Button>
+          </div>
+        </div>
+
+        {/* Right */}
+        <div>
+          {designPartnerSection.content && (
+            <pre className="overflow-x-auto whitespace-pre-wrap rounded-lg border border-border bg-white p-6 font-mono text-code leading-7 text-ink/75 sm:p-8">
+              {designPartnerSection.content}
+            </pre>
+          )}
+
+          {designPartnerSection.explanation && (
+            <p className="mt-6 text-body leading-8 text-ink/75">
+              {designPartnerSection.explanation}
+            </p>
+          )}
+
+          {designPartnerSection.comparedTo && (
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {designPartnerSection.comparedTo.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 rounded-md border border-border bg-white p-4 text-label leading-6 text-ink/75"
+                >
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-atlas-blue" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </AnimatedSection>
+  </section>
+)}
+      
 {/* Main deployment paths */}
       <section className="border-b border-border bg-surface py-14 sm:py-18 md:py-24">
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
