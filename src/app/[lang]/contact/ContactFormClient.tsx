@@ -121,6 +121,41 @@ export default function ContactFormClient({
         </div>
       </Section>
 
+{/* Contact paths */}
+<Section id="contact-paths" className="bg-surface">
+  <div className="grid gap-5 md:grid-cols-3">
+    {content.options.map((option) => (
+      <a
+        key={option.title}
+        href="#contact-form"
+        className="group rounded-lg border border-border bg-white p-6 transition-colors hover:border-atlas-blue sm:p-8"
+      >
+        <p className="font-mono text-caption font-semibold uppercase tracking-eyebrow text-atlas-blue">
+          {option.eyebrow}
+        </p>
+
+        <h2 className="mt-4 font-sans text-card-title font-semibold leading-snug tracking-tight text-ink md:text-card-title-md">
+          {option.title}
+        </h2>
+
+        <p className="mt-4 text-label leading-7 text-muted">
+          {option.description}
+        </p>
+
+        <div className="mt-6 text-label font-semibold text-atlas-blue">
+          {content.optionAction}
+          <span
+            className="ml-2 inline-block transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Section>
+
       {/* Contact form */}
       <Section id="contact-form" className="bg-white">
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
