@@ -18,7 +18,7 @@ const productVideosByLocale: Record<"zh" | "en", ProductVideo[]> = {
       eyebrow: "机器人 OEM",
       title: "Atlas Runtime Investigation™",
       description:
-        "演示 Atlas 如何从机器人运行时事件(REF)出发，依据证据包，历史案例知识召回和标准调查工作流 (SOP)，并将完成的调查沉淀为可复用的组织资产。",
+        "演示 Atlas 如何从机器人运行时事件(REF)出发，依据证据包，历史案例知识召回执行标准化的调查工作流，并将完成的调查沉淀为可复用的组织资产。",
       audience: "面向机器人 OEM/ODM。 通过 EGP 协调 OEM 运维工程与传感器供应商 FAE",
       src: "/videos/runtime-investigation-demo.mp4",
     },
