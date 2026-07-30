@@ -18,7 +18,7 @@ const productVideosByLocale: Record<"zh" | "en", ProductVideo[]> = {
       eyebrow: "机器人 OEM",
       title: "Atlas Runtime Investigation™",
       description:
-        "演示 Atlas 如何从机器人运行时事件(REF)出发，依据证据包，历史案例知识召回执行标准化的调查工作流，并将完成的调查沉淀为可复用的组织资产。",
+        "演示 Atlas 如何从机器人事故(REF)出发，依据证据包，历史案例召回执行标准化的调查工作流，并将完成的调查沉淀为可复用的组织资产。",
       audience: "面向机器人 OEM/ODM。 通过 EGP 协调 OEM 运维工程与传感器供应商 FAE",
       src: "/videos/runtime-investigation-demo.mp4",
     },
@@ -27,7 +27,7 @@ const productVideosByLocale: Record<"zh" | "en", ProductVideo[]> = {
       eyebrow: "传感器制造商",
       title: "Atlas Runtime Sensor Governance™",
       description:
-        "演示 Atlas 如何观察传感器运行时边界、组织调查统一时间轴证据包、支持传感器 FAE 与 OEM 通过 EGP 协作，并沉淀可复用的传感器运行时知识。",
+        "演示 Atlas 如何观察运行时边界、组织调查统一时间轴证据包、支持传感器 FAE 与 OEM 通过 EGP 协作，并沉淀可复用的传感器运行时知识。",
       audience: "面向传感器制造商、FAE 运维团队和产品工程组织",
       src: "/videos/runtime-sensor-governance-demo.mp4",
     },
