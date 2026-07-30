@@ -41,7 +41,7 @@ const productVideosByLocale: Record<"zh" | "en", ProductVideo[]> = {
         "See how Atlas starts from a robot runtime event to create a Runtime Dataset™, Evidence Pack™, Historical RGA™, and investigation context, then turns the completed investigation into a reusable organizational asset.",
       audience:
         "For robot OEMs, engineering teams, and runtime investigation organizations",
-      src: "/videos/runtime-investigation-demo.mp4",
+      src: "/videos/runtime-investigation-demo-en.mp4",
     },
     {
       id: "02",
@@ -51,7 +51,7 @@ const productVideosByLocale: Record<"zh" | "en", ProductVideo[]> = {
         "See how Atlas observes sensor runtime boundaries, organizes investigation evidence, supports collaboration between sensor FAEs and OEMs, and captures reusable sensor runtime knowledge.",
       audience:
         "For sensor manufacturers, FAE teams, and product engineering organizations",
-      src: "/videos/runtime-sensor-governance-demo.mp4",
+      src: "/videos/runtime-sensor-governance-demo-en.mp4",
     },
   ],
 };
