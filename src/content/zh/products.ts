@@ -69,7 +69,7 @@ const productsContent = {
     name: "Atlas Runtime Investigation™",
     audience: "机器人 OEM",
     description:
-      "帮助机器人 OEM 将运行时事件转化为边界明确的 Evidence Pack™，创建和管理 REF 工单，召回 Historical RGA，协调 Tier 1、Tier 2、Tier 3 与 Sensor FAE，并将调查结果转化为组织知识。Atlas 不替代你的工具，只标准化你的调查。",
+      "帮助机器人 OEM 将运行时事件转化为边界明确的 Evidence Pack™，创建和管理 REF 工单，召回 Historical RGA，协调 OEM 运维工程与传感器供应商 FAE 调查，并将调查结果转化为组织知识。Atlas 不替代你的工具，只标准化你的调查。",
     href: "/products/runtime-investigation",
 
     valuePoints: [
