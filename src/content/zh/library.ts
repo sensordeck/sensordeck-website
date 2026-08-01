@@ -41,11 +41,11 @@ export const libraryContent = {
   },
   {
     id: "04",
-    title: "发布说明",
+    title: "Atlas 基础理论",
     description:
-      "查看 Atlas Runtime Governance™ 的主要版本、核心能力、兼容性、部署模式、已知限制和重要产品变更。",
+      "查看 Atlas 设计第一性原理、为什么需要Atlas和我们坚守的核心设计原则。",
     href:
-      "https://sensordeck.github.io/atlas-docs-cn/reference/release-notes",
+      "https://sensordeck.github.io/atlas-docs-cn/category/基础理论",
     items: "版本记录",
   },
 ],
