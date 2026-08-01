@@ -3,6 +3,7 @@ import Button from "@/components/website/Button";
 import { getPlatformContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
 import { notFound } from "next/navigation";
+import StandardPageHero from "@/components/website/StandardPageHero";
 
 export default async function PlatformPage({
   params,
@@ -116,27 +117,26 @@ export default async function PlatformPage({
 
   return (
     <main className="bg-white">
-      <section className="border-b border-border bg-white py-16 sm:py-20 md:py-28">
-        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-5xl">
-            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
-              {pageCopy.heroEyebrow}
-            </p>
+      <StandardPageHero
+  eyebrow={pageCopy.heroEyebrow}
+  title={hero.title}
+  subtitle={hero.subtitle}
+  description={hero.description}
+  sideEyebrow="Runtime Governance Infrastructure"
+  sideDescription="Structured runtime evidence, investigation workflows, historical recall, and organizational knowledge reuse."
+  graphic={
+    <div
+      className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
+      aria-hidden="true"
+    >
+      <div className="absolute right-[-10%] top-[-16%] h-[440px] w-[440px] rotate-45 border border-atlas-blue/10" />
 
-            <h1 className="heading-title mt-6 max-w-4xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-              {hero.title}
-            </h1>
+      <div className="absolute right-[4%] top-[12%] h-[280px] w-[280px] rotate-45 border border-atlas-blue/15" />
 
-            <p className="heading-description mt-7 max-w-4xl text-body-lg leading-9 text-ink sm:text-body-lg-md">
-              {hero.subtitle}
-            </p>
-
-            <p className="heading-description mt-7 max-w-4xl text-body-lg leading-9 text-muted sm:text-body-lg-md sm:leading-10">
-              {hero.description}
-            </p>
-          </div>
-        </AnimatedSection>
-      </section>
+      <div className="absolute right-[18%] top-[39%] h-[110px] w-[110px] rotate-45 bg-surface-blue" />
+    </div>
+  }
+/>
 
       <section className="border-b border-border bg-surface py-14 sm:py-18 md:py-24">
         <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
