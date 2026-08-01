@@ -5,7 +5,7 @@ export const contactContent = {
     eyebrow: "Contact",
     title: "Start with a Real Runtime Scenario",
     description:
-      "If your robots are already operating in real-world deployments, Atlas can start with one platform, one class of runtime incident, and one operations or engineering team.\n\nWe do not ask you to replace your existing cloud platform, fleet manager, alerting system, service ticketing, or engineering workflows. The first conversation is about understanding how your team handles field incidents today, retains runtime data, conducts engineering investigations, and reuses what has already been learned.",
+      "If your robots are already deployed, Atlas can start with one platform, one runtime incident, and one engineering or operations team.\n\nAtlas works alongside your existing infrastructure. We begin by understanding how your team captures runtime evidence, investigates field incidents, and preserves engineering knowledge.",
   },
 
   options: [
