@@ -38,12 +38,12 @@ export const libraryContent = {
       },
       {
         id: "04",
-        title: "Release Notes",
+        title: "Design Foundation",
         description:
-          "Review major Atlas releases, core capabilities, compatibility information, deployment modes, known limitations, and important product changes.",
+          "Review our Design Philosophy, Why Atlas and  Design Principle.",
         href:
-          "https://docs.sensordeck.tech/reference/release-notes",
-        items: "Product Updates",
+          "https://docs.sensordeck.tech/category/foundation",
+        items: "Design Foundation",
       },
     ],
 
