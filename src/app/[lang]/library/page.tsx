@@ -6,6 +6,7 @@ import Card from "@/components/website/Card";
 import Section from "@/components/website/Section";
 import { getLibraryContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
+import StandardPageHero from "@/components/website/StandardPageHero";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -35,45 +36,23 @@ export default async function LibraryIndexPage({
 
   return (
     <main className="bg-white font-sans text-ink">
-      <Section
-        id="library-hero"
-        className="relative overflow-hidden border-b border-border bg-white"
-      >
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
-          aria-hidden="true"
-        >
-          <div className="absolute right-[-18%] top-[-22%] h-[520px] w-[520px] rounded-full border border-atlas-blue/10" />
-          <div className="absolute right-[-4%] top-[4%] h-[360px] w-[360px] rounded-full border border-atlas-blue/15" />
-          <div className="absolute right-[10%] top-[28%] h-[180px] w-[180px] rounded-full bg-surface-blue" />
-        </div>
+     <StandardPageHero
+  eyebrow={hero.eyebrow}
+  title={hero.title}
+  subtitle={hero.subtitle}
+  graphic={
+    <div
+      className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
+      aria-hidden="true"
+    >
+      <div className="absolute right-[-18%] top-[-22%] h-[520px] w-[520px] rounded-full border border-atlas-blue/10" />
 
-        <div className="relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
-          <div className="max-w-5xl">
-            <Eyebrow>{hero.eyebrow}</Eyebrow>
+      <div className="absolute right-[-4%] top-[4%] h-[360px] w-[360px] rounded-full border border-atlas-blue/15" />
 
-            <h1 className="heading-title mt-5 max-w-4xl font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-              {hero.title}
-            </h1>
-
-            <p className="heading-description mt-6 max-w-3xl text-body-lg leading-relaxed text-muted sm:mt-7 sm:text-body-lg-md">
-              {hero.subtitle}
-            </p>
-          </div>
-
-          <div className="hidden border-l border-border pl-7 lg:block">
-            <p className="font-mono text-caption font-semibold uppercase tracking-eyebrow text-atlas-blue">
-              Atlas Runtime Governance™
-            </p>
-
-            <p className="mt-4 text-sm leading-7 text-muted">
-              Product demonstrations, technical references, deployment
-              guidance, and release information for engineering and management
-              teams.
-            </p>
-          </div>
-        </div>
-      </Section>
+      <div className="absolute right-[10%] top-[28%] h-[180px] w-[180px] rounded-full bg-surface-blue" />
+    </div>
+  }
+/>
 
       <Section id="start-here" className="bg-surface">
         <div className="mb-10 max-w-3xl md:mb-14">
