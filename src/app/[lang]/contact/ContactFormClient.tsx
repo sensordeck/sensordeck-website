@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import Section from "@/components/website/Section";
 import type { ContactContent } from "@/lib/content-types";
+import StandardPageHero from "@/components/website/StandardPageHero";
 
 const inputClass =
   "mt-2 min-h-12 w-full rounded-md border border-border bg-surface px-3.5 py-3 text-body text-ink outline-none placeholder:text-muted " +
@@ -105,21 +106,29 @@ export default function ContactFormClient({
   return (
     <div className="bg-white">
       {/* Hero */}
-      <Section id="contact-hero" className="bg-white">
-        <div className="max-w-4xl">
-          <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
-            {content.hero.eyebrow}
-          </p>
+     <StandardPageHero
+  eyebrow={content.hero.eyebrow}
+  title={content.hero.title}
+  description={content.hero.description}
+  graphic={
+    <div
+      className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
+      aria-hidden="true"
+    >
+      {/* Orbit */}
+      <div className="absolute right-[-12%] top-[-10%] h-[430px] w-[430px] rounded-full border border-atlas-blue/10" />
 
-          <h1 className="heading-title mt-5 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-            {content.hero.title}
-          </h1>
+      {/* Inner orbit */}
+      <div className="absolute right-[2%] top-[10%] h-[270px] w-[270px] rounded-full border border-atlas-blue/15" />
 
-          <p className="heading-description mt-6 max-w-3xl whitespace-pre-line text-body-lg leading-8 text-muted sm:mt-7 sm:text-body-lg-md sm:leading-9">
-            {content.hero.description}
-          </p>
-        </div>
-      </Section>
+      {/* Envelope */}
+      <div className="absolute right-[16%] top-[36%] h-[90px] w-[130px] rounded-lg border border-atlas-blue/20 bg-surface-blue">
+        <div className="absolute left-0 top-0 h-full w-full rotate-[-18deg] border-t border-r border-atlas-blue/20" />
+        <div className="absolute right-0 top-0 h-full w-full rotate-[18deg] border-t border-l border-atlas-blue/20" />
+      </div>
+    </div>
+  }
+/>
 
 {/* Contact paths */}
 <Section id="contact-paths" className="bg-surface">
