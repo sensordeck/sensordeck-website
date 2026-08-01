@@ -111,23 +111,48 @@ export default function ContactFormClient({
   title={content.hero.title}
   description={content.hero.description}
   graphic={
-    <div
-      className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
-      aria-hidden="true"
-    >
-      {/* Orbit */}
-      <div className="absolute right-[-12%] top-[-10%] h-[430px] w-[430px] rounded-full border border-atlas-blue/10" />
+  <div
+    className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
+    aria-hidden="true"
+  >
+    {/* Outer communication rings */}
+    <div className="absolute right-[-12%] top-[-14%] h-[470px] w-[470px] rounded-full border border-atlas-blue/10" />
 
-      {/* Inner orbit */}
-      <div className="absolute right-[2%] top-[10%] h-[270px] w-[270px] rounded-full border border-atlas-blue/15" />
+    <div className="absolute right-[1%] top-[8%] h-[310px] w-[310px] rounded-full border border-atlas-blue/15" />
 
-      {/* Envelope */}
-      <div className="absolute right-[16%] top-[36%] h-[90px] w-[130px] rounded-lg border border-atlas-blue/20 bg-surface-blue">
-        <div className="absolute left-0 top-0 h-full w-full rotate-[-18deg] border-t border-r border-atlas-blue/20" />
-        <div className="absolute right-0 top-0 h-full w-full rotate-[18deg] border-t border-l border-atlas-blue/20" />
-      </div>
+    <div className="absolute right-[11%] top-[25%] h-[180px] w-[180px] rounded-full border border-dashed border-atlas-blue/20" />
+
+    {/* Signal paths */}
+    <div className="absolute right-[14%] top-[38%] h-px w-[210px] rotate-[-24deg] bg-atlas-blue/15" />
+
+    <div className="absolute right-[15%] top-[55%] h-px w-[180px] rotate-[20deg] bg-atlas-blue/15" />
+
+    <div className="absolute right-[25%] top-[22%] h-[190px] w-px rotate-[28deg] bg-atlas-blue/10" />
+
+    {/* Central communication hub */}
+    <div className="absolute right-[17%] top-[34%] flex h-[112px] w-[112px] rotate-45 items-center justify-center border border-atlas-blue/20 bg-surface-blue">
+      <div className="h-12 w-12 rounded-full border border-atlas-blue/25 bg-white" />
+
+      <div className="absolute h-3 w-3 rounded-full bg-atlas-blue/25" />
     </div>
-  }
+
+    {/* Connected nodes */}
+    <div className="absolute right-[38%] top-[24%] h-5 w-5 rounded-full border border-atlas-blue/25 bg-white" />
+
+    <div className="absolute right-[42%] top-[57%] h-4 w-4 rounded-full bg-atlas-blue/15" />
+
+    <div className="absolute right-[10%] top-[27%] h-4 w-4 rounded-full border border-atlas-blue/20 bg-white" />
+
+    <div className="absolute right-[8%] top-[66%] h-5 w-5 rounded-full bg-surface-blue" />
+
+    {/* Small signal indicators */}
+    <div className="absolute right-[31%] top-[16%] h-2 w-2 rounded-full bg-atlas-blue/30" />
+
+    <div className="absolute right-[13%] top-[51%] h-2 w-2 rounded-full bg-atlas-blue/25" />
+
+    <div className="absolute right-[31%] top-[71%] h-2 w-2 rounded-full bg-atlas-blue/20" />
+  </div>
+}
 />
 
 {/* Contact paths */}
