@@ -21,11 +21,11 @@ export const libraryContent = {
       },
       {
         id: "02",
-        title: "Technical Overview",
+        title: "FAQ",
         description:
-          "Understand the Atlas product architecture, runtime governance model, Evidence Packs™, Historical RGAs™, and the investigation workflows that connect OEM and sensor teams.",
+          "Understand how Atlas works alongside log management systems, fleet management platforms, work order systems, and existing robot infrastructure, including data ownership, deployment options, and the scope of human-led investigations.",
         href: "/library/faq",
-        items: "Technical Reference",
+        items: "FAQ",
       },
       {
         id: "03",
@@ -33,7 +33,7 @@ export const libraryContent = {
         description:
           "Review deployment components, integration requirements, configuration assets, project documentation, training materials, and typical enterprise deliverables.",
         href:
-          "https://docs.sensordeck.tech/reference/downloads",
+          "https://docs.sensordeck.tech/reference/faq",
         items: "Deployment",
       },
       {
