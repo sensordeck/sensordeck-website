@@ -3,6 +3,7 @@ import Button from "@/components/website/Button";
 import { getTechnologyContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
 import { notFound } from "next/navigation";
+import StandardPageHero from "@/components/website/StandardPageHero";
 
 export default async function TechnologyPage({
   params,
@@ -94,24 +95,27 @@ const deploymentDetails = sections.filter(
    
   return (
     <div className="bg-white text-ink">
-      {/* Hero */}
-      <section className="border-b border-border bg-white py-16 sm:py-20 md:py-28">
-        <AnimatedSection className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-5xl">
-            <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow sm:text-eyebrow-md lg:text-eyebrow-lg text-atlas-blue">
-              Deployment
-            </p>
+     <StandardPageHero
+  eyebrow="Deployment"
+  title={hero.title}
+  subtitle={hero.subtitle}
+  graphic={
+    <div
+      className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
+      aria-hidden="true"
+    >
+      {/* Connection lines */}
+      <div className="absolute right-[6%] top-[28%] h-px w-[320px] bg-atlas-blue/15" />
+      <div className="absolute right-[10%] top-[48%] h-px w-[260px] bg-atlas-blue/15" />
+      <div className="absolute right-[15%] top-[68%] h-px w-[200px] bg-atlas-blue/15" />
 
-            <h1 className="heading-title mt-6 font-sans text-page-title font-semibold leading-tight tracking-tight text-ink sm:text-display-md lg:text-display-lg">
-             {hero.title}
-</h1>
-
-<p className="heading-description mt-7 max-w-4xl text-body-lg leading-8 text-muted sm:text-body-lg-md sm:leading-9">
-  {hero.subtitle}
-</p>
-</div>
-</AnimatedSection>
-</section>
+      {/* Nodes */}
+      <div className="absolute right-[30%] top-[25%] h-8 w-8 rounded-full border border-atlas-blue/20 bg-white" />
+      <div className="absolute right-[20%] top-[45%] h-8 w-8 rounded-full border border-atlas-blue/20 bg-surface-blue" />
+      <div className="absolute right-[11%] top-[65%] h-8 w-8 rounded-full bg-atlas-blue/10" />
+    </div>
+  }
+/>
 
 {/* Design Partner Program */}
 {designPartnerSection && (
