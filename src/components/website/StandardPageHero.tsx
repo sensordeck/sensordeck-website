@@ -5,8 +5,6 @@ type StandardPageHeroProps = {
   title: string;
   subtitle?: string;
   description?: string;
-  sideEyebrow?: string;
-  sideDescription?: string;
   graphic?: ReactNode;
 };
 
@@ -15,15 +13,13 @@ export default function StandardPageHero({
   title,
   subtitle,
   description,
-  sideEyebrow,
-  sideDescription,
   graphic,
 }: StandardPageHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-border bg-white">
       {graphic}
 
-      <div className="relative z-10 mx-auto grid min-h-[480px] w-full max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-[minmax(0,1fr)_320px] lg:px-8 lg:py-20">
+      <div className="relative z-10 mx-auto flex min-h-[480px] w-full max-w-7xl items-center px-6 py-16 lg:px-8 lg:py-20">
         <div className="max-w-4xl">
           <p className="heading-eyebrow font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue sm:text-eyebrow-md lg:text-eyebrow-lg">
             {eyebrow}
@@ -45,22 +41,6 @@ export default function StandardPageHero({
             </p>
           )}
         </div>
-
-        {(sideEyebrow || sideDescription) && (
-          <div className="hidden border-l border-border pl-7 lg:block">
-            {sideEyebrow && (
-              <p className="font-mono text-caption font-semibold uppercase tracking-eyebrow text-atlas-blue">
-                {sideEyebrow}
-              </p>
-            )}
-
-            {sideDescription && (
-              <p className="mt-4 text-sm leading-7 text-muted">
-                {sideDescription}
-              </p>
-            )}
-          </div>
-        )}
       </div>
     </section>
   );
