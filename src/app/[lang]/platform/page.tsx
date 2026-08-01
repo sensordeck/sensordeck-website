@@ -117,13 +117,11 @@ export default async function PlatformPage({
 
   return (
     <main className="bg-white">
-      <StandardPageHero
+     <StandardPageHero
   eyebrow={pageCopy.heroEyebrow}
   title={hero.title}
   subtitle={hero.subtitle}
   description={hero.description}
-  sideEyebrow="Runtime Governance Infrastructure"
-  sideDescription="Structured runtime evidence, investigation workflows, historical recall, and organizational knowledge reuse."
   graphic={
     <div
       className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block"
