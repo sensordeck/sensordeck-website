@@ -46,7 +46,7 @@ export const libraryContent = {
       "查看 Atlas 设计第一性原理、为什么需要Atlas和我们坚守的核心设计原则。",
     href:
       "https://sensordeck.github.io/atlas-docs-cn/category/基础理论",
-    items: "版本记录",
+    items: "设计基础",
   },
 ],
 
