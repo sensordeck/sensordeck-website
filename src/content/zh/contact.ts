@@ -134,7 +134,7 @@ export const contactContent = {
         city: "中国 · 大湾区",
         name: "惠州深时传感科技有限公司",
         email: "sales@sensordeck.tech",
-        address: "广东省惠州市",
+        address: "广东省惠州市惠南高新科技园演达路1号",
       },
       {
         city: "美国 · 加利福尼亚",
