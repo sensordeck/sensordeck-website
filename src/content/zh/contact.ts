@@ -133,7 +133,7 @@ export const contactContent = {
       {
         city: "中国 · 大湾区",
         name: "惠州深时传感科技有限公司",
-        email: "sales@sensordeck.tech",
+        email: "sales.cn@sensordeck.tech",
         address: "广东省惠州市惠南高新科技园演达路1号",
       },
       {
