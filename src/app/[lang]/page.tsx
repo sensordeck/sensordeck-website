@@ -227,9 +227,11 @@ export default async function HomePage({
               {homeContent.sectionTitles.categoryDefinition}
             </h2>
 
-            <p className={unifiedSectionDescriptionClassName}>
-              {homeContent.sectionDescriptions.categoryDefinition}
-            </p>
+           <p
+  className={`${unifiedSectionDescriptionClassName} whitespace-pre-line`}
+>
+  {homeContent.sectionDescriptions.categoryDefinition}
+</p>
 
             <Button
               className="mt-6 w-full sm:w-auto md:mt-8"
