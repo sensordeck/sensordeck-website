@@ -38,7 +38,7 @@ const homeContent = {
   },
  categoryDefinition: {
     lead:
-  "机器人已经拥有先进的传感器、计算平台、ROS 中间件，以及快速发展的 AI 与应用软件。\n\n但从传感器输出到系统决策之间，运行时行为始终缺少统一治理。当异常发生，工程团队仍需要从分散的日志、设备状态、录像与人工经验中，重新还原问题发生时的真实运行过程。",
+  "机器人已经拥有先进的传感器、计算平台、ROS 中间件，以及快速发展的 AI 与应用软件。但在传感器输出与系统决策之间，运行时仍缺少一层统一的运行时基础设施 (Runtime Infrastructure)，使 Runtime Truth 第一次成为可以持续观察、持续调查、持续积累的企业基础能力。",
 
     runtimeBoundary: {
       title: "机器人真正缺失的是运行时治理层",
@@ -52,14 +52,14 @@ const homeContent = {
         "System Decision",
       ],
     note:
-      "机器人进入真实世界后，传感器数据需要经过供电、通信、Linux、驱动、缓冲区、调度器以及 ROS Runtime 等多个运行时环节，最终才能成为系统决策输入。今天行业拥有每一个独立组件，却缺少持续治理这一整条运行时链路的基础设施。"
+      "机器人进入真实世界后，传感器数据必须经过供电、通信、Linux Runtime、Driver、ROS Runtime 等多个运行时环节，才能最终成为系统决策的输入。今天，机器人行业已经拥有这些组件，却仍缺少一层能够持续观察、持续调查、持续积累整条运行时链路的基础设施。"
   },
 
   whyImportant: {
     title: "为什么这一层如此重要？",
 
     traditional: {
-      title: "行业长期投入于：",
+      title: "过去十多年，机器人行业持续投入于：",
       items: [
         "更好的 Sensor",
         "更强的 AI",
@@ -69,7 +69,7 @@ const homeContent = {
     },
 
     runtime: {
-      title: "但大量运行时问题却发生在：",
+      title: "而机器人长期稳定运行，则越来越取决于另一层：",
       items: [
         "Power",
         "USB / Ethernet / CAN",
@@ -79,15 +79,16 @@ const homeContent = {
         "Scheduler",
         "ROS Runtime",
         "Timing"
+        这些投入，让机器人成功走出实验室。
       ],
 
       note:
-        "这些环节不会改变算法，却决定系统最终收到的数据是否完整、连续、可信。大量机器人事故并非来自 AI，而是来自这一层运行时环境。"
+        "这一层不会改变 AI，却持续影响 AI 所看到的 Runtime Truth。"
     }
   },
 
   whatAtlasProvides: {
-    title: "Atlas 填补这一层",
+    title: "Atlas 建立这一层",
 
     notItems: [
       "不是新的 Sensor。",
@@ -96,11 +97,11 @@ const homeContent = {
     ],
 
     isItem:
-      "Atlas 建立机器人行业此前不存在的一层：Runtime Intelligence Infrastructure™",
+      "Atlas 建立机器人行业此前不存在的一层：Runtime Intelligence Infrastructure™。它持续组织 Runtime，而不是替代现有系统。",
 
     capabilities: [
       "Atlas Agent 持续运行时观察",
-      "运行时证据保留",
+      "Runtime Truth 保留",
       "自动生成证据包 Evidence Pack",
       "事故工单调查流程 Runtime Investigation",
       "历史调查案例回溯 Historical RGA",
@@ -109,7 +110,7 @@ const homeContent = {
     ],
 
    summary:
-        "机器人负责理解世界，Atlas 负责理解机器人运行时。"
+        "机器人负责理解物理世界，Atlas 负责理解机器人的 Runtime World。"
     },
 
       points: [
