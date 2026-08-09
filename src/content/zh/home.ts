@@ -110,7 +110,7 @@ const homeContent = {
     ],
 
    summary:
-        "机器人负责理解物理世界，Atlas 负责理解机器人的 Runtime World。"
+        "机器人负责感知与决策，Atlas 负责运行时证据、调查与组织记忆。"
     },
 
       points: [
