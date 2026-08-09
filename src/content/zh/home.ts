@@ -85,6 +85,7 @@ const homeContent = {
   note:
     "这些投入，让机器人成功走出实验室。\n\n这些环节不会改变算法，却决定系统最终收到的数据是否完整、连续、可信。大量机器人事故并非来自 AI，而是来自这一层运行时环境。"
 },
+    },
 
   whatAtlasProvides: {
     title: "Atlas 建立这一层",
