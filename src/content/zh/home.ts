@@ -184,7 +184,7 @@ const homeContent = {
       name: "Atlas Runtime Investigation™",
       audience: "机器人 OEM",
       description: "将运行时事件转化为边界明确的证据、协调调查和可复用的组织知识。",
-      modules: ["Atlas Agent™ 与运行时数据集", "证据包™ 与候选 EPs", "历史调查案例召回 Historical RGA Recall™", "调查工作区™（Tier 1 / 2 / 3）", "传感器参与包（EGP）™", "Runtime Assist 知识库™", "运行时知识库™", "高管仪表板™"],
+      modules: ["Atlas Agent™ 与运行时数据集", "证据包™ 与候选 EPs", "历史调查案例召回 Historical RGA Recall™", "调查工作区™（运维团队）", "传感器参与包（EGP）™", "Runtime Assist 知识库™", "运行时知识库™", "高管仪表板™"],
       lifecycle: ["运行时受控配置", "候选证据", "主要证据包(EP)", "历史案例 RGA 召回", "OEM / 传感器调查", "调查结案", "Assist Vault", "未来复用"],
       link: "/products/runtime-investigation",
     },
