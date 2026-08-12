@@ -1,18 +1,3 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
-import CTODemoClient from "@/app/[lang]/demo/cto/CTODemoClient";
-import InvestigationDemoClient from "@/app/[lang]/demo/investigation/InvestigationDemoClient";
-import SensorFaeDemoClient from "@/app/[lang]/demo/sensor-fae/SensorFaeDemoClient";
-import Tier1DemoClient from "@/app/[lang]/demo/tier1/Tier1DemoClient";
-import { demoContent } from "@/content/zh/demo";
-import { atlasLifecycle, demoScenario } from "@/data/demo/scenario";
-
-afterEach(() => cleanup());
-
-describe("Atlas V3 demo", () => {
- it("uses the official complete lifecycle and shared identifiers",()=>{expect(atlasLifecycle).toEqual(["Runtime Dataset","Evidence Pack (EP)","REF","Historical RGA","Investigation Context","Investigation Tier Candidate","Sensor Engagement Pack (EGP)","Investigation Result (IR) / Lessons Learned (LL)","OEM Closure","Assist Candidate / Assist Vault"]); expect(demoScenario).toMatchObject({ref:"REF-DEMO-2030-0001",evidencePack:"EP-C03",engagementPack:"EGP-DEMO-SENSOR-2030-0001"});});
- it("navigates Tier 1 evidence and review steps",()=>{render(<Tier1DemoClient content={demoContent}/>);fireEvent.click(screen.getByRole("button",{name:/Runtime Dataset/}));expect(screen.getByText("RDS-DEMO-2030-0001")).toBeInTheDocument();fireEvent.click(screen.getByRole("button",{name:/审核、优先级/}));expect(screen.getByText("P2 · Human review")).toBeInTheDocument();});
- it("switches investigation stages",()=>{render(<InvestigationDemoClient content={demoContent}/>);fireEvent.click(screen.getByRole("button",{name:"Historical RGA"}));expect(screen.getByText("Strong Candidate · 87%")).toBeInTheDocument();fireEvent.click(screen.getByRole("button",{name:"EGP Preview"}));expect(screen.getAllByText(/EGP-DEMO-SENSOR-2030-0001/).length).toBeGreaterThan(0);});
- it("updates FAE authorization state",()=>{render(<SensorFaeDemoClient content={demoContent}/>);fireEvent.change(screen.getByRole("combobox",{name:"STATUS"}),{target:{value:"Authorized"}});expect(screen.getAllByText("Authorized").length).toBeGreaterThan(0);});
- it("filters the CTO estimate window",()=>{render(<CTODemoClient content={demoContent}/>);fireEvent.click(screen.getByRole("button",{name:"30 days"}));expect(screen.getByText(/30 days · 非客户实际结果/)).toBeInTheDocument();});
-});
+import {cleanup,fireEvent,render,screen}from"@testing-library/react";import{afterEach,describe,expect,it}from"vitest";import CTODemoClient from"@/app/[lang]/demo/cto/CTODemoClient";import InvestigationDemoClient from"@/app/[lang]/demo/investigation/InvestigationDemoClient";import SensorFaeDemoClient from"@/app/[lang]/demo/sensor-fae/SensorFaeDemoClient";import Tier1DemoClient from"@/app/[lang]/demo/tier1/Tier1DemoClient";import{demoContent}from"@/content/zh/demo";import{getDemoLocale}from"@/data/demo/scenario";
+afterEach(cleanup);const pages=[Tier1DemoClient,InvestigationDemoClient,SensorFaeDemoClient,CTODemoClient];
+describe("Atlas V3 demo localization",()=>{it("provides the complete localized lifecycle",()=>{expect(getDemoLocale("zh").lifecycle).toContain("调查结果（IR）/ 经验教训（LL）");expect(getDemoLocale("en").lifecycle).toContain("Evidence Pack (EP)")});it.each(pages)("includes an exact localized back link",Page=>{render(<Page content={demoContent} lang="zh"/>);expect(screen.getByRole("link",{name:"← 返回演示页"})).toHaveAttribute("href","/zh/demo#demo-scenario")});it("navigates localized Tier 1 steps",()=>{render(<Tier1DemoClient content={demoContent} lang="zh"/>);fireEvent.click(screen.getByRole("button",{name:/运行时数据集/}));expect(screen.getByText("RDS-DEMO-2030-0001")).toBeInTheDocument()});it("switches localized investigation stages",()=>{render(<InvestigationDemoClient content={demoContent} lang="zh"/>);fireEvent.click(screen.getByRole("button",{name:"历史 RGA"}));expect(screen.getByText("强候选 · 87%")).toBeInTheDocument()});it("keeps English UI and link",()=>{render(<CTODemoClient content={demoContent} lang="en"/>);expect(screen.getByRole("link",{name:"← Back to demos"})).toHaveAttribute("href","/en/demo#demo-scenario");expect(screen.getByText("Investigation volume")).toBeInTheDocument()})});

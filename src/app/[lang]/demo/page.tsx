@@ -11,7 +11,7 @@ import { isValidLocale, localizeHref } from "@/lib/i18n";
 
 import ProductVideosClient from "./ProductVideosClient";
 import { LifecycleRail } from "@/components/demo/AtlasDemo";
-import { demoScenario, governanceBoundary } from "@/data/demo/scenario";
+import { getDemoLocale } from "@/data/demo/scenario";
 
 function ArrowLabel() {
   return (
@@ -33,6 +33,7 @@ export default async function DemoIndexPage({
   }
 
   const content = await getDemoContent(lang);
+  const { scenario: demoScenario, copy: demoCopy } = getDemoLocale(lang);
   const pageCopy =
     lang === "zh"
       ? {
@@ -182,11 +183,11 @@ export default async function DemoIndexPage({
             {pageCopy.interfacesDescription}
           </p>
           <p className="mt-4 border-l-4 border-yellow-500 bg-yellow-50 p-4 text-body leading-relaxed text-ink">
-            {lang === "zh" ? `同一个 Demo Robotics 案例的四个角色视图 · ${demoScenario.ref} · 已脱敏演示数据 · 人工治理的调查 · ${governanceBoundary}` : `Four role views of the same Demo Robotics case · ${demoScenario.ref} · Sanitized demo data · Human-governed investigation.`}
+            {lang === "zh" ? `同一个 Demo Robotics 案例的四个角色视图 · ${demoScenario.ref} · 已脱敏演示数据 · 人工治理的调查 · ${demoCopy.governanceBoundary}` : `Four role views of the same Demo Robotics case · ${demoScenario.ref} · Sanitized demo data · Human-governed investigation.`}
           </p>
         </div>
 
-        <div className="mt-8"><LifecycleRail /></div>
+        <div className="mt-8"><LifecycleRail lang={lang} /></div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {content.index.pages.map((page) => (
@@ -213,8 +214,8 @@ export default async function DemoIndexPage({
                   {page.description}
                 </p>
                 <dl className="mt-5 grid gap-2 border-t border-border pt-4 text-caption">
-                  <div><dt className="text-muted">{lang === "zh" ? "当前阶段" : "Current stage"}</dt><dd className="font-semibold text-ink">{["REF / Runtime Dataset", "EP / Historical RGA / Context", "EGP / Sensor IR / LL", "OEM Closure / Assist Vault"][Number(page.id)-1]}</dd></div>
-                  <div><dt className="text-muted">Artifact</dt><dd className="font-mono text-code text-ink">{[demoScenario.ref, demoScenario.evidencePack, demoScenario.engagementPack, "Governance Metrics"][Number(page.id)-1]}</dd></div>
+                  <div><dt className="text-muted">{lang === "zh" ? "当前阶段" : "Current stage"}</dt><dd className="font-semibold text-ink">{(lang === "zh" ? ["REF / 运行时数据集", "EP / 历史 RGA / 调查上下文", "EGP / 传感器调查结果（IR）/ 传感器经验教训（LL）", "OEM 结案 / 辅助知识库"] : ["REF / Runtime Dataset", "EP / Historical RGA / Context", "EGP / Sensor IR / LL", "OEM Closure / Assist Vault"])[Number(page.id)-1]}</dd></div>
+                  <div><dt className="text-muted">{lang === "zh" ? "调查资产" : "Artifact"}</dt><dd className="font-mono text-code text-ink">{[demoScenario.ref, demoScenario.evidencePack, demoScenario.engagementPack, lang === "zh" ? "治理指标" : "Governance Metrics"][Number(page.id)-1]}</dd></div>
                 </dl>
               </div>
 

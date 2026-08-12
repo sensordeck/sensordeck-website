@@ -54,7 +54,7 @@ export const demoContent = {
       customer: "客户",
       robotSerialNumber: "机器人序列号",
       refId: "REF 标识",
-      primaryEvidencePack: "主要 Evidence Pack",
+      primaryEvidencePack: "主要证据包",
       egpId: "EGP 标识",
       sensorFae: "传感器 FAE",
     },
@@ -350,13 +350,13 @@ export const demoContent = {
 
     validationEyebrow: "EGP 包验证",
     validationTitle: "包完整性检查",
-    evidencePackIdLabel: "Evidence Pack 标识",
+    evidencePackIdLabel: "证据包标识",
     evidenceQualityLabel: "证据质量",
     packageIntegrityLabel: "包完整性",
     verifiedLabel: "已验证",
     monitoredSurfacesLabel: "覆盖的监测维度",
 
-    evidenceSummaryEyebrow: "Evidence Pack 摘要",
+    evidenceSummaryEyebrow: "证据包摘要",
     deviationWindowLabel: "偏差窗口",
     upstreamContextLabel: "上游上下文",
     downstreamContextLabel: "下游上下文",
@@ -389,7 +389,7 @@ export const demoContent = {
     irStatusLabel: "IR 状态",
     lessonAuthoredLabel: "LL 已撰写",
     yesLabel: "是",
-    historicalUpdatedLabel: "Historical RGA 更新状态",
+    historicalUpdatedLabel: "历史 RGA 更新状态",
     pendingLabel: "等待审核",
     readyLabel: "准备返回 OEM",
     readyDescription:
@@ -470,7 +470,7 @@ export const demoContent = {
       ],
       readyLabel: "准备创建 REF",
       readyDescription:
-        "创建后，系统将生成 REF 标识并分派至指定工程师。运行时数据集已锁定，可用于后续 Evidence Pack 生成。",
+        "创建后，系统将生成 REF 标识并分派至指定工程师。运行时数据集已锁定，可用于后续 证据包生成。",
       submit: "创建 REF 并分派 →",
     },
 

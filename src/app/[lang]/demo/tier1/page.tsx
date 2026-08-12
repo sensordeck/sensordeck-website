@@ -16,5 +16,5 @@ export default async function Tier1DemoPage({
 
   const content = await getDemoContent(lang);
 
-  return <Tier1DemoClient content={content} />;
+  return <Tier1DemoClient content={content} lang={lang} />;
 }
