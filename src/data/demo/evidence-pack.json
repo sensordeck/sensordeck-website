@@ -19,7 +19,7 @@
   },
   "evidence_quality": "权威",
   "metadata": {
-    "runtime_dataset_id": "DEMO-XXXX-XXXX-XXXX",
+    "runtime_dataset_id": "RDS-DEMO-2030-0001",
     "collection_agent": "DEMO-AGT-0001-XXXX",
     "analysis_version": "Atlas Evidence Builder v1.0.0-demo"
   }

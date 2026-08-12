@@ -120,7 +120,7 @@ export default function ProductVideosClient({ lang }: { lang: "zh" | "en" }) {
                   {video.id}
                 </span>
 
-                <span className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
+                <span className="border border-border px-2 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
                   {video.eyebrow}
                 </span>
               </div>

@@ -10,6 +10,8 @@ import { getDemoContent } from "@/lib/content";
 import { isValidLocale, localizeHref } from "@/lib/i18n";
 
 import ProductVideosClient from "./ProductVideosClient";
+import { LifecycleRail } from "@/components/demo/AtlasDemo";
+import { demoScenario, governanceBoundary } from "@/data/demo/scenario";
 
 function ArrowLabel() {
   return (
@@ -179,12 +181,17 @@ export default async function DemoIndexPage({
           <p className="mt-5 max-w-3xl text-body leading-8 text-muted">
             {pageCopy.interfacesDescription}
           </p>
+          <p className="mt-4 border-l-4 border-yellow-500 bg-yellow-50 p-4 text-body leading-relaxed text-ink">
+            {lang === "zh" ? `同一个 Demo Robotics 案例的四个角色视图 · ${demoScenario.ref} · 已脱敏演示数据 · 人工治理的调查 · ${governanceBoundary}` : `Four role views of the same Demo Robotics case · ${demoScenario.ref} · Sanitized demo data · Human-governed investigation.`}
+          </p>
         </div>
+
+        <div className="mt-8"><LifecycleRail /></div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {content.index.pages.map((page) => (
             <Card
-              className="flex min-h-72 flex-col justify-between"
+              className="flex min-h-72 flex-col justify-between border-t-4 border-t-atlas-blue bg-white"
               key={page.id}
             >
               <div>
@@ -205,6 +212,10 @@ export default async function DemoIndexPage({
                 <p className="mt-4 text-body leading-relaxed text-muted">
                   {page.description}
                 </p>
+                <dl className="mt-5 grid gap-2 border-t border-border pt-4 text-caption">
+                  <div><dt className="text-muted">{lang === "zh" ? "当前阶段" : "Current stage"}</dt><dd className="font-semibold text-ink">{["REF / Runtime Dataset", "EP / Historical RGA / Context", "EGP / Sensor IR / LL", "OEM Closure / Assist Vault"][Number(page.id)-1]}</dd></div>
+                  <div><dt className="text-muted">Artifact</dt><dd className="font-mono text-code text-ink">{[demoScenario.ref, demoScenario.evidencePack, demoScenario.engagementPack, "Governance Metrics"][Number(page.id)-1]}</dd></div>
+                </dl>
               </div>
 
               <div className="mt-6 border-t border-border pt-4">
