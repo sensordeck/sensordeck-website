@@ -16,5 +16,5 @@ export default async function InvestigationDemoPage({
 
   const content = await getDemoContent(lang);
 
-  return <InvestigationDemoClient content={content} />;
+  return <InvestigationDemoClient content={content} lang={lang} />;
 }

@@ -16,5 +16,5 @@ export default async function CTODemoPage({
 
   const content = await getDemoContent(lang);
 
-  return <CTODemoClient content={content} />;
+  return <CTODemoClient content={content} lang={lang} />;
 }

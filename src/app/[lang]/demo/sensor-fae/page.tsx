@@ -16,5 +16,5 @@ export default async function SensorFaeDemoPage({
 
   const content = await getDemoContent(lang);
 
-  return <SensorFaeDemoClient content={content} />;
+  return <SensorFaeDemoClient content={content} lang={lang} />;
 }
