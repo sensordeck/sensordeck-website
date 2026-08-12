@@ -16,7 +16,7 @@
     "conditions": "室内，正常照明，中等人流"
   },
   "runtime_dataset_locked": true,
-  "runtime_dataset_id": "DEMO-XXXX-XXXX-XXXX",
+  "runtime_dataset_id": "RDS-DEMO-2030-0001",
   "runtime_window": {
     "start": "2030-01-01T08:10:00+08:00",
     "end": "2030-01-01T08:25:00+08:00",

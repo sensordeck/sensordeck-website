@@ -1,93 +1,18 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, describe, expect, it } from "vitest";
 import CTODemoClient from "@/app/[lang]/demo/cto/CTODemoClient";
 import InvestigationDemoClient from "@/app/[lang]/demo/investigation/InvestigationDemoClient";
 import SensorFaeDemoClient from "@/app/[lang]/demo/sensor-fae/SensorFaeDemoClient";
 import Tier1DemoClient from "@/app/[lang]/demo/tier1/Tier1DemoClient";
-import { demoContent as enDemoContent } from "@/content/en/demo";
-import { demoContent as zhDemoContent } from "@/content/zh/demo";
+import { demoContent } from "@/content/zh/demo";
+import { atlasLifecycle, demoScenario } from "@/data/demo/scenario";
 
-describe("demo interactions", () => {
-  it("updates the CTO time range and ROI model", () => {
-    render(<CTODemoClient content={enDemoContent} />);
+afterEach(() => cleanup());
 
-    fireEvent.click(screen.getByRole("button", { name: "30 days" }));
-    fireEvent.click(screen.getByRole("button", { name: "Actual" }));
-
-    expect(screen.getByRole("button", { name: "30 days" })).toHaveClass(
-      "bg-atlas-blue",
-    );
-    expect(screen.getByRole("button", { name: "Actual" })).toHaveClass(
-      "bg-atlas-blue",
-    );
-    expect(screen.getAllByText("1580h")).toHaveLength(2);
-    expect(screen.getAllByText("¥316K")).toHaveLength(2);
-  });
-
-  it("switches investigation candidates and evidence windows", () => {
-    render(<InvestigationDemoClient content={enDemoContent} />);
-
-    const candidateButton = screen.getByRole("button", { name: /C01/ });
-    fireEvent.click(candidateButton);
-    fireEvent.click(screen.getByRole("button", { name: /Pre-Guard/ }));
-
-    expect(candidateButton).toHaveClass("border-atlas-blue");
-    expect(
-      screen.getByText(
-        "USB bus operating normally with 1.2 ms average latency.",
-      ),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: /Pre-Guard/ }),
-    ).toHaveClass("border-atlas-blue");
-  });
-
-  it("updates the Sensor FAE result status and lesson learned draft", () => {
-    render(<SensorFaeDemoClient content={zhDemoContent} />);
-
-    fireEvent.change(screen.getByRole("combobox"), {
-      target: { value: "candidate_field_test" },
-    });
-    fireEvent.change(screen.getByRole("textbox"), {
-      target: { value: "现场复测后补充屏蔽线缆结果。" },
-    });
-
-    const statusRow = screen.getByText("IR 状态").parentElement;
-    expect(statusRow).not.toBeNull();
-    expect(within(statusRow!).getByText("需要候选现场测试")).toBeInTheDocument();
-    expect(screen.getByRole("textbox")).toHaveValue(
-      "现场复测后补充屏蔽线缆结果。",
-    );
-  });
-
-  it("navigates the complete Tier 1 workflow", () => {
-    render(<Tier1DemoClient content={zhDemoContent} />);
-
-    fireEvent.click(
-      screen.getByRole("button", { name: "下一步：机器人信息 →" }),
-    );
-    expect(
-      screen.getByRole("heading", { name: "机器人与环境" }),
-    ).toBeInTheDocument();
-
-    fireEvent.click(
-      screen.getByRole("button", { name: "下一步：运行时证据 →" }),
-    );
-    expect(
-      screen.getByRole("heading", { name: "运行时证据" }),
-    ).toBeInTheDocument();
-
-    fireEvent.click(
-      screen.getByRole("button", { name: "下一步：审核路由 →" }),
-    );
-    expect(
-      screen.getByRole("heading", { name: "审核并路由到 Tier 2" }),
-    ).toBeInTheDocument();
-
-    fireEvent.click(screen.getByRole("button", { name: "← 上一步" }));
-    expect(
-      screen.getByRole("heading", { name: "运行时证据" }),
-    ).toBeInTheDocument();
-  });
+describe("Atlas V3 demo", () => {
+ it("uses the official complete lifecycle and shared identifiers",()=>{expect(atlasLifecycle).toEqual(["Runtime Dataset","Evidence Pack (EP)","REF","Historical RGA","Investigation Context","Investigation Tier Candidate","Sensor Engagement Pack (EGP)","Investigation Result (IR) / Lessons Learned (LL)","OEM Closure","Assist Candidate / Assist Vault"]); expect(demoScenario).toMatchObject({ref:"REF-DEMO-2030-0001",evidencePack:"EP-C03",engagementPack:"EGP-DEMO-SENSOR-2030-0001"});});
+ it("navigates Tier 1 evidence and review steps",()=>{render(<Tier1DemoClient content={demoContent}/>);fireEvent.click(screen.getByRole("button",{name:/Runtime Dataset/}));expect(screen.getByText("RDS-DEMO-2030-0001")).toBeInTheDocument();fireEvent.click(screen.getByRole("button",{name:/审核、优先级/}));expect(screen.getByText("P2 · Human review")).toBeInTheDocument();});
+ it("switches investigation stages",()=>{render(<InvestigationDemoClient content={demoContent}/>);fireEvent.click(screen.getByRole("button",{name:"Historical RGA"}));expect(screen.getByText("Strong Candidate · 87%")).toBeInTheDocument();fireEvent.click(screen.getByRole("button",{name:"EGP Preview"}));expect(screen.getAllByText(/EGP-DEMO-SENSOR-2030-0001/).length).toBeGreaterThan(0);});
+ it("updates FAE authorization state",()=>{render(<SensorFaeDemoClient content={demoContent}/>);fireEvent.change(screen.getByRole("combobox",{name:"STATUS"}),{target:{value:"Authorized"}});expect(screen.getAllByText("Authorized").length).toBeGreaterThan(0);});
+ it("filters the CTO estimate window",()=>{render(<CTODemoClient content={demoContent}/>);fireEvent.click(screen.getByRole("button",{name:"30 days"}));expect(screen.getByText(/30 days · 非客户实际结果/)).toBeInTheDocument();});
 });
