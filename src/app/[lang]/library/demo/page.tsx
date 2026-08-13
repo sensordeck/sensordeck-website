@@ -61,6 +61,23 @@ export default async function DemoPage({
           </div>
         </Section>
 
+        {/* Featured Atlas V3 Demo */}
+        <Section id="atlas-v3-demo" className="bg-surface">
+          <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+              <div className="max-w-3xl">
+                <Eyebrow>{demo.featured.eyebrow}</Eyebrow>
+                <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{demo.featured.title}</h2>
+                <p className="mt-5 text-body leading-8 text-muted">{demo.featured.description}</p>
+                <p className="mt-4 font-mono text-code text-sensor-tan-text">{demo.featured.meta}</p>
+              </div>
+              <a className="inline-flex min-h-12 items-center justify-center gap-2 bg-atlas-blue px-6 py-3 text-label font-semibold text-white transition-colors hover:bg-atlas-blue-dark" href={`https://atlas-investigation-ui.vercel.app/${lang}/`} rel="noopener noreferrer" target="_blank">
+                {demo.featured.button}<span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </Section>
+
         {/* Demo Items */}
         <Section id="demo-items" className="bg-surface">
           <div className="grid gap-4 md:grid-cols-2">

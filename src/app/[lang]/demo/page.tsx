@@ -49,6 +49,13 @@ export default async function DemoIndexPage({
           interfacesTitle: "从调查受理到管理层视图",
           interfacesDescription:
             "进入不同角色的演示页面，查看 Atlas 如何组织运行时证据、调查协作和治理指标。",
+          interactiveDemo: {
+            eyebrow: "Atlas V3 交互式演示",
+            title: "打开完整 Atlas 调查工作台",
+            description: "使用 Atlas v0.1.0 已脱敏冻结演示快照，查看 Evidence Pack、REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 与 Assist Vault 的完整受控调查链路。",
+            meta: "Atlas v0.1.0 冻结基线 · 已脱敏静态演示 · 非实时数据",
+            button: "打开 Atlas V3 演示界面",
+          },
         }
       : {
           heroEyebrow: "Atlas Demos",
@@ -64,6 +71,13 @@ export default async function DemoIndexPage({
           interfacesTitle: "From Investigation Intake to Executive View",
           interfacesDescription:
             "Enter the role-specific demo pages to see how Atlas organizes runtime evidence, investigation collaboration, and governance metrics.",
+          interactiveDemo: {
+            eyebrow: "Atlas V3 Interactive Demo",
+            title: "Open the Complete Atlas Investigation Workspace",
+            description: "Explore the complete governed investigation chain across Evidence Pack, REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Assist Vault using a sanitized Atlas v0.1.0 frozen demo snapshot.",
+            meta: "Atlas v0.1.0 frozen baseline · Sanitized static demo · Not live data",
+            button: "Open the Atlas V3 Demo",
+          },
         };
 
   return (
@@ -82,6 +96,23 @@ export default async function DemoIndexPage({
     </p>
   </div>
 </Section>
+
+      {/* Atlas V3 interactive demo */}
+      <Section id="atlas-v3-demo" className="bg-surface">
+        <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="max-w-3xl">
+              <Eyebrow>{pageCopy.interactiveDemo.eyebrow}</Eyebrow>
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">{pageCopy.interactiveDemo.title}</h2>
+              <p className="mt-5 text-body leading-8 text-muted">{pageCopy.interactiveDemo.description}</p>
+              <p className="mt-4 font-mono text-code text-sensor-tan-text">{pageCopy.interactiveDemo.meta}</p>
+            </div>
+            <a className="inline-flex min-h-12 items-center justify-center gap-2 bg-atlas-blue px-6 py-3 text-label font-semibold text-white transition-colors hover:bg-atlas-blue-dark" href={`https://atlas-investigation-ui.vercel.app/${lang}/`} rel="noopener noreferrer" target="_blank">
+              {pageCopy.interactiveDemo.button}<span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </Section>
 
       {/* Product videos */}
       <Section id="atlas-product-videos" className="bg-surface">

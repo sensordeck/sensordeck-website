@@ -61,7 +61,7 @@ export const libraryContent = {
     note: "Note",
 
     demoNote:
-      "All public demo data is illustrative. Evidence Packs™, Historical RGAs™, and investigation assets from customer deployments contain deployment-specific context and are not included in public demonstrations.",
+      "The Atlas V3 interactive interface uses a sanitized Atlas v0.1.0 frozen demo snapshot. It does not connect to customer devices or a backend and does not show live data. The original four role pages and business metrics remain illustrative.",
 
     demoContactNote:
       "Contact SensorDeck to arrange a tailored demonstration based on your robot platform, sensor configuration, deployment environment, and investigation workflow.",
@@ -197,6 +197,13 @@ hero: {
   },
 
   demo: {
+    featured: {
+      eyebrow: "Atlas V3 Interactive Demo",
+      title: "Atlas Runtime Investigation™ Interactive Demo",
+      description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Assist Vault.",
+      meta: "Atlas v0.1.0 frozen baseline · Sanitized static demo · Not live data",
+      button: "Open the Atlas V3 Demo",
+    },
     eyebrow: "01 / Product Demonstrations",
     title: "See Atlas in Action",
     description:

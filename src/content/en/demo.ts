@@ -2,6 +2,13 @@ import type { DemoContent } from "@/lib/content-types";
 
 export const demoContent = {
   index: {
+    interactiveDemo: {
+      eyebrow: "Atlas V3 Interactive Demo",
+      title: "Atlas Runtime Investigation™ Interactive Demo",
+      description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Assist Vault.",
+      meta: "Atlas v0.1.0 frozen baseline · Sanitized static demo · Not live data",
+      button: "Open the Atlas V3 Demo",
+    },
     pages: [
       {
         id: "01",
