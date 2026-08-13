@@ -303,13 +303,13 @@ export default async function DemoIndexPage({
             className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
             href={localizeHref(lang, "/library/documentation")}
           >
-            {content.index.notice.label === "演示说明" ? "← 企业交付" : "← Enterprise Delivery"}
+            {lang === "zh" ? "← 企业交付" : "← Enterprise Delivery"}
           </Link>
           <Link
             className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
             href={localizeHref(lang, "/library/faq")}
           >
-            {content.index.notice.label === "演示说明" ? "常见问题 →" : "FAQ →"}
+            {lang === "zh" ? "常见问题 →" : "FAQ →"}
           </Link>
         </div>
       </Section>
