@@ -64,7 +64,7 @@ export const libraryContent = {
     note: "注意",
 
     demoNote:
-      "所有公开演示数据均为示意性内容。实际部署的 Evidence Pack、Historical RGA 和调查资产包含客户特定的运行时上下文，不会在公开演示中展示。",
+      "Atlas V3 交互式界面使用 Atlas v0.1.0 已脱敏冻结演示快照，不连接客户设备、不调用后端，也不展示实时数据。原有四个角色页面及商业指标仍为示意性内容。",
 
     demoContactNote:
       "如需访问完整的 Atlas Demo UI，或希望根据您的机器人平台和运行时场景安排定制化演示，请联系我们。",
@@ -199,6 +199,13 @@ export const libraryContent = {
   },
 
  demo: {
+  featured: {
+    eyebrow: "Atlas V3 交互式演示",
+    title: "Atlas Runtime Investigation™ 交互式演示",
+    description: "查看 Atlas 如何将运行时数据组织为 Evidence Pack，并沿着 REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 和 Assist Vault 完成受控调查。",
+    meta: "Atlas v0.1.0 冻结基线 · 已脱敏静态演示 · 非实时数据",
+    button: "打开 Atlas V3 演示界面",
+  },
   eyebrow: "01 / 演示",
   title: "演示与示例",
   description:
