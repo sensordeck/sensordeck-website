@@ -268,27 +268,6 @@ export default async function DemoIndexPage({
         </div>
       </Section>
 
-      {/* Notice */}
-      <Section id="demo-notice" className="bg-white">
-        <div className="border border-atlas-blue/25 bg-surface-blue p-6 md:p-8">
-          <div className="flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
-            <span className="shrink-0 whitespace-nowrap font-mono text-code text-atlas-blue sm:mt-1">
-              {content.index.notice.label}
-            </span>
-
-            <div>
-              <p className="text-body leading-relaxed text-ink">
-                {content.index.notice.description}
-              </p>
-
-              <p className="mt-4 text-body leading-relaxed text-muted">
-                {content.index.notice.metrics}
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
             {/* CTA */}
       <Section id="demo-cta" className="bg-surface">
         <div className="border border-atlas-blue/25 bg-surface-blue p-7 md:p-10">
@@ -314,6 +293,24 @@ export default async function DemoIndexPage({
               </Button>
             </div>
           </div>
+        </div>
+      </Section>
+
+      {/* Navigation */}
+      <Section id="navigation" className="bg-surface">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
+          <Link
+            className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+            href={localizeHref(lang, "/library/documentation")}
+          >
+            {lang === "zh" ? "← 企业交付" : "← Enterprise Delivery"}
+          </Link>
+          <Link
+            className="text-label font-semibold leading-normal text-atlas-blue hover:text-atlas-blue-dark"
+            href={localizeHref(lang, "/library/faq")}
+          >
+            {lang === "zh" ? "常见问题 →" : "FAQ →"}
+          </Link>
         </div>
       </Section>
     </div>
