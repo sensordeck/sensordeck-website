@@ -64,7 +64,7 @@ export const libraryContent = {
     note: "注意",
 
     demoNote:
-      "Atlas V3 交互式界面使用 Atlas v0.1.0 已脱敏冻结演示快照，不连接客户设备、不调用后端，也不展示实时数据。原有四个角色页面及商业指标仍为示意性内容。",
+      "Atlas 交互式界面本仅为 Atlas UI 演示。实际部署将接入 Atlas 引擎，并根据客户的组织架构、角色权限和调查流程进行定制。",
 
     demoContactNote:
       "如需访问完整的 Atlas Demo UI，或希望根据您的机器人平台和运行时场景安排定制化演示，请联系我们。",
