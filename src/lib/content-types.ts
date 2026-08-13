@@ -398,6 +398,13 @@ export interface LibraryContent {
     note: string;
   };
   demo: {
+    featured: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      meta: string;
+      button: string;
+    };
     eyebrow: string;
     title: string;
     description: string;
@@ -617,6 +624,13 @@ export interface AuxiliaryPagesContent {
 
 export interface DemoContent {
   index: {
+    interactiveDemo: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      meta: string;
+      button: string;
+    };
     pages: Array<{
       id: string;
       role: string;
