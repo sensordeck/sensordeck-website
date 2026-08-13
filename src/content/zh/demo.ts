@@ -6,7 +6,7 @@ export const demoContent = {
       eyebrow: "Atlas V3 交互式演示",
       title: "Atlas Runtime Investigation™ 交互式演示",
       description: "查看 Atlas 如何将运行时数据组织为 Evidence Pack，并沿着 REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 和 Assist Vault 完成受控调查。",
-      meta: "Atlas v0.1.0 冻结基线 · 已脱敏静态演示 · 非实时数据",
+      meta: "演示 UI Only · 实际部署按客户组织方式定制",
       button: "打开 Atlas V3 演示界面",
     },
     pages: [
@@ -71,7 +71,7 @@ export const demoContent = {
     notice: {
       label: "演示说明",
       description:
-        "所有演示数据均为示意性内容。实际 Atlas 部署包含客户特定的运行时上下文、证据范围和调查资产，不会在公开演示中展示。",
+        "本页面仅用于展示 Atlas UI 与调查工作流。实际部署时，Atlas 引擎将接入客户运行时环境，并根据客户的组织架构、角色权限、调查流程和系统接口进行配置与定制。",
       metrics:
         "工时节省和成本节省等商业指标均为演示估算值，不代表任何具体客户的实际结果。",
     },

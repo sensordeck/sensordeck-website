@@ -6,7 +6,7 @@ export const demoContent = {
       eyebrow: "Atlas V3 Interactive Demo",
       title: "Atlas Runtime Investigation™ Interactive Demo",
       description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Assist Vault.",
-      meta: "Atlas v0.1.0 frozen baseline · Sanitized static demo · Not live data",
+      meta: "Demo UI only · Production deployment is tailored to the customer organization",
       button: "Open the Atlas V3 Demo",
     },
     pages: [
@@ -67,7 +67,7 @@ export const demoContent = {
     notice: {
       label: "Note",
       description:
-        "All demo data is illustrative. A deployed Atlas interface contains customer-specific runtime context and investigation assets that are not shown in the public demo.",
+        "This page demonstrates the Atlas UI and investigation workflow only. In production, the Atlas engine connects to the customer runtime environment and is configured around the customer’s organizational structure, role permissions, investigation workflow, and system interfaces.",
       metrics:
         "Business metrics, including engineering hours and cost savings, are illustrative estimates and do not represent actual customer results.",
     },
