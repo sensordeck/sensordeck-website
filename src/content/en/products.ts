@@ -26,17 +26,15 @@ one shared runtime governance infrastructure`,
     name: "Atlas Runtime Sensor Governance™",
     audience: "Sensor Manufacturers",
     description:
-      "Help sensor manufacturers understand product behavior in real robot deployments without turning continuous observation into unlimited raw-data retention. Atlas Agent keeps low-volume runtime metadata persistently, uses bounded rolling buffers for high-bandwidth raw data, and locks only the evidence windows required when an event occurs.",
+      "Help sensor manufacturers continuously understand runtime behavior in real deployments, support OEM collaboration and FAE investigation with shared evidence, and turn field experience into reusable Runtime Profiles, Evidence Packs, and Historical RGA assets.",
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
-      "Establish Runtime Profiles across sensor SKUs",
-      "Persist low-volume runtime metadata while high-bandwidth raw data remains in bounded rolling buffers",
-      "Lock required evidence windows when an event occurs while non-event raw data continues to rotate",
-      "Establish Historical Sensor Runtime Governance Asset (RGA) & Assist Vault",
-      "Investigate OEM incidents using structured Engagement Packs",
+      "Establish Runtime Profiles across OEMs, deployment scenarios, and sensor SKUs",
+      "Retain investigation evidence with bounded storage",
+      "Investigate with unified timeline-based Evidence Packs",
+      "Collaborate with OEMs through structured Engagement Packs",
       "Recall Historical Sensor RGA instead of repeating prior work",
-      "Return investigation findings and updated Engagement Packs",
       "Preserve completed cases in Sensor Assist Vault™",
     ],
 
@@ -73,18 +71,16 @@ one shared runtime governance infrastructure`,
     name: "Atlas Runtime Investigation™",
     audience: "Robot OEMs",
     description:
-      "Help robot OEMs transform runtime incidents into structured evidence, coordinate investigations, recall historical assets, and continuously build organizational knowledge. Continuous observation does not mean continuously retaining massive raw datasets: Atlas keeps runtime metadata persistently, places high-bandwidth raw data in bounded per-surface rolling buffers, and freezes only the required event windows.",
+      "Help robot OEMs turn runtime incidents into structured Evidence Packs, create REF tickets, recall Historical RGA, and coordinate Tier 1 / Tier 2 / Tier 3 engineering with Sensor FAE. Atlas does not replace existing tools; it turns fragmented field troubleshooting into a traceable, reusable investigation workflow.",
     href: "/products/runtime-investigation",
 
     valuePoints: [
-      "Continuously observe runtime behavior without retaining complete raw datasets indefinitely",
-      "Persist Runtime Metadata while Raw Data uses per-surface time and capacity limits",
-      "Automatically lock required Evidence Windows on REF or governed event triggers",
-      "Establish Historical Runtime Governance Asset (RGA) & Assist Vault",
+      "Continuously observe runtime behavior while retaining investigation evidence within bounded storage",
       "Generate investigation candidates and Evidence Packs",
-      "Recall Historical RGA and existing IR and LL assets",
-      "Create Sensor Engagement Packs and escalate to Sensor FAE",
-      "Review investigation results, close REF tickets, and preserve organizational knowledge",
+      "Create and manage OEM REF tickets",
+      "Recall Historical RGA and existing IR / LL assets",
+      "Create Sensor Engagement Packs and collaborate with Sensor FAE",
+      "Close REF tickets and preserve investigation knowledge in Assist Vault™",
     ],
 
     coreModules: [
