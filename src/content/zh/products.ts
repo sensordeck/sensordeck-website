@@ -30,7 +30,7 @@ const productsContent = {
 
     valuePoints: [
       "建立跨 OEM、跨部署场景、跨 Sensor SKU 的 Runtime Profile",
-      "以有界方式保留调查所需的运行时证据",
+      "Atlas Agent 持续观察运行时，并以有界方式保留调查所需证据",
       "使用统一时间轴证据包（Evidence Pack™）开展调查",
       "基于 OEM EGP 开展边界明确的 Sensor FAE 协同",
       "召回 Historical Sensor RGA™，避免重复排查",
@@ -39,9 +39,7 @@ const productsContent = {
 
     coreModules: [
       "运行时档案（Runtime Profile™）",
-      "运行时观察（Atlas Agent Observation）",
-      "有界数据保留（Bounded Runtime Dataset）",
-      "事件证据锁定（Event Evidence Lock）",
+      "Atlas Agent™（持续观察、Metadata、有界 Raw Rolling Buffer 与事件证据锁定）",
       "传感器与 OEM 协同调查包（EGP）",
       "传感器 REF 工单",
       "统一证据包（Evidence Pack™）",
@@ -54,8 +52,8 @@ const productsContent = {
 
     lifecycle: [
       "运行时受控配置",
-      "持续观察与有界数据保留",
-      "事件发生后锁定必要证据窗口",
+      "Atlas Agent 持续观察与有界证据保留",
+      "事件发生后按需冻结必要证据窗口",
       "接收 OEM Engagement Pack",
       "创建或关联 Sensor REF 工单",
       "召回 Historical Sensor RGA",
@@ -74,7 +72,7 @@ const productsContent = {
     href: "/products/runtime-investigation",
 
     valuePoints: [
-      "持续观察运行时，并以有界方式保留调查证据",
+      "Atlas Agent 持续观察运行时，并以有界方式保留调查证据",
       "生成调查优先级候选项和 Evidence Pack™",
       "创建和管理 OEM REF Ticket",
       "召回 Historical RGA™ 与既有 IR、LL",
@@ -83,11 +81,8 @@ const productsContent = {
     ],
 
     coreModules: [
-      "运行时观察（Atlas Agent™）",
-      "运行时元数据（Runtime Metadata）",
-      "有界数据保留（Bounded Runtime Dataset）",
-      "滚动原始数据缓存（Raw Rolling Buffer）",
-      "事件生命周期与证据锁定（Event Lifecycle & Evidence Lock）",
+      "Atlas Agent™（Runtime Metadata、有界 Raw Rolling Buffer 与事件证据锁定）",
+      "事件生命周期（Event Lifecycle）",
       "调查优先级候选项",
       "统一证据包（Evidence Pack™）",
       "历史调查案例回溯（Historical RGA Recall™）",
@@ -98,10 +93,8 @@ const productsContent = {
     ],
 
     lifecycle: [
-      "持续运行时观察",
-      "Metadata 实时抽取与长期保留",
-      "Raw Data 有界滚动缓存",
-      "事件触发并锁定必要证据窗口",
+      "Atlas Agent 持续运行时观察与有界证据保留",
+      "事件触发并按需冻结必要证据窗口",
       "生成 Interim / Final Evidence Pack",
       "创建 OEM REF Ticket",
       "召回 Historical RGA",
@@ -135,7 +128,7 @@ const productsContent = {
   finalValue: {
     title: "让双边调查形成持续增长的组织能力",
     description:
-      "OEM 获得更快、边界更明确的运行时调查能力；传感器制造商获得更真实的产品运行反馈和可复用的 FAE 调查资产。Atlas 用有界数据保留机制控制持续运行成本，让长期运行时观察不会演变为无限增长的数据仓库，并让双方围绕统一证据、明确工单和历史知识持续协作。",
+      "OEM 获得更快、边界更明确的运行时调查能力；传感器制造商获得更真实的产品运行反馈和可复用的 FAE 调查资产。Atlas 让双方围绕统一证据、明确工单和历史知识持续协作。",
   },
 
   ui: {
