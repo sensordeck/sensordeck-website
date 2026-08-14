@@ -25,16 +25,14 @@ const productsContent = {
     name: "Atlas Runtime Sensor Governance™",
     audience: "传感器制造商",
     description:
-      "定义传感器运行的‘部署后’标准，跨 OEM、跨场景持续观察传感器运行时健康度。Atlas Agent 长期保留低容量运行时元数据，高带宽原始数据采用有界滚动缓存，仅在事件发生时冻结必要证据窗口，避免持续运行演变为无限增长的数据存储。通过智能协同调查包（EGP）驱动 FAE 高效作业，并沉淀调查结果与经验。",
+      "帮助传感器制造商持续观察真实部署中的运行时表现，以统一证据支持 OEM 协同调查、FAE 排查和历史经验沉淀。Atlas 将现场运行事实转化为可复用的 Runtime Profile、Evidence Pack 与 Historical RGA。",
     href: "/products/runtime-sensor-governance",
 
     valuePoints: [
       "建立跨 OEM、跨部署场景、跨 Sensor SKU 的 Runtime Profile",
-      "长期保留运行时元数据，高带宽 Raw Data 采用时间+容量双上限滚动缓存",
-      "事件发生后自动锁定必要证据窗口，非事件原始数据按策略循环覆盖",
-      "建立历史传感器调查案例与知识库 Historical Sensor Runtime Governance™ (RGA) & Assist Vault™",
-      "基于 OEM EGP 开展边界明确的 Sensor FAE 调查",
-      "使用统一时间轴证据包（Evidence Pack™）调查",
+      "以有界方式保留调查所需的运行时证据",
+      "使用统一时间轴证据包（Evidence Pack™）开展调查",
+      "基于 OEM EGP 开展边界明确的 Sensor FAE 协同",
       "召回 Historical Sensor RGA™，避免重复排查",
       "将完成案例沉淀至 Sensor Assist Vault™",
     ],
@@ -72,18 +70,16 @@ const productsContent = {
     name: "Atlas Runtime Investigation™",
     audience: "机器人 OEM",
     description:
-      "帮助机器人 OEM 将运行时事件转化为边界明确的 Evidence Pack™，创建和管理 REF 工单，召回 Historical RGA，并协调 OEM 运维工程与传感器供应商 FAE 调查。Atlas 的持续观察并不等于持续保存海量 Raw Data：长期资产以低容量 Runtime Metadata 为主，高带宽原始数据只做有界滚动缓存，事件发生时才冻结必要窗口。Atlas 不替代你的工具，只标准化你的调查。",
+      "帮助机器人 OEM 将运行时事件转化为结构化 Evidence Pack™，创建 REF 工单，召回 Historical RGA，并组织 OEM Tier 1 / Tier 2 / Tier 3 与 Sensor FAE 协同调查。Atlas 不替代现有工具，只把分散的现场排查变成可回溯、可复用的调查流程。",
     href: "/products/runtime-investigation",
 
     valuePoints: [
-      "Atlas Agent 持续观察运行时，但不无限保存完整 Raw Dataset",
-      "Runtime Metadata 长期保留；Raw Data 按 Surface 采用时间+容量双上限滚动缓存",
-      "REF / 受控事件触发后自动锁定必要 Evidence Window，未锁定 Raw Data 按策略循环覆盖",
-      "建立历史调查案例与知识库 Historical Runtime Governance™ (RGA) & Assist Vault™",
+      "持续观察运行时，并以有界方式保留调查证据",
       "生成调查优先级候选项和 Evidence Pack™",
+      "创建和管理 OEM REF Ticket",
       "召回 Historical RGA™ 与既有 IR、LL",
-      "创建 Sensor Engagement Pack 并升级 Sensor FAE",
-      "审核返回结果、关闭 OEM REF Ticket 并沉淀知识",
+      "生成 Sensor Engagement Pack 并协同 Sensor FAE",
+      "关闭 REF Ticket，并将调查结果沉淀至 Assist Vault™",
     ],
 
     coreModules: [
