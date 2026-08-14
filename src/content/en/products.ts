@@ -31,7 +31,7 @@ one shared runtime governance infrastructure`,
 
     valuePoints: [
       "Establish Runtime Profiles across OEMs, deployment scenarios, and sensor SKUs",
-      "Retain investigation evidence with bounded storage",
+      "Use Atlas Agent for continuous observation with bounded retention of investigation evidence",
       "Investigate with unified timeline-based Evidence Packs",
       "Collaborate with OEMs through structured Engagement Packs",
       "Recall Historical Sensor RGA instead of repeating prior work",
@@ -40,9 +40,7 @@ one shared runtime governance infrastructure`,
 
     coreModules: [
       "Runtime Profile™",
-      "Atlas Agent Observation",
-      "Bounded Runtime Dataset",
-      "Event Evidence Lock",
+      "Atlas Agent™ (continuous observation, Metadata, bounded Raw Rolling Buffer, and event evidence lock)",
       "Sensor and OEM Collaboration Investigation Pack (EGP)",
       "Sensor REF Ticket",
       "Evidence Pack™",
@@ -55,7 +53,7 @@ one shared runtime governance infrastructure`,
 
     lifecycle: [
       "Governed Runtime Configuration",
-      "Continuous Observation with Bounded Retention",
+      "Atlas Agent Continuous Observation with Bounded Evidence Retention",
       "Lock Required Evidence Windows on Event",
       "Receive OEM Engagement Pack",
       "Create or Link Sensor REF Ticket",
@@ -75,7 +73,7 @@ one shared runtime governance infrastructure`,
     href: "/products/runtime-investigation",
 
     valuePoints: [
-      "Continuously observe runtime behavior while retaining investigation evidence within bounded storage",
+      "Use Atlas Agent for continuous runtime observation with bounded retention of investigation evidence",
       "Generate investigation candidates and Evidence Packs",
       "Create and manage OEM REF tickets",
       "Recall Historical RGA and existing IR / LL assets",
@@ -84,11 +82,8 @@ one shared runtime governance infrastructure`,
     ],
 
     coreModules: [
-      "Atlas Agent™",
-      "Runtime Metadata",
-      "Bounded Runtime Dataset",
-      "Raw Rolling Buffer",
-      "Event Lifecycle & Evidence Lock",
+      "Atlas Agent™ (Runtime Metadata, bounded Raw Rolling Buffer, and event evidence lock)",
+      "Event Lifecycle",
       "Investigation Priority Candidates",
       "Primary Evidence Pack",
       "Historical RGA™",
@@ -99,9 +94,7 @@ one shared runtime governance infrastructure`,
     ],
 
     lifecycle: [
-      "Continuous Runtime Observation",
-      "Real-time Metadata Extraction and Persistent Retention",
-      "Bounded Raw Data Rolling Buffer",
+      "Atlas Agent Continuous Runtime Observation with Bounded Evidence Retention",
       "Event Trigger and Required Evidence Lock",
       "Generate Interim / Final Evidence Pack",
       "Create OEM REF Ticket",
@@ -139,7 +132,7 @@ one shared runtime governance infrastructure`,
   finalValue: {
     title: "Build Organizational Capability Through Every Investigation",
     description:
-      "Robot OEMs gain faster, more structured runtime investigations. Sensor manufacturers gain deeper insight into real-world product behavior and reusable engineering knowledge. Bounded retention keeps continuous runtime observation operationally sustainable instead of turning Atlas into an ever-growing raw-data archive.",
+      "Robot OEMs gain faster, more structured runtime investigations. Sensor manufacturers gain deeper insight into real-world product behavior and reusable engineering knowledge. Atlas helps both organizations collaborate around shared evidence, governed workflows, and reusable investigation knowledge.",
   },
 
   ui: {
