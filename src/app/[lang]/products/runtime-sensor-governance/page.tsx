@@ -167,6 +167,38 @@ export default async function RuntimeSensorGovernancePage({
         </div>
       </Section>
 
+      {/* Platform Application Architecture */}
+      <Section className="border-y border-border bg-white">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
+              {labels.architectureEyebrow}
+            </p>
+
+            <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+              {labels.architectureTitle}
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-body leading-8 text-muted md:text-body-lg">
+              {labels.architectureDescription}
+            </p>
+          </div>
+
+          <div className="mt-10 overflow-hidden border border-atlas-blue/15 bg-white shadow-[0_24px_70px_rgba(5,40,90,0.10)]">
+            <img
+              src={
+                lang === "zh"
+                  ? "/images/products/runtime-sensor-governance-architecture-zh.png"
+                  : "/images/products/runtime-sensor-governance-architecture-en.png"
+              }
+              alt={labels.architectureAlt}
+              className="block h-auto w-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </Section>
+
       {/* Core Modules */}
       <Section className="bg-white">
         <div className="mx-auto max-w-6xl">
