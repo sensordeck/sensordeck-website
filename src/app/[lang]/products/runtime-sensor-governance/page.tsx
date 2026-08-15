@@ -52,6 +52,12 @@ export default async function RuntimeSensorGovernancePage({
           valueTitle: "把每一次传感器‘救火’，变成全产品线的‘防火经验’。",
           valueDescription:
             "Atlas 帮助传感器制造商围绕真实部署环境，为每一款传感器建立动态的 Runtime Profile™（运行时画像）。系统自动接收并解析来自 OEM 的协同调查包（EGP），将每一次 Sensor FAE 的现场排查，从一次性的“成本消耗”转化为结构化的“知识资产”。历史调查（IR）、根因案例（RGA）与经验教训（LL）由此被持续召回与复用，让传感器的现场表现成为驱动下一代产品定义的永动机。",
+          architectureEyebrow: "集成架构",
+          architectureTitle: "平台应用架构",
+          architectureDescription:
+            "Atlas 部署在 OEM / ODM 机器人运行时证据边界之上，连接 OEM 整机调查与传感器厂 FAE、研发和质量闭环，同时保持双方数据、调查资产与最终关闭权边界清晰。",
+          architectureAlt:
+            "Atlas 在传感器厂与 OEM、ODM 运维架构中的五层平台应用架构图",
           modulesEyebrow: "产品能力",
           modulesTitle: "传感器运行时治理核心模块",
           modulesDescription:
@@ -76,6 +82,12 @@ export default async function RuntimeSensorGovernancePage({
             "Turn sensor runtime investigations into continuously growing organizational capability",
           valueDescription:
             "Atlas helps sensor manufacturers establish Runtime Profiles across real deployment environments, receive OEM Engagement Packs, and convert each Sensor FAE investigation into reusable historical investigation assets.",
+          architectureEyebrow: "Integration Architecture",
+          architectureTitle: "Platform Application Architecture",
+          architectureDescription:
+            "Atlas operates above the OEM / ODM robotics runtime evidence boundary, connecting OEM full-system investigation with sensor FAE, engineering, and quality workflows while keeping data, investigation assets, and closure authority clearly separated.",
+          architectureAlt:
+            "Five-layer Atlas platform application architecture for sensor manufacturers and OEM or ODM operations",
           modulesEyebrow: "Product Capabilities",
           modulesTitle: "Core Sensor Runtime Governance Modules",
           modulesDescription:
@@ -151,6 +163,38 @@ export default async function RuntimeSensorGovernancePage({
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Platform Application Architecture */}
+      <Section className="border-y border-border bg-white">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
+              {labels.architectureEyebrow}
+            </p>
+
+            <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+              {labels.architectureTitle}
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-3xl text-body leading-8 text-muted md:text-body-lg">
+              {labels.architectureDescription}
+            </p>
+          </div>
+
+          <div className="mt-10 overflow-hidden border border-atlas-blue/15 bg-white shadow-[0_24px_70px_rgba(5,40,90,0.10)]">
+            <img
+              src={
+                lang === "zh"
+                  ? "/images/products/runtime-sensor-governance-architecture-zh.png"
+                  : "/images/products/runtime-sensor-governance-architecture-en.png"
+              }
+              alt={labels.architectureAlt}
+              className="block h-auto w-full"
+              loading="lazy"
+            />
           </div>
         </div>
       </Section>
