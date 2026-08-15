@@ -52,6 +52,12 @@ export default async function RuntimeSensorGovernancePage({
           valueTitle: "把每一次传感器‘救火’，变成全产品线的‘防火经验’。",
           valueDescription:
             "Atlas 帮助传感器制造商围绕真实部署环境，为每一款传感器建立动态的 Runtime Profile™（运行时画像）。系统自动接收并解析来自 OEM 的协同调查包（EGP），将每一次 Sensor FAE 的现场排查，从一次性的“成本消耗”转化为结构化的“知识资产”。历史调查（IR）、根因案例（RGA）与经验教训（LL）由此被持续召回与复用，让传感器的现场表现成为驱动下一代产品定义的永动机。",
+          architectureEyebrow: "集成架构",
+          architectureTitle: "平台应用架构",
+          architectureDescription:
+            "Atlas 部署在 OEM / ODM 机器人运行时证据边界之上，连接 OEM 整机调查与传感器厂 FAE、研发和质量闭环，同时保持双方数据、调查资产与最终关闭权边界清晰。",
+          architectureAlt:
+            "Atlas 在传感器厂与 OEM、ODM 运维架构中的五层平台应用架构图",
           modulesEyebrow: "产品能力",
           modulesTitle: "传感器运行时治理核心模块",
           modulesDescription:
@@ -76,6 +82,12 @@ export default async function RuntimeSensorGovernancePage({
             "Turn sensor runtime investigations into continuously growing organizational capability",
           valueDescription:
             "Atlas helps sensor manufacturers establish Runtime Profiles across real deployment environments, receive OEM Engagement Packs, and convert each Sensor FAE investigation into reusable historical investigation assets.",
+          architectureEyebrow: "Integration Architecture",
+          architectureTitle: "Platform Application Architecture",
+          architectureDescription:
+            "Atlas operates above the OEM / ODM robotics runtime evidence boundary, connecting OEM full-system investigation with sensor FAE, engineering, and quality workflows while keeping data, investigation assets, and closure authority clearly separated.",
+          architectureAlt:
+            "Five-layer Atlas platform application architecture for sensor manufacturers and OEM or ODM operations",
           modulesEyebrow: "Product Capabilities",
           modulesTitle: "Core Sensor Runtime Governance Modules",
           modulesDescription:
