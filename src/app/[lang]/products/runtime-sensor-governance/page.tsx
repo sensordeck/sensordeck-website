@@ -188,8 +188,8 @@ export default async function RuntimeSensorGovernancePage({
             <img
               src={
                 lang === "zh"
-                  ? "/images/products/runtime-sensor-governance-architecture-zh.png"
-                  : "/images/products/runtime-sensor-governance-architecture-en.png"
+                  ? "/images/product/runtime-sensor-governance-architecture-zh.png"
+                  : "/images/product/runtime-sensor-governance-architecture-en.png"
               }
               alt={labels.architectureAlt}
               className="block h-auto w-full"
