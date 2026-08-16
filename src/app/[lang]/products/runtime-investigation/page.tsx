@@ -52,6 +52,22 @@ export default async function RuntimeInvestigationPage({
         );
   const copy = legacyCopy.runtimeInvestigation;
   const { ui } = copy;
+  const architectureCopy =
+    lang === "zh"
+      ? {
+          eyebrow: "集成架构",
+          title: "平台应用架构",
+          description:
+            "Atlas 位于设备、传感器与机器人运行时之上，连接持续观察、证据保留、事件关联、调查编排和知识沉淀，并将现场运行转化为可持续的组织治理闭环。",
+          alt: "Atlas 在机器人技术栈中的五层平台应用架构图",
+        }
+      : {
+          eyebrow: "Integration Architecture",
+          title: "Platform Application Architecture",
+          description:
+            "Atlas sits above devices, sensors, and the robotics runtime, connecting continuous observation, evidence preservation, event correlation, investigation orchestration, and knowledge retention into a continuous governance loop.",
+          alt: "Five-layer Atlas platform application architecture in the robotics technology stack",
+        };
   const heroTitleHasTrademark = ui.heroTitle.endsWith("™");
   const heroTitle = heroTitleHasTrademark
     ? ui.heroTitle.slice(0, -1)
@@ -176,6 +192,38 @@ export default async function RuntimeInvestigationPage({
                   {item}
                 </div>
               )}
+            </div>
+          </div>
+        </Section>
+
+        {/* Platform Application Architecture */}
+        <Section className="border-y border-border bg-white">
+          <div className="mx-auto max-w-[1600px]">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="font-mono text-eyebrow font-semibold uppercase tracking-eyebrow text-atlas-blue">
+                {architectureCopy.eyebrow}
+              </p>
+
+              <h2 className="mt-4 font-sans text-section-title font-semibold leading-snug tracking-tight text-ink md:text-section-title-md">
+                {architectureCopy.title}
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-3xl text-body leading-8 text-muted md:text-body-lg">
+                {architectureCopy.description}
+              </p>
+            </div>
+
+            <div className="mt-10 overflow-hidden border border-atlas-blue/15 bg-white shadow-[0_24px_70px_rgba(5,40,90,0.10)]">
+              <img
+                src={
+                  lang === "zh"
+                    ? "/images/product/runtime-investigation-architecture-zh.png"
+                    : "/images/product/runtime-investigation-architecture-en.png"
+                }
+                alt={architectureCopy.alt}
+                className="block h-auto w-full"
+                loading="lazy"
+              />
             </div>
           </div>
         </Section>
