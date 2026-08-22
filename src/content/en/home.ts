@@ -42,7 +42,7 @@ const homeContent = {
     evidenceOwnership:
       "Atlas follows customer evidence policies, organizing and exporting bounded context for collaboration without changing governance of the underlying evidence.",
     organizationalMemory:
-      "Assist Vault™ preserves completed investigation assets. Historical RGA™ recalls historical patterns as candidates for review, without claiming identical causality.",
+      "Atlas Shared Unidentifiable Vault accepts only approved, closed, unidentifiable IR and LL records. Historical RGA Recall returns generalized patterns for human review without inferring root cause.",
     technicalResources:
       "White papers serve both management decision-makers and engineering teams; the independent documentation site provides data schemas, integration methods, and implementation details.",
     finalCta:
@@ -107,7 +107,7 @@ const homeContent = {
         "Evidence Pack",
         "Runtime Investigation",
         "Historical RGA",
-        "Assist Vault",
+        "Atlas Shared Unidentifiable Vault",
         "Organizational Runtime Memory",
       ],
       summary:
@@ -157,7 +157,7 @@ const homeContent = {
           "Recall Historical RGA Investigation Cases",
           "Investigation Workspace",
           "Record IR / Lessons Learned",
-          "Preserve Knowledge in Assist Vault",
+          "Preserve Knowledge in Atlas Shared Unidentifiable Vault",
           "Reuse It Directly in the Future",
         ],
         note:
@@ -168,7 +168,7 @@ const homeContent = {
       title:
         "Atlas Changes More Than a Single Investigation. It Changes the Entire Organization.",
       description:
-        "Atlas organizes continuously collected data into Runtime Evidence, then preserves investigation results in Historical RGA and Assist Vault. Every REF becomes the starting point for the next investigation, not the endpoint. Engineering experience can finally accumulate alongside the product.",
+        "Atlas organizes authorized runtime data into private investigation evidence. Only approved, closed, unidentifiable IR and LL records may enter the Atlas Shared Unidentifiable Vault for Historical RGA Recall. Customer data ownership is not transferred by participation.",
     },
   },
   whyRuntimeGovernance: {
@@ -202,10 +202,10 @@ const homeContent = {
         "Runtime Profiles™",
         "Runtime Observation",
         "Evidence Pack™",
-        "Historical Sensor RGA™",
+        "Historical RGA Recall",
         "Sensor Investigation Workspace™",
         "OEM Collaboration with EGP™",
-        "Sensor Assist Vault™",
+        "Atlas Shared Unidentifiable Vault",
         "Industry Knowlege Vault",        
       ],
       lifecycle: [
@@ -216,7 +216,7 @@ const homeContent = {
         "Evidence Pack (EP)",
         "Sensor Investigation Process",
         "Closure + IR/LL",
-        "Assist Vault",
+        "Atlas Shared Unidentifiable Vault",
         "Future Reuse",
       ],
       link: "/products/runtime-sensor-governance",
@@ -231,8 +231,8 @@ const homeContent = {
         "Evidence Pack™ & Candidate EPs",
         "Historical RGA™ Recall",
         "Investigation Workspace™ (Tier 1 / 2 / 3)",
-        "Sensor Engagement Pack (EGP)™",
-        "Assist Vault™",
+        "EGP — Sensor–OEM Engagement Package",
+        "Atlas Shared Unidentifiable Vault",
         "Industry Knowlege Vault",
         "Executive Dashboard™",
       ],
@@ -243,7 +243,7 @@ const homeContent = {
         "Historical RGA Recall",
         "OEM / Sensor Investigation",
         "Closure + IR/LL",
-        "Assist Vault",
+        "Atlas Shared Unidentifiable Vault",
         "Future Reuse",
       ],
       link: "/products/runtime-investigation",
@@ -276,7 +276,7 @@ const homeContent = {
         "Exchange de-identified evidence and investigation information between OEMs and sensor manufacturers.",
     },
     {
-      title: "Assist Vault™",
+      title: "Atlas Shared Unidentifiable Vault",
       description:
         "Preserve completed investigation assets as organizational memory.",
     },
@@ -317,7 +317,7 @@ const homeContent = {
     },
     { label: "Closure", description: "Close the active investigation." },
     {
-      label: "Assist Vault",
+      label: "Atlas Shared Unidentifiable Vault",
       description: "Preserve the completed asset.",
     },
     {
@@ -434,7 +434,7 @@ const homeContent = {
     sensor: "Sensor",
     policy: "Policy",
     egpDescription:
-      "Sensor Engagement Pack is a bounded collaboration interface that an OEM provides to a sensor manufacturer. It is not the same as an internal Evidence Pack™.",
+      "EGP — Sensor–OEM Engagement Package is a bounded collaboration interface that an OEM provides to a sensor manufacturer. It is not the same as an internal Evidence Pack™.",
     historicalRgaDescription:
       "Historical RGA™ is a recall, reuse, and reference system for human investigation teams.",
     historicalRgaBoundary:

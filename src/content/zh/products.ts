@@ -15,7 +15,7 @@ const productsContent = {
     eyebrow: "Atlas 产品全局架构",
     title: "机器人 OEM 与传感器制造商的双飞轮",
     description:
-      "左侧是机器人 OEM 的 Runtime Investigation™；右侧是传感器制造商的 Runtime Sensor Governance™；中间通过 Engagement Pack™（EGP）开展边界明确的跨组织调查协作。",
+      "左侧是机器人 OEM 的 Runtime Investigation™；右侧是传感器制造商的 Runtime Sensor Governance™；中间通过 EGP — Sensor–OEM Engagement Package 开展边界明确的跨组织调查协作。",
     imageSrc: "/images/product1.png",
     imageAlt:
       "Atlas Runtime Investigation 与 Runtime Sensor Governance 双飞轮产品全局架构",
@@ -33,8 +33,8 @@ const productsContent = {
       "Atlas Agent 持续观察运行时，并以有界方式保留调查所需证据",
       "使用统一时间轴证据包（Evidence Pack™）开展调查",
       "基于 OEM EGP 开展边界明确的 Sensor FAE 协同",
-      "召回 Historical Sensor RGA™，避免重复排查",
-      "将完成案例沉淀至 Sensor Assist Vault™",
+      "召回 Historical RGA Recall，避免重复排查",
+      "仅将获批、已关闭、不可识别的 IR 与 LL 贡献至 Atlas Shared Unidentifiable Vault",
     ],
 
     coreModules: [
@@ -43,10 +43,10 @@ const productsContent = {
       "传感器与 OEM 协同调查包（EGP）",
       "传感器 REF 工单",
       "统一证据包（Evidence Pack™）",
-      "历史调查案例回溯（Historical Sensor RGA Recall™）",
+      "历史调查案例回溯（Historical RGA Recall）",
       "历史调查结论参考（Investigation Result / IR）",
       "案例排查经验分享套用（Lesson Learned / LL）",
-      "知识库更新（Sensor Assist Vault™）",
+      "知识库更新（Atlas Shared Unidentifiable Vault）",
       "去标识化运行时避坑知识库™",
     ],
 
@@ -56,7 +56,7 @@ const productsContent = {
       "事件发生后按需冻结必要证据窗口",
       "接收 OEM Engagement Pack",
       "创建或关联 Sensor REF 工单",
-      "召回 Historical Sensor RGA",
+      "召回 Historical RGA Recall",
       "Sensor FAE 调查",
       "填写 IR 与 LL",
       "返回更新后的 EGP",
@@ -76,8 +76,8 @@ const productsContent = {
       "生成调查优先级候选项和 Evidence Pack™",
       "创建和管理 OEM REF Ticket",
       "召回 Historical RGA™ 与既有 IR、LL",
-      "生成 Sensor Engagement Pack 并协同 Sensor FAE",
-      "关闭 REF Ticket，并将调查结果沉淀至 Assist Vault™",
+      "生成 EGP — Sensor–OEM Engagement Package 并协同 Sensor FAE",
+      "关闭 REF Ticket，并将调查结果沉淀至 Atlas Shared Unidentifiable Vault",
     ],
 
     coreModules: [
@@ -88,7 +88,7 @@ const productsContent = {
       "历史调查案例回溯（Historical RGA Recall™）",
       "历史调查结论参考（Investigation Result / IR）",
       "案例排查经验分享套用（Lesson Learned / LL）",
-      "知识库更新（Assist Vault™）",
+      "知识库更新（Atlas Shared Unidentifiable Vault）",
       "管理层视图（Executive Dashboard™）",
     ],
 
@@ -100,15 +100,15 @@ const productsContent = {
       "召回 Historical RGA",
       "OEM Tier 1 / Tier 2 / Tier 3 调查",
       "生成 EGP 并发送 Sensor FAE",
-      "关闭 OEM REF Ticket并沉淀 Assist Vault",
+      "关闭 OEM REF Ticket并沉淀 Atlas Shared Unidentifiable Vault",
     ],
   },
 
   collaborationBridge: {
     eyebrow: "共享协作桥梁",
-    title: "Engagement Pack™ 连接 OEM 与传感器制造商",
+    title: "EGP — Sensor–OEM Engagement Package 连接 OEM 与传感器制造商",
     description:
-      "EGP 不是 OEM 内部 Evidence Pack 的替代品。它是 OEM 向传感器制造商发起边界明确的调查协作时使用的标准载体，贯穿 REF 工单从 Pending 到 Closure 的完整过程。",
+      "EGP 只服务当前 Sensor–OEM 调查。OEM 保留对 Private EP 的控制权并决定哪些信息进入 EGP；只有获批、已关闭、不可识别的 IR 与 LL 才可进入 Atlas Shared Unidentifiable Vault。",
     steps: [
       "OEM Runtime REF 发生",
       "创建 OEM REF Ticket（Pending）",

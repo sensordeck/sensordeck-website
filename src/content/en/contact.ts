@@ -148,7 +148,7 @@ export const contactContent = {
     ],
 
     assistVault: {
-      title: "Atlas Non-identifiable Assist Vault™",
+      title: "Atlas Shared Unidentifiable Vault",
       description: "Cross-organization runtime investigation knowledge exchange",
       email: "assist@sensordeck.tech",
     },

@@ -85,7 +85,7 @@ Investigation Context™
   ↓
 Historical RGA™
   ↓
-Assist Vault™`,
+Atlas Shared Unidentifiable Vault`,
       explanation:
         "Atlas Agent™ 在 OEM 控制的环境中持续观察已授权的运行时信号。发生运行时事件后，Atlas 从 Runtime Dataset™ 中提取事件前后的相关数据，形成有时间边界、可审查的 Evidence Pack™，并支持 Tier 1、Tier 2 / Tier 3、OEM 工程和传感器 FAE 之间的调查协作。",
       surfaces: [
@@ -158,22 +158,22 @@ Runtime Profiles™
   ↓
 Sensor Investigation Workspace™
   ↓
-Historical Sensor RGA™
+Historical RGA Recall
   ↓
-Sensor Assist Vault™
+Atlas Shared Unidentifiable Vault
   ↓
 Runtime Knowledge Base™`,
       explanation:
-        "传感器制造商可以在自己的实验室、技术支持或客户调查环境中部署 Atlas。通过 Runtime Profiles™、Sensor Engagement Pack™ 和历史调查资产，传感器团队能够更快理解客户现场的运行时条件，并在明确的数据边界内与 OEM 协作。",
+        "传感器制造商可以在自己的实验室、技术支持或客户调查环境中部署 Atlas。通过 Runtime Profiles™、EGP — Sensor–OEM Engagement Package 和历史调查资产，传感器团队能够更快理解客户现场的运行时条件，并在明确的数据边界内与 OEM 协作。",
       surfaces: [
         "传感器实验室",
         "技术支持团队",
         "FAE 调查流程",
         "产品运行时场景",
         "客户现场证据",
-        "Sensor Engagement Pack™",
-        "Historical Sensor RGA™",
-        "Sensor Assist Vault™",
+        "EGP — Sensor–OEM Engagement Package",
+        "Historical RGA Recall",
+        "Atlas Shared Unidentifiable Vault",
         "Runtime Knowledge Base™",
       ],
       href: "/technology/sensor-manufacturer-deployment",
@@ -183,12 +183,12 @@ Runtime Knowledge Base™`,
       id: "sensor-engagement-boundary",
       title: "OEM 与传感器厂商协作边界",
       description:
-        "Sensor Engagement Pack™ 用于在 OEM 与传感器制造商之间传递与调查相关、范围明确的运行时信息。",
+        "EGP — Sensor–OEM Engagement Package 用于在 OEM 与传感器制造商之间传递与调查相关、范围明确的运行时信息。",
       content: `OEM 调查环境
   ↓
 Evidence Pack™
   ↓
-Sensor Engagement Pack™
+EGP — Sensor–OEM Engagement Package
   ↓
 传感器 FAE 调查
   ↓
@@ -278,7 +278,7 @@ Evidence Pack™
         {
           term: "历史复用验证",
           definition:
-            "确认完成的调查资产可以进入 Assist Vault™ 并支持未来召回。",
+            "确认只有获批、已关闭、不可识别的 IR 与 LL 才可进入 Atlas Shared Unidentifiable Vault 并支持未来召回。",
         },
       ],
       href: "/technology/canary-validation",

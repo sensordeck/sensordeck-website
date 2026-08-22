@@ -57,7 +57,7 @@ export const glossaryEn = {
       category: "workflow",
     },
     {
-      term: "Assist Vault",
+      term: "Atlas Shared Unidentifiable Vault",
       chinese: "调查资产库",
       definition:
         "Atlas organizational memory storage system that preserves all historical Evidence Packs, Incident Reports, and Lessons Learned. The Vault supports semantic retrieval to automatically recall similar historical cases.",
@@ -78,10 +78,10 @@ export const glossaryEn = {
       category: "technical",
     },
     {
-      term: "Evidence Governance Protocol (EGP)",
-      chinese: "证据治理协议",
+      term: "EGP — Sensor–OEM Engagement Package",
+      chinese: "传感器–OEM 调查协作包",
       definition:
-        "A standard protocol defining Evidence Pack generation, validation, submission, and archival processes. EGP ensures evidence interoperability across teams and organizations.",
+        "A package scoped to one Sensor–OEM investigation. The OEM controls which evidence summaries or references enter the EGP; raw attachments do not automatically become shared knowledge.",
       category: "technical",
     },
     {
