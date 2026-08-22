@@ -57,7 +57,7 @@ export const glossaryZh = {
       category: "workflow",
     },
     {
-      term: "Assist Vault",
+      term: "Atlas Shared Unidentifiable Vault",
       chinese: "调查资产库",
       definition:
         "Atlas 的组织记忆存储系统，保存所有历史证据包、事故报告和经验总结。Vault 支持语义检索，可自动召回相似历史案例。",
@@ -78,10 +78,10 @@ export const glossaryZh = {
       category: "technical",
     },
     {
-      term: "Evidence Governance Protocol (EGP)",
-      chinese: "证据治理协议",
+      term: "EGP — Sensor–OEM Engagement Package",
+      chinese: "传感器–OEM 调查协作包",
       definition:
-        "定义证据包生成、验证、提交和归档流程的标准协议。EGP 确保不同团队和组织之间的证据可互操作。",
+        "仅服务一次明确 Sensor–OEM 调查的协作包。OEM 控制进入 EGP 的证据摘要或引用，原始附件不会自动成为共享知识。",
       category: "technical",
     },
     {

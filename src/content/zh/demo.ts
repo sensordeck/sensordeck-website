@@ -5,7 +5,7 @@ export const demoContent = {
     interactiveDemo: {
       eyebrow: "Atlas V3 交互式演示",
       title: "Atlas Runtime Investigation™ 交互式演示",
-      description: "查看 Atlas 如何将运行时数据组织为 Evidence Pack，并沿着 REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 和 Assist Vault 完成受控调查。",
+      description: "查看 Atlas 如何将运行时数据组织为 Evidence Pack，并沿着 REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 和 Atlas Shared Unidentifiable Vault 完成受控调查。",
       meta: "演示 UI Only · 实际部署按客户组织方式定制",
       button: "打开 Atlas V3 演示界面",
     },
@@ -388,7 +388,7 @@ export const demoContent = {
     lessonTitle: "记录可复用知识",
     lessonContentLabel: "经验教训内容",
     lessonNote:
-      "经授权审核后，LL 可更新至 Example Sensor Corp Historical Sensor RGA，供未来调查召回。",
+      "经授权审核后，不可识别的 IR 与 LL 候选记录可用于未来 Historical RGA Recall。",
 
     responseEyebrow: "传感器响应",
     responseTitle: "返回 OEM 调查响应",

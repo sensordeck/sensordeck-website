@@ -32,7 +32,7 @@ const homeContent = {
     investigationLifecycle: "运行时事件被整理为边界明确、可审查的证据和决策序列。恢复阶段只是观察窗口，不代表系统已确定恢复。",
     roboticsIndustry: "该平台针对机器人事件中最难排查的运行环节设计，覆盖触发时序、总线、Linux 运行时和 ROS 主题。",
     evidenceOwnership: "Atlas 遵循客户的证据策略，整理并导出边界明确的协作信息，同时不改变底层证据的治理权。",
-    organizationalMemory: "Assist Vault™ 保存已完成的调查资产。Historical RGA™ 召回历史模式作为审查候选，但不代表因果关系相同。",
+    organizationalMemory: "Atlas Shared Unidentifiable Vault 只接收获批、已关闭、不可识别的 IR 与 LL。Historical RGA Recall 返回通用历史模式供人工审查，不自动推断根因。",
     technicalResources: "白皮书兼顾管理决策者和工程团队；独立文档站点提供数据模式、集成方式和实现细节。",
     finalCta: "了解 Atlas 如何结合您的机器人组织、运行时边界、调查工作流程和证据所有权模式。",
   },
@@ -105,7 +105,7 @@ const homeContent = {
       "自动生成证据包 Evidence Pack",
       "事故工单调查流程 Runtime Investigation",
       "历史调查案例回溯 Historical RGA",
-      "调查知识库沉淀与复用 Assist Vault",
+      "调查知识库沉淀与复用 Atlas Shared Unidentifiable Vault",
       "组织运行时记忆"
     ],
 
@@ -149,7 +149,7 @@ const homeContent = {
         "Historical RGA 历史调查案例召回",
         "调查工作区",
         "IR / Lessons Learned 每次记录调查结果与经验分享",
-        "Assist Vault 知识库沉淀",
+        "Atlas Shared Unidentifiable Vault 知识库沉淀",
         "未来直接复用",
       ],
       note: "第一次建立组织记忆，之后不断复用。",
@@ -159,7 +159,7 @@ const homeContent = {
   whyMatters: {
     title: "Atlas 改变的不是一次调查，而是整个组织。",
     description:
-      "Atlas 将持续运行的数据组织为 Runtime Evidence，再把调查结果沉淀为 Historical RGA 与 Assist Vault。每一次 REF 都会成为下一次调查的起点，而不是终点。工程经验第一次能够随着产品持续积累。",
+      "Atlas 将已授权运行时数据组织为 OEM 私有调查证据。只有获批、已关闭、不可识别的 IR 与 LL 才可进入 Atlas Shared Unidentifiable Vault，供 Historical RGA Recall 复用；参与不会转移客户数据所有权。",
   },
 },
     
@@ -185,7 +185,7 @@ const homeContent = {
       audience: "机器人 OEM",
       description: "将运行时事件转化为边界明确的证据、协调调查和可复用的组织知识。",
       modules: ["Atlas Agent™ 与运行时数据集", "证据包™ 与候选 EPs", "历史调查案例召回 Historical RGA Recall™", "调查工作区™（运维团队）", "传感器参与包（EGP）™", "Runtime Assist 知识库™", "运行时知识库™", "高管仪表板™"],
-      lifecycle: ["运行时受控配置", "候选证据", "主要证据包(EP)", "历史案例 RGA 召回", "OEM / 传感器调查", "调查结案", "Assist Vault", "未来复用"],
+      lifecycle: ["运行时受控配置", "候选证据", "主要证据包(EP)", "历史案例 RGA 召回", "OEM / 传感器调查", "调查结案", "Atlas Shared Unidentifiable Vault", "未来复用"],
       link: "/products/runtime-investigation",
     },
   ],
@@ -195,7 +195,7 @@ const homeContent = {
     { title: "Historical RGA™", description: "召回历史调查结果和经验教训，但不代表因果关系相同。" },
     { title: "Investigation Workspace™", description: "协调一级、二级/三级、OEM 工程和传感器 FAE 调查工作。" },
     { title: "Sensor EGP™", description: "在 OEM 和传感器制造商之间交换去标识化的证据和调查信息。" },
-    { title: "Assist Vault™", description: "将已完成的调查资产保存为组织记忆。" },
+    { title: "Atlas Shared Unidentifiable Vault", description: "将已完成的调查资产保存为组织记忆。" },
     { title: "Executive Dashboard™", description: "呈现调查吞吐量、证据覆盖率、复用率、SLA 和说明性 ROI。" },
   ],
   constitutionalBoundary: ["Atlas 结构化证据。", "Atlas 检索历史候选。", "Atlas 不自动确认根本原因。", "Atlas 不分配责任。"],
@@ -208,7 +208,7 @@ const homeContent = {
     { label: "EGP", description: "与传感器侧共享边界明确的调查信息。" },
     { label: "OEM / 传感器 IR + LL", description: "撰写人工调查记录。" },
     { label: "结案", description: "关闭活动调查。" },
-    { label: "Assist Vault", description: "保存已完成的资产。" },
+    { label: "Atlas Shared Unidentifiable Vault", description: "保存已完成的资产。" },
     { label: "未来复用", description: "使记录可供参考。" },
   ],
   fiveWindowModel: ["前置保护", "基线", "偏差", "恢复观察", "后置保护"],
@@ -272,7 +272,7 @@ const homeContent = {
     sensor: "传感器",
     policy: "策略",
     egpDescription:
-      "Sensor Engagement Pack 是 OEM 向传感器制造商提供的边界明确的协作界面，与内部 Evidence Pack™ 并不相同。",
+      "EGP — Sensor–OEM Engagement Package 是 OEM 向传感器制造商提供的边界明确的协作界面，与内部 Evidence Pack™ 并不相同。",
     historicalRgaDescription:
       "Historical RGA™ 是人工调查团队的召回、复用和参考系统。",
     historicalRgaBoundary:

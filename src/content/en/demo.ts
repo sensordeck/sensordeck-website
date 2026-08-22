@@ -5,7 +5,7 @@ export const demoContent = {
     interactiveDemo: {
       eyebrow: "Atlas V3 Interactive Demo",
       title: "Atlas Runtime Investigation™ Interactive Demo",
-      description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Assist Vault.",
+      description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Atlas Shared Unidentifiable Vault.",
       meta: "Demo UI only · Production deployment is tailored to the customer organization",
       button: "Open the Atlas V3 Demo",
     },
@@ -33,7 +33,7 @@ export const demoContent = {
         role: "Sensor FAE",
         title: "Sensor FAE Workspace",
         description:
-          "Validate OEM EGPs, review shared evidence context, recall Historical Sensor RGA, author IR and LL, and return a sensor response.",
+          "Validate OEM EGPs, review shared evidence context, recall Historical RGA Recall, author IR and LL, and return a sensor response.",
         href: "/demo/sensor-fae",
         audience: "Sensor manufacturer engineers",
       },
@@ -339,7 +339,7 @@ export const demoContent = {
     deviationWindowLabel: "Deviation Window",
     upstreamContextLabel: "Upstream Context",
     downstreamContextLabel: "Downstream Context",
-    historicalEyebrow: "Historical Sensor RGA",
+    historicalEyebrow: "Historical RGA Recall",
     historicalTitle: "Example Sensor Corp Historical Investigation Patterns",
     strongCandidateLabel: "Strong Candidate",
     relatedHistoricalLabel: "Related Historical Pattern",
@@ -357,7 +357,7 @@ export const demoContent = {
     lessonTitle: "Capture Reusable Knowledge",
     lessonContentLabel: "Lesson Learned Content",
     lessonNote:
-      "The LL will update the Example Sensor Corp Historical Sensor RGA for future investigations.",
+      "After authorized review, an unidentifiable IR and LL candidate may support future Historical RGA Recall.",
     responseEyebrow: "Sensor Response",
     responseTitle: "Return the OEM Investigation Package",
     responseSummaryLabel: "Response Summary",

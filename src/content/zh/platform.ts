@@ -122,7 +122,7 @@ export const platformContent = {
     },
 
     {
-      name: "Sensor Engagement Pack™",
+      name: "EGP — Sensor–OEM Engagement Package",
       description:
         "在 OEM 与传感器制造商之间建立有边界的调查协作包。",
       keyFeatures: [
@@ -134,9 +134,9 @@ export const platformContent = {
     },
 
     {
-      name: "Assist Vault™",
+      name: "Atlas Shared Unidentifiable Vault",
       description:
-        "将完成的调查结果、证据资产和经验教训沉淀为组织记忆。",
+        "只接收获批、已关闭、不可识别的 IR 与 LL。原始证据和参与者身份不会进入 Shared Vault。",
       keyFeatures: [
         "保存调查结果与 Lessons Learned",
         "关联原始 Evidence Pack™ 和调查上下文",
@@ -174,8 +174,8 @@ export const platformContent = {
           "Investigation Context™",
           "Investigation Tier Candidate™",
           "Historical RGA™",
-          "Sensor Engagement Pack™",
-          "Assist Vault™",
+          "EGP — Sensor–OEM Engagement Package",
+          "Atlas Shared Unidentifiable Vault",
           "CTO Dashboard",
         ],
       },
@@ -187,9 +187,9 @@ export const platformContent = {
           "传感器运行时边界观察",
           "Runtime Profiles™",
           "Sensor Investigation Workspace™",
-          "Historical Sensor RGA™",
-          "Sensor Engagement Pack™ 协作",
-          "Sensor Assist Vault™",
+          "Historical RGA Recall",
+          "EGP — Sensor–OEM Engagement Package 协作",
+          "Atlas Shared Unidentifiable Vault",
           "Runtime Knowledge Base™",
         ],
       },
@@ -226,7 +226,7 @@ export const platformContent = {
           "了解事件背景、运行环境、证据和调查流程如何被统一组织。",
       },
       {
-        title: "Sensor Engagement Pack™",
+        title: "EGP — Sensor–OEM Engagement Package",
         description:
           "了解 OEM 与传感器制造商如何通过边界明确的调查包进行协作。",
       },
@@ -235,7 +235,7 @@ export const platformContent = {
     documentationLink: {
       title: "阅读完整平台架构文档",
       description:
-        "查看 Atlas Agent™、Runtime Surface™、Runtime Dataset™、Evidence Pack™、Historical RGA™、Investigation Context™、Sensor Engagement Pack™、Assist Vault™ 和 CTO Dashboard 的完整技术说明。",
+        "查看 Atlas Agent™、Runtime Surface™、Runtime Dataset™、Evidence Pack™、Historical RGA™、Investigation Context™、EGP — Sensor–OEM Engagement Package、Atlas Shared Unidentifiable Vault 和 CTO Dashboard 的完整技术说明。",
       href: "https://sensordeck.github.io/atlas-docs-cn/category/平台架构",
     },
   },

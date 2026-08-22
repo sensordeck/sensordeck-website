@@ -142,7 +142,7 @@ export const libraryContent = {
         id: "REF-03",
         title: "Atlas Runtime Investigation™",
         description:
-          "面向机器人 OEM 的运行时证据、调查协作、历史召回和 Assist Vault 体系。",
+          "面向机器人 OEM 的运行时证据、调查协作、历史召回和 Atlas Shared Unidentifiable Vault 体系。",
         size: "在线文档",
         format: "HTML",
       },
@@ -202,7 +202,7 @@ export const libraryContent = {
   featured: {
     eyebrow: "Atlas V3 交互式演示",
     title: "Atlas Runtime Investigation™ 交互式演示",
-    description: "查看 Atlas 如何将运行时数据组织为 Evidence Pack，并沿着 REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 和 Assist Vault 完成受控调查。",
+    description: "查看 Atlas 如何将运行时数据组织为 Evidence Pack，并沿着 REF、历史 RGA、Context、Tier、EGP、IR / LL、Closure 和 Atlas Shared Unidentifiable Vault 完成受控调查。",
     meta: "Atlas v0.1.0 冻结基线 · 已脱敏静态演示 · 非实时数据",
     button: "打开 Atlas V3 演示界面",
   },
@@ -296,7 +296,7 @@ export const libraryContent = {
       {
         question: "Atlas 可以与多家传感器厂商协作吗？",
         answer:
-          "可以。OEM 可以通过 Sensor Engagement Pack™ 与不同传感器制造商开展边界明确的调查协作。每家传感器厂商可以维护自己的运行时画像、历史调查资产和 FAE 调查流程。",
+          "可以。OEM 可以通过 EGP — Sensor–OEM Engagement Package 与不同传感器制造商开展边界明确的调查协作。每家传感器厂商可以维护自己的运行时画像、历史调查资产和 FAE 调查流程。",
       },
       {
         question: "什么是传感器运行时画像？",

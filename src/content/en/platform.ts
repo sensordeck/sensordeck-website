@@ -124,7 +124,7 @@ export const platformContent = {
     },
 
     {
-      name: "Sensor Engagement Pack™",
+      name: "EGP — Sensor–OEM Engagement Package",
       description:
         "A bounded evidence package for investigation between an OEM and a sensor manufacturer.",
       keyFeatures: [
@@ -136,9 +136,9 @@ export const platformContent = {
     },
 
     {
-      name: "Assist Vault™",
+      name: "Atlas Shared Unidentifiable Vault",
       description:
-        "A governed repository for completed investigations, findings, evidence, and Lessons Learned.",
+        "The single governed repository for approved, closed, unidentifiable IR and LL records. Raw evidence and participant identity do not enter the Vault.",
       keyFeatures: [
         "Preserve investigation results and Lessons Learned",
         "Link findings to original evidence and context",
@@ -177,8 +177,8 @@ export const platformContent = {
           "Investigation Context™",
           "Investigation Tier Candidate™",
           "Historical RGA™",
-          "Sensor Engagement Pack™",
-          "Assist Vault™",
+          "EGP — Sensor–OEM Engagement Package",
+          "Atlas Shared Unidentifiable Vault",
           "Executive Dashboard™",
         ],
       },
@@ -190,9 +190,9 @@ export const platformContent = {
           "Sensor Boundary Observation",
           "Runtime Profiles™",
           "Sensor Investigation Workspace™",
-          "Historical Sensor RGA™",
-          "Sensor Engagement Pack™",
-          "Sensor Assist Vault™",
+          "Historical RGA Recall",
+          "EGP — Sensor–OEM Engagement Package",
+          "Atlas Shared Unidentifiable Vault",
           "Runtime Knowledge Base™",
         ],
       },
@@ -229,7 +229,7 @@ export const platformContent = {
           "How evidence, environment, ownership, and workflow are organized.",
       },
       {
-        title: "Sensor Engagement Pack™",
+        title: "EGP — Sensor–OEM Engagement Package",
         description:
           "How OEM and sensor teams collaborate within explicit evidence boundaries.",
       },
@@ -238,7 +238,7 @@ export const platformContent = {
     documentationLink: {
       title: "Open Platform Documentation",
       description:
-        "Review the complete architecture for Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, Sensor Engagement Pack™, Assist Vault™, and Executive Dashboard™.",
+        "Review the complete architecture for Atlas Agent™, Runtime Surface™, Runtime Dataset™, Evidence Pack™, Historical RGA™, Investigation Context™, EGP — Sensor–OEM Engagement Package, Atlas Shared Unidentifiable Vault, and Executive Dashboard™.",
       href: "https://docs.sensordeck.tech/category/platform",
     },
   },

@@ -82,7 +82,7 @@ export const homepageContent = {
         keyModules: [
           "Runtime Profiles™",
           "运行时观察",
-          "Historical Sensor RGA™",
+          "Historical RGA Recall",
           "通过 EGP 与 OEM 协作",
         ],
               },
@@ -123,7 +123,7 @@ export const homepageContent = {
         "运行时数据集保留",
         "Evidence Pack 生成",
         "调查工作流协调",
-        "Assist Vault 组织记忆",
+        "Atlas Shared Unidentifiable Vault 组织记忆",
       ],
     },
   },

@@ -82,7 +82,7 @@ export const homepageContent = {
         keyModules: [
           "Runtime Profiles™",
           "Runtime Observation",
-          "Historical Sensor RGA™",
+          "Historical RGA Recall",
           "OEM Collaboration via EGP",
         ],
       },
@@ -123,7 +123,7 @@ export const homepageContent = {
         "Runtime Dataset Retention",
         "Evidence Pack Generation",
         "Investigation Workflow Coordination",
-        "Assist Vault Organizational Knowledge",
+        "Atlas Shared Unidentifiable Vault Organizational Knowledge",
       ],
     },
   },

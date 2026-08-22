@@ -131,7 +131,7 @@ hero: {
         id: "REF-02",
         title: "Atlas Runtime Sensor Governance™",
         description:
-          "Explore runtime governance for sensor manufacturers, including Runtime Profiles™, Sensor FAE investigations, Historical Sensor RGAs™, and OEM collaboration.",
+          "Explore runtime governance for sensor manufacturers, including Runtime Profiles™, Sensor FAE investigations, Historical RGA Recall, and OEM collaboration.",
         size: "Online Documentation",
         format: "HTML",
       },
@@ -139,7 +139,7 @@ hero: {
         id: "REF-03",
         title: "Atlas Runtime Investigation™",
         description:
-          "Explore runtime evidence, investigation workflows, Historical RGA™ recall, Sensor Engagement Packs™, and Assist Vault™ for robot OEMs.",
+          "Explore runtime evidence, investigation workflows, Historical RGA™ recall, EGP — Sensor–OEM Engagement Package, and Atlas Shared Unidentifiable Vault for robot OEMs.",
         size: "Online Documentation",
         format: "HTML",
       },
@@ -200,7 +200,7 @@ hero: {
     featured: {
       eyebrow: "Atlas V3 Interactive Demo",
       title: "Atlas Runtime Investigation™ Interactive Demo",
-      description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Assist Vault.",
+      description: "See how Atlas organizes runtime data into an Evidence Pack and advances a governed investigation through REF, Historical RGA, Context, Tier, EGP, IR / LL, Closure, and Atlas Shared Unidentifiable Vault.",
       meta: "Atlas v0.1.0 frozen baseline · Sanitized static demo · Not live data",
       button: "Open the Atlas V3 Demo",
     },
@@ -298,7 +298,7 @@ hero: {
       {
         question: "Can Atlas work with multiple sensor vendors?",
         answer:
-          "Yes. Robot OEMs can use Sensor Engagement Packs™ to conduct bounded investigations with different sensor manufacturers. Each sensor manufacturer can maintain its own Runtime Profiles™, investigation records, Historical Sensor RGAs™, and Sensor FAE workflows.",
+          "Yes. Robot OEMs can use EGP — Sensor–OEM Engagement Package to conduct bounded investigations with different sensor manufacturers. Each sensor manufacturer can maintain its own Runtime Profiles™, investigation records, Historical RGA Recall, and Sensor FAE workflows.",
       },
       {
         question: "What is a Sensor Runtime Profile™?",

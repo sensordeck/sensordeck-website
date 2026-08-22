@@ -55,7 +55,7 @@ Investigation Context™
   ↓
 Historical RGA™
   ↓
-Assist Vault™`,
+Atlas Shared Unidentifiable Vault`,
       explanation:
         "Atlas Agent™ continuously observes authorized runtime signals within the OEM-controlled environment. When a runtime event occurs, Atlas retrieves relevant data from before, during, and after the event from Runtime Dataset™, creates a bounded, reviewable Evidence Pack™, and supports investigation across Tier 1, Tier 2 / Tier 3, OEM engineering, and sensor FAE teams.",
       surfaces: [
@@ -128,22 +128,22 @@ Runtime Observation and Evidence Intake
   ↓
 Sensor Investigation Workspace™
   ↓
-Historical Sensor RGA™
+Historical RGA Recall
   ↓
-Sensor Assist Vault™
+Atlas Shared Unidentifiable Vault
   ↓
 Runtime Knowledge Base™`,
       explanation:
-        "Sensor manufacturers can deploy Atlas in laboratories, technical-support environments, or customer-investigation environments. Through Runtime Profiles™, Sensor Engagement Packs™, and historical investigation assets, sensor teams can understand customer runtime conditions more quickly and collaborate with OEMs within explicit data and responsibility boundaries.",
+        "Sensor manufacturers can deploy Atlas in laboratories, technical-support environments, or customer-investigation environments. Through Runtime Profiles™, EGP — Sensor–OEM Engagement Package, and historical investigation assets, sensor teams can understand customer runtime conditions more quickly and collaborate with OEMs within explicit data and responsibility boundaries.",
       surfaces: [
         "Sensor Laboratory",
         "Technical-Support Team",
         "FAE Investigation Workflow",
         "Product Runtime Scenarios",
         "Customer Field Evidence",
-        "Sensor Engagement Pack™",
-        "Historical Sensor RGA™",
-        "Sensor Assist Vault™",
+        "EGP — Sensor–OEM Engagement Package",
+        "Historical RGA Recall",
+        "Atlas Shared Unidentifiable Vault",
         "Runtime Knowledge Base™",
       ],
       href: "/technology/sensor-manufacturer-deployment",
@@ -153,12 +153,12 @@ Runtime Knowledge Base™`,
       id: "sensor-engagement-boundary",
       title: "OEM–Sensor Manufacturer Collaboration Boundary",
       description:
-        "Sensor Engagement Pack™ transfers only the runtime information required for a defined investigation between an OEM and a sensor manufacturer.",
+        "EGP — Sensor–OEM Engagement Package transfers only the runtime information required for a defined investigation between an OEM and a sensor manufacturer.",
       content: `OEM Investigation Environment
   ↓
 Evidence Pack™
   ↓
-Sensor Engagement Pack™
+EGP — Sensor–OEM Engagement Package
   ↓
 Sensor FAE Investigation
   ↓
@@ -248,7 +248,7 @@ Historical-Asset Preservation and Future Recall`,
         {
           term: "Historical-Reuse Validation",
           definition:
-            "Confirm that completed investigation assets enter Assist Vault™ and support future recall.",
+            "Confirm that only approved, closed, unidentifiable IR and LL records may enter the Atlas Shared Unidentifiable Vault and support future recall.",
         },
       ],
       href: "/technology/canary-validation",
